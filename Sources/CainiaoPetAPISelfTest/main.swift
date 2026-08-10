@@ -289,8 +289,110 @@ private struct APISelfTestRunner {
             try expect(remainingJobs.isEmpty, "续跑完成后恢复任务没有清理")
             print("✓ 失败后保留原图、断点续跑且不重复计费阶段")
 
+            let stageDirectory = FileManager.default.temporaryDirectory
+                .appendingPathComponent(UUID().uuidString, isDirectory: true)
+            defer { try? FileManager.default.removeItem(at: stageDirectory) }
+            let stageStore = PetTemplateStore(
+                templatesDirectory: stageDirectory.appendingPathComponent("templates")
+            )
+            let stageJobStore = PetGenerationJobStore(
+                jobsDirectory: stageDirectory.appendingPathComponent("jobs")
+            )
+            let stageGenerator = PetLineageGenerator(
+                client: client,
+                store: stageStore,
+                jobStore: stageJobStore
+            )
+            let singleStageTemplate = CustomPetTemplate(
+                name: "单阶段恢复",
+                basePrompt: "蓝色椭圆测试宠物",
+                artDirection: "竞技游戏角色",
+                generationMode: .text,
+                generationQuality: .high,
+                stages: [
+                    CustomPetStageDefinition(
+                        index: 0,
+                        name: "幼体",
+                        experienceThreshold: 0,
+                        assetFileName: "stage-01.png"
+                    )
+                ]
+            )
+            try stageStore.install(
+                template: singleStageTemplate,
+                stageImages: [mockPet]
+            )
+            let corruptPaidImage = Data("paid-but-corrupt-image".utf8)
+            let corruptResponse = try JSONSerialization.data(withJSONObject: [
+                "data": [["b64_json": corruptPaidImage.base64EncodedString()]]
+            ])
+            let stageRecorder = RequestRecorder()
+            MockURLProtocol.handler = { request in
+                stageRecorder.append(request.url?.path ?? "")
+                return corruptResponse
+            }
+            var firstStageAttemptFailed = false
+            do {
+                _ = try await stageGenerator.regenerateStage(
+                    templateID: singleStageTemplate.id,
+                    stageIndex: 0,
+                    quality: .high,
+                    apiKey: "test-key"
+                )
+            } catch {
+                firstStageAttemptFailed = true
+            }
+            try expect(firstStageAttemptFailed, "无效模拟图片没有触发处理失败")
+            try expect(
+                stageRecorder.snapshot() == ["/v1/images/generations"],
+                "单阶段首次重绘请求数量错误"
+            )
+            let savedSingleStageRaw = try stageStore.pendingReplacementRaw(
+                templateID: singleStageTemplate.id,
+                stageIndex: 0
+            )
+            try expect(savedSingleStageRaw == corruptPaidImage, "单阶段付费原图没有先落盘")
+
+            MockURLProtocol.handler = { request in
+                stageRecorder.append(request.url?.path ?? "")
+                throw TestFailure(description: "恢复时不应再次请求 API")
+            }
+            var secondStageAttemptFailed = false
+            do {
+                _ = try await stageGenerator.regenerateStage(
+                    templateID: singleStageTemplate.id,
+                    stageIndex: 0,
+                    quality: .high,
+                    apiKey: "test-key"
+                )
+            } catch {
+                secondStageAttemptFailed = true
+            }
+            try expect(secondStageAttemptFailed, "损坏恢复原图意外处理成功")
+            try expect(stageRecorder.snapshot().count == 1, "单阶段恢复重复产生了付费请求")
+
+            try stageStore.savePendingReplacementRaw(
+                templateID: singleStageTemplate.id,
+                stageIndex: 0,
+                data: mockPet
+            )
+            let repairedStage = try await stageGenerator.regenerateStage(
+                templateID: singleStageTemplate.id,
+                stageIndex: 0,
+                quality: .high,
+                apiKey: "test-key"
+            )
+            try expect(repairedStage.resolvedGenerationQuality == .high, "恢复后质量没有写入模板")
+            try expect(stageRecorder.snapshot().count == 1, "使用恢复原图时仍调用了 API")
+            let clearedSingleStageRaw = try stageStore.pendingReplacementRaw(
+                templateID: singleStageTemplate.id,
+                stageIndex: 0
+            )
+            try expect(clearedSingleStageRaw == nil, "单阶段替换成功后恢复原图没有清理")
+            print("✓ 单阶段重绘先存原图，处理失败重试不重复调用")
+
             session.invalidateAndCancel()
-            print("\n全部 4 项 API 模拟自检通过。")
+            print("\n全部 5 项 API 模拟自检通过。")
         } catch {
             fputs("✗ API 模拟自检失败：\(error)\n", stderr)
             exit(1)

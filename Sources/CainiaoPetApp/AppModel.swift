@@ -235,6 +235,10 @@ final class AppModel: ObservableObject {
         generationJobStore.processedStageURL(jobID: jobID, stageIndex: stageIndex)
     }
 
+    func generationRawPreviewURL(jobID: String, stageIndex: Int) -> URL? {
+        generationJobStore.rawStageURL(jobID: jobID, stageIndex: stageIndex)
+    }
+
     func setPreview(stage: PetStage?) {
         previewStage = stage
         previewCustomStageIndex = nil
@@ -303,7 +307,7 @@ final class AppModel: ObservableObject {
                 refreshGenerationJobs()
                 bannerMessage = Task.isCancelled
                     ? "生成已暂停；已经完成的阶段保存在本机，可稍后继续。"
-                    : "生成失败：" + error.localizedDescription + "；已完成阶段仍可继续使用。"
+                    : "生成失败：" + error.localizedDescription + "；已完成阶段仍保存在本机，可稍后继续。"
             }
             isGeneratingTemplate = false
             generationTask = nil

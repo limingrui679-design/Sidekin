@@ -33,6 +33,14 @@ private func makePNG(
 }
 
 @MainActor
+private func solidPNG(_ color: NSColor) throws -> Data {
+    try makePNG {
+        color.setFill()
+        NSBezierPath(rect: NSRect(x: 0, y: 0, width: 160, height: 160)).fill()
+    }
+}
+
+@MainActor
 private func test(_ name: String, _ body: () throws -> Void) {
     do {
         try body()
@@ -252,7 +260,11 @@ test("自定义模板会原子写入并完整读取") {
         fallbackTheme: .totem,
         stages: stages
     )
-    let images = [Data([1, 2, 3]), Data([4, 5, 6]), Data([7, 8, 9])]
+    let images = [
+        try solidPNG(.systemBlue),
+        try solidPNG(.systemPurple),
+        try solidPNG(.systemOrange)
+    ]
     let store = PetTemplateStore(templatesDirectory: directory)
     try store.install(template: template, stageImages: images)
 
@@ -303,8 +315,9 @@ test("模板支持重命名、阶段替换、导出导入与删除") {
         name: "待管理模板",
         basePrompt: "测试",
         artDirection: "测试",
-        generationMode: .text,
+        generationMode: .faithful,
         generationQuality: .low,
+        referenceFileName: "reference.png",
         stages: [
             CustomPetStageDefinition(
                 index: 0,
@@ -320,32 +333,88 @@ test("模板支持重命名、阶段替换、导出导入与删除") {
             )
         ]
     )
-    try store.install(template: template, stageImages: [Data([1]), Data([2])])
+    let firstStage = try solidPNG(.systemPink)
+    let secondStage = try solidPNG(.systemTeal)
+    let replacementStage = try solidPNG(.systemIndigo)
+    let referenceImage = try solidPNG(.systemYellow)
+    try store.install(
+        template: template,
+        stageImages: [firstStage, secondStage],
+        referenceImage: referenceImage
+    )
     let renamed = try store.rename(id: template.id, to: "已重命名模板")
     try expect(renamed.name == "已重命名模板", "模板重命名未落盘")
 
     let replaced = try store.replaceStageImage(
         templateID: template.id,
         stageIndex: 1,
-        imageData: Data([9, 9]),
+        imageData: replacementStage,
         prompt: "replacement",
         generationQuality: .high
     )
     try expect(replaced.stages[1].prompt == "replacement", "阶段替换提示未更新")
     try expect(replaced.resolvedGenerationQuality == .high, "阶段替换质量未更新")
     let replacedData = try store.assetData(templateID: template.id, fileName: "stage-02.png")
-    try expect(replacedData == Data([9, 9]), "阶段图片没有原位替换")
+    try expect(replacedData == replacementStage, "阶段图片没有原位替换")
 
     let package = try store.exportPackage(id: template.id)
     let imported = try store.importPackage(package)
     try expect(imported.id != template.id, "重复导入没有生成安全的新标识")
     try expect(imported.name == renamed.name, "导入后模板名称不一致")
+    let importedReference = try store.referenceData(template: imported)
+    try expect(importedReference == referenceImage, "导入后参考图不一致")
     let importedTemplates = try store.loadAll()
     try expect(importedTemplates.count == 2, "导入模板没有加入模板库")
+
+    var corruptPackage = package
+    let pngSignature = Data([0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A])
+    guard let signatureRange = corruptPackage.range(of: pngSignature) else {
+        throw TestFailure(description: "测试模板包内没有 PNG 数据")
+    }
+    corruptPackage.replaceSubrange(
+        signatureRange,
+        with: Data(repeating: 0, count: pngSignature.count)
+    )
+    do {
+        _ = try store.importPackage(corruptPackage)
+        throw TestFailure(description: "损坏图片模板包被成功导入")
+    } catch PetTemplateStoreError.invalidPackage {
+        // Expected.
+    }
 
     try store.remove(id: template.id)
     let deletedTemplate = try store.load(id: template.id)
     try expect(deletedTemplate == nil, "删除后模板仍然存在")
+}
+
+test("模板仓库拒绝伪装成 PNG 的无效图片") {
+    let directory = FileManager.default.temporaryDirectory
+        .appendingPathComponent(UUID().uuidString, isDirectory: true)
+    defer { try? FileManager.default.removeItem(at: directory) }
+    let store = PetTemplateStore(templatesDirectory: directory)
+    let template = CustomPetTemplate(
+        name: "坏图测试",
+        basePrompt: "测试",
+        artDirection: "测试",
+        generationMode: .text,
+        stages: [
+            CustomPetStageDefinition(
+                index: 0,
+                name: "幼体",
+                experienceThreshold: 0,
+                assetFileName: "stage-01.png"
+            )
+        ]
+    )
+    do {
+        try store.install(
+            template: template,
+            stageImages: [Data("not-a-real-png".utf8)]
+        )
+        throw TestFailure(description: "无效图片被模板仓库接受")
+    } catch PetTemplateStoreError.invalidImage {
+        // Expected.
+    }
 }
 
 test("生成恢复任务会先保存付费原图并支持从阶段重做") {
@@ -368,6 +437,7 @@ test("生成恢复任务会先保存付费原图并支持从阶段重做") {
     try expect(job.completedCount == 0, "只有原图时不应伪报阶段已完成")
     let recoveredRaw = try store.rawStageData(jobID: job.id, stageIndex: 0)
     try expect(recoveredRaw == paidRaw, "API 原图没有先于处理结果保存")
+    try expect(store.rawStageURL(jobID: job.id, stageIndex: 0) != nil, "API 原图预览不存在")
 
     let definition = CustomPetStageDefinition(
         index: 0,
@@ -412,7 +482,7 @@ test("单阶段付费重绘也会保留原图恢复点") {
             )
         ]
     )
-    try store.install(template: template, stageImages: [Data([1, 2, 3])])
+    try store.install(template: template, stageImages: [try solidPNG(.systemBlue)])
     let paidRaw = Data("single-stage-paid-result".utf8)
     try store.savePendingReplacementRaw(
         templateID: template.id,

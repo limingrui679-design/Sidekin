@@ -1,4 +1,5 @@
 import Foundation
+import ImageIO
 
 public enum PetTemplateStoreError: LocalizedError, Equatable {
     case invalidTemplateID
@@ -9,6 +10,7 @@ public enum PetTemplateStoreError: LocalizedError, Equatable {
     case templateNotFound
     case invalidName
     case invalidPackage
+    case invalidImage
     case stageIndexOutOfRange
 
     public var errorDescription: String? {
@@ -21,6 +23,7 @@ public enum PetTemplateStoreError: LocalizedError, Equatable {
         case .templateNotFound: "没有找到这个宠物模板。"
         case .invalidName: "模板名称不能为空，且最多为 40 个字符。"
         case .invalidPackage: "这不是有效的 CainiaoPet 模板包。"
+        case .invalidImage: "模板图片必须是可读取且尺寸安全的 PNG。"
         case .stageIndexOutOfRange: "成长阶段序号超出范围。"
         }
     }
@@ -103,6 +106,12 @@ public struct PetTemplateStore {
         try validate(template)
         guard stageImages.count == template.stages.count else {
             throw PetTemplateStoreError.imageCountMismatch
+        }
+        guard stageImages.allSatisfy(Self.isValidPNG),
+              referenceImage.map(Self.isValidPNG) ?? true
+        else { throw PetTemplateStoreError.invalidImage }
+        guard (referenceImage == nil) == (template.referenceFileName == nil) else {
+            throw PetTemplateStoreError.invalidStageLayout
         }
 
         try fileManager.createDirectory(at: templatesDirectory, withIntermediateDirectories: true)
@@ -206,7 +215,7 @@ public struct PetTemplateStore {
         prompt: String? = nil,
         generationQuality: PetImageGenerationQuality? = nil
     ) throws -> CustomPetTemplate {
-        guard !imageData.isEmpty else { throw PetTemplateStoreError.invalidStageLayout }
+        guard Self.isValidPNG(imageData) else { throw PetTemplateStoreError.invalidImage }
         guard var template = try load(id: templateID) else {
             throw PetTemplateStoreError.templateNotFound
         }
@@ -299,8 +308,14 @@ public struct PetTemplateStore {
         let expectedIndices = Array(0..<ordered.count)
         let thresholds = ordered.map(\.experienceThreshold)
         let expectedThresholds = thresholds.sorted()
-        let filenamesAreSafe = ordered.allSatisfy { isSafeFileName($0.assetFileName) }
-        let referenceIsSafe = template.referenceFileName.map(isSafeFileName) ?? true
+        let filenamesAreSafe = ordered.allSatisfy {
+            isSafeFileName($0.assetFileName)
+                && URL(fileURLWithPath: $0.assetFileName).pathExtension.lowercased() == "png"
+        }
+        let referenceIsSafe = template.referenceFileName.map {
+            isSafeFileName($0)
+                && URL(fileURLWithPath: $0).pathExtension.lowercased() == "png"
+        } ?? true
 
         guard indices == expectedIndices,
               thresholds == expectedThresholds,
@@ -325,7 +340,9 @@ public struct PetTemplateStore {
             fileManager.fileExists(
                 atPath: directory.appendingPathComponent(stage.assetFileName).path
             )
-        }) else {
+        }), template.referenceFileName.map({ fileName in
+            fileManager.fileExists(atPath: directory.appendingPathComponent(fileName).path)
+        }) ?? true else {
             throw PetTemplateStoreError.invalidStageLayout
         }
         return template
@@ -367,6 +384,24 @@ public struct PetTemplateStore {
         !fileName.isEmpty
             && fileName == URL(fileURLWithPath: fileName).lastPathComponent
             && !fileName.contains("..")
+    }
+
+    private static func isValidPNG(_ data: Data) -> Bool {
+        guard !data.isEmpty,
+              let source = CGImageSourceCreateWithData(data as CFData, nil),
+              CGImageSourceGetCount(source) > 0,
+              (CGImageSourceGetType(source) as String?) == "public.png",
+              let properties = CGImageSourceCopyPropertiesAtIndex(source, 0, nil)
+                as? [CFString: Any],
+              let width = properties[kCGImagePropertyPixelWidth] as? NSNumber,
+              let height = properties[kCGImagePropertyPixelHeight] as? NSNumber
+        else { return false }
+        let pixelWidth = width.intValue
+        let pixelHeight = height.intValue
+        guard (1...8_192).contains(pixelWidth),
+              (1...8_192).contains(pixelHeight)
+        else { return false }
+        return Int64(pixelWidth) * Int64(pixelHeight) <= 33_554_432
     }
 
     private static let encoder: JSONEncoder = {

@@ -209,6 +209,12 @@ public struct PetGenerationJobStore {
         try stageData(jobID: jobID, stageIndex: stageIndex, raw: false)
     }
 
+    public func rawStageURL(jobID: String, stageIndex: Int) -> URL? {
+        guard let directory = try? jobDirectory(id: jobID), stageIndex >= 0 else { return nil }
+        let url = directory.appendingPathComponent(Self.rawFileName(stageIndex))
+        return fileManager.fileExists(atPath: url.path) ? url : nil
+    }
+
     public func processedStageURL(jobID: String, stageIndex: Int) -> URL? {
         guard let directory = try? jobDirectory(id: jobID), stageIndex >= 0 else { return nil }
         let url = directory.appendingPathComponent(Self.processedFileName(stageIndex))

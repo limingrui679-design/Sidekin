@@ -657,37 +657,26 @@ private struct PetWorkshopDashboard: View {
                         .frame(width: 28)
                     }
 
-                    HStack(spacing: 8) {
-                        ForEach(job.stageNames.indices, id: \.self) { index in
-                            VStack(spacing: 3) {
-                                if let url = model.generationPreviewURL(jobID: job.id, stageIndex: index) {
-                                    PetAvatarView(
-                                        stage: CustomGrowthStagePlan.canonicalStage(
-                                            customIndex: index,
-                                            stageCount: job.stageNames.count
-                                        ),
-                                        theme: job.fallbackTheme,
-                                        customAssetURL: url,
-                                        activity: .idle,
-                                        isSleeping: false,
-                                        size: 62,
-                                        isAnimated: false
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 9) {
+                            ForEach(job.stageNames.indices, id: \.self) { index in
+                                RecoveryStagePreview(
+                                    index: index,
+                                    stageCount: job.stageNames.count,
+                                    stageName: job.stageNames[index],
+                                    theme: job.fallbackTheme,
+                                    rawURL: model.generationRawPreviewURL(
+                                        jobID: job.id,
+                                        stageIndex: index
+                                    ),
+                                    processedURL: model.generationPreviewURL(
+                                        jobID: job.id,
+                                        stageIndex: index
                                     )
-                                    .frame(width: 68, height: 62)
-                                    .background(Color.black.opacity(0.24), in: RoundedRectangle(cornerRadius: 8))
-                                } else {
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .strokeBorder(style: StrokeStyle(lineWidth: 1, dash: [4]))
-                                        .foregroundStyle(Color.white.opacity(0.15))
-                                        .frame(width: 68, height: 62)
-                                        .overlay(Image(systemName: "hourglass").foregroundStyle(.secondary))
-                                }
-                                Text("\(index + 1)")
-                                    .font(.system(size: 9, weight: .bold, design: .monospaced))
-                                    .foregroundStyle(.secondary)
+                                )
                             }
                         }
-                        Spacer(minLength: 0)
+                        .padding(.vertical, 2)
                     }
 
                     if let lastError = job.lastError, !lastError.isEmpty {
@@ -696,7 +685,7 @@ private struct PetWorkshopDashboard: View {
                             .foregroundStyle(.orange)
                             .lineLimit(2)
                     } else {
-                        Text("上方缩略图就是边缘连通抠图后的本地预览。")
+                        Text("每个阶段同时显示 API 原图和边缘连通抠图结果，可在继续前对照检查。")
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                     }
@@ -1064,6 +1053,61 @@ private struct PetWorkshopDashboard: View {
         referenceData = data
         referenceImage = image
         referenceFileName = url.lastPathComponent
+    }
+}
+
+private struct RecoveryStagePreview: View {
+    let index: Int
+    let stageCount: Int
+    let stageName: String
+    let theme: PetVisualTheme
+    let rawURL: URL?
+    let processedURL: URL?
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            HStack(spacing: 5) {
+                preview(url: rawURL, label: "原图")
+                preview(url: processedURL, label: "抠图")
+            }
+            Text("\(index + 1) · \(stageName)")
+                .font(.system(size: 9, weight: .bold))
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+        }
+        .padding(6)
+        .background(Color.black.opacity(0.14), in: RoundedRectangle(cornerRadius: 9))
+    }
+
+    @ViewBuilder
+    private func preview(url: URL?, label: String) -> some View {
+        VStack(spacing: 2) {
+            if let url {
+                PetAvatarView(
+                    stage: CustomGrowthStagePlan.canonicalStage(
+                        customIndex: index,
+                        stageCount: stageCount
+                    ),
+                    theme: theme,
+                    customAssetURL: url,
+                    activity: .idle,
+                    isSleeping: false,
+                    size: 54,
+                    isAnimated: false
+                )
+                .frame(width: 58, height: 52)
+                .background(Color.black.opacity(0.24), in: RoundedRectangle(cornerRadius: 7))
+            } else {
+                RoundedRectangle(cornerRadius: 7)
+                    .strokeBorder(style: StrokeStyle(lineWidth: 1, dash: [4]))
+                    .foregroundStyle(Color.white.opacity(0.15))
+                    .frame(width: 58, height: 52)
+                    .overlay(Image(systemName: "hourglass").foregroundStyle(.secondary))
+            }
+            Text(label)
+                .font(.system(size: 8, weight: .semibold))
+                .foregroundStyle(.secondary)
+        }
     }
 }
 
