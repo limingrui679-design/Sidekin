@@ -79,7 +79,7 @@ public enum CodexHookInstallError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .invalidRootObject:
-            "现有 hooks.json 不是有效的 JSON 对象，未进行修改。"
+            "The existing hooks.json file is not a valid JSON object and was left unchanged."
         }
     }
 }

@@ -21,15 +21,15 @@ public enum OpenAIImageClientError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .invalidResponse:
-            "图像服务返回了无法识别的响应。"
+            "The image service returned an unrecognized response."
         case let .http(status, message, requestID):
-            ["图像服务请求失败（HTTP \(status)）：\(message)", requestID.map { "请求编号：\($0)" }]
+            ["The image-service request failed (HTTP \(status)): \(message)", requestID.map { "Request ID: \($0)" }]
                 .compactMap { $0 }
                 .joined(separator: "\n")
         case .missingImage:
-            "图像服务没有返回图片。"
+            "The image service did not return an image."
         case .invalidBase64:
-            "图像服务返回的图片数据损坏。"
+            "The image data returned by the service is damaged."
         }
     }
 }
@@ -103,7 +103,7 @@ public actor OpenAIImageClient {
             let envelope = try? JSONDecoder().decode(APIErrorEnvelope.self, from: data)
             let message = envelope?.error.message
                 ?? String(data: data, encoding: .utf8)
-                ?? "未知错误"
+                ?? "Unknown error"
             throw OpenAIImageClientError.http(
                 status: http.statusCode,
                 message: message,

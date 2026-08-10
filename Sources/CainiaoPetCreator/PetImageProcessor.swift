@@ -11,10 +11,10 @@ public enum PetImageProcessorError: LocalizedError {
 
     public var errorDescription: String? {
         switch self {
-        case .cannotDecode: "无法读取所选图片。"
-        case .cannotCreateContext: "无法创建图片处理画布。"
-        case .emptySubject: "没有从生成结果中识别到宠物主体，请换一条描述后重试。"
-        case .cannotEncode: "无法保存处理后的宠物图片。"
+        case .cannotDecode: "The selected image could not be read."
+        case .cannotCreateContext: "The image-processing canvas could not be created."
+        case .emptySubject: "No pet subject was detected in the generated image. Try a different description."
+        case .cannotEncode: "The processed pet image could not be saved."
         }
     }
 }

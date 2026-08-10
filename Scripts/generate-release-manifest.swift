@@ -206,7 +206,7 @@ do {
         schemaVersion: 1,
         generatedAt: ISO8601DateFormatter().string(from: Date()),
         product: plist["CFBundleName"] as? String ?? "CainiaoPet",
-        displayName: plist["CFBundleDisplayName"] as? String ?? "芽芽",
+        displayName: plist["CFBundleDisplayName"] as? String ?? "CainiaoPet",
         version: version,
         build: build,
         bundleIdentifier: bundleIdentifier,

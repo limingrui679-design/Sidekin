@@ -24,7 +24,7 @@ struct PetAvatarView: View {
         }
         .frame(width: size, height: size)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("宠物，\(stage.displayName)，\(activity.displayName)")
+        .accessibilityLabel("Pet, \(stage.displayName), \(activity.displayName)")
     }
 
     private func avatarFrame(time: TimeInterval) -> some View {

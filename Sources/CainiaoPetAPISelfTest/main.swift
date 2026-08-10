@@ -55,13 +55,13 @@ private func syntheticPetPNG() throws -> Data {
         bytesPerRow: side * 4,
         space: CGColorSpaceCreateDeviceRGB(),
         bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
-    ) else { throw TestFailure(description: "无法创建模拟宠物画布") }
+    ) else { throw TestFailure(description: "Could not create the mock pet canvas") }
     context.setFillColor(CGColor(red: 1, green: 0, blue: 1, alpha: 1))
     context.fill(CGRect(x: 0, y: 0, width: side, height: side))
     context.setFillColor(CGColor(red: 0.05, green: 0.55, blue: 1, alpha: 1))
     context.fillEllipse(in: CGRect(x: 55, y: 28, width: 82, height: 132))
     guard let image = context.makeImage() else {
-        throw TestFailure(description: "无法读取模拟宠物画布")
+        throw TestFailure(description: "Could not read the mock pet canvas")
     }
     let data = NSMutableData()
     guard let destination = CGImageDestinationCreateWithData(
@@ -69,10 +69,10 @@ private func syntheticPetPNG() throws -> Data {
         UTType.png.identifier as CFString,
         1,
         nil
-    ) else { throw TestFailure(description: "无法创建模拟 PNG") }
+    ) else { throw TestFailure(description: "Could not create the mock PNG") }
     CGImageDestinationAddImage(destination, image, nil)
     guard CGImageDestinationFinalize(destination) else {
-        throw TestFailure(description: "无法编码模拟 PNG")
+        throw TestFailure(description: "Could not encode the mock PNG")
     }
     return data as Data
 }
@@ -86,7 +86,7 @@ private final class MockURLProtocol: URLProtocol, @unchecked Sendable {
     override func startLoading() {
         do {
             guard let handler = Self.handler else {
-                throw TestFailure(description: "模拟服务没有处理器")
+                throw TestFailure(description: "The mock service has no request handler")
             }
             let data = try handler(request)
             let response = HTTPURLResponse(
@@ -123,31 +123,31 @@ private struct APISelfTestRunner {
             )
 
             MockURLProtocol.handler = { request in
-                try expect(request.url?.path == "/v1/images/generations", "文字生成端点错误")
-                try expect(request.httpMethod == "POST", "文字生成不是 POST")
-                try expect(request.value(forHTTPHeaderField: "Authorization") == "Bearer test-key", "鉴权头错误")
+                try expect(request.url?.path == "/v1/images/generations", "The text-generation endpoint is incorrect")
+                try expect(request.httpMethod == "POST", "Text generation did not use POST")
+                try expect(request.value(forHTTPHeaderField: "Authorization") == "Bearer test-key", "The authorization header is incorrect")
                 let body = try JSONSerialization.jsonObject(with: bodyData(of: request)) as? [String: Any]
-                try expect(body?["model"] as? String == "gpt-image-2", "文字生成模型错误")
-                try expect(body?["prompt"] as? String == "original pet", "文字提示没有传入")
-                try expect(body?["size"] as? String == "1024x1024", "生成尺寸错误")
-                try expect(body?["quality"] as? String == "medium", "默认生成质量错误")
+                try expect(body?["model"] as? String == "gpt-image-2", "The text-generation model is incorrect")
+                try expect(body?["prompt"] as? String == "original pet", "The text prompt was not included")
+                try expect(body?["size"] as? String == "1024x1024", "The generation size is incorrect")
+                try expect(body?["quality"] as? String == "medium", "The default generation quality is incorrect")
                 return response
             }
             let generated = try await client.generate(prompt: "original pet", apiKey: "test-key")
-            try expect(generated == expectedImage, "文字生成响应没有正确解码")
-            print("✓ 文字生成请求与响应")
+            try expect(generated == expectedImage, "The text-generation response was not decoded correctly")
+            print("✓ Text-generation request and response")
 
             MockURLProtocol.handler = { request in
-                try expect(request.url?.path == "/v1/images/edits", "参考图编辑端点错误")
+                try expect(request.url?.path == "/v1/images/edits", "The reference-edit endpoint is incorrect")
                 let contentType = request.value(forHTTPHeaderField: "Content-Type") ?? ""
-                try expect(contentType.hasPrefix("multipart/form-data; boundary="), "编辑请求不是 multipart")
+                try expect(contentType.hasPrefix("multipart/form-data; boundary="), "The edit request is not multipart")
                 let body = String(data: bodyData(of: request), encoding: .utf8) ?? ""
-                try expect(body.contains("name=\"image[]\""), "参考图没有使用 image[] 字段")
-                try expect(body.contains("filename=\"reference.png\""), "参考图文件名丢失")
-                try expect(body.contains("gpt-image-2"), "编辑模型错误")
-                try expect(body.contains("faithful lineage"), "编辑提示没有传入")
-                try expect(body.contains("medium"), "编辑质量没有传入")
-                try expect(body.contains("PNGDATA"), "参考图二进制没有写入请求")
+                try expect(body.contains("name=\"image[]\""), "The reference image did not use the image[] field")
+                try expect(body.contains("filename=\"reference.png\""), "The reference-image filename is missing")
+                try expect(body.contains("gpt-image-2"), "The edit model is incorrect")
+                try expect(body.contains("faithful lineage"), "The edit prompt was not included")
+                try expect(body.contains("medium"), "The edit quality was not included")
+                try expect(body.contains("PNGDATA"), "The reference-image data was not written to the request")
                 return response
             }
             let edited = try await client.edit(
@@ -155,8 +155,8 @@ private struct APISelfTestRunner {
                 images: [OpenAIImageInput(data: Data("PNGDATA".utf8), fileName: "reference.png")],
                 apiKey: "test-key"
             )
-            try expect(edited == expectedImage, "编辑响应没有正确解码")
-            print("✓ 参考图编辑 multipart 请求与响应")
+            try expect(edited == expectedImage, "The edit response was not decoded correctly")
+            print("✓ Reference-image multipart edit request and response")
 
             let temporaryDirectory = FileManager.default.temporaryDirectory
                 .appendingPathComponent(UUID().uuidString, isDirectory: true)
@@ -182,35 +182,35 @@ private struct APISelfTestRunner {
                 jobStore: jobStore
             )
             let lineageRequest = PetGenerationRequest(
-                templateName: "模拟成长线",
-                description: "蓝色椭圆测试宠物",
-                artDirection: "竞技游戏角色",
+                templateName: "Mock Growth Line",
+                description: "A blue oval test pet",
+                artDirection: "Competitive-game character art",
                 mode: .text,
-                stageNames: ["蛋", "幼体", "终极体"]
+                stageNames: ["Egg", "Hatchling", "Apex Form"]
             )
             let template = try await generator.generate(
                 request: lineageRequest,
                 apiKey: "test-key"
             ) { _, _, _ in }
-            try expect(template.stages.count == 3, "整链生成阶段数错误")
+            try expect(template.stages.count == 3, "The full-line generation stage count is incorrect")
             try expect(
                 recorder.snapshot() == [
                     "/v1/images/generations",
                     "/v1/images/edits",
                     "/v1/images/edits"
                 ],
-                "整链生成没有按首图原创、后续编辑执行"
+                "The full line did not use generation first and edits for later stages"
             )
             let reloaded = try store.load(id: template.id)
-            try expect(reloaded?.stages.count == 3, "生成模板没有写入仓库")
+            try expect(reloaded?.stages.count == 3, "The generated template was not written to the store")
             for stage in template.stages {
                 guard let url = store.assetURL(templateID: template.id, fileName: stage.assetFileName),
                       let source = CGImageSourceCreateWithURL(url as CFURL, nil),
                       let image = CGImageSourceCreateImageAtIndex(source, 0, nil)
-                else { throw TestFailure(description: "生成阶段图片无法读取") }
-                try expect(image.width == 1_254 && image.height == 1_254, "生成阶段图片尺寸错误")
+                else { throw TestFailure(description: "A generated stage image could not be read") }
+                try expect(image.width == 1_254 && image.height == 1_254, "A generated stage image has the wrong dimensions")
             }
-            print("✓ 三阶段生成、透明处理与模板落盘整链")
+            print("✓ Three-stage generation, transparent processing, and template persistence")
 
             let recoveryDirectory = FileManager.default.temporaryDirectory
                 .appendingPathComponent(UUID().uuidString, isDirectory: true)
@@ -230,17 +230,17 @@ private struct APISelfTestRunner {
             MockURLProtocol.handler = { request in
                 recoveryRecorder.append(request.url?.path ?? "")
                 if recoveryRecorder.snapshot().count == 2 {
-                    throw TestFailure(description: "模拟第二阶段网络中断")
+                    throw TestFailure(description: "Mock network interruption at stage two")
                 }
                 return lineageResponse
             }
             let recoveryRequest = PetGenerationRequest(
-                templateName: "断点续跑",
-                description: "蓝色椭圆测试宠物",
-                artDirection: "竞技游戏角色",
+                templateName: "Resumable Generation",
+                description: "A blue oval test pet",
+                artDirection: "Competitive-game character art",
                 mode: .text,
                 quality: .low,
-                stageNames: ["蛋", "幼体", "终极体"]
+                stageNames: ["Egg", "Hatchling", "Apex Form"]
             )
             var didInterrupt = false
             do {
@@ -251,23 +251,23 @@ private struct APISelfTestRunner {
             } catch {
                 didInterrupt = true
             }
-            try expect(didInterrupt, "模拟中断没有使生成失败")
+            try expect(didInterrupt, "The mock interruption did not fail generation")
             let interruptedJobs = try recoveryJobStore.loadAll()
-            try expect(interruptedJobs.count == 1, "中断后没有保留恢复任务")
+            try expect(interruptedJobs.count == 1, "No recovery job remained after interruption")
             let interrupted = interruptedJobs[0]
-            try expect(interrupted.completedCount == 1, "中断前完成阶段没有保存")
+            try expect(interrupted.completedCount == 1, "The stage completed before interruption was not saved")
             let interruptedRaw = try recoveryJobStore.rawStageData(
                 jobID: interrupted.id,
                 stageIndex: 0
             )
-            try expect(interruptedRaw != nil, "中断前 API 原图没有保存")
+            try expect(interruptedRaw != nil, "The API image returned before interruption was not saved")
 
             MockURLProtocol.handler = { request in
                 recoveryRecorder.append(request.url?.path ?? "")
                 let body = bodyData(of: request)
                 try expect(
                     body.range(of: Data("low".utf8)) != nil,
-                    "续跑没有保留草稿质量"
+                    "Resumed generation did not preserve Draft quality"
                 )
                 return lineageResponse
             }
@@ -275,19 +275,19 @@ private struct APISelfTestRunner {
                 jobID: interrupted.id,
                 apiKey: "test-key"
             ) { _, _, _ in }
-            try expect(recovered.stages.count == 3, "续跑完成后的阶段数错误")
+            try expect(recovered.stages.count == 3, "The resumed template has the wrong stage count")
             let recoveryPaths = recoveryRecorder.snapshot()
             try expect(
                 recoveryPaths.filter { $0 == "/v1/images/generations" }.count == 1,
-                "续跑重复请求了已保存的第一阶段"
+                "Resumed generation requested the saved first stage again"
             )
             try expect(
                 recoveryPaths.filter { $0 == "/v1/images/edits" }.count == 3,
-                "中断和续跑的编辑请求数量错误"
+                "The number of edit requests across interruption and resume is incorrect"
             )
             let remainingJobs = try recoveryJobStore.loadAll()
-            try expect(remainingJobs.isEmpty, "续跑完成后恢复任务没有清理")
-            print("✓ 失败后保留原图、断点续跑且不重复计费阶段")
+            try expect(remainingJobs.isEmpty, "The recovery job was not removed after completion")
+            print("✓ Raw-image retention, resumable generation, and no duplicate paid stage")
 
             let offlineRecoveryDirectory = FileManager.default.temporaryDirectory
                 .appendingPathComponent(UUID().uuidString, isDirectory: true)
@@ -304,11 +304,11 @@ private struct APISelfTestRunner {
                 jobStore: offlineRecoveryJobStore
             )
             let offlineRecoveryRequest = PetGenerationRequest(
-                templateName: "无 Key 恢复",
-                description: "蓝色椭圆测试宠物",
-                artDirection: "竞技游戏角色",
+                templateName: "Keyless Recovery",
+                description: "Blue oval test pet",
+                artDirection: "Competitive game character",
                 mode: .text,
-                stageNames: ["蛋", "幼体"]
+                stageNames: ["Egg", "Juvenile"]
             )
             let offlineRecoveryJob = try offlineRecoveryJobStore.create(
                 request: offlineRecoveryRequest,
@@ -322,7 +322,7 @@ private struct APISelfTestRunner {
             let offlineRecorder = RequestRecorder()
             MockURLProtocol.handler = { request in
                 offlineRecorder.append(request.url?.path ?? "")
-                throw TestFailure(description: "处理本机恢复原图时不应请求 API")
+                throw TestFailure(description: "Processing a locally recovered raw image must not call the API")
             }
             var offlineResumeStoppedBeforeNewRequest = false
             do {
@@ -336,14 +336,14 @@ private struct APISelfTestRunner {
             }
             try expect(
                 offlineResumeStoppedBeforeNewRequest,
-                "仅本机恢复没有在新请求前安全停止"
+                "Local-only recovery did not stop safely before a new request"
             )
             let offlineRecoveredJob = try offlineRecoveryJobStore.load(id: offlineRecoveryJob.id)
-            try expect(offlineRecoveredJob.completedCount == 1, "无 Key 时没有先完成本机原图处理")
-            try expect(offlineRecoveredJob.state == .ready, "仅本机恢复被错误标记为失败")
-            try expect(offlineRecoveredJob.lastError == nil, "仅本机恢复留下了误导性的失败信息")
-            try expect(offlineRecorder.snapshot().isEmpty, "无 Key 恢复意外发起了 API 请求")
-            print("✓ 已付费本机原图可无 Key 免费恢复，新增阶段前才要求 Key")
+            try expect(offlineRecoveredJob.completedCount == 1, "The local raw image was not processed before a key became necessary")
+            try expect(offlineRecoveredJob.state == .ready, "Local-only recovery was incorrectly marked as failed")
+            try expect(offlineRecoveredJob.lastError == nil, "Local-only recovery left a misleading failure message")
+            try expect(offlineRecorder.snapshot().isEmpty, "Keyless recovery unexpectedly made an API request")
+            print("✓ A paid raw image can be recovered locally without a key; a key is required only before a new stage request")
 
             let stageDirectory = FileManager.default.temporaryDirectory
                 .appendingPathComponent(UUID().uuidString, isDirectory: true)
@@ -360,15 +360,15 @@ private struct APISelfTestRunner {
                 jobStore: stageJobStore
             )
             let singleStageTemplate = CustomPetTemplate(
-                name: "单阶段恢复",
-                basePrompt: "蓝色椭圆测试宠物",
-                artDirection: "竞技游戏角色",
+                name: "Single-Stage Recovery",
+                basePrompt: "Blue oval test pet",
+                artDirection: "Competitive game character",
                 generationMode: .text,
                 generationQuality: .high,
                 stages: [
                     CustomPetStageDefinition(
                         index: 0,
-                        name: "幼体",
+                        name: "Juvenile",
                         experienceThreshold: 0,
                         assetFileName: "stage-01.png"
                     )
@@ -398,20 +398,20 @@ private struct APISelfTestRunner {
             } catch {
                 firstStageAttemptFailed = true
             }
-            try expect(firstStageAttemptFailed, "无效模拟图片没有触发处理失败")
+            try expect(firstStageAttemptFailed, "An invalid mock image did not trigger a processing failure")
             try expect(
                 stageRecorder.snapshot() == ["/v1/images/generations"],
-                "单阶段首次重绘请求数量错误"
+                "The initial single-stage regeneration request count is incorrect"
             )
             let savedSingleStageRaw = try stageStore.pendingReplacementRaw(
                 templateID: singleStageTemplate.id,
                 stageIndex: 0
             )
-            try expect(savedSingleStageRaw == corruptPaidImage, "单阶段付费原图没有先落盘")
+            try expect(savedSingleStageRaw == corruptPaidImage, "The paid single-stage raw image was not persisted first")
 
             MockURLProtocol.handler = { request in
                 stageRecorder.append(request.url?.path ?? "")
-                throw TestFailure(description: "恢复时不应再次请求 API")
+                throw TestFailure(description: "Recovery must not request the API again")
             }
             var secondStageAttemptFailed = false
             do {
@@ -424,8 +424,8 @@ private struct APISelfTestRunner {
             } catch {
                 secondStageAttemptFailed = true
             }
-            try expect(secondStageAttemptFailed, "损坏恢复原图意外处理成功")
-            try expect(stageRecorder.snapshot().count == 1, "单阶段恢复重复产生了付费请求")
+            try expect(secondStageAttemptFailed, "A corrupted recovered raw image unexpectedly processed successfully")
+            try expect(stageRecorder.snapshot().count == 1, "Single-stage recovery created a duplicate paid request")
 
             try stageStore.savePendingReplacementRaw(
                 templateID: singleStageTemplate.id,
@@ -438,13 +438,13 @@ private struct APISelfTestRunner {
                 quality: .high,
                 apiKey: nil
             )
-            try expect(repairedStage.resolvedGenerationQuality == .high, "恢复后质量没有写入模板")
-            try expect(stageRecorder.snapshot().count == 1, "使用恢复原图时仍调用了 API")
+            try expect(repairedStage.resolvedGenerationQuality == .high, "The recovered quality was not written to the template")
+            try expect(stageRecorder.snapshot().count == 1, "Using a recovered raw image still called the API")
             let clearedSingleStageRaw = try stageStore.pendingReplacementRaw(
                 templateID: singleStageTemplate.id,
                 stageIndex: 0
             )
-            try expect(clearedSingleStageRaw == nil, "单阶段替换成功后恢复原图没有清理")
+            try expect(clearedSingleStageRaw == nil, "The recovery raw image was not cleared after a successful single-stage replacement")
 
             try stageStore.savePendingReplacementRaw(
                 templateID: singleStageTemplate.id,
@@ -467,19 +467,19 @@ private struct APISelfTestRunner {
                     "/v1/images/generations",
                     "/v1/images/generations"
                 ],
-                "确认重新请求没有准确产生一次新的单阶段费用请求"
+                "Confirmed re-requesting did not create exactly one new paid single-stage request"
             )
             let forceRefreshedRaw = try stageStore.pendingReplacementRaw(
                 templateID: singleStageTemplate.id,
                 stageIndex: 0
             )
-            try expect(forceRefreshedRaw == nil, "重新请求成功后恢复原图没有清理")
-            print("✓ 单阶段可免费重试本机原图，也可确认后重新请求一次")
+            try expect(forceRefreshedRaw == nil, "The recovery raw image was not cleared after a successful re-request")
+            print("✓ A single stage can retry its local raw image for free or make one confirmed new request")
 
             session.invalidateAndCancel()
-            print("\n全部 6 项 API 模拟自检通过。")
+            print("\nAll 6 API mock checks passed.")
         } catch {
-            fputs("✗ API 模拟自检失败：\(error)\n", stderr)
+            fputs("✗ API mock self-test failed: \(error)\n", stderr)
             exit(1)
         }
     }

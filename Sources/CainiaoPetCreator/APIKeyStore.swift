@@ -8,10 +8,10 @@ public enum APIKeyStoreError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .invalidKey:
-            "API Key 不能为空。"
+            "The API key cannot be empty."
         case let .keychain(status):
             (SecCopyErrorMessageString(status, nil) as String?)
-                ?? "钥匙串操作失败（\(status)）。"
+                ?? "The Keychain operation failed (\(status))."
         }
     }
 }

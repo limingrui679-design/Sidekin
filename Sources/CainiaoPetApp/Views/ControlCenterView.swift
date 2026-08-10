@@ -14,10 +14,10 @@ private enum ControlSection: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .care: "战备舱"
-        case .workshop: "宠物工坊"
-        case .evolution: "进化图鉴"
-        case .codex: "任务联动"
+        case .care: "Command Center"
+        case .workshop: "Pet Workshop"
+        case .evolution: "Evolution Codex"
+        case .codex: "Codex Link"
         }
     }
 
@@ -59,11 +59,11 @@ struct ControlCenterView: View {
             }
         }
         .animation(.spring(response: 0.32, dampingFraction: 0.84), value: model.bannerMessage)
-        .alert("重新孵化宠物？", isPresented: $showResetConfirmation) {
-            Button("取消", role: .cancel) {}
-            Button("重新孵化", role: .destructive) { model.resetPet() }
+        .alert("Hatch a New Pet?", isPresented: $showResetConfirmation) {
+            Button("Cancel", role: .cancel) {}
+            Button("Hatch Again", role: .destructive) { model.resetPet() }
         } message: {
-            Text("当前成长、互动次数和进化记录会被新的星芽蛋替换，并恢复为内置模板。自定义模板文件不会删除。")
+            Text("Current growth, interaction counts, and evolution history will be replaced by a new Star Sprout Egg, and the built-in template will be restored. Custom template files will not be deleted.")
         }
     }
 
@@ -82,9 +82,9 @@ struct ControlCenterView: View {
                 .shadow(color: .mint.opacity(0.32), radius: 12)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("芽芽")
+                    Text("CAINIAOPET")
                         .font(.system(size: 19, weight: .bold, design: .rounded))
-                    Text("CODEX 战术伙伴")
+                    Text("CODEX TACTICAL COMPANION")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -121,11 +121,11 @@ struct ControlCenterView: View {
             Spacer()
 
             VStack(alignment: .leading, spacing: 10) {
-                Label("本地存档 · 生成时联网", systemImage: "lock.fill")
+                Label("LOCAL SAVE · ONLINE ONLY FOR GENERATION", systemImage: "lock.fill")
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.green)
 
-                Button("重新孵化") {
+                Button("Hatch Again") {
                     showResetConfirmation = true
                 }
                 .buttonStyle(.plain)
@@ -176,7 +176,7 @@ struct ControlCenterView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(section.title)
                     .font(.system(size: 25, weight: .bold, design: .rounded))
-                Text("\(model.activeFormName) · \(model.pet.experience) 成长经验")
+                Text("\(model.activeFormName) · \(model.pet.experience) GROWTH XP")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
@@ -187,7 +187,7 @@ struct ControlCenterView: View {
                 Circle()
                     .fill(activityColor)
                     .frame(width: 8, height: 8)
-                Text(model.pet.isSleeping ? "正在睡觉" : model.pet.codexActivity.displayName)
+                Text(model.pet.isSleeping ? "Sleeping" : model.pet.codexActivity.displayName)
                     .font(.system(size: 12, weight: .semibold, design: .rounded))
             }
             .padding(.horizontal, 12)
@@ -197,7 +197,7 @@ struct ControlCenterView: View {
             Button {
                 model.setPetVisible(!model.isPetVisible)
             } label: {
-                Label(model.isPetVisible ? "隐藏桌宠" : "显示桌宠", systemImage: model.isPetVisible ? "eye.slash" : "eye")
+                Label(model.isPetVisible ? "Hide Desktop Pet" : "Show Desktop Pet", systemImage: model.isPetVisible ? "eye.slash" : "eye")
             }
             .buttonStyle(SoftButtonStyle())
         }
@@ -303,23 +303,23 @@ private struct CareDashboard: View {
     private var statsCard: some View {
         VStack(alignment: .leading, spacing: 15) {
             HStack {
-                Text("核心状态")
+                Text("CORE STATUS")
                     .font(.headline.weight(.bold))
                 Spacer()
-                Text("综合 \(Int(model.pet.wellbeing))")
+                Text("Overall \(Int(model.pet.wellbeing))")
                     .font(.caption.weight(.bold))
                     .foregroundStyle(.mint)
             }
 
-            StatBar(label: "饱腹", value: model.pet.stats.hunger, icon: "carrot.fill", color: .orange)
-            StatBar(label: "心情", value: model.pet.stats.mood, icon: "face.smiling.fill", color: .pink)
-            StatBar(label: "精力", value: model.pet.stats.energy, icon: "bolt.fill", color: .cyan)
+            StatBar(label: "Hunger", value: model.pet.stats.hunger, icon: "carrot.fill", color: .orange)
+            StatBar(label: "Mood", value: model.pet.stats.mood, icon: "face.smiling.fill", color: .pink)
+            StatBar(label: "Energy", value: model.pet.stats.energy, icon: "bolt.fill", color: .cyan)
 
             Divider().overlay(Color.white.opacity(0.1))
 
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text(model.activeNextStageThreshold == nil ? "成长完成" : "下一阶段")
+                    Text(model.activeNextStageThreshold == nil ? "Growth Complete" : "Next Stage")
                         .font(.caption.weight(.semibold))
                     Spacer()
                     if let threshold = model.activeNextStageThreshold {
@@ -327,7 +327,7 @@ private struct CareDashboard: View {
                             .font(.caption.monospacedDigit())
                             .foregroundStyle(.secondary)
                     } else {
-                        Text("最终形态")
+                        Text("Final Form")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
@@ -342,19 +342,19 @@ private struct CareDashboard: View {
 
     private var actionsCard: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text("互动指令")
+            Text("CARE COMMANDS")
                 .font(.headline.weight(.bold))
 
             HStack(spacing: 12) {
-                CareActionButton(title: "喂食", subtitle: "+饱腹", symbol: "carrot.fill", color: .orange) {
+                CareActionButton(title: "Feed", subtitle: "+Hunger", symbol: "carrot.fill", color: .orange) {
                     model.perform(.feed)
                 }
-                CareActionButton(title: "玩耍", subtitle: "+心情", symbol: "tennisball.fill", color: .pink) {
+                CareActionButton(title: "Play", subtitle: "+Mood", symbol: "tennisball.fill", color: .pink) {
                     model.perform(.play)
                 }
                 CareActionButton(
-                    title: model.pet.isSleeping ? "唤醒" : "睡觉",
-                    subtitle: model.pet.isSleeping ? "继续陪伴" : "+精力",
+                    title: model.pet.isSleeping ? "Wake Up" : "Sleep",
+                    subtitle: model.pet.isSleeping ? "Back to your side" : "+Energy",
                     symbol: model.pet.isSleeping ? "sun.max.fill" : "moon.stars.fill",
                     color: .indigo
                 ) {
@@ -367,10 +367,10 @@ private struct CareDashboard: View {
 
     private var historyCard: some View {
         HStack(spacing: 20) {
-            MiniMetric(value: model.pet.feedCount, label: "喂食", symbol: "carrot.fill")
-            MiniMetric(value: model.pet.playCount, label: "玩耍", symbol: "gamecontroller.fill")
-            MiniMetric(value: model.pet.completedTasks, label: "完成任务", symbol: "checkmark.seal.fill")
-            MiniMetric(value: model.pet.failedTasks, label: "共同重试", symbol: "arrow.clockwise")
+            MiniMetric(value: model.pet.feedCount, label: "Fed", symbol: "carrot.fill")
+            MiniMetric(value: model.pet.playCount, label: "Played", symbol: "gamecontroller.fill")
+            MiniMetric(value: model.pet.completedTasks, label: "Completed", symbol: "checkmark.seal.fill")
+            MiniMetric(value: model.pet.failedTasks, label: "Retried", symbol: "arrow.clockwise")
         }
         .frame(maxWidth: .infinity)
         .cardStyle()
@@ -392,9 +392,9 @@ private struct GenerationJobStageAction: Identifiable {
 private struct PetWorkshopDashboard: View {
     @ObservedObject var model: AppModel
 
-    @State private var templateName = "我的新伙伴"
+    @State private var templateName = "My New Companion"
     @State private var concept = ""
-    @State private var artDirection = "竞技游戏级 3D 角色建模，清晰轮廓，精致材质"
+    @State private var artDirection = "Competitive-game 3D character art, readable silhouette, premium materials"
     @State private var mode: PetTemplateGenerationMode = .text
     @State private var quality: PetImageGenerationQuality = .medium
     @State private var stageCount = 5
@@ -417,11 +417,11 @@ private struct PetWorkshopDashboard: View {
     @State private var showRegenerationAlert = false
 
     private let artPresets = [
-        "竞技游戏级 3D 角色建模，清晰轮廓，精致材质",
-        "高级二次元赛璐璐，锐利形状，强对比配色",
-        "软陶手办质感，圆润可爱，柔和棚拍光",
-        "东方奇幻水墨，游戏角色立绘质感",
-        "低多边形机甲，模块化结构，硬表面材质"
+        "Competitive-game 3D character art, readable silhouette, premium materials",
+        "Premium anime cel shading, sharp shapes, high-contrast palette",
+        "Soft clay figurine, rounded and charming, gentle studio lighting",
+        "Eastern fantasy ink wash, polished game character illustration",
+        "Low-poly mecha, modular construction, hard-surface materials"
     ]
 
     var body: some View {
@@ -440,46 +440,46 @@ private struct PetWorkshopDashboard: View {
             .padding(28)
         }
         .onDisappear { model.clearPreview() }
-        .alert("确认生成整条成长线？", isPresented: $showGenerationConfirmation) {
-            Button("取消", role: .cancel) {}
-            Button("生成 \(stageCount) 个阶段") {
+        .alert("Generate the Full Growth Line?", isPresented: $showGenerationConfirmation) {
+            Button("Cancel", role: .cancel) {}
+            Button("Generate \(stageCount) Stages") {
                 model.beginTemplateGeneration(request: generationRequest, apiKey: apiKey)
                 apiKey = ""
             }
         } message: {
-            Text("这会使用安装用户自己的 API Key，向 OpenAI 图像 API 发起约 \(stageCount) 次请求。按当前公开输出价格估算约 \(estimatedOutputCost)，另计文字与参考图输入；最终账单以 OpenAI 为准。每阶段完成后会立即保存在本机，可断点续跑。")
+            Text("This uses your own API key and sends about \(stageCount) requests to the OpenAI image API. Estimated output cost is \(estimatedOutputCost), excluding text and reference-image input. OpenAI's final bill is authoritative. Each completed stage is saved locally for resumable generation.")
         }
-        .alert("重命名模板", isPresented: $showRenameAlert) {
-            TextField("模板名称", text: $renameText)
-            Button("取消", role: .cancel) { pendingRenameTemplate = nil }
-            Button("保存") {
+        .alert("Rename Template", isPresented: $showRenameAlert) {
+            TextField("Template name", text: $renameText)
+            Button("Cancel", role: .cancel) { pendingRenameTemplate = nil }
+            Button("Save") {
                 if let template = pendingRenameTemplate {
                     model.renameTemplate(template, to: renameText)
                 }
                 pendingRenameTemplate = nil
             }
         }
-        .alert("删除这个模板？", isPresented: $showDeleteAlert) {
-            Button("取消", role: .cancel) { pendingDeleteTemplate = nil }
-            Button("删除", role: .destructive) {
+        .alert("Delete This Template?", isPresented: $showDeleteAlert) {
+            Button("Cancel", role: .cancel) { pendingDeleteTemplate = nil }
+            Button("Delete", role: .destructive) {
                 if let template = pendingDeleteTemplate { model.deleteTemplate(template) }
                 pendingDeleteTemplate = nil
             }
         } message: {
-            Text("模板清单和所有阶段图片都会从本机删除，此操作不能在应用内撤销。")
+            Text("The template manifest and every stage image will be deleted from this Mac. This cannot be undone in the app.")
         }
-        .alert("删除未完成任务？", isPresented: $showDiscardJobAlert) {
-            Button("取消", role: .cancel) { pendingDiscardJob = nil }
-            Button("删除任务", role: .destructive) {
+        .alert("Delete Unfinished Job?", isPresented: $showDiscardJobAlert) {
+            Button("Cancel", role: .cancel) { pendingDiscardJob = nil }
+            Button("Delete Job", role: .destructive) {
                 if let job = pendingDiscardJob { model.discardGenerationJob(job) }
                 pendingDiscardJob = nil
             }
         } message: {
-            Text("已生成但尚未安装的阶段图片也会被删除。")
+            Text("Generated stage images that have not yet been installed will also be deleted.")
         }
-        .alert("清除阶段恢复点？", isPresented: $showRestartJobAlert) {
-            Button("取消", role: .cancel) { pendingRestartJobStage = nil }
-            Button("清除并允许重新请求", role: .destructive) {
+        .alert("Clear Stage Recovery Data?", isPresented: $showRestartJobAlert) {
+            Button("Cancel", role: .cancel) { pendingRestartJobStage = nil }
+            Button("Clear and Allow New Requests", role: .destructive) {
                 if let action = pendingRestartJobStage {
                     model.restartGenerationJob(action.job, fromStage: action.stageIndex)
                 }
@@ -487,13 +487,13 @@ private struct PetWorkshopDashboard: View {
             }
         } message: {
             if let action = pendingRestartJobStage {
-                Text("会删除第 \(action.stageIndex + 1) 阶段及其后续恢复文件。之后点击继续时，这些阶段将重新调用 API 并由安装用户自己的账户付费。")
+                Text("This deletes recovery files for stage \(action.stageIndex + 1) and every later stage. Continuing afterward will request those stages again and charge your own API account.")
             }
         }
-        .alert("重新生成这个阶段？", isPresented: $showRegenerationAlert) {
-            Button("取消", role: .cancel) { pendingRegeneration = nil }
+        .alert("Regenerate This Stage?", isPresented: $showRegenerationAlert) {
+            Button("Cancel", role: .cancel) { pendingRegeneration = nil }
             if pendingRegenerationHasSavedRaw {
-                Button("免费重试本机原图") {
+                Button("Retry Saved Image for Free") {
                     if let action = pendingRegeneration {
                         model.regenerateTemplateStage(
                             action.template,
@@ -503,7 +503,7 @@ private struct PetWorkshopDashboard: View {
                     }
                     pendingRegeneration = nil
                 }
-                Button("重新请求（会产生费用）") {
+                Button("Request Again (Paid)") {
                     if let action = pendingRegeneration {
                         model.regenerateTemplateStage(
                             action.template,
@@ -515,7 +515,7 @@ private struct PetWorkshopDashboard: View {
                     pendingRegeneration = nil
                 }
             } else {
-                Button("付费生成并替换") {
+                Button("Generate and Replace (Paid)") {
                     if let action = pendingRegeneration {
                         model.regenerateTemplateStage(
                             action.template,
@@ -528,9 +528,9 @@ private struct PetWorkshopDashboard: View {
             }
         } message: {
             if pendingRegenerationHasSavedRaw {
-                Text("检测到上次已经付费返回并保存在本机的 API 原图。免费重试不会请求 API；只有选择重新请求才会产生新的费用，\(quality.displayName)质量输出约 \(singleImageOutputCost)，另计输入费用。")
+                Text("A previously paid API image is already saved locally. Retrying it does not call the API. Only Request Again creates a new charge: approximately \(singleImageOutputCost) for \(quality.displayName) output, excluding input cost.")
             } else {
-                Text("只会生成并替换所选阶段。\(quality.displayName)质量的 1024×1024 输出约 \(singleImageOutputCost)，另计输入费用；费用由安装用户自己的 API 账户承担。")
+                Text("Only the selected stage will be generated and replaced. A 1024×1024 \(quality.displayName) output is approximately \(singleImageOutputCost), excluding input cost. Your own API account is charged.")
             }
         }
     }
@@ -539,9 +539,9 @@ private struct PetWorkshopDashboard: View {
         VStack(spacing: 10) {
             HStack {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("当前伙伴")
+                    Text("CURRENT COMPANION")
                         .font(.headline.bold())
-                    Text(model.activeCustomTemplate == nil ? "内置离线模板" : "本地自定义模板")
+                    Text(model.activeCustomTemplate == nil ? "Built-in offline theme" : "Local custom template")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -574,21 +574,21 @@ private struct PetWorkshopDashboard: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack {
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("模板库")
+                    Text("TEMPLATE LIBRARY")
                         .font(.headline.bold())
-                    Text("10 套离线模板始终可用；生成后的模板会出现在这里。")
+                    Text("Ten offline themes are always available. Generated templates appear here.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 5) {
-                    Text("\(model.customTemplates.count) 个自定义")
+                    Text("\(model.customTemplates.count) CUSTOM")
                         .font(.caption2.bold())
                         .foregroundStyle(.mint)
                     Button {
                         importTemplatePackage()
                     } label: {
-                        Label("导入模板", systemImage: "square.and.arrow.down")
+                        Label("Import Template", systemImage: "square.and.arrow.down")
                     }
                     .buttonStyle(.plain)
                     .font(.caption2.bold())
@@ -655,14 +655,14 @@ private struct PetWorkshopDashboard: View {
         VStack(alignment: .leading, spacing: 13) {
             HStack {
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("可继续的生成任务")
+                    Text("RESUMABLE GENERATION JOBS")
                         .font(.headline.bold())
-                    Text("每次 API 返回后先保存原图，再完成抠图；重开应用也不会重复请求已保存阶段。")
+                    Text("Each API image is saved before cutout processing. Relaunching the app will not request saved stages again.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                Label("本机恢复点", systemImage: "externaldrive.fill.badge.checkmark")
+                Label("LOCAL CHECKPOINT", systemImage: "externaldrive.fill.badge.checkmark")
                     .font(.caption.bold())
                     .foregroundStyle(.orange)
             }
@@ -673,13 +673,13 @@ private struct PetWorkshopDashboard: View {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(job.templateName)
                                 .font(.subheadline.bold())
-                            Text("\(job.completedCount) / \(job.stageNames.count) 阶段 · \(job.state.displayName) · \(job.quality.displayName)质量")
+                            Text("\(job.completedCount) / \(job.stageNames.count) STAGES · \(job.state.displayName) · \(job.quality.displayName)")
                                 .font(.caption2)
                                 .foregroundStyle(.secondary)
                         }
                         Spacer()
                         if hasSavedCurrentRaw(job) {
-                            Button("仅免费处理本机原图") {
+                            Button("Process Saved Image Only (Free)") {
                                 model.resumeTemplateGeneration(
                                     job: job,
                                     allowNewRequests: false
@@ -688,14 +688,14 @@ private struct PetWorkshopDashboard: View {
                             .buttonStyle(SoftButtonStyle())
                             .disabled(model.isGeneratingTemplate)
 
-                            Button("继续生成（可能付费）") {
+                            Button("Continue Generation (May Be Paid)") {
                                 model.resumeTemplateGeneration(job: job, apiKey: apiKey)
                                 apiKey = ""
                             }
                             .buttonStyle(AccentButtonStyle(color: .orange))
                             .disabled(model.isGeneratingTemplate)
                         } else {
-                            Button("继续 / 重试当前阶段") {
+                            Button("Continue / Retry Current Stage") {
                                 model.resumeTemplateGeneration(job: job, apiKey: apiKey)
                                 apiKey = ""
                             }
@@ -705,21 +705,21 @@ private struct PetWorkshopDashboard: View {
 
                         Menu {
                             if hasSavedCurrentRaw(job), job.nextStageIndex < job.stageNames.count {
-                                Button("清除当前原图并重新请求", systemImage: "arrow.counterclockwise") {
+                                Button("Clear Current Image and Request Again", systemImage: "arrow.counterclockwise") {
                                     confirmRestart(job, fromStage: job.nextStageIndex)
                                 }
                                 Divider()
                             }
                             if !job.completedStages.isEmpty {
-                                Menu("从已完成阶段重做") {
+                                Menu("Restart from a Completed Stage") {
                                     ForEach(job.completedStages) { stage in
-                                        Button("第 \(stage.index + 1) 阶段 · \(stage.name)") {
+                                        Button("Stage \(stage.index + 1) · \(stage.name)") {
                                             confirmRestart(job, fromStage: stage.index)
                                         }
                                     }
                                 }
                             }
-                            Button("删除任务", role: .destructive) {
+                            Button("Delete Job", role: .destructive) {
                                 pendingDiscardJob = job
                                 showDiscardJobAlert = true
                             }
@@ -758,7 +758,7 @@ private struct PetWorkshopDashboard: View {
                             .foregroundStyle(.orange)
                             .lineLimit(2)
                     } else {
-                        Text("每个阶段同时显示 API 原图和边缘连通抠图结果，可在继续前对照检查。")
+                        Text("Each stage shows the saved API image beside the edge-connected cutout for comparison before continuing.")
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                     }
@@ -775,19 +775,19 @@ private struct PetWorkshopDashboard: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("创建自定义成长模板")
+                    Text("CREATE A CUSTOM GROWTH TEMPLATE")
                         .font(.title3.bold())
-                    Text("用文字原创，或上传一张图后改画风 / 高相似延展。每个阶段都会生成独立姿态与轮廓。")
+                    Text("Create from text, restyle a reference, or extend it with high fidelity. Every stage receives a distinct pose and silhouette.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                Label("1–8 阶段", systemImage: "square.stack.3d.up.fill")
+                Label("1–8 STAGES", systemImage: "square.stack.3d.up.fill")
                     .font(.caption.bold())
                     .foregroundStyle(.cyan)
             }
 
-            Picker("生成方式", selection: $mode) {
+            Picker("Generation Mode", selection: $mode) {
                 ForEach(PetTemplateGenerationMode.allCases) { option in
                     Text(option.displayName).tag(option)
                 }
@@ -796,13 +796,13 @@ private struct PetWorkshopDashboard: View {
             .onChange(of: mode) { _, newMode in
                 if concept.isEmpty, newMode.requiresReferenceImage {
                     concept = newMode == .faithful
-                        ? "保留参考图主体的关键外观与辨识度，延展成完整成长线"
-                        : "保留参考图主体物种特征，用新画风重新设计完整成长线"
+                        ? "Preserve the reference subject's defining appearance and identity while extending it into a full growth line"
+                        : "Keep the reference subject's species traits while redesigning the full growth line in a new art style"
                 }
             }
 
             HStack(alignment: .center, spacing: 14) {
-                Picker("质量", selection: $quality) {
+                Picker("Quality", selection: $quality) {
                     ForEach(PetImageGenerationQuality.allCases) { option in
                         Text(option.displayName).tag(option)
                     }
@@ -813,7 +813,7 @@ private struct PetWorkshopDashboard: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(quality.detail)
                         .font(.caption.bold())
-                    Text("\(stageCount) 阶段输出约 \(estimatedOutputCost)；不含文字及参考图输入费用")
+                    Text("Estimated output for \(stageCount) stages: \(estimatedOutputCost), excluding text and reference-image input")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
@@ -822,14 +822,14 @@ private struct PetWorkshopDashboard: View {
 
             HStack(alignment: .top, spacing: 16) {
                 VStack(alignment: .leading, spacing: 12) {
-                    LabeledContent("模板名称") {
-                        TextField("例如：月蚀小兽", text: $templateName)
+                    LabeledContent("Template Name") {
+                        TextField("For example: Eclipse Familiar", text: $templateName)
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 270)
                     }
 
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("宠物描述")
+                        Text("Pet Description")
                             .font(.caption.bold())
                         TextEditor(text: $concept)
                             .font(.system(size: 13))
@@ -841,9 +841,9 @@ private struct PetWorkshopDashboard: View {
                     }
 
                     VStack(alignment: .leading, spacing: 7) {
-                        Text("画风")
+                        Text("Art Direction")
                             .font(.caption.bold())
-                        TextField("输入任意画风描述", text: $artDirection)
+                        TextField("Describe any visual style", text: $artDirection)
                             .textFieldStyle(.roundedBorder)
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 6) {
@@ -867,7 +867,7 @@ private struct PetWorkshopDashboard: View {
 
             HStack(alignment: .top, spacing: 18) {
                 VStack(alignment: .leading, spacing: 10) {
-                    Stepper("成长阶段：\(stageCount)", value: $stageCount, in: 1...8)
+                    Stepper("Growth Stages: \(stageCount)", value: $stageCount, in: 1...8)
                         .font(.subheadline.bold())
                         .onChange(of: stageCount) { _, newCount in
                             resizeStageNames(to: newCount)
@@ -878,7 +878,7 @@ private struct PetWorkshopDashboard: View {
                             Text("\(index + 1) · \(CustomGrowthStagePlan.thresholds(count: stageCount)[index]) XP")
                                 .font(.caption2.monospacedDigit())
                                 .foregroundStyle(.secondary)
-                            TextField("阶段名", text: stageNameBinding(index))
+                            TextField("Stage name", text: stageNameBinding(index))
                                 .textFieldStyle(.roundedBorder)
                         }
                     }
@@ -890,21 +890,21 @@ private struct PetWorkshopDashboard: View {
                         Text("OpenAI API Key")
                             .font(.caption.bold())
                         Spacer()
-                        Label(model.hasImageAPIKey ? "已存钥匙串" : "尚未保存", systemImage: model.hasImageAPIKey ? "checkmark.shield.fill" : "key.fill")
+                        Label(model.hasImageAPIKey ? "Saved in Keychain" : "Not Saved", systemImage: model.hasImageAPIKey ? "checkmark.shield.fill" : "key.fill")
                             .font(.caption2.bold())
                             .foregroundStyle(model.hasImageAPIKey ? .green : .orange)
                     }
-                    SecureField(model.hasImageAPIKey ? "留空即可使用此用户已保存的 Key" : "安装用户自己的 sk-…", text: $apiKey)
+                    SecureField(model.hasImageAPIKey ? "Leave blank to use this user's saved key" : "Installed user's own sk-…", text: $apiKey)
                         .textFieldStyle(.roundedBorder)
                     HStack {
-                        Button("保存 Key") {
+                        Button("Save Key") {
                             model.saveImageAPIKey(apiKey)
                             apiKey = ""
                         }
                         .buttonStyle(SoftButtonStyle())
                         .disabled(apiKey.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                         if model.hasImageAPIKey {
-                            Button("移除") { model.removeImageAPIKey() }
+                            Button("Remove") { model.removeImageAPIKey() }
                                 .buttonStyle(.plain)
                                 .foregroundStyle(.red.opacity(0.85))
                         }
@@ -916,7 +916,7 @@ private struct PetWorkshopDashboard: View {
             if model.isGeneratingTemplate {
                 VStack(alignment: .leading, spacing: 8) {
                     HStack {
-                        Text("正在生成：\(model.generationStageName)")
+                        Text("Generating: \(model.generationStageName)")
                             .font(.caption.bold())
                         Spacer()
                         Text("\(model.generationCompleted) / \(model.generationTotal)")
@@ -928,19 +928,19 @@ private struct PetWorkshopDashboard: View {
                         total: Double(max(1, model.generationTotal))
                     )
                     .tint(.cyan)
-                    Button("取消生成") { model.cancelTemplateGeneration() }
+                    Button("Cancel Generation") { model.cancelTemplateGeneration() }
                         .buttonStyle(SoftButtonStyle())
                 }
             } else {
                 HStack {
-                    Text("生成前会再次确认；约 \(stageCount) 次请求，输出约 \(estimatedOutputCost)，费用由安装用户自己的 OpenAI API 账户承担。")
+                    Text("You will confirm before generation. About \(stageCount) requests and \(estimatedOutputCost) in output cost will be charged to your own OpenAI API account.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                     Spacer()
                     Button {
                         showGenerationConfirmation = true
                     } label: {
-                        Label("生成整条成长线", systemImage: "wand.and.stars")
+                        Label("Generate Full Growth Line", systemImage: "wand.and.stars")
                     }
                     .buttonStyle(AccentButtonStyle(color: .cyan))
                     .disabled(!canGenerate)
@@ -953,7 +953,7 @@ private struct PetWorkshopDashboard: View {
 
     private var referencePicker: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(mode == .faithful ? "高相似参考图" : "画风重制参考图")
+            Text(mode == .faithful ? "High-Fidelity Reference" : "Restyle Reference")
                 .font(.caption.bold())
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
@@ -967,7 +967,7 @@ private struct PetWorkshopDashboard: View {
                     VStack(spacing: 8) {
                         Image(systemName: "photo.badge.plus")
                             .font(.system(size: 28))
-                        Text("PNG、JPEG、HEIC 或 WebP")
+                        Text("PNG, JPEG, HEIC, or WebP")
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                     }
@@ -975,11 +975,11 @@ private struct PetWorkshopDashboard: View {
             }
             .frame(height: 145)
             .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white.opacity(0.1)))
-            Text(referenceFileName.isEmpty ? "尚未选择图片" : referenceFileName)
+            Text(referenceFileName.isEmpty ? "No image selected" : referenceFileName)
                 .font(.caption2)
                 .foregroundStyle(.secondary)
                 .lineLimit(1)
-            Button(referenceData == nil ? "选择参考图" : "更换参考图") {
+            Button(referenceData == nil ? "Choose Reference Image" : "Change Reference Image") {
                 chooseReferenceImage()
             }
             .buttonStyle(SoftButtonStyle())
@@ -992,9 +992,9 @@ private struct PetWorkshopDashboard: View {
                 .font(.title3)
                 .foregroundStyle(.green)
             VStack(alignment: .leading, spacing: 4) {
-                Text("隐私边界")
+                Text("PRIVACY BOUNDARY")
                     .font(.subheadline.bold())
-                Text("成长存档、生成后的阶段图、模板清单都只保存在本机；API Key 存入 macOS 钥匙串。只有点击生成后，描述、你选择的参考图以及同一轮已生成的阶段图才会发送到 OpenAI 图像 API，以保持成长线一致。应用不会上传 Codex 对话、代码或任务内容。")
+                Text("Growth saves, generated stage images, and template manifests stay on this Mac. The API key is stored in macOS Keychain. Only after you confirm generation are the description, selected reference, and same-run stage anchors sent to the OpenAI image API to preserve lineage consistency. CainiaoPet never uploads Codex conversations, code, or task content.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -1085,8 +1085,8 @@ private struct PetWorkshopDashboard: View {
 
     private func importTemplatePackage() {
         let panel = NSOpenPanel()
-        panel.title = "导入 CainiaoPet 模板"
-        panel.prompt = "导入"
+        panel.title = "Import CainiaoPet Template"
+        panel.prompt = "Import"
         panel.canChooseDirectories = false
         panel.allowsMultipleSelection = false
         panel.allowedContentTypes = [UTType(filenameExtension: "cainiaopet") ?? .data]
@@ -1096,8 +1096,8 @@ private struct PetWorkshopDashboard: View {
 
     private func exportTemplatePackage(_ template: CustomPetTemplate) {
         let panel = NSSavePanel()
-        panel.title = "导出 CainiaoPet 模板"
-        panel.prompt = "导出"
+        panel.title = "Export CainiaoPet Template"
+        panel.prompt = "Export"
         panel.allowedContentTypes = [UTType(filenameExtension: "cainiaopet") ?? .data]
         panel.nameFieldStringValue = template.name + ".cainiaopet"
         guard panel.runModal() == .OK, let url = panel.url else { return }
@@ -1109,8 +1109,8 @@ private struct PetWorkshopDashboard: View {
         stageIndex: Int
     ) {
         let panel = NSOpenPanel()
-        panel.title = "选择新的阶段图片"
-        panel.prompt = "抠图并替换"
+        panel.title = "Choose a New Stage Image"
+        panel.prompt = "Cut Out and Replace"
         panel.canChooseDirectories = false
         panel.allowsMultipleSelection = false
         panel.allowedContentTypes = [.png, .jpeg, .heic, .webP]
@@ -1119,7 +1119,7 @@ private struct PetWorkshopDashboard: View {
         guard fileSize <= 25 * 1_024 * 1_024,
               let data = try? Data(contentsOf: url)
         else {
-            model.bannerMessage = "图片无法读取或超过 25 MB。"
+            model.bannerMessage = "The image could not be read or exceeds 25 MB."
             return
         }
         model.replaceTemplateStage(template, stageIndex: stageIndex, with: data)
@@ -1127,8 +1127,8 @@ private struct PetWorkshopDashboard: View {
 
     private func chooseReferenceImage() {
         let panel = NSOpenPanel()
-        panel.title = "选择宠物参考图"
-        panel.prompt = "使用这张图"
+        panel.title = "Choose a Pet Reference Image"
+        panel.prompt = "Use This Image"
         panel.canChooseDirectories = false
         panel.allowsMultipleSelection = false
         panel.allowedContentTypes = [.png, .jpeg, .heic, .webP]
@@ -1137,14 +1137,14 @@ private struct PetWorkshopDashboard: View {
         else { return }
         let fileSize = (try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? 0
         guard fileSize <= 25 * 1_024 * 1_024 else {
-            model.bannerMessage = "参考图超过 25 MB，请先压缩后再选择。"
+            model.bannerMessage = "The reference image exceeds 25 MB. Compress it before selecting it again."
             return
         }
         guard
               let data = try? Data(contentsOf: url),
               let image = NSImage(data: data)
         else {
-            model.bannerMessage = "无法读取这张图片，请换用 PNG、JPEG、HEIC 或 WebP。"
+            model.bannerMessage = "This image could not be read. Choose a PNG, JPEG, HEIC, or WebP file."
             return
         }
         referenceData = data
@@ -1164,8 +1164,8 @@ private struct RecoveryStagePreview: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack(spacing: 5) {
-                preview(url: rawURL, label: "原图")
-                preview(url: processedURL, label: "抠图")
+                preview(url: rawURL, label: "ORIGINAL")
+                preview(url: processedURL, label: "CUTOUT")
             }
             Text("\(index + 1) · \(stageName)")
                 .font(.system(size: 9, weight: .bold))
@@ -1249,15 +1249,15 @@ private struct EvolutionDashboard: View {
             VStack(alignment: .leading, spacing: 18) {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(model.activeCustomTemplate.map { "\($0.stages.count) 阶段自定义成长线" } ?? "五阶段独立物种进化")
+                        Text(model.activeCustomTemplate.map { "\($0.stages.count)-stage custom growth line" } ?? "Five-stage species evolution")
                             .font(.title2.bold())
-                        Text("点击任一模型可在浮动桌宠中临时预览，不会改动成长存档。")
+                        Text("Select any model to preview it temporarily in the floating pet without changing growth progress.")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
                     Spacer()
                     if model.hasActivePreview {
-                        Button("结束预览") { model.clearPreview() }
+                        Button("End Preview") { model.clearPreview() }
                             .buttonStyle(SoftButtonStyle())
                     }
                 }
@@ -1272,10 +1272,10 @@ private struct EvolutionDashboard: View {
                             EvolutionCard(
                                 stage: stage,
                                 name: customStage.name,
-                                phaseLabel: "第 \(customStage.index + 1) / \(template.stages.count) 阶段",
+                                phaseLabel: "Stage \(customStage.index + 1) of \(template.stages.count)",
                                 subtitle: customStage.experienceThreshold == 0
-                                    ? "初始形态"
-                                    : "达到 \(customStage.experienceThreshold) XP 解锁",
+                                    ? "Starting form"
+                                    : "Unlocks at \(customStage.experienceThreshold) XP",
                                 theme: template.fallbackTheme,
                                 assetURL: PetTemplateStore().assetURL(
                                     templateID: template.id,
@@ -1336,15 +1336,15 @@ private struct CodexDashboard: View {
                             .frame(width: 52, height: 52)
 
                             VStack(alignment: .leading, spacing: 3) {
-                                Text("Codex 状态监听")
+                                Text("CODEX STATUS MONITOR")
                                     .font(.headline.bold())
-                                Label("本地监听已运行", systemImage: "checkmark.circle.fill")
+                                Label("LOCAL MONITOR ACTIVE", systemImage: "checkmark.circle.fill")
                                     .font(.caption.weight(.semibold))
                                     .foregroundStyle(.green)
                             }
                         }
 
-                        Text("应用只读取任务生命周期事件：运行、完成和失败；不会保存提示词、代码、工具输出或对话内容。")
+                        Text("CainiaoPet reads only task lifecycle events: running, completed, and failed. It does not save prompts, code, tool output, or conversation content.")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -1353,14 +1353,14 @@ private struct CodexDashboard: View {
                     .cardStyle()
 
                     VStack(alignment: .leading, spacing: 12) {
-                        Text("当前状态")
+                        Text("CURRENT STATUS")
                             .font(.caption.weight(.semibold))
                             .foregroundStyle(.secondary)
                         Text(model.pet.codexActivity.displayName)
                             .font(.system(size: 23, weight: .bold, design: .rounded))
                         HStack(spacing: 8) {
                             Circle().fill(statusColor).frame(width: 9, height: 9)
-                            Text(model.hooksInstalled ? "官方 Hooks 已安装" : "只读监听模式")
+                            Text(model.hooksInstalled ? "Official Hooks Installed" : "Read-Only Monitor Mode")
                                 .font(.caption.weight(.semibold))
                         }
                     }
@@ -1371,18 +1371,18 @@ private struct CodexDashboard: View {
                 VStack(alignment: .leading, spacing: 14) {
                     HStack {
                         VStack(alignment: .leading, spacing: 3) {
-                            Text("官方 Hooks 桥接")
+                            Text("OFFICIAL HOOKS BRIDGE")
                                 .font(.headline.bold())
-                            Text("安装后，Codex 提交任务与结束任务时会直接通知芽芽；现有 Hooks 会被保留。")
+                            Text("When installed, Codex notifies Sprout when tasks start and finish. Existing hooks are preserved.")
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                         }
                         Spacer()
                         if model.hooksInstalled {
-                            Button("移除联动") { model.uninstallCodexHooks() }
+                            Button("Remove Integration") { model.uninstallCodexHooks() }
                                 .buttonStyle(SoftButtonStyle())
                         } else {
-                            Button("安装 Codex 联动") { model.installCodexHooks() }
+                            Button("Install Codex Integration") { model.installCodexHooks() }
                                 .buttonStyle(AccentButtonStyle(color: .mint))
                         }
                     }
@@ -1390,23 +1390,23 @@ private struct CodexDashboard: View {
                 .cardStyle()
 
                 VStack(alignment: .leading, spacing: 14) {
-                    Text("状态响应测试")
+                    Text("STATUS RESPONSE TEST")
                         .font(.headline.bold())
-                    Text("不用真正运行任务，也可以检查三种动画和成长反馈。")
+                    Text("Preview the activity animations and growth feedback without running a real task.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
 
                     HStack(spacing: 12) {
-                        SimulationButton(title: "运行", symbol: "ellipsis", color: .cyan) {
+                        SimulationButton(title: "Running", symbol: "ellipsis", color: .cyan) {
                             model.simulate(.running)
                         }
-                        SimulationButton(title: "完成", symbol: "checkmark", color: .green) {
+                        SimulationButton(title: "Complete", symbol: "checkmark", color: .green) {
                             model.simulate(.completed)
                         }
-                        SimulationButton(title: "失败", symbol: "exclamationmark", color: .orange) {
+                        SimulationButton(title: "Failed", symbol: "exclamationmark", color: .orange) {
                             model.simulate(.failed)
                         }
-                        SimulationButton(title: "空闲", symbol: "pause", color: .mint) {
+                        SimulationButton(title: "Idle", symbol: "pause", color: .mint) {
                             model.simulate(.idle)
                         }
                     }
@@ -1414,19 +1414,19 @@ private struct CodexDashboard: View {
                 .cardStyle()
 
                 VStack(alignment: .leading, spacing: 12) {
-                    Label("本地数据与隐私", systemImage: "lock.shield.fill")
+                    Label("LOCAL DATA AND PRIVACY", systemImage: "lock.shield.fill")
                         .font(.headline.bold())
 
-                    PathRow(label: "成长存档", value: model.storageDescription)
-                    PathRow(label: "自定义模板", value: model.templatesDescription)
-                    PathRow(label: "Codex 会话目录", value: model.codexSessionsDescription)
+                    PathRow(label: "Growth Save", value: model.storageDescription)
+                    PathRow(label: "Custom Templates", value: model.templatesDescription)
+                    PathRow(label: "Codex Session Directory", value: model.codexSessionsDescription)
 
                     HStack {
-                        Text("日常养成与 Codex 联动完全本地；只有你确认生成模板后，描述、参考图和同一轮阶段锚点才会发往 OpenAI 图像 API。")
+                        Text("Daily care and Codex integration stay entirely local. Descriptions, reference images, and same-run stage anchors reach the OpenAI image API only after you confirm template generation.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                         Spacer()
-                        Button("打开本地数据文件夹") { model.revealLocalData() }
+                        Button("Open Local Data Folder") { model.revealLocalData() }
                             .buttonStyle(SoftButtonStyle())
                     }
                 }
@@ -1460,7 +1460,7 @@ private struct StatBar: View {
                 .foregroundStyle(color)
             Text(label)
                 .font(.caption.weight(.semibold))
-                .frame(width: 38, alignment: .leading)
+                .frame(width: 60, alignment: .leading)
             ProgressView(value: value, total: 100)
                 .tint(color)
             Text("\(Int(value))")
@@ -1579,7 +1579,7 @@ private struct ThemeChoiceButton: View {
             .clipped()
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("\(theme.displayName)，\(isSelected ? "已选择" : "点击选择")")
+        .accessibilityLabel("\(theme.displayName), \(isSelected ? "selected" : "select")")
     }
 }
 
@@ -1620,22 +1620,22 @@ private struct CustomTemplateChoiceButton: View {
             .buttonStyle(.plain)
 
             HStack(spacing: 4) {
-                Text("\(template.stages.count) 阶段 · \(template.generationMode.displayName)")
+                Text("\(template.stages.count) STAGES · \(template.generationMode.displayName)")
                     .font(.system(size: 9, weight: .semibold))
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
                 Spacer(minLength: 2)
                 Menu {
-                    Button("重命名", systemImage: "pencil", action: renameAction)
-                    Button("导出模板", systemImage: "square.and.arrow.up", action: exportAction)
-                    Menu("AI 重新生成阶段", systemImage: "arrow.triangle.2.circlepath") {
+                    Button("Rename", systemImage: "pencil", action: renameAction)
+                    Button("Export Template", systemImage: "square.and.arrow.up", action: exportAction)
+                    Menu("Regenerate Stage with AI", systemImage: "arrow.triangle.2.circlepath") {
                         ForEach(template.stages.indices, id: \.self) { index in
                             Button("\(index + 1) · \(template.stages[index].name)") {
                                 regenerateStageAction(index)
                             }
                         }
                     }
-                    Menu("用本地图片替换", systemImage: "photo.badge.arrow.down") {
+                    Menu("Replace with Local Image", systemImage: "photo.badge.arrow.down") {
                         ForEach(template.stages.indices, id: \.self) { index in
                             Button("\(index + 1) · \(template.stages[index].name)") {
                                 replaceStageAction(index)
@@ -1643,7 +1643,7 @@ private struct CustomTemplateChoiceButton: View {
                         }
                     }
                     Divider()
-                    Button("删除模板", systemImage: "trash", role: .destructive, action: deleteAction)
+                    Button("Delete Template", systemImage: "trash", role: .destructive, action: deleteAction)
                 } label: {
                     Image(systemName: "ellipsis.circle.fill")
                         .font(.system(size: 12))
@@ -1670,7 +1670,7 @@ private struct CustomTemplateChoiceButton: View {
             }
         }
         .accessibilityElement(children: .contain)
-        .accessibilityLabel("\(template.name)，\(template.stages.count) 个阶段")
+        .accessibilityLabel("\(template.name), \(template.stages.count) stages")
     }
 }
 
@@ -1703,7 +1703,7 @@ private struct EvolutionCard: View {
                         Text(name)
                             .font(.headline.bold())
                         if isCurrent {
-                            Text("当前")
+                            Text("CURRENT")
                                 .font(.caption2.bold())
                                 .padding(.horizontal, 7)
                                 .padding(.vertical, 3)
@@ -1718,7 +1718,7 @@ private struct EvolutionCard: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .multilineTextAlignment(.leading)
-                    Label(isPreviewing ? "正在预览" : "点击预览", systemImage: isPreviewing ? "eye.fill" : "eye")
+                    Label(isPreviewing ? "PREVIEWING" : "PREVIEW", systemImage: isPreviewing ? "eye.fill" : "eye")
                         .font(.caption2.weight(.semibold))
                         .foregroundStyle(isPreviewing ? .cyan : .secondary)
                 }
@@ -1746,7 +1746,7 @@ private struct CustomLineagePanel: View {
             HStack {
                 Image(systemName: "wand.and.stars")
                     .foregroundStyle(template.fallbackTheme.accentColor)
-                Text("\(template.name) · 模板信息")
+                Text("\(template.name) · TEMPLATE DETAILS")
                     .font(.headline.bold())
                 Spacer()
                 Text(template.generationMode.displayName)
@@ -1755,9 +1755,9 @@ private struct CustomLineagePanel: View {
             }
 
             HStack(alignment: .top, spacing: 18) {
-                AnchorFact(symbol: "square.stack.3d.up.fill", label: "成长阶段", value: "\(template.stages.count) 个阶段")
-                AnchorFact(symbol: "paintpalette.fill", label: "画风", value: template.artDirection)
-                AnchorFact(symbol: "text.bubble.fill", label: "核心设定", value: template.basePrompt)
+                AnchorFact(symbol: "square.stack.3d.up.fill", label: "Growth Stages", value: "\(template.stages.count) stages")
+                AnchorFact(symbol: "paintpalette.fill", label: "Art Direction", value: template.artDirection)
+                AnchorFact(symbol: "text.bubble.fill", label: "Core Concept", value: template.basePrompt)
             }
         }
         .cardStyle()
@@ -1774,19 +1774,19 @@ private struct LineageAnchorPanel: View {
             HStack {
                 Image(systemName: theme.symbolName)
                     .foregroundStyle(theme.accentColor)
-                Text("\(theme.displayName) · 造型锚点")
+                Text("\(theme.displayName) · DESIGN ANCHORS")
                     .font(.headline.bold())
                 Spacer()
-                Text("不是同模换色")
+                Text("NOT A RECOLOR")
                     .font(.caption2.bold())
                     .foregroundStyle(theme.secondaryAccentColor)
             }
 
             LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
-                AnchorFact(symbol: "pawprint.fill", label: "物种", value: theme.speciesAnchor)
-                AnchorFact(symbol: "figure.run", label: "运动", value: theme.motionAnchor)
-                AnchorFact(symbol: "square.3.layers.3d", label: "轮廓", value: theme.silhouetteAnchor)
-                AnchorFact(symbol: "sparkles", label: "材质 / 能量", value: "\(theme.materialAnchor) · \(theme.energyAnchor)")
+                AnchorFact(symbol: "pawprint.fill", label: "Species", value: theme.speciesAnchor)
+                AnchorFact(symbol: "figure.run", label: "Movement", value: theme.motionAnchor)
+                AnchorFact(symbol: "square.3.layers.3d", label: "Silhouette", value: theme.silhouetteAnchor)
+                AnchorFact(symbol: "sparkles", label: "Material / Energy", value: "\(theme.materialAnchor) · \(theme.energyAnchor)")
             }
         }
         .cardStyle()

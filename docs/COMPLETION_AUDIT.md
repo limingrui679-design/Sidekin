@@ -1,36 +1,37 @@
-# CainiaoPet 1.2.0 Beta 完成审计
+# CainiaoPet 1.3.0 Beta Completion Audit
 
-本页把需求、实现与可复现证据分开记录。本项目的目标是可复现的 GitHub 源码项目和本地 Beta，不包含面向普通用户的已签名 App 分发；模拟 API 也不等于真实付费调用。
+This document records requirements, implementation status, and reproducible evidence separately. The target is a reproducible GitHub source project and local Beta, not a signed application distributed directly to general users. Mock API coverage does not constitute a real paid API run.
 
-## 逐项结论
+## Requirement-by-Requirement Findings
 
-| 项目 | 当前结论 | 权威证据 |
+| Area | Current finding | Reproducible evidence |
 |---|---|---|
-| 逐阶段保存与断点续跑 | 已实现并测试 | `PetGenerationJobStore` 先保存 `raw-stage-XX.png`；API 模拟测试会在第二阶段中断，再从本地恢复且不重复第一阶段请求。界面把“仅免费处理本机原图”和“继续生成（可能付费）”分开；前者不会读取 Key 或发起网络请求。 |
-| 单阶段重试和替换 | 已实现并测试 | `regenerateStage` 在处理前保存隐藏恢复原图；界面会区分“免费重试本机原图”和“重新请求（会产生费用）”。模拟测试确认免费重试不调用 API，强制重发只新增一次请求，成功后恢复文件被清理。 |
-| 粉色/紫色安全抠图 | 已实现并测试 | `PetImageProcessor` 只从画布四周扩展背景连通区域，并自适应边缘主色；合成测试确认主体内部洋红和粉色不会被挖空。 |
-| 原图和抠图预览 | 已实现、编译通过 | 恢复任务同时暴露原图与已处理阶段 URL，工坊恢复卡片分别显示两个预览。尚未在本轮启动 App 做人工点击验收。 |
-| 三档质量与费用 | 已实现并测试 | `low / medium / high` 会进入生成与编辑请求；确认框按阶段数显示当前 1024 方图输出估算，并明确输入费用另计。 |
-| 三套进化线重画 | 已完成资源检查与小尺寸人工复核 | 糖果、荒原和星核五阶段资源已替换；50 张 PNG 全部为独立 `1254×1254` 透明图。`ART_QA_DESKTOP_SCALE.jpg` 按接近 235px 显示区域排列全套形态。 |
-| 模板管理 | 已实现并测试 | 支持重命名、删除、二进制模板包导入/导出、本地图替换和 AI 单阶段重绘；路径穿越、损坏 PNG、体积和阶段数均有门禁。 |
-| 干净验证包 | 已实现并测试 | 打包验证会解压复验 App、资源和清单，并拒绝 `__MACOSX`、`.DS_Store`、AppleDouble、损坏 ZIP、arm64 漂移及哈希不一致。 |
-| 独立源码仓库 | 已完成（本地） | 仓库不再包含 ClaimTrace 文件；Git 提交、Beta 标签、版本、发布清单和资源哈希均在 CainiaoPet 自己的目录中。CI 会生成并复验 arm64 ZIP、校验清单提交号与 workflow 提交一致，并保留验证 artifact。 |
-| Apple 公开发布 | 不在当前项目范围内 | 当前目标是 GitHub 源码项目，不要求 Developer ID、公证或 Gatekeeper 放行。`release-public.sh` 仅作为未来改变分发目标时的可选安全流程保留。 |
+| Per-stage persistence and resumable generation | Implemented and tested | `PetGenerationJobStore` persists `raw-stage-XX.png` before image processing. The API mock test interrupts the second stage, resumes from local state, and verifies that stage one is not requested twice. The UI separates free local-only processing from potentially paid Continue Generation; the local-only path neither reads a key nor makes a network request. |
+| Single-stage retry and replacement | Implemented and tested | `regenerateStage` stores a hidden recovery raw image before processing. The UI distinguishes Retry Local Raw Image from Request Again, which may incur a charge. Mock tests verify that a local retry makes no API call, a forced re-request adds exactly one call, and successful completion removes the recovery file. |
+| Pink- and purple-safe background removal | Implemented and tested | `PetImageProcessor` expands only from edge-connected background regions and estimates the dominant edge color adaptively. A synthetic test confirms that interior magenta and pink regions remain intact. |
+| Raw and processed previews | Implemented; compiles successfully | Recovery jobs expose both raw-image and processed-stage URLs, and the workshop recovery card shows both previews. The application was not launched for manual clicking during this audit. |
+| Three quality tiers and cost estimates | Implemented and tested | `low`, `medium`, and `high` are passed to generation and edit requests. The confirmation sheet calculates the current 1024-square output estimate from the stage count and explicitly states that input costs are additional. |
+| Three redrawn evolution lines | Assets verified and reviewed at desktop scale | Candy Carnival, Wasteland Salvager, and Nova Arena assets were replaced. All 50 PNG files are distinct `1254×1254` images with transparency. `ART_QA_DESKTOP_SCALE.jpg` presents every form near its 235-pixel desktop display size. |
+| Template management | Implemented and tested | Custom templates support rename, delete, binary package import/export, local image replacement, and AI single-stage regeneration. Path traversal, corrupt PNG data, size limits, and stage-count limits are guarded. |
+| Clean verification package | Implemented and tested | Package verification reopens the generated ZIP and validates the application, resources, and manifest. It rejects `__MACOSX`, `.DS_Store`, AppleDouble entries, corrupt archives, architecture drift, and hash mismatches. |
+| Independent source repository | Complete locally | The repository contains only CainiaoPet project materials, with its own Git history, Beta tag, version metadata, release manifest, and resource hashes. CI builds and re-verifies the arm64 ZIP, matches the manifest commit to the workflow commit, and retains verification artifacts. |
+| English-language product surface | Implemented and statically audited | New defaults, application UI, accessibility labels, menu items, errors, test output, metadata, scripts, and project documentation use English. Persisted custom names and legacy user-created data are preserved rather than silently rewritten. |
+| Public Apple distribution | Outside the current scope | The project target is a GitHub source repository. Developer ID signing, notarization, and Gatekeeper acceptance are not required. `release-public.sh` is retained only as an optional guarded path if the distribution goal changes later. |
 
-## 一键复验
+## One-Command Verification
 
 ```bash
 ./Scripts/run-all-checks.sh
 ./Scripts/package-release.sh
 ```
 
-第二条命令生成 ZIP 后，还会对 ZIP 内的 App 再执行一次签名、架构、资源与发布清单验证。
+After generating the ZIP, the second command re-verifies signing, architecture, resources, and the release manifest inside the archived application.
 
-## 当前边界与非目标
+## Current Boundaries and Non-Goals
 
-- 没有使用任何真实 OpenAI API Key，也没有产生真实付费调用。
-- 没有在本轮启动 App 做界面点击验收、安装 Hooks 或执行工坊生成。
-- Developer ID、Team ID、Apple 公证和 Gatekeeper 放行不是当前 GitHub 源码项目的完成条件；本地包保持 ad-hoc 签名是预期状态。
-- 已加入 GitHub Actions 配置，但仓库尚未配置 GitHub 远端，因此还没有远端 CI 运行记录；这不影响本地源码仓库和验证包的完成状态。
+- No real OpenAI API key was used, and no paid API request was made.
+- The application was not launched for interactive UI acceptance, Hooks installation, or Pet Workshop generation during this audit.
+- Developer ID, Team ID, Apple notarization, and Gatekeeper acceptance are not completion conditions for this GitHub source project. The local package is expected to remain ad-hoc signed.
+- GitHub Actions configuration is present, but the repository has no GitHub remote configured, so there is no remote CI run record yet. This does not affect the completed local source repository or reproducible verification package.
 
-因此，当前准确表述是“完成、测试并可追溯的 GitHub 源码项目与本地 macOS Beta”，不是面向普通用户公开分发的已签名产品，也未声称完成真实 API 付费全链路。
+The accurate status is: **a completed, tested, and traceable GitHub source project and local macOS Beta**. It is not presented as a publicly distributed signed product, and no real paid API end-to-end run is claimed.

@@ -7,7 +7,7 @@ struct CainiaoPetApp: App {
     @StateObject private var model = AppModel.shared
 
     var body: some Scene {
-        Window("芽芽战备舱", id: "control-center") {
+        Window("CainiaoPet Command Center", id: "control-center") {
             ControlCenterView(model: model)
                 .frame(minWidth: 900, minHeight: 620)
                 .preferredColorScheme(.dark)
@@ -15,23 +15,23 @@ struct CainiaoPetApp: App {
         .defaultSize(width: 980, height: 680)
         .windowStyle(.hiddenTitleBar)
 
-        MenuBarExtra("芽芽", systemImage: "pawprint.fill") {
-            Button("打开战备舱") {
+        MenuBarExtra("CainiaoPet", systemImage: "pawprint.fill") {
+            Button("Open Command Center") {
                 AppDelegate.showControlCenter()
             }
 
             Divider()
 
-            Button("喂食") { model.perform(.feed) }
-            Button("玩耍") { model.perform(.play) }
-            Button(model.pet.isSleeping ? "唤醒" : "睡觉") {
+            Button("Feed") { model.perform(.feed) }
+            Button("Play") { model.perform(.play) }
+            Button(model.pet.isSleeping ? "Wake Up" : "Sleep") {
                 model.perform(.sleepOrWake)
             }
 
             Divider()
 
             Toggle(
-                "显示浮动桌宠",
+                "Show Floating Pet",
                 isOn: Binding(
                     get: { model.isPetVisible },
                     set: { model.setPetVisible($0) }
@@ -40,7 +40,7 @@ struct CainiaoPetApp: App {
 
             Divider()
 
-            Button("退出芽芽") {
+            Button("Quit CainiaoPet") {
                 NSApplication.shared.terminate(nil)
             }
         }
@@ -60,7 +60,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     static func showControlCenter() {
         NSApplication.shared.activate(ignoringOtherApps: true)
         let candidate = NSApplication.shared.windows.first {
-            !($0 is NSPanel) && $0.title == "芽芽战备舱"
+            !($0 is NSPanel) && $0.title == "CainiaoPet Command Center"
         } ?? NSApplication.shared.windows.first { !($0 is NSPanel) }
         candidate?.makeKeyAndOrderFront(nil)
     }

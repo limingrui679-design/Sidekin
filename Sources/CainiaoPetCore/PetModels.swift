@@ -11,31 +11,31 @@ public enum PetStage: String, Codable, CaseIterable, Identifiable, Sendable {
 
     public var displayName: String {
         switch self {
-        case .egg: "第一阶段 · 核卵"
-        case .hatchling: "第二阶段 · 初醒"
-        case .juvenile: "第三阶段 · 锐变"
-        case .ascended: "第四阶段 · 觉醒"
-        case .legendary: "第五阶段 · 冠冕"
+        case .egg: "Stage I · Core Egg"
+        case .hatchling: "Stage II · First Spark"
+        case .juvenile: "Stage III · Shifting Form"
+        case .ascended: "Stage IV · Ascension"
+        case .legendary: "Stage V · Crown Form"
         }
     }
 
     public var shortName: String {
         switch self {
-        case .egg: "核卵"
-        case .hatchling: "初醒"
-        case .juvenile: "锐变"
-        case .ascended: "觉醒"
-        case .legendary: "冠冕"
+        case .egg: "Core Egg"
+        case .hatchling: "First Spark"
+        case .juvenile: "Shifting Form"
+        case .ascended: "Ascension"
+        case .legendary: "Crown Form"
         }
     }
 
     public var subtitle: String {
         switch self {
-        case .egg: "专属物种锚点正在容器中成形"
-        case .hatchling: "幼体轮廓与运动方式第一次显现"
-        case .juvenile: "主题附肢、工具与能量器官开始成熟"
-        case .ascended: "战斗姿态和能力结构完成质变"
-        case .legendary: "血统特征抵达独一无二的巅峰"
+        case .egg: "The species anchors are taking shape inside the shell"
+        case .hatchling: "Its juvenile silhouette and movement style emerge"
+        case .juvenile: "Signature limbs, tools, and energy organs begin to mature"
+        case .ascended: "Its combat stance and abilities undergo a structural leap"
+        case .legendary: "The lineage reaches its unmistakable apex"
         }
     }
 
@@ -93,10 +93,10 @@ public enum CodexActivity: String, Codable, CaseIterable, Identifiable, Sendable
 
     public var displayName: String {
         switch self {
-        case .idle: "休息中"
-        case .running: "Codex 正在工作"
-        case .completed: "任务完成"
-        case .failed: "任务遇到问题"
+        case .idle: "Resting"
+        case .running: "Codex is working"
+        case .completed: "Task complete"
+        case .failed: "Task needs attention"
         }
     }
 }
@@ -123,31 +123,31 @@ public enum PetVisualTheme: String, Codable, CaseIterable, Identifiable, Sendabl
 
     public var displayName: String {
         switch self {
-        case .nova: "星核竞技"
-        case .mecha: "先锋机甲"
-        case .street: "街头乱斗"
-        case .samurai: "樱刃武者"
-        case .abyss: "深海猎潮"
-        case .volcanic: "熔岩暴君"
-        case .candy: "糖果派对"
-        case .wasteland: "荒原拾荒"
-        case .phantom: "幽影幻术"
-        case .totem: "森灵图腾"
+        case .nova: "Nova Arena"
+        case .mecha: "Vanguard Mecha"
+        case .street: "Street Brawl"
+        case .samurai: "Sakura Blade"
+        case .abyss: "Abyssal Tidehunter"
+        case .volcanic: "Molten Tyrant"
+        case .candy: "Candy Carnival"
+        case .wasteland: "Wasteland Salvager"
+        case .phantom: "Phantom Veil"
+        case .totem: "Verdant Totem"
         }
     }
 
     public var subtitle: String {
         switch self {
-        case .nova: "晶体能量 · 星界赛场"
-        case .mecha: "陶瓷装甲 · 警戒橙核心"
-        case .street: "涂鸦护甲 · 酸性霓虹"
-        case .samurai: "朱漆武甲 · 樱华能量"
-        case .abyss: "深海甲壳 · 潮汐荧光"
-        case .volcanic: "黑曜岩层 · 熔火裂隙"
-        case .candy: "糖果玩具 · 软糖能量"
-        case .wasteland: "废土拼装 · 锈蚀黄铜"
-        case .phantom: "暗影魔甲 · 幽绿灵质"
-        case .totem: "木石雕甲 · 琥珀树能"
+        case .nova: "Crystal energy · astral arena"
+        case .mecha: "Ceramic armor · alert-orange core"
+        case .street: "Graffiti armor · acid neon"
+        case .samurai: "Vermilion warplate · sakura energy"
+        case .abyss: "Deep-sea carapace · tidal bioluminescence"
+        case .volcanic: "Obsidian layers · molten fissures"
+        case .candy: "Candy toys · gummy energy"
+        case .wasteland: "Scrap-built armor · corroded brass"
+        case .phantom: "Shadow plate · spectral green ectoplasm"
+        case .totem: "Carved wood and stone · amber tree energy"
         }
     }
 
@@ -168,76 +168,76 @@ public enum PetVisualTheme: String, Codable, CaseIterable, Identifiable, Sendabl
 
     public var speciesAnchor: String {
         switch self {
-        case .nova: "星晶月兔"
-        case .mecha: "轮足机械獒"
-        case .street: "涂鸦壁虎"
-        case .samurai: "赤狐 × 鹤"
-        case .abyss: "蝾螈 × 蟹 × 蝠鲼"
-        case .volcanic: "穿山甲 × 甲龙"
-        case .candy: "气球兔 × 软糖灵"
-        case .wasteland: "装甲耳廓狐"
-        case .phantom: "蛾猫幽灵"
-        case .totem: "古树鹿 × 野猪"
+        case .nova: "Astral Crystal Moonhare"
+        case .mecha: "Wheel-Paw Mecha Mastiff"
+        case .street: "Graffiti Gecko"
+        case .samurai: "Red Fox × Crane"
+        case .abyss: "Salamander × Crab × Manta"
+        case .volcanic: "Pangolin × Ankylosaur"
+        case .candy: "Balloon Hare × Gummy Spirit"
+        case .wasteland: "Armored Fennec"
+        case .phantom: "Moth-Cat Wraith"
+        case .totem: "Ancient Tree Stag × Boar"
         }
     }
 
     public var silhouetteAnchor: String {
         switch self {
-        case .nova: "月牙长耳、彗尾披帛、星晶长弓"
-        case .mecha: "低矮宽肩、轮足、展开式炮塔脊"
-        case .street: "细长吸盘肢、喷漆罐尾、滑板侧线"
-        case .samurai: "鹤腿侧身、扇形羽尾、弧月翼刃"
-        case .abyss: "横向宽体、多鳍多足、巨环蝠鲼翼"
-        case .volcanic: "拱背贴地、层叠岩甲、巨型锤尾"
-        case .candy: "圆润弹体、飘带长耳、环形气球轨"
-        case .wasteland: "巨耳四足、背负模块、吊臂与电台阵列"
-        case .phantom: "无脚烟尾、斗篷蛾翼、月蚀圆盘"
-        case .totem: "四足根蹄、野猪肩峰、世界树冠角"
+        case .nova: "Crescent ears, comet-tail streamers, and a crystal starbow"
+        case .mecha: "Low broad shoulders, wheel-paws, and a deployable turret spine"
+        case .street: "Long suction limbs, a spray-can tail, and skateboard side rails"
+        case .samurai: "Crane-legged profile, fan-feather tail, and crescent wing blades"
+        case .abyss: "Wide horizontal body, many fins and limbs, and giant ring-shaped manta wings"
+        case .volcanic: "Ground-hugging arched back, layered rock plate, and a massive hammer tail"
+        case .candy: "Rounded springy body, ribbon-like ears, and a halo of balloon rings"
+        case .wasteland: "Huge-eared quadruped with cargo modules, crane rig, and radio array"
+        case .phantom: "Footless smoke tail, cloak-like moth wings, and an eclipse disc"
+        case .totem: "Four root-hooves, boar-like shoulders, and worldtree crown antlers"
         }
     }
 
     public var motionAnchor: String {
         switch self {
-        case .nova: "轻盈跃迁与悬空拉弓"
-        case .mecha: "四足贴地攻城冲锋"
-        case .street: "蹲伏滑行与单手倒立"
-        case .samurai: "侧身拔刀与单足鹤立"
-        case .abyss: "水平漂浮游动"
-        case .volcanic: "卷身蓄力后低头撞击"
-        case .candy: "弹跳、悬浮与空翻"
-        case .wasteland: "四足侧步与负载奔跑"
-        case .phantom: "倒悬漂浮与侧身施术"
-        case .totem: "沉稳四足踏地召根"
+        case .nova: "Weightless leaps and suspended bow draws"
+        case .mecha: "Grounded four-paw siege charges"
+        case .street: "Crouched slides and one-handed freezes"
+        case .samurai: "Profile draw-cuts and one-legged crane stances"
+        case .abyss: "Horizontal drifting swims"
+        case .volcanic: "Coiled power-up followed by a low headlong impact"
+        case .candy: "Bounces, hovering, and aerial flips"
+        case .wasteland: "Four-paw sidesteps and load-bearing sprints"
+        case .phantom: "Inverted hovering and sideways spellcasting"
+        case .totem: "Steady four-hoof stomps that summon roots"
         }
     }
 
     public var materialAnchor: String {
         switch self {
-        case .nova: "半透明星晶与深蓝柔性甲"
-        case .mecha: "白色陶瓷板与枪灰机械关节"
-        case .street: "磨损橡胶、贴纸与喷漆塑料"
-        case .samurai: "朱漆、黑铁、和纸与淡金绳结"
-        case .abyss: "珍珠甲壳、湿润皮肤与透明鳍"
-        case .volcanic: "黑曜岩、玄武岩角与熔火裂缝"
-        case .candy: "透明软糖、糖纸、糖霜与果冻"
-        case .wasteland: "锈铜、旧帆布、拼装钢板与线缆"
-        case .phantom: "天鹅绒暗影、烟雾与月银薄片"
-        case .totem: "雕刻木、苔藓石与树脂琥珀"
+        case .nova: "Translucent star crystal and flexible deep-blue armor"
+        case .mecha: "White ceramic panels and gunmetal joints"
+        case .street: "Worn rubber, stickers, and spray-painted polymer"
+        case .samurai: "Vermilion lacquer, black iron, washi, and pale-gold knots"
+        case .abyss: "Pearlescent shell, wet skin, and transparent fins"
+        case .volcanic: "Obsidian, basalt horns, and molten cracks"
+        case .candy: "Transparent gummy, wrappers, frosting, and jelly"
+        case .wasteland: "Rusty copper, old canvas, improvised steel, and exposed cable"
+        case .phantom: "Velvet shadow, smoke, and moon-silver foil"
+        case .totem: "Carved wood, mossy stone, and resin amber"
         }
     }
 
     public var energyAnchor: String {
         switch self {
-        case .nova: "四芒星核与引力轨道"
-        case .mecha: "橙色六边反应炉"
-        case .street: "酸绿声波与红色涂鸦爆点"
-        case .samurai: "沿刃聚合的樱瓣弧月"
-        case .abyss: "青蓝生物荧光与水压环"
-        case .volcanic: "橙白地火与冠脊喷发"
-        case .candy: "彩虹气泡与心形糖核"
-        case .wasteland: "琥珀回收电池与沙尘电弧"
-        case .phantom: "幽绿假面火与月蚀光盘"
-        case .totem: "琥珀树心与发光年轮"
+        case .nova: "Four-point star core and gravity orbits"
+        case .mecha: "Orange hexagonal reactor"
+        case .street: "Acid-green soundwaves and red graffiti bursts"
+        case .samurai: "A petal crescent gathering along the blade"
+        case .abyss: "Cyan bioluminescence and pressure rings"
+        case .volcanic: "Orange-white underfire and erupting crown ridges"
+        case .candy: "Rainbow bubbles and a heart-shaped candy core"
+        case .wasteland: "Amber reclaimed battery and sandstorm arcs"
+        case .phantom: "Spectral green maskfire and an eclipse disc"
+        case .totem: "Amber heartwood and luminous growth rings"
         }
     }
 
@@ -245,25 +245,25 @@ public enum PetVisualTheme: String, Codable, CaseIterable, Identifiable, Sendabl
         let names: [String]
         switch self {
         case .nova:
-            names = ["星梭晶卵", "月跃幼兔", "星晶斥候", "星弓巡猎者", "天穹领航兔"]
+            names = ["Starshuttle Crystal Egg", "Moonleap Leveret", "Astral Crystal Scout", "Starbow Ranger", "Skybound Pathfinder"]
         case .mecha:
-            names = ["折叠六角舱", "双轮侦察机", "轮足机械獒", "展开堡垒獒", "天虎机动要塞"]
+            names = ["Folding Hex Pod", "Twin-Wheel Scout", "Wheel-Paw Mecha Mastiff", "Deployed Fortress Hound", "Celestial Mobile Bastion"]
         case .street:
-            names = ["摇漆罐卵", "趴地小壁虎", "滑板涂鸦客", "音浪乱斗手", "环城轰鸣壁虎"]
+            names = ["Rattlecan Egg", "Grounded Gecko", "Skateboard Tagger", "Sonic Brawler", "City-Roar Gecko"]
         case .samurai:
-            names = ["折扇纹卵", "鞘尾幼狐", "樱刃小将", "鹤步剑豪", "千瓣翼刃阵主"]
+            names = ["Folding-Fan Egg", "Sheath-Tail Kit", "Sakura Blade Cadet", "Crane-Step Swordmaster", "Thousand-Petal Winglord"]
         case .abyss:
-            names = ["潮泡囊卵", "六鳍漂游螈", "钳翼猎潮者", "深渊潮骑", "巨环王潮鳐兽"]
+            names = ["Tidebubble Spawn", "Six-Fin Driftling", "Pincerwing Tidehunter", "Abyssal Tide Rider", "Great-Ring Sovereign Ray"]
         case .volcanic:
-            names = ["多面熔核石", "炭爪幼兽", "卷甲穿山兽", "锤尾攻城兽", "熔冠地脉龙"]
+            names = ["Faceted Magma Core", "Cinderclaw Whelp", "Coil-Armor Pangolin", "Hammer-Tail Siegebeast", "Magma-Crowned Ley Dragon"]
         case .candy:
-            names = ["扭结糖纸茧", "弹跳软糖兔", "太妃杂技兽", "嘉年华魔术兽", "星糖梦工兽"]
+            names = ["Twisted Wrapper Cocoon", "Bouncing Gummy Hare", "Toffee Acrobat", "Carnival Illusionist", "Star-Candy Dreamsmith"]
         case .wasteland:
-            names = ["锈罐孵化仓", "拾件幼狐", "负载斥候", "吊臂机匠", "电台巨构猎狐"]
+            names = ["Rust-Can Incubator", "Scrap-Picker Kit", "Load-Bearing Scout", "Crane-Rig Mechanic", "Radio-Colossus Fennec"]
         case .phantom:
-            names = ["月纹幽灯茧", "倒悬雾翼灵", "影幕蛾猫", "月蚀术兽", "无相夜幕兽"]
+            names = ["Moonmark Lantern Cocoon", "Inverted Mistwing", "Shadowveil Moth-Cat", "Eclipse Arcanist", "Faceless Nightveil"]
         case .totem:
-            names = ["裂纹琥珀种", "根蹄芽鹿", "苔甲幼麋", "森纹角兽", "世界树冠古鹿"]
+            names = ["Cracked Amber Seed", "Root-Hoof Fawn", "Mossplate Calf", "Grove-Rune Hornbeast", "Worldtree Crownstag"]
         }
         return names[stage.rank]
     }
@@ -278,9 +278,9 @@ public enum PetTemplateGenerationMode: String, Codable, CaseIterable, Identifiab
 
     public var displayName: String {
         switch self {
-        case .text: "文字原创"
-        case .restyle: "参考图改画风"
-        case .faithful: "参考图高相似"
+        case .text: "Text Original"
+        case .restyle: "Reference Restyle"
+        case .faithful: "High-Fidelity Reference"
         }
     }
 
@@ -298,17 +298,17 @@ public enum PetImageGenerationQuality: String, Codable, CaseIterable, Identifiab
 
     public var displayName: String {
         switch self {
-        case .low: "草稿"
-        case .medium: "标准"
-        case .high: "最终"
+        case .low: "Draft"
+        case .medium: "Standard"
+        case .high: "Final"
         }
     }
 
     public var detail: String {
         switch self {
-        case .low: "速度最快，适合先看轮廓"
-        case .medium: "细节与费用较均衡"
-        case .high: "细节最多，费用最高"
+        case .low: "Fastest; best for checking the silhouette"
+        case .medium: "Balanced detail and cost"
+        case .high: "Maximum detail at the highest cost"
         }
     }
 
@@ -409,8 +409,8 @@ public enum CustomGrowthStagePlan {
     public static let maximumStageCount = 8
 
     private static let canonicalThresholds = [0, 20, 75, 180, 360]
-    private static let canonicalNames = ["核卵", "初醒", "锐变", "觉醒", "冠冕"]
-    private static let extendedNames = ["起源", "幼生", "萌芽", "锐变", "成熟", "觉醒", "超越", "冠冕"]
+    private static let canonicalNames = ["Core Egg", "First Spark", "Shifting Form", "Ascension", "Crown Form"]
+    private static let extendedNames = ["Origin", "Hatchling", "Sprout", "Shifting Form", "Mature", "Ascension", "Transcendent", "Crown Form"]
 
     public static func clampedCount(_ count: Int) -> Int {
         min(maximumStageCount, max(minimumStageCount, count))
@@ -419,7 +419,7 @@ public enum CustomGrowthStagePlan {
     public static func defaultNames(count: Int) -> [String] {
         let count = clampedCount(count)
         if count == canonicalNames.count { return canonicalNames }
-        if count == 1 { return ["完整形态"] }
+        if count == 1 { return ["Complete Form"] }
         if count == extendedNames.count { return extendedNames }
 
         return (0..<count).map { index in
@@ -516,7 +516,7 @@ public struct PetSnapshot: Codable, Equatable, Sendable {
     public var lastCodexSignalAt: Date?
     public var lastCodexSignalActivity: CodexActivity?
 
-    public init(name: String = "芽芽", now: Date = Date()) {
+    public init(name: String = "Sprout", now: Date = Date()) {
         self.schemaVersion = 3
         self.name = name
         self.createdAt = now

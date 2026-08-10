@@ -78,7 +78,7 @@ final class AppModel: ObservableObject {
             self.pet = loaded
         } catch {
             self.pet = PetSnapshot()
-            self.bannerMessage = "旧存档无法读取，已使用安全的新存档。"
+            self.bannerMessage = "The previous save could not be read, so a safe new save was created."
         }
 
         refreshHooksStatus()
@@ -164,8 +164,8 @@ final class AppModel: ObservableObject {
     var displayedStageSubtitle: String {
         if let template = activeCustomTemplate,
            let index = displayedCustomStageIndex {
-            return template.name + " · 第 " + String(index + 1)
-                + "/" + String(template.stages.count) + " 阶段"
+            return template.name + " · Stage " + String(index + 1)
+                + " of " + String(template.stages.count)
         }
         return displayedStage.subtitle
     }
@@ -207,10 +207,10 @@ final class AppModel: ObservableObject {
         if !preservesLaunchPreview { clearPreview() }
 
         switch action {
-        case .feed: bannerMessage = "芽芽吃饱了一点。"
-        case .play: bannerMessage = "一起玩耍，心情上升。"
+        case .feed: bannerMessage = "Sprout enjoyed the meal."
+        case .play: bannerMessage = "Playtime lifted Sprout's mood."
         case .sleepOrWake:
-            bannerMessage = pet.isSleeping ? "芽芽进入睡眠，精力会恢复。" : "芽芽醒来了。"
+            bannerMessage = pet.isSleeping ? "Sprout is asleep and recovering energy." : "Sprout is awake."
         }
         persist()
     }
@@ -219,7 +219,7 @@ final class AppModel: ObservableObject {
         pet.wardrobe.theme = theme
         pet.wardrobe.customTemplateID = nil
         clearPreview()
-        bannerMessage = "已启用内置模板「" + theme.displayName + "」。"
+        bannerMessage = "Built-in theme enabled: " + theme.displayName + "."
         persist()
     }
 
@@ -227,7 +227,7 @@ final class AppModel: ObservableObject {
         pet.wardrobe.customTemplateID = template.id
         pet.wardrobe.theme = template.fallbackTheme
         clearPreview()
-        bannerMessage = "已启用自定义宠物「" + template.name + "」。"
+        bannerMessage = "Custom pet enabled: " + template.name + "."
         persist()
     }
 
@@ -258,7 +258,7 @@ final class AppModel: ObservableObject {
         do {
             try apiKeyStore.save(rawKey)
             hasImageAPIKey = true
-            bannerMessage = "API Key 已安全存入 macOS 钥匙串。"
+            bannerMessage = "The API key was saved securely in macOS Keychain."
         } catch {
             bannerMessage = error.localizedDescription
         }
@@ -268,7 +268,7 @@ final class AppModel: ObservableObject {
         do {
             try apiKeyStore.remove()
             hasImageAPIKey = false
-            bannerMessage = "API Key 已从 macOS 钥匙串移除。"
+            bannerMessage = "The API key was removed from macOS Keychain."
         } catch {
             bannerMessage = error.localizedDescription
         }
@@ -281,8 +281,8 @@ final class AppModel: ObservableObject {
         isGeneratingTemplate = true
         generationCompleted = 0
         generationTotal = request.stageNames.count
-        generationStageName = request.stageNames.first ?? "准备中"
-        bannerMessage = "正在创建 " + String(request.stageNames.count) + " 个成长阶段…"
+        generationStageName = request.stageNames.first ?? "Preparing"
+        bannerMessage = "Creating " + String(request.stageNames.count) + " growth stages…"
 
         generationTask = Task { @MainActor [weak self] in
             guard let self else { return }
@@ -298,16 +298,16 @@ final class AppModel: ObservableObject {
                 }
                 reloadCustomTemplates()
                 activate(template: template)
-                bannerMessage = "「" + template.name + "」已生成并启用，共 "
-                    + String(template.stages.count) + " 个成长阶段。"
+                bannerMessage = template.name + " was generated and enabled with "
+                    + String(template.stages.count) + " growth stages."
             } catch is CancellationError {
                 refreshGenerationJobs()
-                bannerMessage = "生成已暂停；已经完成的阶段保存在本机，可稍后继续。"
+                bannerMessage = "Generation paused. Completed stages are saved locally and can be resumed later."
             } catch {
                 refreshGenerationJobs()
                 bannerMessage = Task.isCancelled
-                    ? "生成已暂停；已经完成的阶段保存在本机，可稍后继续。"
-                    : "生成失败：" + error.localizedDescription + "；已完成阶段仍保存在本机，可稍后继续。"
+                    ? "Generation paused. Completed stages are saved locally and can be resumed later."
+                    : "Generation failed: " + error.localizedDescription + " Completed stages remain saved locally."
             }
             isGeneratingTemplate = false
             generationTask = nil
@@ -334,11 +334,11 @@ final class AppModel: ObservableObject {
         generationTotal = job.stageNames.count
         generationStageName = job.stageNames.indices.contains(job.nextStageIndex)
             ? job.stageNames[job.nextStageIndex]
-            : "正在整理模板"
+            : "Finalizing template"
         bannerMessage = allowNewRequests
-            ? "从第 " + String(min(job.stageNames.count, job.nextStageIndex + 1))
-                + " 阶段继续，不会重复请求已经保存的阶段。"
-            : "只处理已经保存在本机的 API 原图，不会发起新请求。"
+            ? "Resuming from stage " + String(min(job.stageNames.count, job.nextStageIndex + 1))
+                + ". Saved stages will not be requested again."
+            : "Processing only API images already saved on this Mac. No new request will be sent."
 
         generationTask = Task { @MainActor [weak self] in
             guard let self else { return }
@@ -355,18 +355,18 @@ final class AppModel: ObservableObject {
                 }
                 reloadCustomTemplates()
                 activate(template: template)
-                bannerMessage = "「" + template.name + "」已续跑完成并启用。"
+                bannerMessage = template.name + " finished resuming and is now enabled."
             } catch PetLineageGeneratorError.newRequestRequired {
                 refreshGenerationJobs()
-                bannerMessage = "本机原图已完成处理；后续阶段尚未请求，点击继续生成时才会使用 API Key。"
+                bannerMessage = "All saved local images are processed. Later stages remain unrequested until you choose Continue Generation."
             } catch is CancellationError {
                 refreshGenerationJobs()
-                bannerMessage = "生成已暂停；已付费生成的阶段仍保存在本机。"
+                bannerMessage = "Generation paused. Previously generated paid stages remain saved locally."
             } catch {
                 refreshGenerationJobs()
                 bannerMessage = Task.isCancelled
-                    ? "生成已暂停；已付费生成的阶段仍保存在本机。"
-                    : "继续生成失败：" + error.localizedDescription
+                    ? "Generation paused. Previously generated paid stages remain saved locally."
+                    : "Could not continue generation: " + error.localizedDescription
             }
             isGeneratingTemplate = false
             generationTask = nil
@@ -377,7 +377,7 @@ final class AppModel: ObservableObject {
         do {
             _ = try generationJobStore.restart(jobID: job.id, fromStage: stageIndex)
             refreshGenerationJobs()
-            bannerMessage = "已清除第 \(stageIndex + 1) 阶段及其后续结果，可重新生成。"
+            bannerMessage = "Stage \(stageIndex + 1) and all later results were cleared and can be generated again."
         } catch {
             bannerMessage = error.localizedDescription
         }
@@ -387,7 +387,7 @@ final class AppModel: ObservableObject {
         do {
             try generationJobStore.remove(id: job.id)
             refreshGenerationJobs()
-            bannerMessage = "未完成的生成任务已删除。"
+            bannerMessage = "The unfinished generation job was deleted."
         } catch {
             bannerMessage = error.localizedDescription
         }
@@ -397,7 +397,7 @@ final class AppModel: ObservableObject {
         do {
             let updated = try templateStore.rename(id: template.id, to: name)
             reloadCustomTemplates()
-            bannerMessage = "模板已重命名为「" + updated.name + "」。"
+            bannerMessage = "Template renamed to " + updated.name + "."
         } catch {
             bannerMessage = error.localizedDescription
         }
@@ -413,7 +413,7 @@ final class AppModel: ObservableObject {
                 persist()
             }
             reloadCustomTemplates()
-            bannerMessage = "自定义模板「" + template.name + "」已删除。"
+            bannerMessage = "Custom template deleted: " + template.name + "."
         } catch {
             bannerMessage = error.localizedDescription
         }
@@ -423,9 +423,9 @@ final class AppModel: ObservableObject {
         do {
             let data = try templateStore.exportPackage(id: template.id)
             try data.write(to: url, options: .atomic)
-            bannerMessage = "模板已导出为 " + url.lastPathComponent + "。"
+            bannerMessage = "Template exported as " + url.lastPathComponent + "."
         } catch {
-            bannerMessage = "导出失败：" + error.localizedDescription
+            bannerMessage = "Export failed: " + error.localizedDescription
         }
     }
 
@@ -438,9 +438,9 @@ final class AppModel: ObservableObject {
             let template = try templateStore.importPackage(Data(contentsOf: url))
             reloadCustomTemplates()
             activate(template: template)
-            bannerMessage = "已导入并启用「" + template.name + "」。"
+            bannerMessage = "Imported and enabled " + template.name + "."
         } catch {
-            bannerMessage = "导入失败：" + error.localizedDescription
+            bannerMessage = "Import failed: " + error.localizedDescription
         }
     }
 
@@ -455,7 +455,7 @@ final class AppModel: ObservableObject {
         generationTotal = 1
         generationStageName = template.stages.indices.contains(stageIndex)
             ? template.stages[stageIndex].name
-            : "替换阶段"
+            : "Replace Stage"
         generationTask = Task { @MainActor [weak self] in
             guard let self else { return }
             do {
@@ -469,9 +469,9 @@ final class AppModel: ObservableObject {
                 )
                 reloadCustomTemplates()
                 generationCompleted = 1
-                bannerMessage = "已用本地图片替换「" + template.stages[stageIndex].name + "」。"
+                bannerMessage = "Replaced " + template.stages[stageIndex].name + " with a local image."
             } catch {
-                bannerMessage = "替换失败：" + error.localizedDescription
+                bannerMessage = "Replacement failed: " + error.localizedDescription
             }
             isGeneratingTemplate = false
             generationTask = nil
@@ -502,7 +502,7 @@ final class AppModel: ObservableObject {
         generationCompleted = 0
         generationTotal = 1
         generationStageName = template.stages[stageIndex].name
-        bannerMessage = "正在重新生成「" + template.stages[stageIndex].name + "」…"
+        bannerMessage = "Regenerating " + template.stages[stageIndex].name + "…"
         generationTask = Task { @MainActor [weak self] in
             guard let self else { return }
             do {
@@ -515,17 +515,17 @@ final class AppModel: ObservableObject {
                 )
                 reloadCustomTemplates()
                 generationCompleted = 1
-                bannerMessage = "阶段已重新生成并原位替换。"
+                bannerMessage = "The stage was regenerated and replaced in place."
             } catch is CancellationError {
-                bannerMessage = "已取消阶段重新生成。"
+                bannerMessage = "Stage regeneration was cancelled."
             } catch {
                 let recoveryMessage = templateStore.hasPendingReplacementRaw(
                     templateID: template.id,
                     stageIndex: stageIndex
                 )
-                    ? "；API 原图仍保存在本机，可免费重试处理或确认后重新请求。"
+                    ? " The API image remains saved locally. You can retry processing for free or confirm a new request."
                     : ""
-                bannerMessage = "阶段重新生成失败：" + error.localizedDescription + recoveryMessage
+                bannerMessage = "Stage regeneration failed: " + error.localizedDescription + recoveryMessage
             }
             isGeneratingTemplate = false
             generationTask = nil
@@ -556,7 +556,7 @@ final class AppModel: ObservableObject {
 
     func installCodexHooks() {
         guard let bridge = locateBridgeExecutable() else {
-            bannerMessage = "未找到 Codex 桥接组件，请先使用正式构建的应用。"
+            bannerMessage = "The Codex bridge component was not found. Use a packaged application build."
             return
         }
 
@@ -566,9 +566,9 @@ final class AppModel: ObservableObject {
                 bridgeExecutable: bridge
             )
             hooksInstalled = true
-            bannerMessage = "Codex 联动已安装；新任务会自动触发桌宠状态。"
+            bannerMessage = "Codex integration is installed. New tasks will update the desktop pet automatically."
         } catch {
-            bannerMessage = "安装失败：" + error.localizedDescription
+            bannerMessage = "Installation failed: " + error.localizedDescription
         }
     }
 
@@ -576,9 +576,9 @@ final class AppModel: ObservableObject {
         do {
             try hooksInstaller.uninstall(at: CainiaoPetPaths.defaultCodexHooksURL())
             hooksInstalled = false
-            bannerMessage = "已移除菜鸟宠物添加的 Codex Hooks，其他 Hooks 保持不变。"
+            bannerMessage = "CainiaoPet's Codex hooks were removed. Other hooks were left unchanged."
         } catch {
-            bannerMessage = "移除失败：" + error.localizedDescription
+            bannerMessage = "Removal failed: " + error.localizedDescription
         }
     }
 
@@ -596,7 +596,7 @@ final class AppModel: ObservableObject {
     func resetPet() {
         pet = PetSnapshot()
         clearPreview()
-        bannerMessage = "已经重新孵化一颗星芽蛋。"
+        bannerMessage = "A new Star Sprout Egg has hatched."
         persist()
     }
 
@@ -618,7 +618,7 @@ final class AppModel: ObservableObject {
         do {
             guard let storedKey = try apiKeyStore.read() else {
                 if required {
-                    bannerMessage = "请先输入安装用户自己的 OpenAI API Key。"
+                    bannerMessage = "Enter your own OpenAI API key first."
                 }
                 return nil
             }
@@ -633,7 +633,7 @@ final class AppModel: ObservableObject {
         do {
             customTemplates = try templateStore.loadAll()
         } catch {
-            bannerMessage = "模板库刷新失败：" + error.localizedDescription
+            bannerMessage = "Could not refresh the template library: " + error.localizedDescription
         }
     }
 
@@ -641,7 +641,7 @@ final class AppModel: ObservableObject {
         do {
             generationJobs = try generationJobStore.loadAll()
         } catch {
-            bannerMessage = "生成任务恢复列表读取失败：" + error.localizedDescription
+            bannerMessage = "Could not read the resumable generation-job list: " + error.localizedDescription
         }
     }
 
@@ -670,10 +670,10 @@ final class AppModel: ObservableObject {
         if !preservesLaunchPreview { clearPreview() }
 
         switch activity {
-        case .idle: bannerMessage = "Codex 已空闲。"
-        case .running: bannerMessage = "芽芽发现 Codex 开始工作了。"
-        case .completed: bannerMessage = "任务完成，芽芽获得了成长经验。"
-        case .failed: bannerMessage = "任务遇到问题，芽芽会陪你再试一次。"
+        case .idle: bannerMessage = "Codex is idle."
+        case .running: bannerMessage = "Sprout noticed that Codex started working."
+        case .completed: bannerMessage = "Task complete. Sprout gained growth experience."
+        case .failed: bannerMessage = "The task hit a problem. Sprout is ready to try again with you."
         }
         persist()
     }
@@ -688,7 +688,7 @@ final class AppModel: ObservableObject {
         do {
             try persistence.save(pet)
         } catch {
-            bannerMessage = "本地存档失败：" + error.localizedDescription
+            bannerMessage = "Local save failed: " + error.localizedDescription
         }
     }
 

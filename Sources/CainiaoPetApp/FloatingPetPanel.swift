@@ -100,17 +100,17 @@ private struct FloatingPetView: View {
             AppDelegate.showControlCenter()
         }
         .contextMenu {
-            Button("打开战备舱") { AppDelegate.showControlCenter() }
+            Button("Open Command Center") { AppDelegate.showControlCenter() }
             Divider()
-            Button("喂食") { model.perform(.feed) }
-            Button("玩耍") { model.perform(.play) }
-            Button(model.pet.isSleeping ? "唤醒" : "睡觉") {
+            Button("Feed") { model.perform(.feed) }
+            Button("Play") { model.perform(.play) }
+            Button(model.pet.isSleeping ? "Wake Up" : "Sleep") {
                 model.perform(.sleepOrWake)
             }
             Divider()
-            Button("隐藏桌宠") { model.setPetVisible(false) }
+            Button("Hide Desktop Pet") { model.setPetVisible(false) }
         }
-        .accessibilityLabel("芽芽浮动桌宠，双击打开战备舱")
+        .accessibilityLabel("CainiaoPet floating companion. Double-click to open the Command Center.")
     }
 
     private var statusPill: some View {
@@ -118,7 +118,7 @@ private struct FloatingPetView: View {
             Circle()
                 .fill(statusColor)
                 .frame(width: 7, height: 7)
-            Text(model.pet.isSleeping ? "正在睡觉" : model.pet.codexActivity.displayName)
+            Text(model.pet.isSleeping ? "Sleeping" : model.pet.codexActivity.displayName)
                 .font(.system(size: 11, weight: .semibold, design: .rounded))
                 .foregroundStyle(.white.opacity(0.92))
         }

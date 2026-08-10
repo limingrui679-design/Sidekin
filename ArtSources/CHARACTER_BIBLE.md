@@ -1,35 +1,35 @@
-# 芽芽角色造型圣经 · 五阶段版
+# CainiaoPet Character Bible · Five-Stage Edition
 
-本文件是角色资产的验收基准。十套主题不是同一只角色换皮，而是十条独立物种进化线。灵感只取自“收集型生物游戏中清晰的进化递进感”，不得复刻任何现有作品的角色、轮廓、纹样或标志。
+This document is the acceptance standard for character assets. The ten themes are ten independent species lineages, not one shared character wearing different skins. The only broad inspiration is the readable sense of progression found in creature-collection games. No existing character, silhouette, pattern, emblem, or logo may be reproduced.
 
-## 全局规则
+## Global Rules
 
-- 每条进化线固定一个可追踪的“血统锚点”，但每阶段必须改变身体比例、主轮廓和动作。
-- 五阶段依次为：核卵、初醒、锐变、觉醒、冠冕。
-- 同一阶段横向比较十个主题时，至少在物种、站姿/运动方式、主材质三项上明显不同。
-- 角色必须是完整单体、全身入镜、透明背景；不得共用通用狐龙身体，不得用颜色差异代替造型差异。
-- 第一阶段也必须具有主题形状：舱、罐、茧、种子或岩核等，不统一使用椭圆蛋。
-- 第五阶段必须继承第一至四阶段的一个识别锚点，同时增加新的外轮廓结构，不能只是加大盔甲。
+- Every lineage keeps one traceable lineage anchor, while each stage changes body proportions, primary silhouette, and pose.
+- The five stages are Core Egg, First Spark, Shifting Form, Ascension, and Crown Form.
+- When comparing all ten themes at the same stage, each must differ clearly in at least species, stance or locomotion, and primary material.
+- Every character must be one complete full-body subject on a transparent background. Do not reuse a generic fox-dragon body, and do not substitute color changes for structural design changes.
+- Stage I must already express the theme through a distinctive pod, canister, cocoon, seed, or stone core. Do not use the same oval egg for every lineage.
+- Stage V must inherit at least one recognition anchor from Stages I–IV while adding a new outer-silhouette structure. Simply enlarging the armor is not sufficient.
 
-## 十条独立进化线
+## Ten Independent Lineages
 
-| 主题 | 物种与主轮廓 | 运动/姿态锚点 | 材质锚点 | 能量锚点 | 五阶段造型递进 |
+| Theme | Species and primary silhouette | Motion or pose anchor | Material anchor | Energy anchor | Five-stage design progression |
 |---|---|---|---|---|---|
-| 星核竞技 | 星晶月兔；长月牙耳、兔脸与彗尾披帛始终保留 | 轻盈跃迁；中后期从短刃斥候平滑过渡到悬空拉弓 | 半透明星晶、深蓝柔性甲 | 胸口四芒星与星晶长弓 | 星梭晶卵 → 四足跃兔 → 星晶斥候 → 星弓巡猎者 → 天穹领航兔 |
-| 先锋机甲 | 无毛机械獒；低矮宽肩、轮足、背部炮塔脊 | 四足贴地冲锋；后期前低后高的攻城姿态 | 白色陶瓷板、枪灰关节、橙色警示件 | 单枚橙色六边反应炉 | 折叠六角舱 → 双轮侦察幼机 → 四足机械獒 → 展开式堡垒獒 → 六足天虎机动要塞 |
-| 街头乱斗 | 涂鸦壁虎；细长四肢、吸盘手、喷漆罐尾 | 始终不正立：蹲伏、滑行、单手倒立或跃板 | 磨损橡胶、贴纸、喷漆塑料 | 酸绿声波与红色涂鸦爆点 | 摇漆罐卵 → 趴地小壁虎 → 滑板侧身少年体 → 单手撑地涂鸦斗士 → 尾轨环城的音爆壁虎 |
-| 樱刃武者 | 赤狐与鹤融合；扇形羽尾、细长腿、甲片肩线 | 克制的侧身拔刀架势；后期单足鹤立 | 朱漆、黑铁、和纸纹理、淡金绳结 | 花瓣沿刀脊聚成弧月 | 折扇纹卵 → 伏地鞘尾幼狐 → 双足见习小将 → 侧身拔刀鹤狐 → 千瓣翼刃阵主 |
-| 深海猎潮 | 蝾螈、螃蟹与蝠鲼融合；横向宽轮廓、多鳍多足 | 水平漂浮游动；绝不直立站立 | 珍珠甲壳、湿润深海皮、半透明鳍 | 青蓝生物荧光脉冲与水压环 | 潮泡囊卵 → 六鳍漂游幼螈 → 侧向钳翼猎手 → 宽翼深渊潮骑 → 巨环王潮鳐兽 |
-| 熔岩暴君 | 穿山甲与甲龙融合；贴地厚重、拱背、锤尾 | 四足负重推进、卷身蓄力、低头冲撞 | 黑曜岩、熔岩裂缝、玄武岩角 | 背脊裂缝内的橙白地火 | 多面熔核石 → 短腿炭爪幼兽 → 卷甲穿山兽 → 锤尾火山攻城兽 → 活火山冠脊地脉龙 |
-| 糖果派对 | 气球兔与软糖史莱姆融合；每阶段保留兔脸、长耳与紧凑圆体 | 弹跳、悬浮、空中翻身；后两阶段也保持桌宠尺寸下的完整兔形 | 半透明软糖、糖纸、糖霜、果冻 | 彩虹气泡与跳动心形糖核 | 扭结糖纸茧 → 弹跳软糖兔 → 长耳太妃杂技兽 → 嘉年华魔术兔 → 星糖梦工兔 |
-| 荒原拾荒 | 装甲耳廓狐；巨耳、四足狐体与短吻血统锚点贯穿五阶段 | 谨慎侧步、翻找与负载奔跑；不转成长腿鸟兽 | 锈铜、旧帆布、拼装钢板、线缆 | 琥珀回收电池与沙尘电弧 | 锈罐孵化仓 → 背零件包幼狐 → 负载斥候 → 吊臂机匠狐 → 电台巨构猎狐 |
-| 幽影幻术 | 蛾、猫与无实体幽灵融合；斗篷翼、无脚烟尾 | 漂浮、倒悬、侧身施术；始终无完整落地双腿 | 天鹅绒暗影、烟雾、月银薄片 | 幽绿色假面火与月蚀圆盘 | 月纹幽灯茧 → 倒悬雾翼幼灵 → 斗篷蛾猫 → 侧身月蚀术兽 → 多翼无相夜幕兽 |
-| 森灵图腾 | 鹿、野猪与古树融合；四足、根系蹄、分枝角 | 稳重四足行走；后期前蹄抬起召唤根脉 | 雕刻木、苔藓石、树脂琥珀 | 琥珀树心与发光年轮 | 裂纹琥珀种 → 根蹄芽鹿 → 苔甲幼麋 → 森纹角兽 → 世界树冠古鹿 |
+| Nova Arena | Astral Crystal Moonhare; crescent ears, hare face, and comet-tail streamers remain visible | Weightless leaps; the later forms move smoothly from short-blade scout to suspended bow draw | Translucent star crystal and flexible deep-blue armor | Four-point chest star and crystal starbow | Starshuttle Crystal Egg → Moonleap Leveret → Astral Crystal Scout → Starbow Ranger → Skybound Pathfinder |
+| Vanguard Mecha | Hairless mechanical mastiff; low broad shoulders, wheel-paws, and turret spine | Ground-hugging quadruped charge; later forms use a low-front, high-rear siege posture | White ceramic panels, gunmetal joints, and alert-orange components | Single orange hexagonal reactor | Folding Hex Pod → Twin-Wheel Scout → Wheel-Paw Mecha Mastiff → Deployed Fortress Hound → Celestial Mobile Bastion |
+| Street Brawl | Graffiti gecko; long limbs, suction-cup hands, and spray-can tail | Never stands conventionally: crouches, slides, one-handed freezes, or skateboard leaps | Worn rubber, stickers, and spray-painted polymer | Acid-green soundwaves and red graffiti bursts | Rattlecan Egg → Grounded Gecko → Skateboard Tagger → Sonic Brawler → City-Roar Gecko |
+| Sakura Blade | Red Fox × Crane; fan-feather tail, long legs, and plated shoulder line | Restrained profile draw-cut; later forms adopt a one-legged crane stance | Vermilion lacquer, black iron, washi texture, and pale-gold knots | Petals gather into a crescent along the blade | Folding-Fan Egg → Sheath-Tail Kit → Sakura Blade Cadet → Crane-Step Swordmaster → Thousand-Petal Winglord |
+| Abyssal Tidehunter | Salamander × Crab × Manta; wide horizontal silhouette with multiple fins and limbs | Horizontal drifting swim; never stands upright | Pearlescent shell, wet deep-sea skin, and translucent fins | Cyan bioluminescent pulses and pressure rings | Tidebubble Spawn → Six-Fin Driftling → Pincerwing Tidehunter → Abyssal Tide Rider → Great-Ring Sovereign Ray |
+| Molten Tyrant | Pangolin × Ankylosaur; heavy ground-hugging body, arched back, and hammer tail | Weight-bearing quadruped advance, coiled power-up, and low headlong impact | Obsidian, molten cracks, and basalt horns | Orange-white underfire inside the dorsal fissures | Faceted Magma Core → Cinderclaw Whelp → Coil-Armor Pangolin → Hammer-Tail Siegebeast → Magma-Crowned Ley Dragon |
+| Candy Carnival | Balloon Hare × Gummy Spirit; hare face, long ears, and compact rounded body persist at every stage | Bounces, hovering, and aerial flips; the last two forms remain readable as complete hares at desktop scale | Translucent gummy, wrappers, frosting, and jelly | Rainbow bubbles and a pulsing heart-shaped candy core | Twisted Wrapper Cocoon → Bouncing Gummy Hare → Toffee Acrobat → Carnival Illusionist → Star-Candy Dreamsmith |
+| Wasteland Salvager | Armored Fennec; huge ears, quadruped fox body, and short muzzle persist across all five stages | Cautious sidesteps, scavenging, and load-bearing sprints; never becomes a long-legged bird-like creature | Rusty copper, old canvas, improvised steel, and exposed cable | Amber reclaimed battery and sandstorm arcs | Rust-Can Incubator → Scrap-Picker Kit → Load-Bearing Scout → Crane-Rig Mechanic → Radio-Colossus Fennec |
+| Phantom Veil | Moth-Cat Wraith; cloak wings and a footless smoke tail | Floating, inverted hovering, and profile spellcasting; never gains a complete pair of grounded legs | Velvet shadow, smoke, and moon-silver foil | Spectral green maskfire and an eclipse disc | Moonmark Lantern Cocoon → Inverted Mistwing → Shadowveil Moth-Cat → Eclipse Arcanist → Faceless Nightveil |
+| Verdant Totem | Ancient Tree Stag × Boar; quadruped body, root-hooves, and branching antlers | Steady four-hoof movement; later forms lift a forehoof to summon roots | Carved wood, mossy stone, and resin amber | Amber heartwood and luminous growth rings | Cracked Amber Seed → Root-Hoof Fawn → Mossplate Calf → Grove-Rune Hornbeast → Worldtree Crownstag |
 
-## 五阶段差异门槛
+## Five-Stage Differentiation Gates
 
-1. **核卵**：无完整成年四肢；以主题容器/茧/种子表现生命源头。
-2. **初醒**：幼体头身比最大，首次出现专属运动方式，不得套用统一站姿。
-3. **锐变**：比例拉长或变宽，形成主题工具、附肢或武装，并采用动态动作。
-4. **觉醒**：战斗能力发生结构性变化，例如轮足展开、鳍翼增生、锤尾成形或斗篷翼打开。
-5. **冠冕**：出现独一无二的大轮廓结构与领域感，同时保留血统锚点，仍能在桌宠小尺寸下识别。
+1. **Core Egg:** No complete adult limb set. Use a theme-specific vessel, cocoon, seed, or mineral core to show the origin of life.
+2. **First Spark:** The largest head-to-body ratio and the first appearance of the lineage's unique locomotion. Do not reuse a universal standing pose.
+3. **Shifting Form:** Lengthen or broaden the proportions, introduce a signature tool, appendage, or weapon, and use a dynamic action pose.
+4. **Ascension:** Make a structural change to combat capability, such as deployed wheel-paws, multiplied fins, a completed hammer tail, or opened cloak wings.
+5. **Crown Form:** Add a unique domain-defining outer silhouette while preserving the lineage anchor. The form must remain identifiable at the pet's small desktop display size.

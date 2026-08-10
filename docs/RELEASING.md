@@ -1,29 +1,31 @@
-# CainiaoPet 发布流程
+# CainiaoPet Distribution Guide
 
-> 当前项目只作为 GitHub 源码项目和本地 Beta，不计划向普通用户公开分发已签名 App。Developer ID、公证和 Gatekeeper 放行不是当前完成条件；本页仅供未来改变分发目标时使用。
+> CainiaoPet is currently maintained as a GitHub source project and local Beta. There is no plan to distribute a signed application directly to general users. Developer ID signing, notarization, and Gatekeeper acceptance are therefore not current completion requirements. This page is retained only for a future change in distribution scope.
 
-## 两种包必须区分
+## Keep the Two Package Types Distinct
 
-- `./Scripts/package-release.sh` 生成本机可测试的 ad-hoc 包。它有完整测试、资源哈希和干净 ZIP，但没有 Developer ID 与 Apple 公证。
-- `./Scripts/release-public.sh` 才是可对外分发的正式流程。它会强制检查干净 Git 提交、Developer ID、Hardened Runtime、公证、票据装订和 Gatekeeper。
+- `./Scripts/package-release.sh` creates an ad-hoc signed package for local testing. It includes complete checks, resource hashes, and a clean ZIP, but it does not include Developer ID signing or Apple notarization.
+- `./Scripts/release-public.sh` is the guarded process for a future direct public distribution. It requires a clean Git commit, Developer ID signing, Hardened Runtime, notarization, ticket stapling, and Gatekeeper acceptance.
 
-任何 ad-hoc 包都不得标记为“Apple 已验证”或“公开发布版”。
+Never label an ad-hoc package as Apple-verified or as a public distribution build.
 
-## 首次准备
+## Optional First-Time Setup
 
-1. 在 Apple Developer 账户中创建并安装 `Developer ID Application` 证书。
-2. 注册本项目使用的反向域名 Bundle ID。
-3. 把公证凭据保存到当前用户的钥匙串，不要写进仓库：
+Complete these steps only if the distribution target changes:
+
+1. Create and install a `Developer ID Application` certificate through the publisher's Apple Developer account.
+2. Register the reverse-domain Bundle ID used for the project.
+3. Store notarization credentials in the current user's Keychain, never in the repository:
 
 ```bash
 xcrun notarytool store-credentials "CainiaoPet-Notary"
 ```
 
-4. 确认源码已提交，工作区没有未跟踪或未提交内容。
+4. Commit the source and confirm that the working tree contains no untracked or uncommitted files.
 
-## 正式发布
+## Optional Public Distribution
 
-以下值必须由发布者自己的 Apple Developer 账户提供：
+The publisher must supply these values from their own Apple Developer account:
 
 ```bash
 export CAINIAOPET_SIGN_IDENTITY="Developer ID Application: Your Name (TEAMID)"
@@ -32,19 +34,19 @@ export CAINIAOPET_BUNDLE_ID="com.example.cainiaopet"
 ./Scripts/release-public.sh
 ```
 
-脚本按以下顺序执行：
+The script performs the following sequence:
 
-1. 运行源码、API 模拟、资源、Debug 和 Release 检查。
-2. 分别签名桥接程序、主程序和 App 外壳，并启用 Hardened Runtime 与安全时间戳。
-3. 生成无 `__MACOSX`、`.DS_Store` 和 AppleDouble 条目的上传 ZIP。
-4. 使用 `notarytool` 等待 Apple 公证结果。
-5. 将公证票据装订到 App，并验证票据。
-6. 用已装订 App 重新生成最终 ZIP、发布清单和 SHA-256 文件。
-7. 使用 `spctl` 做 Gatekeeper 验收，并再次验证 ZIP 内 App。
+1. Runs source, API mock, asset, Debug, and Release checks.
+2. Signs the bridge helper, main executable, and application bundle separately with Hardened Runtime and a secure timestamp.
+3. Creates an upload ZIP without `__MACOSX`, `.DS_Store`, or AppleDouble entries.
+4. Submits the package with `notarytool` and waits for Apple's result.
+5. Staples the notarization ticket to the application and validates the ticket.
+6. Rebuilds the final ZIP, release manifest, and SHA-256 file from the stapled application.
+7. Runs Gatekeeper acceptance with `spctl` and re-verifies the archived application.
 
-只有最后一行显示所有正式门禁通过后，才可以把 App 二进制作为面向普通用户直接下载运行的 GitHub Release 发布。当前源码项目与 CI 构建验证不需要执行这一流程。
+Only after the script reports that every public-distribution gate passed should the binary be offered as a GitHub Release intended for direct download and execution by general users. The current source project and CI build-verification workflow do not require this process.
 
-## 发布文件
+## Distribution Files
 
 ```text
 artifacts/CainiaoPet-macOS-arm64.zip
@@ -52,4 +54,4 @@ artifacts/CainiaoPet-macOS-arm64.RELEASE.json
 artifacts/CainiaoPet-macOS-arm64.zip.sha256
 ```
 
-上传前应将版本标签与 `Support/Info.plist` 中的版本、Build 号保持一致，并把同一提交号写入 Release 说明。不要上传 `artifacts/CainiaoPet.app` 目录本身。
+Before upload, keep the version tag aligned with `Support/Info.plist`, including the version and build number, and identify the same source commit in the release notes. Do not upload the unpacked `artifacts/CainiaoPet.app` directory.

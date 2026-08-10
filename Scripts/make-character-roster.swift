@@ -12,23 +12,23 @@ let characterDirectory = URL(
 )
 let outputURL = URL(fileURLWithPath: CommandLine.arguments[2])
 let themes: [(id: String, name: String)] = [
-    ("nova", "星核竞技"),
-    ("mecha", "先锋机甲"),
-    ("street", "街头乱斗"),
-    ("samurai", "樱刃武者"),
-    ("abyss", "深海猎潮"),
-    ("volcanic", "熔岩暴君"),
-    ("candy", "糖果派对"),
-    ("wasteland", "荒原拾荒"),
-    ("phantom", "幽影幻术"),
-    ("totem", "森灵图腾")
+    ("nova", "Nova Arena"),
+    ("mecha", "Vanguard Mecha"),
+    ("street", "Street Brawl"),
+    ("samurai", "Sakura Blade"),
+    ("abyss", "Abyssal Tidehunter"),
+    ("volcanic", "Molten Tyrant"),
+    ("candy", "Candy Carnival"),
+    ("wasteland", "Wasteland Salvager"),
+    ("phantom", "Phantom Veil"),
+    ("totem", "Verdant Totem")
 ]
 let stages: [(id: String, name: String)] = [
-    ("egg", "核卵"),
-    ("hatchling", "初醒"),
-    ("juvenile", "锐变"),
-    ("ascended", "觉醒"),
-    ("legendary", "冠冕")
+    ("egg", "Core Egg"),
+    ("hatchling", "First Spark"),
+    ("juvenile", "Shifting Form"),
+    ("ascended", "Ascension"),
+    ("legendary", "Crown Form")
 ]
 
 let tileWidth: CGFloat = 270
@@ -45,7 +45,7 @@ NSColor(calibratedRed: 0.018, green: 0.025, blue: 0.055, alpha: 1).setFill()
 NSBezierPath(rect: NSRect(origin: .zero, size: sheetSize)).fill()
 
 let titleAttributes: [NSAttributedString.Key: Any] = [
-    .font: NSFont.systemFont(ofSize: 14, weight: .bold),
+    .font: NSFont.systemFont(ofSize: 12, weight: .bold),
     .foregroundColor: NSColor.white
 ]
 let subtitleAttributes: [NSAttributedString.Key: Any] = [

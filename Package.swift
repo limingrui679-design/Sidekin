@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "CainiaoPet",
-    defaultLocalization: "zh-Hans",
+    defaultLocalization: "en",
     platforms: [
         .macOS(.v14)
     ],

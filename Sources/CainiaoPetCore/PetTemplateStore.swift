@@ -15,16 +15,16 @@ public enum PetTemplateStoreError: LocalizedError, Equatable {
 
     public var errorDescription: String? {
         switch self {
-        case .invalidTemplateID: "宠物模板标识无效。"
-        case .invalidStageCount: "成长阶段必须在 1 到 8 之间。"
-        case .invalidStageLayout: "成长阶段顺序或资源文件名无效。"
-        case .imageCountMismatch: "生成图片数量与成长阶段数量不一致。"
-        case .templateAlreadyExists: "同名模板目录已经存在。"
-        case .templateNotFound: "没有找到这个宠物模板。"
-        case .invalidName: "模板名称不能为空，且最多为 40 个字符。"
-        case .invalidPackage: "这不是有效的 CainiaoPet 模板包。"
-        case .invalidImage: "模板图片必须是可读取且尺寸安全的 PNG。"
-        case .stageIndexOutOfRange: "成长阶段序号超出范围。"
+        case .invalidTemplateID: "The pet template identifier is invalid."
+        case .invalidStageCount: "A growth line must contain between 1 and 8 stages."
+        case .invalidStageLayout: "The stage order or asset filenames are invalid."
+        case .imageCountMismatch: "The number of generated images does not match the number of stages."
+        case .templateAlreadyExists: "A template directory with this identifier already exists."
+        case .templateNotFound: "This pet template could not be found."
+        case .invalidName: "The template name cannot be empty and must contain no more than 40 characters."
+        case .invalidPackage: "This is not a valid CainiaoPet template package."
+        case .invalidImage: "Template images must be readable PNG files with safe dimensions."
+        case .stageIndexOutOfRange: "The growth-stage index is out of range."
         }
     }
 }

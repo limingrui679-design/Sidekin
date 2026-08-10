@@ -42,12 +42,12 @@ public enum PetLineageGeneratorError: LocalizedError {
 
     public var errorDescription: String? {
         switch self {
-        case .emptyName: "请先给宠物模板起名。"
-        case .emptyDescription: "请描述宠物的物种、轮廓、颜色或性格。"
-        case .missingAPIKey: "需要请求新图片时，请先输入安装用户自己的 OpenAI API Key。"
-        case .newRequestRequired: "本机已有原图已经处理完；后续阶段需要新的 API 请求。"
-        case .missingReference: "此生成模式需要先上传一张参考图片。"
-        case .invalidStageCount: "成长阶段必须在 1 到 8 之间。"
+        case .emptyName: "Name the pet template before generating it."
+        case .emptyDescription: "Describe the pet's species, silhouette, colors, or personality."
+        case .missingAPIKey: "A new image request requires your own OpenAI API key."
+        case .newRequestRequired: "All saved local images have been processed. The remaining stages require new API requests."
+        case .missingReference: "This generation mode requires a reference image."
+        case .invalidStageCount: "A growth line must contain between 1 and 8 stages."
         }
     }
 }
@@ -435,6 +435,6 @@ public final class PetLineageGenerator {
 
     private func cleanedStageName(_ rawName: String, index: Int) -> String {
         let name = rawName.trimmingCharacters(in: .whitespacesAndNewlines)
-        return name.isEmpty ? "阶段 \(index + 1)" : String(name.prefix(18))
+        return name.isEmpty ? "Stage \(index + 1)" : String(name.prefix(18))
     }
 }

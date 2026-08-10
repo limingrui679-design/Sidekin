@@ -9,10 +9,10 @@ public enum PetGenerationJobState: String, Codable, Sendable {
 
     public var displayName: String {
         switch self {
-        case .ready: "等待继续"
-        case .running: "上次生成被中断"
-        case .failed: "生成失败，可重试"
-        case .cancelled: "已暂停，可继续"
+        case .ready: "Ready to continue"
+        case .running: "The previous run was interrupted"
+        case .failed: "Generation failed · retry available"
+        case .cancelled: "Paused · ready to continue"
         }
     }
 }
@@ -101,11 +101,11 @@ public enum PetGenerationJobStoreError: LocalizedError {
 
     public var errorDescription: String? {
         switch self {
-        case .invalidJobID: "生成任务标识无效。"
-        case .jobNotFound: "没有找到可继续的生成任务。"
-        case .jobAlreadyExists: "生成任务目录已经存在。"
-        case .invalidJob: "生成任务数据已损坏。"
-        case .invalidStageIndex: "生成阶段序号无效。"
+        case .invalidJobID: "The generation job identifier is invalid."
+        case .jobNotFound: "No resumable generation job was found."
+        case .jobAlreadyExists: "The generation job directory already exists."
+        case .invalidJob: "The generation job data is damaged."
+        case .invalidStageIndex: "The generation-stage index is invalid."
         }
     }
 }
