@@ -383,6 +383,12 @@ private struct StageTemplateAction: Identifiable {
     let stageIndex: Int
 }
 
+private struct GenerationJobStageAction: Identifiable {
+    let id = UUID()
+    let job: PetGenerationJob
+    let stageIndex: Int
+}
+
 private struct PetWorkshopDashboard: View {
     @ObservedObject var model: AppModel
 
@@ -405,6 +411,8 @@ private struct PetWorkshopDashboard: View {
     @State private var showDeleteAlert = false
     @State private var pendingDiscardJob: PetGenerationJob?
     @State private var showDiscardJobAlert = false
+    @State private var pendingRestartJobStage: GenerationJobStageAction?
+    @State private var showRestartJobAlert = false
     @State private var pendingRegeneration: StageTemplateAction?
     @State private var showRegenerationAlert = false
 
@@ -469,20 +477,61 @@ private struct PetWorkshopDashboard: View {
         } message: {
             Text("已生成但尚未安装的阶段图片也会被删除。")
         }
-        .alert("重新生成这个阶段？", isPresented: $showRegenerationAlert) {
-            Button("取消", role: .cancel) { pendingRegeneration = nil }
-            Button("付费生成并替换") {
-                if let action = pendingRegeneration {
-                    model.regenerateTemplateStage(
-                        action.template,
-                        stageIndex: action.stageIndex,
-                        quality: quality
-                    )
+        .alert("清除阶段恢复点？", isPresented: $showRestartJobAlert) {
+            Button("取消", role: .cancel) { pendingRestartJobStage = nil }
+            Button("清除并允许重新请求", role: .destructive) {
+                if let action = pendingRestartJobStage {
+                    model.restartGenerationJob(action.job, fromStage: action.stageIndex)
                 }
-                pendingRegeneration = nil
+                pendingRestartJobStage = nil
             }
         } message: {
-            Text("只会生成并替换所选阶段。\(quality.displayName)质量的 1024×1024 输出约 \(singleImageOutputCost)，另计输入费用；费用由安装用户自己的 API 账户承担。")
+            if let action = pendingRestartJobStage {
+                Text("会删除第 \(action.stageIndex + 1) 阶段及其后续恢复文件。之后点击继续时，这些阶段将重新调用 API 并由安装用户自己的账户付费。")
+            }
+        }
+        .alert("重新生成这个阶段？", isPresented: $showRegenerationAlert) {
+            Button("取消", role: .cancel) { pendingRegeneration = nil }
+            if pendingRegenerationHasSavedRaw {
+                Button("免费重试本机原图") {
+                    if let action = pendingRegeneration {
+                        model.regenerateTemplateStage(
+                            action.template,
+                            stageIndex: action.stageIndex,
+                            quality: quality
+                        )
+                    }
+                    pendingRegeneration = nil
+                }
+                Button("重新请求（会产生费用）") {
+                    if let action = pendingRegeneration {
+                        model.regenerateTemplateStage(
+                            action.template,
+                            stageIndex: action.stageIndex,
+                            quality: quality,
+                            forceNewRequest: true
+                        )
+                    }
+                    pendingRegeneration = nil
+                }
+            } else {
+                Button("付费生成并替换") {
+                    if let action = pendingRegeneration {
+                        model.regenerateTemplateStage(
+                            action.template,
+                            stageIndex: action.stageIndex,
+                            quality: quality
+                        )
+                    }
+                    pendingRegeneration = nil
+                }
+            }
+        } message: {
+            if pendingRegenerationHasSavedRaw {
+                Text("检测到上次已经付费返回并保存在本机的 API 原图。免费重试不会请求 API；只有选择重新请求才会产生新的费用，\(quality.displayName)质量输出约 \(singleImageOutputCost)，另计输入费用。")
+            } else {
+                Text("只会生成并替换所选阶段。\(quality.displayName)质量的 1024×1024 输出约 \(singleImageOutputCost)，另计输入费用；费用由安装用户自己的 API 账户承担。")
+            }
         }
     }
 
@@ -629,19 +678,43 @@ private struct PetWorkshopDashboard: View {
                                 .foregroundStyle(.secondary)
                         }
                         Spacer()
-                        Button("继续 / 重试当前阶段") {
-                            model.resumeTemplateGeneration(job: job, apiKey: apiKey)
-                            apiKey = ""
+                        if hasSavedCurrentRaw(job) {
+                            Button("仅免费处理本机原图") {
+                                model.resumeTemplateGeneration(
+                                    job: job,
+                                    allowNewRequests: false
+                                )
+                            }
+                            .buttonStyle(SoftButtonStyle())
+                            .disabled(model.isGeneratingTemplate)
+
+                            Button("继续生成（可能付费）") {
+                                model.resumeTemplateGeneration(job: job, apiKey: apiKey)
+                                apiKey = ""
+                            }
+                            .buttonStyle(AccentButtonStyle(color: .orange))
+                            .disabled(model.isGeneratingTemplate)
+                        } else {
+                            Button("继续 / 重试当前阶段") {
+                                model.resumeTemplateGeneration(job: job, apiKey: apiKey)
+                                apiKey = ""
+                            }
+                            .buttonStyle(AccentButtonStyle(color: .orange))
+                            .disabled(model.isGeneratingTemplate)
                         }
-                        .buttonStyle(AccentButtonStyle(color: .orange))
-                        .disabled(model.isGeneratingTemplate)
 
                         Menu {
+                            if hasSavedCurrentRaw(job), job.nextStageIndex < job.stageNames.count {
+                                Button("清除当前原图并重新请求", systemImage: "arrow.counterclockwise") {
+                                    confirmRestart(job, fromStage: job.nextStageIndex)
+                                }
+                                Divider()
+                            }
                             if !job.completedStages.isEmpty {
                                 Menu("从已完成阶段重做") {
                                     ForEach(job.completedStages) { stage in
                                         Button("第 \(stage.index + 1) 阶段 · \(stage.name)") {
-                                            model.restartGenerationJob(job, fromStage: stage.index)
+                                            confirmRestart(job, fromStage: stage.index)
                                         }
                                     }
                                 }
@@ -944,6 +1017,30 @@ private struct PetWorkshopDashboard: View {
 
     private var singleImageOutputCost: String {
         String(format: "$%.3f", quality.estimatedOutputUSDPerSquareImage)
+    }
+
+    private var pendingRegenerationHasSavedRaw: Bool {
+        guard let action = pendingRegeneration else { return false }
+        return model.hasPendingTemplateStageRaw(
+            action.template,
+            stageIndex: action.stageIndex
+        )
+    }
+
+    private func hasSavedCurrentRaw(_ job: PetGenerationJob) -> Bool {
+        guard job.nextStageIndex < job.stageNames.count else { return false }
+        return model.generationRawPreviewURL(
+            jobID: job.id,
+            stageIndex: job.nextStageIndex
+        ) != nil
+    }
+
+    private func confirmRestart(_ job: PetGenerationJob, fromStage stageIndex: Int) {
+        pendingRestartJobStage = GenerationJobStageAction(
+            job: job,
+            stageIndex: stageIndex
+        )
+        showRestartJobAlert = true
     }
 
     private var generationRequest: PetGenerationRequest {

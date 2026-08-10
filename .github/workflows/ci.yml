@@ -21,3 +21,27 @@ jobs:
 
       - name: Run source, mock API, asset, and release builds
         run: ./Scripts/run-all-checks.sh
+
+      - name: Build and verify arm64 beta archive
+        run: ./Scripts/package-release.sh
+
+      - name: Verify archive provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          manifest="artifacts/CainiaoPet-macOS-arm64.RELEASE.json"
+          commit="$(swift Scripts/read-release-manifest.swift "$manifest" sourceCommit)"
+          dirty="$(swift Scripts/read-release-manifest.swift "$manifest" sourceDirty)"
+          test "$commit" = "$GITHUB_SHA"
+          test "$dirty" = "0"
+
+      - name: Retain verified beta archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: CainiaoPet-macOS-arm64-${{ github.sha }}
+          path: |
+            artifacts/CainiaoPet-macOS-arm64.zip
+            artifacts/CainiaoPet-macOS-arm64.RELEASE.json
+            artifacts/CainiaoPet-macOS-arm64.zip.sha256
+          if-no-files-found: error
+          retention-days: 14

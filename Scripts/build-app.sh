@@ -17,7 +17,7 @@ swift "$PROJECT_ROOT/Scripts/verify-character-assets.swift" \
 swift run -c release CainiaoPetSelfTest
 swift run -c release CainiaoPetAPISelfTest
 
-BIN_DIR="$(swift build -c release --show-bin-path)"
+BIN_DIR="$(swift build -c release --arch arm64 --show-bin-path)"
 RESOURCE_BUNDLE="$BIN_DIR/CainiaoPet_CainiaoPetApp.bundle"
 
 case "$RESOURCE_BUNDLE" in
@@ -34,8 +34,8 @@ if [[ -d "$RESOURCE_BUNDLE" ]]; then
   rm -rf -- "$RESOURCE_BUNDLE"
 fi
 
-swift build -c release --product CainiaoPet
-swift build -c release --product CainiaoPetBridge
+swift build -c release --arch arm64 --product CainiaoPet
+swift build -c release --arch arm64 --product CainiaoPetBridge
 
 if [[ "$APP_BUNDLE" != "$PROJECT_ROOT/artifacts/CainiaoPet.app" ]]; then
   print -u2 "Unexpected app bundle path; refusing to replace it."

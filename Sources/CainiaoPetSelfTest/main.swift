@@ -461,6 +461,12 @@ test("生成恢复任务会先保存付费原图并支持从阶段重做") {
     try expect(job.completedCount == 0, "从阶段重做没有清除后续恢复点")
     let restartedRaw = try store.rawStageData(jobID: job.id, stageIndex: 0)
     try expect(restartedRaw == nil, "重做后旧原图仍存在")
+
+    try store.saveRawStage(jobID: job.id, stageIndex: 1, data: paidRaw)
+    try expect(store.rawStageURL(jobID: job.id, stageIndex: 1) != nil, "当前失败阶段原图没有保存")
+    job = try store.restart(jobID: job.id, fromStage: 1)
+    let clearedCurrentRaw = try store.rawStageData(jobID: job.id, stageIndex: 1)
+    try expect(clearedCurrentRaw == nil, "清除当前失败阶段后仍会反复使用旧原图")
 }
 
 test("单阶段付费重绘也会保留原图恢复点") {
@@ -489,11 +495,19 @@ test("单阶段付费重绘也会保留原图恢复点") {
         stageIndex: 0,
         data: paidRaw
     )
+    try expect(
+        store.hasPendingReplacementRaw(templateID: template.id, stageIndex: 0),
+        "界面无法识别单阶段恢复原图"
+    )
     let savedRaw = try store.pendingReplacementRaw(templateID: template.id, stageIndex: 0)
     try expect(savedRaw == paidRaw, "单阶段付费原图没有持久化")
     try store.clearPendingReplacementRaw(templateID: template.id, stageIndex: 0)
     let clearedRaw = try store.pendingReplacementRaw(templateID: template.id, stageIndex: 0)
     try expect(clearedRaw == nil, "阶段替换完成后恢复点没有清理")
+    try expect(
+        !store.hasPendingReplacementRaw(templateID: template.id, stageIndex: 0),
+        "清理后界面仍误报单阶段恢复原图"
+    )
 }
 
 test("生成提示强制阶段结构差异与纯色抠图背景") {

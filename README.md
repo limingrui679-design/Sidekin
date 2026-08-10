@@ -2,7 +2,7 @@
 
 芽芽是一个原生 macOS 浮动桌宠：它会跟随 Codex 的运行、完成与失败状态做出反馈，也有自己的饥饿、心情、精力、喂养、玩耍、睡眠和五阶段成长。项目采用一个 Swift Package、多个清晰模块，避免桌宠、事件桥接和成长规则分成两个项目后发生数据漂移。
 
-当前版本：`1.2.0`（Build 4），Apple Silicon `arm64`，macOS 14+。
+当前版本：`1.2.0`（Build 5），Apple Silicon `arm64`，macOS 14+。
 
 ## 已实现
 
@@ -15,7 +15,7 @@
 - 草稿 `low`、标准 `medium`、最终 `high` 三档质量与动态费用估算
 - 每一阶段拿到 API 原图后立即落盘；失败、取消或退出后可以继续
 - 支持从失败阶段续跑、从指定阶段重做、单阶段付费重绘
-- 单阶段重绘同样先保存原图，处理失败后重试不会再次请求同一张
+- 已付费原图可在没有 Key 时单独免费重试本地处理；“继续生成”和“重新请求”作为可能付费的独立操作显示
 - 自适应边缘连通抠图，保留粉色、紫色等主体内部颜色
 - 原图与抠图结果预览
 - 自定义模板重命名、删除、导入、导出、本地替换和 AI 单阶段重绘
@@ -90,6 +90,8 @@ artifacts/CainiaoPet-macOS-arm64.zip.sha256
 
 发布清单记录版本、构建号、最低系统、架构、源码提交、签名状态、App 文件哈希和 50 张角色资源哈希。打包脚本会拒绝损坏 ZIP、`__MACOSX`、`.DS_Store`、AppleDouble 文件、资源缺失、架构漂移和清单不一致。
 
+GitHub Actions 会在 macOS runner 上重跑全部检查、交叉编译并复验 `arm64` Beta ZIP，确认发布清单的提交号等于当前 workflow 提交且源码状态干净，再把 ZIP、清单和 SHA-256 作为短期 CI artifact 保留。它仍不是公开 GitHub Release，也不会绕过 Developer ID 与 Apple 公证。
+
 本地包默认使用 ad-hoc 临时签名，适合开发验收，不应直接冒充公开发布版本。Developer ID、Hardened Runtime、公证、票据装订和 Gatekeeper 的正式发布流程见 [docs/RELEASING.md](docs/RELEASING.md)。
 
 ## 自检范围
@@ -100,4 +102,4 @@ swift run CainiaoPetAPISelfTest
 swift Scripts/verify-character-assets.swift Sources/CainiaoPetApp/Resources/Characters
 ```
 
-当前共有 27 项本地自检、5 项 API 模拟自检。它们覆盖成长阈值、1–8 阶段规划、模板管理、损坏图片拒绝、整套与单阶段断点恢复、质量费用、抠图颜色保护、50 张透明资源、Codex 事件隐私过滤、Hooks 安全，以及生成/编辑端点的模拟请求与响应。模拟自检不会读取真实 Key，也不会产生 API 费用。
+当前共有 27 项本地自检、6 项 API 模拟自检。它们覆盖成长阈值、1–8 阶段规划、模板管理、损坏图片拒绝、整套与单阶段断点恢复、无 Key 本地恢复、明确重新请求、质量费用、抠图颜色保护、50 张透明资源、Codex 事件隐私过滤、Hooks 安全，以及生成/编辑端点的模拟请求与响应。模拟自检不会读取真实 Key，也不会产生 API 费用。

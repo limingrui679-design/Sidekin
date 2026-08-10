@@ -188,6 +188,13 @@ public struct PetTemplateStore {
         return data.isEmpty ? nil : data
     }
 
+    public func hasPendingReplacementRaw(
+        templateID: String,
+        stageIndex: Int
+    ) -> Bool {
+        (try? pendingReplacementRaw(templateID: templateID, stageIndex: stageIndex)) != nil
+    }
+
     public func savePendingReplacementRaw(
         templateID: String,
         stageIndex: Int,

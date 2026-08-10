@@ -35,6 +35,8 @@ public struct PetGenerationRequest: Sendable {
 public enum PetLineageGeneratorError: LocalizedError {
     case emptyName
     case emptyDescription
+    case missingAPIKey
+    case newRequestRequired
     case missingReference
     case invalidStageCount
 
@@ -42,6 +44,8 @@ public enum PetLineageGeneratorError: LocalizedError {
         switch self {
         case .emptyName: "请先给宠物模板起名。"
         case .emptyDescription: "请描述宠物的物种、轮廓、颜色或性格。"
+        case .missingAPIKey: "需要请求新图片时，请先输入安装用户自己的 OpenAI API Key。"
+        case .newRequestRequired: "本机已有原图已经处理完；后续阶段需要新的 API 请求。"
         case .missingReference: "此生成模式需要先上传一张参考图片。"
         case .invalidStageCount: "成长阶段必须在 1 到 8 之间。"
         }
@@ -88,7 +92,8 @@ public final class PetLineageGenerator {
 
     public func resume(
         jobID: String,
-        apiKey: String,
+        apiKey: String? = nil,
+        allowNewRequests: Bool = true,
         progress: @escaping @MainActor (_ completed: Int, _ total: Int, _ stageName: String) -> Void
     ) async throws -> CustomPetTemplate {
         var job = try jobStore.load(id: jobID)
@@ -155,13 +160,17 @@ public final class PetLineageGenerator {
                     continue
                 }
 
+                guard allowNewRequests else {
+                    throw PetLineageGeneratorError.newRequestRequired
+                }
+                let requestAPIKey = try requiredAPIKey(apiKey)
                 let rawImage = try await requestStage(
                     request: request,
                     index: index,
                     prompt: prompt,
                     normalizedReference: normalizedReference,
                     lineageImages: rawStageImages,
-                    apiKey: apiKey
+                    apiKey: requestAPIKey
                 )
                 // Save before chroma-keying. A paid result survives cancellation,
                 // processing failure, app termination, and a later resume.
@@ -208,6 +217,9 @@ public final class PetLineageGenerator {
             )
             try jobStore.remove(id: job.id)
             return installed
+        } catch PetLineageGeneratorError.newRequestRequired {
+            _ = try? jobStore.updateState(jobID: job.id, state: .ready)
+            throw PetLineageGeneratorError.newRequestRequired
         } catch is CancellationError {
             _ = try? jobStore.updateState(jobID: job.id, state: .cancelled)
             throw CancellationError()
@@ -229,7 +241,8 @@ public final class PetLineageGenerator {
         templateID: String,
         stageIndex: Int,
         quality: PetImageGenerationQuality? = nil,
-        apiKey: String
+        apiKey: String? = nil,
+        forceNewRequest: Bool = false
     ) async throws -> CustomPetTemplate {
         guard let template = try store.load(id: templateID) else {
             throw PetTemplateStoreError.templateNotFound
@@ -263,19 +276,20 @@ public final class PetLineageGenerator {
             lineage.append(try store.assetData(templateID: template.id, fileName: previous.assetFileName))
         }
         let raw: Data
-        if let savedRaw = try store.pendingReplacementRaw(
+        if !forceNewRequest, let savedRaw = try store.pendingReplacementRaw(
             templateID: template.id,
             stageIndex: stageIndex
         ) {
             raw = savedRaw
         } else {
+            let requestAPIKey = try requiredAPIKey(apiKey)
             raw = try await requestStage(
                 request: request,
                 index: stageIndex,
                 prompt: prompt,
                 normalizedReference: reference,
                 lineageImages: lineage,
-                apiKey: apiKey
+                apiKey: requestAPIKey
             )
             // A paid single-stage result gets the same raw-first guarantee as
             // a complete lineage job. Retrying after processing failure does
@@ -299,6 +313,12 @@ public final class PetLineageGenerator {
             stageIndex: stageIndex
         )
         return updated
+    }
+
+    private func requiredAPIKey(_ rawKey: String?) throws -> String {
+        let key = rawKey?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        guard !key.isEmpty else { throw PetLineageGeneratorError.missingAPIKey }
+        return key
     }
 
     public static func prompt(

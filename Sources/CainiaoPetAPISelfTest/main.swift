@@ -289,6 +289,62 @@ private struct APISelfTestRunner {
             try expect(remainingJobs.isEmpty, "续跑完成后恢复任务没有清理")
             print("✓ 失败后保留原图、断点续跑且不重复计费阶段")
 
+            let offlineRecoveryDirectory = FileManager.default.temporaryDirectory
+                .appendingPathComponent(UUID().uuidString, isDirectory: true)
+            defer { try? FileManager.default.removeItem(at: offlineRecoveryDirectory) }
+            let offlineRecoveryStore = PetTemplateStore(
+                templatesDirectory: offlineRecoveryDirectory.appendingPathComponent("templates")
+            )
+            let offlineRecoveryJobStore = PetGenerationJobStore(
+                jobsDirectory: offlineRecoveryDirectory.appendingPathComponent("jobs")
+            )
+            let offlineRecoveryGenerator = PetLineageGenerator(
+                client: client,
+                store: offlineRecoveryStore,
+                jobStore: offlineRecoveryJobStore
+            )
+            let offlineRecoveryRequest = PetGenerationRequest(
+                templateName: "无 Key 恢复",
+                description: "蓝色椭圆测试宠物",
+                artDirection: "竞技游戏角色",
+                mode: .text,
+                stageNames: ["蛋", "幼体"]
+            )
+            let offlineRecoveryJob = try offlineRecoveryJobStore.create(
+                request: offlineRecoveryRequest,
+                normalizedReference: nil
+            )
+            try offlineRecoveryJobStore.saveRawStage(
+                jobID: offlineRecoveryJob.id,
+                stageIndex: 0,
+                data: mockPet
+            )
+            let offlineRecorder = RequestRecorder()
+            MockURLProtocol.handler = { request in
+                offlineRecorder.append(request.url?.path ?? "")
+                throw TestFailure(description: "处理本机恢复原图时不应请求 API")
+            }
+            var offlineResumeStoppedBeforeNewRequest = false
+            do {
+                _ = try await offlineRecoveryGenerator.resume(
+                    jobID: offlineRecoveryJob.id,
+                    apiKey: nil,
+                    allowNewRequests: false
+                ) { _, _, _ in }
+            } catch PetLineageGeneratorError.newRequestRequired {
+                offlineResumeStoppedBeforeNewRequest = true
+            }
+            try expect(
+                offlineResumeStoppedBeforeNewRequest,
+                "仅本机恢复没有在新请求前安全停止"
+            )
+            let offlineRecoveredJob = try offlineRecoveryJobStore.load(id: offlineRecoveryJob.id)
+            try expect(offlineRecoveredJob.completedCount == 1, "无 Key 时没有先完成本机原图处理")
+            try expect(offlineRecoveredJob.state == .ready, "仅本机恢复被错误标记为失败")
+            try expect(offlineRecoveredJob.lastError == nil, "仅本机恢复留下了误导性的失败信息")
+            try expect(offlineRecorder.snapshot().isEmpty, "无 Key 恢复意外发起了 API 请求")
+            print("✓ 已付费本机原图可无 Key 免费恢复，新增阶段前才要求 Key")
+
             let stageDirectory = FileManager.default.temporaryDirectory
                 .appendingPathComponent(UUID().uuidString, isDirectory: true)
             defer { try? FileManager.default.removeItem(at: stageDirectory) }
@@ -363,7 +419,7 @@ private struct APISelfTestRunner {
                     templateID: singleStageTemplate.id,
                     stageIndex: 0,
                     quality: .high,
-                    apiKey: "test-key"
+                    apiKey: nil
                 )
             } catch {
                 secondStageAttemptFailed = true
@@ -380,7 +436,7 @@ private struct APISelfTestRunner {
                 templateID: singleStageTemplate.id,
                 stageIndex: 0,
                 quality: .high,
-                apiKey: "test-key"
+                apiKey: nil
             )
             try expect(repairedStage.resolvedGenerationQuality == .high, "恢复后质量没有写入模板")
             try expect(stageRecorder.snapshot().count == 1, "使用恢复原图时仍调用了 API")
@@ -389,10 +445,39 @@ private struct APISelfTestRunner {
                 stageIndex: 0
             )
             try expect(clearedSingleStageRaw == nil, "单阶段替换成功后恢复原图没有清理")
-            print("✓ 单阶段重绘先存原图，处理失败重试不重复调用")
+
+            try stageStore.savePendingReplacementRaw(
+                templateID: singleStageTemplate.id,
+                stageIndex: 0,
+                data: corruptPaidImage
+            )
+            MockURLProtocol.handler = { request in
+                stageRecorder.append(request.url?.path ?? "")
+                return lineageResponse
+            }
+            _ = try await stageGenerator.regenerateStage(
+                templateID: singleStageTemplate.id,
+                stageIndex: 0,
+                quality: .high,
+                apiKey: "test-key",
+                forceNewRequest: true
+            )
+            try expect(
+                stageRecorder.snapshot() == [
+                    "/v1/images/generations",
+                    "/v1/images/generations"
+                ],
+                "确认重新请求没有准确产生一次新的单阶段费用请求"
+            )
+            let forceRefreshedRaw = try stageStore.pendingReplacementRaw(
+                templateID: singleStageTemplate.id,
+                stageIndex: 0
+            )
+            try expect(forceRefreshedRaw == nil, "重新请求成功后恢复原图没有清理")
+            print("✓ 单阶段可免费重试本机原图，也可确认后重新请求一次")
 
             session.invalidateAndCancel()
-            print("\n全部 5 项 API 模拟自检通过。")
+            print("\n全部 6 项 API 模拟自检通过。")
         } catch {
             fputs("✗ API 模拟自检失败：\(error)\n", stderr)
             exit(1)

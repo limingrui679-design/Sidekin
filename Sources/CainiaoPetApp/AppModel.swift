@@ -318,25 +318,35 @@ final class AppModel: ObservableObject {
         generationTask?.cancel()
     }
 
-    func resumeTemplateGeneration(job: PetGenerationJob, apiKey: String? = nil) {
-        guard !isGeneratingTemplate,
-              let key = resolvedImageAPIKey(supplied: apiKey)
-        else { return }
+    func resumeTemplateGeneration(
+        job: PetGenerationJob,
+        apiKey: String? = nil,
+        allowNewRequests: Bool = true
+    ) {
+        guard !isGeneratingTemplate else { return }
+        // A saved paid result can be reprocessed without a key. The generator
+        // asks for a key only when it actually reaches an unsaved stage.
+        let key = allowNewRequests
+            ? resolvedImageAPIKey(supplied: apiKey, required: false)
+            : nil
         isGeneratingTemplate = true
         generationCompleted = job.completedCount
         generationTotal = job.stageNames.count
         generationStageName = job.stageNames.indices.contains(job.nextStageIndex)
             ? job.stageNames[job.nextStageIndex]
             : "正在整理模板"
-        bannerMessage = "从第 " + String(min(job.stageNames.count, job.nextStageIndex + 1))
-            + " 阶段继续，不会重复请求已经保存的阶段。"
+        bannerMessage = allowNewRequests
+            ? "从第 " + String(min(job.stageNames.count, job.nextStageIndex + 1))
+                + " 阶段继续，不会重复请求已经保存的阶段。"
+            : "只处理已经保存在本机的 API 原图，不会发起新请求。"
 
         generationTask = Task { @MainActor [weak self] in
             guard let self else { return }
             do {
                 let template = try await lineageGenerator.resume(
                     jobID: job.id,
-                    apiKey: key
+                    apiKey: key,
+                    allowNewRequests: allowNewRequests
                 ) { [weak self] completed, total, stageName in
                     self?.generationCompleted = completed
                     self?.generationTotal = total
@@ -346,6 +356,9 @@ final class AppModel: ObservableObject {
                 reloadCustomTemplates()
                 activate(template: template)
                 bannerMessage = "「" + template.name + "」已续跑完成并启用。"
+            } catch PetLineageGeneratorError.newRequestRequired {
+                refreshGenerationJobs()
+                bannerMessage = "本机原图已完成处理；后续阶段尚未请求，点击继续生成时才会使用 API Key。"
             } catch is CancellationError {
                 refreshGenerationJobs()
                 bannerMessage = "生成已暂停；已付费生成的阶段仍保存在本机。"
@@ -468,12 +481,23 @@ final class AppModel: ObservableObject {
     func regenerateTemplateStage(
         _ template: CustomPetTemplate,
         stageIndex: Int,
-        quality: PetImageGenerationQuality? = nil
+        quality: PetImageGenerationQuality? = nil,
+        forceNewRequest: Bool = false
     ) {
         guard !isGeneratingTemplate,
-              let key = resolvedImageAPIKey(supplied: nil),
               template.stages.indices.contains(stageIndex)
         else { return }
+        let hasSavedRaw = templateStore.hasPendingReplacementRaw(
+            templateID: template.id,
+            stageIndex: stageIndex
+        )
+        let key: String?
+        if hasSavedRaw && !forceNewRequest {
+            key = nil
+        } else {
+            guard let resolved = resolvedImageAPIKey(supplied: nil) else { return }
+            key = resolved
+        }
         isGeneratingTemplate = true
         generationCompleted = 0
         generationTotal = 1
@@ -486,7 +510,8 @@ final class AppModel: ObservableObject {
                     templateID: template.id,
                     stageIndex: stageIndex,
                     quality: quality,
-                    apiKey: key
+                    apiKey: key,
+                    forceNewRequest: forceNewRequest
                 )
                 reloadCustomTemplates()
                 generationCompleted = 1
@@ -494,11 +519,27 @@ final class AppModel: ObservableObject {
             } catch is CancellationError {
                 bannerMessage = "已取消阶段重新生成。"
             } catch {
-                bannerMessage = "阶段重新生成失败：" + error.localizedDescription
+                let recoveryMessage = templateStore.hasPendingReplacementRaw(
+                    templateID: template.id,
+                    stageIndex: stageIndex
+                )
+                    ? "；API 原图仍保存在本机，可免费重试处理或确认后重新请求。"
+                    : ""
+                bannerMessage = "阶段重新生成失败：" + error.localizedDescription + recoveryMessage
             }
             isGeneratingTemplate = false
             generationTask = nil
         }
+    }
+
+    func hasPendingTemplateStageRaw(
+        _ template: CustomPetTemplate,
+        stageIndex: Int
+    ) -> Bool {
+        templateStore.hasPendingReplacementRaw(
+            templateID: template.id,
+            stageIndex: stageIndex
+        )
     }
 
     func simulate(_ activity: CodexActivity) {
@@ -559,7 +600,10 @@ final class AppModel: ObservableObject {
         persist()
     }
 
-    private func resolvedImageAPIKey(supplied rawKey: String?) -> String? {
+    private func resolvedImageAPIKey(
+        supplied rawKey: String?,
+        required: Bool = true
+    ) -> String? {
         let suppliedKey = rawKey?.trimmingCharacters(in: .whitespacesAndNewlines)
         if let suppliedKey, !suppliedKey.isEmpty {
             do {
@@ -573,7 +617,9 @@ final class AppModel: ObservableObject {
 
         do {
             guard let storedKey = try apiKeyStore.read() else {
-                bannerMessage = "请先输入安装用户自己的 OpenAI API Key。"
+                if required {
+                    bannerMessage = "请先输入安装用户自己的 OpenAI API Key。"
+                }
                 return nil
             }
             return storedKey
