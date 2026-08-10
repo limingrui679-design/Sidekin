@@ -1,5 +1,7 @@
 # CainiaoPet 发布流程
 
+> 当前项目只作为 GitHub 源码项目和本地 Beta，不计划向普通用户公开分发已签名 App。Developer ID、公证和 Gatekeeper 放行不是当前完成条件；本页仅供未来改变分发目标时使用。
+
 ## 两种包必须区分
 
 - `./Scripts/package-release.sh` 生成本机可测试的 ad-hoc 包。它有完整测试、资源哈希和干净 ZIP，但没有 Developer ID 与 Apple 公证。
@@ -40,7 +42,7 @@ export CAINIAOPET_BUNDLE_ID="com.example.cainiaopet"
 6. 用已装订 App 重新生成最终 ZIP、发布清单和 SHA-256 文件。
 7. 使用 `spctl` 做 Gatekeeper 验收，并再次验证 ZIP 内 App。
 
-只有最后一行显示所有正式门禁通过后，才可以创建 GitHub Release。
+只有最后一行显示所有正式门禁通过后，才可以把 App 二进制作为面向普通用户直接下载运行的 GitHub Release 发布。当前源码项目与 CI 构建验证不需要执行这一流程。
 
 ## 发布文件
 

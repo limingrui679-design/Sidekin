@@ -1,6 +1,6 @@
 # CainiaoPet 1.2.0 Beta 完成审计
 
-本页把需求、实现与可复现证据分开记录。通过测试不等于已经公开发布；模拟 API 也不等于真实付费调用。
+本页把需求、实现与可复现证据分开记录。本项目的目标是可复现的 GitHub 源码项目和本地 Beta，不包含面向普通用户的已签名 App 分发；模拟 API 也不等于真实付费调用。
 
 ## 逐项结论
 
@@ -13,9 +13,9 @@
 | 三档质量与费用 | 已实现并测试 | `low / medium / high` 会进入生成与编辑请求；确认框按阶段数显示当前 1024 方图输出估算，并明确输入费用另计。 |
 | 三套进化线重画 | 已完成资源检查与小尺寸人工复核 | 糖果、荒原和星核五阶段资源已替换；50 张 PNG 全部为独立 `1254×1254` 透明图。`ART_QA_DESKTOP_SCALE.jpg` 按接近 235px 显示区域排列全套形态。 |
 | 模板管理 | 已实现并测试 | 支持重命名、删除、二进制模板包导入/导出、本地图替换和 AI 单阶段重绘；路径穿越、损坏 PNG、体积和阶段数均有门禁。 |
-| 干净发布包 | 已实现并测试 | 打包验证会解压复验 App、资源和清单，并拒绝 `__MACOSX`、`.DS_Store`、AppleDouble、损坏 ZIP、arm64 漂移及哈希不一致。 |
-| 独立源码仓库 | 已完成 | 仓库不再包含 ClaimTrace 文件；Git 提交、Beta 标签、版本、发布清单和资源哈希均在 CainiaoPet 自己的目录中。CI 会生成并复验 arm64 ZIP、校验清单提交号与 workflow 提交一致，并保留可下载的验证 artifact。 |
-| Apple 公开发布 | 流程已实现，实际签名未完成 | `release-public.sh` 强制要求 Developer ID、注册 Bundle ID、Hardened Runtime、公证、装订和 Gatekeeper；当前机器没有 Developer ID，因此会在上传前退出。 |
+| 干净验证包 | 已实现并测试 | 打包验证会解压复验 App、资源和清单，并拒绝 `__MACOSX`、`.DS_Store`、AppleDouble、损坏 ZIP、arm64 漂移及哈希不一致。 |
+| 独立源码仓库 | 已完成（本地） | 仓库不再包含 ClaimTrace 文件；Git 提交、Beta 标签、版本、发布清单和资源哈希均在 CainiaoPet 自己的目录中。CI 会生成并复验 arm64 ZIP、校验清单提交号与 workflow 提交一致，并保留验证 artifact。 |
+| Apple 公开发布 | 不在当前项目范围内 | 当前目标是 GitHub 源码项目，不要求 Developer ID、公证或 Gatekeeper 放行。`release-public.sh` 仅作为未来改变分发目标时的可选安全流程保留。 |
 
 ## 一键复验
 
@@ -26,11 +26,11 @@
 
 第二条命令生成 ZIP 后，还会对 ZIP 内的 App 再执行一次签名、架构、资源与发布清单验证。
 
-## 仍未声称完成的事项
+## 当前边界与非目标
 
 - 没有使用任何真实 OpenAI API Key，也没有产生真实付费调用。
-- 没有在本轮启动未公证 App、安装 Hooks 或执行工坊按钮点击。
-- 没有 Developer ID 证书、Team ID 或 Apple 公证票据；当前包仍是本地 ad-hoc Beta。
-- 已加入 GitHub Actions 配置，但仓库尚未在 GitHub 创建远端，因此没有远端 CI 运行记录或公开 Release。
+- 没有在本轮启动 App 做界面点击验收、安装 Hooks 或执行工坊生成。
+- Developer ID、Team ID、Apple 公证和 Gatekeeper 放行不是当前 GitHub 源码项目的完成条件；本地包保持 ad-hoc 签名是预期状态。
+- 已加入 GitHub Actions 配置，但仓库尚未配置 GitHub 远端，因此还没有远端 CI 运行记录；这不影响本地源码仓库和验证包的完成状态。
 
-因此，当前准确表述仍是“完成、测试并可追溯的本地 macOS Beta”，不是“已公开发布产品”或“真实 API 全链路已验证”。
+因此，当前准确表述是“完成、测试并可追溯的 GitHub 源码项目与本地 macOS Beta”，不是面向普通用户公开分发的已签名产品，也未声称完成真实 API 付费全链路。

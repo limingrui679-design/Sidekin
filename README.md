@@ -90,9 +90,9 @@ artifacts/CainiaoPet-macOS-arm64.zip.sha256
 
 发布清单记录版本、构建号、最低系统、架构、源码提交、签名状态、App 文件哈希和 50 张角色资源哈希。打包脚本会拒绝损坏 ZIP、`__MACOSX`、`.DS_Store`、AppleDouble 文件、资源缺失、架构漂移和清单不一致。
 
-GitHub Actions 会在 macOS runner 上重跑全部检查、交叉编译并复验 `arm64` Beta ZIP，确认发布清单的提交号等于当前 workflow 提交且源码状态干净，再把 ZIP、清单和 SHA-256 作为短期 CI artifact 保留。它仍不是公开 GitHub Release，也不会绕过 Developer ID 与 Apple 公证。
+GitHub Actions 会在 macOS runner 上重跑全部检查、交叉编译并复验 `arm64` Beta ZIP，确认发布清单的提交号等于当前 workflow 提交且源码状态干净，再把 ZIP、清单和 SHA-256 作为短期 CI artifact 保留。这里的 artifact 只用于构建验证，不是面向普通用户分发的产品安装包。
 
-本地包默认使用 ad-hoc 临时签名，适合开发验收，不应直接冒充公开发布版本。Developer ID、Hardened Runtime、公证、票据装订和 Gatekeeper 的正式发布流程见 [docs/RELEASING.md](docs/RELEASING.md)。
+本仓库定位为 GitHub 源码项目和本地 Beta，不以站外公开分发已签名 App 为目标。因此 ad-hoc 临时签名是当前范围内的预期状态，Developer ID、Apple 公证和 Gatekeeper 放行不属于项目完成条件。若未来改变目标、需要向普通用户直接分发二进制，再使用 [docs/RELEASING.md](docs/RELEASING.md) 中的可选流程。
 
 ## 自检范围
 
