@@ -4,7 +4,7 @@ Theme: Nova Arena [Fauna & Mythic]
 Form: Starshuttle Crystal Egg, canonical egg stage
 Lineage concept: A moonhare lineage that converts gravity into crystal arrows and weightless leaps.
 Existence anchor: Astral Crystal Moonhare
-Persistent silhouette logic: Crescent ears, comet-tail streamers, long spring legs, and a crystal starbow
+Persistent silhouette logic: Crescent ears, comet-tail streamers, long spring legs, and one evolving crystal starbow
 Silhouette topology class: upright-long-eared-archer
 Movement and locomotion: Weightless leaps followed by suspended midair bow draws; weightless-bipedal-leaps
 Material system: Translucent star crystal and flexible deep-blue armor

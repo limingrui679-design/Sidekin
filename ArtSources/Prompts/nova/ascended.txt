@@ -4,7 +4,7 @@ Theme: Nova Arena [Fauna & Mythic]
 Form: Starbow Ranger, canonical ascended stage
 Lineage concept: A moonhare lineage that converts gravity into crystal arrows and weightless leaps.
 Existence anchor: Astral Crystal Moonhare
-Persistent silhouette logic: Crescent ears, comet-tail streamers, long spring legs, and a crystal starbow
+Persistent silhouette logic: Crescent ears, comet-tail streamers, long spring legs, and one evolving crystal starbow
 Silhouette topology class: upright-long-eared-archer
 Movement and locomotion: Weightless leaps followed by suspended midair bow draws; weightless-bipedal-leaps
 Material system: Translucent star crystal and flexible deep-blue armor
@@ -12,7 +12,7 @@ Energy motif: Four-point star core and nested gravity orbits
 Current-stage introduction: A suspended ranger who bends gravity through a fully formed crystal bow.
 Current-stage visual anchor: Airborne archer profile dominated by a full crescent bow and orbiting shards
 
-The provided reference image is the immediately preceding form, Astral Crystal Scout. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Lean moonhare scout with forearm crystal blades and a split streamer tail
+The provided reference image is the immediately preceding form, Astral Crystal Scout. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Lean moonhare scout drawing one compact crescent bow above a split streamer tail
 
 Progression rule: Stage IV is a structural ascension: change stance, functional anatomy, formation, or architecture. Preserve the same face, core, facade, or identity marker; do not merely add armor.
 

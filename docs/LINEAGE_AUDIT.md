@@ -17,13 +17,13 @@ Every lineage was checked for:
 - a complete transparent cutout with no cropped component or key-color damage;
 - a legible silhouette and focal feature at the floating pet's 205–235 px scale.
 
-The audit produced 77 raw repair candidates for 74 unique stage targets across 61 lineages. Some targets needed more than one candidate before acceptance. Accepted resources were normalized to the same `1254×1254` transparent format and then rechecked in their regenerated final sheet. A lineage with accepted audit replacement evidence is marked `Pass after repair`; all others passed the complete-set review without a new audit replacement.
+The audit and README showcase follow-up produced 83 raw repair candidates for 80 unique stage targets across 63 lineages. Some targets needed more than one candidate before acceptance. Accepted resources were normalized to the same `1254×1254` transparent format and then rechecked in their regenerated final sheet. A lineage with accepted replacement evidence is marked with a repair result; all others passed the complete-set review without a new replacement.
 
 ## 01 · Fauna & Mythic
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
-| 001 | Nova Arena | Pass | The moonhare identity, long ears, crystal core, and gravity-archer logic remain clear while body scale and bow anatomy change at each stage. |
+| 001 | Nova Arena | Pass after continuity repair | Crescent ears, four-point core, star crystal, comet ribbons, and one evolving bow now remain continuous from the scout through the crown archer; Stage V visibly exceeds Stage IV. |
 | 002 | Street Brawl | Pass | The graffiti gecko remains a low reptilian street fighter; paint and sound equipment grow without replacing its species. |
 | 003 | Sakura Blade | Pass | Fox-crane facial and feather anchors remain coherent; the progression adds disciplined blade structures without becoming a human samurai. |
 | 004 | Abyssal Tidehunter | Pass after repair | The compact origin was simplified; every later form remains the same horizontal salamander-crab-manta swimmer. |
@@ -143,7 +143,7 @@ The audit produced 77 raw repair candidates for 74 unique stage targets across 6
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
-| 081 | Walking Treehouse | Pass | Root stilts, trunk tower, rooms, and leafy crown grow as one inhabited tree structure. |
+| 081 | Walking Treehouse | Pass after progression repair | The sequence now reads as one room, two rooms with a dominant bridge, a five-room terraced village, then a domed ring borough while preserving the same facade and four roots. |
 | 082 | Tideglass Lighthouse | Pass after repair | The compact origin was distinguished; sea-glass tower, rotating lens, wave feet, and decks remain continuous. |
 | 083 | Pocket Citadel | Pass after repair | The origin was simplified; modular keep, walls, towers, and courtyard unfold from the same interlocking fortress core. |
 | 084 | Sky Temple | Pass | Stepped terraces, prayer ribbons, spire, and updraft vanes retain one floating temple topology. |

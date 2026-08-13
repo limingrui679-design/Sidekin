@@ -9,8 +9,8 @@ Silhouette topology class: multi-room-tree-on-four-stilts
 Movement and locomotion: Alternating root-stilt steps while hanging rooms counter-sway; four-root-stilt-walk
 Material system: Warm cedar, living bark, rope bridges, copper gutters, and green leaves
 Energy motif: Window-gold hearthlight and green growth-ring pulses
-Current-stage introduction: A tiny cedar room toddles on four roots beneath a single leafy branch.
-Current-stage visual anchor: Small square cabin around a thin trunk on four long roots and one roof branch
+Current-stage introduction: One narrow cedar room rises above four long roots beneath a single lantern branch.
+Current-stage visual anchor: Exactly one tall square cabin on four long roots beneath one asymmetric lantern branch
 
 The provided reference image is the immediately preceding form, Windowed Acorn Cabin. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Acorn-shaped wooden pod with one glowing window and four curled root legs
 

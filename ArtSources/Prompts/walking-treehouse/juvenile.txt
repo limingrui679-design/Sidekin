@@ -9,10 +9,10 @@ Silhouette topology class: multi-room-tree-on-four-stilts
 Movement and locomotion: Alternating root-stilt steps while hanging rooms counter-sway; four-root-stilt-walk
 Material system: Warm cedar, living bark, rope bridges, copper gutters, and green leaves
 Energy motif: Window-gold hearthlight and green growth-ring pulses
-Current-stage introduction: Two offset rooms share a walking trunk and a swaying rope bridge.
-Current-stage visual anchor: Twin wooden cabins at different heights linked by a bridge above four stilt roots
+Current-stage introduction: Two offset rooms stretch across a forked walking trunk and one long swaying rope bridge.
+Current-stage visual anchor: Exactly two cabins at opposite heights linked by one dominant sagging bridge above four roots
 
-The provided reference image is the immediately preceding form, One-Room Rootwalker. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Small square cabin around a thin trunk on four long roots and one roof branch
+The provided reference image is the immediately preceding form, One-Room Rootwalker. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Exactly one tall square cabin on four long roots beneath one asymmetric lantern branch
 
 Progression rule: Stage III establishes the signature topology, locomotion, functional tool or organ, and material system. Change the outer contour and pose from Stage II without losing identity.
 

@@ -27,26 +27,26 @@
         {
           "stage": "hatchling",
           "name": "One-Room Rootwalker",
-          "introduction": "A tiny cedar room toddles on four roots beneath a single leafy branch.",
-          "visualAnchor": "Small square cabin around a thin trunk on four long roots and one roof branch"
+          "introduction": "One narrow cedar room rises above four long roots beneath a single lantern branch.",
+          "visualAnchor": "Exactly one tall square cabin on four long roots beneath one asymmetric lantern branch"
         },
         {
           "stage": "juvenile",
           "name": "Ropebridge Treehome",
-          "introduction": "Two offset rooms share a walking trunk and a swaying rope bridge.",
-          "visualAnchor": "Twin wooden cabins at different heights linked by a bridge above four stilt roots"
+          "introduction": "Two offset rooms stretch across a forked walking trunk and one long swaying rope bridge.",
+          "visualAnchor": "Exactly two cabins at opposite heights linked by one dominant sagging bridge above four roots"
         },
         {
           "stage": "ascended",
           "name": "Canopy Village Strider",
-          "introduction": "A broad living tree carries several homes, decks, and ladders through its crown.",
-          "visualAnchor": "Wide walking canopy containing five distinct rooms and a zigzag network of bridges"
+          "introduction": "A broad terraced village climbs one trunk tower through five homes, decks, and ladders.",
+          "visualAnchor": "Five rooms at distinct heights around a central tower, circular deck, and zigzag bridge network"
         },
         {
           "stage": "legendary",
           "name": "Hearthwood Borough",
-          "introduction": "A towering treehouse borough moves as one home beneath a complete leafy roof.",
-          "visualAnchor": "Massive trunk city on root stilts with many golden windows and a domed canopy"
+          "introduction": "A circular crown borough moves beneath a complete canopy around a radiant civic hearth.",
+          "visualAnchor": "Domed ring city with eight grouped towers, radial bridges, central hearth-spire, and four colossal roots"
         }
       ]
     },

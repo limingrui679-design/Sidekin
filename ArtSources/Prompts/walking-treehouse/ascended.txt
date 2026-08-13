@@ -9,10 +9,10 @@ Silhouette topology class: multi-room-tree-on-four-stilts
 Movement and locomotion: Alternating root-stilt steps while hanging rooms counter-sway; four-root-stilt-walk
 Material system: Warm cedar, living bark, rope bridges, copper gutters, and green leaves
 Energy motif: Window-gold hearthlight and green growth-ring pulses
-Current-stage introduction: A broad living tree carries several homes, decks, and ladders through its crown.
-Current-stage visual anchor: Wide walking canopy containing five distinct rooms and a zigzag network of bridges
+Current-stage introduction: A broad terraced village climbs one trunk tower through five homes, decks, and ladders.
+Current-stage visual anchor: Five rooms at distinct heights around a central tower, circular deck, and zigzag bridge network
 
-The provided reference image is the immediately preceding form, Ropebridge Treehome. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Twin wooden cabins at different heights linked by a bridge above four stilt roots
+The provided reference image is the immediately preceding form, Ropebridge Treehome. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Exactly two cabins at opposite heights linked by one dominant sagging bridge above four roots
 
 Progression rule: Stage IV is a structural ascension: change stance, functional anatomy, formation, or architecture. Preserve the same face, core, facade, or identity marker; do not merely add armor.
 

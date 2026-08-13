@@ -40,7 +40,7 @@ do {
 
     let audit = try String(contentsOf: auditURL, encoding: .utf8)
     let expression = try NSRegularExpression(
-        pattern: #"(?m)^\| ([0-9]{3}) \| ([^|]+) \| (Pass(?: after repair)?) \|"#
+        pattern: #"(?m)^\| ([0-9]{3}) \| ([^|]+) \| (Pass(?: after (?:repair|continuity repair|progression repair))?) \|"#
     )
     let range = NSRange(audit.startIndex..<audit.endIndex, in: audit)
     let rows = expression.matches(in: audit, range: range).map { match -> (Int, String, String) in
@@ -61,8 +61,8 @@ do {
         )
     }
 
-    let repairedRows = rows.filter { $0.2 == "Pass after repair" }.count
-    try require(repairedRows == 61, "Expected 61 repaired lineage rows, found \(repairedRows).")
+    let repairedRows = rows.filter { $0.2 != "Pass" }.count
+    try require(repairedRows == 63, "Expected 63 repaired lineage rows, found \(repairedRows).")
 
     let replacementChildren = try fileManager.contentsOfDirectory(
         at: replacementsURL,
@@ -78,25 +78,30 @@ do {
     )
 
     let replacementFiles = try fileManager.subpathsOfDirectory(atPath: replacementsURL.path)
-        .filter { $0.range(of: #"audit-raw(?:-v[0-9]+)?\.png$"#, options: .regularExpression) != nil }
-    try require(replacementFiles.count == 77, "Expected 77 raw repair candidates, found \(replacementFiles.count).")
+        .filter {
+            $0.range(
+                of: #"(?:audit-raw(?:-v[0-9]+)?|readme-(?:continuity|distinction)-raw)\.png$"#,
+                options: .regularExpression
+            ) != nil
+        }
+    try require(replacementFiles.count == 83, "Expected 83 raw repair candidates, found \(replacementFiles.count).")
 
     let uniqueTargets = Set(replacementFiles.map { path in
         path.replacingOccurrences(
-            of: #"-audit-raw(?:-v[0-9]+)?\.png$"#,
+            of: #"-(?:audit-raw(?:-v[0-9]+)?|readme-(?:continuity|distinction)-raw)\.png$"#,
             with: "",
             options: .regularExpression
         )
     })
-    try require(uniqueTargets.count == 74, "Expected 74 unique repair targets, found \(uniqueTargets.count).")
+    try require(uniqueTargets.count == 80, "Expected 80 unique repair targets, found \(uniqueTargets.count).")
 
     let expectedSheets = Set((1...20).map { String(format: "lineage-audit-%02d.png", $0) })
     let actualSheets = Set(try fileManager.contentsOfDirectory(atPath: sheetsURL.path))
     try require(actualSheets == expectedSheets, "Final lineage audit sheet set is incomplete or contains drift.")
 
     print(
-        "Verified 100 individual lineage audit rows, 61 repaired lineages, "
-            + "77 raw candidates, 74 repair targets, and 20 final sheets."
+        "Verified 100 individual lineage audit rows, 63 repaired lineages, "
+            + "83 raw candidates, 80 repair targets, and 20 final sheets."
     )
 } catch {
     fputs("Lineage audit verification failed: \(error.localizedDescription)\n", stderr)

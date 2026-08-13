@@ -30,10 +30,10 @@ enum PetThemeCatalogGenerated {
           "visualAnchor" : "Small upright leveret with oversized crescent ears and short comet ribbons"
         },
         {
-          "introduction" : "A swift scout shaping star shards into close-range arena blades.",
+          "introduction" : "A swift scout learning ranged gravity control through its first compact crescent starbow.",
           "name" : "Astral Crystal Scout",
           "stage" : "juvenile",
-          "visualAnchor" : "Lean moonhare scout with forearm crystal blades and a split streamer tail"
+          "visualAnchor" : "Lean moonhare scout drawing one compact crescent bow above a split streamer tail"
         },
         {
           "introduction" : "A suspended ranger who bends gravity through a fully formed crystal bow.",
@@ -42,10 +42,10 @@ enum PetThemeCatalogGenerated {
           "visualAnchor" : "Airborne archer profile dominated by a full crescent bow and orbiting shards"
         },
         {
-          "introduction" : "The moonhare apex, charting safe routes through storms of living starlight.",
+          "introduction" : "The moonhare apex charts safe routes with a crown mantle and a celestial compass bow.",
           "name" : "Skybound Pathfinder",
           "stage" : "legendary",
-          "visualAnchor" : "Tall pathfinder framed by crossing star trails, long ears, and a compass bow"
+          "visualAnchor" : "Regal moonhare archer framed by long star trails and an enormous double-crescent compass bow"
         }
       ],
       "id" : "nova",
@@ -59,7 +59,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.28,
         "red" : 0.58
       },
-      "silhouetteAnchor" : "Crescent ears, comet-tail streamers, long spring legs, and a crystal starbow",
+      "silhouetteAnchor" : "Crescent ears, comet-tail streamers, long spring legs, and one evolving crystal starbow",
       "silhouetteClass" : "upright-long-eared-archer",
       "subtitle" : "Crystal energy · astral arena",
       "symbolName" : "sparkles"
@@ -4664,28 +4664,28 @@ enum PetThemeCatalogGenerated {
           "visualAnchor" : "Acorn-shaped wooden pod with one glowing window and four curled root legs"
         },
         {
-          "introduction" : "A tiny cedar room toddles on four roots beneath a single leafy branch.",
+          "introduction" : "One narrow cedar room rises above four long roots beneath a single lantern branch.",
           "name" : "One-Room Rootwalker",
           "stage" : "hatchling",
-          "visualAnchor" : "Small square cabin around a thin trunk on four long roots and one roof branch"
+          "visualAnchor" : "Exactly one tall square cabin on four long roots beneath one asymmetric lantern branch"
         },
         {
-          "introduction" : "Two offset rooms share a walking trunk and a swaying rope bridge.",
+          "introduction" : "Two offset rooms stretch across a forked walking trunk and one long swaying rope bridge.",
           "name" : "Ropebridge Treehome",
           "stage" : "juvenile",
-          "visualAnchor" : "Twin wooden cabins at different heights linked by a bridge above four stilt roots"
+          "visualAnchor" : "Exactly two cabins at opposite heights linked by one dominant sagging bridge above four roots"
         },
         {
-          "introduction" : "A broad living tree carries several homes, decks, and ladders through its crown.",
+          "introduction" : "A broad terraced village climbs one trunk tower through five homes, decks, and ladders.",
           "name" : "Canopy Village Strider",
           "stage" : "ascended",
-          "visualAnchor" : "Wide walking canopy containing five distinct rooms and a zigzag network of bridges"
+          "visualAnchor" : "Five rooms at distinct heights around a central tower, circular deck, and zigzag bridge network"
         },
         {
-          "introduction" : "A towering treehouse borough moves as one home beneath a complete leafy roof.",
+          "introduction" : "A circular crown borough moves beneath a complete canopy around a radiant civic hearth.",
           "name" : "Hearthwood Borough",
           "stage" : "legendary",
-          "visualAnchor" : "Massive trunk city on root stilts with many golden windows and a domed canopy"
+          "visualAnchor" : "Domed ring city with eight grouped towers, radial bridges, central hearth-spire, and four colossal roots"
         }
       ],
       "id" : "walking-treehouse",

@@ -70,11 +70,17 @@ Every lineage defines a persistent existence type, silhouette logic, material sy
 
 ![Three Sidekin lineages evolving through all five audited stages](docs/readme/evolution.jpg)
 
+The showcase deliberately exposes the full progression instead of selecting isolated hero poses. Nova keeps one bow-based combat language from its first compact starbow to its crown-scale compass bow. Walking Treehouse advances by architecture—not recolor—from one room to a two-room bridge home, a terraced village, and a circular crown borough.
+
 The final audit checks common-sense anatomy or construction, identity continuity, species or existence-type drift, insufficient change between stages, nonhuman-humanoid compliance, cutout quality, and readability at the 205–235 px desktop size.
 
 ## 100 lineages · 500 forms
 
-![Ten Sidekin categories represented by final legendary forms](docs/readme/catalog.jpg)
+### Twenty-lineage sampler
+
+![Twenty Sidekin lineages represented by final legendary forms](docs/readme/showcase-20.jpg)
+
+This sampler pairs two contrasting lineages from every category so the gallery shows variation within a category—not only one mascot per label.
 
 The catalog contains ten lineages in each category:
 
@@ -89,9 +95,15 @@ The catalog contains ten lineages in each category:
 9. Living Architecture
 10. Collective Systems
 
+### Every built-in lineage
+
+[![All 100 Sidekin lineages represented by their final legendary forms](docs/readme/all-100.jpg)](docs/readme/all-100.jpg)
+
+The complete contact sheet is generated directly from the same 100-theme catalog and final assets consumed by the app. It is an inventory view, not a separate hand-picked marketing set. Click it to inspect the full-resolution sheet.
+
 Humanoid silhouettes remain unmistakably nonhuman: the art standard forbids real people, children, realistic human skin, realistic human hair, and ordinary human faces.
 
-All 500 final images existed before the 100-lineage audit began. The repair pass produced 77 raw candidates for 74 stage targets across 61 lineages before acceptance. The evidence is reviewable in:
+All 500 initial images existed before the 100-lineage audit began. The audit plus a later README showcase review produced 83 raw candidates for 80 stage targets across 63 lineages before acceptance. The evidence is reviewable in:
 
 - [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) — one result for every lineage
 - [`ArtSources/AuditSheets`](ArtSources/AuditSheets) — 20 five-lineage audit sheets

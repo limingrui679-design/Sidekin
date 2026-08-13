@@ -89,6 +89,31 @@ func drawCharacter(_ theme: String, _ stage: String, in rect: NSRect) {
     )
 }
 
+func drawCharacter(
+    _ theme: String,
+    _ stage: String,
+    centeredAt center: NSPoint,
+    size: NSSize,
+    alpha: CGFloat = 1
+) {
+    let source = image(theme, stage)
+    let scale = min(size.width / source.size.width, size.height / source.size.height)
+    let destination = NSRect(
+        x: center.x - source.size.width * scale / 2,
+        y: center.y - source.size.height * scale / 2,
+        width: source.size.width * scale,
+        height: source.size.height * scale
+    )
+    source.draw(
+        in: destination,
+        from: .zero,
+        operation: .sourceOver,
+        fraction: alpha,
+        respectFlipped: true,
+        hints: [.interpolation: NSImageInterpolation.high]
+    )
+}
+
 func saveJPEG(_ image: NSImage, named fileName: String, quality: CGFloat = 0.88) throws {
     guard let tiff = image.tiffRepresentation,
           let bitmap = NSBitmapImageRep(data: tiff),
@@ -138,14 +163,37 @@ for (label, color) in [("100 lineages", cyan), ("500 forms", violet), ("local-fi
     pillX += drawPill(label, at: NSPoint(x: pillX, y: 280), color: color) + 12
 }
 
-let heroCharacters: [(String, NSRect, NSColor)] = [
-    ("mecha", NSRect(x: 780, y: 155, width: 390, height: 500), violet),
-    ("nova", NSRect(x: 1_010, y: 105, width: 410, height: 520), cyan),
-    ("walking-treehouse", NSRect(x: 1_265, y: 140, width: 320, height: 430), gold)
+// A layered ensemble communicates the catalog's breadth before the reader
+// reaches the gallery. Smaller silhouettes sit behind the three focal forms.
+let backgroundCharacters: [(String, NSPoint, NSSize, CGFloat)] = [
+    ("moon-lotus", NSPoint(x: 800, y: 510), NSSize(width: 190, height: 230), 0.92),
+    ("quantum-chance", NSPoint(x: 975, y: 565), NSSize(width: 180, height: 215), 0.90),
+    ("ramen-nebula", NSPoint(x: 1_150, y: 590), NSSize(width: 180, height: 205), 0.92),
+    ("cyclone-dancer", NSPoint(x: 1_330, y: 570), NSSize(width: 185, height: 220), 0.90),
+    ("slime-parliament", NSPoint(x: 1_500, y: 515), NSSize(width: 170, height: 205), 0.92)
 ]
-for (theme, rect, color) in heroCharacters {
-    glow(at: NSPoint(x: rect.midX, y: rect.midY), radius: rect.width * 0.6, color: color)
-    drawCharacter(theme, "legendary", in: rect)
+for (theme, center, size, alpha) in backgroundCharacters {
+    drawCharacter(theme, "legendary", centeredAt: center, size: size, alpha: alpha)
+}
+
+let middleCharacters: [(String, NSPoint, NSSize)] = [
+    ("manticore", NSPoint(x: 790, y: 300), NSSize(width: 250, height: 310)),
+    ("celestial-musicbox", NSPoint(x: 970, y: 330), NSSize(width: 235, height: 300)),
+    ("thunderhead-forge", NSPoint(x: 1_175, y: 330), NSSize(width: 260, height: 320)),
+    ("sky-temple", NSPoint(x: 1_435, y: 315), NSSize(width: 255, height: 315))
+]
+for (theme, center, size) in middleCharacters {
+    drawCharacter(theme, "legendary", centeredAt: center, size: size, alpha: 0.97)
+}
+
+let focalCharacters: [(String, NSPoint, NSSize, NSColor)] = [
+    ("mecha", NSPoint(x: 930, y: 300), NSSize(width: 390, height: 500), violet),
+    ("nova", NSPoint(x: 1_210, y: 290), NSSize(width: 430, height: 535), cyan),
+    ("walking-treehouse", NSPoint(x: 1_475, y: 295), NSSize(width: 345, height: 450), gold)
+]
+for (theme, center, size, color) in focalCharacters {
+    glow(at: center, radius: size.width * 0.56, color: color)
+    drawCharacter(theme, "legendary", centeredAt: center, size: size)
 }
 hero.unlockFocus()
 try saveJPEG(hero, named: "hero.jpg", quality: 0.9)
@@ -267,5 +315,151 @@ for (index, entry) in catalogEntries.enumerated() {
 }
 catalogImage.unlockFocus()
 try saveJPEG(catalogImage, named: "catalog.jpg", quality: 0.88)
+
+// MARK: Expanded showcase
+
+let showcaseSize = NSSize(width: 1_600, height: 1_330)
+let showcaseImage = NSImage(size: showcaseSize)
+showcaseImage.lockFocus()
+NSGraphicsContext.current?.imageInterpolation = .high
+fillBackground(NSRect(origin: .zero, size: showcaseSize))
+("TWENTY WAYS TO EXIST." as NSString).draw(at: NSPoint(x: 62, y: 1_250), withAttributes: eyebrow)
+("A broader sample across every category in the built-in catalog." as NSString).draw(
+    at: NSPoint(x: 62, y: 1_202),
+    withAttributes: subtitle
+)
+
+let showcaseEntries: [(String, String, String, NSColor)] = [
+    ("nova", "MYTHIC", "Nova Arena", cyan),
+    ("manticore", "MYTHIC", "Manticore", gold),
+    ("mecha", "MACHINE", "Vanguard", violet),
+    ("aether-frigate", "VEHICLE", "Aether Frigate", cyan),
+    ("moon-lotus", "FLORA", "Moon Lotus", gold),
+    ("mycelium", "FUNGI", "Mycelium", violet),
+    ("halite-crown", "MINERAL", "Halite Crown", cyan),
+    ("fossil-reef", "GEOLOGIC", "Fossil Reef", gold),
+    ("celestial-musicbox", "ARTIFACT", "Music Box", violet),
+    ("runic-grimoire", "INSTRUMENT", "Grimoire", cyan),
+    ("ramen-nebula", "ALCHEMY", "Ramen Nebula", gold),
+    ("cacao-citadel", "FOOD BEING", "Cacao Citadel", violet),
+    ("cyclone-dancer", "ELEMENTAL", "Cyclone", cyan),
+    ("living-voltage", "WEATHER", "Voltage", gold),
+    ("event-horizon", "COSMIC", "Event Horizon", violet),
+    ("quantum-chance", "ABSTRACT", "Quantum Chance", cyan),
+    ("walking-treehouse", "ARCHITECTURE", "Treehouse", gold),
+    ("sky-temple", "ARCHITECTURE", "Sky Temple", violet),
+    ("slime-parliament", "COLLECTIVE", "Parliament", cyan),
+    ("microbe-metropolis", "COLLECTIVE", "Metropolis", gold)
+]
+let showcaseColumns = 5
+let showcaseCardWidth: CGFloat = 286
+let showcaseCardHeight: CGFloat = 250
+let showcaseGutter: CGFloat = 20
+let showcaseStartX: CGFloat = 45
+let showcaseStartY: CGFloat = 905
+
+for (index, entry) in showcaseEntries.enumerated() {
+    let column = index % showcaseColumns
+    let row = index / showcaseColumns
+    let rect = NSRect(
+        x: showcaseStartX + CGFloat(column) * (showcaseCardWidth + showcaseGutter),
+        y: showcaseStartY - CGFloat(row) * (showcaseCardHeight + 18),
+        width: showcaseCardWidth,
+        height: showcaseCardHeight
+    )
+    panel.setFill()
+    NSBezierPath(roundedRect: rect, xRadius: 24, yRadius: 24).fill()
+    entry.3.withAlphaComponent(0.24).setStroke()
+    let border = NSBezierPath(roundedRect: rect, xRadius: 24, yRadius: 24)
+    border.lineWidth = 2
+    border.stroke()
+    drawCharacter(
+        entry.0,
+        "legendary",
+        in: NSRect(x: rect.minX + 8, y: rect.minY + 58, width: rect.width - 16, height: rect.height - 64)
+    )
+    (entry.1 as NSString).draw(at: NSPoint(x: rect.minX + 16, y: rect.minY + 38), withAttributes: cardCaption)
+    (entry.2 as NSString).draw(
+        in: NSRect(x: rect.minX + 16, y: rect.minY + 10, width: rect.width - 32, height: 28),
+        withAttributes: cardTitle
+    )
+}
+showcaseImage.unlockFocus()
+try saveJPEG(showcaseImage, named: "showcase-20.jpg", quality: 0.88)
+
+// MARK: All 100 lineage thumbnails
+
+struct CatalogEnvelope: Decodable {
+    struct Theme: Decodable {
+        let id: String
+        let displayName: String
+    }
+
+    let themes: [Theme]
+}
+
+let projectRoot = URL(fileURLWithPath: #filePath)
+    .deletingLastPathComponent()
+    .deletingLastPathComponent()
+let catalogURL = projectRoot.appendingPathComponent("ArtSources/PET_THEME_CATALOG.json")
+guard let catalogData = try? Data(contentsOf: catalogURL),
+      let catalog = try? JSONDecoder().decode(CatalogEnvelope.self, from: catalogData),
+      catalog.themes.count == 100
+else {
+    fputs("Could not read 100-theme catalog for README overview.\n", stderr)
+    exit(1)
+}
+
+let allSize = NSSize(width: 2_000, height: 2_260)
+let allImage = NSImage(size: allSize)
+allImage.lockFocus()
+NSGraphicsContext.current?.imageInterpolation = .high
+fillBackground(NSRect(origin: .zero, size: allSize))
+("ALL 100 LINEAGES." as NSString).draw(at: NSPoint(x: 64, y: 2_180), withAttributes: eyebrow)
+("One final form from every built-in evolution path." as NSString).draw(
+    at: NSPoint(x: 64, y: 2_132),
+    withAttributes: subtitle
+)
+
+let allColumns = 10
+let allRows = 10
+let allCellWidth: CGFloat = 190
+let allCellHeight: CGFloat = 195
+let allStartX: CGFloat = 50
+let allStartY: CGFloat = 1_900
+let tinyName: [NSAttributedString.Key: Any] = [
+    .font: NSFont.systemFont(ofSize: 15, weight: .semibold),
+    .foregroundColor: NSColor.white
+]
+for (index, theme) in catalog.themes.enumerated() {
+    let column = index % allColumns
+    let row = index / allColumns
+    let rect = NSRect(
+        x: allStartX + CGFloat(column) * allCellWidth,
+        y: allStartY - CGFloat(row) * allCellHeight,
+        width: allCellWidth - 8,
+        height: allCellHeight - 8
+    )
+    let categoryColor = [cyan, violet, gold][row % 3]
+    panel.withAlphaComponent(0.78).setFill()
+    NSBezierPath(roundedRect: rect, xRadius: 16, yRadius: 16).fill()
+    categoryColor.withAlphaComponent(0.18).setStroke()
+    let border = NSBezierPath(roundedRect: rect, xRadius: 16, yRadius: 16)
+    border.lineWidth = 1.2
+    border.stroke()
+    drawCharacter(
+        theme.id,
+        "legendary",
+        in: NSRect(x: rect.minX + 5, y: rect.minY + 28, width: rect.width - 10, height: rect.height - 32)
+    )
+    let ordinal = String(format: "%03d", index + 1)
+    (ordinal as NSString).draw(at: NSPoint(x: rect.minX + 9, y: rect.minY + 9), withAttributes: cardCaption)
+    (theme.displayName as NSString).draw(
+        in: NSRect(x: rect.minX + 47, y: rect.minY + 8, width: rect.width - 54, height: 20),
+        withAttributes: tinyName
+    )
+}
+allImage.unlockFocus()
+try saveJPEG(allImage, named: "all-100.jpg", quality: 0.9)
 
 print("Built README media in \(outputDirectory.path)")

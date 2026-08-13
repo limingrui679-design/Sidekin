@@ -8,7 +8,7 @@
       "symbolName": "sparkles",
       "lineageIntroduction": "A moonhare lineage that converts gravity into crystal arrows and weightless leaps.",
       "existenceAnchor": "Astral Crystal Moonhare",
-      "silhouetteAnchor": "Crescent ears, comet-tail streamers, long spring legs, and a crystal starbow",
+      "silhouetteAnchor": "Crescent ears, comet-tail streamers, long spring legs, and one evolving crystal starbow",
       "silhouetteClass": "upright-long-eared-archer",
       "motionAnchor": "Weightless leaps followed by suspended midair bow draws",
       "locomotionClass": "weightless-bipedal-leaps",
@@ -33,8 +33,8 @@
         {
           "stage": "juvenile",
           "name": "Astral Crystal Scout",
-          "introduction": "A swift scout shaping star shards into close-range arena blades.",
-          "visualAnchor": "Lean moonhare scout with forearm crystal blades and a split streamer tail"
+          "introduction": "A swift scout learning ranged gravity control through its first compact crescent starbow.",
+          "visualAnchor": "Lean moonhare scout drawing one compact crescent bow above a split streamer tail"
         },
         {
           "stage": "ascended",
@@ -45,8 +45,8 @@
         {
           "stage": "legendary",
           "name": "Skybound Pathfinder",
-          "introduction": "The moonhare apex, charting safe routes through storms of living starlight.",
-          "visualAnchor": "Tall pathfinder framed by crossing star trails, long ears, and a compass bow"
+          "introduction": "The moonhare apex charts safe routes with a crown mantle and a celestial compass bow.",
+          "visualAnchor": "Regal moonhare archer framed by long star trails and an enormous double-crescent compass bow"
         }
       ]
     },
