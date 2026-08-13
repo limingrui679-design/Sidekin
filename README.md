@@ -62,7 +62,7 @@ The verified local app is created at `artifacts/Sidekin.app`. To launch it inten
 ./Scripts/run-app.sh
 ```
 
-> Sidekin is not notarized for independent consumer distribution. This repository publishes source and CI verification, not a public downloadable macOS release.
+> Sidekin is not notarized for independent consumer distribution. This repository publishes source and reproducible local verification tooling, not a public downloadable macOS release.
 
 ## Five stages, one identity
 
