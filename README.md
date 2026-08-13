@@ -3,7 +3,7 @@
   <br><br>
   <img src="docs/readme/app-icon.png" alt="Sidekin app icon" width="96">
   <br>
-  <a href="https://github.com/limingrui679-design/Sidekin/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/limingrui679-design/Sidekin/ci.yml?branch=main&style=flat-square&label=build" alt="Build status"></a>
+  <img src="https://img.shields.io/badge/local%20suite-passing-21c55d?style=flat-square" alt="Local verification suite passing">
   <img src="https://img.shields.io/badge/macOS-14%2B-0b1026?style=flat-square&logo=apple&logoColor=white" alt="macOS 14 or newer">
   <img src="https://img.shields.io/badge/Apple%20Silicon-arm64-0b1026?style=flat-square&logo=apple&logoColor=white" alt="Apple Silicon arm64">
   <img src="https://img.shields.io/badge/Swift-6.0-f05138?style=flat-square&logo=swift&logoColor=white" alt="Swift 6">
@@ -179,7 +179,7 @@ The project includes **31 local checks** and **6 mocked API checks**, plus catal
 
 The release manifest records the version, build number, minimum macOS version, architecture, source commit, signing state, application-file hashes, and hashes for all 500 character assets. Packaging rejects corrupt ZIPs, macOS metadata, missing resources, architecture drift, and manifest mismatch.
 
-GitHub Actions reruns the full suite on macOS and retains the verified arm64 archive as a temporary CI artifact. It is build evidence, not a consumer-ready public release.
+The same commands are CI-ready, but this initial GitHub publication does not claim a hosted Actions run. The verified arm64 archive remains local build evidence, not a consumer-ready public release.
 
 ## Repository guide
 
