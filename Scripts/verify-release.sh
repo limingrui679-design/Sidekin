@@ -88,7 +88,7 @@ verify_app() {
     /usr/bin/xcrun stapler validate "$app"
   fi
 
-  print "$label verified: version $version ($build), macOS $minimum_system+, arm64, 50 assets."
+  print "$label verified: version $version ($build), macOS $minimum_system+, arm64, 500 assets."
 }
 
 if [[ -n "$APP_BUNDLE" ]]; then

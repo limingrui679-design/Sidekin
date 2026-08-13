@@ -1,0 +1,504 @@
+{
+  "themes": [
+    {
+      "id": "walking-treehouse",
+      "displayName": "Walking Treehouse",
+      "category": "livingArchitecture",
+      "subtitle": "Cedar rooms · root-stilt legs",
+      "symbolName": "house.and.flag.fill",
+      "lineageIntroduction": "A cozy treehouse that walks on root stilts and expands new rooms among its living branches.",
+      "existenceAnchor": "Ambulatory Living Treehouse",
+      "silhouetteAnchor": "Central trunk tower, four root-stilt legs, offset wooden rooms, and a leafy roof crown",
+      "silhouetteClass": "multi-room-tree-on-four-stilts",
+      "motionAnchor": "Alternating root-stilt steps while hanging rooms counter-sway",
+      "locomotionClass": "four-root-stilt-walk",
+      "materialAnchor": "Warm cedar, living bark, rope bridges, copper gutters, and green leaves",
+      "energyAnchor": "Window-gold hearthlight and green growth-ring pulses",
+      "motionProfile": "rooted",
+      "accent": {"red": 0.34, "green": 0.78, "blue": 0.24},
+      "secondaryAccent": {"red": 1.0, "green": 0.68, "blue": 0.18},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Windowed Acorn Cabin",
+          "introduction": "A large acorn carries one warm square window and four folded root stilts.",
+          "visualAnchor": "Acorn-shaped wooden pod with one glowing window and four curled root legs"
+        },
+        {
+          "stage": "hatchling",
+          "name": "One-Room Rootwalker",
+          "introduction": "A tiny cedar room toddles on four roots beneath a single leafy branch.",
+          "visualAnchor": "Small square cabin around a thin trunk on four long roots and one roof branch"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Ropebridge Treehome",
+          "introduction": "Two offset rooms share a walking trunk and a swaying rope bridge.",
+          "visualAnchor": "Twin wooden cabins at different heights linked by a bridge above four stilt roots"
+        },
+        {
+          "stage": "ascended",
+          "name": "Canopy Village Strider",
+          "introduction": "A broad living tree carries several homes, decks, and ladders through its crown.",
+          "visualAnchor": "Wide walking canopy containing five distinct rooms and a zigzag network of bridges"
+        },
+        {
+          "stage": "legendary",
+          "name": "Hearthwood Borough",
+          "introduction": "A towering treehouse borough moves as one home beneath a complete leafy roof.",
+          "visualAnchor": "Massive trunk city on root stilts with many golden windows and a domed canopy"
+        }
+      ]
+    },
+    {
+      "id": "tideglass-lighthouse",
+      "displayName": "Tideglass Lighthouse",
+      "category": "livingArchitecture",
+      "subtitle": "Sea glass tower · rotating dawn beam",
+      "symbolName": "light.beacon.max.fill",
+      "lineageIntroduction": "A floating lighthouse that grows decks, lenses, and wave feet around a sea-glass tower.",
+      "existenceAnchor": "Ambulatory Tideglass Lighthouse",
+      "silhouetteAnchor": "Tall tapered tower, rotating lens crown, three wave feet, and a spiral balcony",
+      "silhouetteClass": "tapered-tower-on-three-wave-feet",
+      "motionAnchor": "Three-wave steps, slow tower tilts, and continuous crown-beam rotation",
+      "locomotionClass": "tripod-wave-surf",
+      "materialAnchor": "Blue-green sea glass, white stone, copper rails, and frosted lens crystal",
+      "energyAnchor": "Warm dawn beam and concentric cyan warning rings",
+      "motionProfile": "gliding",
+      "accent": {"red": 0.18, "green": 0.82, "blue": 0.9},
+      "secondaryAccent": {"red": 1.0, "green": 0.78, "blue": 0.28},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sealed Beacon Buoy",
+          "introduction": "A striped glass buoy holds one sleeping lens above three folded wave fins.",
+          "visualAnchor": "Small tapered buoy with a dark top lens and three curled translucent water feet"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Three-Wave Lamp",
+          "introduction": "A short lighthouse paddles on three wave feet and flashes a narrow warm beam.",
+          "visualAnchor": "Stubby white-and-glass tower on three blue wave curls beneath one glowing lens"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Spiral Balcony Walker",
+          "introduction": "A taller tower grows a copper balcony that spirals around its moving body.",
+          "visualAnchor": "Narrow sea-glass lighthouse wrapped by one diagonal copper balcony ramp"
+        },
+        {
+          "stage": "ascended",
+          "name": "Storm-Coast Sentinel",
+          "introduction": "A reinforced beacon lowers wave buttresses and sweeps a broad warning beam.",
+          "visualAnchor": "Heavy lighthouse tower braced by three giant water arches under a wide light cone"
+        },
+        {
+          "stage": "legendary",
+          "name": "Dawnward Tide Beacon",
+          "introduction": "A radiant lighthouse crown turns a full horizon of sea into a safe golden path.",
+          "visualAnchor": "Tall central tower encircled by a complete rotating lens halo and six wave supports"
+        }
+      ]
+    },
+    {
+      "id": "pocket-citadel",
+      "displayName": "Pocket Citadel",
+      "category": "livingArchitecture",
+      "subtitle": "Folded stone · banner-red joints",
+      "symbolName": "building.columns.fill",
+      "lineageIntroduction": "A compact fortress that unfolds walls, towers, and courtyards from interlocking stone modules.",
+      "existenceAnchor": "Transforming Modular Citadel",
+      "silhouetteAnchor": "Square keep core, four corner tower legs, folding wall shields, and a central banner mast",
+      "silhouetteClass": "square-fortress-on-tower-legs",
+      "motionAnchor": "Corner-tower steps, wall-panel folds, and courtyard expansion",
+      "locomotionClass": "four-tower-module-walk",
+      "materialAnchor": "Gray cut stone, red banners, black iron hinges, and pale mortar joints",
+      "energyAnchor": "Banner-red command lines and white geometric ward grids",
+      "motionProfile": "marching",
+      "accent": {"red": 0.92, "green": 0.18, "blue": 0.2},
+      "secondaryAccent": {"red": 0.74, "green": 0.78, "blue": 0.86},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Folded Keep Block",
+          "introduction": "A dense stone cube hides four tower corners beneath a tiny red banner.",
+          "visualAnchor": "Compact gray cube with four vertical seams and one short banner mast"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Four-Turret Fortlet",
+          "introduction": "A small keep walks on four corner towers while one wall hangs open.",
+          "visualAnchor": "Square central room on four turret feet with a hinged front wall ramp"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Courtyard Unfolder",
+          "introduction": "A modular fort opens side walls into a usable courtyard without stopping.",
+          "visualAnchor": "U-shaped walking fortress with two spread wall panels and a central red flag"
+        },
+        {
+          "stage": "ascended",
+          "name": "Marching Bastion",
+          "introduction": "A broad citadel locks tall wall shields around its advancing tower legs.",
+          "visualAnchor": "Heavy square fortress on four tall towers behind two forward stone shields"
+        },
+        {
+          "stage": "legendary",
+          "name": "Crownwall Mobile Kingdom",
+          "introduction": "A complete walled city folds upward into a crown around its central keep.",
+          "visualAnchor": "Radial castle crown built from many towers around a square glowing courtyard"
+        }
+      ]
+    },
+    {
+      "id": "sky-temple",
+      "displayName": "Sky Temple",
+      "category": "livingArchitecture",
+      "subtitle": "White stone terraces · saffron updraft",
+      "symbolName": "building.columns.fill",
+      "lineageIntroduction": "A floating stepped temple that moves by opening prayer terraces into controlled updraft vanes.",
+      "existenceAnchor": "Sentient Floating Terrace Temple",
+      "silhouetteAnchor": "Stepped pyramid body, four cantilever terraces, central spire, and hanging prayer ribbons",
+      "silhouetteClass": "floating-stepped-pyramid-temple",
+      "motionAnchor": "Level floating, terrace-vane tilts, and slow spire-led rotations",
+      "locomotionClass": "updraft-terrace-hover",
+      "materialAnchor": "White limestone, saffron cloth, dark cedar, and turquoise inlay",
+      "energyAnchor": "Golden updraft columns and turquoise prayer circles",
+      "motionProfile": "buoyant",
+      "accent": {"red": 1.0, "green": 0.64, "blue": 0.12},
+      "secondaryAccent": {"red": 0.14, "green": 0.76, "blue": 0.82},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Closed Prayer Stupa",
+          "introduction": "A small white stupa floats above one folded saffron ribbon and a warm updraft.",
+          "visualAnchor": "Compact pointed shrine hovering over a single golden air column"
+        },
+        {
+          "stage": "hatchling",
+          "name": "One-Terrace Shrine",
+          "introduction": "A tiny temple opens one square terrace and drifts toward quiet air.",
+          "visualAnchor": "Single white platform with a central pavilion and two hanging prayer ribbons"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Four-Vane Sanctuary",
+          "introduction": "A stepped sanctuary tilts four cantilever terraces to steer its climb.",
+          "visualAnchor": "Three-tier pyramid with four long side platforms angled like flight vanes"
+        },
+        {
+          "stage": "ascended",
+          "name": "Cloudstep Monastery",
+          "introduction": "A broad monastery carries courtyards, bells, and gardens across a stable cloud base.",
+          "visualAnchor": "Wide floating complex with multiple roofs above a flat cloud and golden wind columns"
+        },
+        {
+          "stage": "legendary",
+          "name": "Zenith Pilgrimage Temple",
+          "introduction": "A towering sky temple arranges all terraces into a radiant ascending mandala.",
+          "visualAnchor": "Tall radial stepped temple with eight terraces surrounding a turquoise central spire"
+        }
+      ]
+    },
+    {
+      "id": "living-library",
+      "displayName": "Living Library",
+      "category": "livingArchitecture",
+      "subtitle": "Oak shelves · index-blue corridors",
+      "symbolName": "books.vertical.fill",
+      "lineageIntroduction": "A walking library that rearranges shelves, ladders, and reading rooms around each requested idea.",
+      "existenceAnchor": "Ambulatory Self-Indexing Library",
+      "silhouetteAnchor": "Tall shelf torso, rolling ladder legs, open-book roof, and two swinging reading-room wings",
+      "silhouetteClass": "shelf-tower-with-room-wings",
+      "motionAnchor": "Ladder-wheel steps, shelf rotations, and book-roof page turns",
+      "locomotionClass": "rolling-ladder-tower-walk",
+      "materialAnchor": "Dark oak, brass rails, colored book cloth, green lamps, and blue glass labels",
+      "energyAnchor": "Index-blue route lines and warm reading-lamp constellations",
+      "motionProfile": "mechanical",
+      "accent": {"red": 0.22, "green": 0.58, "blue": 1.0},
+      "secondaryAccent": {"red": 0.2, "green": 0.88, "blue": 0.52},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Locked Index Cabinet",
+          "introduction": "A small oak card cabinet shuffles one blue label behind a brass lock.",
+          "visualAnchor": "Compact drawer box with one glowing blue label and two folded ladder wheels"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Bookshelf Ladderling",
+          "introduction": "A narrow shelf walks on two rolling ladders and carries three curious books.",
+          "visualAnchor": "Tiny vertical bookcase balanced between two slanted wheeled ladders"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Self-Indexing Stacks",
+          "introduction": "A tall stack tower rotates shelf rings until a blue corridor points to the answer.",
+          "visualAnchor": "Cylindrical layered bookshelves around a central blue vertical passage"
+        },
+        {
+          "stage": "ascended",
+          "name": "Reading-Room Walker",
+          "introduction": "A broad library opens two quiet room wings while continuing on ladder legs.",
+          "visualAnchor": "Tall shelf body between two open windowed reading rooms and an open-book roof"
+        },
+        {
+          "stage": "legendary",
+          "name": "Endless Stacks Athenaeum",
+          "introduction": "A vast moving library folds miles of shelves into a navigable crown of knowledge.",
+          "visualAnchor": "Crown-shaped maze of bookshelves around a bright blue central index tower"
+        }
+      ]
+    },
+    {
+      "id": "wandering-greenhouse",
+      "displayName": "Wandering Greenhouse",
+      "category": "livingArchitecture",
+      "subtitle": "Curved glass · climate-green heart",
+      "symbolName": "house.lodge.fill",
+      "lineageIntroduction": "A roaming greenhouse that adjusts glass panels, roots, and climate chambers for its living collection.",
+      "existenceAnchor": "Ambulatory Climate-Controlled Greenhouse",
+      "silhouetteAnchor": "Large glass dome, four root wheels, segmented climate wings, and a central vent chimney",
+      "silhouetteClass": "glass-dome-on-root-wheels",
+      "motionAnchor": "Root-wheel rolling, panel breathing, and climate-wing unfolding",
+      "locomotionClass": "four-root-wheel-roll",
+      "materialAnchor": "Curved greenhouse glass, green iron ribs, wet soil, copper pipes, and white mist",
+      "energyAnchor": "Climate-green heart and color-coded temperature currents",
+      "motionProfile": "rolling",
+      "accent": {"red": 0.24, "green": 0.88, "blue": 0.48},
+      "secondaryAccent": {"red": 0.16, "green": 0.72, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Seedling Glass Cloche",
+          "introduction": "A small glass cloche protects one seedling above four curled root wheels.",
+          "visualAnchor": "Clear bell dome over a single green sprout and four dark round roots"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Ventcap Conservatory",
+          "introduction": "A tiny dome rolls forward while opening one roof vent to balance its air.",
+          "visualAnchor": "Low glass half-dome on four roots with one tall hinged top window"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Twin-Climate Glasshouse",
+          "introduction": "A long greenhouse divides warm and cool wings around a shared soil heart.",
+          "visualAnchor": "Two differently tinted glass domes joined by a central green mechanical core"
+        },
+        {
+          "stage": "ascended",
+          "name": "Biome Pavilion Walker",
+          "introduction": "A broad pavilion carries desert, wetland, and forest chambers on one chassis.",
+          "visualAnchor": "Three-lobed glasshouse showing three distinct plant climates above root wheels"
+        },
+        {
+          "stage": "legendary",
+          "name": "Worldgarden Conservatory",
+          "introduction": "A monumental glass crown shelters a complete miniature world in balanced climates.",
+          "visualAnchor": "Huge geodesic dome crown divided into many colored biomes around a green core"
+        }
+      ]
+    },
+    {
+      "id": "star-observatory",
+      "displayName": "Star Observatory",
+      "category": "livingArchitecture",
+      "subtitle": "Midnight dome · brass telescope limbs",
+      "symbolName": "telescope.fill",
+      "lineageIntroduction": "A walking observatory that opens its dome and repositions telescope limbs to follow the sky.",
+      "existenceAnchor": "Ambulatory Astronomical Observatory",
+      "silhouetteAnchor": "Rotating dome torso, three telescope legs, open shutter slit, and a ring-shaped balcony",
+      "silhouetteClass": "dome-body-on-three-telescope-legs",
+      "motionAnchor": "Tripod telescope steps, dome rotation, and long tracking pauses",
+      "locomotionClass": "three-telescope-tripod-walk",
+      "materialAnchor": "Midnight enamel, brass telescope tubes, white stone, and blue optical glass",
+      "energyAnchor": "Violet star-tracking rays and white coordinate reticles",
+      "motionProfile": "poised",
+      "accent": {"red": 0.42, "green": 0.5, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.76, "blue": 0.28},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Closed Dome Capsule",
+          "introduction": "A small midnight dome hides one brass telescope behind a sealed shutter.",
+          "visualAnchor": "Round dark observatory dome with one white slit and three folded brass legs"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Tripod Scope Hut",
+          "introduction": "A tiny observatory walks on three telescope tubes and opens a narrow roof slot.",
+          "visualAnchor": "Small dome room standing on three angled brass scopes with a blue lens at each foot"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Rotating Skywatch Hall",
+          "introduction": "A broad dome tracks two objects at once with paired articulated instruments.",
+          "visualAnchor": "Half-open rotating dome with two long telescopes extending in different directions"
+        },
+        {
+          "stage": "ascended",
+          "name": "Deep-Field Observatory",
+          "introduction": "A tall walking observatory raises a giant segmented mirror above its balcony.",
+          "visualAnchor": "Dome tower on tripod legs beneath a large hexagonal mirror flower"
+        },
+        {
+          "stage": "legendary",
+          "name": "Cosmos Survey Crown",
+          "introduction": "A radial observatory crown points many instruments across the entire visible sky.",
+          "visualAnchor": "Central dome encircled by a ring balcony and twelve outward-facing telescope tubes"
+        }
+      ]
+    },
+    {
+      "id": "night-market",
+      "displayName": "Night Market Spirit",
+      "category": "livingArchitecture",
+      "subtitle": "Canvas stalls · lantern-red streets",
+      "symbolName": "storefront.fill",
+      "lineageIntroduction": "A folding night market that walks on stall legs and carries lights, signs, and tiny empty streets.",
+      "existenceAnchor": "Ambulatory Folding Night Market",
+      "silhouetteAnchor": "Long awning spine, many stall-box legs, lantern arch, and a central empty street channel",
+      "silhouetteClass": "long-market-arcade-on-stall-legs",
+      "motionAnchor": "Alternating stall steps, awning folds, and lantern-arch swings",
+      "locomotionClass": "multi-stall-processional-walk",
+      "materialAnchor": "Striped canvas, painted wood, red paper lanterns, brass hooks, and wet stone",
+      "energyAnchor": "Lantern-red street glow and warm signboard flicker",
+      "motionProfile": "marching",
+      "accent": {"red": 1.0, "green": 0.24, "blue": 0.18},
+      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.16},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Closed Vendor Trunk",
+          "introduction": "A painted wooden trunk keeps one red lantern glowing beneath a folded awning.",
+          "visualAnchor": "Rectangular market chest with striped fabric roll and one hanging red light"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Two-Stall Lanternling",
+          "introduction": "Two tiny stalls walk side by side beneath one shared canvas roof.",
+          "visualAnchor": "Pair of boxy wooden kiosks under a striped awning with two lantern feet"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Lantern-Lane Walker",
+          "introduction": "A long market arcade leaves an empty street between rows of stepping stalls.",
+          "visualAnchor": "U-shaped line of small stalls around a central lane beneath a lantern arch"
+        },
+        {
+          "stage": "ascended",
+          "name": "Midnight Bazaar Procession",
+          "introduction": "A broad moving bazaar unfolds signs, roofs, and bridges without blocking its street.",
+          "visualAnchor": "Layered walking marketplace with many peaked awnings and a bright central passage"
+        },
+        {
+          "stage": "legendary",
+          "name": "Thousand-Lantern Market City",
+          "introduction": "A complete night market folds into a luminous circular city around an open plaza.",
+          "visualAnchor": "Ring-shaped market of stalls and awnings with a central plaza and lantern crown"
+        }
+      ]
+    },
+    {
+      "id": "bridgekeeper-span",
+      "displayName": "Bridgekeeper Span",
+      "category": "livingArchitecture",
+      "subtitle": "Articulated steel · river-blue joints",
+      "symbolName": "point.topleft.down.curvedto.point.bottomright.up",
+      "lineageIntroduction": "A self-relocating bridge that folds its deck, piers, and cables into an articulated walker.",
+      "existenceAnchor": "Ambulatory Transforming Bridge",
+      "silhouetteAnchor": "Long deck spine, four pier legs, two cable arches, and a folding central drawspan",
+      "silhouetteClass": "long-deck-on-four-pier-legs",
+      "motionAnchor": "Pier-leg vaults, deck folding, and cable-tension recoil",
+      "locomotionClass": "four-pier-span-walk",
+      "materialAnchor": "Weathered steel, concrete piers, blue suspension cable, and amber road lights",
+      "energyAnchor": "River-blue joint lines and amber deck guidance pulses",
+      "motionProfile": "heavy",
+      "accent": {"red": 0.18, "green": 0.6, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.64, "blue": 0.1},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Folded Drawspan Block",
+          "introduction": "A short deck block stores two folded piers and one blue cable loop.",
+          "visualAnchor": "Compact steel rectangle with two leg seams and a curved blue cable on top"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Two-Pier Footbridge",
+          "introduction": "A narrow footbridge walks on two concrete piers and balances with one cable.",
+          "visualAnchor": "Short horizontal deck on two tall pier legs beneath a single blue suspension arc"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Four-Span Strider",
+          "introduction": "A longer bridge coordinates four pier legs while keeping its amber deck level.",
+          "visualAnchor": "Long flat deck on four staggered concrete legs with two low cable arches"
+        },
+        {
+          "stage": "ascended",
+          "name": "Drawbridge Gate Walker",
+          "introduction": "A heavy span raises its center into a defensive gate between two cable towers.",
+          "visualAnchor": "Twin-tower suspension bridge with the central roadway lifted into a V shape"
+        },
+        {
+          "stage": "legendary",
+          "name": "Worldriver Crown Bridge",
+          "introduction": "A vast bridge folds its deck into a complete ring supported by moving piers.",
+          "visualAnchor": "Circular roadway crown on many pier legs with blue cables radiating inward"
+        }
+      ]
+    },
+    {
+      "id": "canal-palace",
+      "displayName": "Canal Palace",
+      "category": "livingArchitecture",
+      "subtitle": "Ivory pavilions · jade watercourt",
+      "symbolName": "sailboat.fill",
+      "lineageIntroduction": "A floating palace that rearranges pavilions and canals around a self-contained jade watercourt.",
+      "existenceAnchor": "Self-Navigating Floating Canal Palace",
+      "silhouetteAnchor": "Wide barge foundation, central watercourt, four pavilion towers, and ribbon-like canal arms",
+      "silhouetteClass": "wide-palace-barge-with-watercourt",
+      "motionAnchor": "Level barge glides, canal-arm paddles, and pavilion rotations",
+      "locomotionClass": "self-contained-canal-sail",
+      "materialAnchor": "Ivory stone, jade tile, dark teak, silk roofs, and clear turquoise water",
+      "energyAnchor": "Jade current paths and pearl-white courtyard fountains",
+      "motionProfile": "gliding",
+      "accent": {"red": 0.16, "green": 0.82, "blue": 0.68},
+      "secondaryAccent": {"red": 0.96, "green": 0.82, "blue": 0.52},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sealed Watercourt Box",
+          "introduction": "An ivory box holds one square jade pool beneath a folded silk roof.",
+          "visualAnchor": "Small square palace pod with a visible turquoise center and four corner roof tips"
+        },
+        {
+          "stage": "hatchling",
+          "name": "One-Pavilion Skiff",
+          "introduction": "A tiny floating pavilion steers by extending two narrow canal ribbons.",
+          "visualAnchor": "Single roofed room on a flat barge with two blue water-ribbon paddles"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Four-Court Palace Barge",
+          "introduction": "A wide barge opens four pavilions around a shared square watercourt.",
+          "visualAnchor": "Four ivory rooms at the corners of a turquoise square pool on a broad base"
+        },
+        {
+          "stage": "ascended",
+          "name": "Jade Canal Procession",
+          "introduction": "A long floating palace links multiple courts through moving ribbon canals.",
+          "visualAnchor": "Elongated palace barge with three turquoise courtyards joined by S-shaped channels"
+        },
+        {
+          "stage": "legendary",
+          "name": "Crownwater Imperial Palace",
+          "introduction": "A radial palace city surrounds a jade lagoon and navigates as one serene body.",
+          "visualAnchor": "Circular ring of ivory pavilions around a central lagoon with outward canal arms"
+        }
+      ]
+    }
+  ]
+}

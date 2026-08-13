@@ -554,6 +554,34 @@ test("Generated images are normalized into transparent 1254-square assets") {
     try expect((outputRep.colorAt(x: 627, y: 627)?.alphaComponent ?? 0) > 0.8, "The pet subject was removed incorrectly")
 }
 
+test("Generated-image cleanup removes tiny detached specks before fitting") {
+    let sourcePNG = try makePNG {
+        NSColor(calibratedRed: 0, green: 1, blue: 0, alpha: 1).setFill()
+        NSBezierPath(rect: NSRect(x: 0, y: 0, width: 160, height: 160)).fill()
+        NSColor.systemBlue.setFill()
+        NSBezierPath(ovalIn: NSRect(x: 45, y: 28, width: 70, height: 104)).fill()
+        NSColor.systemRed.setFill()
+        NSBezierPath(rect: NSRect(x: 4, y: 4, width: 1, height: 1)).fill()
+    }
+    let output = try PetImageProcessor.prepareGeneratedAsset(sourcePNG)
+    guard let rep = NSBitmapImageRep(data: output) else {
+        throw TestFailure(description: "Could not read the speck-cleanup output")
+    }
+    var visible = 0
+    for y in 0..<rep.pixelsHigh {
+        for x in 0..<rep.pixelsWide {
+            if (rep.colorAt(x: x, y: y)?.alphaComponent ?? 0) > 0.08 {
+                visible += 1
+            }
+        }
+    }
+    let occupancy = Double(visible) / Double(rep.pixelsWide * rep.pixelsHigh)
+    try expect(
+        occupancy > 0.24,
+        "A detached speck distorted subject fitting; occupancy is \(occupancy)"
+    )
+}
+
 test("Edge-connected cutout preserves magenta and purple inside the subject") {
     let sourcePNG = try makePNG {
         NSColor.magenta.setFill()
@@ -586,6 +614,82 @@ test("Cutout adaptively detects non-magenta solid backgrounds from canvas edges"
     try expect((rep.colorAt(x: 627, y: 627)?.alphaComponent ?? 0) > 0.8, "The pink subject was damaged by adaptive background removal")
 }
 
+test("Green chroma cutout removes saturated edge spill") {
+    let sourcePNG = try makePNG {
+        NSColor(calibratedRed: 0, green: 1, blue: 0, alpha: 1).setFill()
+        NSBezierPath(rect: NSRect(x: 0, y: 0, width: 160, height: 160)).fill()
+        NSColor(calibratedRed: 0.12, green: 0.28, blue: 0.78, alpha: 1).setFill()
+        NSBezierPath(ovalIn: NSRect(x: 35, y: 20, width: 90, height: 120)).fill()
+    }
+    let output = try PetImageProcessor.prepareGeneratedAsset(sourcePNG)
+    guard let rep = NSBitmapImageRep(data: output) else {
+        throw TestFailure(description: "Could not read the green-screen cutout output")
+    }
+
+    var saturatedGreenPixels = 0
+    for y in 0..<rep.pixelsHigh {
+        for x in 0..<rep.pixelsWide {
+            guard let color = rep.colorAt(x: x, y: y), color.alphaComponent > 0.02 else {
+                continue
+            }
+            if color.greenComponent > max(color.redComponent, color.blueComponent) + 0.12 {
+                saturatedGreenPixels += 1
+            }
+        }
+    }
+    try expect(
+        saturatedGreenPixels <= 8,
+        "The cutout retained \(saturatedGreenPixels) saturated green edge-spill pixels"
+    )
+}
+
+test("Magenta and yellow chroma keys do not leave saturated outlines") {
+    let keys: [(NSColor, (NSColor) -> Bool)] = [
+        (
+            NSColor(calibratedRed: 1, green: 0, blue: 1, alpha: 1),
+            {
+                min($0.redComponent, $0.blueComponent) > 0.27
+                    && min($0.redComponent, $0.blueComponent) > $0.greenComponent + 0.11
+                    && abs($0.redComponent - $0.blueComponent) < 0.40
+            }
+        ),
+        (
+            NSColor(calibratedRed: 1, green: 1, blue: 0, alpha: 1),
+            {
+                min($0.redComponent, $0.greenComponent) > 0.27
+                    && min($0.redComponent, $0.greenComponent) > $0.blueComponent + 0.11
+                    && abs($0.redComponent - $0.greenComponent) < 0.38
+            }
+        )
+    ]
+
+    for (key, isSpill) in keys {
+        let sourcePNG = try makePNG {
+            key.setFill()
+            NSBezierPath(rect: NSRect(x: 0, y: 0, width: 160, height: 160)).fill()
+            NSColor(calibratedRed: 0.1, green: 0.32, blue: 0.78, alpha: 1).setFill()
+            NSBezierPath(ovalIn: NSRect(x: 35, y: 20, width: 90, height: 120)).fill()
+        }
+        let output = try PetImageProcessor.prepareGeneratedAsset(
+            sourcePNG,
+            removeEnclosedBackground: true
+        )
+        guard let rep = NSBitmapImageRep(data: output) else {
+            throw TestFailure(description: "Could not read the multi-key cutout output")
+        }
+        var spillPixels = 0
+        for y in 0..<rep.pixelsHigh {
+            for x in 0..<rep.pixelsWide {
+                guard let color = rep.colorAt(x: x, y: y), color.alphaComponent > 0.02 else {
+                    continue
+                }
+                if isSpill(color) { spillPixels += 1 }
+            }
+        }
+        try expect(spillPixels <= 8, "The cutout retained \(spillPixels) saturated key-color pixels")
+    }
+}
+
 test("Both legacy final evolutions migrate safely to stage four") {
     let guardian = try JSONDecoder().decode(PetStage.self, from: Data(#""guardian""#.utf8))
     let dreamer = try JSONDecoder().decode(PetStage.self, from: Data(#""dreamer""#.utf8))
@@ -600,27 +704,75 @@ test("Both legacy final evolutions migrate safely to stage four") {
     try expect(legacyPet.stage == .ascended, "The migrated legacy pet was downgraded")
 }
 
-test("The app includes ten themes and five growth stages") {
-    try expect(PetVisualTheme.allCases.count == 10, "The theme count is not 10")
+test("The app includes one hundred complete themes and five hundred described forms") {
+    try expect(PetVisualTheme.allCases.count == 100, "The theme count is not 100")
     try expect(PetStage.allCases.count == 5, "The growth-stage count is not 5")
-    try expect(Set(PetVisualTheme.allCases.map(\.rawValue)).count == 10, "Theme identifiers are duplicated")
+    try expect(Set(PetVisualTheme.allCases.map(\.rawValue)).count == 100, "Theme identifiers are duplicated")
 
-    let species = PetVisualTheme.allCases.map(\.speciesAnchor)
+    let themeNames = PetVisualTheme.allCases.map(\.displayName)
+    let lineageIntroductions = PetVisualTheme.allCases.map(\.lineageIntroduction)
+    let existenceAnchors = PetVisualTheme.allCases.map(\.existenceAnchor)
     let silhouettes = PetVisualTheme.allCases.map(\.silhouetteAnchor)
     let motions = PetVisualTheme.allCases.map(\.motionAnchor)
     let materials = PetVisualTheme.allCases.map(\.materialAnchor)
     let energies = PetVisualTheme.allCases.map(\.energyAnchor)
-    try expect(Set(species).count == 10, "Species anchors are duplicated")
-    try expect(Set(silhouettes).count == 10, "Silhouette anchors are duplicated")
-    try expect(Set(motions).count == 10, "Movement anchors are duplicated")
-    try expect(Set(materials).count == 10, "Material anchors are duplicated")
-    try expect(Set(energies).count == 10, "Energy anchors are duplicated")
+    try expect(Set(themeNames).count == 100, "Theme names are duplicated")
+    try expect(Set(lineageIntroductions).count == 100, "Lineage introductions are duplicated")
+    try expect(lineageIntroductions.allSatisfy { $0.count >= 60 }, "A lineage introduction is too short")
+    try expect(Set(existenceAnchors).count == 100, "Existence anchors are duplicated")
+    try expect(Set(silhouettes).count == 100, "Silhouette anchors are duplicated")
+    try expect(Set(motions).count == 100, "Movement anchors are duplicated")
+    try expect(Set(materials).count == 100, "Material anchors are duplicated")
+    try expect(Set(energies).count == 100, "Energy anchors are duplicated")
+
+    let categoryCounts = Dictionary(grouping: PetVisualTheme.allCases, by: \.category).mapValues(\.count)
+    try expect(categoryCounts.count == 10, "The catalog does not cover ten existence categories")
+    try expect(
+        PetThemeCategory.allCases.allSatisfy { categoryCounts[$0] == 10 },
+        "Each existence category must contain exactly ten complete themes"
+    )
+    try expect(
+        PetVisualTheme.allCases.filter { $0.category != .faunaMythic }.count == 90,
+        "The catalog is still over-concentrated on animal forms"
+    )
+    try expect(
+        Set(PetVisualTheme.allCases.map(\.silhouetteClass)).count >= 18,
+        "The catalog has too few silhouette topology classes"
+    )
+    try expect(
+        Set(PetVisualTheme.allCases.map(\.locomotionClass)).count >= 18,
+        "The catalog has too few locomotion classes"
+    )
+    try expect(
+        PetVisualTheme.allCases.allSatisfy {
+            $0.profile.forms.map(\.stage) == PetStage.allCases
+        },
+        "A complete theme is missing one or more canonical stages"
+    )
 
     let formNames = PetVisualTheme.allCases.flatMap { theme in
         PetStage.allCases.map { theme.formName(at: $0) }
     }
-    try expect(formNames.count == 50, "Ten five-stage lines did not produce 50 forms")
-    try expect(Set(formNames).count == 50, "The 50 forms contain duplicate names")
+    let formIntroductions = PetVisualTheme.allCases.flatMap { theme in
+        PetStage.allCases.map { theme.formIntroduction(at: $0) }
+    }
+    let formVisualAnchors = PetVisualTheme.allCases.flatMap { theme in
+        PetStage.allCases.map { theme.formVisualAnchor(at: $0) }
+    }
+    try expect(formNames.count == 500, "One hundred five-stage lines did not produce 500 forms")
+    try expect(Set(formNames).count == 500, "The 500 forms contain duplicate names")
+    try expect(formIntroductions.count == 500, "The app does not provide 500 form introductions")
+    try expect(Set(formIntroductions).count == 500, "The 500 form introductions are not unique")
+    try expect(formVisualAnchors.count == 500, "The app does not provide 500 stage visual anchors")
+    try expect(Set(formVisualAnchors).count == 500, "The 500 stage visual anchors are not unique")
+    let shortestIntroduction = zip(formNames, formIntroductions).min {
+        $0.1.count < $1.1.count
+    }
+    try expect(
+        shortestIntroduction?.1.count ?? 0 >= 48,
+        "A form introduction is too short: \(shortestIntroduction?.0 ?? "unknown") "
+            + "(\(shortestIntroduction?.1.count ?? 0) characters)"
+    )
 }
 
 test("The Codex event classifier reads lifecycle state only") {

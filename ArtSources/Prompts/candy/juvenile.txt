@@ -1,0 +1,25 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Candy Carnival [Food & Alchemy]
+Form: Toffee Acrobat, canonical juvenile stage
+Lineage concept: A buoyant gummy hare whose playful sugar core grows into carnival-scale illusion magic.
+Existence anchor: Balloon Hare × Gummy Spirit
+Persistent silhouette logic: Rounded springy body, ribbon-like ears, transparent belly, and a halo of balloon rings
+Silhouette topology class: round-gummy-hare-with-balloon-halo
+Movement and locomotion: Elastic bounces, buoyant hovering, and aerial ribbon flips; spring-body-bounce
+Material system: Transparent gummy, foil wrappers, frosting, jelly, and sugar glass
+Energy motif: Rainbow bubbles and a heart-shaped candy core
+Current-stage introduction: A toffee acrobat learning to flip through its own balloon rings.
+Current-stage visual anchor: Slim gummy hare curled mid-flip through two candy-striped balloon hoops
+
+The provided reference image is the immediately preceding form, Bouncing Gummy Hare. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Small translucent round rabbit with very long elastic ears and compressed feet
+
+Progression rule: Stage III establishes the signature topology, locomotion, functional tool or organ, and material system. Change the outer contour and pose from Stage II without losing identity.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FFFF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FFFF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

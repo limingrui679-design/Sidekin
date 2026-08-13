@@ -1,0 +1,504 @@
+{
+  "themes": [
+    {
+      "id": "emberwild",
+      "displayName": "Emberwild Spirit",
+      "category": "elementalWeather",
+      "subtitle": "Charcoal bark · controlled wildfire",
+      "symbolName": "flame.fill",
+      "lineageIntroduction": "A wildfire intelligence that builds a temporary body from charcoal, flame fronts, and seed embers.",
+      "existenceAnchor": "Self-Shaping Wildfire Elemental",
+      "silhouetteAnchor": "Hollow charcoal rib cage, three flame limbs, branching smoke crown, and a seed-ember heart",
+      "silhouetteClass": "hollow-flame-rib-elemental",
+      "motionAnchor": "Flame-limb strides that collapse into low traveling fire fronts",
+      "locomotionClass": "combustion-front-translation",
+      "materialAnchor": "Charcoal bark, white ash, orange flame, and red seed embers",
+      "energyAnchor": "Controlled crown fire and green renewal sparks",
+      "motionProfile": "flowing",
+      "accent": {"red": 1.0, "green": 0.28, "blue": 0.04},
+      "secondaryAccent": {"red": 0.34, "green": 0.9, "blue": 0.28},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Banked Seed Ember",
+          "introduction": "A coal-black seed protects one green renewal spark beneath a warm red seam.",
+          "visualAnchor": "Charred seed shape with one red crack, a green point, and a short ash plume"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Three-Flame Kindling",
+          "introduction": "Three small flames lean together around a charcoal heart and move as one.",
+          "visualAnchor": "Triangular fire cluster on a black coal center with three separate flame tips"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Fireline Strider",
+          "introduction": "A lean ember body stretches three long limbs across the ground as a clean fireline.",
+          "visualAnchor": "Hollow charcoal torso on three angled flame legs with a low horizontal burning trail"
+        },
+        {
+          "stage": "ascended",
+          "name": "Crownfire Keeper",
+          "introduction": "A tall elemental lifts a branching smoke crown while protecting green seed sparks below.",
+          "visualAnchor": "Vertical riblike flame form under a black branching crown with green sparks at its feet"
+        },
+        {
+          "stage": "legendary",
+          "name": "Renewal Wildfire Sovereign",
+          "introduction": "A vast controlled blaze forms a ring that burns outward and sprouts inward.",
+          "visualAnchor": "Circular wall of orange fire surrounding a dark center filled with bright green seedlings"
+        }
+      ]
+    },
+    {
+      "id": "tidal-crown",
+      "displayName": "Tidal Crown",
+      "category": "elementalWeather",
+      "subtitle": "Deep water arcs · moon-pull core",
+      "symbolName": "water.waves",
+      "lineageIntroduction": "A gravity-bound body of seawater that changes shape with a suspended miniature moon.",
+      "existenceAnchor": "Self-Contained Tidal Elemental",
+      "silhouetteAnchor": "Crescent wave body, suspended moon sphere, two foam arms, and a trailing undertow ribbon",
+      "silhouetteClass": "crescent-wave-around-moon-core",
+      "motionAnchor": "Surging crescent rolls, undertow reversals, and moon-led vertical lifts",
+      "locomotionClass": "rolling-tidal-surge",
+      "materialAnchor": "Clear deep water, white foam, dark suspended sediment, and pearl moonstone",
+      "energyAnchor": "Moon-white pull lines and cyan tidal height bands",
+      "motionProfile": "flowing",
+      "accent": {"red": 0.08, "green": 0.68, "blue": 1.0},
+      "secondaryAccent": {"red": 0.92, "green": 0.95, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Moonlocked Water Drop",
+          "introduction": "A clear drop holds a tiny white moon that pulls its surface into a crescent.",
+          "visualAnchor": "Large teardrop of water curved around one small suspended pearl sphere"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Foamcrest Ripple",
+          "introduction": "A low ripple follows its moon core and raises two playful foam hands.",
+          "visualAnchor": "Short horizontal wave with two foam curls and a moon bead hovering above"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Undertow Crescent",
+          "introduction": "A tall crescent wave turns around a pearl moon while its lower ribbon flows backward.",
+          "visualAnchor": "Vertical water crescent enclosing a white sphere with a dark reverse-flow base"
+        },
+        {
+          "stage": "ascended",
+          "name": "Spring-Tide Regent",
+          "introduction": "A broad tidal body raises two opposing waves under a bright aligned moon.",
+          "visualAnchor": "Symmetrical double wave beneath one high moon and three horizontal tide-level lines"
+        },
+        {
+          "stage": "legendary",
+          "name": "Ocean-Pull Crown",
+          "introduction": "A complete rotating crown of seawater surrounds the moon that commands it.",
+          "visualAnchor": "Radial water crown of eight breaking waves around a brilliant pearl moon core"
+        }
+      ]
+    },
+    {
+      "id": "cyclone-dancer",
+      "displayName": "Cyclone Dancer",
+      "category": "elementalWeather",
+      "subtitle": "Pressure-silk wind · cobalt eye",
+      "symbolName": "tornado",
+      "lineageIntroduction": "A pressure vortex that balances ribbon winds around a calm blue eye and dances to steer itself.",
+      "existenceAnchor": "Sentient Cyclonic Pressure Column",
+      "silhouetteAnchor": "Narrow funnel torso, wide spiral skirt, two ribbon arms, and a calm circular eye",
+      "silhouetteClass": "funnel-body-with-spiral-skirt",
+      "motionAnchor": "Pirouetting pressure turns, ribbon-arm sweeps, and brief funnel hops",
+      "locomotionClass": "rotational-vortex-dance",
+      "materialAnchor": "Translucent wind silk, gray vapor, airborne dust, and blue pressure glass",
+      "energyAnchor": "Cobalt calm eye and white spiral velocity bands",
+      "motionProfile": "orbiting",
+      "accent": {"red": 0.42, "green": 0.72, "blue": 1.0},
+      "secondaryAccent": {"red": 0.88, "green": 0.94, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Still-Eye Pressure Seed",
+          "introduction": "A blue pressure bead rests inside three wind ribbons that never touch it.",
+          "visualAnchor": "Small cobalt sphere encircled by three pale open spiral bands"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Dustskirt Twirler",
+          "introduction": "A tiny funnel spins a wide dust skirt and reaches with two short wind ribbons.",
+          "visualAnchor": "Short gray funnel over a broad brown spiral base with two curved vapor arms"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Crosswind Pirouette",
+          "introduction": "A tall vortex stretches ribbon arms in opposite directions to hold a sharp turn.",
+          "visualAnchor": "Narrow S-curved tornado body with long horizontal wind ribbons and blue eye"
+        },
+        {
+          "stage": "ascended",
+          "name": "Mesocyclone Choreographer",
+          "introduction": "A broad layered storm organizes three smaller vortices into a synchronized formation.",
+          "visualAnchor": "Large central funnel surrounded by three detached mini funnels on one spiral path"
+        },
+        {
+          "stage": "legendary",
+          "name": "Grand Spiral Tempest",
+          "introduction": "A colossal dancer opens a complete pressure disc around one perfectly calm center.",
+          "visualAnchor": "Wide top-down cyclone disc tapering into a thin dancing funnel beneath"
+        }
+      ]
+    },
+    {
+      "id": "whiteout-wisp",
+      "displayName": "Whiteout Wisp",
+      "category": "elementalWeather",
+      "subtitle": "Powder snow · visibility-blue lantern",
+      "symbolName": "snowflake.circle.fill",
+      "lineageIntroduction": "A blizzard intelligence that folds powder, wind, and visibility into a soft shifting body.",
+      "existenceAnchor": "Sentient Whiteout Blizzard",
+      "silhouetteAnchor": "Soft hooded snow mass, one blue lantern eye, long spindrift sleeves, and no visible feet",
+      "silhouetteClass": "hooded-snow-cloud-wisp",
+      "motionAnchor": "Low powder drifts, sleeve gusts, and sudden silhouette dissolves",
+      "locomotionClass": "spindrift-hover",
+      "materialAnchor": "Powder snow, rime lace, frosted air, and blue ice lantern glass",
+      "energyAnchor": "Visibility-blue eye and pale compass gust lines",
+      "motionProfile": "spectral",
+      "accent": {"red": 0.72, "green": 0.9, "blue": 1.0},
+      "secondaryAccent": {"red": 0.24, "green": 0.58, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Snowblind Lantern Flake",
+          "introduction": "A thick snowflake hides one blue point behind layers of windblown powder.",
+          "visualAnchor": "Six-point snowflake almost buried in a round powder cloud with one blue slit"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Powderhood Drift",
+          "introduction": "A small hood of snow floats forward and trails two uncertain spindrift sleeves.",
+          "visualAnchor": "Rounded hooded white wisp with one blue eye and two long tapered snow arms"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Compass-Gust Veiler",
+          "introduction": "A taller blizzard form opens its sleeves to erase everything except a safe blue path.",
+          "visualAnchor": "Wide-armed snow cloak crossed by one bright blue directional line"
+        },
+        {
+          "stage": "ascended",
+          "name": "Zero-Visibility Warden",
+          "introduction": "A broad whiteout body dissolves at every edge while its lantern eye stays fixed.",
+          "visualAnchor": "Large soft triangular snow mass with blurred margins and a sharp central blue eye"
+        },
+        {
+          "stage": "legendary",
+          "name": "Silent Blizzard Crown",
+          "introduction": "A circular white storm hides its entire body behind one calm ring of blue visibility.",
+          "visualAnchor": "Huge radial snow cloud with a clean blue circular aperture and long spindrift tails"
+        }
+      ]
+    },
+    {
+      "id": "thunderhead-forge",
+      "displayName": "Thunderhead Forge Mecha",
+      "category": "elementalWeather",
+      "subtitle": "Storm steel · molten-lightning reactor",
+      "symbolName": "cloud.bolt.fill",
+      "lineageIntroduction": "A purpose-built storm mecha that grows around one anvil reactor while forging lightning into articulated weapons.",
+      "existenceAnchor": "Storm-Forged Thunderhead Mecha",
+      "silhouetteAnchor": "Armored anvil chest, triangular amber visor, two rain-piston legs, hammer forearm, and flat storm shoulders",
+      "silhouetteClass": "bipedal-anvil-chested-storm-mecha",
+      "motionAnchor": "Heavy piston strides, shoulder-cloud compression, and full-arm lightning-hammer recoil",
+      "locomotionClass": "bipedal-hydraulic-storm-march",
+      "materialAnchor": "Gunmetal storm plate, dense charcoal vapor, silver rain pistons, and orange plasma conduits",
+      "energyAnchor": "Triangular amber reactor visor and molten-white lightning tools",
+      "motionProfile": "heavy",
+      "accent": {"red": 1.0, "green": 0.7, "blue": 0.12},
+      "secondaryAccent": {"red": 0.42, "green": 0.64, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sealed Anvil Reactor",
+          "introduction": "A compact armored reactor seals a triangular amber visor beneath a flat anvil-shaped storm cap.",
+          "visualAnchor": "Limbless gunmetal reactor pod with flat cloud cap, amber triangle slit, and two folded piston seams"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Rain-Piston Forge Drone",
+          "introduction": "A squat young mecha walks on two rain pistons and tests one compact lightning clamp.",
+          "visualAnchor": "Small bipedal forge drone with anvil chest, amber triangular visor, and one short bolt-clamp arm"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Bolt-Hammer Stormframe",
+          "introduction": "A balanced two-armed stormframe locks a long hammer forearm against its reinforced anvil shoulder.",
+          "visualAnchor": "Athletic bipedal mecha with two arms, two piston legs, triangular visor, hammer arm, and shield shoulder"
+        },
+        {
+          "stage": "ascended",
+          "name": "Supercell Arsenal Mecha",
+          "introduction": "The same stormframe unfolds two auxiliary forge arms and a rotating shoulder rack for finished bolt weapons.",
+          "visualAnchor": "Four-armed heavy mecha with unchanged amber visor, broad anvil shoulders, two legs, and six orbiting bolt tools"
+        },
+        {
+          "stage": "legendary",
+          "name": "Thunderforge Colossus",
+          "introduction": "A towering final warframe opens its anvil shoulders into a complete mobile foundry without losing its original visor.",
+          "visualAnchor": "Colossal two-legged storm mecha framed by flat forge wings, four working arms, amber triangle face, and bolt crown"
+        }
+      ]
+    },
+    {
+      "id": "prism-rain",
+      "displayName": "Prism Rain Peacock",
+      "category": "elementalWeather",
+      "subtitle": "Rain-glass plumage · seven-color fan",
+      "symbolName": "rainbow",
+      "lineageIntroduction": "A true peafowl lineage whose rain-glass feathers refract one silver downpour into seven persistent colors.",
+      "existenceAnchor": "Spectral Rain Peacock",
+      "silhouetteAnchor": "Recognizable peafowl head and beak, prism crest, two bird legs, folded wings, and seven rain-feather tail eyes",
+      "silhouetteClass": "peafowl-with-spectral-rain-fan",
+      "motionAnchor": "Birdlike steps, wing balances, tail-fan displays, and short rain-assisted glides",
+      "locomotionClass": "avian-strut-and-glide",
+      "materialAnchor": "Iridescent blue plumage, clear rain-glass feathers, silver mist, and saturated spectral droplets",
+      "energyAnchor": "White prism crest and seven separated tail-rain colors",
+      "motionProfile": "flowing",
+      "accent": {"red": 0.3, "green": 0.9, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.28, "blue": 0.68},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Prismatic Rain Egg",
+          "introduction": "A blue peafowl egg holds a folded prism crest and seven tiny feather-eye droplets beneath its shell.",
+          "visualAnchor": "Compact oval blue egg with triangular glass crest ridge and seven colored teardrop markings in a fan"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Tri-Color Peachick",
+          "introduction": "A round peachick takes careful bird steps while three short rain feathers unfold behind it.",
+          "visualAnchor": "Small recognizable peachick with beak, two legs, prism forehead crest, folded wings, and three colored tail drops"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Seven-Plume Rainfowl",
+          "introduction": "A lean juvenile peafowl develops seven long rain-glass tail feathers while keeping its blue face and prism crest.",
+          "visualAnchor": "Slender peafowl body on two legs with folded wings and seven separate streaming tail feathers"
+        },
+        {
+          "stage": "ascended",
+          "name": "Refraction Fan Peacock",
+          "introduction": "An adult peacock plants both feet and opens every rain feather into a broad defensive spectrum fan.",
+          "visualAnchor": "Adult blue peacock in display stance with visible head, beak, prism crest, and seven large colored feather eyes"
+        },
+        {
+          "stage": "legendary",
+          "name": "Cathedral-Tail Sovereign",
+          "introduction": "The same peacock raises a monumental cathedral-shaped tail while its bird body and face remain clearly visible.",
+          "visualAnchor": "Regal peacock centered before seven towering rain-glass feather arches with unchanged beak and prism crown"
+        }
+      ]
+    },
+    {
+      "id": "monsoon-vessel",
+      "displayName": "Monsoon Leviathan",
+      "category": "elementalWeather",
+      "subtitle": "Rain-serpent body · pressure-red dorsal sail",
+      "symbolName": "cloud.heavyrain.fill",
+      "lineageIntroduction": "A mythic monsoon leviathan that keeps one white forked brow while growing a serpentine rain body and pressure sail.",
+      "existenceAnchor": "Mythic Monsoon Leviathan",
+      "silhouetteAnchor": "Long limbless rain-serpent body, white forked brow, cloud mane, crimson dorsal pressure sail, and twin water whiskers",
+      "silhouetteClass": "serpentine-monsoon-leviathan",
+      "motionAnchor": "Sinuous airborne swimming, whisker-led turns, pressure-sail tacks, and coiling rainfront dives",
+      "locomotionClass": "mythic-serpentine-rain-swim",
+      "materialAnchor": "Dense blue rainwater scales, graphite cloud mane, red pressure silk, and silver wind foam",
+      "energyAnchor": "White forked brow, crimson pressure arrows, and deep-blue rainwake",
+      "motionProfile": "gliding",
+      "accent": {"red": 0.12, "green": 0.62, "blue": 1.0},
+      "secondaryAccent": {"red": 0.94, "green": 0.22, "blue": 0.28},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Barometer Leviathan Egg",
+          "introduction": "A glass storm egg contains one tightly curled rain serpent with a visible white forked brow.",
+          "visualAnchor": "Vertical barometer egg showing a curled blue limbless embryo, tiny cloud mane, white brow, and folded red sail"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Drizzlefin Wyrmling",
+          "introduction": "A short monsoon wyrmling swims through its own drizzle with two water whiskers and a folded red fin.",
+          "visualAnchor": "Small limbless blue rain serpent with clear eyes, white forked brow, cloud mane, twin whiskers, and red dorsal fin"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Pressure-Sail Rain Serpent",
+          "introduction": "The juvenile lengthens into an agile rain serpent whose crimson dorsal sail steers a continuous blue wake.",
+          "visualAnchor": "Long S-curved limbless leviathan with unchanged white brow, cloud mane, two whiskers, and one tall red back sail"
+        },
+        {
+          "stage": "ascended",
+          "name": "Seasonfront Leviathan",
+          "introduction": "An adult leviathan grows a deep cloud mane and coils around a complete moving pressure front.",
+          "visualAnchor": "Large circular serpent coil framing a storm eye with the same white brow, whiskers, blue body, and crimson sail"
+        },
+        {
+          "stage": "legendary",
+          "name": "Great Monsoon Worldcoil",
+          "introduction": "The legendary leviathan forms a vast vertical worldcoil that carries layered rain bands along its unbroken body.",
+          "visualAnchor": "Towering limbless rain leviathan coiled three times around a storm core, face visible above a huge crimson dorsal sail"
+        }
+      ]
+    },
+    {
+      "id": "aurora-ribbon",
+      "displayName": "Aurora Veil Deity",
+      "category": "elementalWeather",
+      "subtitle": "Polar-light robes · magnetic halo",
+      "symbolName": "waveform.path",
+      "lineageIntroduction": "A nonhuman polar-sky deity that matures around one serene silver mask, vertical eye slit, and magnetic aurora halo.",
+      "existenceAnchor": "Nonhuman Humanoid Aurora Deity",
+      "silhouetteAnchor": "Serene silver mask, single vertical blue eye slit, two aurora-sleeve arms, magnetic halo, and tapering light-robe body",
+      "silhouetteClass": "floating-masked-aurora-deity",
+      "motionAnchor": "Ceremonial arm arcs, slow halo rotations, vertical curtain ripples, and footless polar-light hovering",
+      "locomotionClass": "divine-aurora-hover",
+      "materialAnchor": "Translucent green-violet light robes, silver mask metal, black field glass, and fine polar particles",
+      "energyAnchor": "Vertical blue eye slit, polar gradient sleeves, and bright magnetic halo flares",
+      "motionProfile": "flowing",
+      "accent": {"red": 0.32, "green": 1.0, "blue": 0.7},
+      "secondaryAccent": {"red": 0.72, "green": 0.36, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sealed Polar Idol",
+          "introduction": "A compact magnetic shrine seals a small silver mask and folded aurora robes inside one dark halo.",
+          "visualAnchor": "Limbless oval idol with visible silver mask, one vertical blue eye slit, folded light ribbons, and black halo"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Veillight Godling",
+          "introduction": "A small floating godling opens two short light sleeves beneath the same calm mask and dark halo.",
+          "visualAnchor": "Child-proportioned nonhuman deity with silver mask, blue eye slit, two ribbon arms, black halo, and tapered robe"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Aurora Sky Herald",
+          "introduction": "The juvenile deity lengthens its luminous robe and conducts two broad polar curtains with open arms.",
+          "visualAnchor": "Slender masked humanoid figure with two long aurora sleeves, tapering footless robe, and circular magnetic halo"
+        },
+        {
+          "stage": "ascended",
+          "name": "Boreal Veil Deity",
+          "introduction": "An adult divine form crosses four ribbon arms through three luminous magnetic loops without changing its mask.",
+          "visualAnchor": "Four-armed floating deity with unchanged silver face, vertical blue slit, long light robe, and three interlocked halos"
+        },
+        {
+          "stage": "legendary",
+          "name": "Sovereign of Polar Night",
+          "introduction": "The final god opens a seven-point aurora crown while its masked humanoid body remains visible at the center.",
+          "visualAnchor": "Majestic masked deity centered under seven polar-light crown points with four sleeves, blue eye slit, and black halo"
+        }
+      ]
+    },
+    {
+      "id": "drought-mirage",
+      "displayName": "Drought Mirage Dancer",
+      "category": "elementalWeather",
+      "subtitle": "Nonhuman mirage effigy · heatglass fans",
+      "symbolName": "sun.max.trianglebadge.exclamationmark.fill",
+      "lineageIntroduction": "A nonhuman humanoid mirage effigy unfolds from a sun-glass cradle into a master of heat-haze dance while preserving the same mask, segmented body, and identity.",
+      "existenceAnchor": "Nonhuman Humanoid Mirage Effigy",
+      "silhouetteAnchor": "Smooth sunstone mask with one crescent eye slit, hollow neck gap, faceted torso, two segmented arms, two reverse-jointed legs, heatglass scarf, and twin fans; no skin, hair, human face, or human anatomy",
+      "silhouetteClass": "nonhuman-humanoid-mirage-effigy",
+      "motionAnchor": "Weightless pivots on pointed glass feet, visible floating-joint articulation, twin-fan arcs, and controlled heat-haze feints",
+      "locomotionClass": "levitating-humanoid-effigy-dance",
+      "materialAnchor": "Carved sunstone mask, faceted heat glass, flowing sand veil, salt-ceramic joints, and sun-gold fan frames",
+      "energyAnchor": "Single crescent eye slit, distorted horizon bands, and searing white fan trails",
+      "motionProfile": "spectral",
+      "accent": {"red": 1.0, "green": 0.68, "blue": 0.12},
+      "secondaryAccent": {"red": 0.92, "green": 0.2, "blue": 0.08},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sun-Glass Sleeping Cradle",
+          "introduction": "A faceted cradle protects a folded sunstone mask, torso prism, and paired limb segments before the effigy awakens.",
+          "visualAnchor": "Oval transparent cradle containing one crescent-slit mask, one torso prism, two folded arm pairs, two folded leg segments, and no organic infant"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Little Heatveil Effigy",
+          "introduction": "A small nonhuman effigy hovers on pointed glass feet while its oversized heatglass scarf learns the first turn.",
+          "visualAnchor": "Small humanoid construct with smooth mouthless mask, one glowing crescent eye slit, hollow neck, two segmented arms, two reverse-jointed legs, pointed feet, and no skin or hair"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Twin-Fan Mirage Adept",
+          "introduction": "The same hollow-jointed effigy extends its faceted torso and controls one small heatglass fan in each segmented hand.",
+          "visualAnchor": "Nonhuman humanoid construct with unchanged crescent-slit mask, visible gaps at neck and joints, faceted torso, reverse-jointed legs, and one fan in each hand"
+        },
+        {
+          "stage": "ascended",
+          "name": "Saltflat Mirage Virtuoso",
+          "introduction": "The taller mirage construct opens both fans into a horizontal heat ring while its mask and separated glass anatomy remain unmistakably nonhuman.",
+          "visualAnchor": "Tall nonhuman effigy in a low hover with crescent-slit mask, hollow neck, two segmented arms, two reverse-jointed legs, twin open fans, and scarf arc"
+        },
+        {
+          "stage": "legendary",
+          "name": "Effigy of the Endless Noon",
+          "introduction": "The fully realized effigy performs inside a complete ring of fan-made horizons without becoming human or dissolving into abstraction.",
+          "visualAnchor": "Physical nonhuman humanoid construct centered within eight heatglass fan echoes, retaining one crescent-slit mask, hollow joints, faceted torso, two arms, and two reverse-jointed legs"
+        }
+      ]
+    },
+    {
+      "id": "living-voltage",
+      "displayName": "Living Voltage",
+      "category": "elementalWeather",
+      "subtitle": "Plasma filament · capacitor-blue nodes",
+      "symbolName": "bolt.fill",
+      "lineageIntroduction": "A free electrical charge that builds branching limbs between floating capacitor nodes.",
+      "existenceAnchor": "Self-Organizing Electrical Discharge",
+      "silhouetteAnchor": "Three blue capacitor nodes, branching bolt limbs, a zigzag spine, and no solid outer body",
+      "silhouetteClass": "branching-lightning-between-nodes",
+      "motionAnchor": "Instant node-to-node jumps followed by branching limb stabilization",
+      "locomotionClass": "electrical-arc-teleport",
+      "materialAnchor": "White-blue plasma, ceramic capacitors, copper contact rings, and ionized air",
+      "energyAnchor": "Branching voltage arcs and pulsing blue charge nodes",
+      "motionProfile": "pulsing",
+      "accent": {"red": 0.3, "green": 0.76, "blue": 1.0},
+      "secondaryAccent": {"red": 0.94, "green": 0.98, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Closed Capacitor Spark",
+          "introduction": "A ceramic capacitor holds one restless white spark between two copper contacts.",
+          "visualAnchor": "Small blue cylinder with copper ends and a visible zigzag spark inside"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Two-Node Arclet",
+          "introduction": "A young discharge jumps between two floating nodes and grows one branching arm.",
+          "visualAnchor": "Two blue spheres connected by a white bolt with one short forked side branch"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Zigzag Circuit Strider",
+          "introduction": "Three capacitor nodes hold a tall lightning spine and four stable arc limbs.",
+          "visualAnchor": "Upright lightning figure stretched between three blue nodes with four branching limbs"
+        },
+        {
+          "stage": "ascended",
+          "name": "Gridbreak Voltage Warden",
+          "introduction": "A broad discharge moves across a square contact grid without using the same path twice.",
+          "visualAnchor": "Branching white electrical body spanning a tilted grid of nine blue contact points"
+        },
+        {
+          "stage": "legendary",
+          "name": "Crown Discharge Prime",
+          "introduction": "A radial voltage crown links dozens of nodes around a silent zero-potential center.",
+          "visualAnchor": "Circular lightning network of blue nodes and white arcs surrounding an empty dark core"
+        }
+      ]
+    }
+  ]
+}

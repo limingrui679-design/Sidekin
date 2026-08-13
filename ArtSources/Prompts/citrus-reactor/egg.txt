@@ -1,0 +1,25 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Citrus Reactor [Food & Alchemy]
+Form: Sealed Pith Dynamo, canonical egg stage
+Lineage concept: A segmented citrus engine that converts juice pressure, zest oil, and seeds into clean power.
+Existence anchor: Living Citrus Bio-Reactor
+Persistent silhouette logic: Spherical fruit core, peel-segment armor, seed feet, and a turbine-slice crown
+Silhouette topology class: segmented-fruit-reactor-on-seed-feet
+Movement and locomotion: Seed-foot rolls, peel opening cycles, and juice-jet hops; multi-seed-roll-and-jet
+Material system: Glossy citrus peel, translucent pulp, white pith, and brushed juicer steel
+Energy motif: Acid-green juice charge and yellow zest-oil sparks
+Current-stage introduction: A smooth citrus sphere stores pressure behind six perfectly fitted peel segments.
+Current-stage visual anchor: Round green-yellow fruit with six armor seams and four tiny dark seed feet
+
+This is the first stage and has no reference image. Establish a persistent identity marker that later stages can retain: use the catalog's core, face, facade, aperture, emblem, or focal feature. Do not depict the mature body early.
+
+Progression rule: Stage I is a compact origin container, seed, core, field, diagram, module, or incomplete organism. Do not expose the complete mature limb set. Make the origin readable and specific rather than a generic egg.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FF00FF, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FF00FF must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

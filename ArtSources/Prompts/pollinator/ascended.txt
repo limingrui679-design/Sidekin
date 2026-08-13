@@ -1,0 +1,25 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Pollinator Array [Machines & Vehicles]
+Form: Orchard Formation Lead, canonical ascended stage
+Lineage concept: A modular garden drone whose detachable rotors coordinate pollination as a flying array.
+Existence anchor: Autonomous Pollination Drone
+Persistent silhouette logic: Central seed-shaped fuselage, four petal rotors, needle nose, and detachable satellite pods
+Silhouette topology class: radial-four-rotor-drone
+Movement and locomotion: Hovering crosswinds, petal-rotor tilts, and synchronized pod formations; multirotor-hover-flight
+Material system: Cream bioplastic, green carbon stems, mesh petals, and amber optics
+Energy motif: Pollen-gold scan cones and green route lattices
+Current-stage introduction: A command drone releases four smaller pods to service an orchard in one pass.
+Current-stage visual anchor: Large flowerlike leader surrounded by four detached seed drones in diamond formation
+
+The provided reference image is the immediately preceding form, Nectar Route Mapper. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Flat X-shaped drone with four distinct petals and a long forward sampling needle
+
+Progression rule: Stage IV is a structural ascension: change stance, functional anatomy, formation, or architecture. Preserve the same face, core, facade, or identity marker; do not merely add armor.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FF00FF, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FF00FF must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

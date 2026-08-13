@@ -12,6 +12,7 @@ if [[ -z "$SIGN_IDENTITY" ]]; then
 fi
 
 cd "$PROJECT_ROOT"
+"$PROJECT_ROOT/Scripts/verify-theme-catalog.sh"
 swift "$PROJECT_ROOT/Scripts/verify-character-assets.swift" \
   "$PROJECT_ROOT/Sources/CainiaoPetApp/Resources/Characters"
 swift run -c release CainiaoPetSelfTest
@@ -61,8 +62,8 @@ fi
 
 PACKAGED_RESOURCE_BUNDLE="$CONTENTS/Resources/$(basename "$RESOURCE_BUNDLE")"
 CHARACTER_COUNT="$(find "$PACKAGED_RESOURCE_BUNDLE" -type f -name '*.png' | wc -l | tr -d ' ')"
-if [[ "$CHARACTER_COUNT" != "50" ]]; then
-  print -u2 "Expected exactly 50 packaged character models, found $CHARACTER_COUNT."
+if [[ "$CHARACTER_COUNT" != "500" ]]; then
+  print -u2 "Expected exactly 500 packaged character models, found $CHARACTER_COUNT."
   exit 1
 fi
 if find "$PACKAGED_RESOURCE_BUNDLE" -type f \

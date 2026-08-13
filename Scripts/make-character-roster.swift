@@ -11,18 +11,27 @@ let characterDirectory = URL(
     isDirectory: true
 )
 let outputURL = URL(fileURLWithPath: CommandLine.arguments[2])
-let themes: [(id: String, name: String)] = [
-    ("nova", "Nova Arena"),
-    ("mecha", "Vanguard Mecha"),
-    ("street", "Street Brawl"),
-    ("samurai", "Sakura Blade"),
-    ("abyss", "Abyssal Tidehunter"),
-    ("volcanic", "Molten Tyrant"),
-    ("candy", "Candy Carnival"),
-    ("wasteland", "Wasteland Salvager"),
-    ("phantom", "Phantom Veil"),
-    ("totem", "Verdant Totem")
-]
+struct ThemeCatalogEnvelope: Decodable {
+    struct Theme: Decodable {
+        let id: String
+        let displayName: String
+    }
+
+    let themes: [Theme]
+}
+
+let projectRoot = URL(fileURLWithPath: #filePath)
+    .deletingLastPathComponent()
+    .deletingLastPathComponent()
+let catalogURL = projectRoot.appendingPathComponent("ArtSources/PET_THEME_CATALOG.json")
+guard let catalogData = try? Data(contentsOf: catalogURL),
+      let catalog = try? JSONDecoder().decode(ThemeCatalogEnvelope.self, from: catalogData),
+      catalog.themes.count == 100
+else {
+    fputs("Could not decode the 100-theme catalog at \(catalogURL.path)\n", stderr)
+    exit(1)
+}
+let themes = catalog.themes.map { (id: $0.id, name: $0.displayName) }
 let stages: [(id: String, name: String)] = [
     ("egg", "Core Egg"),
     ("hatchling", "First Spark"),

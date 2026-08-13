@@ -1,0 +1,25 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Prism Web [Fauna & Mythic]
+Form: Crownprism Araneid, canonical legendary stage
+Lineage concept: An eight-legged orb-weaver that spins spectral silk through a faceted prism abdomen.
+Existence anchor: Prism Orb-Weaver
+Persistent silhouette logic: Radial body, eight long jointed legs, loom-shaped abdomen, and an open web ring
+Silhouette topology class: radial-eight-legged-weaver
+Movement and locomotion: Radial sidesteps, ceiling hangs, and suspended web-spinning turns; octopod-radial-climb
+Material system: Clear prism quartz, chrome joints, spectral silk, and dark velvet facets
+Energy motif: Refracted spectrum web and a white prism-heart flare
+Current-stage introduction: A crownprism araneid whose radiant loom can reshape the battlefield from above.
+Current-stage visual anchor: Inverted crown-shaped spider descending through a vast broken ring of spectral silk
+
+The provided reference image is the immediately preceding form, Cathedral Websmith. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Tall faceted abdomen supporting pointed web arches across eight buttress-like legs
+
+Progression rule: Stage V is the unmistakable crown form. Make a major outline, scale, formation, or system change while preserving the same lineage, identity marker, and existence type.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FFFF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FFFF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

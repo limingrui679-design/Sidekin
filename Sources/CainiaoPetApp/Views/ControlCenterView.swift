@@ -415,6 +415,8 @@ private struct PetWorkshopDashboard: View {
     @State private var showRestartJobAlert = false
     @State private var pendingRegeneration: StageTemplateAction?
     @State private var showRegenerationAlert = false
+    @State private var themeSearch = ""
+    @State private var selectedThemeCategory: PetThemeCategory?
 
     private let artPresets = [
         "Competitive-game 3D character art, readable silhouette, premium materials",
@@ -576,13 +578,13 @@ private struct PetWorkshopDashboard: View {
                 VStack(alignment: .leading, spacing: 3) {
                     Text("TEMPLATE LIBRARY")
                         .font(.headline.bold())
-                    Text("Ten offline themes are always available. Generated templates appear here.")
+                    Text("100 offline themes across ten existence types. Generated templates appear here.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 5) {
-                    Text("\(model.customTemplates.count) CUSTOM")
+                    Text("\(filteredThemes.count) SHOWN · \(model.customTemplates.count) CUSTOM")
                         .font(.caption2.bold())
                         .foregroundStyle(.mint)
                     Button {
@@ -595,14 +597,70 @@ private struct PetWorkshopDashboard: View {
                 }
             }
 
-            FixedGrid(items: PetVisualTheme.allCases, columns: 5, spacing: 8) { theme in
-                ThemeChoiceButton(
-                    theme: theme,
-                    stage: model.pet.stage,
-                    isSelected: model.activeCustomTemplate == nil && model.activeTheme == theme
-                ) {
-                    model.choose(theme: theme)
+            HStack(spacing: 8) {
+                Image(systemName: "magnifyingglass")
+                    .foregroundStyle(.secondary)
+                TextField("Search name, form, material, or concept", text: $themeSearch)
+                    .textFieldStyle(.plain)
+                if !themeSearch.isEmpty {
+                    Button {
+                        themeSearch = ""
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundStyle(.secondary)
+                    }
+                    .buttonStyle(.plain)
                 }
+            }
+            .padding(.horizontal, 11)
+            .padding(.vertical, 9)
+            .background(Color.white.opacity(0.055), in: RoundedRectangle(cornerRadius: 9))
+            .overlay(RoundedRectangle(cornerRadius: 9).stroke(Color.white.opacity(0.08), lineWidth: 1))
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 7) {
+                    ThemeCategoryFilterButton(
+                        title: "All 100",
+                        symbol: "square.grid.3x3.fill",
+                        isSelected: selectedThemeCategory == nil
+                    ) {
+                        selectedThemeCategory = nil
+                    }
+
+                    ForEach(PetThemeCategory.allCases) { category in
+                        ThemeCategoryFilterButton(
+                            title: category.displayName,
+                            symbol: category.symbolName,
+                            isSelected: selectedThemeCategory == category
+                        ) {
+                            selectedThemeCategory = category
+                        }
+                    }
+                }
+            }
+
+            LazyVGrid(
+                columns: [GridItem(.adaptive(minimum: 116, maximum: 152), spacing: 8)],
+                spacing: 8
+            ) {
+                ForEach(filteredThemes) { theme in
+                    ThemeChoiceButton(
+                        theme: theme,
+                        stage: model.pet.stage,
+                        isSelected: model.activeCustomTemplate == nil && model.activeTheme == theme
+                    ) {
+                        model.choose(theme: theme)
+                    }
+                }
+            }
+
+            if filteredThemes.isEmpty {
+                ContentUnavailableView(
+                    "No Matching Theme",
+                    systemImage: "magnifyingglass",
+                    description: Text("Try another name, material, existence type, or clear the category filter.")
+                )
+                .frame(maxWidth: .infinity, minHeight: 180)
             }
 
             if !model.customTemplates.isEmpty {
@@ -649,6 +707,27 @@ private struct PetWorkshopDashboard: View {
         }
         .frame(maxWidth: .infinity)
         .cardStyle()
+    }
+
+    private var filteredThemes: [PetVisualTheme] {
+        let query = themeSearch.trimmingCharacters(in: .whitespacesAndNewlines)
+        return PetVisualTheme.allCases.filter { theme in
+            let categoryMatches = selectedThemeCategory.map { theme.category == $0 } ?? true
+            guard categoryMatches else { return false }
+            guard !query.isEmpty else { return true }
+            let searchable = [
+                theme.displayName,
+                theme.category.displayName,
+                theme.subtitle,
+                theme.lineageIntroduction,
+                theme.existenceAnchor,
+                theme.silhouetteAnchor,
+                theme.motionAnchor,
+                theme.materialAnchor,
+                theme.energyAnchor
+            ]
+            return searchable.contains { $0.localizedCaseInsensitiveContains(query) }
+        }
     }
 
     private var generationRecoveryPanel: some View {
@@ -1276,6 +1355,7 @@ private struct EvolutionDashboard: View {
                                 subtitle: customStage.experienceThreshold == 0
                                     ? "Starting form"
                                     : "Unlocks at \(customStage.experienceThreshold) XP",
+                                introduction: template.basePrompt,
                                 theme: template.fallbackTheme,
                                 assetURL: PetTemplateStore().assetURL(
                                     templateID: template.id,
@@ -1294,6 +1374,7 @@ private struct EvolutionDashboard: View {
                                 name: model.activeTheme.formName(at: stage),
                                 phaseLabel: stage.displayName,
                                 subtitle: stage.subtitle,
+                                introduction: model.activeTheme.formIntroduction(at: stage),
                                 theme: model.activeTheme,
                                 assetURL: nil,
                                 isCurrent: model.pet.stage == stage,
@@ -1514,6 +1595,32 @@ private struct MiniMetric: View {
     }
 }
 
+private struct ThemeCategoryFilterButton: View {
+    let title: String
+    let symbol: String
+    let isSelected: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Label(title, systemImage: symbol)
+                .font(.system(size: 10.5, weight: .bold, design: .rounded))
+                .foregroundStyle(isSelected ? Color.black : Color.primary.opacity(0.82))
+                .padding(.horizontal, 10)
+                .padding(.vertical, 7)
+                .background(
+                    isSelected ? Color.mint : Color.white.opacity(0.055),
+                    in: Capsule()
+                )
+                .overlay(
+                    Capsule()
+                        .stroke(isSelected ? Color.mint : Color.white.opacity(0.09), lineWidth: 1)
+                )
+        }
+        .buttonStyle(.plain)
+    }
+}
+
 private struct ThemeChoiceButton: View {
     let theme: PetVisualTheme
     let stage: PetStage
@@ -1580,6 +1687,7 @@ private struct ThemeChoiceButton: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(theme.displayName), \(isSelected ? "selected" : "select")")
+        .help(theme.lineageIntroduction)
     }
 }
 
@@ -1679,6 +1787,7 @@ private struct EvolutionCard: View {
     let name: String
     let phaseLabel: String
     let subtitle: String
+    let introduction: String
     let theme: PetVisualTheme
     let assetURL: URL?
     let isCurrent: Bool
@@ -1718,6 +1827,11 @@ private struct EvolutionCard: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .multilineTextAlignment(.leading)
+                    Text(introduction)
+                        .font(.caption.weight(.medium))
+                        .foregroundStyle(.primary.opacity(0.88))
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(3)
                     Label(isPreviewing ? "PREVIEWING" : "PREVIEW", systemImage: isPreviewing ? "eye.fill" : "eye")
                         .font(.caption2.weight(.semibold))
                         .foregroundStyle(isPreviewing ? .cyan : .secondary)
@@ -1777,13 +1891,18 @@ private struct LineageAnchorPanel: View {
                 Text("\(theme.displayName) · DESIGN ANCHORS")
                     .font(.headline.bold())
                 Spacer()
-                Text("NOT A RECOLOR")
+                Text(theme.category.displayName.uppercased())
                     .font(.caption2.bold())
                     .foregroundStyle(theme.secondaryAccentColor)
             }
 
+            Text(theme.lineageIntroduction)
+                .font(.subheadline.weight(.medium))
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+
             LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
-                AnchorFact(symbol: "pawprint.fill", label: "Species", value: theme.speciesAnchor)
+                AnchorFact(symbol: theme.category.symbolName, label: "Existence", value: theme.existenceAnchor)
                 AnchorFact(symbol: "figure.run", label: "Movement", value: theme.motionAnchor)
                 AnchorFact(symbol: "square.3.layers.3d", label: "Silhouette", value: theme.silhouetteAnchor)
                 AnchorFact(symbol: "sparkles", label: "Material / Energy", value: "\(theme.materialAnchor) · \(theme.energyAnchor)")

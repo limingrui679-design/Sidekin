@@ -1,0 +1,504 @@
+{
+  "themes": [
+    {
+      "id": "totem",
+      "displayName": "Verdant Totem",
+      "category": "floraFungi",
+      "subtitle": "Carved wood and stone · amber tree energy",
+      "symbolName": "leaf.fill",
+      "lineageIntroduction": "A root-hoofed forest guardian whose antlers expand into a walking worldtree crown.",
+      "existenceAnchor": "Ancient Tree Stag × Boar",
+      "silhouetteAnchor": "Four root-hooves, boar-like shoulders, a carved trunk face, and worldtree crown antlers",
+      "silhouetteClass": "root-hoofed-canopy-beast",
+      "motionAnchor": "Steady four-hoof stomps that wake roots in widening circles",
+      "locomotionClass": "rooted-quadruped-stomp",
+      "materialAnchor": "Carved wood, mossy stone, resin amber, and living bark",
+      "energyAnchor": "Amber heartwood and luminous growth-ring waves",
+      "motionProfile": "rooted",
+      "accent": {"red": 0.58, "green": 0.76, "blue": 0.18},
+      "secondaryAccent": {"red": 1.0, "green": 0.55, "blue": 0.06},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Cracked Amber Seed",
+          "introduction": "A cracked amber seed wrapped in the first roots of an ancient grove.",
+          "visualAnchor": "Large translucent seed held upright by four root nubs around a glowing amber center"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Root-Hoof Fawn",
+          "introduction": "A root-hoof fawn carrying a warm resin heart between tiny antlers.",
+          "visualAnchor": "Small long-legged fawn with branching root feet and two short twig antlers"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Mossplate Calf",
+          "introduction": "A moss-plated calf strong enough to wake roots beneath each step.",
+          "visualAnchor": "Broad juvenile with boar shoulders, stone side plates, and a low sapling crown"
+        },
+        {
+          "stage": "ascended",
+          "name": "Grove-Rune Hornbeast",
+          "introduction": "A grove-rune hornbeast growing shrine-like branches from its shoulders.",
+          "visualAnchor": "Heavy root-hoofed guardian beneath two asymmetrical shrine-branch shoulder towers"
+        },
+        {
+          "stage": "legendary",
+          "name": "Worldtree Crownstag",
+          "introduction": "A crownstag whose worldtree antlers shelter an entire living ecosystem.",
+          "visualAnchor": "Massive four-hoofed silhouette carrying a complete spreading tree as its antler crown"
+        }
+      ]
+    },
+    {
+      "id": "mycelium",
+      "displayName": "Mycelium Grove",
+      "category": "floraFungi",
+      "subtitle": "Velvet caps · bioluminescent mycelium",
+      "symbolName": "circle.dotted.circle.fill",
+      "lineageIntroduction": "A squat mushroom toad that links spores, dew, and underground mycelium into grove magic.",
+      "existenceAnchor": "Mycelium Toad",
+      "silhouetteAnchor": "Wide squat frog body, oversized mushroom cap, lantern throat, and branching root toes",
+      "silhouetteClass": "squat-cap-bodied-hopper",
+      "motionAnchor": "Compressed frog leaps, grounded crouches, and expanding spore pulses",
+      "locomotionClass": "compressed-root-toe-hop",
+      "materialAnchor": "Velvet cap tissue, pearl dew, porous ceramic, and luminous fungal threads",
+      "energyAnchor": "Teal spore constellations and a breathing lantern throat",
+      "motionProfile": "bouncing",
+      "accent": {"red": 0.24, "green": 0.95, "blue": 0.64},
+      "secondaryAccent": {"red": 0.62, "green": 0.35, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sporecap Seed",
+          "introduction": "A sporecap seed breathing faint teal light through porous ceramic skin.",
+          "visualAnchor": "Round porous seed beneath a tiny velvet cap with three glowing root threads"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Dewbell Tadling",
+          "introduction": "A dewbell tadling carrying a soft mushroom cap above a glowing throat.",
+          "visualAnchor": "Tiny squat tadling with a bell-shaped cap and one oversized luminous throat pouch"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Glowcap Hopper",
+          "introduction": "A squat hopper spreading harmless guide spores with every compressed leap.",
+          "visualAnchor": "Wide frog-like fungus poised to jump beneath a spotted cap and trailing spore arc"
+        },
+        {
+          "stage": "ascended",
+          "name": "Mycelial Grovekeeper",
+          "introduction": "A grovekeeper linking root toes to a wide underground mycelial network.",
+          "visualAnchor": "Grounded cap guardian with branching luminous toes and three satellite mushrooms"
+        },
+        {
+          "stage": "legendary",
+          "name": "Moonspore Toad Sage",
+          "introduction": "A moonspore sage whose cap maps the living constellation beneath the forest.",
+          "visualAnchor": "Huge low fungal sage under a moon-disc cap webbed with a complete teal star map"
+        }
+      ]
+    },
+    {
+      "id": "thunder-orchid",
+      "displayName": "Thunder Orchid",
+      "category": "floraFungi",
+      "subtitle": "Rain-silk petals · charged aerial roots",
+      "symbolName": "bolt.circle.fill",
+      "lineageIntroduction": "An airborne orchid that steers rain with petal vanes and stores lightning in hanging roots.",
+      "existenceAnchor": "Self-Flying Storm Orchid",
+      "silhouetteAnchor": "Five broad petals, a narrow hanging stem, tangled aerial roots, and two vane leaves",
+      "silhouetteClass": "radial-flower-with-root-tail",
+      "motionAnchor": "Petal flaps, root-tail steering, and sudden lightning-assisted rises",
+      "locomotionClass": "petal-powered-hover",
+      "materialAnchor": "Rain-silk petals, waxy leaves, silver veins, and translucent root tissue",
+      "energyAnchor": "Violet lightning beads traveling down copper-blue roots",
+      "motionProfile": "winged",
+      "accent": {"red": 0.72, "green": 0.3, "blue": 1.0},
+      "secondaryAccent": {"red": 0.28, "green": 0.85, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Static Orchid Bulb",
+          "introduction": "A sealed orchid bulb lifts from the soil whenever its silver veins spark.",
+          "visualAnchor": "Pear-shaped violet bulb with five petal seams and a tuft of dangling silver roots"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Drizzle Petal Sprout",
+          "introduction": "A three-petal sprout hovers briefly by flicking two broad rain-catching leaves.",
+          "visualAnchor": "Tiny airborne stem with three uneven petals, two leaf wings, and a root tassel"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Rootlight Glider",
+          "introduction": "A complete orchid glides sideways while charged roots trace its turn through mist.",
+          "visualAnchor": "Five-petal flower in profile with a long luminous root tail and two angled vane leaves"
+        },
+        {
+          "stage": "ascended",
+          "name": "Monsoon Bloomwing",
+          "introduction": "A broad storm flower spreads layered petals to pull a controlled rainfront inward.",
+          "visualAnchor": "Large double-ring orchid with root lightning converging beneath its central cup"
+        },
+        {
+          "stage": "legendary",
+          "name": "Skyroot Tempest Crown",
+          "introduction": "A colossal orchid suspends a thundercloud inside its crown of open petals.",
+          "visualAnchor": "Crown-shaped flower surrounding a dark cloud core above a cathedral of hanging roots"
+        }
+      ]
+    },
+    {
+      "id": "mirage-cactus",
+      "displayName": "Mirage Cactus",
+      "category": "floraFungi",
+      "subtitle": "Waxy jade · heat-haze blossoms",
+      "symbolName": "sun.dust.fill",
+      "lineageIntroduction": "A walking desert cactus that stores reflected horizons inside water-filled translucent ribs.",
+      "existenceAnchor": "Ambulatory Mirage Cactus",
+      "silhouetteAnchor": "Tall ribbed column, two uneven arms, a ring of root feet, and a crown blossom",
+      "silhouetteClass": "upright-branching-column-plant",
+      "motionAnchor": "Root-foot shuffles, arm-led balance, and spring-loaded water hops",
+      "locomotionClass": "multi-root-foot-shuffle",
+      "materialAnchor": "Waxy jade skin, translucent water ribs, pale thorns, and dry paper blossoms",
+      "energyAnchor": "Gold heat haze and inverted horizon reflections",
+      "motionProfile": "marching",
+      "accent": {"red": 0.34, "green": 0.84, "blue": 0.42},
+      "secondaryAccent": {"red": 1.0, "green": 0.62, "blue": 0.14},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Dewlocked Cactus Pearl",
+          "introduction": "A round cactus pearl protects one impossible drop of desert water.",
+          "visualAnchor": "Spherical green seed with six clear water ribs and a small crown of white thorns"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Rootstep Button",
+          "introduction": "A squat cactus button tests six root feet while projecting a tiny false horizon.",
+          "visualAnchor": "Low ribbed button on six stubby roots beneath one floating golden horizon line"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Twin-Arm Heatwalker",
+          "introduction": "A tall young cactus balances unequal arms as its water ribs bend desert light.",
+          "visualAnchor": "Classic vertical cactus with one high arm, one low arm, and visible clear rib windows"
+        },
+        {
+          "stage": "ascended",
+          "name": "Oasis Decoy Sentinel",
+          "introduction": "A many-ribbed sentinel surrounds itself with three convincing but empty oasis images.",
+          "visualAnchor": "Branched cactus on a wide root ring with three small floating mirrored oasis discs"
+        },
+        {
+          "stage": "legendary",
+          "name": "Horizon-Bloom Saguaro",
+          "introduction": "A towering saguaro opens a crown flower that folds the horizon into a halo.",
+          "visualAnchor": "Tall many-armed cactus beneath a vast radial blossom containing an upside-down desert"
+        }
+      ]
+    },
+    {
+      "id": "tidal-mangrove",
+      "displayName": "Tidal Mangrove",
+      "category": "floraFungi",
+      "subtitle": "Salt bark · lagoon-blue sap",
+      "symbolName": "water.waves.and.arrow.up",
+      "lineageIntroduction": "A walking mangrove whose stilt roots filter saltwater and carry a miniature tidal lagoon.",
+      "existenceAnchor": "Ambulatory Mangrove Ecosystem",
+      "silhouetteAnchor": "Broad canopy, hollow trunk basin, many arching stilt roots, and hanging seed pods",
+      "silhouetteClass": "canopy-on-stilt-root-arches",
+      "motionAnchor": "Alternating stilt-root steps while the trunk lagoon stays level",
+      "locomotionClass": "multi-stilt-root-walk",
+      "materialAnchor": "Salt-bleached bark, glossy leaves, wet roots, and blue sap glass",
+      "energyAnchor": "Lagoon-blue tide marks and silver salt pulses",
+      "motionProfile": "rooted",
+      "accent": {"red": 0.12, "green": 0.72, "blue": 0.62},
+      "secondaryAccent": {"red": 0.18, "green": 0.64, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Saltwater Propagule",
+          "introduction": "A long mangrove seed floats upright around a protected bead of blue sap.",
+          "visualAnchor": "Spear-shaped brown seed with four tiny root hooks and a bright blue central bead"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Mudskate Sapling",
+          "introduction": "A leafy sapling skates over wet ground on four curved juvenile roots.",
+          "visualAnchor": "Thin trunk with a flat leaf umbrella and four outward-curving root skates"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Lagoonroot Strider",
+          "introduction": "A young mangrove walks on eight stilts while its hollow trunk fills with water.",
+          "visualAnchor": "Small canopy raised high on eight root arches around a visible trunk-water bowl"
+        },
+        {
+          "stage": "ascended",
+          "name": "Estuary Canopy Bearer",
+          "introduction": "A wide guardian carries fishless reeds, pools, and salt gardens between its roots.",
+          "visualAnchor": "Broad layered canopy over a lattice of roots enclosing three separate blue pools"
+        },
+        {
+          "stage": "legendary",
+          "name": "Walking Delta Sovereign",
+          "introduction": "A vast mangrove carries a complete branching river delta beneath its moving crown.",
+          "visualAnchor": "World-scale canopy above fan-shaped root waterways and many hanging seed lanterns"
+        }
+      ]
+    },
+    {
+      "id": "moon-lotus",
+      "displayName": "Moonlit Lotus",
+      "category": "floraFungi",
+      "subtitle": "Pearl petals · lunar dew",
+      "symbolName": "moon.stars.fill",
+      "lineageIntroduction": "A floating lotus that folds moonlight into petals and glides on an invisible pond surface.",
+      "existenceAnchor": "Airborne Lunar Lotus",
+      "silhouetteAnchor": "Wide petal rosette, central seed cup, trailing ribbon stems, and a vertical moon disc",
+      "silhouetteClass": "floating-horizontal-rosette",
+      "motionAnchor": "Level glides, petal closures, and slow stem-ribbon turns",
+      "locomotionClass": "surface-skimming-float",
+      "materialAnchor": "Pearl-white petals, silver leaf backs, glass dew, and dark velvet stems",
+      "energyAnchor": "Cool moon disc and concentric luminous dew rings",
+      "motionProfile": "buoyant",
+      "accent": {"red": 0.78, "green": 0.88, "blue": 1.0},
+      "secondaryAccent": {"red": 0.48, "green": 0.36, "blue": 0.95},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Closed Lunar Bud",
+          "introduction": "A sealed silver bud floats above a single perfect ring of imaginary water.",
+          "visualAnchor": "Tapered closed bud suspended over one horizontal luminous ripple and a curled stem"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Dewcup Floater",
+          "introduction": "A tiny three-petal cup catches moon dew while drifting without a pond.",
+          "visualAnchor": "Open cup with three broad petals, one round dew bead, and two trailing stem ribbons"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Crescent Pad Glider",
+          "introduction": "A wide lotus rides a crescent leaf that banks like a silent skiff.",
+          "visualAnchor": "Seven-petal flower mounted on a crescent pad with a vertical half-moon behind"
+        },
+        {
+          "stage": "ascended",
+          "name": "Night-Pond Oracle",
+          "introduction": "A layered bloom opens its seed cup to read ripples in moonlit probability.",
+          "visualAnchor": "Double lotus rosette surrounded by three concentric ripples and an upright moon disc"
+        },
+        {
+          "stage": "legendary",
+          "name": "Full-Moon Lotus Throne",
+          "introduction": "A radiant lotus frames the full moon inside a throne of pearl petals.",
+          "visualAnchor": "Huge symmetrical rosette rising around a complete moon with long cascading stems"
+        }
+      ]
+    },
+    {
+      "id": "abyss-kelp",
+      "displayName": "Abyss Kelp Choir",
+      "category": "floraFungi",
+      "subtitle": "Black kelp ribbons · sonar-blue nodes",
+      "symbolName": "waveform",
+      "lineageIntroduction": "A deep-water kelp organism whose many fronds resonate together as one roaming choir.",
+      "existenceAnchor": "Colonial Singing Kelp",
+      "silhouetteAnchor": "Weighted anchor bulb, tall ribbon fronds, side air bladders, and a tuning-fork crown",
+      "silhouetteClass": "vertical-ribbon-column",
+      "motionAnchor": "Whole-body current sways with independent frond harmonics",
+      "locomotionClass": "anchored-drift-and-pull",
+      "materialAnchor": "Black-green kelp leather, translucent air nodes, and nacreous vein lines",
+      "energyAnchor": "Sonar-blue harmonics and visible standing-wave knots",
+      "motionProfile": "flowing",
+      "accent": {"red": 0.08, "green": 0.74, "blue": 0.72},
+      "secondaryAccent": {"red": 0.18, "green": 0.42, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Hushbladder Seed",
+          "introduction": "A dark anchor seed holds one clear air bladder that hums below hearing.",
+          "visualAnchor": "Heavy black bulb with one transparent blue bubble and two tightly rolled fronds"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Two-Frond Hummer",
+          "introduction": "Two young kelp ribbons bend against each other to produce their first tone.",
+          "visualAnchor": "Small anchor bulb supporting two tall opposing ribbons and three side air beads"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Current Chord Kelp",
+          "introduction": "Five fronds tune their lengths until the surrounding current becomes a chord.",
+          "visualAnchor": "Fan of five unequal black-green ribbons linked by glowing blue standing-wave nodes"
+        },
+        {
+          "stage": "ascended",
+          "name": "Trench Resonance Organ",
+          "introduction": "A towering kelp organ opens hollow fronds that amplify the shape of nearby trenches.",
+          "visualAnchor": "Vertical pipe-organ silhouette made from curled kelp tubes above a massive anchor bulb"
+        },
+        {
+          "stage": "legendary",
+          "name": "Midnight Canopy Chorus",
+          "introduction": "A complete dark kelp canopy moves as one singer across the silent abyss.",
+          "visualAnchor": "Broad arching canopy of dozens of ribbon fronds around a luminous tuning-fork void"
+        }
+      ]
+    },
+    {
+      "id": "seedvault-baobab",
+      "displayName": "Seedvault Baobab",
+      "category": "floraFungi",
+      "subtitle": "Pale cork bark · emerald seed windows",
+      "symbolName": "archivebox.fill",
+      "lineageIntroduction": "A hollow walking baobab that safeguards rare seeds in climate-controlled trunk chambers.",
+      "existenceAnchor": "Mobile Botanical Seed Vault",
+      "silhouetteAnchor": "Enormous bottle trunk, short root legs, sparse crown branches, and circular seed windows",
+      "silhouetteClass": "bottle-trunk-on-root-legs",
+      "motionAnchor": "Slow root-leg rotations while internal seed chambers remain upright",
+      "locomotionClass": "rotating-root-leg-walk",
+      "materialAnchor": "Pale cork bark, dark heartwood, glass seed windows, and copper humidity pipes",
+      "energyAnchor": "Emerald germination lights and soft climate-control spirals",
+      "motionProfile": "heavy",
+      "accent": {"red": 0.36, "green": 0.82, "blue": 0.3},
+      "secondaryAccent": {"red": 0.94, "green": 0.72, "blue": 0.24},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Corkbound Seed Safe",
+          "introduction": "A thick cork sphere guards five different seeds behind tiny round windows.",
+          "visualAnchor": "Round bark safe with five colored portholes and three short root-latch feet"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Bottletrunk Keeper",
+          "introduction": "A squat sapling carries its first refrigerated seed drawer inside a swollen trunk.",
+          "visualAnchor": "Small bottle-shaped trunk on four roots beneath two bare forked branches"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Germination Archivist",
+          "introduction": "A walking baobab turns six glass seed chambers toward the correct light.",
+          "visualAnchor": "Broad upright trunk with six circular windows and a sparse horizontal branch crown"
+        },
+        {
+          "stage": "ascended",
+          "name": "Climate Vault Walker",
+          "introduction": "A massive tree seals separate desert, alpine, and rainforest chambers in its trunk.",
+          "visualAnchor": "Towering baobab on six roots with three large compartment windows stacked vertically"
+        },
+        {
+          "stage": "legendary",
+          "name": "Last-Garden Custodian",
+          "introduction": "A monumental baobab unfolds a living crown grown from every seed it protects.",
+          "visualAnchor": "Huge bottle trunk beneath a mosaic canopy of visibly different leaf and flower clusters"
+        }
+      ]
+    },
+    {
+      "id": "crown-bramble",
+      "displayName": "Crown Bramble",
+      "category": "floraFungi",
+      "subtitle": "Iron thorns · ruby sap",
+      "symbolName": "crown.fill",
+      "lineageIntroduction": "A self-knotting bramble that rolls, arches, and rebuilds its thorny body around a ruby bud.",
+      "existenceAnchor": "Ambulatory Thorn-Vine Colony",
+      "silhouetteAnchor": "Hollow rolling vine cage, hooked thorn spokes, trailing tendrils, and a central ruby bud",
+      "silhouetteClass": "hollow-thorn-wheel",
+      "motionAnchor": "End-over-end rolling interrupted by sudden vine uncoiling",
+      "locomotionClass": "rolling-vine-cage",
+      "materialAnchor": "Black-green vine fiber, iron thorns, dry rosewood, and ruby-red sap",
+      "energyAnchor": "Crimson sap pulses and thorn-tip warning sparks",
+      "motionProfile": "rolling",
+      "accent": {"red": 0.86, "green": 0.08, "blue": 0.22},
+      "secondaryAccent": {"red": 0.44, "green": 0.8, "blue": 0.22},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Thornknotted Rose Core",
+          "introduction": "A ruby bud sleeps inside a tight knot of black thorns and curled vine.",
+          "visualAnchor": "Dense thorn ball with one visible red bud and three hooked tendril tips"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Briarwheel Sprout",
+          "introduction": "A young vine bends into a loose wheel and tumbles after moving light.",
+          "visualAnchor": "Open circular vine loop with five thorn spokes and a small bud riding off center"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Hookvine Roller",
+          "introduction": "A reinforced bramble cage steers by extending one hooked tendril at a time.",
+          "visualAnchor": "Wide hollow thorn wheel with two trailing steering vines and a suspended ruby core"
+        },
+        {
+          "stage": "ascended",
+          "name": "Briar Arch Duelist",
+          "introduction": "A rolling cage unfolds into a tall arch that fences with paired thorn whips.",
+          "visualAnchor": "Vertical pointed vine arch planted on root tips with two long crossed thorn lashes"
+        },
+        {
+          "stage": "legendary",
+          "name": "Rose-Cage Thorn Regent",
+          "introduction": "A crown-shaped bramble surrounds the ruby bloom with rotating defensive rings.",
+          "visualAnchor": "Three nested thorn wheels forming a royal cage around one enormous open red rose"
+        }
+      ]
+    },
+    {
+      "id": "glassfern",
+      "displayName": "Glassfern Oracle",
+      "category": "floraFungi",
+      "subtitle": "Silica fronds · prismatic veinlight",
+      "symbolName": "triangle.fill",
+      "lineageIntroduction": "A crystalline fern that pivots mirrored fronds to read light, heat, and approaching motion.",
+      "existenceAnchor": "Photosensitive Silica Fern",
+      "silhouetteAnchor": "Fan-shaped frond crown, jointed black stem, tripod rhizome, and a central prism eye",
+      "silhouetteClass": "fan-frond-on-tripod-stem",
+      "motionAnchor": "Tripod pivots, folding frond fans, and abrupt mirror-angle corrections",
+      "locomotionClass": "tripod-rhizome-pivot",
+      "materialAnchor": "Smoked silica leaves, black mineral stems, mirrored veins, and quartz joints",
+      "energyAnchor": "Prismatic forecast lines and a white refraction eye",
+      "motionProfile": "poised",
+      "accent": {"red": 0.35, "green": 0.95, "blue": 0.9},
+      "secondaryAccent": {"red": 0.78, "green": 0.4, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Silica Fiddlehead",
+          "introduction": "A coiled glass fiddlehead reflects three possible dawns inside its spiral.",
+          "visualAnchor": "Clear curled fern spiral on a black stem with three triangular light reflections"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Mirrorleaf Tripod",
+          "introduction": "A young fern opens two mirrored leaves while balancing on three rhizome points.",
+          "visualAnchor": "Thin stem on tripod roots beneath two opposed diamond-shaped glass leaves"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Prism Frond Reader",
+          "introduction": "A five-frond fan sweeps the room and marks each moving silhouette in color.",
+          "visualAnchor": "Semicircular fan of five glass fronds above a central white prism eye"
+        },
+        {
+          "stage": "ascended",
+          "name": "Kaleidoscope Fernseer",
+          "introduction": "A double fan folds into a rotating kaleidoscope that predicts intersecting paths.",
+          "visualAnchor": "Two crossed circular frond fans around a jointed stem and a bright triangular aperture"
+        },
+        {
+          "stage": "legendary",
+          "name": "Spectrum Canopy Oracle",
+          "introduction": "A vast fern canopy separates every incoming motion into a different ray of light.",
+          "visualAnchor": "Towering radial crown of many faceted fronds above a tiny three-legged dark stem"
+        }
+      ]
+    }
+  ]
+}

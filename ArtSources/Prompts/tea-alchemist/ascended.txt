@@ -1,0 +1,25 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Tea Alchemist [Food & Alchemy]
+Form: Steam-Sigil Apothecary, canonical ascended stage
+Lineage concept: A walking teapot laboratory that blends leaves, temperature, and steam into restorative brews.
+Existence anchor: Sentient Celadon Teapot Laboratory
+Persistent silhouette logic: Round pot torso, long spout arm, handle arch, four cup feet, and a lid-cap chimney
+Silhouette topology class: round-teapot-on-cup-feet
+Movement and locomotion: Four-cup steps, spout-led pours, and handle-balanced spins; four-cup-foot-walk
+Material system: Crackled celadon, dark tea, bamboo fittings, and translucent steam cloth
+Energy motif: Amber infusion spirals and mint-white steam characters
+Current-stage introduction: A broad alchemist projects healing diagrams from a crown of scented steam.
+Current-stage visual anchor: Wide celadon kettle beneath a spiral steam canopy marked by three mint symbols
+
+The provided reference image is the immediately preceding form, Infusion Formula Pot. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Tall teapot body with three amber gauge windows and a long articulated spout arm
+
+Progression rule: Stage IV is a structural ascension: change stance, functional anatomy, formation, or architecture. Preserve the same face, core, facade, or identity marker; do not merely add armor.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FF00FF, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FF00FF must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

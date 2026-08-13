@@ -12,6 +12,7 @@ let package = Package(
         .library(name: "CainiaoPetCreator", targets: ["CainiaoPetCreator"]),
         .executable(name: "CainiaoPet", targets: ["CainiaoPetApp"]),
         .executable(name: "CainiaoPetBridge", targets: ["CainiaoPetBridge"]),
+        .executable(name: "CainiaoPetAssetPrep", targets: ["CainiaoPetAssetPrep"]),
         .executable(name: "CainiaoPetSelfTest", targets: ["CainiaoPetSelfTest"]),
         .executable(name: "CainiaoPetAPISelfTest", targets: ["CainiaoPetAPISelfTest"])
     ],
@@ -40,6 +41,11 @@ let package = Package(
             name: "CainiaoPetBridge",
             dependencies: ["CainiaoPetCore"],
             path: "Sources/CainiaoPetBridge"
+        ),
+        .executableTarget(
+            name: "CainiaoPetAssetPrep",
+            dependencies: ["CainiaoPetCreator"],
+            path: "Sources/CainiaoPetAssetPrep"
         ),
         .executableTarget(
             name: "CainiaoPetSelfTest",

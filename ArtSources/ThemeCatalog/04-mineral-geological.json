@@ -1,0 +1,504 @@
+{
+  "themes": [
+    {
+      "id": "volcanic",
+      "displayName": "Molten Tyrant",
+      "category": "mineralGeological",
+      "subtitle": "Obsidian layers · molten fissures",
+      "symbolName": "flame.fill",
+      "lineageIntroduction": "A plated burrower that stores geological heat before becoming a living siege volcano.",
+      "existenceAnchor": "Pangolin × Ankylosaur Magma Beast",
+      "silhouetteAnchor": "Ground-hugging arched back, layered rock plates, basalt horns, and a massive hammer tail",
+      "silhouetteClass": "low-armored-hammer-tail-beast",
+      "motionAnchor": "Coiled heat buildup followed by a low headlong ground impact",
+      "locomotionClass": "armored-burrow-and-charge",
+      "materialAnchor": "Obsidian, basalt horns, ash scale, and white-hot molten cracks",
+      "energyAnchor": "Orange-white underfire and erupting crown ridges",
+      "motionProfile": "heavy",
+      "accent": {"red": 1.0, "green": 0.24, "blue": 0.05},
+      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.05},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Faceted Magma Core",
+          "introduction": "A faceted magma stone holding white-hot fire beneath black glass.",
+          "visualAnchor": "Low many-sided obsidian core split by one bright crack and a curled plate ridge"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Cinderclaw Whelp",
+          "introduction": "A short-legged cinder whelp digging with newly hardened basalt claws.",
+          "visualAnchor": "Compact burrowing whelp with four shovel claws and three smoking back plates"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Coil-Armor Pangolin",
+          "introduction": "A coiled pangolin storing heat between interlocking obsidian plates.",
+          "visualAnchor": "Arched low pangolin with overlapping black plates and a tightly curved tail"
+        },
+        {
+          "stage": "ascended",
+          "name": "Hammer-Tail Siegebeast",
+          "introduction": "A hammer-tailed siege beast built to crack ground before it erupts.",
+          "visualAnchor": "Broad plated beast braced behind a huge square basalt hammer tail"
+        },
+        {
+          "stage": "legendary",
+          "name": "Magma-Crowned Ley Dragon",
+          "introduction": "A ley dragon crowned by a walking volcano and a molten fault line.",
+          "visualAnchor": "Massive low dragon carrying a volcanic cone along its spine and a glowing fault tail"
+        }
+      ]
+    },
+    {
+      "id": "amethyst-heart",
+      "displayName": "Amethyst Heart",
+      "category": "mineralGeological",
+      "subtitle": "Geode shell · violet crystal pulse",
+      "symbolName": "diamond.fill",
+      "lineageIntroduction": "A walking geode that opens, closes, and rearranges its crystal chamber around a bright heart.",
+      "existenceAnchor": "Ambulatory Amethyst Geode",
+      "silhouetteAnchor": "Rough oval shell, split crystal jaws, three stone feet, and a suspended heart prism",
+      "silhouetteClass": "split-geode-on-tripod-feet",
+      "motionAnchor": "Three-point stone hops followed by slow shell-opening displays",
+      "locomotionClass": "tripod-geode-hop",
+      "materialAnchor": "Weathered gray basalt, violet quartz teeth, white calcite, and smoky crystal",
+      "energyAnchor": "Deep-violet heart pulse and refracted triangular rays",
+      "motionProfile": "bouncing",
+      "accent": {"red": 0.66, "green": 0.28, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.55, "blue": 0.9},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Unbroken Violet Nodule",
+          "introduction": "A plain basalt nodule leaks one thin violet line around its hidden chamber.",
+          "visualAnchor": "Rough gray oval with a single luminous seam and three blunt stone contact points"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Cracklight Geode",
+          "introduction": "A young geode opens one narrow crystal mouth and balances on three feet.",
+          "visualAnchor": "Small split rock showing a wedge of purple crystals above three asymmetrical feet"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Prism-Cavity Walker",
+          "introduction": "A broad geode exposes a suspended heart while crystal teeth rotate around it.",
+          "visualAnchor": "Open oval shell on tripod legs with a floating diamond at the center of a crystal cavity"
+        },
+        {
+          "stage": "ascended",
+          "name": "Cathedral Geode",
+          "introduction": "A tall split stone grows pointed crystal arches around its violet inner light.",
+          "visualAnchor": "Vertical open geode whose amethyst spikes form a pointed cathedral aperture"
+        },
+        {
+          "stage": "legendary",
+          "name": "Amethyst Heart Sovereign",
+          "introduction": "A ring of orbiting geode plates protects a flawless heart prism at its center.",
+          "visualAnchor": "Exploded circular shell of rough stone slabs surrounding a huge radiant violet diamond"
+        }
+      ]
+    },
+    {
+      "id": "dune-monolith",
+      "displayName": "Dune Monolith",
+      "category": "mineralGeological",
+      "subtitle": "Layered sandstone · wind-carved light",
+      "symbolName": "rectangle.portrait.fill",
+      "lineageIntroduction": "A migrating sandstone monolith that walks on flowing dunes and records every wind in its layers.",
+      "existenceAnchor": "Sentient Stratified Sandstone",
+      "silhouetteAnchor": "Tall narrow slab, offset rock fins, a flowing sand foot, and one eroded window",
+      "silhouetteClass": "vertical-slab-on-sand-base",
+      "motionAnchor": "Slow sand-base glides with abrupt slab rotations into the wind",
+      "locomotionClass": "dune-surfing-monolith",
+      "materialAnchor": "Red sandstone layers, pale quartz grains, iron crust, and loose wind sand",
+      "energyAnchor": "Golden contour lines and luminous erosion windows",
+      "motionProfile": "gliding",
+      "accent": {"red": 0.92, "green": 0.48, "blue": 0.18},
+      "secondaryAccent": {"red": 1.0, "green": 0.82, "blue": 0.38},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Layered Sand Seedstone",
+          "introduction": "A fist-sized striped stone turns upright whenever wind crosses its face.",
+          "visualAnchor": "Small upright sandstone pebble with five horizontal bands and a pointed sand skirt"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Wind-Niche Pillar",
+          "introduction": "A young pillar opens one round niche and slides forward on a spill of sand.",
+          "visualAnchor": "Short rectangular rock with a circular hole and a triangular drifting sand base"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Strata Sailstone",
+          "introduction": "A tall layered slab grows two side fins that catch crosswinds like stone sails.",
+          "visualAnchor": "Narrow striped monolith with two unequal horizontal fins and a curling sand wake"
+        },
+        {
+          "stage": "ascended",
+          "name": "Canyon-Record Sentinel",
+          "introduction": "A weathered sentinel unfolds nested slabs etched by centuries of opposing winds.",
+          "visualAnchor": "Cluster of three offset vertical monoliths joined above one broad flowing sand foot"
+        },
+        {
+          "stage": "legendary",
+          "name": "Walking Horizon Monolith",
+          "introduction": "A colossal sandstone gate carries an entire moving dune through its central void.",
+          "visualAnchor": "Vast rectangular stone arch striding on a crescent dune with a bright horizon inside"
+        }
+      ]
+    },
+    {
+      "id": "magnetite-orbit",
+      "displayName": "Magnetite Orbit",
+      "category": "mineralGeological",
+      "subtitle": "Iron crystal · polar aurora",
+      "symbolName": "scope",
+      "lineageIntroduction": "A magnetic mineral intelligence that rearranges iron shards around a permanent compass core.",
+      "existenceAnchor": "Self-Assembling Magnetite Field",
+      "silhouetteAnchor": "Central compass needle, floating black shards, two polar arcs, and no fixed body shell",
+      "silhouetteClass": "floating-shard-field",
+      "motionAnchor": "Counter-rotating shard orbits and sudden pole-flip reassembly",
+      "locomotionClass": "magnetic-field-translation",
+      "materialAnchor": "Black magnetite crystals, brushed iron, cobalt filings, and nickel mirrors",
+      "energyAnchor": "Blue-red polar arcs and fine visible field lines",
+      "motionProfile": "orbiting",
+      "accent": {"red": 0.18, "green": 0.52, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.16, "blue": 0.28},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Northbound Lodestone",
+          "introduction": "A black lodestone suspends one silver needle that refuses to point away.",
+          "visualAnchor": "Irregular dark stone with a floating straight compass needle and two iron grains"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Polar Shardlet",
+          "introduction": "Four magnetite shards learn to orbit a tiny red-and-blue compass core.",
+          "visualAnchor": "Small central sphere surrounded by four sharp black crystals on an open oval path"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Fieldline Assembler",
+          "introduction": "A dozen iron plates form a shifting crescent body around two opposed poles.",
+          "visualAnchor": "Broken crescent silhouette built from floating plates between red and blue endpoints"
+        },
+        {
+          "stage": "ascended",
+          "name": "Dipole Ring Engine",
+          "introduction": "A complete magnetic ring rolls through space without any shard touching another.",
+          "visualAnchor": "Large vertical ring of separated iron blocks bisected by a long compass needle"
+        },
+        {
+          "stage": "legendary",
+          "name": "Geomagnetic Crown",
+          "introduction": "A crown of mineral continents rotates around a blazing planetary compass core.",
+          "visualAnchor": "Spherical field cage of dark landlike shards under two sweeping aurora pole arches"
+        }
+      ]
+    },
+    {
+      "id": "amber-archive",
+      "displayName": "Amber Archive",
+      "category": "mineralGeological",
+      "subtitle": "Fossil resin · memory-gold glow",
+      "symbolName": "archivebox.fill",
+      "lineageIntroduction": "A mobile amber archive that preserves harmless moments as layered inclusions inside its body.",
+      "existenceAnchor": "Sentient Fossil-Resin Archive",
+      "silhouetteAnchor": "Tapered amber obelisk, four resin rollers, suspended inclusions, and a magnifying crown lens",
+      "silhouetteClass": "tapered-obelisk-on-rollers",
+      "motionAnchor": "Quiet rolling turns while internal memory layers slide into view",
+      "locomotionClass": "four-roller-obelisk-glide",
+      "materialAnchor": "Honey amber, dark tree resin, fossil pollen, and polished bronze frames",
+      "energyAnchor": "Memory-gold backlight and concentric magnification halos",
+      "motionProfile": "rolling",
+      "accent": {"red": 1.0, "green": 0.58, "blue": 0.08},
+      "secondaryAccent": {"red": 0.72, "green": 0.24, "blue": 0.08},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "First-Inclusion Resin Drop",
+          "introduction": "A clear resin drop holds one leaf shadow and a slowly blinking gold point.",
+          "visualAnchor": "Teardrop amber piece with a centered leaf silhouette and one small bronze foot"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Pollen Memory Bead",
+          "introduction": "A rolling amber bead sorts suspended pollen into a visible spiral timeline.",
+          "visualAnchor": "Round amber bead on two dark rollers with a tight spiral of gold pollen inside"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Layerglass Record Stone",
+          "introduction": "A short resin obelisk reveals three preserved scenes by sliding its inner layers.",
+          "visualAnchor": "Rectangular amber pillar on four rollers with three offset translucent image bands"
+        },
+        {
+          "stage": "ascended",
+          "name": "Magnifier Reliquary",
+          "introduction": "A tall archive raises a broad crown lens to inspect its smallest stored memory.",
+          "visualAnchor": "Tapered amber tower beneath a giant circular lens and many tiny inclusion windows"
+        },
+        {
+          "stage": "legendary",
+          "name": "Golden-Era Memory Spire",
+          "introduction": "A radiant amber spire fans every preserved moment into a navigable halo.",
+          "visualAnchor": "Tall central resin obelisk surrounded by a ring of floating illuminated amber panels"
+        }
+      ]
+    },
+    {
+      "id": "fossil-reef",
+      "displayName": "Fossil Reef",
+      "category": "mineralGeological",
+      "subtitle": "Petrified bone · ocean-blue strata",
+      "symbolName": "fossil.shell.fill",
+      "lineageIntroduction": "A walking reef of petrified shells and bones that reconstructs vanished seafloor shapes.",
+      "existenceAnchor": "Mobile Fossil Reef Formation",
+      "silhouetteAnchor": "Low limestone shelf, branching fossil spires, shell-wheel feet, and an ammonite arch",
+      "silhouetteClass": "low-branching-reef-platform",
+      "motionAnchor": "Shell-wheel crawling with slow branch-by-branch reconstruction",
+      "locomotionClass": "multi-shell-wheel-crawl",
+      "materialAnchor": "Chalk limestone, petrified bone, blue shale, and nacre fossil seams",
+      "energyAnchor": "Ocean-blue reconstruction outlines and pale sediment clouds",
+      "motionProfile": "heavy",
+      "accent": {"red": 0.2, "green": 0.68, "blue": 0.88},
+      "secondaryAccent": {"red": 0.88, "green": 0.82, "blue": 0.62},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Ammonite Bedstone",
+          "introduction": "A flat limestone egg protects one perfect spiral fossil beneath blue shale.",
+          "visualAnchor": "Low oval rock slab with a large ammonite spiral and four tiny shell-wheel bumps"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Shellwheel Outcrop",
+          "introduction": "A small outcrop rolls on four fossil shells while growing its first coral branch.",
+          "visualAnchor": "Short stone platform on four spiral wheels with one forked petrified branch"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Bonebranch Crawler",
+          "introduction": "A broad fossil bed crawls forward as riblike branches assemble above it.",
+          "visualAnchor": "Wide low platform under a cage of curved fossil ribs and six shell wheels"
+        },
+        {
+          "stage": "ascended",
+          "name": "Paleozoic Archreef",
+          "introduction": "A towering ammonite arch rises from layered strata and shelters reconstructed forms.",
+          "visualAnchor": "Large spiral stone arch on a blue shale shelf with branching fossils at both sides"
+        },
+        {
+          "stage": "legendary",
+          "name": "Lost-Ocean Strata King",
+          "introduction": "A vast moving reef projects the complete outline of an ancient ocean above itself.",
+          "visualAnchor": "Multi-tier fossil reef beneath a luminous blue dome traced with vanished sea life"
+        }
+      ]
+    },
+    {
+      "id": "resonant-quartz",
+      "displayName": "Resonant Quartz",
+      "category": "mineralGeological",
+      "subtitle": "Clear crystal · harmonic gold",
+      "symbolName": "tuningfork",
+      "lineageIntroduction": "A quartz formation that walks on tuning prongs and shapes solid harmonics from vibration.",
+      "existenceAnchor": "Self-Tuning Quartz Cluster",
+      "silhouetteAnchor": "Tall central crystal, two tuning-fork limbs, low base shards, and floating harmonic bars",
+      "silhouetteClass": "crystal-spire-with-fork-limbs",
+      "motionAnchor": "Measured prong steps followed by whole-body resonant shivers",
+      "locomotionClass": "two-prong-resonance-walk",
+      "materialAnchor": "Clear quartz, smoky crystal, brushed gold clamps, and black vibration pads",
+      "energyAnchor": "Golden standing waves and white harmonic nodes",
+      "motionProfile": "poised",
+      "accent": {"red": 1.0, "green": 0.78, "blue": 0.22},
+      "secondaryAccent": {"red": 0.42, "green": 0.88, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Silent Quartz Point",
+          "introduction": "A single clear crystal contains one motionless golden standing-wave line.",
+          "visualAnchor": "Short transparent crystal point on a dark pad with one straight gold line inside"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Twin-Prong Chimer",
+          "introduction": "Two young crystals tap together and take their first step on soft vibration pads.",
+          "visualAnchor": "Y-shaped clear tuning fork with two small black feet and a glowing joint"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Harmonic Strider",
+          "introduction": "A tall quartz walker balances on fork limbs while three frequency bars orbit it.",
+          "visualAnchor": "Central crystal torso on two tuning-fork legs with three horizontal floating bars"
+        },
+        {
+          "stage": "ascended",
+          "name": "Resonance Gatekeeper",
+          "introduction": "A paired crystal arch turns a stable chord into a solid defensive doorway.",
+          "visualAnchor": "Two leaning quartz towers forming an arch filled by layered golden wave bands"
+        },
+        {
+          "stage": "legendary",
+          "name": "Grand Harmonic Monolith",
+          "introduction": "A monumental crystal organ holds an entire spectrum as visible standing waves.",
+          "visualAnchor": "Radial cluster of tuning crystals around a tall center spire and concentric gold waves"
+        }
+      ]
+    },
+    {
+      "id": "terracotta-fault",
+      "displayName": "Terracotta Fault",
+      "category": "mineralGeological",
+      "subtitle": "Fired clay plates · kiln-blue seams",
+      "symbolName": "square.3.layers.3d",
+      "lineageIntroduction": "A segmented clay landform that slides its own tectonic plates across a kiln-hot core.",
+      "existenceAnchor": "Living Terracotta Microcontinent",
+      "silhouetteAnchor": "Flat layered body, six slab feet, central rift valley, and two raised fault ridges",
+      "silhouetteClass": "flat-segmented-plate-crawler",
+      "motionAnchor": "Slow plate slides, sudden fault snaps, and six-foot lateral shifts",
+      "locomotionClass": "hexapod-plate-tectonic-crawl",
+      "materialAnchor": "Red terracotta, black slip, glazed blue seams, and cracked kiln stone",
+      "energyAnchor": "Kiln-blue rift glow and orange seismic pulse rings",
+      "motionProfile": "skittering",
+      "accent": {"red": 0.92, "green": 0.34, "blue": 0.14},
+      "secondaryAccent": {"red": 0.08, "green": 0.66, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Kilnsealed Clay Plate",
+          "introduction": "A fired clay tablet hides one blue rift beneath a network of hairline cracks.",
+          "visualAnchor": "Flat hexagonal red tablet with a glowing zigzag seam and six folded slab tabs"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Six-Slab Crawler",
+          "introduction": "A low clay crawler discovers movement by sliding six separate plate feet.",
+          "visualAnchor": "Small flat body carried by six rectangular ceramic feet around a blue center seam"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Riftback Tileform",
+          "introduction": "A wide tileform raises two fault ridges while its central valley glows hotter.",
+          "visualAnchor": "Broad terracotta crawler with two jagged back ridges separated by a blue trench"
+        },
+        {
+          "stage": "ascended",
+          "name": "Subduction Bastion",
+          "introduction": "A plated bastion pushes one clay shelf beneath another to absorb incoming force.",
+          "visualAnchor": "Layered wedge of overlapping ceramic plates on six feet with a raised rear wall"
+        },
+        {
+          "stage": "legendary",
+          "name": "Continental Kilnwalker",
+          "introduction": "A walking microcontinent reshapes mountains and rifts across its fired-clay back.",
+          "visualAnchor": "Huge flat landmass silhouette on many slab legs with miniature ridges and a blue fault"
+        }
+      ]
+    },
+    {
+      "id": "meteor-iron",
+      "displayName": "Meteor Iron",
+      "category": "mineralGeological",
+      "subtitle": "Widmanstätten steel · impact plasma",
+      "symbolName": "circle.hexagongrid.fill",
+      "lineageIntroduction": "A fallen iron meteor that reassembles crater fragments into limbs around its cooling core.",
+      "existenceAnchor": "Self-Rebuilding Iron Meteorite",
+      "silhouetteAnchor": "Irregular dense core, four shard limbs, a tilted crater ring, and a trailing plasma scar",
+      "silhouetteClass": "irregular-core-inside-crater-ring",
+      "motionAnchor": "Heavy shard-knuckle vaults followed by brief impact-driven flight",
+      "locomotionClass": "four-shard-vault-and-fall",
+      "materialAnchor": "Etched meteor iron, fusion crust, nickel crystal, and scorched glass",
+      "energyAnchor": "Blue-white impact plasma and orange cooling seams",
+      "motionProfile": "heavy",
+      "accent": {"red": 0.3, "green": 0.62, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.4, "blue": 0.1},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Cooling Fallstone",
+          "introduction": "A black fusion-crusted stone ticks as blue plasma fades inside its cracks.",
+          "visualAnchor": "Jagged dark meteor lump with one blue crack and a small melted-glass splash base"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Craterknuckle Shard",
+          "introduction": "A dense core pulls four impact fragments close enough to use as knuckles.",
+          "visualAnchor": "Central iron rock hovering above four separated shard fists and a broken ring fragment"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Nickel Pattern Strider",
+          "introduction": "An etched meteor walker stretches long shard limbs around a tilted crater hoop.",
+          "visualAnchor": "Angular four-limbed iron form passing through a diagonal incomplete crater ring"
+        },
+        {
+          "stage": "ascended",
+          "name": "Impact Halo Juggernaut",
+          "introduction": "A compact juggernaut launches itself by detonating controlled plasma under its ring.",
+          "visualAnchor": "Dense crouched meteor mass above a complete horizontal impact halo and blue jet"
+        },
+        {
+          "stage": "legendary",
+          "name": "Starfall Iron Crown",
+          "introduction": "A sovereign meteor commands a crown of orbiting crater shards before every descent.",
+          "visualAnchor": "Central black iron core beneath a radial shard crown and a long vertical plasma trail"
+        }
+      ]
+    },
+    {
+      "id": "halite-crown",
+      "displayName": "Halite Crown",
+      "category": "mineralGeological",
+      "subtitle": "Salt crystal steps · brine-blue core",
+      "symbolName": "cube.fill",
+      "lineageIntroduction": "A salt-crystal formation that grows cubic terraces by drawing moisture from the air.",
+      "existenceAnchor": "Ambulatory Halite Crystal Palace",
+      "silhouetteAnchor": "Stepped cubic tower, four brine feet, hollow square windows, and a crown of salt forks",
+      "silhouetteClass": "stepped-cubic-crystal-tower",
+      "motionAnchor": "Four-foot brine glides with sudden cubic growth at each stop",
+      "locomotionClass": "brine-foot-tower-slide",
+      "materialAnchor": "Clear halite cubes, white salt crust, blue brine glass, and silver inclusions",
+      "energyAnchor": "Brine-blue capillary light and square evaporation halos",
+      "motionProfile": "gliding",
+      "accent": {"red": 0.62, "green": 0.9, "blue": 1.0},
+      "secondaryAccent": {"red": 0.92, "green": 0.98, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Brine-Locked Salt Cube",
+          "introduction": "A clear salt cube contains a tiny blue pool that never evaporates.",
+          "visualAnchor": "Single translucent cube with a suspended blue droplet and four white crust corners"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Four-Foot Crystal Stack",
+          "introduction": "Three halite cubes stack themselves above four sliding beads of brine.",
+          "visualAnchor": "Asymmetrical three-cube tower resting on four round blue liquid feet"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Evaporation Stairkeep",
+          "introduction": "A stepped salt keep grows square windows wherever dry air crosses its body.",
+          "visualAnchor": "Low staircase of clear cubes with three hollow square openings and a brine base"
+        },
+        {
+          "stage": "ascended",
+          "name": "Brine Terrace Citadel",
+          "introduction": "A tall cubic citadel circulates blue brine through open crystalline terraces.",
+          "visualAnchor": "Vertical salt palace with cantilevered cube balconies and visible blue channels"
+        },
+        {
+          "stage": "legendary",
+          "name": "White-Salt Crown Palace",
+          "introduction": "A radiant salt palace unfolds a vast crown of cubic forks above its moving base.",
+          "visualAnchor": "Towering stepped crystal silhouette topped by a radial crown of square salt prongs"
+        }
+      ]
+    }
+  ]
+}

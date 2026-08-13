@@ -1,0 +1,25 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Emberwild Spirit [Elemental & Weather]
+Form: Three-Flame Kindling, canonical hatchling stage
+Lineage concept: A wildfire intelligence that builds a temporary body from charcoal, flame fronts, and seed embers.
+Existence anchor: Self-Shaping Wildfire Elemental
+Persistent silhouette logic: Hollow charcoal rib cage, three flame limbs, branching smoke crown, and a seed-ember heart
+Silhouette topology class: hollow-flame-rib-elemental
+Movement and locomotion: Flame-limb strides that collapse into low traveling fire fronts; combustion-front-translation
+Material system: Charcoal bark, white ash, orange flame, and red seed embers
+Energy motif: Controlled crown fire and green renewal sparks
+Current-stage introduction: Three small flames lean together around a charcoal heart and move as one.
+Current-stage visual anchor: Triangular fire cluster on a black coal center with three separate flame tips
+
+The provided reference image is the immediately preceding form, Banked Seed Ember. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Charred seed shape with one red crack, a green point, and a short ash plume
+
+Progression rule: Stage II reveals the defining existence type, persistent identity feature, and basic locomotion. Use juvenile proportions and a clearly smaller, simpler construction than the mature forms.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FF00FF, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FF00FF must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

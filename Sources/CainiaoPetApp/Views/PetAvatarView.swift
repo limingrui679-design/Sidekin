@@ -109,38 +109,65 @@ private struct PetAvatarFrame: View {
         switch activity {
         case .idle:
             let drift = CGFloat(sin(time * 1.8))
-            switch theme {
-            case .nova:
+            switch theme.motionProfile {
+            case .buoyant:
                 return (drift * 0.8, drift * 2.8, sin(time * 0.9) * 0.8, 1, 1)
-            case .mecha:
+            case .mechanical:
                 let thrum = CGFloat(sin(time * 4.2))
                 return (0, -abs(thrum) * 0.8, thrum.doubleValue * 0.18, 1.002, 0.998)
-            case .street:
+            case .agile:
                 return (drift * 3.0, -abs(drift) * 1.2, drift.doubleValue * 2.1, 1.01, 0.995)
-            case .samurai:
+            case .poised:
                 return (0, drift * 0.75, drift.doubleValue * 0.28, 1, 1 + drift * 0.004)
-            case .abyss:
+            case .swimming:
                 return (CGFloat(sin(time * 0.92)) * 3.2, CGFloat(cos(time * 1.25)) * 3.6, sin(time * 0.78) * 1.5, 1, 1)
-            case .volcanic:
+            case .heavy:
                 return (0, abs(drift) * 0.55, drift.doubleValue * 0.18, 1.004, 0.998)
-            case .candy:
+            case .bouncing:
                 let bounce = CGFloat(abs(sin(time * 2.25)))
                 return (drift * 1.2, -bounce * 5.5, drift.doubleValue * 1.3, 1.02 - bounce * 0.018, 0.98 + bounce * 0.026)
-            case .wasteland:
+            case .prowling:
                 return (drift * 1.9, -abs(drift) * 1.5, drift.doubleValue * 1.25, 1, 1)
-            case .phantom:
+            case .spectral:
                 return (CGFloat(sin(time * 0.75)) * 2.6, CGFloat(cos(time * 1.05)) * 4.2, sin(time * 0.58) * 1.1, 1, 1.008)
-            case .totem:
+            case .rooted:
                 return (0, abs(drift) * 0.7, drift.doubleValue * 0.34, 1.003, 0.999)
+            case .winged:
+                let wingbeat = CGFloat(sin(time * 2.8))
+                return (drift * 1.4, -abs(wingbeat) * 3.4, wingbeat.doubleValue * 1.1, 1.008, 0.996)
+            case .orbiting:
+                return (CGFloat(sin(time * 0.65)) * 2.0, CGFloat(cos(time * 0.82)) * 2.6, sin(time * 0.55) * 1.8, 1, 1)
+            case .skittering:
+                let skitter = CGFloat(sin(time * 5.4))
+                return (skitter * 1.7, -abs(skitter) * 0.45, skitter.doubleValue * 0.5, 1.004, 0.997)
+            case .serpentine:
+                return (CGFloat(sin(time * 0.88)) * 3.8, CGFloat(cos(time * 1.18)) * 3.0, sin(time * 0.72) * 2.0, 1, 1)
+            case .pulsing:
+                let pulse = CGFloat(sin(time * 2.6))
+                return (0, -abs(pulse) * 1.4, pulse.doubleValue * 0.3, 1 + pulse * 0.008, 1 - pulse * 0.005)
+            case .gliding:
+                return (CGFloat(sin(time * 0.78)) * 3.0, CGFloat(cos(time * 1.02)) * 3.2, sin(time * 0.62) * 2.2, 1.004, 0.998)
+            case .marching:
+                return (drift * 0.6, drift * 0.9, drift.doubleValue * 0.35, 1, 1.003)
+            case .rolling:
+                let roll = CGFloat(sin(time * 2.9))
+                return (roll * 2.1, -abs(roll) * 0.7, roll.doubleValue * 1.4, 1.004, 0.998)
+            case .swarming:
+                let shimmer = CGFloat(sin(time * 6.4))
+                return (drift * 1.8, shimmer * 1.4, shimmer.doubleValue * 0.55, 1.008, 0.994)
+            case .flowing:
+                return (CGFloat(sin(time * 0.86)) * 2.4, CGFloat(cos(time * 1.1)) * 2.1, sin(time * 0.72) * 1.2, 1.004, 1.002)
             }
         case .running:
             let pulse = CGFloat(sin(time * 7.2))
-            switch theme {
-            case .street, .abyss, .phantom:
+            switch theme.motionProfile {
+            case .agile, .swimming, .spectral, .serpentine, .swarming:
                 return (pulse * 4.2, -abs(pulse) * 3.0, pulse.doubleValue * 2.5, 1.022, 0.985)
-            case .candy:
+            case .bouncing:
                 let bounce = CGFloat(abs(sin(time * 6.0)))
                 return (pulse * 2.0, -bounce * 8.0, pulse.doubleValue * 2.2, 1.035 - bounce * 0.025, 0.97 + bounce * 0.04)
+            case .mechanical, .rolling:
+                return (pulse * 2.4, -abs(pulse) * 2.2, pulse.doubleValue * 1.4, 1.012, 0.992)
             default:
                 return (pulse * 1.2, -abs(pulse) * 3.2, pulse.doubleValue * 0.8, 1.016, 0.988)
             }
@@ -356,17 +383,15 @@ private extension PetStage {
     }
 
     func accent(for theme: PetVisualTheme) -> Color {
-        switch theme {
-        case .nova:
+        if theme == .nova {
             switch self {
             case .egg, .hatchling: return .cyan
             case .juvenile: return .blue
             case .ascended: return .indigo
             case .legendary: return .purple
             }
-        default:
-            return isEvolved ? theme.secondaryAccentColor : theme.accentColor
         }
+        return isEvolved ? theme.secondaryAccentColor : theme.accentColor
     }
 
     var renderScale: CGFloat {

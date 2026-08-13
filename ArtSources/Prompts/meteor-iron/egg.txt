@@ -1,0 +1,25 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Meteor Iron [Mineral & Geological]
+Form: Cooling Fallstone, canonical egg stage
+Lineage concept: A fallen iron meteor that reassembles crater fragments into limbs around its cooling core.
+Existence anchor: Self-Rebuilding Iron Meteorite
+Persistent silhouette logic: Irregular dense core, four shard limbs, a tilted crater ring, and a trailing plasma scar
+Silhouette topology class: irregular-core-inside-crater-ring
+Movement and locomotion: Heavy shard-knuckle vaults followed by brief impact-driven flight; four-shard-vault-and-fall
+Material system: Etched meteor iron, fusion crust, nickel crystal, and scorched glass
+Energy motif: Blue-white impact plasma and orange cooling seams
+Current-stage introduction: A black fusion-crusted stone ticks as blue plasma fades inside its cracks.
+Current-stage visual anchor: Jagged dark meteor lump with one blue crack and a small melted-glass splash base
+
+This is the first stage and has no reference image. Establish a persistent identity marker that later stages can retain: use the catalog's core, face, facade, aperture, emblem, or focal feature. Do not depict the mature body early.
+
+Progression rule: Stage I is a compact origin container, seed, core, field, diagram, module, or incomplete organism. Do not expose the complete mature limb set. Make the origin readable and specific rather than a generic egg.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #00FF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #00FF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

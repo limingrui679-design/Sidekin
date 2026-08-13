@@ -1,0 +1,504 @@
+{
+  "themes": [
+    {
+      "id": "candy",
+      "displayName": "Candy Carnival",
+      "category": "foodAlchemy",
+      "subtitle": "Candy toys · gummy energy",
+      "symbolName": "heart.fill",
+      "lineageIntroduction": "A buoyant gummy hare whose playful sugar core grows into carnival-scale illusion magic.",
+      "existenceAnchor": "Balloon Hare × Gummy Spirit",
+      "silhouetteAnchor": "Rounded springy body, ribbon-like ears, transparent belly, and a halo of balloon rings",
+      "silhouetteClass": "round-gummy-hare-with-balloon-halo",
+      "motionAnchor": "Elastic bounces, buoyant hovering, and aerial ribbon flips",
+      "locomotionClass": "spring-body-bounce",
+      "materialAnchor": "Transparent gummy, foil wrappers, frosting, jelly, and sugar glass",
+      "energyAnchor": "Rainbow bubbles and a heart-shaped candy core",
+      "motionProfile": "bouncing",
+      "accent": {"red": 1.0, "green": 0.36, "blue": 0.72},
+      "secondaryAccent": {"red": 0.25, "green": 0.95, "blue": 0.84},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Twisted Wrapper Cocoon",
+          "introduction": "A twisted wrapper cocoon with a heart-shaped candy core inside.",
+          "visualAnchor": "Round wrapped sweet with long twisted ear ends and a visible heart center"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Bouncing Gummy Hare",
+          "introduction": "A bouncing gummy hare whose long ears stretch with every landing.",
+          "visualAnchor": "Small translucent round rabbit with very long elastic ears and compressed feet"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Toffee Acrobat",
+          "introduction": "A toffee acrobat learning to flip through its own balloon rings.",
+          "visualAnchor": "Slim gummy hare curled mid-flip through two candy-striped balloon hoops"
+        },
+        {
+          "stage": "ascended",
+          "name": "Carnival Illusionist",
+          "introduction": "A carnival illusionist who keeps a compact hare silhouette beneath the spectacle.",
+          "visualAnchor": "Upright candy hare under a striped canopy halo with three floating sugar props"
+        },
+        {
+          "stage": "legendary",
+          "name": "Star-Candy Dreamsmith",
+          "introduction": "A dreamsmith rabbit shaping constellations from sugar glass and rainbow bubbles.",
+          "visualAnchor": "Round-eared hare framed by a huge heart-ring and a spiral of star-shaped candies"
+        }
+      ]
+    },
+    {
+      "id": "tea-alchemist",
+      "displayName": "Tea Alchemist",
+      "category": "foodAlchemy",
+      "subtitle": "Celadon glaze · fragrant steam sigils",
+      "symbolName": "cup.and.saucer.fill",
+      "lineageIntroduction": "A walking teapot laboratory that blends leaves, temperature, and steam into restorative brews.",
+      "existenceAnchor": "Sentient Celadon Teapot Laboratory",
+      "silhouetteAnchor": "Round pot torso, long spout arm, handle arch, four cup feet, and a lid-cap chimney",
+      "silhouetteClass": "round-teapot-on-cup-feet",
+      "motionAnchor": "Four-cup steps, spout-led pours, and handle-balanced spins",
+      "locomotionClass": "four-cup-foot-walk",
+      "materialAnchor": "Crackled celadon, dark tea, bamboo fittings, and translucent steam cloth",
+      "energyAnchor": "Amber infusion spirals and mint-white steam characters",
+      "motionProfile": "pulsing",
+      "accent": {"red": 0.36, "green": 0.82, "blue": 0.62},
+      "secondaryAccent": {"red": 0.92, "green": 0.58, "blue": 0.16},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Steeping Leaf Jar",
+          "introduction": "A sealed celadon jar turns one dark leaf around a warm amber droplet.",
+          "visualAnchor": "Small round lidded jar with one leaf window and four folded cup-shaped feet"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Spoutling Brewer",
+          "introduction": "A tiny teapot toddles on cup feet while learning to aim a short spout.",
+          "visualAnchor": "Round baby pot with oversized handle, short spout, and four mismatched teacup feet"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Infusion Formula Pot",
+          "introduction": "A crackled brewer measures leaf, heat, and time through three visible chambers.",
+          "visualAnchor": "Tall teapot body with three amber gauge windows and a long articulated spout arm"
+        },
+        {
+          "stage": "ascended",
+          "name": "Steam-Sigil Apothecary",
+          "introduction": "A broad alchemist projects healing diagrams from a crown of scented steam.",
+          "visualAnchor": "Wide celadon kettle beneath a spiral steam canopy marked by three mint symbols"
+        },
+        {
+          "stage": "legendary",
+          "name": "Grandmaster of Ten Thousand Teas",
+          "introduction": "A ceremonial pot pours several perfect infusions through a ring of floating cups.",
+          "visualAnchor": "Large teapot at center of a circular tea service with ten cups and braided steam"
+        }
+      ]
+    },
+    {
+      "id": "ramen-nebula",
+      "displayName": "Ramen Nebula",
+      "category": "foodAlchemy",
+      "subtitle": "Broth-gold orbit · noodle constellations",
+      "symbolName": "takeoutbag.and.cup.and.straw.fill",
+      "lineageIntroduction": "A levitating ramen bowl that coils noodles, broth, and toppings into a miniature edible galaxy.",
+      "existenceAnchor": "Self-Orbiting Cosmic Ramen Bowl",
+      "silhouetteAnchor": "Wide bowl body, two chopstick masts, looping noodle arms, and orbiting topping moons",
+      "silhouetteClass": "floating-bowl-with-noodle-orbits",
+      "motionAnchor": "Level bowl glides while noodles coil and toppings counter-orbit",
+      "locomotionClass": "broth-buoyancy-hover",
+      "materialAnchor": "Glazed ceramic, glossy noodles, clear broth, lacquered wood, and sesame stars",
+      "energyAnchor": "Golden broth spiral and red-blue topping constellations",
+      "motionProfile": "orbiting",
+      "accent": {"red": 1.0, "green": 0.68, "blue": 0.12},
+      "secondaryAccent": {"red": 0.92, "green": 0.18, "blue": 0.18},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sealed Broth Planet",
+          "introduction": "A lidded bowl turns slowly around one warm broth star hidden inside.",
+          "visualAnchor": "Small round lidded bowl with crossed chopsticks and one golden light seam"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Noodleloop Cup",
+          "introduction": "A tiny cup floats by extending one noodle loop like a steering arm.",
+          "visualAnchor": "Short open cup with one large noodle loop and two chopsticks angled as antennae"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Topping-Orbit Bowl",
+          "introduction": "A broad ramen bowl keeps egg, seaweed, and fish cake in separate clean orbits.",
+          "visualAnchor": "Wide bowl beneath three topping moons connected by long curling noodle paths"
+        },
+        {
+          "stage": "ascended",
+          "name": "Broth Spiral Navigator",
+          "introduction": "A deep bowl shapes a golden broth vortex without spilling a single noodle.",
+          "visualAnchor": "Tilted ramen vessel surrounding a tall liquid spiral and two mastlike chopsticks"
+        },
+        {
+          "stage": "legendary",
+          "name": "Infinite Supper Galaxy",
+          "introduction": "A cosmic ramen sovereign turns its complete meal into a bright spiral galaxy.",
+          "visualAnchor": "Central bowl encircled by a vast noodle spiral, topping planets, and chopstick axis"
+        }
+      ]
+    },
+    {
+      "id": "hearthbread-golem",
+      "displayName": "Hearthbread Golem",
+      "category": "foodAlchemy",
+      "subtitle": "Golden crust · sourdough ember",
+      "symbolName": "oven.fill",
+      "lineageIntroduction": "A warm bread golem that reshapes scored crust, crumb, and oven heat into sturdy limbs.",
+      "existenceAnchor": "Living Sourdough Hearth Golem",
+      "silhouetteAnchor": "Round loaf torso, four crusty limbs, scored face, and a chimney-like starter crown",
+      "silhouetteClass": "round-loaf-four-limbed-golem",
+      "motionAnchor": "Soft crumb compressions followed by springy crust rebounds",
+      "locomotionClass": "four-limb-dough-bound",
+      "materialAnchor": "Golden blistered crust, soft white crumb, flour dust, and cast-iron fittings",
+      "energyAnchor": "Orange oven ember and warm rising-steam rings",
+      "motionProfile": "bouncing",
+      "accent": {"red": 0.92, "green": 0.58, "blue": 0.18},
+      "secondaryAccent": {"red": 1.0, "green": 0.82, "blue": 0.44},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Proofing Starter Crock",
+          "introduction": "A covered starter crock rises and falls around a single warm bubble.",
+          "visualAnchor": "Small clay crock with a domed dough top, one glowing crack, and flour handprints"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Crumbfoot Roll",
+          "introduction": "A round bread roll bounces on four soft crumb feet beneath a scored smile.",
+          "visualAnchor": "Spherical golden roll with cross scoring and four pale torn-crumb feet"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Boule-Shoulder Baker",
+          "introduction": "A broad loaf golem hardens two crust shoulders while keeping flexible crumb joints.",
+          "visualAnchor": "Squat humanoid bread form with huge round shoulders and narrow pale crumb elbows"
+        },
+        {
+          "stage": "ascended",
+          "name": "Cast-Iron Hearthguard",
+          "introduction": "A dense hearthguard wears an oven door shield and vents heat through crown scores.",
+          "visualAnchor": "Heavy loaf guardian behind a black iron door shield with a chimney topknot"
+        },
+        {
+          "stage": "legendary",
+          "name": "Ever-Rising Bread Colossus",
+          "introduction": "A towering sourdough colossus carries a glowing communal hearth in its chest.",
+          "visualAnchor": "Massive arched loaf body with an open oven-heart and a crown of rising steam"
+        }
+      ]
+    },
+    {
+      "id": "citrus-reactor",
+      "displayName": "Citrus Reactor",
+      "category": "foodAlchemy",
+      "subtitle": "Zest armor · acid-green charge",
+      "symbolName": "circle.hexagongrid.fill",
+      "lineageIntroduction": "A segmented citrus engine that converts juice pressure, zest oil, and seeds into clean power.",
+      "existenceAnchor": "Living Citrus Bio-Reactor",
+      "silhouetteAnchor": "Spherical fruit core, peel-segment armor, seed feet, and a turbine-slice crown",
+      "silhouetteClass": "segmented-fruit-reactor-on-seed-feet",
+      "motionAnchor": "Seed-foot rolls, peel opening cycles, and juice-jet hops",
+      "locomotionClass": "multi-seed-roll-and-jet",
+      "materialAnchor": "Glossy citrus peel, translucent pulp, white pith, and brushed juicer steel",
+      "energyAnchor": "Acid-green juice charge and yellow zest-oil sparks",
+      "motionProfile": "rolling",
+      "accent": {"red": 0.7, "green": 1.0, "blue": 0.08},
+      "secondaryAccent": {"red": 1.0, "green": 0.64, "blue": 0.05},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sealed Pith Dynamo",
+          "introduction": "A smooth citrus sphere stores pressure behind six perfectly fitted peel segments.",
+          "visualAnchor": "Round green-yellow fruit with six armor seams and four tiny dark seed feet"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Seedwheel Squeezer",
+          "introduction": "A small fruit engine rolls on seeds while opening one translucent pulp window.",
+          "visualAnchor": "Compact citrus orb on four seed wheels with a single glowing wedge exposed"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Zest-Turbine Runner",
+          "introduction": "A split-peel reactor spins its crown slice and vents fragrant power through side jets.",
+          "visualAnchor": "Spherical body with four peeled-back plates and a horizontal citrus-slice turbine"
+        },
+        {
+          "stage": "ascended",
+          "name": "Pressurized Grove Engine",
+          "introduction": "A broad reactor links three fruit chambers around a high-pressure steel juicer core.",
+          "visualAnchor": "Tri-lobed citrus machine surrounding a metal central press and six seed wheels"
+        },
+        {
+          "stage": "legendary",
+          "name": "Sun-Zest Fusion Crown",
+          "introduction": "A radiant citrus crown opens every segment around a contained green fusion star.",
+          "visualAnchor": "Giant peeled fruit forming a radial sun around a bright acid-green central reactor"
+        }
+      ]
+    },
+    {
+      "id": "cacao-citadel",
+      "displayName": "Cacao Citadel",
+      "category": "foodAlchemy",
+      "subtitle": "Dark chocolate walls · molten ganache",
+      "symbolName": "building.columns.fill",
+      "lineageIntroduction": "A mobile chocolate fortress that tempers, molds, and repairs its own walls with flowing ganache.",
+      "existenceAnchor": "Self-Tempering Chocolate Citadel",
+      "silhouetteAnchor": "Stepped bar walls, four cocoa-pod wheels, central fondue tower, and wafer battlements",
+      "silhouetteClass": "stepped-fortress-on-pod-wheels",
+      "motionAnchor": "Cocoa-pod rolling, wall remolding, and ganache-bridge deployment",
+      "locomotionClass": "four-pod-wheel-fortress",
+      "materialAnchor": "Dark tempered chocolate, golden wafer, cocoa husk, and glossy molten ganache",
+      "energyAnchor": "Ruby-red heat lines and warm ganache cascades",
+      "motionProfile": "heavy",
+      "accent": {"red": 0.48, "green": 0.18, "blue": 0.1},
+      "secondaryAccent": {"red": 0.92, "green": 0.28, "blue": 0.22},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Tempering Cacao Pod",
+          "introduction": "A dark cacao pod clicks as liquid chocolate reaches the perfect crystal state.",
+          "visualAnchor": "Ribbed brown pod with one glossy red heat line and four folded cocoa-nib wheels"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Nibwheel Bonbon",
+          "introduction": "A square bonbon rolls on four cocoa nibs and raises one wafer flag.",
+          "visualAnchor": "Small glossy chocolate cube on four oval wheels beneath a triangular wafer pennant"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Ganache Wallrunner",
+          "introduction": "A low chocolate keep pours a flexible ganache bridge ahead of its pod wheels.",
+          "visualAnchor": "Rectangular bar-fort with crenellations and a dark liquid ramp extending forward"
+        },
+        {
+          "stage": "ascended",
+          "name": "Fondue Tower Bastion",
+          "introduction": "A stepped citadel circulates molten chocolate through a tall central fountain.",
+          "visualAnchor": "Wide wafer-walled fortress around a three-tier dark fondue tower"
+        },
+        {
+          "stage": "legendary",
+          "name": "Midnight Confection Keep",
+          "introduction": "A grand chocolate city folds its bar walls into a crown around an endless fountain.",
+          "visualAnchor": "Crown-shaped dark citadel on cocoa-pod wheels with a glowing ganache core"
+        }
+      ]
+    },
+    {
+      "id": "aurora-gelato",
+      "displayName": "Aurora Gelato",
+      "category": "foodAlchemy",
+      "subtitle": "Frozen cream folds · polar syrup",
+      "symbolName": "snowflake",
+      "lineageIntroduction": "A cold gelato spirit that stacks flavors into sculpted forms beneath an aurora ribbon.",
+      "existenceAnchor": "Living Multi-Flavor Gelato",
+      "silhouetteAnchor": "Swirled scoop body, waffle-cone base, syrup ribbon arms, and a translucent aurora crest",
+      "silhouetteClass": "swirl-body-on-cone-base",
+      "motionAnchor": "Cone-tip spins, soft scoop rebounds, and syrup-ribbon skating",
+      "locomotionClass": "single-point-cone-spin",
+      "materialAnchor": "Velvet frozen cream, crisp waffle, glossy syrup, and translucent sugar ice",
+      "energyAnchor": "Mint-violet aurora ribbon and sparkling frost sugar",
+      "motionProfile": "bouncing",
+      "accent": {"red": 0.46, "green": 1.0, "blue": 0.78},
+      "secondaryAccent": {"red": 0.72, "green": 0.42, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Frozen Flavor Pearl",
+          "introduction": "A striped frozen pearl balances inside a tiny waffle cup without melting.",
+          "visualAnchor": "Round three-color scoop seated in a short cone cup beneath one sugar-ice shard"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Cone-Tip Twirler",
+          "introduction": "A small gelato swirl spins on its cone point and waves two syrup ribbons.",
+          "visualAnchor": "Tall soft-serve curl on an inverted cone with two thin contrasting syrup arms"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Three-Scoop Skater",
+          "introduction": "Three offset flavors stack into a leaning body that carves frost arcs in the air.",
+          "visualAnchor": "Diagonal tower of three distinct scoops on a narrow cone with a long syrup trail"
+        },
+        {
+          "stage": "ascended",
+          "name": "Polar Sundae Dancer",
+          "introduction": "A broad frozen dancer supports a sugar-glass aurora between two ribbon arms.",
+          "visualAnchor": "Wide sundae body on a cone skirt beneath an arching translucent mint-violet crest"
+        },
+        {
+          "stage": "legendary",
+          "name": "Borealis Gelato Palace",
+          "introduction": "A towering dessert palace layers every flavor beneath a complete frozen aurora.",
+          "visualAnchor": "Multi-tier cone-and-scoop tower framed by a full rainbow ice ribbon"
+        }
+      ]
+    },
+    {
+      "id": "spice-djinn",
+      "displayName": "Spice Djinn",
+      "category": "foodAlchemy",
+      "subtitle": "Copper mortar · saffron smoke",
+      "symbolName": "smoke.fill",
+      "lineageIntroduction": "A fragrant spice cloud that shapes itself around a copper mortar and grinding-stone heart.",
+      "existenceAnchor": "Collective Aromatic Spice Spirit",
+      "silhouetteAnchor": "Heavy mortar base, smoke torso, pestle staff, layered spice fans, and no fixed legs",
+      "silhouetteClass": "smoke-torso-rising-from-mortar",
+      "motionAnchor": "Spiral smoke turns, pestle sweeps, and scent-driven lateral drifts",
+      "locomotionClass": "aromatic-vortex-hover",
+      "materialAnchor": "Hammered copper, saffron threads, black pepper, cinnamon bark, and colored powder",
+      "energyAnchor": "Saffron-gold aroma currents and crimson heat motes",
+      "motionProfile": "spectral",
+      "accent": {"red": 1.0, "green": 0.52, "blue": 0.08},
+      "secondaryAccent": {"red": 0.76, "green": 0.08, "blue": 0.2},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sealed Masala Mortar",
+          "introduction": "A lidded copper mortar leaks three differently colored threads of fragrant smoke.",
+          "visualAnchor": "Squat copper bowl with a domed lid and three thin red-gold-brown vapor trails"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Pepper-Puff Wisp",
+          "introduction": "A tiny spice cloud rises from the mortar and carries a pestle twice its height.",
+          "visualAnchor": "Small curling smoke figure above a round bowl with a long diagonal pestle"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Saffron Spiral Mixer",
+          "introduction": "A broad aromatic spiral keeps five spice bands separate while turning.",
+          "visualAnchor": "Five-color smoke helix rising from a mortar base around a vertical pestle axis"
+        },
+        {
+          "stage": "ascended",
+          "name": "Cinnamon Gale Conjurer",
+          "introduction": "A tall djinn fans bark, pepper, and saffron into a controlled fragrant gale.",
+          "visualAnchor": "Strong smoke torso with two fan-shaped spice arms and a cinnamon-ring halo"
+        },
+        {
+          "stage": "legendary",
+          "name": "Sultan of Seven Aromas",
+          "introduction": "A crowned spice spirit surrounds its mortar with seven distinct aromatic currents.",
+          "visualAnchor": "Large vapor sovereign above a copper bowl inside seven petal-like colored smoke loops"
+        }
+      ]
+    },
+    {
+      "id": "honeycomb-alchemist",
+      "displayName": "Honeycomb Alchemist",
+      "category": "foodAlchemy",
+      "subtitle": "Beeswax cells · amber viscosity",
+      "symbolName": "hexagon.fill",
+      "lineageIntroduction": "A six-sided wax laboratory that mixes honey density, pollen, and heat into useful compounds.",
+      "existenceAnchor": "Sentient Honeycomb Laboratory",
+      "silhouetteAnchor": "Hexagonal cell torso, six wax legs, dripping retort arm, and a crown of pollen flasks",
+      "silhouetteClass": "hexagonal-lab-on-six-wax-legs",
+      "motionAnchor": "Six-leg cell steps, viscous arm pours, and rotating flask exchanges",
+      "locomotionClass": "hexapod-wax-walk",
+      "materialAnchor": "Golden beeswax, clear honey, dark propolis, glass retorts, and pollen powder",
+      "energyAnchor": "Amber viscosity waves and bright pollen reaction sparks",
+      "motionProfile": "skittering",
+      "accent": {"red": 1.0, "green": 0.68, "blue": 0.08},
+      "secondaryAccent": {"red": 0.44, "green": 0.22, "blue": 0.08},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Waxsealed Honey Cell",
+          "introduction": "A single capped hexagon holds one dense amber drop and three grains of pollen.",
+          "visualAnchor": "Thick wax hexagon with a clear central honey window and six folded leg seams"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Six-Foot Drip Cell",
+          "introduction": "A little honey cell walks on six wax feet while carrying one glass pipette.",
+          "visualAnchor": "Small upright hexagon on six short legs with a long transparent dropper arm"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Pollen Ratio Brewer",
+          "introduction": "A three-cell laboratory measures pollen colors through rotating side flasks.",
+          "visualAnchor": "Triangular cluster of three hexagonal cells with four different glass retorts"
+        },
+        {
+          "stage": "ascended",
+          "name": "Propolis Reaction Walker",
+          "introduction": "A broad wax alchemist deploys a dark propolis shield and two honey retort arms.",
+          "visualAnchor": "Six-legged honeycomb body with a black hex shield and paired curved glass arms"
+        },
+        {
+          "stage": "legendary",
+          "name": "Golden Hive Philosopher",
+          "introduction": "A crown of laboratory cells refines a perfect suspended drop of luminous honey.",
+          "visualAnchor": "Radial honeycomb crown around a huge floating amber drop and six glass instruments"
+        }
+      ]
+    },
+    {
+      "id": "dumpling-dojo",
+      "displayName": "Dumpling Dojo",
+      "category": "foodAlchemy",
+      "subtitle": "Steamed dough · chili-oil focus",
+      "symbolName": "flame.circle.fill",
+      "lineageIntroduction": "A disciplined dumpling spirit that folds dough pleats into armor and practices bamboo-steamer forms.",
+      "existenceAnchor": "Living Pleated Dumpling Fighter",
+      "silhouetteAnchor": "Round stuffed body, radial pleat crown, short dough limbs, and a bamboo steamer shield",
+      "silhouetteClass": "round-pleated-biped-with-steamer",
+      "motionAnchor": "Short planted steps, rolling dodges, and steamer-lid parries",
+      "locomotionClass": "compact-bipedal-martial-steps",
+      "materialAnchor": "Soft steamed dough, bamboo slats, glossy chili oil, and sesame-black accents",
+      "energyAnchor": "Red chili-oil arcs and white steam focus rings",
+      "motionProfile": "agile",
+      "accent": {"red": 0.94, "green": 0.18, "blue": 0.12},
+      "secondaryAccent": {"red": 0.96, "green": 0.86, "blue": 0.68},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Unfolded Wrapper Disc",
+          "introduction": "A round dough wrapper curls around a warm filling core without closing.",
+          "visualAnchor": "Flat pale disc lifted at the edges around one red-orange filling sphere"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Seven-Pleat Bunlet",
+          "introduction": "A tiny dumpling stands on two dough feet and practices seven careful folds.",
+          "visualAnchor": "Small round white dumpling with seven crown pleats and two short planted legs"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Steamer-Lid Disciple",
+          "introduction": "A compact fighter uses a bamboo lid as shield while drawing chili-oil arcs.",
+          "visualAnchor": "Round bipedal dumpling behind a circular bamboo shield with one red sweeping trail"
+        },
+        {
+          "stage": "ascended",
+          "name": "Chili-Fold Master",
+          "introduction": "A tall pleated master unfolds dough layers into sleeves, guards, and rolling armor.",
+          "visualAnchor": "Upright dumpling form with layered pleat shoulders and crossed bamboo steamer halves"
+        },
+        {
+          "stage": "legendary",
+          "name": "Hundred-Pleat Grandmaster",
+          "introduction": "A serene dumpling sovereign opens a halo of perfect folds and white steam rings.",
+          "visualAnchor": "Central round fighter before a radial pleat halo with steamer lids at both sides"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "themes": [
+    {
+      "id": "chrono",
+      "displayName": "Chrono Spiral",
+      "category": "artifactsInstruments",
+      "subtitle": "Clockwork shell · gyroscopic time rings",
+      "symbolName": "clock.fill",
+      "lineageIntroduction": "A floating clockwork nautilus whose spiral shell measures and redirects the flow of time.",
+      "existenceAnchor": "Clockwork Nautilus",
+      "silhouetteAnchor": "Dominant spiral shell, eight short tentacles, and one offset gyroscopic ring",
+      "silhouetteClass": "spiral-shell-with-tentacle-base",
+      "motionAnchor": "Buoyant tentacle pulses while shell and time ring counter-rotate",
+      "locomotionClass": "floating-tentacle-pulse",
+      "materialAnchor": "Aged brass, smoked glass, ivory gears, and blue-steel springs",
+      "energyAnchor": "Pendulum eye, ticking orbit marks, and split-second halo",
+      "motionProfile": "orbiting",
+      "accent": {"red": 0.78, "green": 0.58, "blue": 0.24},
+      "secondaryAccent": {"red": 0.3, "green": 0.82, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Wound Spiral Capsule",
+          "introduction": "A wound spiral capsule ticking softly behind smoked glass.",
+          "visualAnchor": "Round brass spiral capsule with pendulum eye, folded tentacle seams, and one side ring"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Tick-Tentacle Hatchling",
+          "introduction": "A floating hatchling testing eight tentacles against a tiny pendulum current.",
+          "visualAnchor": "Small open spiral shell above eight ivory tentacles and a dangling blue pendulum"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Gearcurrent Nautilus",
+          "introduction": "A clockwork nautilus whose shell and time ring rotate in opposite directions.",
+          "visualAnchor": "Horizontal brass nautilus inside one tilted steel ring with exposed shell gears"
+        },
+        {
+          "stage": "ascended",
+          "name": "Pendulum Shellwright",
+          "introduction": "A shellwright pausing brief moments to reposition allies between pendulum beats.",
+          "visualAnchor": "Tall floating nautilus carrying a long central pendulum between two offset time hoops"
+        },
+        {
+          "stage": "legendary",
+          "name": "Epoch Gyre Leviathan",
+          "introduction": "An epoch leviathan carrying layered timelines inside one vast gyroscopic spiral.",
+          "visualAnchor": "Huge multi-ring spiral entity with nested clock faces and tentacles tracing a time vortex"
+        }
+      ]
+    },
+    {
+      "id": "origami",
+      "displayName": "Origami Skyfold",
+      "category": "artifactsInstruments",
+      "subtitle": "Lacquered paper · luminous fold lines",
+      "symbolName": "paperplane.fill",
+      "lineageIntroduction": "A weightless paper dragon that transforms by refolding its wings, body, and ribbon tail.",
+      "existenceAnchor": "Origami Kite Dragon",
+      "silhouetteAnchor": "Diamond-fold torso, angular paper wings, pointed snout, and segmented ribbon tail",
+      "silhouetteClass": "angular-paper-kite-dragon",
+      "motionAnchor": "Kite glides punctuated by visible folds, snaps, and midair refolding",
+      "locomotionClass": "fold-driven-kite-flight",
+      "materialAnchor": "Lacquered folded paper, carbon-fiber creases, and razor-thin foil edges",
+      "energyAnchor": "Cobalt fold lines and floating wind-seal characters",
+      "motionProfile": "gliding",
+      "accent": {"red": 0.35, "green": 0.58, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.42, "blue": 0.25},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sealed Fold Star",
+          "introduction": "A sealed paper star whose first dragon fold is still hidden inside.",
+          "visualAnchor": "Five-point folded paper star with one cobalt crease and a tucked ribbon tip"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Paperwing Whelp",
+          "introduction": "A tiny paperwing whelp learning to stay aloft without flapping.",
+          "visualAnchor": "Small diamond-bodied dragon with two triangular wings and a short zigzag tail"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Creasewind Kite",
+          "introduction": "A creasewind kite that changes direction by refolding its diamond torso.",
+          "visualAnchor": "Wide angular kite-dragon with four visible hinge creases and a long ribbon tail"
+        },
+        {
+          "stage": "ascended",
+          "name": "Thousand-Fold Sky Drake",
+          "introduction": "A sky drake unfolding a thousand sharp planes around one ribbon tail.",
+          "visualAnchor": "Long paper drake surrounded by layered fan wings and many razor-thin folded planes"
+        },
+        {
+          "stage": "legendary",
+          "name": "Infinite-Fold Sky Regent",
+          "introduction": "A sky regent whose infinite folds turn wind into a precise geometric domain.",
+          "visualAnchor": "Circular origami dragon formed from repeating folded segments around an empty center"
+        }
+      ]
+    },
+    {
+      "id": "ink",
+      "displayName": "Inkbrush Guardian",
+      "category": "artifactsInstruments",
+      "subtitle": "Bamboo armor · living sumi ink",
+      "symbolName": "paintbrush.pointed.fill",
+      "lineageIntroduction": "An upright panda calligrapher that paints living wards with bamboo, ink, and seal energy.",
+      "existenceAnchor": "Inkbrush Panda",
+      "silhouetteAnchor": "Upright round panda, oversized brush staff, scroll sash, and orbiting ink ribbon",
+      "silhouetteClass": "upright-round-brush-wielder",
+      "motionAnchor": "Upright brush forms, stamping footwork, and sweeping calligraphy arcs",
+      "locomotionClass": "bipedal-brush-kata",
+      "materialAnchor": "Pale bamboo, rice-paper cloth, wet sumi ink, and carved cinnabar seals",
+      "energyAnchor": "Black ink orbit, white negative-space strokes, and red seal pulse",
+      "motionProfile": "poised",
+      "accent": {"red": 0.92, "green": 0.18, "blue": 0.2},
+      "secondaryAccent": {"red": 0.94, "green": 0.94, "blue": 0.9},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Inkstone Bamboo Pod",
+          "introduction": "A bamboo pod resting on an inkstone beneath a single red seal.",
+          "visualAnchor": "Short bamboo cylinder laid across a black inkstone with one square red stamp"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Brushpaw Cub",
+          "introduction": "A round brushpaw cub painting curious marks with an oversized staff.",
+          "visualAnchor": "Small upright panda gripping a brush taller than its body beside one wet ink loop"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Scrollstep Adept",
+          "introduction": "A scrollstep adept turning upright footwork into disciplined black strokes.",
+          "visualAnchor": "Lean standing panda with a diagonal scroll sash and brush held in a low guard"
+        },
+        {
+          "stage": "ascended",
+          "name": "Sumi Wardancer",
+          "introduction": "A sumi wardancer surrounding each brush form with living negative space.",
+          "visualAnchor": "Wide brush stance inside a broken black ink circle with white cutout symbols"
+        },
+        {
+          "stage": "legendary",
+          "name": "Vermilion Sealmaster",
+          "introduction": "A vermilion sealmaster whose final stamp brings an entire painted guardian to life.",
+          "visualAnchor": "Upright panda before a giant red seal while a black painted guardian rises behind"
+        }
+      ]
+    },
+    {
+      "id": "celestial-musicbox",
+      "displayName": "Celestial Music Box",
+      "category": "artifactsInstruments",
+      "subtitle": "Walnut case · starlight comb",
+      "symbolName": "music.note.list",
+      "lineageIntroduction": "A self-playing music box that unfolds cylinders, combs, and orbital chimes into a concert body.",
+      "existenceAnchor": "Sentient Astronomical Music Box",
+      "silhouetteAnchor": "Square wooden case, rotating pinned cylinder, fan-shaped comb, and orbiting brass chimes",
+      "silhouetteClass": "box-body-with-orbiting-chimes",
+      "motionAnchor": "Measured key turns, cylinder rolls, and chime orbits synchronized to melody",
+      "locomotionClass": "four-key-foot-waltz",
+      "materialAnchor": "Dark walnut, polished brass, blue velvet, and etched steel music teeth",
+      "energyAnchor": "Tiny star notes and concentric golden rhythm rings",
+      "motionProfile": "poised",
+      "accent": {"red": 0.96, "green": 0.7, "blue": 0.22},
+      "secondaryAccent": {"red": 0.26, "green": 0.58, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Latched Lullaby Case",
+          "introduction": "A closed walnut case hums one note whenever its tiny star key turns.",
+          "visualAnchor": "Small square wooden box with a star-shaped winding key and one thin gold seam"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Combtooth Waltzer",
+          "introduction": "A tiny open music box walks on four key feet while plucking a short steel comb.",
+          "visualAnchor": "Open square case on four winding-key legs with a fan of bright metal teeth"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Pinned-Constellation Player",
+          "introduction": "A long blue cylinder rotates visible star patterns across a widening brass comb.",
+          "visualAnchor": "Rectangular music-box body dominated by an exposed constellation-pin cylinder"
+        },
+        {
+          "stage": "ascended",
+          "name": "Orbital Chime Conductor",
+          "introduction": "A tall instrument directs six detached bells around its rotating melody core.",
+          "visualAnchor": "Upright walnut cabinet encircled by six brass chimes at different orbital heights"
+        },
+        {
+          "stage": "legendary",
+          "name": "Grand Orrery Symphony",
+          "introduction": "A vast musical orrery turns planets, bells, and combs through one complete composition.",
+          "visualAnchor": "Layered circular music mechanism surrounded by planet chimes and a radial steel comb"
+        }
+      ]
+    },
+    {
+      "id": "wayfinder-lantern",
+      "displayName": "Wayfinder Lantern",
+      "category": "artifactsInstruments",
+      "subtitle": "Patinated copper · compass flame",
+      "symbolName": "lantern.fill",
+      "lineageIntroduction": "A walking lantern that reshapes its shutters and handle to reveal the safest available path.",
+      "existenceAnchor": "Sentient Compass Lantern",
+      "silhouetteAnchor": "Tall glass chamber, arched handle, three shutter legs, and a needle-shaped inner flame",
+      "silhouetteClass": "handled-lantern-on-tripod-shutters",
+      "motionAnchor": "Three-shutter steps while the handle turns as a directional arch",
+      "locomotionClass": "tripod-shutter-walk",
+      "materialAnchor": "Patinated copper, smoked glass, parchment shutters, and black iron hinges",
+      "energyAnchor": "Needle-white flame and projected compass paths",
+      "motionProfile": "marching",
+      "accent": {"red": 0.98, "green": 0.82, "blue": 0.32},
+      "secondaryAccent": {"red": 0.16, "green": 0.8, "blue": 0.72},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Unlit Compass Wick",
+          "introduction": "A copper wick case rotates quietly around a needle that has not yet ignited.",
+          "visualAnchor": "Round copper capsule with one vertical compass needle behind a narrow glass slit"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Shutterstep Lamp",
+          "introduction": "A small lantern toddles on three open shutters while its flame tests each direction.",
+          "visualAnchor": "Squat triangular lantern on three flap-like legs beneath an oversized curved handle"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Trailbeam Waylamp",
+          "introduction": "A tall lantern projects one clean road of light from an adjustable front shutter.",
+          "visualAnchor": "Narrow upright lamp with a long forward light wedge and three hinged base feet"
+        },
+        {
+          "stage": "ascended",
+          "name": "Crossroads Beacon",
+          "introduction": "A four-faced beacon opens different shutters to compare several possible routes.",
+          "visualAnchor": "Square lantern tower with four open directional panels and a compass handle ring"
+        },
+        {
+          "stage": "legendary",
+          "name": "Polestar Pathkeeper",
+          "introduction": "A crown lantern maps a complete safe passage as luminous roads around its flame.",
+          "visualAnchor": "Tall central lantern within a radial compass rose made from eight projected light paths"
+        }
+      ]
+    },
+    {
+      "id": "masquerade-reliquary",
+      "displayName": "Masquerade Reliquary",
+      "category": "artifactsInstruments",
+      "subtitle": "Porcelain masks · velvet memory",
+      "symbolName": "theatermasks.fill",
+      "lineageIntroduction": "A floating reliquary of theatrical masks that changes role by rebuilding its shared silhouette.",
+      "existenceAnchor": "Collective Enchanted Mask Reliquary",
+      "silhouetteAnchor": "Central blank mask, layered side masks, trailing velvet panels, and a broken halo frame",
+      "silhouetteClass": "floating-multi-mask-cloak",
+      "motionAnchor": "Mask swaps, cloak folds, and sudden role-specific pose changes",
+      "locomotionClass": "hovering-cloak-drift",
+      "materialAnchor": "Glazed porcelain, black velvet, gold leaf, and hairline lacquer cracks",
+      "energyAnchor": "Rose-gold expression lines and violet memory smoke",
+      "motionProfile": "spectral",
+      "accent": {"red": 0.92, "green": 0.36, "blue": 0.7},
+      "secondaryAccent": {"red": 0.96, "green": 0.78, "blue": 0.34},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Blank-Face Casket",
+          "introduction": "A velvet casket holds one featureless porcelain mask beneath a gold clasp.",
+          "visualAnchor": "Small black oval casket showing a single white blank mask and one rose-gold hinge"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Half-Mask Flutter",
+          "introduction": "Two mismatched half masks hover together above a short strip of velvet.",
+          "visualAnchor": "Split comedy and tragedy halves forming one face over a triangular cloth tail"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Three-Role Player",
+          "introduction": "Three porcelain faces rotate around a shared cloak to change stance instantly.",
+          "visualAnchor": "Central cloak silhouette with one front mask and two profile masks at shoulder height"
+        },
+        {
+          "stage": "ascended",
+          "name": "Gilded Scenechanger",
+          "introduction": "A tall reliquary unfolds a broken gold frame and stages several identities at once.",
+          "visualAnchor": "Floating velvet figure framed by an open proscenium arch and five porcelain masks"
+        },
+        {
+          "stage": "legendary",
+          "name": "Thousand-Face Masque",
+          "introduction": "A circular parliament of masks surrounds an empty center where any role may appear.",
+          "visualAnchor": "Large ring of distinct porcelain masks with long velvet ribbons flowing outward"
+        }
+      ]
+    },
+    {
+      "id": "dreamweaver-loom",
+      "displayName": "Dreamweaver Loom",
+      "category": "artifactsInstruments",
+      "subtitle": "Moonwood frame · lucid warp threads",
+      "symbolName": "rectangle.split.3x3.fill",
+      "lineageIntroduction": "A walking loom that weaves temporary dreamscapes from colored warp threads and memory knots.",
+      "existenceAnchor": "Ambulatory Enchanted Loom",
+      "silhouetteAnchor": "Tall rectangular frame, four shuttle feet, dense vertical warp, and a wide flying beater",
+      "silhouetteClass": "rectangular-frame-on-shuttle-feet",
+      "motionAnchor": "Shuttle-foot pacing, beater swings, and fabric unfurling turns",
+      "locomotionClass": "four-shuttle-frame-walk",
+      "materialAnchor": "Pale moonwood, indigo thread, silver heddles, and translucent woven cloth",
+      "energyAnchor": "Lucid rainbow warp and softly glowing memory knots",
+      "motionProfile": "mechanical",
+      "accent": {"red": 0.42, "green": 0.42, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.42, "blue": 0.72},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Knotted Warp Spool",
+          "introduction": "A moonwood spool holds five colored threads tied around one sleeping memory knot.",
+          "visualAnchor": "Horizontal pale spool wrapped in five bands with a luminous knot at one end"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Shuttlefoot Framelet",
+          "introduction": "A tiny square loom walks on two shuttles while weaving a thumb-sized sky.",
+          "visualAnchor": "Small open frame balanced on two boat-shaped shuttles with three vertical threads"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Lucid Pattern Weaver",
+          "introduction": "A tall four-foot loom builds a moving landscape across translucent indigo cloth.",
+          "visualAnchor": "Rectangular loom on four shuttle feet with a visible landscape forming in its warp"
+        },
+        {
+          "stage": "ascended",
+          "name": "Reverie Tapestry Walker",
+          "introduction": "A broad loom carries a long finished dreamscape that curls around its own frame.",
+          "visualAnchor": "Wide weaving frame wrapped by a spiral ribbon tapestry and a sweeping horizontal beater"
+        },
+        {
+          "stage": "legendary",
+          "name": "Endless-Dream Grand Loom",
+          "introduction": "A monumental loom weaves foreground, horizon, and sky as three independent layers.",
+          "visualAnchor": "Towering triple-frame loom with three translucent world tapestries extending outward"
+        }
+      ]
+    },
+    {
+      "id": "thunder-bell",
+      "displayName": "Thunder Bell",
+      "category": "artifactsInstruments",
+      "subtitle": "Temple bronze · storm-white resonance",
+      "symbolName": "bell.fill",
+      "lineageIntroduction": "A floating temple bell that uses its clapper, cracks, and ringing arcs as articulated limbs.",
+      "existenceAnchor": "Sentient Storm Temple Bell",
+      "silhouetteAnchor": "Large inverted bell body, long clapper tail, two cracked rim arms, and a cloud handle",
+      "silhouetteClass": "inverted-bell-with-clapper-tail",
+      "motionAnchor": "Pendulum swings, rim-arm strikes, and recoil-driven floating hops",
+      "locomotionClass": "resonant-pendulum-hop",
+      "materialAnchor": "Dark temple bronze, silver crack inlay, braided rope, and clouded iron",
+      "energyAnchor": "White thunder rings and blue sound-pressure fractures",
+      "motionProfile": "pulsing",
+      "accent": {"red": 0.42, "green": 0.75, "blue": 1.0},
+      "secondaryAccent": {"red": 0.92, "green": 0.78, "blue": 0.34},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Muted Bronze Chime",
+          "introduction": "A sealed bronze chime contains a tiny clapper that moves without making sound.",
+          "visualAnchor": "Small closed bell capsule with one rope loop and a faint silver crack at the rim"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Clapper-Tail Belllet",
+          "introduction": "A round little bell floats by swinging its long clapper like a balancing tail.",
+          "visualAnchor": "Squat bell body above one curved clapper tail and two tiny rim notches"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Storm-Rim Ringer",
+          "introduction": "A cracked bell grows two rim arms that strike controlled thunder from its sides.",
+          "visualAnchor": "Tall bell with two hinged bronze rim arms and a blue-white fracture across its body"
+        },
+        {
+          "stage": "ascended",
+          "name": "Temple Resonance Warden",
+          "introduction": "A massive bell hangs beneath a cloud handle and pushes threats back with ring waves.",
+          "visualAnchor": "Large suspended temple bell beneath a cloud-shaped yoke and three expanding sound rings"
+        },
+        {
+          "stage": "legendary",
+          "name": "Heaven-Peal Bell Sovereign",
+          "introduction": "A crowned storm bell turns every fracture into a branching path for thunder.",
+          "visualAnchor": "Huge bronze bell inside a radial halo of lightning cracks and concentric white rings"
+        }
+      ]
+    },
+    {
+      "id": "astral-astrolabe",
+      "displayName": "Astral Astrolabe",
+      "category": "artifactsInstruments",
+      "subtitle": "Silver rings · midnight enamel",
+      "symbolName": "scope",
+      "lineageIntroduction": "A walking astrolabe that rearranges calibrated rings to navigate locations that have no map.",
+      "existenceAnchor": "Sentient Navigational Astrolabe",
+      "silhouetteAnchor": "Nested open rings, offset pointer, three compass feet, and a suspended star plate",
+      "silhouetteClass": "nested-rings-on-tripod-compass",
+      "motionAnchor": "Tripod compass steps with independent ring and pointer rotations",
+      "locomotionClass": "three-point-instrument-walk",
+      "materialAnchor": "Brushed silver, midnight enamel, etched brass, and sapphire pivot jewels",
+      "energyAnchor": "Fine blue coordinate lines and a fixed white pole star",
+      "motionProfile": "orbiting",
+      "accent": {"red": 0.3, "green": 0.58, "blue": 1.0},
+      "secondaryAccent": {"red": 0.94, "green": 0.82, "blue": 0.32},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Uncalibrated Star Plate",
+          "introduction": "A dark enamel disc holds one wandering silver pointer and no fixed north.",
+          "visualAnchor": "Flat midnight disc with one loose pointer and three folded compass points"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Tripod Skyfinder",
+          "introduction": "A single-ring astrolabe walks on three points while chasing a small pole star.",
+          "visualAnchor": "Open silver circle on tripod feet with a tiny white star suspended off center"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Double-Ring Navigator",
+          "introduction": "Two perpendicular rings align long enough to reveal a path through empty space.",
+          "visualAnchor": "Crossed vertical and horizontal rings above three feet and a long diagonal pointer"
+        },
+        {
+          "stage": "ascended",
+          "name": "Uncharted Meridian Engine",
+          "introduction": "A complex astrolabe rotates five calibrated circles around a sapphire axis.",
+          "visualAnchor": "Five nested offset rings encasing a blue central pivot over a compact compass base"
+        },
+        {
+          "stage": "legendary",
+          "name": "Worldless Navigation Crown",
+          "introduction": "A vast open instrument builds a navigable coordinate system around any destination.",
+          "visualAnchor": "Crownlike sphere of many engraved rings with a brilliant fixed star at its apex"
+        }
+      ]
+    },
+    {
+      "id": "runic-grimoire",
+      "displayName": "Runic Grimoire",
+      "category": "artifactsInstruments",
+      "subtitle": "Leather pages · cobalt scriptfire",
+      "symbolName": "book.closed.fill",
+      "lineageIntroduction": "A living book that folds pages into wings, limbs, and shields while rewriting its own spells.",
+      "existenceAnchor": "Self-Rewriting Enchanted Grimoire",
+      "silhouetteAnchor": "Thick book torso, page-fan wings, bookmark legs, metal corner jaws, and a rune clasp",
+      "silhouetteClass": "open-book-with-page-wings",
+      "motionAnchor": "Bookmark steps, page-wing flaps, and rapid defensive page turns",
+      "locomotionClass": "page-wing-flight-and-walk",
+      "materialAnchor": "Dark leather, ivory paper, brass corners, blue ink, and red silk markers",
+      "energyAnchor": "Cobalt scriptfire and floating geometric punctuation",
+      "motionProfile": "winged",
+      "accent": {"red": 0.22, "green": 0.56, "blue": 1.0},
+      "secondaryAccent": {"red": 0.92, "green": 0.18, "blue": 0.28},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Clasped Rune Folio",
+          "introduction": "A tightly clasped folio leaks one moving blue letter between its pages.",
+          "visualAnchor": "Small thick closed book with an oversized brass clasp and one glowing page seam"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Bookmark Footnote",
+          "introduction": "A little book opens halfway and toddles on two long red bookmark ribbons.",
+          "visualAnchor": "Half-open book body balanced on two ribbon legs with metal corner toes"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Pagewing Spellreader",
+          "introduction": "An open grimoire fans outer pages into wings while a central spell writes itself.",
+          "visualAnchor": "Flying open book with layered page fans and a bright rune centered on the gutter"
+        },
+        {
+          "stage": "ascended",
+          "name": "Margin-Ward Libram",
+          "introduction": "A broad battle book folds reinforced margins into shields and bracket-shaped arms.",
+          "visualAnchor": "Thick open tome between two vertical page shields and floating blue brackets"
+        },
+        {
+          "stage": "legendary",
+          "name": "Infinite Chapter Codex",
+          "introduction": "A ring of turning pages surrounds a central volume that never reaches its final chapter.",
+          "visualAnchor": "Large upright book inside a complete circular storm of pages and cobalt runes"
+        }
+      ]
+    }
+  ]
+}

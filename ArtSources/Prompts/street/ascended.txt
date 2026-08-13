@@ -1,0 +1,25 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Street Brawl [Fauna & Mythic]
+Form: Sonic Brawler, canonical ascended stage
+Lineage concept: A graffiti gecko that turns street movement, spray paint, and sound into arena weapons.
+Existence anchor: Graffiti Gecko
+Persistent silhouette logic: Long suction limbs, a spray-can tail, low shoulders, and skateboard side rails
+Silhouette topology class: low-four-limbed-board-rider
+Movement and locomotion: Crouched slides, wall plants, and one-handed freeze poses; ground-slides-and-wall-runs
+Material system: Worn rubber, layered stickers, and spray-painted polymer
+Energy motif: Acid-green soundwaves and red graffiti bursts
+Current-stage introduction: A one-handed brawler turning graffiti bursts into visible sound pressure.
+Current-stage visual anchor: One-hand freeze silhouette inside a jagged speaker ring and crossed paint jets
+
+The provided reference image is the immediately preceding form, Skateboard Tagger. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Long-limbed gecko riding twin side rails while its can-tail sprays a hard arc
+
+Progression rule: Stage IV is a structural ascension: change stance, functional anatomy, formation, or architecture. Preserve the same face, core, facade, or identity marker; do not merely add armor.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FF00FF, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FF00FF must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

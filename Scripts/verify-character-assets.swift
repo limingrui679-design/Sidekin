@@ -8,10 +8,29 @@ guard CommandLine.arguments.count == 2 else {
 }
 
 let directory = URL(fileURLWithPath: CommandLine.arguments[1], isDirectory: true)
-let themes = [
-    "nova", "mecha", "street", "samurai", "abyss",
-    "volcanic", "candy", "wasteland", "phantom", "totem"
-]
+struct ThemeCatalogEnvelope: Decodable {
+    struct Theme: Decodable {
+        let id: String
+    }
+
+    let themes: [Theme]
+}
+
+let projectRoot = URL(fileURLWithPath: #filePath)
+    .deletingLastPathComponent()
+    .deletingLastPathComponent()
+let catalogURL = projectRoot.appendingPathComponent("ArtSources/PET_THEME_CATALOG.json")
+guard let catalogData = try? Data(contentsOf: catalogURL),
+      let catalog = try? JSONDecoder().decode(ThemeCatalogEnvelope.self, from: catalogData)
+else {
+    fputs("Verification failed: cannot decode \(catalogURL.path)\n", stderr)
+    exit(1)
+}
+let themes = catalog.themes.map(\.id)
+guard themes.count == 100, Set(themes).count == 100 else {
+    fputs("Verification failed: catalog must contain 100 unique theme IDs\n", stderr)
+    exit(1)
+}
 let stages = ["egg", "hatchling", "juvenile", "ascended", "legendary"]
 let expectedNames = Set(themes.flatMap { theme in
     stages.map { "\(theme)-\($0).png" }
@@ -21,6 +40,7 @@ let fileManager = FileManager.default
 struct AssetMask {
     let name: String
     let pixels: [Bool]
+    let rgba: [UInt8]
     let occupied: Int
 }
 
@@ -41,6 +61,35 @@ private func intersectionOverUnion(_ left: AssetMask, _ right: AssetMask) -> Dou
     return union == 0 ? 1 : Double(intersection) / Double(union)
 }
 
+private func appearanceSimilarity(_ left: AssetMask, _ right: AssetMask) -> Double {
+    var totalDistance = 0.0
+    var comparedPixels = 0
+
+    for index in left.pixels.indices where left.pixels[index] || right.pixels[index] {
+        let byteIndex = index * 4
+        let redDistance = Double(Int(left.rgba[byteIndex]) - Int(right.rgba[byteIndex]))
+        let greenDistance = Double(Int(left.rgba[byteIndex + 1]) - Int(right.rgba[byteIndex + 1]))
+        let blueDistance = Double(Int(left.rgba[byteIndex + 2]) - Int(right.rgba[byteIndex + 2]))
+        let alphaDistance = abs(
+            Double(Int(left.rgba[byteIndex + 3]) - Int(right.rgba[byteIndex + 3]))
+        ) / 255
+        let colorDistance = sqrt(
+            (redDistance * redDistance
+                + greenDistance * greenDistance
+                + blueDistance * blueDistance)
+                / (3 * 255 * 255)
+        )
+
+        // RGB catches recolors and internal detail changes; alpha catches
+        // holes and appendages that a coarse outer silhouette can hide.
+        totalDistance += colorDistance * 0.75 + alphaDistance * 0.25
+        comparedPixels += 1
+    }
+
+    guard comparedPixels > 0 else { return 1 }
+    return max(0, 1 - totalDistance / Double(comparedPixels))
+}
+
 let actualNames: Set<String>
 do {
     actualNames = Set(
@@ -58,7 +107,7 @@ do {
 guard actualNames == expectedNames else {
     let missing = expectedNames.subtracting(actualNames).sorted().joined(separator: ", ")
     let unexpected = actualNames.subtracting(expectedNames).sorted().joined(separator: ", ")
-    fail("expected exactly 50 assets; missing=[\(missing)] unexpected=[\(unexpected)]")
+    fail("expected exactly 500 assets; missing=[\(missing)] unexpected=[\(unexpected)]")
 }
 
 let maskSide = 72
@@ -117,10 +166,16 @@ for name in expectedNames.sorted() {
             fail("\(name) has a non-transparent corner")
         }
     }
-    masks[name] = AssetMask(name: name, pixels: alphaMask, occupied: occupied)
+    masks[name] = AssetMask(name: name, pixels: alphaMask, rgba: pixels, occupied: occupied)
 }
 
+let withinLineageSilhouetteThreshold = 0.82
+let withinLineageAppearanceThreshold = 0.90
+let crossThemeSilhouetteThreshold = 0.86
+let crossThemeAppearanceThreshold = 0.92
+
 var maximumWithinLineage: (score: Double, pair: String) = (0, "")
+var maximumWithinLineageAppearance: (score: Double, pair: String) = (0, "")
 var silhouetteViolations: [String] = []
 for theme in themes {
     for leftIndex in stages.indices {
@@ -131,9 +186,17 @@ for theme in themes {
             if score > maximumWithinLineage.score {
                 maximumWithinLineage = (score, "\(leftName) <> \(rightName)")
             }
-            if score >= 0.82 {
+            guard score >= withinLineageSilhouetteThreshold else { continue }
+            let appearance = appearanceSimilarity(masks[leftName]!, masks[rightName]!)
+            if appearance > maximumWithinLineageAppearance.score {
+                maximumWithinLineageAppearance = (
+                    appearance,
+                    "\(leftName) <> \(rightName), silhouette=\(String(format: "%.3f", score))"
+                )
+            }
+            if appearance >= withinLineageAppearanceThreshold {
                 silhouetteViolations.append(
-                    "same-lineage \(leftName) / \(rightName), IoU=\(String(format: "%.3f", score))"
+                    "same-lineage \(leftName) / \(rightName), silhouette=\(String(format: "%.3f", score)), appearance=\(String(format: "%.3f", appearance))"
                 )
             }
         }
@@ -141,6 +204,7 @@ for theme in themes {
 }
 
 var maximumAcrossThemes: (score: Double, pair: String) = (0, "")
+var maximumAcrossThemesAppearance: (score: Double, pair: String) = (0, "")
 for stage in stages {
     for leftIndex in themes.indices {
         for rightIndex in themes.indices where rightIndex > leftIndex {
@@ -150,16 +214,24 @@ for stage in stages {
             if score > maximumAcrossThemes.score {
                 maximumAcrossThemes = (score, "\(leftName) <> \(rightName)")
             }
-            if score >= 0.86 {
+            guard score >= crossThemeSilhouetteThreshold else { continue }
+            let appearance = appearanceSimilarity(masks[leftName]!, masks[rightName]!)
+            if appearance > maximumAcrossThemesAppearance.score {
+                maximumAcrossThemesAppearance = (
+                    appearance,
+                    "\(leftName) <> \(rightName), silhouette=\(String(format: "%.3f", score))"
+                )
+            }
+            if appearance >= crossThemeAppearanceThreshold {
                 silhouetteViolations.append(
-                    "cross-theme \(leftName) / \(rightName), IoU=\(String(format: "%.3f", score))"
+                    "cross-theme \(leftName) / \(rightName), silhouette=\(String(format: "%.3f", score)), appearance=\(String(format: "%.3f", appearance))"
                 )
             }
         }
     }
 }
 
-print("Verified 50 unique 1254x1254 transparent assets.")
+print("Verified 500 unique 1254x1254 transparent assets across 100 complete themes.")
 print(
     "Highest within-lineage silhouette IoU: "
         + String(format: "%.3f", maximumWithinLineage.score)
@@ -170,6 +242,18 @@ print(
     "Highest same-stage cross-theme silhouette IoU: "
         + String(format: "%.3f", maximumAcrossThemes.score)
         + " (\(maximumAcrossThemes.pair))"
+)
+
+print(
+    "Highest within-lineage appearance similarity among high-IoU candidates: "
+        + String(format: "%.3f", maximumWithinLineageAppearance.score)
+        + " (\(maximumWithinLineageAppearance.pair))"
+)
+
+print(
+    "Highest cross-theme appearance similarity among high-IoU candidates: "
+        + String(format: "%.3f", maximumAcrossThemesAppearance.score)
+        + " (\(maximumAcrossThemesAppearance.pair))"
 )
 
 if !silhouetteViolations.isEmpty {

@@ -1,0 +1,504 @@
+{
+  "themes": [
+    {
+      "id": "nova",
+      "displayName": "Nova Arena",
+      "category": "faunaMythic",
+      "subtitle": "Crystal energy · astral arena",
+      "symbolName": "sparkles",
+      "lineageIntroduction": "A moonhare lineage that converts gravity into crystal arrows and weightless leaps.",
+      "existenceAnchor": "Astral Crystal Moonhare",
+      "silhouetteAnchor": "Crescent ears, comet-tail streamers, long spring legs, and a crystal starbow",
+      "silhouetteClass": "upright-long-eared-archer",
+      "motionAnchor": "Weightless leaps followed by suspended midair bow draws",
+      "locomotionClass": "weightless-bipedal-leaps",
+      "materialAnchor": "Translucent star crystal and flexible deep-blue armor",
+      "energyAnchor": "Four-point star core and nested gravity orbits",
+      "motionProfile": "buoyant",
+      "accent": {"red": 0.12, "green": 0.92, "blue": 1.0},
+      "secondaryAccent": {"red": 0.58, "green": 0.28, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Starshuttle Crystal Egg",
+          "introduction": "A sealed moon-crystal vessel pulsing around a newborn four-point star.",
+          "visualAnchor": "Faceted crescent capsule with one visible star core and two folded ear ridges"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Moonleap Leveret",
+          "introduction": "A curious leveret learning to steer crescent ears and comet streamers.",
+          "visualAnchor": "Small upright leveret with oversized crescent ears and short comet ribbons"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Astral Crystal Scout",
+          "introduction": "A swift scout shaping star shards into close-range arena blades.",
+          "visualAnchor": "Lean moonhare scout with forearm crystal blades and a split streamer tail"
+        },
+        {
+          "stage": "ascended",
+          "name": "Starbow Ranger",
+          "introduction": "A suspended ranger who bends gravity through a fully formed crystal bow.",
+          "visualAnchor": "Airborne archer profile dominated by a full crescent bow and orbiting shards"
+        },
+        {
+          "stage": "legendary",
+          "name": "Skybound Pathfinder",
+          "introduction": "The moonhare apex, charting safe routes through storms of living starlight.",
+          "visualAnchor": "Tall pathfinder framed by crossing star trails, long ears, and a compass bow"
+        }
+      ]
+    },
+    {
+      "id": "street",
+      "displayName": "Street Brawl",
+      "category": "faunaMythic",
+      "subtitle": "Graffiti armor · acid neon",
+      "symbolName": "bolt.fill",
+      "lineageIntroduction": "A graffiti gecko that turns street movement, spray paint, and sound into arena weapons.",
+      "existenceAnchor": "Graffiti Gecko",
+      "silhouetteAnchor": "Long suction limbs, a spray-can tail, low shoulders, and skateboard side rails",
+      "silhouetteClass": "low-four-limbed-board-rider",
+      "motionAnchor": "Crouched slides, wall plants, and one-handed freeze poses",
+      "locomotionClass": "ground-slides-and-wall-runs",
+      "materialAnchor": "Worn rubber, layered stickers, and spray-painted polymer",
+      "energyAnchor": "Acid-green soundwaves and red graffiti bursts",
+      "motionProfile": "agile",
+      "accent": {"red": 0.7, "green": 1.0, "blue": 0.05},
+      "secondaryAccent": {"red": 1.0, "green": 0.2, "blue": 0.25},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Rattlecan Egg",
+          "introduction": "A rattling spray-can egg with one watchful gecko eye.",
+          "visualAnchor": "Squat aerosol-can capsule with a curled tail valve and one suction-pad foot"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Grounded Gecko",
+          "introduction": "A low-slung hatchling testing suction paws in pools of fresh paint.",
+          "visualAnchor": "Wide baby gecko pressed close to the ground with four oversized suction paws"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Skateboard Tagger",
+          "introduction": "A fearless tagger who links skateboard momentum to a spray-can tail.",
+          "visualAnchor": "Long-limbed gecko riding twin side rails while its can-tail sprays a hard arc"
+        },
+        {
+          "stage": "ascended",
+          "name": "Sonic Brawler",
+          "introduction": "A one-handed brawler turning graffiti bursts into visible sound pressure.",
+          "visualAnchor": "One-hand freeze silhouette inside a jagged speaker ring and crossed paint jets"
+        },
+        {
+          "stage": "legendary",
+          "name": "City-Roar Gecko",
+          "introduction": "A city-scale gecko whose tail rail loops every beat back into the arena.",
+          "visualAnchor": "Broad street champion encircled by a tail rail, stacked speakers, and neon tags"
+        }
+      ]
+    },
+    {
+      "id": "samurai",
+      "displayName": "Sakura Blade",
+      "category": "faunaMythic",
+      "subtitle": "Vermilion warplate · sakura energy",
+      "symbolName": "fan.fill",
+      "lineageIntroduction": "A disciplined fox-crane lineage whose petal energy sharpens into crescent draw-cuts.",
+      "existenceAnchor": "Red Fox × Crane",
+      "silhouetteAnchor": "Crane-legged profile, fox muzzle, fan-feather tail, and crescent wing blades",
+      "silhouetteClass": "tall-avian-canine-swordsman",
+      "motionAnchor": "Profile draw-cuts balanced on deliberate one-legged crane stances",
+      "locomotionClass": "measured-stilt-leg-footwork",
+      "materialAnchor": "Vermilion lacquer, black iron, washi, and pale-gold knots",
+      "energyAnchor": "A petal crescent gathering along each drawn blade",
+      "motionProfile": "poised",
+      "accent": {"red": 1.0, "green": 0.24, "blue": 0.48},
+      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.15},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Folding-Fan Egg",
+          "introduction": "A closed fan-shaped egg sealed by a single pale-gold knot.",
+          "visualAnchor": "Upright folded fan pod with fox-ear corners and one straight lacquered seam"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Sheath-Tail Kit",
+          "introduction": "A quiet fox kit whose sheath-like tail hides its first petal blade.",
+          "visualAnchor": "Small fox kit on long crane ankles with a rigid fan tail used as a sheath"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Sakura Blade Cadet",
+          "introduction": "A crane-legged cadet learning balance before speed or force.",
+          "visualAnchor": "Narrow cadet in half armor balancing on one leg with a single wing-blade"
+        },
+        {
+          "stage": "ascended",
+          "name": "Crane-Step Swordmaster",
+          "introduction": "A profile swordmaster whose draw-cut gathers petals into a crescent edge.",
+          "visualAnchor": "Side-on swordmaster beneath a complete petal crescent and spread fan-feather tail"
+        },
+        {
+          "stage": "legendary",
+          "name": "Thousand-Petal Winglord",
+          "introduction": "A winglord commanding a thousand blade-feathers without breaking its stance.",
+          "visualAnchor": "Tall unmoving winglord crowned by radial blade feathers and two crescent wings"
+        }
+      ]
+    },
+    {
+      "id": "abyss",
+      "displayName": "Abyssal Tidehunter",
+      "category": "faunaMythic",
+      "subtitle": "Deep-sea carapace · tidal bioluminescence",
+      "symbolName": "water.waves",
+      "lineageIntroduction": "A horizontally swimming deep-sea hybrid that commands pressure rings and tidal light.",
+      "existenceAnchor": "Salamander × Crab × Manta",
+      "silhouetteAnchor": "Wide horizontal body, many fins and limbs, pincer forearms, and ring-shaped manta wings",
+      "silhouetteClass": "wide-multi-limbed-swimmer",
+      "motionAnchor": "Horizontal drifting swims with sharp pincer-led pressure turns",
+      "locomotionClass": "open-water-undulation",
+      "materialAnchor": "Pearlescent shell, wet skin, and transparent pressure fins",
+      "energyAnchor": "Cyan bioluminescence and expanding tidal rings",
+      "motionProfile": "swimming",
+      "accent": {"red": 0.0, "green": 0.84, "blue": 0.72},
+      "secondaryAccent": {"red": 0.1, "green": 0.42, "blue": 0.92},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Tidebubble Spawn",
+          "introduction": "A tidebubble spawn carrying a faint cyan pulse beneath its shell.",
+          "visualAnchor": "Clear pressure bubble enclosing a flat larval body and two curled pincer buds"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Six-Fin Driftling",
+          "introduction": "A six-finned driftling discovering movement through gentle pressure waves.",
+          "visualAnchor": "Short horizontal driftling with six uneven fins and a glowing belly line"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Pincerwing Tidehunter",
+          "introduction": "A sideways hunter whose growing pincer wings control sharp tidal turns.",
+          "visualAnchor": "Broad swimmer with clawed front fins and two crescent manta panels"
+        },
+        {
+          "stage": "ascended",
+          "name": "Abyssal Tide Rider",
+          "introduction": "A broad abyssal rider armored for crushing depth and open-water pursuit.",
+          "visualAnchor": "Armored horizontal ray with layered shell, multiple fins, and one pressure ring"
+        },
+        {
+          "stage": "legendary",
+          "name": "Great-Ring Sovereign Ray",
+          "introduction": "A sovereign ring-ray that surrounds the battlefield with living ocean pressure.",
+          "visualAnchor": "Vast manta-crab sovereign passing through two giant concentric water rings"
+        }
+      ]
+    },
+    {
+      "id": "tempest",
+      "displayName": "Tempest Aerie",
+      "category": "faunaMythic",
+      "subtitle": "Storm feathers · copper lightning vanes",
+      "symbolName": "cloud.bolt.fill",
+      "lineageIntroduction": "A two-legged thunder roc that learns to brake, dive, and steer storms with its wings.",
+      "existenceAnchor": "Thunder Roc",
+      "silhouetteAnchor": "Hooked beak, two taloned legs, broad storm wings, and a swept feather crest",
+      "silhouetteClass": "broad-winged-bipedal-raptor",
+      "motionAnchor": "Two-foot launches, steep dives, and wide-wing braking turns",
+      "locomotionClass": "powered-flight-and-dive",
+      "materialAnchor": "Layered storm feathers, slate keratin, and flexible copper vanes",
+      "energyAnchor": "White-blue lightning vortex and ionized feather trails",
+      "motionProfile": "winged",
+      "accent": {"red": 0.35, "green": 0.78, "blue": 1.0},
+      "secondaryAccent": {"red": 0.85, "green": 0.95, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Thundercloud Pinion Egg",
+          "introduction": "A pinion-shaped storm egg holding one compressed bolt between folded feathers.",
+          "visualAnchor": "Pointed feather cocoon wrapped around a single compact zigzag lightning core"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Galecrest Chick",
+          "introduction": "A two-legged chick practicing short launches with oversized gale-catching wings.",
+          "visualAnchor": "Wide round chick planted on two talons beneath enormous soft triangular wings"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Squall Talon",
+          "introduction": "A young raptor whose copper vanes sharpen every braking turn.",
+          "visualAnchor": "Banking young roc with one wing forward, one wing back, and exposed copper vanes"
+        },
+        {
+          "stage": "ascended",
+          "name": "Cyclone Wingguard",
+          "introduction": "A cyclone guard spreading broad wings to redirect a complete thunder front.",
+          "visualAnchor": "Frontal braking roc with rectangular spread wings and a storm wall between them"
+        },
+        {
+          "stage": "legendary",
+          "name": "Crownstorm Roc",
+          "introduction": "A crownstorm roc that dives through its own lightning vortex without losing control.",
+          "visualAnchor": "Diagonal diving roc piercing a circular lightning ring with a swept crown crest"
+        }
+      ]
+    },
+    {
+      "id": "glacier",
+      "displayName": "Glacier Colossus",
+      "category": "faunaMythic",
+      "subtitle": "Rime fur · blue-ice armor",
+      "symbolName": "snowflake",
+      "lineageIntroduction": "A monumental mammoth lineage that carries aurora ice through tusks, trunk, and rime armor.",
+      "existenceAnchor": "Glacier Mammoth",
+      "silhouetteAnchor": "Massive fur arch, four column legs, long paired tusks, and a ridged ice saddle",
+      "silhouetteClass": "massive-four-column-mammoth",
+      "motionAnchor": "Deliberate charges, trunk sweeps, and tusk-led icebreaks",
+      "locomotionClass": "four-leg-glacial-trudge",
+      "materialAnchor": "Dense white rime fur, translucent blue ice, and dark glacial stone",
+      "energyAnchor": "Aurora heart, frost breath, and pressure-cracked ice runes",
+      "motionProfile": "heavy",
+      "accent": {"red": 0.6, "green": 0.9, "blue": 1.0},
+      "secondaryAccent": {"red": 0.55, "green": 0.35, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Frost-Tusk Ice Cradle",
+          "introduction": "An ice cradle protecting two miniature tusks beneath a frozen aurora.",
+          "visualAnchor": "Low blue ice block with two tiny ivory tusks and a curved fur ridge"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Snowstep Calf",
+          "introduction": "A snowstep calf discovering the weight of its first rime-covered feet.",
+          "visualAnchor": "Compact shaggy calf with four oversized snowshoe feet and a short curled trunk"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Rimeback Mammoth",
+          "introduction": "A broad mammoth whose trunk and tusks can fracture young glacier walls.",
+          "visualAnchor": "Broad juvenile mammoth carrying three translucent ice ridges along its back"
+        },
+        {
+          "stage": "ascended",
+          "name": "Avalanche War-Titan",
+          "introduction": "An avalanche titan braced behind column legs and a ridged ice saddle.",
+          "visualAnchor": "Armored siege mammoth in a low brace with long tusks crossing before its chest"
+        },
+        {
+          "stage": "legendary",
+          "name": "Aurora Glacier Colossus",
+          "introduction": "A glacier colossus carrying the aurora across an unbreakable moving mountain.",
+          "visualAnchor": "Mountain-sized mammoth arch beneath an aurora crown and stepped glacier saddle"
+        }
+      ]
+    },
+    {
+      "id": "scarab",
+      "displayName": "Sunscarab Dominion",
+      "category": "faunaMythic",
+      "subtitle": "Sunstone shell · gilded wing cases",
+      "symbolName": "sun.max.fill",
+      "lineageIntroduction": "A six-legged solar scarab that unfolds gilded wing cases into a desert heliostat.",
+      "existenceAnchor": "Solar Scarab",
+      "silhouetteAnchor": "Low hexagonal body, six splayed legs, split wing cases, and a sun-disc horn",
+      "silhouetteClass": "low-six-legged-beetle",
+      "motionAnchor": "Rapid six-leg skitters followed by sudden wing-case lift",
+      "locomotionClass": "hexapod-skitter-and-hover",
+      "materialAnchor": "Sunbaked sandstone, gold leaf, black enamel, and amber wing glass",
+      "energyAnchor": "Amber solar lens and rotating heliostat glyphs",
+      "motionProfile": "skittering",
+      "accent": {"red": 1.0, "green": 0.7, "blue": 0.08},
+      "secondaryAccent": {"red": 0.95, "green": 0.3, "blue": 0.08},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sun-Sealed Scarab Core",
+          "introduction": "A sun-sealed core with six folded legs hidden beneath black enamel.",
+          "visualAnchor": "Hexagonal black-and-gold core with six leg seams around a tiny amber lens"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Sand-Skitter Grub",
+          "introduction": "A quick desert grub learning to follow heat through shifting sand.",
+          "visualAnchor": "Soft segmented grub carried low on six short black enamel feet"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Gilded Dune Runner",
+          "introduction": "A gilded runner using six low legs to cross dunes without sinking.",
+          "visualAnchor": "Flat plated beetle with broad shovel feet and a closed gold wing-case diamond"
+        },
+        {
+          "stage": "ascended",
+          "name": "Heliowing Vanguard",
+          "introduction": "A heliowing vanguard opening amber wing glass around a focused solar lens.",
+          "visualAnchor": "Hovering scarab with split wing cases forming four angled heliostat panels"
+        },
+        {
+          "stage": "legendary",
+          "name": "Zenith Sunscarab",
+          "introduction": "A zenith scarab that turns its split shell into a rotating desert sun.",
+          "visualAnchor": "Six-legged beetle beneath a full radial sun machine built from opened shell plates"
+        }
+      ]
+    },
+    {
+      "id": "koi",
+      "displayName": "Neon Koi Circuit",
+      "category": "faunaMythic",
+      "subtitle": "Holographic scales · conductive neon fins",
+      "symbolName": "waveform.path",
+      "lineageIntroduction": "A legless neon koi wyrm that swims through open air on loops of electrical current.",
+      "existenceAnchor": "Neon Koi Wyrm",
+      "silhouetteAnchor": "Legless S-curve body, long side fins, twin fan tail, and floating circuit loops",
+      "silhouetteClass": "ribbon-bodied-air-swimmer",
+      "motionAnchor": "Air-swimming coils, ribbon turns, and tail-driven current loops",
+      "locomotionClass": "serpentine-aerial-swim",
+      "materialAnchor": "Holographic scales, neon acrylic fins, and flexible conductive filament",
+      "energyAnchor": "Magenta-cyan current lines and a pulsing circuit pearl",
+      "motionProfile": "serpentine",
+      "accent": {"red": 0.1, "green": 0.95, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.12, "blue": 0.72},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Circuit Pearl",
+          "introduction": "A circuit pearl sending magenta and cyan pulses through clear waterless space.",
+          "visualAnchor": "Floating pearl crossed by two luminous traces and a folded translucent tail fin"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Neon Fry",
+          "introduction": "A neon fry learning to swim through air with two transparent fins.",
+          "visualAnchor": "Tiny horizontal koi with two oversized clear fins and a single looped light trail"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Voltage Ribbon Koi",
+          "introduction": "A ribbon koi drawing electrical loops with its legless S-curved body.",
+          "visualAnchor": "Long S-shaped koi with opposing side fins and a bright pearl at the chest"
+        },
+        {
+          "stage": "ascended",
+          "name": "Hologale Wyrm",
+          "introduction": "A hologale wyrm coiling around a stable storm of conductive light.",
+          "visualAnchor": "Tall looping wyrm with hologram scale panels and two disconnected current rings"
+        },
+        {
+          "stage": "legendary",
+          "name": "Infinite Current Sovereign",
+          "introduction": "A current sovereign whose twin fan tail closes an endless luminous circuit.",
+          "visualAnchor": "Figure-eight koi sovereign with a huge split fan tail completing an infinity circuit"
+        }
+      ]
+    },
+    {
+      "id": "manticore",
+      "displayName": "Solar Manticore",
+      "category": "faunaMythic",
+      "subtitle": "Dark feline hide · stained-gold sun plates",
+      "symbolName": "sun.horizon.fill",
+      "lineageIntroduction": "A prowling feline guardian whose sun mane and articulated scorpion tail store solar force.",
+      "existenceAnchor": "Sunmane Manticore",
+      "silhouetteAnchor": "Low feline frame, radial sun mane, broad paws, and a segmented scorpion tail",
+      "silhouetteClass": "low-feline-with-arched-tail",
+      "motionAnchor": "Low prowls, explosive pounces, and overhead scorpion-tail arcs",
+      "locomotionClass": "quadruped-prowl-and-pounce",
+      "materialAnchor": "Midnight feline hide, brushed gold, smoked crystal, and stained-sun plates",
+      "energyAnchor": "Solar corona mane and a star-bright scorpion stinger",
+      "motionProfile": "prowling",
+      "accent": {"red": 1.0, "green": 0.48, "blue": 0.12},
+      "secondaryAccent": {"red": 1.0, "green": 0.86, "blue": 0.18},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Solar Thorn Reliquary",
+          "introduction": "A solar reliquary wrapped around a dormant feline paw and thorned tail.",
+          "visualAnchor": "Dark oval reliquary pierced by one gold paw, one tail barb, and a thin sun slit"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Dawnpaw Cub",
+          "introduction": "A dawnpaw cub discovering warm light along its first tail segments.",
+          "visualAnchor": "Round dark cub with very broad paws and a short three-segment scorpion tail"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Sunmane Prowler",
+          "introduction": "A low prowler balancing a bright radial mane against silent dark fur.",
+          "visualAnchor": "Long crouched feline with a half-disc mane and low forward-facing stinger"
+        },
+        {
+          "stage": "ascended",
+          "name": "Corona Tailwarden",
+          "introduction": "A tailwarden storing a focused star inside its articulated scorpion stinger.",
+          "visualAnchor": "Braced manticore framed by a full corona mane and a tall articulated tail arch"
+        },
+        {
+          "stage": "legendary",
+          "name": "Helios Manticore",
+          "introduction": "A Helios manticore whose mane and tail form one controlled solar corona.",
+          "visualAnchor": "Leaping feline inside a broken solar ring completed by its curved blazing tail"
+        }
+      ]
+    },
+    {
+      "id": "spider",
+      "displayName": "Prism Web",
+      "category": "faunaMythic",
+      "subtitle": "Prism quartz · spectral silk",
+      "symbolName": "circle.hexagongrid.fill",
+      "lineageIntroduction": "An eight-legged orb-weaver that spins spectral silk through a faceted prism abdomen.",
+      "existenceAnchor": "Prism Orb-Weaver",
+      "silhouetteAnchor": "Radial body, eight long jointed legs, loom-shaped abdomen, and an open web ring",
+      "silhouetteClass": "radial-eight-legged-weaver",
+      "motionAnchor": "Radial sidesteps, ceiling hangs, and suspended web-spinning turns",
+      "locomotionClass": "octopod-radial-climb",
+      "materialAnchor": "Clear prism quartz, chrome joints, spectral silk, and dark velvet facets",
+      "energyAnchor": "Refracted spectrum web and a white prism-heart flare",
+      "motionProfile": "skittering",
+      "accent": {"red": 0.65, "green": 0.42, "blue": 1.0},
+      "secondaryAccent": {"red": 0.2, "green": 1.0, "blue": 0.92},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Faceted Loom Egg",
+          "introduction": "A faceted loom egg holding eight folded legs around a white prism heart.",
+          "visualAnchor": "Angular quartz egg with eight identical leg seams converging on a white center"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Threadstep Spiderling",
+          "introduction": "A threadstep spiderling testing spectral silk between long crystal joints.",
+          "visualAnchor": "Tiny central body suspended beneath eight thin jointed legs and three silk lines"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Spectrum Orb-Weaver",
+          "introduction": "An orb-weaver refracting arena light through a complete circular web.",
+          "visualAnchor": "Eight-legged spider seen three-quarter-on before one complete rainbow orb web"
+        },
+        {
+          "stage": "ascended",
+          "name": "Cathedral Websmith",
+          "introduction": "A cathedral websmith suspending layered prism arches from eight balanced legs.",
+          "visualAnchor": "Tall faceted abdomen supporting pointed web arches across eight buttress-like legs"
+        },
+        {
+          "stage": "legendary",
+          "name": "Crownprism Araneid",
+          "introduction": "A crownprism araneid whose radiant loom can reshape the battlefield from above.",
+          "visualAnchor": "Inverted crown-shaped spider descending through a vast broken ring of spectral silk"
+        }
+      ]
+    }
+  ]
+}

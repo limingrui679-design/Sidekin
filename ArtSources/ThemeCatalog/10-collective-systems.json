@@ -1,0 +1,504 @@
+{
+  "themes": [
+    {
+      "id": "slime-parliament",
+      "displayName": "Slime Parliament",
+      "category": "collectiveSystems",
+      "subtitle": "Gel bodies · consensus-gold bubbles",
+      "symbolName": "person.3.fill",
+      "lineageIntroduction": "A colony of colored slimes that votes by exchanging bubbles and temporarily merges into one body.",
+      "existenceAnchor": "Cooperative Amoeboid Slime Colony",
+      "silhouetteAnchor": "Several unequal gel blobs, shared bubble crown, merging pseudopod base, and no permanent leader",
+      "silhouetteClass": "cluster-of-merging-gel-blobs",
+      "motionAnchor": "Independent blob hops followed by synchronized consensus merges",
+      "locomotionClass": "multi-blob-amoeboid-hop",
+      "materialAnchor": "Transparent colored gel, pearl nuclei, trapped bubbles, and glossy membrane",
+      "energyAnchor": "Consensus-gold bubbles and connecting white decision threads",
+      "motionProfile": "bouncing",
+      "accent": {"red": 0.28, "green": 0.9, "blue": 0.7},
+      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.16},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Quorum Gel Capsule",
+          "introduction": "Three tiny nuclei wait inside one clear gel capsule for a first shared decision.",
+          "visualAnchor": "Round transparent blob containing three differently colored pearl nuclei"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Three-Blob Caucus",
+          "introduction": "Three small slimes hop separately and pass one gold bubble between them.",
+          "visualAnchor": "Triangular cluster of three unequal gel blobs connected by one floating amber bubble"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Pseudopod Assembly",
+          "introduction": "Five colony members merge their bases while keeping distinct colored upper bodies.",
+          "visualAnchor": "Shared wide gel base supporting five different rounded heads and white connector threads"
+        },
+        {
+          "stage": "ascended",
+          "name": "Consensus Colossus",
+          "introduction": "A broad collective body forms only after every visible nucleus reaches agreement.",
+          "visualAnchor": "Large multi-lobed slime with many nuclei arranged beneath a crown of gold bubbles"
+        },
+        {
+          "stage": "legendary",
+          "name": "Grand Gel Parliament",
+          "introduction": "A circular chamber of living gel lets hundreds of voices move as one transparent form.",
+          "visualAnchor": "Ring-shaped slime body containing many colored nuclei around a clear central council void"
+        }
+      ]
+    },
+    {
+      "id": "nanite-swarm",
+      "displayName": "Nanite Swarm",
+      "category": "collectiveSystems",
+      "subtitle": "Metal motes · command-blue lattice",
+      "symbolName": "circle.grid.3x3.fill",
+      "lineageIntroduction": "A cloud of microscopic machines that assembles tools, limbs, and shells around a command lattice.",
+      "existenceAnchor": "Coordinated Programmable Nanite Cloud",
+      "silhouetteAnchor": "Dense metallic mote cloud, blue command nodes, temporary tool limbs, and porous outer edges",
+      "silhouetteClass": "porous-cloud-of-metal-motes",
+      "motionAnchor": "Particle streaming, rapid tool assembly, and whole-cloud shape changes",
+      "locomotionClass": "coordinated-particle-flow",
+      "materialAnchor": "Silver microtiles, black carbon dust, blue command crystals, and copper contact sparks",
+      "energyAnchor": "Cobalt coordination lattice and white assembly pulses",
+      "motionProfile": "swarming",
+      "accent": {"red": 0.2, "green": 0.62, "blue": 1.0},
+      "secondaryAccent": {"red": 0.86, "green": 0.9, "blue": 0.96},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Dormant Command Grain",
+          "introduction": "A blue command crystal rests inside a sealed sphere of motionless silver dust.",
+          "visualAnchor": "Small dense silver ball with one visible cobalt cube at the center"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Motehand Cluster",
+          "introduction": "A young cloud forms one simple hand while the rest of its particles remain loose.",
+          "visualAnchor": "Asymmetric silver particle cloud ending in one sharply defined five-finger tool"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Lattice Shape Crew",
+          "introduction": "Five command nodes coordinate a porous body with interchangeable tool limbs.",
+          "visualAnchor": "Open mesh figure of metal motes between five blue nodes and three distinct tools"
+        },
+        {
+          "stage": "ascended",
+          "name": "Adaptive Shell Cloud",
+          "introduction": "A broad swarm switches between shield, bridge, and manipulator shapes in seconds.",
+          "visualAnchor": "Central particle mass surrounded by three partially formed alternative silhouettes"
+        },
+        {
+          "stage": "legendary",
+          "name": "Million-Mote Architect",
+          "introduction": "A vast intelligent swarm builds a complete moving citadel from individually visible machines.",
+          "visualAnchor": "Towering porous structure of silver particles around a bright blue lattice skeleton"
+        }
+      ]
+    },
+    {
+      "id": "firefly-chorus",
+      "displayName": "Firefly Chorus",
+      "category": "collectiveSystems",
+      "subtitle": "Midnight wings · pulse-gold rhythm",
+      "symbolName": "sparkles",
+      "lineageIntroduction": "A coordinated firefly colony that communicates through rhythm and assembles luminous group silhouettes.",
+      "existenceAnchor": "Synchronized Bioluminescent Firefly Colony",
+      "silhouetteAnchor": "Many tiny winged lights, one dark conductor branch, pulse-wave wings, and an open center",
+      "silhouetteClass": "flock-of-lights-around-branch",
+      "motionAnchor": "Swarm spirals, rhythmic flashes, and coordinated silhouette formations",
+      "locomotionClass": "synchronized-insect-flight",
+      "materialAnchor": "Black chitin, clear wings, warm light organs, and dark twigwood",
+      "energyAnchor": "Pulse-gold rhythm waves and emerald timing points",
+      "motionProfile": "swarming",
+      "accent": {"red": 1.0, "green": 0.82, "blue": 0.18},
+      "secondaryAccent": {"red": 0.28, "green": 1.0, "blue": 0.54},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "First Synchronized Glow",
+          "introduction": "Five firefly eggs pulse together along one dark twig for the first time.",
+          "visualAnchor": "Short black branch carrying five evenly spaced warm glowing beads"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Seven-Light Hum",
+          "introduction": "Seven young fireflies fly a loose loop and answer one another in alternating flashes.",
+          "visualAnchor": "Open oval made from seven small winged gold lights at uneven angles"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Pulsewing Ensemble",
+          "introduction": "A larger chorus forms two luminous wings around its dark conductor branch.",
+          "visualAnchor": "Central twig body with two broad wing shapes composed entirely of many firefly lights"
+        },
+        {
+          "stage": "ascended",
+          "name": "Night-Rhythm Constellation",
+          "introduction": "Hundreds of synchronized flashes draw a moving constellation above the branch.",
+          "visualAnchor": "Large star-shaped swarm pattern suspended over a dark forked conductor perch"
+        },
+        {
+          "stage": "legendary",
+          "name": "Grand Lantern Murmuration",
+          "introduction": "A vast firefly chorus becomes a radiant crown while every individual remains visible.",
+          "visualAnchor": "Crown-shaped cloud of countless gold-green winged lights around an empty center"
+        }
+      ]
+    },
+    {
+      "id": "plankton-bloom",
+      "displayName": "Plankton Bloom",
+      "category": "collectiveSystems",
+      "subtitle": "Translucent cells · ocean-blue biolight",
+      "symbolName": "drop.fill",
+      "lineageIntroduction": "A drifting plankton community that links translucent cells into ribbons, fans, and luminous blooms.",
+      "existenceAnchor": "Cooperative Bioluminescent Plankton Community",
+      "silhouetteAnchor": "Many clear cell discs, long colony ribbons, blue light nodes, and a jellylike central bloom",
+      "silhouetteClass": "cell-ribbons-around-jelly-bloom",
+      "motionAnchor": "Gentle cellular pulses, ribbon drifts, and sudden coordinated light blooms",
+      "locomotionClass": "microcurrent-colony-drift",
+      "materialAnchor": "Transparent cell membranes, pearl organelles, blue biolight, and soft mucous threads",
+      "energyAnchor": "Ocean-blue bloom pulse and turquoise communication waves",
+      "motionProfile": "swimming",
+      "accent": {"red": 0.12, "green": 0.86, "blue": 1.0},
+      "secondaryAccent": {"red": 0.24, "green": 1.0, "blue": 0.68},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Dormant Bloom Cyst",
+          "introduction": "A clear cyst holds five sleeping cells around one faint blue organelle.",
+          "visualAnchor": "Transparent sphere containing five small discs and one cobalt point"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Cellchain Drifter",
+          "introduction": "A young colony links seven cells into a flexible chain that follows tiny currents.",
+          "visualAnchor": "Curved string of seven translucent discs with alternating blue light centers"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Ribbon-Bloom Colony",
+          "introduction": "Several cell chains join around a soft central bloom and pulse in sequence.",
+          "visualAnchor": "Jellylike center with five long beaded cell ribbons radiating outward"
+        },
+        {
+          "stage": "ascended",
+          "name": "Biolight Current Fan",
+          "introduction": "A broad plankton fan steers itself by lighting different cellular ribs.",
+          "visualAnchor": "Semicircular transparent fan built from luminous beaded ribs and a soft base"
+        },
+        {
+          "stage": "legendary",
+          "name": "Midnight Ocean Bloom",
+          "introduction": "A vast circular plankton bloom turns a dark sea into one coherent field of light.",
+          "visualAnchor": "Large radial disc made from countless clear cells around a brilliant blue center"
+        }
+      ]
+    },
+    {
+      "id": "lichen-commune",
+      "displayName": "Lichen Commune",
+      "category": "collectiveSystems",
+      "subtitle": "Fungal stone mats · algae-green exchange",
+      "symbolName": "leaf.circle.fill",
+      "lineageIntroduction": "A fungal-algal commune that grows walking stone mats through continuous exchange between partners.",
+      "existenceAnchor": "Mobile Symbiotic Lichen Consortium",
+      "silhouetteAnchor": "Flat stone raft, branching fungal rim, green algal panels, and many tiny holdfast feet",
+      "silhouetteClass": "flat-symbiotic-mat-on-holdfasts",
+      "motionAnchor": "Many-foot mat ripples, edge growth, and alternating partner pulses",
+      "locomotionClass": "distributed-holdfast-crawl",
+      "materialAnchor": "Gray stone, pale fungal lace, green algal glass, and orange crust patches",
+      "energyAnchor": "Green-gold nutrient exchange lines and white symbiosis knots",
+      "motionProfile": "pulsing",
+      "accent": {"red": 0.5, "green": 0.82, "blue": 0.22},
+      "secondaryAccent": {"red": 1.0, "green": 0.5, "blue": 0.12},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Paired Symbiosis Spore",
+          "introduction": "A white fungal spore and green algal cell share one cracked stone capsule.",
+          "visualAnchor": "Small gray pebble split to reveal one white bead and one green bead touching"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Two-Partner Crustlet",
+          "introduction": "A young lichen patch crawls on many holdfasts while partners exchange a gold pulse.",
+          "visualAnchor": "Low irregular green-white mat with a fringe of tiny dark feet"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Nutrient-Weave Mat",
+          "introduction": "A broad stone raft divides sunlight and minerals through a visible branching network.",
+          "visualAnchor": "Flat gray platform covered by interlocking green panels and white fungal veins"
+        },
+        {
+          "stage": "ascended",
+          "name": "Crustose Terrace Walker",
+          "introduction": "A layered commune raises orange and green terraces without breaking its shared base.",
+          "visualAnchor": "Stepped low lichen landscape on many holdfasts with three colored crust levels"
+        },
+        {
+          "stage": "legendary",
+          "name": "Ancient Stone Symbiarch",
+          "introduction": "A vast living stone crown displays many partners joined by one nutrient circulation.",
+          "visualAnchor": "Radial lichen-covered rock formation with white veins converging on a gold center"
+        }
+      ]
+    },
+    {
+      "id": "microbe-metropolis",
+      "displayName": "Microbe Metropolis",
+      "category": "collectiveSystems",
+      "subtitle": "Cell membranes · enzyme-city glow",
+      "symbolName": "circle.grid.cross.fill",
+      "lineageIntroduction": "A microbial city where specialized cells become transport, defense, energy, and communication districts.",
+      "existenceAnchor": "Organized Multispecies Microbial City",
+      "silhouetteAnchor": "Clustered cell towers, flagella roads, membrane dome, enzyme chimneys, and vesicle traffic",
+      "silhouetteClass": "clustered-cell-city-under-membrane",
+      "motionAnchor": "Flagella-road waves, cell-tower shifts, and vesicle traffic loops",
+      "locomotionClass": "colony-membrane-crawl",
+      "materialAnchor": "Translucent membranes, colored cytoplasm, protein scaffolds, and lipid bubbles",
+      "energyAnchor": "Enzyme-green production glow and violet communication pulses",
+      "motionProfile": "swarming",
+      "accent": {"red": 0.26, "green": 0.94, "blue": 0.52},
+      "secondaryAccent": {"red": 0.7, "green": 0.32, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Founding Cell Vesicle",
+          "introduction": "A clear founding vesicle contains three specialized cells and one empty district.",
+          "visualAnchor": "Large membrane bubble holding three differently shaped colored cells"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Flagella Lane Cluster",
+          "introduction": "A small colony links five cells with waving flagella that act like shared roads.",
+          "visualAnchor": "Five-cell cluster connected by long curving flagella paths and tiny vesicles"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Enzyme District Walker",
+          "introduction": "A broad membrane body raises distinct energy and defense cell towers.",
+          "visualAnchor": "Low dome containing multiple cell-shaped towers and two bright enzyme chimneys"
+        },
+        {
+          "stage": "ascended",
+          "name": "Vesicle Transit City",
+          "introduction": "A mature microbe metropolis routes hundreds of vesicles through looping internal streets.",
+          "visualAnchor": "Transparent oval city filled with colored loops, cell districts, and moving bubble traffic"
+        },
+        {
+          "stage": "legendary",
+          "name": "Grand Colony Biosphere",
+          "introduction": "A complete microbial biosphere balances many species inside one coordinated living city.",
+          "visualAnchor": "Spherical membrane metropolis with layered districts around a bright green core"
+        }
+      ]
+    },
+    {
+      "id": "coral-commonwealth",
+      "displayName": "Coral Commonwealth",
+      "category": "collectiveSystems",
+      "subtitle": "Calcium branches · reef-cyan exchange",
+      "symbolName": "water.waves",
+      "lineageIntroduction": "A mobile coral commonwealth whose many polyps grow branches, fans, and shared defensive forms.",
+      "existenceAnchor": "Cooperative Mobile Coral Colony",
+      "silhouetteAnchor": "Branching calcium crown, many polyp lights, flat reef foot, and two flexible sea-fan arms",
+      "silhouetteClass": "branching-coral-crown-on-reef-foot",
+      "motionAnchor": "Reef-foot glides, polyp waves, and slow fan-arm folding",
+      "locomotionClass": "mucous-reef-base-glide",
+      "materialAnchor": "White calcium skeleton, colored living tissue, translucent fans, and wet reef stone",
+      "energyAnchor": "Reef-cyan nutrient exchange and pink polyp warning pulses",
+      "motionProfile": "flowing",
+      "accent": {"red": 0.12, "green": 0.9, "blue": 0.9},
+      "secondaryAccent": {"red": 1.0, "green": 0.32, "blue": 0.56},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Settlement Polyp Stone",
+          "introduction": "A single luminous polyp settles on a white stone and opens eight tiny arms.",
+          "visualAnchor": "Small pale rock topped by one pink-cyan star-shaped polyp"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Five-Polyp Reeflet",
+          "introduction": "Five young polyps share a low calcium branch and glide on a soft reef foot.",
+          "visualAnchor": "Short white forked branch carrying five colored lights above a flat wet base"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Sea-Fan Council",
+          "introduction": "A broad colony grows two flexible fan arms around a dense central polyp cluster.",
+          "visualAnchor": "Low reef body with two large translucent side fans and many central glowing polyps"
+        },
+        {
+          "stage": "ascended",
+          "name": "Branching Reef Assembly",
+          "introduction": "A tall commonwealth raises several coral architectures from one shared moving foundation.",
+          "visualAnchor": "Wide base supporting branching, plate, and fan corals as distinct tower shapes"
+        },
+        {
+          "stage": "legendary",
+          "name": "Great Barrier Crown",
+          "introduction": "A radiant coral crown carries thousands of cooperating polyps across a living reef ring.",
+          "visualAnchor": "Circular reef foundation beneath a vast radial crown of many coral growth forms"
+        }
+      ]
+    },
+    {
+      "id": "stardust-chorus",
+      "displayName": "Stardust Chorus",
+      "category": "collectiveSystems",
+      "subtitle": "Cosmic grains · resonance-violet cloud",
+      "symbolName": "sparkles",
+      "lineageIntroduction": "A cloud of cosmic dust grains that sings through resonance and condenses into shared celestial shapes.",
+      "existenceAnchor": "Coherent Resonant Stardust Cloud",
+      "silhouetteAnchor": "Dense particle cloud, violet resonance rings, bright grain nodes, and shifting celestial outlines",
+      "silhouetteClass": "resonant-particle-nebula",
+      "motionAnchor": "Dust eddies, harmonic compression, and whole-cloud shape condensation",
+      "locomotionClass": "resonant-nebula-drift",
+      "materialAnchor": "Gold silicate dust, carbon-black grains, ice crystals, and violet gas haze",
+      "energyAnchor": "Violet harmonic rings and white condensation nodes",
+      "motionProfile": "swarming",
+      "accent": {"red": 0.7, "green": 0.36, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.22},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Quiet Cosmic Grain",
+          "introduction": "A single gold dust grain resonates inside a faint violet cloudlet.",
+          "visualAnchor": "Tiny bright irregular particle centered in one soft purple vapor sphere"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Seven-Grain Chord",
+          "introduction": "Seven cosmic grains hold a small ring and vibrate at one shared frequency.",
+          "visualAnchor": "Seven white-gold nodes evenly spaced around a thin violet circle"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Nebula Shape Choir",
+          "introduction": "A broad dust cloud condenses temporary limbs wherever its resonance becomes strongest.",
+          "visualAnchor": "Porous purple-gold particle figure with four denser white node joints"
+        },
+        {
+          "stage": "ascended",
+          "name": "Harmonic Proto-Star",
+          "introduction": "A dense chorus compresses dust into a bright center while preserving its outer voices.",
+          "visualAnchor": "Brilliant central proto-star surrounded by many visible grains on layered resonance rings"
+        },
+        {
+          "stage": "legendary",
+          "name": "Galactic Dust Cantata",
+          "introduction": "A vast spiral of singing grains holds several newborn lights without losing coherence.",
+          "visualAnchor": "Large stardust spiral with many bright nodes and concentric violet sound waves"
+        }
+      ]
+    },
+    {
+      "id": "rune-swarm",
+      "displayName": "Rune Swarm",
+      "category": "collectiveSystems",
+      "subtitle": "Stone glyphs · syntax-blue links",
+      "symbolName": "textformat",
+      "lineageIntroduction": "A flock of carved runes that combines symbols into temporary commands, tools, and protective forms.",
+      "existenceAnchor": "Collective Autonomous Glyph Flock",
+      "silhouetteAnchor": "Many floating stone symbols, blue syntax links, changing sentence spine, and no central body",
+      "silhouetteClass": "flock-of-glyphs-in-sentence-form",
+      "motionAnchor": "Glyph flights, rapid syntax rearrangements, and punctuation-led turns",
+      "locomotionClass": "symbol-flock-recomposition",
+      "materialAnchor": "Dark slate glyphs, white carving dust, blue syntax light, and red punctuation seals",
+      "energyAnchor": "Cobalt grammar links and crimson execution marks",
+      "motionProfile": "swarming",
+      "accent": {"red": 0.28, "green": 0.64, "blue": 1.0},
+      "secondaryAccent": {"red": 0.94, "green": 0.18, "blue": 0.22},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Unparsed Glyph Pebble",
+          "introduction": "A dark pebble carries one carved symbol that has not joined a sentence.",
+          "visualAnchor": "Single flat slate stone with a bright blue unknown glyph at its center"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Three-Rune Phrase",
+          "introduction": "Three floating glyph stones link into a short command and move together.",
+          "visualAnchor": "Three differently shaped slate symbols connected by two blue lines"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Syntax Wing Flock",
+          "introduction": "A dozen runes arrange into two wings around a changing sentence spine.",
+          "visualAnchor": "Central vertical line of glyphs with two broad side fans of floating symbols"
+        },
+        {
+          "stage": "ascended",
+          "name": "Command-Script Assembly",
+          "introduction": "A dense rune flock builds shield, key, and bridge forms through precise grammar.",
+          "visualAnchor": "Three overlapping tool silhouettes made from separate glyph clusters and blue links"
+        },
+        {
+          "stage": "legendary",
+          "name": "Living Language Crown",
+          "introduction": "A radiant crown of symbols rewrites its own rules while preserving every rune.",
+          "visualAnchor": "Large circular crown of stone glyphs around a red execution mark and blue syntax web"
+        }
+      ]
+    },
+    {
+      "id": "terrarium-ecosystem",
+      "displayName": "Terrarium Ecosystem",
+      "category": "collectiveSystems",
+      "subtitle": "Glass biome · closed-cycle greenlight",
+      "symbolName": "globe.americas.fill",
+      "lineageIntroduction": "A closed miniature ecosystem that walks by coordinating soil, water, plants, fungi, and weather.",
+      "existenceAnchor": "Ambulatory Closed-Loop Terrarium Biome",
+      "silhouetteAnchor": "Clear biome sphere, four soil-root feet, cloud cap, stream ribbon, and layered living zones",
+      "silhouetteClass": "glass-biome-sphere-on-root-feet",
+      "motionAnchor": "Four-root steps, internal water cycling, and cloud-cap breathing",
+      "locomotionClass": "closed-biome-root-walk",
+      "materialAnchor": "Clear glass, dark soil, living moss, open water, mist, and mineral gravel",
+      "energyAnchor": "Green cycle arrows and soft blue water-loop light",
+      "motionProfile": "rooted",
+      "accent": {"red": 0.24, "green": 0.86, "blue": 0.34},
+      "secondaryAccent": {"red": 0.16, "green": 0.68, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Sealed Biome Jar",
+          "introduction": "A glass jar holds one moss patch, one water bead, and a tiny private cloud.",
+          "visualAnchor": "Small clear jar with layered soil, green moss, blue droplet, and white cloud"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Four-Root Moss Globe",
+          "introduction": "A round terrarium walks on four roots while water condenses along its inner wall.",
+          "visualAnchor": "Glass sphere on four dark root feet containing moss and a curved condensation line"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Streamloop Biome",
+          "introduction": "A larger ecosystem circulates one visible stream from cloud to soil and back.",
+          "visualAnchor": "Clear oval biome with a continuous blue water ribbon linking cloud, fall, and pool"
+        },
+        {
+          "stage": "ascended",
+          "name": "Five-Zone Ecowalker",
+          "introduction": "A broad terrarium balances wetland, slope, canopy, fungal, and open-water zones.",
+          "visualAnchor": "Large faceted glass body divided into five visibly different ecological chambers"
+        },
+        {
+          "stage": "legendary",
+          "name": "Closed-World Biosphere",
+          "introduction": "A complete miniature world sustains every internal cycle while walking as one system.",
+          "visualAnchor": "Huge clear spherical biosphere on root feet with clouds, river, forest, and glowing cycle ring"
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# CainiaoPet 1.3.0 Beta Completion Audit
+# CainiaoPet 1.4.0 Beta Completion Audit
 
 This document records requirements, implementation status, and reproducible evidence separately. The target is a reproducible GitHub source project and local Beta, not a signed application distributed directly to general users. Mock API coverage does not constitute a real paid API run.
 
@@ -11,10 +11,12 @@ This document records requirements, implementation status, and reproducible evid
 | Pink- and purple-safe background removal | Implemented and tested | `PetImageProcessor` expands only from edge-connected background regions and estimates the dominant edge color adaptively. A synthetic test confirms that interior magenta and pink regions remain intact. |
 | Raw and processed previews | Implemented; compiles successfully | Recovery jobs expose both raw-image and processed-stage URLs, and the workshop recovery card shows both previews. The application was not launched for manual clicking during this audit. |
 | Three quality tiers and cost estimates | Implemented and tested | `low`, `medium`, and `high` are passed to generation and edit requests. The confirmation sheet calculates the current 1024-square output estimate from the stage count and explicitly states that input costs are additional. |
-| Three redrawn evolution lines | Assets verified and reviewed at desktop scale | Candy Carnival, Wasteland Salvager, and Nova Arena assets were replaced. All 50 PNG files are distinct `1254×1254` images with transparency. `ART_QA_DESKTOP_SCALE.jpg` presents every form near its 235-pixel desktop display size. |
+| 100 complete evolution lineages | Assets verified and reviewed at desktop scale | All 500 PNG files are distinct `1254×1254` images with transparency. The completed set spans ten categories and includes animal, mythic, clearly nonhuman humanoid, deity, mecha, plant, geological, artifact, food, weather, abstract, architectural, and collective existence types. |
+| Individual lineage review and repair | Completed after all 500 images existed | Every lineage was checked for common-sense anatomy or construction, identity continuity, stage differentiation, species or existence-type drift, nonhuman-humanoid compliance, and small-scale readability. Seventy-seven raw repair candidates were generated for 74 stage targets across 61 lineages. The final decision for every lineage is recorded in `LINEAGE_AUDIT.md`, with 20 final visual sheets in `ArtSources/AuditSheets/`. |
+| Automated art integrity gates | Implemented and tested | The verifier requires exactly 500 binary-unique `1254×1254` transparent PNGs, safe occupancy, and transparent corners. High-IoU candidates receive normalized RGBA appearance comparison so naturally round eggs are not falsely rejected while true near-duplicates still fail. |
 | Template management | Implemented and tested | Custom templates support rename, delete, binary package import/export, local image replacement, and AI single-stage regeneration. Path traversal, corrupt PNG data, size limits, and stage-count limits are guarded. |
 | Clean verification package | Implemented and tested | Package verification reopens the generated ZIP and validates the application, resources, and manifest. It rejects `__MACOSX`, `.DS_Store`, AppleDouble entries, corrupt archives, architecture drift, and hash mismatches. |
-| Independent source repository | Complete locally | The repository contains only CainiaoPet project materials, with its own Git history, Beta tag, version metadata, release manifest, and resource hashes. CI builds and re-verifies the arm64 ZIP, matches the manifest commit to the workflow commit, and retains verification artifacts. |
+| Independent source repository | Complete locally | The repository contains only CainiaoPet project materials, with its own Git history, Beta tag, version metadata, release manifest, and resource hashes. CI builds and re-verifies the arm64 ZIP, matches the manifest commit to the workflow commit, and retains verification artifacts. Git LFS rules cover the 500 final resources, curated sources, and audit evidence. No GitHub remote is configured. |
 | English-language product surface | Implemented and statically audited | New defaults, application UI, accessibility labels, menu items, errors, test output, metadata, scripts, and project documentation use English. Persisted custom names and legacy user-created data are preserved rather than silently rewritten. |
 | Public Apple distribution | Outside the current scope | The project target is a GitHub source repository. Developer ID signing, notarization, and Gatekeeper acceptance are not required. `release-public.sh` is retained only as an optional guarded path if the distribution goal changes later. |
 
@@ -23,9 +25,10 @@ This document records requirements, implementation status, and reproducible evid
 ```bash
 ./Scripts/run-all-checks.sh
 ./Scripts/package-release.sh
+./Scripts/package-source.sh
 ```
 
-After generating the ZIP, the second command re-verifies signing, architecture, resources, and the release manifest inside the archived application.
+The second command creates and re-verifies the local arm64 application ZIP. The third creates a clean GitHub source snapshot without `.git`, build products, existing artifacts, or macOS metadata and reruns the catalog, English-text, and 500-asset gates inside staging.
 
 ## Current Boundaries and Non-Goals
 

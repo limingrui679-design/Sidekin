@@ -1,0 +1,25 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Cacao Citadel [Food & Alchemy]
+Form: Fondue Tower Bastion, canonical ascended stage
+Lineage concept: A mobile chocolate fortress that tempers, molds, and repairs its own walls with flowing ganache.
+Existence anchor: Self-Tempering Chocolate Citadel
+Persistent silhouette logic: Stepped bar walls, four cocoa-pod wheels, central fondue tower, and wafer battlements
+Silhouette topology class: stepped-fortress-on-pod-wheels
+Movement and locomotion: Cocoa-pod rolling, wall remolding, and ganache-bridge deployment; four-pod-wheel-fortress
+Material system: Dark tempered chocolate, golden wafer, cocoa husk, and glossy molten ganache
+Energy motif: Ruby-red heat lines and warm ganache cascades
+Current-stage introduction: A stepped citadel circulates molten chocolate through a tall central fountain.
+Current-stage visual anchor: Wide wafer-walled fortress around a three-tier dark fondue tower
+
+The provided reference image is the immediately preceding form, Ganache Wallrunner. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Rectangular bar-fort with crenellations and a dark liquid ramp extending forward
+
+Progression rule: Stage IV is a structural ascension: change stance, functional anatomy, formation, or architecture. Preserve the same face, core, facade, or identity marker; do not merely add armor.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #00FF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #00FF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

@@ -1,0 +1,504 @@
+{
+  "themes": [
+    {
+      "id": "mecha",
+      "displayName": "Vanguard Mecha",
+      "category": "machinesVehicles",
+      "subtitle": "Ceramic armor · alert-orange core",
+      "symbolName": "cpu.fill",
+      "lineageIntroduction": "A wheel-pawed mechanical mastiff built to grow from scout pod into a mobile fortress.",
+      "existenceAnchor": "Wheel-Paw Mecha Mastiff",
+      "silhouetteAnchor": "Low broad shoulders, four wheel-paws, a wedge head, and a deployable turret spine",
+      "silhouetteClass": "low-four-wheel-mecha-hound",
+      "motionAnchor": "Grounded four-paw siege charges with hard wheel-braking pivots",
+      "locomotionClass": "quadruped-wheel-drive",
+      "materialAnchor": "White ceramic panels, gunmetal joints, and black shock absorbers",
+      "energyAnchor": "Alert-orange hexagonal reactor and segmented targeting lines",
+      "motionProfile": "mechanical",
+      "accent": {"red": 1.0, "green": 0.52, "blue": 0.08},
+      "secondaryAccent": {"red": 0.12, "green": 0.9, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Folding Hex Pod",
+          "introduction": "A folded hexagonal pod protecting a dormant orange reactor.",
+          "visualAnchor": "Compact six-sided capsule with four wheel seams and one recessed orange hexagon"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Twin-Wheel Scout",
+          "introduction": "A compact scout balancing its first ceramic shell on twin wheel-paws.",
+          "visualAnchor": "Small wedge-headed robot balanced low between two oversized side wheels"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Wheel-Paw Mecha Mastiff",
+          "introduction": "A low mechanical mastiff built for fast ground-level interception.",
+          "visualAnchor": "Broad four-wheel hound with a square muzzle and a single short dorsal rail"
+        },
+        {
+          "stage": "ascended",
+          "name": "Deployed Fortress Hound",
+          "introduction": "A deployed fortress hound braced behind armor, wheels, and a turret spine.",
+          "visualAnchor": "Braced mechanical hound with split shoulder shields and a raised twin-barrel spine"
+        },
+        {
+          "stage": "legendary",
+          "name": "Celestial Mobile Bastion",
+          "introduction": "A six-point mobile bastion that carries an entire defense grid into battle.",
+          "visualAnchor": "Hexagonal fortress beast on six wheel-paws beneath a layered rotating defense crown"
+        }
+      ]
+    },
+    {
+      "id": "wasteland",
+      "displayName": "Wasteland Salvager",
+      "category": "machinesVehicles",
+      "subtitle": "Scrap-built armor · corroded brass",
+      "symbolName": "wrench.and.screwdriver.fill",
+      "lineageIntroduction": "A four-legged fennec scavenger that assembles every new form from recovered machinery.",
+      "existenceAnchor": "Armored Fennec Salvage Rig",
+      "silhouetteAnchor": "Huge-eared quadruped with cargo modules, a folding crane rig, and a radio array",
+      "silhouetteClass": "four-legged-salvage-carrier",
+      "motionAnchor": "Four-paw sidesteps, load-bearing sprints, and crane-assisted climbs",
+      "locomotionClass": "cargo-quadruped-run",
+      "materialAnchor": "Rusty copper, old canvas, improvised steel, and exposed cable",
+      "energyAnchor": "Amber reclaimed battery and sandstorm electrical arcs",
+      "motionProfile": "prowling",
+      "accent": {"red": 0.92, "green": 0.58, "blue": 0.12},
+      "secondaryAccent": {"red": 0.76, "green": 0.3, "blue": 0.08},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Rust-Can Incubator",
+          "introduction": "A rust-can incubator listening for useful signals beneath the sand.",
+          "visualAnchor": "Dented cylindrical pod with two enormous antenna ears and a wrapped battery"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Scrap-Picker Kit",
+          "introduction": "A huge-eared kit carrying its first pouch of recovered parts.",
+          "visualAnchor": "Small four-legged fennec frame beneath huge ears and one asymmetrical canvas bag"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Load-Bearing Scout",
+          "introduction": "A four-legged scout balancing speed against a growing cargo frame.",
+          "visualAnchor": "Lean running carrier with a rectangular back rack and paired side toolboxes"
+        },
+        {
+          "stage": "ascended",
+          "name": "Crane-Rig Mechanic",
+          "introduction": "A mechanic fennec operating a back-mounted crane without losing agility.",
+          "visualAnchor": "Braced salvage fox with a tall folding crane and hook arcing over one shoulder"
+        },
+        {
+          "stage": "legendary",
+          "name": "Radio-Colossus Fennec",
+          "introduction": "A radio-colossus fox that turns an entire salvage rig into one moving body.",
+          "visualAnchor": "Massive mobile workshop on four paws crowned by dishes, crane booms, and antennas"
+        }
+      ]
+    },
+    {
+      "id": "ironline",
+      "displayName": "Ironline Rail Spirit",
+      "category": "machinesVehicles",
+      "subtitle": "Blackened steel · signal-red steam",
+      "symbolName": "tram.fill",
+      "lineageIntroduction": "A self-laying locomotive spirit that grows new cars, rails, and junctions as one body.",
+      "existenceAnchor": "Autonomous Living Locomotive",
+      "silhouetteAnchor": "Long horizontal boiler, cowcatcher jaw, piston legs, and a rail-loop tail",
+      "silhouetteClass": "elongated-locomotive-centipede",
+      "motionAnchor": "Piston-driven surges while fresh rails assemble beneath the wheels",
+      "locomotionClass": "self-laying-rail-motion",
+      "materialAnchor": "Blackened steel, red enamel, brass rods, and coal-glass windows",
+      "energyAnchor": "Signal-red steam and white-hot switch-point sparks",
+      "motionProfile": "mechanical",
+      "accent": {"red": 0.95, "green": 0.16, "blue": 0.12},
+      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.22},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Switchyard Boiler Seed",
+          "introduction": "A sealed boiler seed clicks whenever an invisible rail route changes.",
+          "visualAnchor": "Short riveted cylinder resting on one curved rail segment with a red signal eye"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Puffrail Shunter",
+          "introduction": "A tiny shunter lays two wheel-lengths of track before every cheerful lurch.",
+          "visualAnchor": "Stubby locomotive with a tall funnel and two piston feet on a short track tongue"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Junction Runner",
+          "introduction": "A nimble engine extends a branching rail tail to reverse direction without stopping.",
+          "visualAnchor": "Long boiler body on six wheels with a Y-shaped switch rail unfurling behind"
+        },
+        {
+          "stage": "ascended",
+          "name": "Foundry Express",
+          "introduction": "A plated express forges fresh track from its furnace while hauling armored cars.",
+          "visualAnchor": "Wedge-front train spirit towing three staggered cars around a glowing furnace belly"
+        },
+        {
+          "stage": "legendary",
+          "name": "Continental Loopmaster",
+          "introduction": "A sovereign rail engine bends its entire train into a moving circular junction.",
+          "visualAnchor": "Enormous locomotive and linked cars forming a near-complete ring of rails and steam"
+        }
+      ]
+    },
+    {
+      "id": "bathysphere",
+      "displayName": "Hadal Bathysphere",
+      "category": "machinesVehicles",
+      "subtitle": "Pressure brass · abyssal searchlight",
+      "symbolName": "water.waves",
+      "lineageIntroduction": "A free-swimming exploration sphere that turns ballast, manipulators, and lamps into limbs.",
+      "existenceAnchor": "Sentient Deep-Sea Bathysphere",
+      "silhouetteAnchor": "Round pressure hull, three viewport eyes, ballast keel, and telescoping manipulator arms",
+      "silhouetteClass": "spherical-submersible-with-arms",
+      "motionAnchor": "Slow ballast drops, propeller sidesteps, and precise arm-assisted crawling",
+      "locomotionClass": "buoyant-submersible-drift",
+      "materialAnchor": "Verdigris brass, thick glass, rubber bellows, and pressure steel",
+      "energyAnchor": "Pale searchlight cone and violet sonar ripples",
+      "motionProfile": "swimming",
+      "accent": {"red": 0.22, "green": 0.82, "blue": 0.86},
+      "secondaryAccent": {"red": 0.58, "green": 0.38, "blue": 0.95},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Pressure Pearl Capsule",
+          "introduction": "A thick glass capsule contracts gently around a single blinking depth gauge.",
+          "visualAnchor": "Small round brass capsule with one giant window and a heavy teardrop ballast"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Porthole Paddler",
+          "introduction": "A buoyant explorer steers with two soft bellows arms and a nervous rear propeller.",
+          "visualAnchor": "Round submersible with two stubby side paddles, three windows, and one propeller"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Sonar Surveyor",
+          "introduction": "A three-eyed survey craft maps unseen trenches with a rotating violet sonar fan.",
+          "visualAnchor": "Flattened sphere on a keel with a top sonar dish and paired telescoping arms"
+        },
+        {
+          "stage": "ascended",
+          "name": "Trenchhand Explorer",
+          "introduction": "A reinforced bathysphere climbs canyon walls on four long sampling manipulators.",
+          "visualAnchor": "Heavy round hull suspended between four spiderlike robot arms and twin lamps"
+        },
+        {
+          "stage": "legendary",
+          "name": "Abyss Atlas Vessel",
+          "introduction": "A vast living laboratory carries an illuminated map of every trench in its dome.",
+          "visualAnchor": "Layered spherical research vessel under a glass atlas dome with six articulated arms"
+        }
+      ]
+    },
+    {
+      "id": "pollinator",
+      "displayName": "Pollinator Array",
+      "category": "machinesVehicles",
+      "subtitle": "Petal rotors · pollen-gold optics",
+      "symbolName": "dot.radiowaves.left.and.right",
+      "lineageIntroduction": "A modular garden drone whose detachable rotors coordinate pollination as a flying array.",
+      "existenceAnchor": "Autonomous Pollination Drone",
+      "silhouetteAnchor": "Central seed-shaped fuselage, four petal rotors, needle nose, and detachable satellite pods",
+      "silhouetteClass": "radial-four-rotor-drone",
+      "motionAnchor": "Hovering crosswinds, petal-rotor tilts, and synchronized pod formations",
+      "locomotionClass": "multirotor-hover-flight",
+      "materialAnchor": "Cream bioplastic, green carbon stems, mesh petals, and amber optics",
+      "energyAnchor": "Pollen-gold scan cones and green route lattices",
+      "motionProfile": "winged",
+      "accent": {"red": 0.92, "green": 0.78, "blue": 0.12},
+      "secondaryAccent": {"red": 0.24, "green": 0.9, "blue": 0.42},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Dormant Rotor Seed",
+          "introduction": "A seed-shaped drone folds four mesh rotors tightly around its navigation eye.",
+          "visualAnchor": "Pointed cream seed pod with four visible petal seams and an amber front lens"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Pollen Scoutlet",
+          "introduction": "A palm-sized scout hovers unevenly while learning the color of each bloom.",
+          "visualAnchor": "Tiny central body beneath four rounded rotors and one dangling pollen basket"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Nectar Route Mapper",
+          "introduction": "A stable quad-rotor paints efficient garden routes with green projected lattices.",
+          "visualAnchor": "Flat X-shaped drone with four distinct petals and a long forward sampling needle"
+        },
+        {
+          "stage": "ascended",
+          "name": "Orchard Formation Lead",
+          "introduction": "A command drone releases four smaller pods to service an orchard in one pass.",
+          "visualAnchor": "Large flowerlike leader surrounded by four detached seed drones in diamond formation"
+        },
+        {
+          "stage": "legendary",
+          "name": "Bloomgrid Grand Array",
+          "introduction": "A mobile pollination network unfolds into a radiant aerial garden above the canopy.",
+          "visualAnchor": "Concentric rotor flower formed by a central craft and twelve linked satellite petals"
+        }
+      ]
+    },
+    {
+      "id": "lunar-crawler",
+      "displayName": "Moonbase Crawler",
+      "category": "machinesVehicles",
+      "subtitle": "Regolith armor · cobalt survey light",
+      "symbolName": "moon.fill",
+      "lineageIntroduction": "A six-wheel lunar rover that expands from sample carrier into a walking research base.",
+      "existenceAnchor": "Expandable Lunar Research Rover",
+      "silhouetteAnchor": "Low rectangular chassis, six rocker wheels, mast head, and unfolding laboratory wings",
+      "silhouetteClass": "low-six-wheel-rover",
+      "motionAnchor": "Independent rocker-wheel climbs and careful low-gravity hops",
+      "locomotionClass": "six-wheel-rocker-crawl",
+      "materialAnchor": "White insulation foil, titanium ribs, black wheels, and dust-stained panels",
+      "energyAnchor": "Cobalt survey beams and geometric regolith scans",
+      "motionProfile": "rolling",
+      "accent": {"red": 0.32, "green": 0.62, "blue": 1.0},
+      "secondaryAccent": {"red": 0.92, "green": 0.95, "blue": 1.0},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Regolith Sample Pod",
+          "introduction": "A sealed sample pod listens for moonquakes through three folded wheel pairs.",
+          "visualAnchor": "Low white box with six circular wheel outlines and one cobalt slit across the front"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Crater Wheellet",
+          "introduction": "A small rover learns to keep all six wheels grounded across a crater lip.",
+          "visualAnchor": "Compact six-wheel cart with a short camera mast and a scoop-like nose"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Ridge Survey Crawler",
+          "introduction": "A long rocker-bogie scout raises its mast to map ridges beyond the horizon.",
+          "visualAnchor": "Elongated rover with visibly articulated wheel arms and a tall binocular mast"
+        },
+        {
+          "stage": "ascended",
+          "name": "Deployable Moon Lab",
+          "introduction": "A broad crawler unfolds two laboratory wings without surrendering its low stance.",
+          "visualAnchor": "Six-wheel platform with symmetrical side labs open like rectangular wings"
+        },
+        {
+          "stage": "legendary",
+          "name": "Selene Research Citadel",
+          "introduction": "A roaming moonbase carries a dome, antenna forest, and complete field laboratory.",
+          "visualAnchor": "Wide mobile base on six wheel towers beneath a glass dome and radial antenna crown"
+        }
+      ]
+    },
+    {
+      "id": "aether-frigate",
+      "displayName": "Aether Frigate",
+      "category": "machinesVehicles",
+      "subtitle": "Cloudwood hull · turquoise lift sails",
+      "symbolName": "wind",
+      "lineageIntroduction": "A living skyship that grows sails, decks, and floating outriggers around a buoyant core.",
+      "existenceAnchor": "Autonomous Cloud-Sailing Frigate",
+      "silhouetteAnchor": "Long boat hull, high prow, stacked lift sails, and two detached cloud outriggers",
+      "silhouetteClass": "long-hulled-floating-airship",
+      "motionAnchor": "Slow banking turns, sail breathing, and outrigger-assisted altitude shifts",
+      "locomotionClass": "buoyant-sail-flight",
+      "materialAnchor": "Pale cloudwood, turquoise silk, brass rigging, and opal lift bladders",
+      "energyAnchor": "Teal wind runes and pearly buoyancy currents",
+      "motionProfile": "gliding",
+      "accent": {"red": 0.2, "green": 0.88, "blue": 0.9},
+      "secondaryAccent": {"red": 1.0, "green": 0.78, "blue": 0.32},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Bottled Tailwind Keel",
+          "introduction": "A miniature keel floats inside a glass wind bottle with one folded sail.",
+          "visualAnchor": "Teardrop glass bottle enclosing a tiny boat keel and a triangular turquoise sail"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Cloudskiff Sprout",
+          "introduction": "A single-sail skiff learns to tack by puffing its round opal lift bladder.",
+          "visualAnchor": "Short crescent hull beneath one oversized sail and a spherical rear lift bladder"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Twin-Sail Courier",
+          "introduction": "A narrow courier deploys paired sails and two cloud outriggers for stable turns.",
+          "visualAnchor": "Long slim airboat with two vertical sails and detached clouds on side booms"
+        },
+        {
+          "stage": "ascended",
+          "name": "Stormdeck Vanguard",
+          "introduction": "An armored frigate lowers its prow and stacks three sails against violent weather.",
+          "visualAnchor": "Deep angular hull under three staggered sails with a forward lightning-splitter prow"
+        },
+        {
+          "stage": "legendary",
+          "name": "Horizon Crown Flagship",
+          "introduction": "A vast flagship surrounds its cloudwood decks with a complete ring of lift sails.",
+          "visualAnchor": "Multi-deck skyship framed by a circular crown of sails and four cloud outriggers"
+        }
+      ]
+    },
+    {
+      "id": "mobile-foundry",
+      "displayName": "Mobile Foundry",
+      "category": "machinesVehicles",
+      "subtitle": "Furnace iron · molten casting arms",
+      "symbolName": "hammer.fill",
+      "lineageIntroduction": "A walking industrial furnace that forges replacement limbs and tools from its own heat.",
+      "existenceAnchor": "Self-Repairing Walking Foundry",
+      "silhouetteAnchor": "Tall furnace torso, four gantry legs, overhead chimney, and asymmetric casting arms",
+      "silhouetteClass": "four-legged-industrial-tower",
+      "motionAnchor": "Gantry steps, hammering pauses, and molten arm recasting",
+      "locomotionClass": "four-stilt-gantry-walk",
+      "materialAnchor": "Black furnace iron, firebrick, copper pipes, and glowing cast steel",
+      "energyAnchor": "White-orange crucible core and showers of forging sparks",
+      "motionProfile": "heavy",
+      "accent": {"red": 1.0, "green": 0.3, "blue": 0.04},
+      "secondaryAccent": {"red": 1.0, "green": 0.78, "blue": 0.12},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Banked Crucible Core",
+          "introduction": "A brick-lined crucible keeps one white ember alive behind an iron shutter.",
+          "visualAnchor": "Square firebrick vessel with a single round shutter and four folded metal feet"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Tongsleg Smelter",
+          "introduction": "A tiny smelter walks on four tongs while casting its first hammer arm.",
+          "visualAnchor": "Round furnace body on four tong legs with one lopsided hammer-shaped limb"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Gantry Forge Walker",
+          "introduction": "A tall forge strides over scrap piles and feeds them into a glowing belly hatch.",
+          "visualAnchor": "Vertical furnace on four long legs with a side conveyor jaw and top chimney"
+        },
+        {
+          "stage": "ascended",
+          "name": "Crucible Siege Works",
+          "introduction": "A reinforced foundry deploys a casting crane and a broad molten shield arm.",
+          "visualAnchor": "Wide industrial walker with one overhead crane arm and one glowing slab forelimb"
+        },
+        {
+          "stage": "legendary",
+          "name": "Titanforge Processional",
+          "introduction": "A moving steelworks recasts its whole silhouette while marching through the arena.",
+          "visualAnchor": "Cathedral-scale furnace walker with four chimney towers and a ring of casting arms"
+        }
+      ]
+    },
+    {
+      "id": "arcade-titan",
+      "displayName": "Arcade Titan",
+      "category": "machinesVehicles",
+      "subtitle": "Cabinet plastic · pixel power",
+      "symbolName": "gamecontroller.fill",
+      "lineageIntroduction": "A coin-operated game machine that unfolds controls, screens, and pixel weapons into a champion.",
+      "existenceAnchor": "Transforming Arcade Cabinet",
+      "silhouetteAnchor": "Upright cabinet torso, screen face, joystick shoulder, and button-cluster limbs",
+      "silhouetteClass": "upright-cabinet-transformer",
+      "motionAnchor": "Blocky step cycles, joystick feints, and frame-by-frame dashes",
+      "locomotionClass": "two-legged-pixel-dash",
+      "materialAnchor": "Colored ABS plastic, smoked screen glass, chrome trim, and rubber buttons",
+      "energyAnchor": "Primary-color pixels and scanline combo meters",
+      "motionProfile": "marching",
+      "accent": {"red": 0.2, "green": 0.68, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.2, "blue": 0.55},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Continue Coin Capsule",
+          "introduction": "A bright token spins inside a miniature cabinet with a sleeping screen.",
+          "visualAnchor": "Tiny rounded arcade cabinet containing one oversized coin and a black square display"
+        },
+        {
+          "stage": "hatchling",
+          "name": "Buttonhop Mini-Cab",
+          "introduction": "A small cabinet bounces on two button feet and waves a joystick arm.",
+          "visualAnchor": "Short upright machine with two round feet, one joystick limb, and a smiling screen"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Combo Screen Fighter",
+          "introduction": "A cabinet fighter strings colored button presses into crisp pixel-limbed attacks.",
+          "visualAnchor": "Lean bipedal cabinet with blocky forearms and a diagonal combo meter over its screen"
+        },
+        {
+          "stage": "ascended",
+          "name": "Boss-Round Battle Rig",
+          "introduction": "A broad battle rig opens twin control decks as shield and weapon platforms.",
+          "visualAnchor": "Wide arcade mech with two hinged control-panel wings and a giant central display"
+        },
+        {
+          "stage": "legendary",
+          "name": "Infinite Credit Overlord",
+          "introduction": "A towering game sovereign projects an entire arena from its crown of screens.",
+          "visualAnchor": "Tall multi-screen titan surrounded by a pixel arch and four floating controller hands"
+        }
+      ]
+    },
+    {
+      "id": "rescue-convoy",
+      "displayName": "Rescue Convoy",
+      "category": "machinesVehicles",
+      "subtitle": "Safety composite · beacon-blue modules",
+      "symbolName": "cross.case.fill",
+      "lineageIntroduction": "A modular emergency vehicle that splits into coordinated medical, fire, and recovery units.",
+      "existenceAnchor": "Transforming Multi-Role Rescue Convoy",
+      "silhouetteAnchor": "Wedge ambulance body, four telescoping legs, roof beacon, and detachable side modules",
+      "silhouetteClass": "modular-emergency-vehicle",
+      "motionAnchor": "Fast wheel sprints, stabilizer deployment, and synchronized module separation",
+      "locomotionClass": "wheeled-convoy-split",
+      "materialAnchor": "White safety composite, red rubber, brushed aluminum, and clear blue lenses",
+      "energyAnchor": "Rotating blue beacon bands and clean white rescue grids",
+      "motionProfile": "rolling",
+      "accent": {"red": 0.12, "green": 0.62, "blue": 1.0},
+      "secondaryAccent": {"red": 1.0, "green": 0.18, "blue": 0.16},
+      "forms": [
+        {
+          "stage": "egg",
+          "name": "Standby Beacon Case",
+          "introduction": "A closed equipment case flashes a calm blue pulse while awaiting a call.",
+          "visualAnchor": "White cross-marked case on four tiny wheels beneath one oversized blue beacon"
+        },
+        {
+          "stage": "hatchling",
+          "name": "First-Response Roller",
+          "introduction": "A compact responder races on four wheels with one folding medical arm.",
+          "visualAnchor": "Small wedge ambulance with a single side manipulator and a tall rear beacon"
+        },
+        {
+          "stage": "juvenile",
+          "name": "Stabilizer Field Unit",
+          "introduction": "A six-module rescue craft plants four legs to create a protected treatment zone.",
+          "visualAnchor": "Long vehicle braced on four telescoping legs with box modules opened sideways"
+        },
+        {
+          "stage": "ascended",
+          "name": "Tri-Service Rescue Rig",
+          "introduction": "A command body releases separate medical, suppression, and recovery vehicles.",
+          "visualAnchor": "Central command wedge surrounded by three differently shaped detachable rescue pods"
+        },
+        {
+          "stage": "legendary",
+          "name": "Guardian Corridor Convoy",
+          "introduction": "A complete emergency fleet locks together into a luminous mobile shelter corridor.",
+          "visualAnchor": "Ring-shaped linked convoy forming a protected central passage under blue light arches"
+        }
+      ]
+    }
+  ]
+}
