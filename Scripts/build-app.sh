@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PROJECT_ROOT="${0:A:h:h}"
-APP_BUNDLE="$PROJECT_ROOT/artifacts/CainiaoPet.app"
+APP_BUNDLE="$PROJECT_ROOT/artifacts/Sidekin.app"
 CONTENTS="$APP_BUNDLE/Contents"
 SIGN_IDENTITY="${CAINIAOPET_SIGN_IDENTITY:-}"
 BUNDLE_ID="${CAINIAOPET_BUNDLE_ID:-}"
@@ -14,15 +14,15 @@ fi
 cd "$PROJECT_ROOT"
 "$PROJECT_ROOT/Scripts/verify-theme-catalog.sh"
 swift "$PROJECT_ROOT/Scripts/verify-character-assets.swift" \
-  "$PROJECT_ROOT/Sources/CainiaoPetApp/Resources/Characters"
-swift run -c release CainiaoPetSelfTest
-swift run -c release CainiaoPetAPISelfTest
+  "$PROJECT_ROOT/Sources/SidekinApp/Resources/Characters"
+swift run -c release SidekinSelfTest
+swift run -c release SidekinAPISelfTest
 
 BIN_DIR="$(swift build -c release --arch arm64 --show-bin-path)"
-RESOURCE_BUNDLE="$BIN_DIR/CainiaoPet_CainiaoPetApp.bundle"
+RESOURCE_BUNDLE="$BIN_DIR/Sidekin_SidekinApp.bundle"
 
 case "$RESOURCE_BUNDLE" in
-  "$PROJECT_ROOT"/.build/*/release/CainiaoPet_CainiaoPetApp.bundle) ;;
+  "$PROJECT_ROOT"/.build/*/release/Sidekin_SidekinApp.bundle) ;;
   *)
     print -u2 "Unexpected SwiftPM resource path; refusing to clean it: $RESOURCE_BUNDLE"
     exit 1
@@ -35,10 +35,10 @@ if [[ -d "$RESOURCE_BUNDLE" ]]; then
   rm -rf -- "$RESOURCE_BUNDLE"
 fi
 
-swift build -c release --arch arm64 --product CainiaoPet
-swift build -c release --arch arm64 --product CainiaoPetBridge
+swift build -c release --arch arm64 --product Sidekin
+swift build -c release --arch arm64 --product SidekinBridge
 
-if [[ "$APP_BUNDLE" != "$PROJECT_ROOT/artifacts/CainiaoPet.app" ]]; then
+if [[ "$APP_BUNDLE" != "$PROJECT_ROOT/artifacts/Sidekin.app" ]]; then
   print -u2 "Unexpected app bundle path; refusing to replace it."
   exit 1
 fi
@@ -47,10 +47,10 @@ if [[ -e "$APP_BUNDLE" ]]; then
 fi
 
 mkdir -p "$CONTENTS/MacOS" "$CONTENTS/Resources"
-cp "$BIN_DIR/CainiaoPet" "$CONTENTS/MacOS/CainiaoPet"
-cp "$BIN_DIR/CainiaoPetBridge" "$CONTENTS/Resources/CainiaoPetBridge"
+cp "$BIN_DIR/Sidekin" "$CONTENTS/MacOS/Sidekin"
+cp "$BIN_DIR/SidekinBridge" "$CONTENTS/Resources/SidekinBridge"
 cp "$PROJECT_ROOT/Support/Info.plist" "$CONTENTS/Info.plist"
-chmod 755 "$CONTENTS/MacOS/CainiaoPet" "$CONTENTS/Resources/CainiaoPetBridge"
+chmod 755 "$CONTENTS/MacOS/Sidekin" "$CONTENTS/Resources/SidekinBridge"
 
 if [[ -n "$BUNDLE_ID" ]]; then
   /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier $BUNDLE_ID" "$CONTENTS/Info.plist"
@@ -72,7 +72,7 @@ if find "$PACKAGED_RESOURCE_BUNDLE" -type f \
   exit 1
 fi
 
-ICON_TEMP="$(mktemp -d /tmp/cainiao-pet-icon.XXXXXX)"
+ICON_TEMP="$(mktemp -d /tmp/sidekin-icon.XXXXXX)"
 trap 'rm -rf -- "$ICON_TEMP"' EXIT
 ICONSET="$ICON_TEMP/AppIcon.iconset"
 MASTER_ICON="$ICONSET/icon_512x512@2x.png"
@@ -102,8 +102,8 @@ if [[ "$SIGN_IDENTITY" != "-" ]]; then
 fi
 
 # Sign nested code first, then the main executable and the outer bundle.
-/usr/bin/codesign "${SIGN_ARGUMENTS[@]}" "$CONTENTS/Resources/CainiaoPetBridge"
-/usr/bin/codesign "${SIGN_ARGUMENTS[@]}" "$CONTENTS/MacOS/CainiaoPet"
+/usr/bin/codesign "${SIGN_ARGUMENTS[@]}" "$CONTENTS/Resources/SidekinBridge"
+/usr/bin/codesign "${SIGN_ARGUMENTS[@]}" "$CONTENTS/MacOS/Sidekin"
 /usr/bin/codesign "${SIGN_ARGUMENTS[@]}" "$APP_BUNDLE"
 /usr/bin/codesign --verify --deep --strict --verbose=2 "$APP_BUNDLE"
 

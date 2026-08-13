@@ -1,6 +1,6 @@
-# CainiaoPet 100-Theme / 500-Form Art Production Standard
+# Sidekin 100-Theme / 500-Form Art Production Standard
 
-CainiaoPet contains 100 independent five-stage lineages, not 100 isolated form names. The source of truth is the ten category files in `ArtSources/ThemeCatalog/`. The generated `ArtSources/PET_THEME_CATALOG.json` combines them into a machine-readable production manifest.
+Sidekin contains 100 independent five-stage lineages, not 100 isolated form names. The source of truth is the ten category files in `ArtSources/ThemeCatalog/`. The generated `ArtSources/PET_THEME_CATALOG.json` combines them into a machine-readable production manifest.
 
 Each lineage defines a unique existence anchor, silhouette topology, locomotion class, material system, energy motif, five form names, five concise introductions, and five stage-specific visual anchors. Ten themes belong to each of these categories:
 
@@ -44,7 +44,7 @@ Hard constraints: no scenery, detached decorative props unrelated to the existen
 - Canonical stage IDs: `egg`, `hatchling`, `juvenile`, `ascended`, `legendary`.
 - Final canvas: `1254×1254` transparent PNG.
 - Curated source: `ArtSources/FiveStage/<Theme>/<stage>-source.png`.
-- App resource: `Sources/CainiaoPetApp/Resources/Characters/<theme-id>-<stage-id>.png`.
+- App resource: `Sources/SidekinApp/Resources/Characters/<theme-id>-<stage-id>.png`.
 
 ## Acceptance gates
 

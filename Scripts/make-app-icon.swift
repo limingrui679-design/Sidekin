@@ -48,62 +48,67 @@ for (center, radius, alpha) in [
     )).fill()
 }
 
-let auraRect = NSRect(x: 194, y: 150, width: 636, height: 690)
-NSColor(calibratedRed: 0.16, green: 0.95, blue: 0.93, alpha: 0.20).setFill()
+let auraRect = NSRect(x: 164, y: 158, width: 696, height: 696)
+NSColor(calibratedRed: 0.16, green: 0.95, blue: 0.93, alpha: 0.17).setFill()
 NSBezierPath(ovalIn: auraRect).fill()
 
-let eggRect = NSRect(x: 274, y: 188, width: 476, height: 612)
-let egg = NSBezierPath(ovalIn: eggRect)
-
+// Sidekin's mark is an abstract companion core: a luminous S-shaped orbit
+// around a persistent central spark. It represents "side + kin" without
+// locking the brand to any one animal, humanoid, machine, or elemental form.
+let core = NSBezierPath(ovalIn: NSRect(x: 420, y: 420, width: 184, height: 184))
 NSGraphicsContext.saveGraphicsState()
-let eggShadow = NSShadow()
-eggShadow.shadowColor = NSColor(calibratedRed: 0.0, green: 0.9, blue: 1.0, alpha: 0.44)
-eggShadow.shadowBlurRadius = 48
-eggShadow.shadowOffset = NSSize(width: 0, height: -8)
-eggShadow.set()
+let coreShadow = NSShadow()
+coreShadow.shadowColor = NSColor(calibratedRed: 0.15, green: 0.96, blue: 0.93, alpha: 0.65)
+coreShadow.shadowBlurRadius = 52
+coreShadow.shadowOffset = .zero
+coreShadow.set()
 NSGradient(colors: [
-    NSColor(calibratedRed: 0.74, green: 1.0, blue: 0.94, alpha: 1),
-    NSColor(calibratedRed: 0.31, green: 0.73, blue: 0.92, alpha: 1)
-])?.draw(in: egg, angle: -78)
+    NSColor.white,
+    NSColor(calibratedRed: 0.27, green: 0.95, blue: 0.91, alpha: 1)
+])?.draw(in: core, angle: -55)
 NSGraphicsContext.restoreGraphicsState()
 
-egg.lineWidth = 18
-NSColor.white.withAlphaComponent(0.84).setStroke()
-egg.stroke()
+let orbit = NSBezierPath()
+orbit.move(to: NSPoint(x: 718, y: 754))
+orbit.curve(
+    to: NSPoint(x: 341, y: 570),
+    controlPoint1: NSPoint(x: 552, y: 886),
+    controlPoint2: NSPoint(x: 270, y: 780)
+)
+orbit.curve(
+    to: NSPoint(x: 686, y: 442),
+    controlPoint1: NSPoint(x: 384, y: 466),
+    controlPoint2: NSPoint(x: 624, y: 562)
+)
+orbit.curve(
+    to: NSPoint(x: 301, y: 264),
+    controlPoint1: NSPoint(x: 772, y: 294),
+    controlPoint2: NSPoint(x: 488, y: 138)
+)
+orbit.lineWidth = 86
+orbit.lineCapStyle = .round
+orbit.lineJoinStyle = .round
 
-let leftLeaf = NSBezierPath(ovalIn: NSRect(x: 386, y: 748, width: 142, height: 94))
-let rightLeaf = NSBezierPath(ovalIn: NSRect(x: 500, y: 748, width: 142, height: 94))
-NSColor(calibratedRed: 0.36, green: 0.88, blue: 0.45, alpha: 1).setFill()
-leftLeaf.fill()
-NSColor(calibratedRed: 0.49, green: 0.93, blue: 0.53, alpha: 1).setFill()
-rightLeaf.fill()
+NSGraphicsContext.saveGraphicsState()
+let orbitShadow = NSShadow()
+orbitShadow.shadowColor = NSColor(calibratedRed: 0.58, green: 0.34, blue: 1, alpha: 0.60)
+orbitShadow.shadowBlurRadius = 46
+orbitShadow.shadowOffset = .zero
+orbitShadow.set()
+NSColor(calibratedRed: 0.72, green: 0.58, blue: 1, alpha: 0.96).setStroke()
+orbit.stroke()
+NSGraphicsContext.restoreGraphicsState()
 
-let stem = NSBezierPath(roundedRect: NSRect(x: 494, y: 704, width: 36, height: 100), xRadius: 18, yRadius: 18)
-NSColor(calibratedRed: 0.11, green: 0.54, blue: 0.30, alpha: 1).setFill()
-stem.fill()
+let highlight = orbit.copy() as! NSBezierPath
+highlight.lineWidth = 28
+highlight.lineCapStyle = .round
+NSColor.white.withAlphaComponent(0.72).setStroke()
+highlight.stroke()
 
-let eyeColor = NSColor(calibratedRed: 0.05, green: 0.13, blue: 0.27, alpha: 1)
-for x in [365.0, 563.0] {
-    eyeColor.setFill()
-    NSBezierPath(ovalIn: NSRect(x: x, y: 425, width: 98, height: 112)).fill()
-    NSColor.white.withAlphaComponent(0.96).setFill()
-    NSBezierPath(ovalIn: NSRect(x: x + 19, y: 496, width: 30, height: 30)).fill()
+for point in [NSPoint(x: 718, y: 754), NSPoint(x: 301, y: 264)] {
+    NSColor(calibratedRed: 1, green: 0.76, blue: 0.30, alpha: 1).setFill()
+    NSBezierPath(ovalIn: NSRect(x: point.x - 28, y: point.y - 28, width: 56, height: 56)).fill()
 }
-
-let mouth = NSBezierPath(roundedRect: NSRect(x: 477, y: 360, width: 70, height: 28), xRadius: 14, yRadius: 14)
-eyeColor.setFill()
-mouth.fill()
-
-let crack = NSBezierPath()
-crack.move(to: NSPoint(x: 518, y: 676))
-crack.line(to: NSPoint(x: 486, y: 595))
-crack.line(to: NSPoint(x: 534, y: 556))
-crack.line(to: NSPoint(x: 500, y: 490))
-crack.lineWidth = 14
-crack.lineCapStyle = .round
-crack.lineJoinStyle = .round
-NSColor.white.withAlphaComponent(0.84).setStroke()
-crack.stroke()
 
 image.unlockFocus()
 

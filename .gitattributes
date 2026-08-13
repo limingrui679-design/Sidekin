@@ -1,7 +1,9 @@
-# CainiaoPet ships a deliberately large visual corpus. Keep these paths in Git
+# Sidekin ships a deliberately large visual corpus. Keep these paths in Git
 # LFS so ordinary Git history stores small pointers instead of every PNG blob.
-Sources/CainiaoPetApp/Resources/Characters/*.png filter=lfs diff=lfs merge=lfs -text
+Sources/SidekinApp/Resources/Characters/*.png filter=lfs diff=lfs merge=lfs -text
 ArtSources/FiveStage/**/*.png filter=lfs diff=lfs merge=lfs -text
 ArtSources/AuditReplacements/**/*.png filter=lfs diff=lfs merge=lfs -text
 ArtSources/AuditSheets/*.png filter=lfs diff=lfs merge=lfs -text
 docs/*.jpg filter=lfs diff=lfs merge=lfs -text
+docs/readme/*.jpg filter=lfs diff=lfs merge=lfs -text
+docs/readme/*.png filter=lfs diff=lfs merge=lfs -text

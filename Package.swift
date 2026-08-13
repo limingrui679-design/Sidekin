@@ -2,60 +2,60 @@
 import PackageDescription
 
 let package = Package(
-    name: "CainiaoPet",
+    name: "Sidekin",
     defaultLocalization: "en",
     platforms: [
         .macOS(.v14)
     ],
     products: [
-        .library(name: "CainiaoPetCore", targets: ["CainiaoPetCore"]),
-        .library(name: "CainiaoPetCreator", targets: ["CainiaoPetCreator"]),
-        .executable(name: "CainiaoPet", targets: ["CainiaoPetApp"]),
-        .executable(name: "CainiaoPetBridge", targets: ["CainiaoPetBridge"]),
-        .executable(name: "CainiaoPetAssetPrep", targets: ["CainiaoPetAssetPrep"]),
-        .executable(name: "CainiaoPetSelfTest", targets: ["CainiaoPetSelfTest"]),
-        .executable(name: "CainiaoPetAPISelfTest", targets: ["CainiaoPetAPISelfTest"])
+        .library(name: "SidekinCore", targets: ["SidekinCore"]),
+        .library(name: "SidekinCreator", targets: ["SidekinCreator"]),
+        .executable(name: "Sidekin", targets: ["SidekinApp"]),
+        .executable(name: "SidekinBridge", targets: ["SidekinBridge"]),
+        .executable(name: "SidekinAssetPrep", targets: ["SidekinAssetPrep"]),
+        .executable(name: "SidekinSelfTest", targets: ["SidekinSelfTest"]),
+        .executable(name: "SidekinAPISelfTest", targets: ["SidekinAPISelfTest"])
     ],
     targets: [
         .target(
-            name: "CainiaoPetCore",
-            path: "Sources/CainiaoPetCore"
+            name: "SidekinCore",
+            path: "Sources/SidekinCore"
         ),
         .target(
-            name: "CainiaoPetCreator",
-            dependencies: ["CainiaoPetCore"],
-            path: "Sources/CainiaoPetCreator",
+            name: "SidekinCreator",
+            dependencies: ["SidekinCore"],
+            path: "Sources/SidekinCreator",
             linkerSettings: [
                 .linkedFramework("Security")
             ]
         ),
         .executableTarget(
-            name: "CainiaoPetApp",
-            dependencies: ["CainiaoPetCore", "CainiaoPetCreator"],
-            path: "Sources/CainiaoPetApp",
+            name: "SidekinApp",
+            dependencies: ["SidekinCore", "SidekinCreator"],
+            path: "Sources/SidekinApp",
             resources: [
                 .process("Resources")
             ]
         ),
         .executableTarget(
-            name: "CainiaoPetBridge",
-            dependencies: ["CainiaoPetCore"],
-            path: "Sources/CainiaoPetBridge"
+            name: "SidekinBridge",
+            dependencies: ["SidekinCore"],
+            path: "Sources/SidekinBridge"
         ),
         .executableTarget(
-            name: "CainiaoPetAssetPrep",
-            dependencies: ["CainiaoPetCreator"],
-            path: "Sources/CainiaoPetAssetPrep"
+            name: "SidekinAssetPrep",
+            dependencies: ["SidekinCreator"],
+            path: "Sources/SidekinAssetPrep"
         ),
         .executableTarget(
-            name: "CainiaoPetSelfTest",
-            dependencies: ["CainiaoPetCore", "CainiaoPetCreator"],
-            path: "Sources/CainiaoPetSelfTest"
+            name: "SidekinSelfTest",
+            dependencies: ["SidekinCore", "SidekinCreator"],
+            path: "Sources/SidekinSelfTest"
         ),
         .executableTarget(
-            name: "CainiaoPetAPISelfTest",
-            dependencies: ["CainiaoPetCore", "CainiaoPetCreator"],
-            path: "Sources/CainiaoPetAPISelfTest"
+            name: "SidekinAPISelfTest",
+            dependencies: ["SidekinCore", "SidekinCreator"],
+            path: "Sources/SidekinAPISelfTest"
         )
     ]
 )

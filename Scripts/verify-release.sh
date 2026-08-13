@@ -12,7 +12,7 @@ for argument in "$@"; do
     *.app) APP_BUNDLE="${argument:A}" ;;
     *.zip) ARCHIVE="${argument:A}" ;;
     *)
-      print -u2 "Usage: verify-release.sh [--public] CainiaoPet.app [CainiaoPet.zip]"
+      print -u2 "Usage: verify-release.sh [--public] Sidekin.app [Sidekin.zip]"
       exit 2
       ;;
   esac
@@ -23,10 +23,10 @@ if [[ -z "$APP_BUNDLE" && -z "$ARCHIVE" ]]; then
   exit 2
 fi
 
-VERIFY_TEMP="$(mktemp -d /tmp/cainiao-pet-verify.XXXXXX)"
+VERIFY_TEMP="$(mktemp -d /tmp/sidekin-verify.XXXXXX)"
 cleanup() {
   case "$VERIFY_TEMP" in
-    /tmp/cainiao-pet-verify.*) rm -rf -- "$VERIFY_TEMP" ;;
+    /tmp/sidekin-verify.*) rm -rf -- "$VERIFY_TEMP" ;;
   esac
 }
 trap cleanup EXIT
@@ -35,9 +35,9 @@ verify_app() {
   local app="$1"
   local label="$2"
   local info="$app/Contents/Info.plist"
-  local main_executable="$app/Contents/MacOS/CainiaoPet"
-  local bridge="$app/Contents/Resources/CainiaoPetBridge"
-  local resource_bundle="$app/Contents/Resources/CainiaoPet_CainiaoPetApp.bundle"
+  local main_executable="$app/Contents/MacOS/Sidekin"
+  local bridge="$app/Contents/Resources/SidekinBridge"
+  local resource_bundle="$app/Contents/Resources/Sidekin_SidekinApp.bundle"
 
   [[ -d "$app" ]] || { print -u2 "$label app bundle is missing: $app"; exit 1; }
   /usr/bin/plutil -lint "$info" >/dev/null
@@ -104,11 +104,11 @@ if [[ -n "$ARCHIVE" ]]; then
     print -u2 "Archive contains forbidden macOS metadata."
     exit 1
   fi
-  print -r -- "$ZIP_LIST" | /usr/bin/grep -qx 'CainiaoPet.app/Contents/Info.plist'
+  print -r -- "$ZIP_LIST" | /usr/bin/grep -qx 'Sidekin.app/Contents/Info.plist'
   print -r -- "$ZIP_LIST" | /usr/bin/grep -qx 'RELEASE_MANIFEST.json'
 
   /usr/bin/unzip -q "$ARCHIVE" -d "$VERIFY_TEMP/archive"
-  EXTRACTED_APP="$VERIFY_TEMP/archive/CainiaoPet.app"
+  EXTRACTED_APP="$VERIFY_TEMP/archive/Sidekin.app"
   EMBEDDED_MANIFEST="$VERIFY_TEMP/archive/RELEASE_MANIFEST.json"
   swift "$PROJECT_ROOT/Scripts/read-release-manifest.swift" \
     "$EMBEDDED_MANIFEST" schemaVersion >/dev/null

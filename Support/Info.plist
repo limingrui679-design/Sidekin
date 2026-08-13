@@ -5,17 +5,17 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleDisplayName</key>
-    <string>CainiaoPet</string>
+    <string>Sidekin</string>
     <key>CFBundleExecutable</key>
-    <string>CainiaoPet</string>
+    <string>Sidekin</string>
     <key>CFBundleIdentifier</key>
-    <string>local.cainiao.codexpet</string>
+    <string>app.sidekin.desktop</string>
     <key>CFBundleIconFile</key>
     <string>AppIcon</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>CainiaoPet</string>
+    <string>Sidekin</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>

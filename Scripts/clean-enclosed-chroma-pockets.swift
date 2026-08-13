@@ -24,7 +24,7 @@ private func process(input: URL, output: URL) throws {
           let source = image.cgImage(forProposedRect: nil, context: nil, hints: nil)
     else {
         throw NSError(
-            domain: "CainiaoPetArt",
+            domain: "SidekinArt",
             code: 1,
             userInfo: [NSLocalizedDescriptionKey: "Could not decode \(input.path)"]
         )
@@ -47,7 +47,7 @@ private func process(input: URL, output: URL) throws {
         bitmapInfo: bitmapInfo
     ) else {
         throw NSError(
-            domain: "CainiaoPetArt",
+            domain: "SidekinArt",
             code: 2,
             userInfo: [NSLocalizedDescriptionKey: "Could not create image context"]
         )
@@ -195,7 +195,7 @@ private func process(input: URL, output: URL) throws {
     ), let cgImage = outputContext.makeImage()
     else {
         throw NSError(
-            domain: "CainiaoPetArt",
+            domain: "SidekinArt",
             code: 3,
             userInfo: [NSLocalizedDescriptionKey: "Could not build output image"]
         )
@@ -204,7 +204,7 @@ private func process(input: URL, output: URL) throws {
     let representation = NSBitmapImageRep(cgImage: cgImage)
     guard let png = representation.representation(using: .png, properties: [.compressionFactor: 0.92]) else {
         throw NSError(
-            domain: "CainiaoPetArt",
+            domain: "SidekinArt",
             code: 4,
             userInfo: [NSLocalizedDescriptionKey: "Could not encode output PNG"]
         )

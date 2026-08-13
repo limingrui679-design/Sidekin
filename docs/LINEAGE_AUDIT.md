@@ -1,4 +1,4 @@
-# CainiaoPet 100-Lineage Final Art Audit
+# Sidekin 100-Lineage Final Art Audit
 
 Audit date: 2026-08-13
 

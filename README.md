@@ -1,29 +1,82 @@
-# CainiaoPet
+<div align="center">
+  <img src="docs/readme/hero.jpg" alt="Sidekin — a local-first macOS companion for Codex" width="100%">
+  <br><br>
+  <img src="docs/readme/app-icon.png" alt="Sidekin app icon" width="96">
+  <br>
+  <a href="https://github.com/limingrui679-design/Sidekin/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/limingrui679-design/Sidekin/ci.yml?branch=main&style=flat-square&label=build" alt="Build status"></a>
+  <img src="https://img.shields.io/badge/macOS-14%2B-0b1026?style=flat-square&logo=apple&logoColor=white" alt="macOS 14 or newer">
+  <img src="https://img.shields.io/badge/Apple%20Silicon-arm64-0b1026?style=flat-square&logo=apple&logoColor=white" alt="Apple Silicon arm64">
+  <img src="https://img.shields.io/badge/Swift-6.0-f05138?style=flat-square&logo=swift&logoColor=white" alt="Swift 6">
+  <img src="https://img.shields.io/badge/lineages-100-26c6c3?style=flat-square" alt="100 lineages">
+  <img src="https://img.shields.io/badge/forms-500-8b5cf6?style=flat-square" alt="500 forms">
+  <br><br>
+  <strong>A native floating companion that turns Codex task activity into care, growth, and evolution.</strong>
+  <br>
+  Local-first. No account. No bundled API key. No prompt or code collection.
+  <br><br>
+  <a href="#why-sidekin">Why Sidekin</a> ·
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#100-lineages--500-forms">Gallery</a> ·
+  <a href="#privacy-boundary">Privacy</a> ·
+  <a href="#verification">Verification</a>
+</div>
 
-CainiaoPet is a native macOS floating desktop companion. It reacts when Codex starts, completes, or fails a task, while maintaining its own hunger, mood, energy, care loop, sleep cycle, and five-stage evolution. The project uses one Swift package with clearly separated modules so the desktop pet, event bridge, and growth system share one source of truth.
+## Why Sidekin
 
-Current version: `1.4.0` (Build 7), Apple Silicon `arm64`, macOS 14+.
+Most desktop pets are decorative overlays. Sidekin has a persistent life of its own: it gets hungry and tired, reacts to your Codex workflow, earns growth from completed work, and evolves through a visually continuous lineage.
 
-## Features
+| Reactive companion | Real care loop | Deep lineage system | Resumable workshop |
+|---|---|---|---|
+| Running, completed, and failed Codex states drive visible feedback. | Hunger, mood, energy, feeding, play, sleep, wake, and local saves. | 100 built-in lineages, five audited stages each, across ten radically different categories. | Generate 1–8 stages, save every paid result immediately, retry one stage, or continue after failure. |
 
-- Native transparent macOS floating window, menu bar access, and automatic local saves
-- Five growth stages: Core Egg, First Spark, Shifting Form, Ascension, and Crown Form
-- 100 distinct five-stage lineages with 500 transparent `1254×1254` character assets
-- Hunger, mood, and energy, plus feed, play, sleep, and wake actions
-- Codex running, completed, and failed-state animations and growth feedback
-- Pet Workshop with Text Original, Reference Restyle, and High-Fidelity Reference modes across 1–8 stages
-- Draft `low`, Standard `medium`, and Final `high` quality tiers with dynamic cost estimates
-- Immediate local persistence of each raw API image, allowing interrupted or cancelled jobs to resume
-- Resume from the failed stage, restart from a selected stage, or regenerate one stage
-- Free local reprocessing of a previously paid raw image without an API key; potentially paid Continue Generation and Request Again actions are shown separately
-- Adaptive edge-connected background removal that protects pink, purple, and other interior subject colors
-- Side-by-side previews of the raw and background-removed images
-- Rename, delete, import, export, locally replace, and AI-regenerate custom template stages
-- Optional Codex Hooks; installation and removal touch only CainiaoPet-owned entries
+Sidekin is intentionally broader than an animal pet collection. Its catalog includes mythic beings, unmistakably nonhuman humanoids, deities, mecha, vehicles, plants, fungi, minerals, artifacts, food beings, weather systems, abstract entities, architecture, and distributed colonies.
 
-## 100 Built-In Lineages
+## At a glance
 
-The catalog contains ten lineages in each of ten deliberately different categories:
+| | Current local Beta |
+|---|---|
+| Version | `1.4.0` · Build 7 |
+| Platform | macOS 14+ · Apple Silicon `arm64` |
+| Stack | Swift 6 · SwiftUI · AppKit · Security / Keychain |
+| Built-in content | 100 lineages · 500 transparent `1254×1254` PNG forms |
+| Growth | Core Egg → First Spark → Shifting Form → Ascension → Crown Form |
+| Codex response | Running · completed · failed |
+| Storage | Local JSON, template packages, stage images, and resumable jobs |
+| Distribution scope | Source project and local Beta; no public signed app release |
+
+## Quick start
+
+Sidekin is currently built from source. Git LFS is required because the audited visual corpus is intentionally large.
+
+```bash
+git lfs install
+git clone https://github.com/limingrui679-design/Sidekin.git
+cd Sidekin
+./Scripts/run-all-checks.sh
+./Scripts/build-app.sh
+```
+
+The verified local app is created at `artifacts/Sidekin.app`. To launch it intentionally:
+
+```bash
+./Scripts/run-app.sh
+```
+
+> Sidekin is not notarized for independent consumer distribution. This repository publishes source and CI verification, not a public downloadable macOS release.
+
+## Five stages, one identity
+
+Every lineage defines a persistent existence type, silhouette logic, material system, energy motif, locomotion class, five named forms, and stage-specific visual anchors.
+
+![Three Sidekin lineages evolving through all five audited stages](docs/readme/evolution.jpg)
+
+The final audit checks common-sense anatomy or construction, identity continuity, species or existence-type drift, insufficient change between stages, nonhuman-humanoid compliance, cutout quality, and readability at the 205–235 px desktop size.
+
+## 100 lineages · 500 forms
+
+![Ten Sidekin categories represented by final legendary forms](docs/readme/catalog.jpg)
+
+The catalog contains ten lineages in each category:
 
 1. Fauna & Mythic
 2. Machines & Vehicles
@@ -36,85 +89,115 @@ The catalog contains ten lineages in each of ten deliberately different categori
 9. Living Architecture
 10. Collective Systems
 
-The set includes animals, mythic creatures, masked nonhuman humanoid beings, deities, mecha, vehicles, plants, fungi, minerals, artifacts, food beings, weather systems, abstract entities, architecture, and distributed colonies. Humanoid silhouettes remain unmistakably nonhuman: the catalog forbids real people, children, realistic human skin, realistic human hair, and ordinary human faces.
+Humanoid silhouettes remain unmistakably nonhuman: the art standard forbids real people, children, realistic human skin, realistic human hair, and ordinary human faces.
 
-Each lineage has one persistent existence type, silhouette logic, material system, energy motif, locomotion class, five named forms, and five stage-specific visual anchors. The complete machine-readable catalog is in [`ArtSources/PET_THEME_CATALOG.json`](ArtSources/PET_THEME_CATALOG.json), and the production constraints are in [`ArtSources/ART_PRODUCTION_500.md`](ArtSources/ART_PRODUCTION_500.md).
+All 500 final images existed before the 100-lineage audit began. The repair pass produced 77 raw candidates for 74 stage targets across 61 lineages before acceptance. The evidence is reviewable in:
 
-All 100 lineages were reviewed only after all 500 final images existed. The final pass checked common-sense anatomy or construction, identity continuity, species or existence-type drift, insufficient change between stages, nonhuman-humanoid compliance, cutout quality, and readability at the pet's 205–235 px display size. Seventy-seven raw repair candidates were produced for 74 stage targets across 61 lineages before the final set was accepted. See the individual result for every lineage in [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) and the 20 final five-lineage audit sheets in [`ArtSources/AuditSheets`](ArtSources/AuditSheets).
+- [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) — one result for every lineage
+- [`ArtSources/AuditSheets`](ArtSources/AuditSheets) — 20 five-lineage audit sheets
+- [`ArtSources/PET_THEME_CATALOG.json`](ArtSources/PET_THEME_CATALOG.json) — machine-readable source of truth
+- [`ArtSources/ART_PRODUCTION_500.md`](ArtSources/ART_PRODUCTION_500.md) — production and continuity constraints
 
-![Five of the final audited lineages across all five stages](ArtSources/AuditSheets/lineage-audit-01.png)
+## Care, growth, and Codex response
 
-## Bring Your Own API Key
+- Transparent floating macOS panel plus menu bar access
+- Hunger, mood, and energy with feed, play, sleep, and wake actions
+- Automatic local persistence and offline care progression
+- Optional Codex Hooks for immediate lifecycle events
+- Session-log fallback that classifies lifecycle state only
+- Completed tasks grant growth once per unique Codex turn
+- Running, success, and failure states drive animation and emotional feedback
+- Hats, glasses / face accessories, and aura / particle cosmetic slots
 
-CainiaoPet does not include a developer API key, and users never share the author's key. A user who chooses real image generation in Pet Workshop enters their own OpenAI API key and pays the charges generated by their own OpenAI API account. The key is stored only in that user's macOS Keychain.
+Hook installation and removal preserve unrelated user configuration. Sidekin owns only handlers containing its own bridge marker, and removes the legacy bridge marker during migration.
 
-Without a key, the floating pet, all 100 built-in lineages, care and growth, local saves, Codex status reactions, and existing custom templates remain fully usable.
+## Pet Workshop
 
-As of 2026-08-10, estimated `gpt-image-2` output costs for `1024×1024` images are shown below. The in-app confirmation updates the output estimate based on stage count. Reference-image and preceding-stage input costs are additional.
+Pet Workshop supports:
 
-| Quality | Output per image | Five-stage output |
-|---|---:|---:|
-| Draft `low` | `$0.006` | `$0.030` |
-| Standard `medium` | `$0.053` | `$0.265` |
-| Final `high` | `$0.211` | `$1.055` |
+- Text Original, Reference Restyle, and High-Fidelity Reference modes
+- One to eight named stages
+- Draft `low`, Standard `medium`, and Final `high` quality tiers
+- Dynamic output-cost estimates before confirmation
+- Immediate persistence of every raw response before background removal
+- Continue after interruption, restart from a selected stage, or regenerate one stage
+- Free local reprocessing of an already paid raw image without an API key
+- Edge-connected adaptive background removal that protects interior pink and purple colors
+- Raw / processed side-by-side previews
+- Rename, delete, import, export, replace, and regenerate template stages
 
-For current capabilities and pricing, consult the [GPT Image 2 model page](https://developers.openai.com/api/docs/models/gpt-image-2), [Image generation guide](https://developers.openai.com/api/docs/guides/image-generation), and [API pricing page](https://developers.openai.com/api/docs/pricing).
+### Bring your own API key
 
-## Local Data and Privacy
+Sidekin never includes the developer's API key. Image generation is optional and uses the individual user's own OpenAI API key and OpenAI API account. The key is stored in that user's macOS Keychain.
 
-Pet state is stored at:
+Without a key, the floating companion, all 100 built-in lineages, care and growth, local saves, Codex reactions, and existing custom templates remain fully usable.
+
+Because model capabilities and prices can change, consult the current [GPT Image model documentation](https://developers.openai.com/api/docs/models), [image generation guide](https://developers.openai.com/api/docs/guides/image-generation), and [API pricing page](https://developers.openai.com/api/docs/pricing). The app shows its estimate before a request is sent.
+
+## Privacy boundary
+
+| Data or action | Leaves the Mac? |
+|---|---|
+| Care state, growth, wardrobe, and selected lineage | No |
+| Codex prompts, responses, code, tool output, and project files | No — Sidekin does not read or save them |
+| Codex lifecycle classification: running, completed, failed | No |
+| Custom templates, raw stages, processed stages, and resumable jobs | No |
+| User's API key | No — stored in macOS Keychain |
+| Confirmed image-generation description and required visual references | Yes — only when the user explicitly confirms an OpenAI Image API request |
+
+Local files are stored under:
 
 ```text
-~/Library/Application Support/CainiaoPet/pet-state.json
+~/Library/Application Support/Sidekin/pet-state.json
+~/Library/Application Support/Sidekin/PetTemplates/
+~/Library/Application Support/Sidekin/GenerationJobs/
 ```
 
-Custom templates and interrupted jobs are stored at:
+On first use after the rename, Sidekin performs a best-effort migration of the legacy local application-support directory. Existing data in a new Sidekin directory is never overwritten.
+
+## Architecture
 
 ```text
-~/Library/Application Support/CainiaoPet/PetTemplates/
-~/Library/Application Support/CainiaoPet/GenerationJobs/
+SidekinApp
+├── SidekinCore          care, growth, persistence, themes, Codex classification
+├── SidekinCreator       Keychain, image API, cutout pipeline, resumable jobs
+├── SidekinBridge        minimal lifecycle-event writer
+├── SidekinSelfTest      deterministic local behavior checks
+└── SidekinAPISelfTest   mocked generation and editing checks
 ```
 
-The Codex integration classifies task lifecycle events only. It does not save or display prompts, response content, or project files. Care data, template metadata, stage images, and event-bridge files remain on the Mac.
+One Swift package keeps the floating companion, event bridge, growth engine, template system, verification executables, and release scripts on a shared source of truth.
 
-Only after the user explicitly confirms image generation does CainiaoPet send the pet description, the selected reference image, and any preceding stage images needed to preserve lineage continuity to the OpenAI Image API. It never sends Codex conversations, code, or task content to the Image API.
-
-## Build, Verify, and Package Locally
+## Verification
 
 ```bash
 ./Scripts/run-all-checks.sh
 ./Scripts/package-release.sh
 ```
 
-Local packaging creates:
+The project includes **31 local checks** and **6 mocked API checks**, plus catalog, audit, English-text, image-integrity, debug-build, Release-build, archive, architecture, signing, and manifest verification. Mock checks never read a real API key or incur API charges.
 
-```text
-artifacts/CainiaoPet.app
-artifacts/CainiaoPet-macOS-arm64.zip
-artifacts/CainiaoPet-macOS-arm64.RELEASE.json
-artifacts/CainiaoPet-macOS-arm64.zip.sha256
-```
+The release manifest records the version, build number, minimum macOS version, architecture, source commit, signing state, application-file hashes, and hashes for all 500 character assets. Packaging rejects corrupt ZIPs, macOS metadata, missing resources, architecture drift, and manifest mismatch.
 
-The release manifest records the version, build number, minimum macOS version, architecture, source commit, signing state, application file hashes, and hashes for all 500 character assets. Packaging rejects a corrupt ZIP, `__MACOSX`, `.DS_Store`, AppleDouble files, missing resources, architecture drift, or a manifest mismatch.
+GitHub Actions reruns the full suite on macOS and retains the verified arm64 archive as a temporary CI artifact. It is build evidence, not a consumer-ready public release.
 
-GitHub Actions reruns every check on a macOS runner, cross-compiles and re-verifies the `arm64` Beta ZIP, confirms that the manifest commit matches the workflow commit and the source tree is clean, and retains the ZIP, manifest, and SHA-256 file as temporary CI artifacts. These artifacts exist for build verification; they are not a consumer-ready application distribution.
+## Repository guide
 
-This repository is a GitHub source project and local Beta, not an independently distributed signed macOS product. Ad-hoc signing is therefore expected within the current scope. Developer ID signing, Apple notarization, and Gatekeeper acceptance are not completion requirements. If the distribution goal changes later, use the optional process in [docs/RELEASING.md](docs/RELEASING.md).
+| Path | Purpose |
+|---|---|
+| [`Sources`](Sources) | Native app, core engine, creator pipeline, bridge, and executable checks |
+| [`ArtSources`](ArtSources) | Catalog, prompts, curated sources, repair candidates, and audit sheets |
+| [`Scripts`](Scripts) | Art, verification, build, package, manifest, and optional release tooling |
+| [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) | Final 100-lineage visual QA results |
+| [`docs/COMPLETION_AUDIT.md`](docs/COMPLETION_AUDIT.md) | Feature and evidence-bound completion audit |
+| [`docs/RELEASING.md`](docs/RELEASING.md) | Optional future signed-distribution path |
 
-The image corpus is intentionally large. Git LFS rules keep final character resources, curated sources, audit evidence, and large art previews out of ordinary Git object history. Install Git LFS before adding or cloning the art files. This local repository was initialized with the Git LFS runtime bundled by GitHub Desktop. The local source snapshot can be built without publishing anything:
+## Project status
 
-```bash
-./Scripts/package-source.sh
-```
+Sidekin is a real, tested local macOS Beta and an openly reviewable GitHub source project. It is not represented as a notarized public product, a production deployment, or a real-API end-to-end validation performed with the author's key.
 
-Do not run `git add` on the image corpus on a machine where Git LFS is unavailable. GitHub rejects individual files larger than 100 MiB, and committing hundreds of ordinary PNG blobs would make future clones unnecessarily heavy even when every individual file is smaller than that limit.
+The repository currently has no reuse license. Source and art are visible for review, but no permission to copy, redistribute, or create derivatives is granted until a license is added.
 
-## Verification Scope
+## Acknowledgements
 
-```bash
-swift run CainiaoPetSelfTest
-swift run CainiaoPetAPISelfTest
-swift Scripts/verify-character-assets.swift Sources/CainiaoPetApp/Resources/Characters
-```
-
-The project currently includes 30 local checks and 6 API mock checks. They cover growth thresholds, 1–8-stage planning, template management, corrupt-image rejection, full-lineage and single-stage recovery, keyless local recovery, explicit re-requesting, quality costs, background-removal color protection, the 100-theme catalog, all 500 transparent assets, Codex event privacy filtering, Hooks safety, and mocked generation/edit requests and responses. Mock checks never read a real API key or incur API charges.
+The README structure takes cues from strong macOS and desktop-companion repositories—visual identity first, a concise value proposition, quick start near the top, explicit privacy and platform limits, and deeper verification details below—while all Sidekin copy, code, and visual assets remain project-specific.

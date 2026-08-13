@@ -1,6 +1,6 @@
-# CainiaoPet Distribution Guide
+# Sidekin Distribution Guide
 
-> CainiaoPet is currently maintained as a GitHub source project and local Beta. There is no plan to distribute a signed application directly to general users. Developer ID signing, notarization, and Gatekeeper acceptance are therefore not current completion requirements. This page is retained only for a future change in distribution scope.
+> Sidekin is currently maintained as a GitHub source project and local Beta. There is no plan to distribute a signed application directly to general users. Developer ID signing, notarization, and Gatekeeper acceptance are therefore not current completion requirements. This page is retained only for a future change in distribution scope.
 
 ## Keep the Two Package Types Distinct
 
@@ -18,7 +18,7 @@ Complete these steps only if the distribution target changes:
 3. Store notarization credentials in the current user's Keychain, never in the repository:
 
 ```bash
-xcrun notarytool store-credentials "CainiaoPet-Notary"
+xcrun notarytool store-credentials "Sidekin-Notary"
 ```
 
 4. Commit the source and confirm that the working tree contains no untracked or uncommitted files.
@@ -29,8 +29,8 @@ The publisher must supply these values from their own Apple Developer account:
 
 ```bash
 export CAINIAOPET_SIGN_IDENTITY="Developer ID Application: Your Name (TEAMID)"
-export CAINIAOPET_NOTARY_PROFILE="CainiaoPet-Notary"
-export CAINIAOPET_BUNDLE_ID="com.example.cainiaopet"
+export CAINIAOPET_NOTARY_PROFILE="Sidekin-Notary"
+export CAINIAOPET_BUNDLE_ID="app.sidekin.desktop"
 ./Scripts/release-public.sh
 ```
 
@@ -49,9 +49,9 @@ Only after the script reports that every public-distribution gate passed should 
 ## Distribution Files
 
 ```text
-artifacts/CainiaoPet-macOS-arm64.zip
-artifacts/CainiaoPet-macOS-arm64.RELEASE.json
-artifacts/CainiaoPet-macOS-arm64.zip.sha256
+artifacts/Sidekin-macOS-arm64.zip
+artifacts/Sidekin-macOS-arm64.RELEASE.json
+artifacts/Sidekin-macOS-arm64.zip.sha256
 ```
 
-Before upload, keep the version tag aligned with `Support/Info.plist`, including the version and build number, and identify the same source commit in the release notes. Do not upload the unpacked `artifacts/CainiaoPet.app` directory.
+Before upload, keep the version tag aligned with `Support/Info.plist`, including the version and build number, and identify the same source commit in the release notes. Do not upload the unpacked `artifacts/Sidekin.app` directory.

@@ -183,7 +183,7 @@ do {
 
     let appFiles = try records(in: appURL)
     let characterAssets = appFiles.filter { file in
-        file.path.contains("CainiaoPet_CainiaoPetApp.bundle/")
+        file.path.contains("Sidekin_SidekinApp.bundle/")
             && file.path.hasSuffix(".png")
     }
     guard characterAssets.count == 500 else {
@@ -205,8 +205,8 @@ do {
     let manifest = ReleaseManifest(
         schemaVersion: 1,
         generatedAt: ISO8601DateFormatter().string(from: Date()),
-        product: plist["CFBundleName"] as? String ?? "CainiaoPet",
-        displayName: plist["CFBundleDisplayName"] as? String ?? "CainiaoPet",
+        product: plist["CFBundleName"] as? String ?? "Sidekin",
+        displayName: plist["CFBundleDisplayName"] as? String ?? "Sidekin",
         version: version,
         build: build,
         bundleIdentifier: bundleIdentifier,

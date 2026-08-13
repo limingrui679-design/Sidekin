@@ -1,4 +1,4 @@
-# CainiaoPet Character Bible · Five-Stage Edition
+# Sidekin Character Bible · Five-Stage Edition
 
 This document is the acceptance standard for character assets. The ten themes are ten independent species lineages, not one shared character wearing different skins. The only broad inspiration is the readable sense of progression found in creature-collection games. No existing character, silhouette, pattern, emblem, or logo may be reproduced.
 

@@ -15,6 +15,18 @@ TEXT_TARGETS=(
   "$PROJECT_ROOT/docs"
 )
 
+# The old product name appears only in narrowly scoped compatibility constants
+# used to migrate existing saves, Hooks, Keychain access, and template imports.
+LEGACY_BRAND_PATTERN='CainiaoPet|Cainiao Pet|cainiaopet|cainiao'
+LEGACY_BRAND_ALLOWLIST=(
+  'Sources/SidekinCore/PetPersistence.swift'
+  'Sources/SidekinCore/CodexIntegration.swift'
+  'Sources/SidekinCreator/APIKeyStore.swift'
+  'Sources/SidekinApp/Views/ControlCenterView.swift'
+  'Sources/SidekinSelfTest/main.swift'
+  'Scripts/verify-english-text.sh'
+)
+
 # Use explicit character ranges instead of Unicode script extensions. Script
 # extensions classify punctuation such as a middle dot as Han-adjacent even
 # when the surrounding UI copy is English.
@@ -25,4 +37,28 @@ if rg -n --pcre2 "$CJK_PATTERN" "${TEXT_TARGETS[@]}"; then
   exit 1
 fi
 
-print "Verified all project-facing source, catalog, prompts, metadata, and documentation contain no CJK text."
+LEGACY_BRAND_HITS="$(
+  cd "$PROJECT_ROOT"
+  rg -l --hidden \
+    --glob '!.git/**' \
+    --glob '!.build/**' \
+    --glob '!artifacts/**' \
+    --glob '!*.png' \
+    --glob '!*.jpg' \
+    "$LEGACY_BRAND_PATTERN" . \
+    | sed 's#^\./##' \
+    | sort
+)"
+UNEXPECTED_LEGACY_HITS="$(
+  print -r -- "$LEGACY_BRAND_HITS" \
+    | while IFS= read -r path; do
+        [[ -z "$path" || " ${LEGACY_BRAND_ALLOWLIST[*]} " == *" $path "* ]] || print -r -- "$path"
+      done
+)"
+if [[ -n "$UNEXPECTED_LEGACY_HITS" ]]; then
+  print -u2 "Brand verification failed: the retired name remains outside migration code:"
+  print -u2 -- "$UNEXPECTED_LEGACY_HITS"
+  exit 1
+fi
+
+print "Verified English-only project text and Sidekin branding; retired-name references are migration-only."

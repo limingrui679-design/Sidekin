@@ -35,8 +35,8 @@ CAINIAOPET_BUNDLE_ID="$BUNDLE_ID" \
   "$PROJECT_ROOT/Scripts/build-app.sh"
 "$PROJECT_ROOT/Scripts/package-release.sh" --skip-build
 
-APP_BUNDLE="$PROJECT_ROOT/artifacts/CainiaoPet.app"
-ARCHIVE="$PROJECT_ROOT/artifacts/CainiaoPet-macOS-arm64.zip"
+APP_BUNDLE="$PROJECT_ROOT/artifacts/Sidekin.app"
+ARCHIVE="$PROJECT_ROOT/artifacts/Sidekin-macOS-arm64.zip"
 /usr/bin/xcrun notarytool submit "$ARCHIVE" \
   --keychain-profile "$NOTARY_PROFILE" \
   --wait

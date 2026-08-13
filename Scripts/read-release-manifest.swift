@@ -12,7 +12,7 @@ do {
           let value = object[key]
     else {
         throw NSError(
-            domain: "CainiaoPetRelease",
+            domain: "SidekinRelease",
             code: 1,
             userInfo: [NSLocalizedDescriptionKey: "Manifest is invalid or is missing key '\(key)'."]
         )
@@ -23,7 +23,7 @@ do {
         print(number.stringValue)
     } else {
         throw NSError(
-            domain: "CainiaoPetRelease",
+            domain: "SidekinRelease",
             code: 2,
             userInfo: [NSLocalizedDescriptionKey: "Manifest key '\(key)' is not a scalar value."]
         )

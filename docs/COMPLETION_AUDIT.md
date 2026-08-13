@@ -1,4 +1,4 @@
-# CainiaoPet 1.4.0 Beta Completion Audit
+# Sidekin 1.4.0 Beta Completion Audit
 
 This document records requirements, implementation status, and reproducible evidence separately. The target is a reproducible GitHub source project and local Beta, not a signed application distributed directly to general users. Mock API coverage does not constitute a real paid API run.
 
@@ -16,7 +16,7 @@ This document records requirements, implementation status, and reproducible evid
 | Automated art integrity gates | Implemented and tested | The verifier requires exactly 500 binary-unique `1254×1254` transparent PNGs, safe occupancy, and transparent corners. High-IoU candidates receive normalized RGBA appearance comparison so naturally round eggs are not falsely rejected while true near-duplicates still fail. |
 | Template management | Implemented and tested | Custom templates support rename, delete, binary package import/export, local image replacement, and AI single-stage regeneration. Path traversal, corrupt PNG data, size limits, and stage-count limits are guarded. |
 | Clean verification package | Implemented and tested | Package verification reopens the generated ZIP and validates the application, resources, and manifest. It rejects `__MACOSX`, `.DS_Store`, AppleDouble entries, corrupt archives, architecture drift, and hash mismatches. |
-| Independent source repository | Complete locally | The repository contains only CainiaoPet project materials, with its own Git history, Beta tag, version metadata, release manifest, and resource hashes. CI builds and re-verifies the arm64 ZIP, matches the manifest commit to the workflow commit, and retains verification artifacts. Git LFS rules cover the 500 final resources, curated sources, and audit evidence. No GitHub remote is configured. |
+| Independent source repository | Complete locally | The repository contains only Sidekin project materials, with its own Git history, Beta tag, version metadata, release manifest, and resource hashes. CI builds and re-verifies the arm64 ZIP, matches the manifest commit to the workflow commit, and retains verification artifacts. Git LFS rules cover the 500 final resources, curated sources, and audit evidence. |
 | English-language product surface | Implemented and statically audited | New defaults, application UI, accessibility labels, menu items, errors, test output, metadata, scripts, and project documentation use English. Persisted custom names and legacy user-created data are preserved rather than silently rewritten. |
 | Public Apple distribution | Outside the current scope | The project target is a GitHub source repository. Developer ID signing, notarization, and Gatekeeper acceptance are not required. `release-public.sh` is retained only as an optional guarded path if the distribution goal changes later. |
 

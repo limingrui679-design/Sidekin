@@ -228,7 +228,7 @@ private func encodePNG(_ image: CGImage, to url: URL) throws {
         properties: [.compressionFactor: 0.94]
     ) else {
         throw NSError(
-            domain: "CainiaoPetArt",
+            domain: "SidekinArt",
             code: 5,
             userInfo: [NSLocalizedDescriptionKey: "Could not encode \(url.lastPathComponent)"]
         )
@@ -259,7 +259,7 @@ do {
           let source = image.cgImage(forProposedRect: nil, context: nil, hints: nil)
     else {
         throw NSError(
-            domain: "CainiaoPetArt",
+            domain: "SidekinArt",
             code: 1,
             userInfo: [NSLocalizedDescriptionKey: "Could not decode \(inputURL.path)"]
         )
@@ -282,7 +282,7 @@ do {
         bitmapInfo: bitmapInfo
     ) else {
         throw NSError(
-            domain: "CainiaoPetArt",
+            domain: "SidekinArt",
             code: 2,
             userInfo: [NSLocalizedDescriptionKey: "Could not create source context"]
         )
@@ -504,7 +504,7 @@ do {
 
         guard minimumX <= maximumX, minimumY <= maximumY else {
             throw NSError(
-                domain: "CainiaoPetArt",
+                domain: "SidekinArt",
                 code: 4,
                 userInfo: [NSLocalizedDescriptionKey: "No subject found for \(theme)-\(stages[stageIndex])"]
             )
@@ -559,7 +559,7 @@ do {
               )
         else {
             throw NSError(
-                domain: "CainiaoPetArt",
+                domain: "SidekinArt",
                 code: 6,
                 userInfo: [NSLocalizedDescriptionKey: "Could not crop \(theme)-\(stages[stageIndex])"]
             )
@@ -582,7 +582,7 @@ do {
 
         guard let outputImage = outputContext.makeImage() else {
             throw NSError(
-                domain: "CainiaoPetArt",
+                domain: "SidekinArt",
                 code: 7,
                 userInfo: [NSLocalizedDescriptionKey: "Could not render \(theme)-\(stages[stageIndex])"]
             )

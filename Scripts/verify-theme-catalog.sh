@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PROJECT_ROOT="${0:A:h:h}"
-TEMP_DIR="$(mktemp -d /tmp/cainiao-theme-catalog.XXXXXX)"
+TEMP_DIR="$(mktemp -d /tmp/sidekin-theme-catalog.XXXXXX)"
 trap 'rm -rf -- "$TEMP_DIR"' EXIT
 
 swift "$PROJECT_ROOT/Scripts/generate-theme-catalog.swift" \
@@ -16,7 +16,7 @@ swift "$PROJECT_ROOT/Scripts/generate-art-prompts.swift" \
 
 if ! /usr/bin/cmp -s \
   "$TEMP_DIR/PetThemeCatalog.generated.swift" \
-  "$PROJECT_ROOT/Sources/CainiaoPetCore/PetThemeCatalog.generated.swift"; then
+  "$PROJECT_ROOT/Sources/SidekinCore/PetThemeCatalog.generated.swift"; then
   print -u2 "Generated Swift theme catalog is stale. Run Scripts/generate-theme-catalog.swift."
   exit 1
 fi

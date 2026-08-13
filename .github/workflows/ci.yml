@@ -1,4 +1,4 @@
-name: CainiaoPet CI
+name: Sidekin CI
 
 on:
   push:
@@ -31,7 +31,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          manifest="artifacts/CainiaoPet-macOS-arm64.RELEASE.json"
+          manifest="artifacts/Sidekin-macOS-arm64.RELEASE.json"
           commit="$(swift Scripts/read-release-manifest.swift "$manifest" sourceCommit)"
           dirty="$(swift Scripts/read-release-manifest.swift "$manifest" sourceDirty)"
           test "$commit" = "$GITHUB_SHA"
@@ -40,10 +40,10 @@ jobs:
       - name: Retain verified beta archive
         uses: actions/upload-artifact@v4
         with:
-          name: CainiaoPet-macOS-arm64-${{ github.sha }}
+          name: Sidekin-macOS-arm64-${{ github.sha }}
           path: |
-            artifacts/CainiaoPet-macOS-arm64.zip
-            artifacts/CainiaoPet-macOS-arm64.RELEASE.json
-            artifacts/CainiaoPet-macOS-arm64.zip.sha256
+            artifacts/Sidekin-macOS-arm64.zip
+            artifacts/Sidekin-macOS-arm64.RELEASE.json
+            artifacts/Sidekin-macOS-arm64.zip.sha256
           if-no-files-found: error
           retention-days: 14

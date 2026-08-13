@@ -10,10 +10,10 @@ elif [[ "$#" != "0" ]]; then
   exit 2
 fi
 
-APP_BUNDLE="$PROJECT_ROOT/artifacts/CainiaoPet.app"
-ARCHIVE="$PROJECT_ROOT/artifacts/CainiaoPet-macOS-arm64.zip"
-EXTERNAL_MANIFEST="$PROJECT_ROOT/artifacts/CainiaoPet-macOS-arm64.RELEASE.json"
-CHECKSUM="$PROJECT_ROOT/artifacts/CainiaoPet-macOS-arm64.zip.sha256"
+APP_BUNDLE="$PROJECT_ROOT/artifacts/Sidekin.app"
+ARCHIVE="$PROJECT_ROOT/artifacts/Sidekin-macOS-arm64.zip"
+EXTERNAL_MANIFEST="$PROJECT_ROOT/artifacts/Sidekin-macOS-arm64.RELEASE.json"
+CHECKSUM="$PROJECT_ROOT/artifacts/Sidekin-macOS-arm64.zip.sha256"
 
 if [[ "$SKIP_BUILD" == "0" ]]; then
   "$PROJECT_ROOT/Scripts/build-app.sh"
@@ -22,31 +22,31 @@ fi
 
 "$PROJECT_ROOT/Scripts/verify-release.sh" "$APP_BUNDLE"
 
-PACKAGE_TEMP="$(mktemp -d /tmp/cainiao-pet-package.XXXXXX)"
+PACKAGE_TEMP="$(mktemp -d /tmp/sidekin-package.XXXXXX)"
 cleanup() {
   case "$PACKAGE_TEMP" in
-    /tmp/cainiao-pet-package.*) rm -rf -- "$PACKAGE_TEMP" ;;
+    /tmp/sidekin-package.*) rm -rf -- "$PACKAGE_TEMP" ;;
   esac
 }
 trap cleanup EXIT
 
 STAGING="$PACKAGE_TEMP/staging"
 mkdir -p "$STAGING"
-/usr/bin/ditto "$APP_BUNDLE" "$STAGING/CainiaoPet.app"
+/usr/bin/ditto "$APP_BUNDLE" "$STAGING/Sidekin.app"
 swift "$PROJECT_ROOT/Scripts/generate-release-manifest.swift" \
-  "$STAGING/CainiaoPet.app" "$STAGING/RELEASE_MANIFEST.json"
+  "$STAGING/Sidekin.app" "$STAGING/RELEASE_MANIFEST.json"
 
 mkdir -p "$PROJECT_ROOT/artifacts"
-ARCHIVE_TEMP="$PROJECT_ROOT/artifacts/.CainiaoPet-macOS-arm64.$$.zip"
+ARCHIVE_TEMP="$PROJECT_ROOT/artifacts/.Sidekin-macOS-arm64.$$.zip"
 case "$ARCHIVE_TEMP" in
-  "$PROJECT_ROOT"/artifacts/.CainiaoPet-macOS-arm64.*.zip) ;;
+  "$PROJECT_ROOT"/artifacts/.Sidekin-macOS-arm64.*.zip) ;;
   *) print -u2 "Unexpected archive path."; exit 1 ;;
 esac
 rm -f -- "$ARCHIVE_TEMP"
 (
   cd "$STAGING"
   COPYFILE_DISABLE=1 /usr/bin/zip -qry -X "$ARCHIVE_TEMP" \
-    CainiaoPet.app RELEASE_MANIFEST.json \
+    Sidekin.app RELEASE_MANIFEST.json \
     -x '*.DS_Store' '__MACOSX/*' '*/._*'
 )
 mv -f -- "$ARCHIVE_TEMP" "$ARCHIVE"

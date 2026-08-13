@@ -8,10 +8,10 @@ cd "$PROJECT_ROOT"
 "$PROJECT_ROOT/Scripts/verify-english-text.sh"
 swift "$PROJECT_ROOT/Scripts/verify-lineage-audit.swift"
 swift build
-swift run CainiaoPetSelfTest
-swift run CainiaoPetAPISelfTest
+swift run SidekinSelfTest
+swift run SidekinAPISelfTest
 swift "$PROJECT_ROOT/Scripts/verify-character-assets.swift" \
-  "$PROJECT_ROOT/Sources/CainiaoPetApp/Resources/Characters"
+  "$PROJECT_ROOT/Sources/SidekinApp/Resources/Characters"
 swift build -c release
 
 print "All source, mock API, asset, debug, and release checks passed."
