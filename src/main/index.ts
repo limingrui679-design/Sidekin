@@ -184,7 +184,6 @@ function registerIPC(): void {
   handle("sidekin:care", (_event, action: CareAction) => state.care(action));
   handle("sidekin:select-theme", (_event, id: string) => state.selectTheme(id));
   handle("sidekin:select-template", (_event, id: string | null) => state.selectTemplate(id));
-  handle("sidekin:set-cosmetic", (_event, slot, value) => state.setCosmetic(slot, value));
   handle("sidekin:set-visible", (_event, visible: boolean) => state.setVisible(Boolean(visible)));
   handle("sidekin:simulate", (_event, activity: CodexActivity) => state.receive({ activity, timestamp: new Date(), eventID: `simulation-${Date.now()}`, title: "Status response preview", project: "Sidekin" }).then(() => state.publicState()));
   handle("sidekin:install-hooks", async () => { await monitor.install(); return monitor.isInstalled(); });
@@ -285,6 +284,13 @@ async function capturePreviewsIfRequested(): Promise<void> {
   await new Promise((resolve) => setTimeout(resolve, 350));
   const workshopReport = await controlWindow.webContents.executeJavaScript(`(() => ({ jobs: document.querySelectorAll('.recovery-item').length, jobStages: document.querySelectorAll('.recovery-stage').length, templates: document.querySelectorAll('.template-item').length, templateStages: document.querySelectorAll('.template-stage').length, loadedPreviews: [...document.querySelectorAll('.recovery-stage img,.template-stage img')].filter((image) => image.complete && image.naturalWidth > 0).length }))()`);
   const workshopCapture = await controlWindow.webContents.capturePage();
+  await controlWindow.webContents.executeJavaScript(`document.querySelector('[data-tab="settings"]')?.click()`);
+  await controlWindow.webContents.executeJavaScript(`new Promise((resolve, reject) => { const deadline = Date.now() + 15000; const timer = setInterval(() => { if (document.querySelector('#tab-settings')?.classList.contains('active')) { clearInterval(timer); requestAnimationFrame(() => requestAnimationFrame(resolve)); } else if (Date.now() > deadline) { clearInterval(timer); reject(new Error('Settings did not finish rendering.')); } }, 100); })`);
+  controlWindow.webContents.invalidate();
+  await new Promise((resolve) => setTimeout(resolve, 350));
+  const settingsReport = await controlWindow.webContents.executeJavaScript(`(() => ({ panels: document.querySelectorAll('#tab-settings .panel').length, retiredControls: document.querySelectorAll('#tab-settings select').length }))()`);
+  if (settingsReport.retiredControls !== 0) throw new Error("Retired cosmetic controls remain in Settings.");
+  const settingsCapture = await controlWindow.webContents.capturePage();
   await controlWindow.webContents.executeJavaScript(`document.querySelector('[data-tab="home"]')?.click()`);
   await controlWindow.webContents.executeJavaScript(`new Promise((resolve, reject) => { const deadline = Date.now() + 15000; const timer = setInterval(() => { const image = document.querySelector('#hero-pet'); if (document.querySelector('#tab-home')?.classList.contains('active') && image?.complete && image.naturalWidth > 0 && document.querySelectorAll('.activity-card').length >= 3 && document.querySelector('#hero-status')?.textContent?.includes('working')) { clearInterval(timer); requestAnimationFrame(() => requestAnimationFrame(resolve)); } else if (Date.now() > deadline) { clearInterval(timer); reject(new Error('Command Center did not finish its final render.')); } }, 100); })`);
   controlWindow.webContents.invalidate();
@@ -298,7 +304,8 @@ async function capturePreviewsIfRequested(): Promise<void> {
     writeFile(path.join(captureDirectory, "command-center.png"), control.toPNG()),
     writeFile(path.join(captureDirectory, "floating-pet.png"), floating.toPNG()),
     writeFile(path.join(captureDirectory, "workshop.png"), workshopCapture.toPNG()),
-    writeFile(path.join(captureDirectory, "preview-report.json"), `${JSON.stringify({ control: report[0], floating: report[1], workshop: workshopReport }, null, 2)}\n`)
+    writeFile(path.join(captureDirectory, "settings.png"), settingsCapture.toPNG()),
+    writeFile(path.join(captureDirectory, "preview-report.json"), `${JSON.stringify({ control: report[0], floating: report[1], workshop: workshopReport, settings: settingsReport }, null, 2)}\n`)
   ]);
   await rm(path.join(captureDirectory, ".capture-user-data"), { recursive: true, force: true });
   quitting = true;

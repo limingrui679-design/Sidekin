@@ -91,7 +91,6 @@ function renderState(state: PublicPetState): void {
   $("#activity-feed").innerHTML = activityHTML(pet.activityFeed, 3);
   $("#codex-activity-feed").innerHTML = activityHTML(pet.activityFeed, 5);
   $<HTMLInputElement>("#pet-visible").checked = state.settings.petVisible;
-  for (const slot of ["hat", "face", "aura"] as const) $<HTMLSelectElement>(`#${slot}-select`).value = pet.cosmetics[slot];
   renderEvolution();
   $$(".lineage-card").forEach((card) => card.classList.toggle("active", card.dataset.theme === state.activeTheme.id && !pet.wardrobe.customTemplateID));
 }
@@ -244,7 +243,6 @@ function bind(): void {
   $("#remove-hooks").addEventListener("click", () => void run(async () => { data.hooksInstalled = await window.sidekin.uninstallHooks(); renderAll(); }, "Sidekin hooks removed; unrelated hooks preserved."));
   $$<HTMLButtonElement>("[data-simulate]").forEach((button) => button.addEventListener("click", () => void run(async () => renderState(await window.sidekin.simulateActivity(button.dataset.simulate as any)))));
   $<HTMLInputElement>("#pet-visible").addEventListener("change", (event) => void run(async () => renderState(await window.sidekin.setPetVisible((event.target as HTMLInputElement).checked))));
-  for (const slot of ["hat", "face", "aura"] as const) $<HTMLSelectElement>(`#${slot}-select`).addEventListener("change", (event) => void run(async () => renderState(await window.sidekin.setCosmetic(slot, (event.target as HTMLSelectElement).value))));
   $("#open-data").addEventListener("click", () => void window.sidekin.openUserData());
 }
 

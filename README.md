@@ -126,7 +126,6 @@ All 500 initial images existed before the 100-lineage audit began. The audit plu
 - Session-log fallback that classifies lifecycle state only
 - Completed tasks grant growth once per unique Codex turn
 - Running, success, and failure states drive animation and emotional feedback
-- Hats, glasses / face accessories, and aura / particle cosmetic slots
 
 Hook installation and removal preserve unrelated user configuration. Sidekin owns only handlers containing its own bridge marker, and removes the legacy bridge marker during migration.
 
@@ -159,7 +158,7 @@ Because model capabilities and prices can change, consult the current [GPT Image
 
 | Data or action | Leaves this computer? |
 |---|---|
-| Care state, growth, wardrobe, selected lineage, and local task cards | No |
+| Care state, growth, selected lineage or template, and local task cards | No |
 | Codex prompts, responses, code, tool output, and project files | No — Sidekin does not collect, extract, or persist them |
 | Codex lifecycle classification: running, completed, failed | No |
 | Custom templates, raw stages, processed stages, and resumable jobs | No |

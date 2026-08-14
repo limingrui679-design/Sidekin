@@ -46,7 +46,7 @@ function recalculateStage(snapshot: PetSnapshot): void {
 export function makeDefaultSnapshot(now = new Date()): PetSnapshot {
   const timestamp = iso(now);
   return {
-    schemaVersion: 4,
+    schemaVersion: 5,
     name: "Sprout",
     createdAt: timestamp,
     lastUpdatedAt: timestamp,
@@ -57,7 +57,6 @@ export function makeDefaultSnapshot(now = new Date()): PetSnapshot {
     isSleeping: false,
     codexActivity: "idle",
     wardrobe: { theme: "nova", customTemplateID: null },
-    cosmetics: { hat: "none", face: "none", aura: "none" },
     careAffinity: 0,
     sparkAffinity: 0,
     feedCount: 0,
@@ -72,24 +71,34 @@ export function makeDefaultSnapshot(now = new Date()): PetSnapshot {
   };
 }
 
-export function migrateSnapshot(raw: Partial<PetSnapshot>, now = new Date()): PetSnapshot {
+export function migrateSnapshot(
+  raw: Partial<PetSnapshot> & { cosmetics?: unknown },
+  now = new Date()
+): PetSnapshot {
   const base = makeDefaultSnapshot(now);
-  const legacyStage = raw.stage as string | undefined;
+  const current = { ...raw };
+  delete current.cosmetics;
+  const legacyStage = current.stage as string | undefined;
   const stage = legacyStage === "guardian" || legacyStage === "dreamer"
     ? "ascended"
     : legacyStage && legacyStage in STAGE_RANK
       ? legacyStage as PetStage
       : base.stage;
+  const legacyWardrobe = current.wardrobe ?? {};
   return {
     ...base,
-    ...raw,
-    schemaVersion: 4,
+    ...current,
+    schemaVersion: 5,
     stage,
-    stats: { ...base.stats, ...(raw.stats ?? {}) },
-    wardrobe: { ...base.wardrobe, ...(raw.wardrobe ?? {}) },
-    cosmetics: { ...base.cosmetics, ...(raw.cosmetics ?? {}) },
-    processedCodexSignals: raw.processedCodexSignals ?? [],
-    activityFeed: raw.activityFeed ?? []
+    stats: { ...base.stats, ...(current.stats ?? {}) },
+    wardrobe: {
+      theme: typeof legacyWardrobe.theme === "string" ? legacyWardrobe.theme : base.wardrobe.theme,
+      customTemplateID: typeof legacyWardrobe.customTemplateID === "string" || legacyWardrobe.customTemplateID === null
+        ? legacyWardrobe.customTemplateID
+        : base.wardrobe.customTemplateID
+    },
+    processedCodexSignals: current.processedCodexSignals ?? [],
+    activityFeed: current.activityFeed ?? []
   };
 }
 

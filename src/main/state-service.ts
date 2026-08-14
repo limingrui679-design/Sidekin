@@ -34,7 +34,7 @@ export class StateService {
   ) {}
 
   async initialize(): Promise<void> {
-    const raw = await readJSON<Partial<PetSnapshot>>(this.paths.state);
+    const raw = await readJSON<Partial<PetSnapshot> & { cosmetics?: unknown }>(this.paths.state);
     this.pet = advance(raw ? migrateSnapshot(raw) : makeDefaultSnapshot());
     this.settings = { ...DEFAULT_SETTINGS, ...(await readJSON<RuntimeSettings>(this.paths.settings) ?? {}) };
     this.catalog = (JSON.parse(await readFile(this.paths.catalog, "utf8")) as ThemeCatalog).themes;
@@ -98,13 +98,6 @@ export class StateService {
     if (id && !(await this.templates.load(id))) throw new Error("Template was not found.");
     this.pet.wardrobe.customTemplateID = id;
     this.setTransientMotion("evolve", 2_500);
-    await this.persistAndBroadcast();
-    return this.publicState();
-  }
-
-  async setCosmetic(slot: "hat" | "face" | "aura", value: string): Promise<PublicPetState> {
-    if (!/^[a-z0-9-]{1,32}$/.test(value)) throw new Error("Invalid cosmetic value.");
-    this.pet.cosmetics[slot] = value;
     await this.persistAndBroadcast();
     return this.publicState();
   }

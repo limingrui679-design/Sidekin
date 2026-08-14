@@ -54,6 +54,17 @@ describe("shared pet lifecycle", () => {
     expect(stageProgress(pet)).toBe(0);
   });
 
+  it("drops retired cosmetic slots while preserving lineage selection", () => {
+    const pet = migrateSnapshot({
+      schemaVersion: 4,
+      wardrobe: { theme: "nova", customTemplateID: null, hat: "cap", face: "visor", aura: "orbit" },
+      cosmetics: { hat: "wizard", face: "glasses", aura: "sparkles" }
+    } as never);
+    expect(pet.schemaVersion).toBe(5);
+    expect(pet).not.toHaveProperty("cosmetics");
+    expect(pet.wardrobe).toEqual({ theme: "nova", customTemplateID: null });
+  });
+
   it("rotates through multiple idle motions", () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date(0));

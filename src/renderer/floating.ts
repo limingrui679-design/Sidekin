@@ -18,11 +18,6 @@ function render(next: PublicPetState): void {
   $("#float-status").textContent = status;
   $("#float-status-dot").className = next.pet.isSleeping ? "sleeping" : next.pet.codexActivity;
   $("#float-sleep").textContent = next.pet.isSleeping ? "☀" : "☾";
-  $("#hat-slot").className = `hat-slot ${next.pet.cosmetics.hat}`;
-  $("#hat-slot").textContent = next.pet.cosmetics.hat === "none" ? "" : " ";
-  $("#face-slot").className = `face-slot ${next.pet.cosmetics.face}`;
-  $("#face-slot").textContent = next.pet.cosmetics.face === "none" ? "" : " ";
-  $("#aura-layer").className = `aura-layer ${next.pet.cosmetics.aura}`;
   const cards = next.pet.activityFeed.slice(-3).reverse();
   $("#float-task-stack").innerHTML = cards.map((item) => `<article class="float-task ${item.status}"><i></i><div><strong>${item.title.replaceAll("<", "&lt;")}</strong><small>${item.project.replaceAll("<", "&lt;")} · ${item.status}</small></div><time data-activity-id="${item.id}">${duration(item)}</time></article>`).join("");
   if (timer) window.clearInterval(timer);

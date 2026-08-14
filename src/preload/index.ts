@@ -16,7 +16,6 @@ contextBridge.exposeInMainWorld("sidekin", {
   care: (action: CareAction) => ipcRenderer.invoke("sidekin:care", action),
   selectTheme: (themeID: string) => ipcRenderer.invoke("sidekin:select-theme", themeID),
   selectTemplate: (templateID: string | null) => ipcRenderer.invoke("sidekin:select-template", templateID),
-  setCosmetic: (slot: "hat" | "face" | "aura", value: string) => ipcRenderer.invoke("sidekin:set-cosmetic", slot, value),
   setPetVisible: (visible: boolean) => ipcRenderer.invoke("sidekin:set-visible", visible),
   simulateActivity: (activity: CodexActivity) => ipcRenderer.invoke("sidekin:simulate", activity),
   installHooks: () => ipcRenderer.invoke("sidekin:install-hooks"),

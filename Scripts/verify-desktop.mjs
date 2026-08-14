@@ -21,6 +21,26 @@ requireCondition(main.includes("contextIsolation: true") && main.includes("sandb
 requireCondition(main.includes("setPermissionRequestHandler") && main.includes("Content-Security-Policy"), "Permission or CSP gate is missing.");
 requireCondition(main.includes("workshop.loadViews()") && main.includes("templates.loadViews()"), "Recovery preview data is not exposed to the shared UI.");
 
+const retiredCosmeticSurface = (await Promise.all([
+  "src/main/index.ts",
+  "src/main/state-service.ts",
+  "src/preload/index.ts",
+  "src/shared/types.ts",
+  "src/renderer/index.html",
+  "src/renderer/app.ts",
+  "src/renderer/floating.html",
+  "src/renderer/floating.ts",
+  "src/renderer/floating.css"
+].map((file) => readFile(path.join(root, file), "utf8")))).join("\n");
+for (const retiredIdentifier of [
+  "sidekin:set-cosmetic", "setCosmetic", "hat-select", "face-select", "aura-select",
+  "hat-slot", "face-slot", "aura-layer"
+]) {
+  requireCondition(!retiredCosmeticSurface.includes(retiredIdentifier), `Retired cosmetic surface remains: ${retiredIdentifier}`);
+}
+const lifecycle = await readFile(path.join(root, "src/shared/lifecycle.ts"), "utf8");
+requireCondition(lifecycle.includes("schemaVersion: 5") && lifecycle.includes("delete current.cosmetics"), "Legacy cosmetic data is not removed during migration.");
+
 const floatingCSS = await readFile(path.join(root, "src/renderer/floating.css"), "utf8");
 const motions = ["idle-float", "idle-look", "idle-stretch", "idle-hop", "working-scan", "working-run", "celebrate", "fail", "feed", "play", "sleep", "wake", "evolve"];
 requireCondition(motions.length === 13, "Expected exactly 13 named motion states.");
@@ -55,4 +75,4 @@ const workflow = await readFile(path.join(root, ".github/workflows/desktop.yml")
 requireCondition(workflow.includes("macos-latest") && workflow.includes("windows-latest"), "Desktop CI must run on macOS and Windows.");
 requireCondition(workflow.includes("npm run make") && workflow.includes("actions/upload-artifact@v4"), "Desktop CI must create and retain platform artifacts.");
 
-console.log("Verified secure shared desktop runtime, 13 motions, 100 lineages, 500 forms, and macOS/Windows packaging gates.");
+console.log("Verified secure shared desktop runtime, retired cosmetic slots, 13 motions, 100 lineages, 500 forms, and macOS/Windows packaging gates.");

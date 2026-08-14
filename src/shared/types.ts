@@ -50,11 +50,6 @@ export interface PetSnapshot {
     theme?: string;
     customTemplateID?: string | null;
   };
-  cosmetics: {
-    hat: string;
-    face: string;
-    aura: string;
-  };
   careAffinity: number;
   sparkAffinity: number;
   feedCount: number;
@@ -214,7 +209,6 @@ export interface SidekinAPI {
   care(action: CareAction): Promise<PublicPetState>;
   selectTheme(themeID: string): Promise<PublicPetState>;
   selectTemplate(templateID: string | null): Promise<PublicPetState>;
-  setCosmetic(slot: "hat" | "face" | "aura", value: string): Promise<PublicPetState>;
   setPetVisible(visible: boolean): Promise<PublicPetState>;
   simulateActivity(activity: CodexActivity): Promise<PublicPetState>;
   installHooks(): Promise<boolean>;
