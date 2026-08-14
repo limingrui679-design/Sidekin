@@ -36,7 +36,7 @@ Sidekin is intentionally broader than an animal pet collection. Its catalog incl
 
 ## Poster collection
 
-Four alternate key-art compositions show different sides of the same catalog: competitive action, evolution, playful companionship, and the larger ten-category world.
+Eight alternate key-art compositions show different sides of the same catalog: competition, evolution, companionship, daily care, mythology, scale, and the larger ten-category world.
 
 <table>
   <tr>
@@ -46,6 +46,14 @@ Four alternate key-art compositions show different sides of the same catalog: co
   <tr>
     <td width="50%" align="center"><img src="docs/readme/poster-prismatic-festival.png" alt="Prismatic Pet Festival Sidekin poster with playful nonhuman companions"><br><sub><strong>Prismatic Pet Festival</strong> · bright companion celebration</sub></td>
     <td width="50%" align="center"><img src="docs/readme/poster-chronicle-ten-worlds.png" alt="Chronicle of Ten Worlds Sidekin poster spanning ten creature categories"><br><sub><strong>Chronicle of Ten Worlds</strong> · epic catalog worldbuilding</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="docs/readme/poster-neon-night-league.png" alt="Neon Night League Sidekin poster with nonhuman pets racing through a futuristic arena"><br><sub><strong>Neon Night League</strong> · high-speed competitive action</sub></td>
+    <td width="50%" align="center"><img src="docs/readme/poster-companion-workshop.png" alt="Codex Companion Workshop Sidekin poster showing care, rest, play, and task activity"><br><sub><strong>Codex Companion Workshop</strong> · the care and work loop made visible</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="docs/readme/poster-mythic-dawn.png" alt="Mythic Dawn Assembly Sidekin poster with nonhuman deities, spirits, plants, and constructs"><br><sub><strong>Mythic Dawn Assembly</strong> · monumental nonhuman mythology</sub></td>
+    <td width="50%" align="center"><img src="docs/readme/poster-microverse-mayhem.png" alt="Microverse Mayhem Sidekin poster with tiny collectives and enormous evolved guardians"><br><sub><strong>Microverse Mayhem</strong> · tiny societies and giant guardians</sub></td>
   </tr>
 </table>
 
