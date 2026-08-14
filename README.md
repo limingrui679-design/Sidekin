@@ -106,7 +106,7 @@ Arena Convergence leads the page. The eight remaining compositions each use one 
 
 | | Current local Beta |
 |---|---|
-| Version | `2.0.0-beta.1` cross-platform source Beta |
+| Version | `2.0.0-beta.2` cross-platform source Beta |
 | Platform | macOS 13+ · Windows 10/11 · 64-bit |
 | Stack | Electron 43 · TypeScript · secure isolated renderers |
 | Built-in content | 100 lineages · 500 transparent `1254×1254` PNG forms |
@@ -120,7 +120,7 @@ Arena Convergence leads the page. The eight remaining compositions each use one 
 
 Sidekin is currently built from source. Git LFS is required because the audited visual corpus is intentionally large.
 
-The [`v2.0.0-beta.1` prerelease](https://github.com/limingrui679-design/Sidekin/releases/tag/v2.0.0-beta.1) also retains native macOS and Windows CI archives, portable checksum files, package reports, and a tracked-source snapshot. The macOS archive is ad-hoc signed and the Windows archive is unsigned; neither is a consumer-trust or store-distribution claim.
+The [`v2.0.0-beta.2` prerelease](https://github.com/limingrui679-design/Sidekin/releases/tag/v2.0.0-beta.2) also retains native macOS and Windows CI archives, portable checksum files, package reports, and a tracked-source snapshot. The macOS archive is ad-hoc signed and the Windows archive is unsigned; neither is a consumer-trust or store-distribution claim.
 
 ```bash
 git lfs install
@@ -287,7 +287,7 @@ The GitHub Actions matrix runs natively on `macos-latest` and `windows-latest`, 
 
 ## Project status
 
-Sidekin 2.0.0-beta.1 is an openly reviewable macOS and Windows source Beta. The same runtime is tested on both platforms, locally packaged and launched on macOS, and packaged by the repository's native Windows CI job. It is not represented as a signed public product, a production deployment, external adoption, or a real-API end-to-end validation performed with the author's key.
+Sidekin 2.0.0-beta.2 is an openly reviewable macOS and Windows source Beta. The same runtime is tested on both platforms, locally packaged and launched on macOS, and packaged by the repository's native Windows CI job. It is not represented as a signed public product, a production deployment, external adoption, or a real-API end-to-end validation performed with the author's key.
 
 The repository is proprietary and all rights are reserved. Source and art are visible for review, but no permission to copy, redistribute, or create derivatives is granted by the repository's [`LICENSE`](LICENSE).
 

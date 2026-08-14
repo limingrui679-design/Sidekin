@@ -12,7 +12,7 @@ for (const file of [
 ]) requireCondition(existsSync(path.join(root, file)), `Missing desktop build artifact: ${file}`);
 
 const packageJSON = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
-requireCondition(packageJSON.version === "2.0.0-beta.1", "Expected Sidekin 2.0.0-beta.1 desktop version.");
+requireCondition(packageJSON.version === "2.0.0-beta.2", "Expected Sidekin 2.0.0-beta.2 desktop version.");
 requireCondition(packageJSON.devDependencies.electron, "Electron dependency is missing.");
 
 const main = await readFile(path.join(root, "src/main/index.ts"), "utf8");

@@ -1,8 +1,10 @@
-# Sidekin 2.0.0-beta.1
+# Sidekin 2.0.0-beta.2
 
-This prerelease freezes the first publicly reviewable cross-platform Sidekin 2
-source Beta. It binds one TypeScript and Electron runtime to native macOS and
-Windows CI packaging while preserving explicit signing and evidence limits.
+This prerelease freezes the first complete publicly reviewable cross-platform
+Sidekin 2 source Beta. It binds one TypeScript and Electron runtime to native
+macOS and Windows CI packaging while preserving explicit signing and evidence
+limits. Beta 2 also makes source-snapshot validation self-contained instead of
+depending on a runner-provided text-search utility.
 
 ## Included
 
@@ -14,7 +16,9 @@ Windows CI packaging while preserving explicit signing and evidence limits.
 - resumable Pet Workshop with user-owned API credentials, raw-result recovery,
   stage replacement, and local cutout reprocessing;
 - native macOS and Windows ZIPs, adjacent SHA-256 sidecars, portable package
-  reports, and one tracked-source snapshot.
+  reports, and one tracked-source snapshot;
+- repository-owned English and retired-brand validation with no `rg` runtime
+  dependency.
 
 ## Trust boundary
 
