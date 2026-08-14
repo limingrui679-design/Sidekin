@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sidekin</title>
+    <link rel="stylesheet" href="floating.css">
+  </head>
+  <body>
+    <main class="float-root">
+      <section class="pet-zone" id="pet-zone">
+        <div class="status-pill"><i id="float-status-dot"></i><span id="float-status">Resting</span><strong id="float-timer"></strong></div>
+        <div class="aura-layer" id="aura-layer"><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="pet-motion" id="pet-motion">
+          <img id="float-pet" alt="Sidekin desktop companion" draggable="false">
+          <span class="hat-slot" id="hat-slot"></span>
+          <span class="face-slot" id="face-slot"></span>
+          <span class="effect sleep-effect">Z<span>z</span></span>
+          <span class="effect feed-effect">● · ●</span>
+          <span class="effect play-effect">✦</span>
+          <span class="effect fail-effect">!</span>
+          <span class="scan-line"></span>
+        </div>
+        <div class="quick-actions">
+          <button data-care="feed" title="Feed">●</button>
+          <button data-care="play" title="Play">✦</button>
+          <button data-care="sleepOrWake" id="float-sleep" title="Sleep or wake">☾</button>
+          <button id="open-center" title="Open Command Center">⌃</button>
+        </div>
+      </section>
+      <section class="task-stack" id="float-task-stack"></section>
+    </main>
+    <script src="floating.js"></script>
+  </body>
+</html>

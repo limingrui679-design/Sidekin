@@ -1,0 +1,36 @@
+{
+  "name": "sidekin",
+  "productName": "Sidekin",
+  "version": "2.0.0",
+  "description": "A local-first live desktop companion for Codex on macOS and Windows.",
+  "main": "dist/main/index.cjs",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "node Scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "verify": "npm run typecheck && npm run test && npm run build && node Scripts/verify-desktop.mjs",
+    "start": "npm run build && electron .",
+    "capture": "npm run build && SIDEKIN_CAPTURE_DIR=artifacts/previews electron .",
+    "media:runtime": "node Scripts/make-runtime-media.mjs",
+    "package": "npm run verify && node Scripts/package-desktop.mjs",
+    "make": "npm run verify && node Scripts/package-desktop.mjs --zip",
+    "media": "swift Scripts/make-readme-media.swift",
+    "icons": "node Scripts/generate-icons.mjs"
+  },
+  "dependencies": {
+    "adm-zip": "0.6.0",
+    "sharp": "0.35.3"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "@types/adm-zip": "0.5.7",
+    "@types/node": "22.19.15",
+    "electron": "43.4.0",
+    "esbuild": "0.25.12",
+    "png-to-ico": "3.0.1",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10"
+  }
+}

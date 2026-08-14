@@ -1,40 +1,54 @@
-# Sidekin 1.4.0 Beta Completion Audit
+# Sidekin 2.0 Cross-Platform Completion Audit
 
-This document records requirements, implementation status, and reproducible evidence separately. The target is a reproducible GitHub source project and local Beta, not a signed application distributed directly to general users. Mock API coverage does not constitute a real paid API run.
+This audit covers the shared macOS and Windows source Beta. The completion target is a reproducible GitHub project with native CI evidence on both operating systems, not a signed consumer release. A simulated image client is used for paid-flow tests; no author API key or paid request is part of verification.
 
-## Requirement-by-Requirement Findings
+## Requirement-by-Requirement Evidence
 
-| Area | Current finding | Reproducible evidence |
+| Requirement | Current implementation | Primary evidence |
 |---|---|---|
-| Per-stage persistence and resumable generation | Implemented and tested | `PetGenerationJobStore` persists `raw-stage-XX.png` before image processing. The API mock test interrupts the second stage, resumes from local state, and verifies that stage one is not requested twice. The UI separates free local-only processing from potentially paid Continue Generation; the local-only path neither reads a key nor makes a network request. |
-| Single-stage retry and replacement | Implemented and tested | `regenerateStage` stores a hidden recovery raw image before processing. The UI distinguishes Retry Local Raw Image from Request Again, which may incur a charge. Mock tests verify that a local retry makes no API call, a forced re-request adds exactly one call, and successful completion removes the recovery file. |
-| Pink- and purple-safe background removal | Implemented and tested | `PetImageProcessor` expands only from edge-connected background regions and estimates the dominant edge color adaptively. A synthetic test confirms that interior magenta and pink regions remain intact. |
-| Raw and processed previews | Implemented; compiles successfully | Recovery jobs expose both raw-image and processed-stage URLs, and the workshop recovery card shows both previews. The application was not launched for manual clicking during this audit. |
-| Three quality tiers and cost estimates | Implemented and tested | `low`, `medium`, and `high` are passed to generation and edit requests. The confirmation sheet calculates the current 1024-square output estimate from the stage count and explicitly states that input costs are additional. |
-| 100 complete evolution lineages | Assets verified and reviewed at desktop scale | All 500 PNG files are distinct `1254×1254` images with transparency. The completed set spans ten categories and includes animal, mythic, clearly nonhuman humanoid, deity, mecha, plant, geological, artifact, food, weather, abstract, architectural, and collective existence types. |
-| Individual lineage review and repair | Completed after all 500 initial images existed | Every lineage was checked for common-sense anatomy or construction, identity continuity, stage differentiation, species or existence-type drift, nonhuman-humanoid compliance, and small-scale readability. The audit and README showcase follow-up generated 83 raw repair candidates for 80 stage targets across 63 lineages. The final decision for every lineage is recorded in `LINEAGE_AUDIT.md`, with 20 final visual sheets in `ArtSources/AuditSheets/`. |
-| Automated art integrity gates | Implemented and tested | The verifier requires exactly 500 binary-unique `1254×1254` transparent PNGs, safe occupancy, and transparent corners. High-IoU candidates receive normalized RGBA appearance comparison so naturally round eggs are not falsely rejected while true near-duplicates still fail. |
-| Template management | Implemented and tested | Custom templates support rename, delete, binary package import/export, local image replacement, and AI single-stage regeneration. Path traversal, corrupt PNG data, size limits, and stage-count limits are guarded. |
-| Clean verification package | Implemented and tested | Package verification reopens the generated ZIP and validates the application, resources, and manifest. It rejects `__MACOSX`, `.DS_Store`, AppleDouble entries, corrupt archives, architecture drift, and hash mismatches. |
-| Independent source repository | Complete locally | The repository contains only Sidekin project materials, with its own Git history, Beta tag, version metadata, release manifest, and resource hashes. Local checks build and re-verify the arm64 ZIP and Git LFS rules cover the 500 final resources, curated sources, and audit evidence. Hosted CI is not claimed in the initial GitHub publication. |
-| English-language product surface | Implemented and statically audited | New defaults, application UI, accessibility labels, menu items, errors, test output, metadata, scripts, and project documentation use English. Persisted custom names and legacy user-created data are preserved rather than silently rewritten. |
-| Public Apple distribution | Outside the current scope | The project target is a GitHub source repository. Developer ID signing, notarization, and Gatekeeper acceptance are not required. `release-public.sh` is retained only as an optional guarded path if the distribution goal changes later. |
+| One macOS + Windows project | One Electron 43 and TypeScript runtime implements lifecycle, windows, renderers, Codex monitoring, persistence, workshop, and templates. Platform branches are limited to OS paths, window details, secure storage, and packaging. | `src/`, `package.json`, `Scripts/package-desktop.mjs`, `.github/workflows/desktop.yml` |
+| Floating desktop companion | A transparent, frameless, always-on-top window remains separate from the Command Center and is available from the macOS menu bar or Windows system tray. | `src/main/index.ts`, isolated runtime capture in `artifacts/previews/` |
+| Official-style live task display | Up to three floating task cards show running, completed, and failed states, project label, and live elapsed time. A five-item bounded history is persisted locally. | `src/renderer/floating.ts`, `src/shared/lifecycle.ts`, runtime capture report |
+| Real Codex response without content collection | The monitor reads lifecycle event type, turn ID, timestamp, and working-directory basename only. It does not retain prompt, response, code, reasoning, or tool-output fields. Optional Hooks provide lower-latency signals and preserve unrelated handlers. | `src/shared/codex.ts`, `src/main/codex-monitor.ts`, `tests/codex.test.ts` |
+| Concurrent tasks | Completing one task does not stop the working animation while another task remains live. Each turn is deduplicated before rewards are applied. | `tests/lifecycle.test.ts` |
+| Rich motion system | Thirteen named states are implemented: four idle motions, two working motions, celebration, failure, feed, play, sleep, wake, and evolution. | `src/shared/types.ts`, `src/renderer/floating.css`, `Scripts/verify-desktop.mjs` |
+| Care, growth, and evolution | Hunger, mood, energy, feed, play, sleep/wake, offline progression, five stages, monotonic evolution, and stage previews share one deterministic engine. | `src/shared/lifecycle.ts`, `tests/lifecycle.test.ts` |
+| Local persistence | Pet state, settings, task-card metadata, templates, and generation recovery are written atomically to the OS application-data directory. Legacy saves are migrated without overwriting an existing Sidekin directory. | `src/main/file-store.ts`, `src/main/paths.ts`, `src/main/state-service.ts` |
+| User-owned API key | Sidekin contains no shared key. The individual user may store their own key through Electron `safeStorage`, backed by macOS Keychain or Windows DPAPI. | `src/main/secret-store.ts`, `src/main/index.ts` |
+| Resumable paid generation | Every raw response is atomically saved before cutout processing. Existing raw stages can finish locally without a key, interruptions resume without requesting saved stages again, and restart-from-stage is explicit. | `src/main/workshop.ts`, `tests/workshop.test.ts` |
+| Pink/purple-safe cutout | Background removal flood-fills only edge-connected adaptive key color, preserving enclosed pink and purple subject regions. | `src/main/image-processor.ts`, synthetic image test in `tests/workshop.test.ts` |
+| Template management | Rename, delete, import, export, local stage replacement, single-stage regeneration, saved-raw retry, and corrupt-image rejection are implemented in the shared runtime. | `src/main/template-store.ts`, `src/main/workshop.ts`, renderer management UI, tests |
+| Cost boundary | Low, medium, and high tiers show output estimates before generation or single-stage regeneration. Confirmation states that reference input cost is additional and the user's account is charged. | `src/renderer/app.ts` |
+| Visual corpus | The verifier requires exactly 100 catalog lineages and all 500 named stage assets. Existing 100-lineage visual continuity audits remain the source of art QA evidence. | `ArtSources/PET_THEME_CATALOG.json`, `docs/LINEAGE_AUDIT.md`, `Scripts/verify-desktop.mjs` |
+| Renderer security | Renderers use sandboxing, context isolation, no Node integration, a narrow preload API, sender validation, CSP, denied permissions, denied popups, and blocked remote navigation. | `src/main/index.ts`, `src/preload/index.ts`, `Scripts/verify-desktop.mjs` |
+| README presentation | The centered poster contains 20 lineages at varied scale, the README includes a 20-lineage sampler and all-100 contact sheet, and runtime images come from an isolated local capture. | `docs/readme/hero.jpg`, `docs/readme/all-100.jpg`, `docs/readme/live-desktop.jpg` |
+| Native packaging evidence | Electron Packager 20 packages the current operating system; GitHub Actions runs the same verification and creates artifacts on native macOS and Windows runners. | `Scripts/package-desktop.mjs`, `.github/workflows/desktop.yml` |
 
-## One-Command Verification
+## Reproducible Checks
 
 ```bash
-./Scripts/run-all-checks.sh
-./Scripts/package-release.sh
-./Scripts/package-source.sh
+npm ci
+npm run verify
+npm run capture
+npm run media:runtime
+npm run make
 ```
 
-The second command creates and re-verifies the local arm64 application ZIP. The third creates a clean GitHub source snapshot without `.git`, build products, existing artifacts, or macOS metadata and reruns the catalog, English-text, and 500-asset gates inside staging.
+`npm run verify` performs TypeScript checking, deterministic tests, a clean build, renderer/security inspection, exact motion enumeration, and the 100-lineage / 500-form gate. `npm run capture` uses an isolated temporary application-data directory with synthetic lifecycle and workshop data; it does not inspect the user's API key or send a network request.
 
-## Current Boundaries and Non-Goals
+The historical macOS art pipeline remains separately reproducible:
 
-- No real OpenAI API key was used, and no paid API request was made.
-- The application was not launched for interactive UI acceptance, Hooks installation, or Pet Workshop generation during this audit.
-- Developer ID, Team ID, Apple notarization, and Gatekeeper acceptance are not completion conditions for this GitHub source project. The local package is expected to remain ad-hoc signed.
-- GitHub Actions configuration is present, but the repository has no GitHub remote configured, so there is no remote CI run record yet. This does not affect the completed local source repository or reproducible verification package.
+```bash
+./Scripts/verify-theme-catalog.sh
+swift Scripts/verify-lineage-audit.swift
+```
 
-The accurate status is: **a completed, tested, and traceable GitHub source project and local macOS Beta**. It is not presented as a publicly distributed signed product, and no real paid API end-to-end run is claimed.
+## Boundaries
+
+- No real OpenAI API key was used and no paid API request was made during this audit.
+- Runtime captures use synthetic task labels and temporary local data.
+- The source Beta and CI artifacts are not Developer ID signed, notarized, Microsoft code-signed, or presented as consumer-ready installers.
+- The earlier Swift application remains for provenance and macOS art tooling only; the product runtime described here is the shared TypeScript implementation.
+- A GitHub Actions badge is evidence only when the exact pushed commit has green macOS and Windows jobs.
+
+The accurate product statement is: **a locally verified, cross-platform source Beta with one shared runtime, native macOS and Windows packaging gates, and no claim of signed public distribution or author-funded API validation.**

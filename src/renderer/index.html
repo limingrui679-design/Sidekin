@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sidekin Command Center</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-lockup">
+          <div class="brand-mark">S</div>
+          <div><strong>Sidekin</strong><span>Live companion</span></div>
+        </div>
+        <nav aria-label="Command Center sections">
+          <button class="nav-item active" data-tab="home"><span>⌂</span>Home</button>
+          <button class="nav-item" data-tab="lineages"><span>✦</span>Lineages</button>
+          <button class="nav-item" data-tab="workshop"><span>◇</span>Pet Workshop</button>
+          <button class="nav-item" data-tab="codex"><span>⌁</span>Codex Live</button>
+          <button class="nav-item" data-tab="settings"><span>⚙</span>Settings</button>
+        </nav>
+        <div class="privacy-chip"><span class="live-dot"></span><div><strong>Local-first</strong><small>Task content stays private</small></div></div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div><p class="eyebrow">COMMAND CENTER</p><h1 id="page-title">Home</h1></div>
+          <div class="platform-pill" id="platform-pill">macOS + Windows</div>
+        </header>
+
+        <section class="tab-panel active" id="tab-home">
+          <div class="hero-grid">
+            <article class="pet-stage-card glow-card">
+              <div class="pet-status-row"><span class="status-dot" id="hero-status-dot"></span><span id="hero-status">Resting</span><span class="stage-tag" id="hero-stage">CORE EGG</span></div>
+              <div class="pet-orbit"><div class="orbit-ring one"></div><div class="orbit-ring two"></div><img id="hero-pet" alt="Active Sidekin"></div>
+              <div class="pet-identity"><div><p id="hero-lineage">Nova Arena</p><h2 id="hero-form">Starshuttle Crystal Egg</h2></div><strong id="hero-level">0 XP</strong></div>
+              <div class="progress-track"><span id="stage-progress"></span></div>
+            </article>
+
+            <div class="dashboard-stack">
+              <article class="panel care-panel">
+                <div class="panel-heading"><div><p class="eyebrow">CARE LOOP</p><h2>Keep your Sidekin thriving</h2></div><span id="wellbeing">79%</span></div>
+                <div class="stat-list">
+                  <div><span>Hunger</span><div class="meter hunger"><i id="hunger-meter"></i></div><strong id="hunger-value">76</strong></div>
+                  <div><span>Mood</span><div class="meter mood"><i id="mood-meter"></i></div><strong id="mood-value">82</strong></div>
+                  <div><span>Energy</span><div class="meter energy"><i id="energy-meter"></i></div><strong id="energy-value">78</strong></div>
+                </div>
+                <div class="action-row">
+                  <button class="primary-action" data-care="feed"><span>●</span>Feed</button>
+                  <button class="primary-action violet" data-care="play"><span>✦</span>Play</button>
+                  <button class="primary-action blue" data-care="sleepOrWake"><span>☾</span><b id="sleep-label">Sleep</b></button>
+                </div>
+              </article>
+              <article class="panel live-panel">
+                <div class="panel-heading"><div><p class="eyebrow">CODEX LIVE</p><h2>Recent task signals</h2></div><button class="text-button" data-open-tab="codex">Manage link →</button></div>
+                <div id="activity-feed" class="activity-feed"></div>
+              </article>
+            </div>
+          </div>
+          <article class="panel evolution-panel">
+            <div class="panel-heading"><div><p class="eyebrow">FIVE-STAGE LINEAGE</p><h2>One identity, structural evolution</h2></div><button class="text-button" data-open-tab="lineages">Browse all 100 →</button></div>
+            <div id="evolution-strip" class="evolution-strip"></div>
+          </article>
+        </section>
+
+        <section class="tab-panel" id="tab-lineages">
+          <div class="section-intro"><div><p class="eyebrow">100 LINEAGES · 500 FORMS</p><h2>Choose any built-in evolution path</h2><p>Every final image shown here belongs to a complete five-stage lineage.</p></div><input id="lineage-search" type="search" placeholder="Search lineages or categories"></div>
+          <div id="lineage-grid" class="lineage-grid"></div>
+        </section>
+
+        <section class="tab-panel" id="tab-workshop">
+          <div class="workshop-layout">
+            <article class="panel workshop-form">
+              <div class="panel-heading"><div><p class="eyebrow">CREATE YOUR OWN</p><h2>Pet Workshop</h2></div><span class="beta-chip">1–8 stages</span></div>
+              <label>Template name<input id="template-name" maxlength="60" placeholder="A name for this lineage"></label>
+              <label>Creature concept<textarea id="template-description" rows="4" placeholder="Species, silhouette, palette, personality, signature structures..."></textarea></label>
+              <label>Art direction<input id="art-direction" value="polished competitive-game character art, strong silhouette, premium materials"></label>
+              <div class="field-grid three">
+                <label>Mode<select id="generation-mode"><option value="text">Text Original</option><option value="restyle">Reference Restyle</option><option value="faithful">High-Fidelity Reference</option></select></label>
+                <label>Quality<select id="generation-quality"><option value="low">Draft · low</option><option value="medium" selected>Standard · medium</option><option value="high">Final · high</option></select></label>
+                <label>Stages<select id="stage-count"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option></select></label>
+              </div>
+              <div class="reference-row"><button class="secondary-button" id="choose-reference">Choose reference image</button><span id="reference-label">No reference selected</span></div>
+              <div class="cost-notice"><strong id="cost-estimate">Estimated output: $0.265</strong><span>Reference/input charges are additional. Nothing is sent until you press Generate.</span></div>
+              <button class="generate-button" id="generate-button">Generate and save every stage</button>
+              <div class="generation-progress hidden" id="generation-progress"><div><span id="progress-label">Preparing…</span><strong id="progress-count">0 / 5</strong></div><div class="progress-track"><span id="generation-meter"></span></div><button class="text-button" id="cancel-generation">Cancel safely</button></div>
+            </article>
+            <div class="workshop-stack">
+              <article class="panel key-panel"><div class="panel-heading"><div><p class="eyebrow">YOUR ACCOUNT</p><h2>OpenAI API key</h2></div><span id="key-status" class="status-badge">Not saved</span></div><p>The individual user supplies their own key. Sidekin encrypts it with macOS Keychain or Windows DPAPI.</p><div class="key-row"><input id="api-key" type="password" autocomplete="off" placeholder="sk-…"><button class="secondary-button" id="save-key">Save securely</button></div><button class="text-button danger" id="remove-key">Remove saved key</button></article>
+              <article class="panel"><div class="panel-heading"><div><p class="eyebrow">RESUMABLE JOBS</p><h2>Continue without paying twice</h2></div></div><div id="job-list" class="management-list"></div></article>
+              <article class="panel"><div class="panel-heading"><div><p class="eyebrow">CUSTOM LIBRARY</p><h2>Installed templates</h2></div><button class="text-button" id="import-template">Import</button></div><div id="template-list" class="management-list"></div></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="tab-codex">
+          <div class="codex-layout">
+            <article class="panel codex-hero"><div class="signal-visual"><span></span><span></span><span></span><i></i></div><p class="eyebrow">REAL-TIME LOCAL SIGNALS</p><h2>Codex work becomes visible companionship.</h2><p>Sidekin watches lifecycle events only: running, completed, and failed. It does not collect prompts, replies, code, or tool output.</p><div class="hook-actions"><button class="generate-button" id="install-hooks">Install local integration</button><button class="secondary-button" id="remove-hooks">Remove Sidekin hooks</button></div><div id="hook-status" class="path-card"></div></article>
+            <article class="panel"><div class="panel-heading"><div><p class="eyebrow">LIVE PREVIEW</p><h2>Test every response</h2></div></div><div class="simulation-grid"><button data-simulate="running"><span class="cyan-orb"></span>Working</button><button data-simulate="completed"><span class="green-orb"></span>Complete</button><button data-simulate="failed"><span class="orange-orb"></span>Failed</button><button data-simulate="idle"><span class="mint-orb"></span>Resting</button></div><p class="helper">Preview events are local and tagged so they do not collide with real Codex turns.</p></article>
+            <article class="panel full-feed"><div class="panel-heading"><div><p class="eyebrow">TASK CARDS</p><h2>What the floating pet can show</h2></div></div><div id="codex-activity-feed" class="activity-feed large"></div></article>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="tab-settings">
+          <div class="settings-grid">
+            <article class="panel"><p class="eyebrow">DESKTOP</p><h2>Floating companion</h2><label class="toggle-row"><span><strong>Show desktop pet</strong><small>Keep the transparent pet above other windows.</small></span><input id="pet-visible" type="checkbox"></label><button class="secondary-button" id="open-data">Open local data folder</button></article>
+            <article class="panel"><p class="eyebrow">COSMETICS</p><h2>Three stable accessory slots</h2><div class="field-grid three"><label>Hat<select id="hat-select"><option value="none">None</option><option value="crown">Crown</option><option value="cap">Cap</option><option value="wizard">Wizard hat</option></select></label><label>Face<select id="face-select"><option value="none">None</option><option value="glasses">Glasses</option><option value="visor">Visor</option><option value="monocle">Monocle</option></select></label><label>Aura<select id="aura-select"><option value="none">None</option><option value="sparkles">Sparkles</option><option value="orbit">Orbit</option><option value="flame">Flame</option></select></label></div></article>
+            <article class="panel privacy-panel"><p class="eyebrow">PRIVACY BOUNDARY</p><h2>Local unless the user confirms generation</h2><ul><li>Care, growth, lineages, templates, and task-status cards stay on this computer.</li><li>Codex prompts, responses, code, and tool output are not collected.</li><li>Only a confirmed image request sends its description and required visual references.</li><li>The API key is protected by the operating system, not embedded in the project.</li></ul></article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

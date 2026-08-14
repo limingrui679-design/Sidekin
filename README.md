@@ -1,18 +1,19 @@
 <div align="center">
-  <img src="docs/readme/hero.jpg" alt="Sidekin — a local-first macOS companion for Codex" width="100%">
+  <img src="docs/readme/hero.jpg" alt="Sidekin — a live local-first Codex companion for macOS and Windows" width="100%">
   <br><br>
   <img src="docs/readme/app-icon.png" alt="Sidekin app icon" width="96">
   <br>
   <img src="https://img.shields.io/badge/local%20suite-passing-21c55d?style=flat-square" alt="Local verification suite passing">
-  <img src="https://img.shields.io/badge/macOS-14%2B-0b1026?style=flat-square&logo=apple&logoColor=white" alt="macOS 14 or newer">
-  <img src="https://img.shields.io/badge/Apple%20Silicon-arm64-0b1026?style=flat-square&logo=apple&logoColor=white" alt="Apple Silicon arm64">
-  <img src="https://img.shields.io/badge/Swift-6.0-f05138?style=flat-square&logo=swift&logoColor=white" alt="Swift 6">
+  <img src="https://img.shields.io/badge/macOS-13%2B-0b1026?style=flat-square&logo=apple&logoColor=white" alt="macOS 13 or newer">
+  <img src="https://img.shields.io/badge/Windows-10%2F11-0b1026?style=flat-square&logo=windows11&logoColor=white" alt="Windows 10 and 11">
+  <img src="https://img.shields.io/badge/Electron-43-47848f?style=flat-square&logo=electron&logoColor=white" alt="Electron 43">
+  <a href="https://github.com/limingrui679-design/Sidekin/actions/workflows/desktop.yml"><img src="https://github.com/limingrui679-design/Sidekin/actions/workflows/desktop.yml/badge.svg" alt="macOS and Windows desktop verification"></a>
   <img src="https://img.shields.io/badge/lineages-100-26c6c3?style=flat-square" alt="100 lineages">
   <img src="https://img.shields.io/badge/forms-500-8b5cf6?style=flat-square" alt="500 forms">
   <br><br>
-  <strong>A native floating companion that turns Codex task activity into care, growth, and evolution.</strong>
+  <strong>A live floating companion that turns Codex task activity into care, growth, and evolution.</strong>
   <br>
-  Local-first. No account. No bundled API key. No prompt or code collection.
+  Local-first. No Sidekin account. No bundled API key. No prompt or code collection.
   <br><br>
   <a href="#why-sidekin">Why Sidekin</a> ·
   <a href="#quick-start">Quick start</a> ·
@@ -25,24 +26,27 @@
 
 Most desktop pets are decorative overlays. Sidekin has a persistent life of its own: it gets hungry and tired, reacts to your Codex workflow, earns growth from completed work, and evolves through a visually continuous lineage.
 
-| Reactive companion | Real care loop | Deep lineage system | Resumable workshop |
+| Live companion | Real care loop | Deep lineage system | Resumable workshop |
 |---|---|---|---|
-| Running, completed, and failed Codex states drive visible feedback. | Hunger, mood, energy, feeding, play, sleep, wake, and local saves. | 100 built-in lineages, five audited stages each, across ten radically different categories. | Generate 1–8 stages, save every paid result immediately, retry one stage, or continue after failure. |
+| Running, completed, and failed Codex tasks become timed local cards and animated pet reactions. | Hunger, mood, energy, feeding, play, sleep, wake, and local saves. | 100 built-in lineages, five audited stages each, across ten radically different categories. | Generate 1–8 stages, save every paid result immediately, retry one stage, or continue after failure. |
 
 Sidekin is intentionally broader than an animal pet collection. Its catalog includes mythic beings, unmistakably nonhuman humanoids, deities, mecha, vehicles, plants, fungi, minerals, artifacts, food beings, weather systems, abstract entities, architecture, and distributed colonies.
+
+![Sidekin Command Center and transparent floating companion showing live Codex task cards](docs/readme/live-desktop.jpg)
 
 ## At a glance
 
 | | Current local Beta |
 |---|---|
-| Version | `1.4.0` · Build 7 |
-| Platform | macOS 14+ · Apple Silicon `arm64` |
-| Stack | Swift 6 · SwiftUI · AppKit · Security / Keychain |
+| Version | `2.0.0` cross-platform source Beta |
+| Platform | macOS 13+ · Windows 10/11 · 64-bit |
+| Stack | Electron 43 · TypeScript · secure isolated renderers |
 | Built-in content | 100 lineages · 500 transparent `1254×1254` PNG forms |
 | Growth | Core Egg → First Spark → Shifting Form → Ascension → Crown Form |
-| Codex response | Running · completed · failed |
+| Codex response | Live task cards · running · completed · failed · elapsed time |
 | Storage | Local JSON, template packages, stage images, and resumable jobs |
-| Distribution scope | Source project and local Beta; no public signed app release |
+| Credential storage | macOS Keychain · Windows DPAPI through Electron `safeStorage` |
+| Distribution scope | Source project and CI-verifiable local Beta; no signed public app release |
 
 ## Quick start
 
@@ -52,17 +56,18 @@ Sidekin is currently built from source. Git LFS is required because the audited 
 git lfs install
 git clone https://github.com/limingrui679-design/Sidekin.git
 cd Sidekin
-./Scripts/run-all-checks.sh
-./Scripts/build-app.sh
+npm ci
+npm run verify
+npm start
 ```
 
-The verified local app is created at `artifacts/Sidekin.app`. To launch it intentionally:
+To create an unpacked app for the current operating system:
 
 ```bash
-./Scripts/run-app.sh
+npm run package
 ```
 
-> Sidekin is not notarized for independent consumer distribution. This repository publishes source and reproducible local verification tooling, not a public downloadable macOS release.
+> Sidekin does not currently publish signed consumer installers. This repository publishes source plus reproducible macOS and Windows packaging workflows.
 
 ## Five stages, one identity
 
@@ -112,7 +117,9 @@ All 500 initial images existed before the 100-lineage audit began. The audit plu
 
 ## Care, growth, and Codex response
 
-- Transparent floating macOS panel plus menu bar access
+- Transparent always-on-top floating window plus macOS menu-bar or Windows system-tray access
+- Live local task cards with task label, workspace, state, and elapsed time
+- Thirteen motion states: four idle variations, two working motions, celebration, failure, feed, play, sleep, wake, and evolution
 - Hunger, mood, and energy with feed, play, sleep, and wake actions
 - Automatic local persistence and offline care progression
 - Optional Codex Hooks for immediate lifecycle events
@@ -138,9 +145,11 @@ Pet Workshop supports:
 - Raw / processed side-by-side previews
 - Rename, delete, import, export, replace, and regenerate template stages
 
+![Pet Workshop showing paid raw persistence, local cutout recovery, stage controls, and user-owned API key storage](docs/readme/workshop.jpg)
+
 ### Bring your own API key
 
-Sidekin never includes the developer's API key. Image generation is optional and uses the individual user's own OpenAI API key and OpenAI API account. The key is stored in that user's macOS Keychain.
+Sidekin never includes the developer's API key. Image generation is optional and uses the individual user's own OpenAI API key and OpenAI API account. The key is protected by macOS Keychain or Windows DPAPI through the operating system's secure storage.
 
 Without a key, the floating companion, all 100 built-in lineages, care and growth, local saves, Codex reactions, and existing custom templates remain fully usable.
 
@@ -148,21 +157,20 @@ Because model capabilities and prices can change, consult the current [GPT Image
 
 ## Privacy boundary
 
-| Data or action | Leaves the Mac? |
+| Data or action | Leaves this computer? |
 |---|---|
-| Care state, growth, wardrobe, and selected lineage | No |
-| Codex prompts, responses, code, tool output, and project files | No — Sidekin does not read or save them |
+| Care state, growth, wardrobe, selected lineage, and local task cards | No |
+| Codex prompts, responses, code, tool output, and project files | No — Sidekin does not collect, extract, or persist them |
 | Codex lifecycle classification: running, completed, failed | No |
 | Custom templates, raw stages, processed stages, and resumable jobs | No |
-| User's API key | No — stored in macOS Keychain |
+| User's API key | No — encrypted through macOS Keychain or Windows DPAPI |
 | Confirmed image-generation description and required visual references | Yes — only when the user explicitly confirms an OpenAI Image API request |
 
-Local files are stored under:
+Local files are stored in the operating-system application-data directory:
 
 ```text
-~/Library/Application Support/Sidekin/pet-state.json
-~/Library/Application Support/Sidekin/PetTemplates/
-~/Library/Application Support/Sidekin/GenerationJobs/
+macOS:   ~/Library/Application Support/Sidekin/
+Windows: %APPDATA%\Sidekin\
 ```
 
 On first use after the rename, Sidekin performs a best-effort migration of the legacy local application-support directory. Existing data in a new Sidekin directory is never overwritten.
@@ -170,43 +178,46 @@ On first use after the rename, Sidekin performs a best-effort migration of the l
 ## Architecture
 
 ```text
-SidekinApp
-├── SidekinCore          care, growth, persistence, themes, Codex classification
-├── SidekinCreator       Keychain, image API, cutout pipeline, resumable jobs
-├── SidekinBridge        minimal lifecycle-event writer
-├── SidekinSelfTest      deterministic local behavior checks
-└── SidekinAPISelfTest   mocked generation and editing checks
+Electron main process
+├── shared lifecycle     care, growth, motion, themes, Codex classification
+├── secure preload       narrow validated renderer API
+├── control renderer     care, gallery, live tasks, workshop, settings
+├── floating renderer    transparent pet, actions, animations, task cards
+├── creator services     image API, cutout pipeline, resumable jobs
+└── platform adapters    windows, tray, paths, Keychain / DPAPI, packaging
 ```
 
-One Swift package keeps the floating companion, event bridge, growth engine, template system, verification executables, and release scripts on a shared source of truth.
+The macOS and Windows apps use one TypeScript implementation. Platform branches are confined to window behavior, paths, credential encryption, and packaging. The earlier Swift implementation is retained only as historical provenance and macOS art-audit tooling; it is not the shipped runtime entry point.
 
 ## Verification
 
 ```bash
-./Scripts/run-all-checks.sh
-./Scripts/package-release.sh
+npm run verify
+npm run package
 ```
 
-The project includes **31 local checks** and **6 mocked API checks**, plus catalog, audit, English-text, image-integrity, debug-build, Release-build, archive, architecture, signing, and manifest verification. Mock checks never read a real API key or incur API charges.
+The shared runtime has deterministic lifecycle, concurrent-task, Codex metadata, workshop recovery, template safety, and pink/purple-safe cutout tests. The verifier also enforces isolated renderers, denied remote navigation and permissions, all 13 named motions, 100 lineages, 500 forms, and both packaging targets. Legacy art-authoring checks remain available under `Scripts/`; none of these checks reads a real API key or incurs an API charge.
 
-The release manifest records the version, build number, minimum macOS version, architecture, source commit, signing state, application-file hashes, and hashes for all 500 character assets. Packaging rejects corrupt ZIPs, macOS metadata, missing resources, architecture drift, and manifest mismatch.
-
-The same commands are CI-ready, but this initial GitHub publication does not claim a hosted Actions run. The verified arm64 archive remains local build evidence, not a consumer-ready public release.
+The GitHub Actions matrix runs natively on `macos-latest` and `windows-latest`, creates platform ZIP artifacts, and reruns the same verification before packaging. These CI artifacts are source-Beta evidence, not signed public installers.
 
 ## Repository guide
 
 | Path | Purpose |
 |---|---|
-| [`Sources`](Sources) | Native app, core engine, creator pipeline, bridge, and executable checks |
+| [`src`](src) | Shared Electron runtime, lifecycle, secure preload, renderers, Codex monitor, and workshop |
+| [`tests`](tests) | Cross-platform lifecycle, live-status, security-boundary, cutout, and recovery tests |
+| [`Sources/SidekinApp/Resources/Characters`](Sources/SidekinApp/Resources/Characters) | The 500 built-in transparent character forms consumed by both platforms |
+| [`Sources`](Sources) | Historical Swift implementation and macOS-only art/provenance checks; not the shipped runtime |
 | [`ArtSources`](ArtSources) | Catalog, prompts, curated sources, repair candidates, and audit sheets |
-| [`Scripts`](Scripts) | Art, verification, build, package, manifest, and optional release tooling |
+| [`Scripts`](Scripts) | Shared build/verification/media tools plus historical macOS art tooling |
+| [`.github/workflows/desktop.yml`](.github/workflows/desktop.yml) | Native macOS and Windows verification and packaging matrix |
 | [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) | Final 100-lineage visual QA results |
 | [`docs/COMPLETION_AUDIT.md`](docs/COMPLETION_AUDIT.md) | Feature and evidence-bound completion audit |
-| [`docs/RELEASING.md`](docs/RELEASING.md) | Optional future signed-distribution path |
+| [`docs/RELEASING.md`](docs/RELEASING.md) | Current source-build and native CI packaging guide |
 
 ## Project status
 
-Sidekin is a real, tested local macOS Beta and an openly reviewable GitHub source project. It is not represented as a notarized public product, a production deployment, or a real-API end-to-end validation performed with the author's key.
+Sidekin 2.0 is an openly reviewable macOS and Windows source Beta. The same runtime is tested on both platforms, locally packaged and launched on macOS, and packaged by the repository's native Windows CI job. It is not represented as a signed public product, a production deployment, or a real-API end-to-end validation performed with the author's key.
 
 The repository currently has no reuse license. Source and art are visible for review, but no permission to copy, redistribute, or create derivatives is granted until a license is added.
 

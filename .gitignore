@@ -5,3 +5,8 @@ artifacts/
 xcuserdata/
 *.xcuserstate
 *.xccheckout
+node_modules/
+dist/
+out/
+.vite/
+npm-debug.log*

@@ -149,51 +149,84 @@ let hero = NSImage(size: heroSize)
 hero.lockFocus()
 NSGraphicsContext.current?.imageInterpolation = .high
 fillBackground(NSRect(origin: .zero, size: heroSize))
-glow(at: NSPoint(x: 1_200, y: 380), radius: 480, color: cyan)
-glow(at: NSPoint(x: 980, y: 300), radius: 340, color: violet)
+glow(at: NSPoint(x: 800, y: 382), radius: 420, color: cyan)
+glow(at: NSPoint(x: 800, y: 370), radius: 300, color: violet)
 
-("CODE. CARE. EVOLVE." as NSString).draw(at: NSPoint(x: 92, y: 610), withAttributes: eyebrow)
-("Sidekin" as NSString).draw(at: NSPoint(x: 84, y: 470), withAttributes: title)
-("A local-first macOS companion that grows\nwith your Codex workflow." as NSString).draw(
-    in: NSRect(x: 92, y: 360, width: 590, height: 86),
-    withAttributes: subtitle
-)
-var pillX: CGFloat = 92
-for (label, color) in [("100 lineages", cyan), ("500 forms", violet), ("local-first", gold)] {
-    pillX += drawPill(label, at: NSPoint(x: pillX, y: 280), color: color) + 12
+// Poster composition: distant small silhouettes form the upper crown, medium
+// characters frame the logo, and four large foreground forms anchor the base.
+// The deliberately irregular scale and overlap keep it from reading as a grid.
+let crownCharacters: [(String, NSPoint, NSSize)] = [
+    ("moon-lotus", NSPoint(x: 90, y: 655), NSSize(width: 170, height: 180)),
+    ("quantum-chance", NSPoint(x: 245, y: 675), NSSize(width: 150, height: 165)),
+    ("ramen-nebula", NSPoint(x: 390, y: 694), NSSize(width: 138, height: 150)),
+    ("cyclone-dancer", NSPoint(x: 535, y: 705), NSSize(width: 150, height: 160)),
+    ("slime-parliament", NSPoint(x: 685, y: 713), NSSize(width: 136, height: 148)),
+    ("event-horizon", NSPoint(x: 915, y: 713), NSSize(width: 140, height: 150)),
+    ("living-voltage", NSPoint(x: 1_065, y: 705), NSSize(width: 150, height: 160)),
+    ("cacao-citadel", NSPoint(x: 1_210, y: 694), NSSize(width: 138, height: 150)),
+    ("mycelium", NSPoint(x: 1_355, y: 675), NSSize(width: 150, height: 165)),
+    ("microbe-metropolis", NSPoint(x: 1_510, y: 655), NSSize(width: 170, height: 180))
+]
+for (theme, center, size) in crownCharacters {
+    drawCharacter(theme, "legendary", centeredAt: center, size: size, alpha: 0.92)
 }
 
-// A layered ensemble communicates the catalog's breadth before the reader
-// reaches the gallery. Smaller silhouettes sit behind the three focal forms.
-let backgroundCharacters: [(String, NSPoint, NSSize, CGFloat)] = [
-    ("moon-lotus", NSPoint(x: 800, y: 510), NSSize(width: 190, height: 230), 0.92),
-    ("quantum-chance", NSPoint(x: 975, y: 565), NSSize(width: 180, height: 215), 0.90),
-    ("ramen-nebula", NSPoint(x: 1_150, y: 590), NSSize(width: 180, height: 205), 0.92),
-    ("cyclone-dancer", NSPoint(x: 1_330, y: 570), NSSize(width: 185, height: 220), 0.90),
-    ("slime-parliament", NSPoint(x: 1_500, y: 515), NSSize(width: 170, height: 205), 0.92)
+let sideCharacters: [(String, NSPoint, NSSize)] = [
+    ("manticore", NSPoint(x: 115, y: 430), NSSize(width: 255, height: 305)),
+    ("celestial-musicbox", NSPoint(x: 285, y: 470), NSSize(width: 210, height: 250)),
+    ("halite-crown", NSPoint(x: 420, y: 455), NSSize(width: 175, height: 215)),
+    ("runic-grimoire", NSPoint(x: 1_180, y: 455), NSSize(width: 175, height: 215)),
+    ("sky-temple", NSPoint(x: 1_315, y: 470), NSSize(width: 210, height: 250)),
+    ("fossil-reef", NSPoint(x: 1_485, y: 430), NSSize(width: 255, height: 305))
 ]
-for (theme, center, size, alpha) in backgroundCharacters {
-    drawCharacter(theme, "legendary", centeredAt: center, size: size, alpha: alpha)
+for (theme, center, size) in sideCharacters {
+    drawCharacter(theme, "legendary", centeredAt: center, size: size, alpha: 0.98)
 }
 
-let middleCharacters: [(String, NSPoint, NSSize)] = [
-    ("manticore", NSPoint(x: 790, y: 300), NSSize(width: 250, height: 310)),
-    ("celestial-musicbox", NSPoint(x: 970, y: 330), NSSize(width: 235, height: 300)),
-    ("thunderhead-forge", NSPoint(x: 1_175, y: 330), NSSize(width: 260, height: 320)),
-    ("sky-temple", NSPoint(x: 1_435, y: 315), NSSize(width: 255, height: 315))
+let foregroundCharacters: [(String, NSPoint, NSSize, NSColor)] = [
+    ("mecha", NSPoint(x: 245, y: 185), NSSize(width: 480, height: 475), violet),
+    ("nova", NSPoint(x: 535, y: 205), NSSize(width: 430, height: 470), cyan),
+    ("walking-treehouse", NSPoint(x: 1_065, y: 205), NSSize(width: 430, height: 470), gold),
+    ("aether-frigate", NSPoint(x: 1_355, y: 185), NSSize(width: 480, height: 475), violet)
 ]
-for (theme, center, size) in middleCharacters {
-    drawCharacter(theme, "legendary", centeredAt: center, size: size, alpha: 0.97)
-}
-
-let focalCharacters: [(String, NSPoint, NSSize, NSColor)] = [
-    ("mecha", NSPoint(x: 930, y: 300), NSSize(width: 390, height: 500), violet),
-    ("nova", NSPoint(x: 1_210, y: 290), NSSize(width: 430, height: 535), cyan),
-    ("walking-treehouse", NSPoint(x: 1_475, y: 295), NSSize(width: 345, height: 450), gold)
-]
-for (theme, center, size, color) in focalCharacters {
-    glow(at: center, radius: size.width * 0.56, color: color)
+for (theme, center, size, color) in foregroundCharacters {
+    glow(at: center, radius: size.width * 0.44, color: color)
     drawCharacter(theme, "legendary", centeredAt: center, size: size)
+}
+
+// Central quiet zone keeps the brand instantly readable at GitHub width.
+let logoPlate = NSRect(x: 495, y: 255, width: 610, height: 330)
+NSGradient(colors: [
+    NSColor(calibratedRed: 0.035, green: 0.055, blue: 0.14, alpha: 0.97),
+    NSColor(calibratedRed: 0.11, green: 0.055, blue: 0.23, alpha: 0.94)
+])?.draw(in: NSBezierPath(roundedRect: logoPlate, xRadius: 76, yRadius: 76), angle: -20)
+cyan.withAlphaComponent(0.24).setStroke()
+let logoBorder = NSBezierPath(roundedRect: logoPlate, xRadius: 76, yRadius: 76)
+logoBorder.lineWidth = 2
+logoBorder.stroke()
+
+let centeredEyebrow: [NSAttributedString.Key: Any] = eyebrow.merging([.paragraphStyle: {
+    let style = NSMutableParagraphStyle(); style.alignment = .center; return style
+}()]) { _, new in new }
+let centeredTitle: [NSAttributedString.Key: Any] = title.merging([
+    .font: NSFont.systemFont(ofSize: 104, weight: .black),
+    .paragraphStyle: { let style = NSMutableParagraphStyle(); style.alignment = .center; return style }()
+]) { _, new in new }
+let centeredSubtitle: [NSAttributedString.Key: Any] = subtitle.merging([
+    .font: NSFont.systemFont(ofSize: 25, weight: .medium),
+    .paragraphStyle: { let style = NSMutableParagraphStyle(); style.alignment = .center; return style }()
+]) { _, new in new }
+("CODE · CARE · EVOLVE" as NSString).draw(in: NSRect(x: 515, y: 520, width: 570, height: 30), withAttributes: centeredEyebrow)
+("Sidekin" as NSString).draw(in: NSRect(x: 515, y: 392, width: 570, height: 125), withAttributes: centeredTitle)
+("A live Codex companion for macOS + Windows" as NSString).draw(in: NSRect(x: 515, y: 352, width: 570, height: 36), withAttributes: centeredSubtitle)
+let heroPills: [(String, NSColor)] = [("100 lineages", cyan), ("500 forms", violet), ("13 motions", gold)]
+let totalPillWidth = heroPills.reduce(CGFloat(0)) { partial, value in
+    let attributes: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 18, weight: .semibold)]
+    return partial + (value.0 as NSString).size(withAttributes: attributes).width + 34
+} + CGFloat(heroPills.count - 1) * 12
+var pillX = 800 - totalPillWidth / 2
+for (label, color) in heroPills {
+    pillX += drawPill(label, at: NSPoint(x: pillX, y: 290), color: color) + 12
 }
 hero.unlockFocus()
 try saveJPEG(hero, named: "hero.jpg", quality: 0.9)

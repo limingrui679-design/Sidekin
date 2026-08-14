@@ -1,57 +1,44 @@
-# Sidekin Distribution Guide
+# Sidekin Build and CI Guide
 
-> Sidekin is currently maintained as a GitHub source project and local Beta. There is no plan to distribute a signed application directly to general users. Developer ID signing, notarization, and Gatekeeper acceptance are therefore not current completion requirements. This page is retained only for a future change in distribution scope.
+Sidekin is a GitHub source project, not a signed public application release. The supported workflow builds the shared runtime locally and verifies it on native macOS and Windows GitHub Actions runners.
 
-## Keep the Two Package Types Distinct
+## Build from Source
 
-- `./Scripts/package-release.sh` creates an ad-hoc signed package for local testing. It includes complete checks, resource hashes, and a clean ZIP, but it does not include Developer ID signing or Apple notarization.
-- `./Scripts/release-public.sh` is the guarded process for a future direct public distribution. It requires a clean Git commit, Developer ID signing, Hardened Runtime, notarization, ticket stapling, and Gatekeeper acceptance.
-
-Never label an ad-hoc package as Apple-verified or as a public distribution build.
-
-## Optional First-Time Setup
-
-Complete these steps only if the distribution target changes:
-
-1. Create and install a `Developer ID Application` certificate through the publisher's Apple Developer account.
-2. Register the reverse-domain Bundle ID used for the project.
-3. Store notarization credentials in the current user's Keychain, never in the repository:
+Git LFS is required for the 500 built-in character assets.
 
 ```bash
-xcrun notarytool store-credentials "Sidekin-Notary"
+git lfs install
+git clone https://github.com/limingrui679-design/Sidekin.git
+cd Sidekin
+npm ci
+npm run verify
+npm start
 ```
 
-4. Commit the source and confirm that the working tree contains no untracked or uncommitted files.
-
-## Optional Public Distribution
-
-The publisher must supply these values from their own Apple Developer account:
+Create platform output for the current computer:
 
 ```bash
-export CAINIAOPET_SIGN_IDENTITY="Developer ID Application: Your Name (TEAMID)"
-export CAINIAOPET_NOTARY_PROFILE="Sidekin-Notary"
-export CAINIAOPET_BUNDLE_ID="app.sidekin.desktop"
-./Scripts/release-public.sh
+npm run package   # unpacked application
+npm run make      # ZIP for the current macOS or Windows computer
 ```
 
-The script performs the following sequence:
+The packaging script writes generated files under `out/`. They are ignored by Git and may be deleted and rebuilt at any time.
 
-1. Runs source, API mock, asset, Debug, and Release checks.
-2. Signs the bridge helper, main executable, and application bundle separately with Hardened Runtime and a secure timestamp.
-3. Creates an upload ZIP without `__MACOSX`, `.DS_Store`, or AppleDouble entries.
-4. Submits the package with `notarytool` and waits for Apple's result.
-5. Staples the notarization ticket to the application and validates the ticket.
-6. Rebuilds the final ZIP, release manifest, and SHA-256 file from the stapled application.
-7. Runs Gatekeeper acceptance with `spctl` and re-verifies the archived application.
+## Native CI Matrix
 
-Only after the script reports that every public-distribution gate passed should the binary be offered as a GitHub Release intended for direct download and execution by general users. The current source project and CI build-verification workflow do not require this process.
+`.github/workflows/desktop.yml` runs on pushes and pull requests:
 
-## Distribution Files
+- `macos-latest`: catalog and lineage audit, shared verification, macOS packaging
+- `windows-latest`: shared verification and Windows ZIP packaging
 
-```text
-artifacts/Sidekin-macOS-arm64.zip
-artifacts/Sidekin-macOS-arm64.RELEASE.json
-artifacts/Sidekin-macOS-arm64.zip.sha256
-```
+Each successful job uploads its `out/make/` files as a workflow artifact. The workflow does not create a GitHub Release or publish an installer.
 
-Before upload, keep the version tag aligned with `Support/Info.plist`, including the version and build number, and identify the same source commit in the release notes. Do not upload the unpacked `artifacts/Sidekin.app` directory.
+## Signing Boundary
+
+The macOS package is ad-hoc signed only so the locally built bundle can be launched and inspected. It is not Developer ID signed or notarized. The Windows package is not Authenticode signed. These are expected properties of the source-Beta workflow and must not be described as Apple-verified, Microsoft-verified, or consumer-ready distribution.
+
+If the project later changes scope to direct public binary distribution, signing identities, notarization, installer reputation, update channels, and release provenance require a separate reviewed workflow. They are intentionally outside the current GitHub-source goal.
+
+## Historical Tools
+
+The older Swift package and macOS release scripts remain as provenance and art-pipeline references. They do not define the Sidekin 2.0 runtime or the cross-platform packaging path. Use the npm commands above for current builds.

@@ -8,7 +8,12 @@ TEXT_TARGETS=(
   "$PROJECT_ROOT/.gitignore"
   "$PROJECT_ROOT/README.md"
   "$PROJECT_ROOT/Package.swift"
+  "$PROJECT_ROOT/package.json"
+  "$PROJECT_ROOT/package-lock.json"
+  "$PROJECT_ROOT/tsconfig.json"
   "$PROJECT_ROOT/Sources"
+  "$PROJECT_ROOT/src"
+  "$PROJECT_ROOT/tests"
   "$PROJECT_ROOT/Scripts"
   "$PROJECT_ROOT/Support"
   "$PROJECT_ROOT/ArtSources"
@@ -24,6 +29,8 @@ LEGACY_BRAND_ALLOWLIST=(
   'Sources/SidekinCreator/APIKeyStore.swift'
   'Sources/SidekinApp/Views/ControlCenterView.swift'
   'Sources/SidekinSelfTest/main.swift'
+  'src/main/paths.ts'
+  'src/shared/codex.ts'
   'Scripts/verify-english-text.sh'
 )
 
