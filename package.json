@@ -16,7 +16,7 @@
     "media:runtime": "node Scripts/make-runtime-media.mjs",
     "package": "npm run verify && node Scripts/package-desktop.mjs",
     "make": "npm run verify && node Scripts/package-desktop.mjs --zip",
-    "media": "swift Scripts/make-readme-media.swift",
+    "media": "swift Scripts/make-readme-media.swift Sources/SidekinApp/Resources/Characters docs/readme",
     "icons": "node Scripts/generate-icons.mjs"
   },
   "dependencies": {

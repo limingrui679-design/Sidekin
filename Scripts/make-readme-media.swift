@@ -144,92 +144,28 @@ func drawPill(_ text: String, at origin: NSPoint, color: NSColor) -> CGFloat {
 
 // MARK: Hero
 
+let heroSourceURL = URL(fileURLWithPath: #filePath)
+    .deletingLastPathComponent()
+    .deletingLastPathComponent()
+    .appendingPathComponent("ArtSources/READMEHero/hero-dynamic-source.png")
+guard let heroSource = NSImage(contentsOf: heroSourceURL) else {
+    fputs("Missing dynamic README hero source: \(heroSourceURL.path)\n", stderr)
+    exit(1)
+}
 let heroSize = NSSize(width: 1_600, height: 760)
 let hero = NSImage(size: heroSize)
 hero.lockFocus()
 NSGraphicsContext.current?.imageInterpolation = .high
-fillBackground(NSRect(origin: .zero, size: heroSize))
-glow(at: NSPoint(x: 800, y: 382), radius: 420, color: cyan)
-glow(at: NSPoint(x: 800, y: 370), radius: 300, color: violet)
-
-// Poster composition: distant small silhouettes form the upper crown, medium
-// characters frame the logo, and four large foreground forms anchor the base.
-// The deliberately irregular scale and overlap keep it from reading as a grid.
-let crownCharacters: [(String, NSPoint, NSSize)] = [
-    ("moon-lotus", NSPoint(x: 90, y: 655), NSSize(width: 170, height: 180)),
-    ("quantum-chance", NSPoint(x: 245, y: 675), NSSize(width: 150, height: 165)),
-    ("ramen-nebula", NSPoint(x: 390, y: 694), NSSize(width: 138, height: 150)),
-    ("cyclone-dancer", NSPoint(x: 535, y: 705), NSSize(width: 150, height: 160)),
-    ("slime-parliament", NSPoint(x: 685, y: 713), NSSize(width: 136, height: 148)),
-    ("event-horizon", NSPoint(x: 915, y: 713), NSSize(width: 140, height: 150)),
-    ("living-voltage", NSPoint(x: 1_065, y: 705), NSSize(width: 150, height: 160)),
-    ("cacao-citadel", NSPoint(x: 1_210, y: 694), NSSize(width: 138, height: 150)),
-    ("mycelium", NSPoint(x: 1_355, y: 675), NSSize(width: 150, height: 165)),
-    ("microbe-metropolis", NSPoint(x: 1_510, y: 655), NSSize(width: 170, height: 180))
-]
-for (theme, center, size) in crownCharacters {
-    drawCharacter(theme, "legendary", centeredAt: center, size: size, alpha: 0.92)
-}
-
-let sideCharacters: [(String, NSPoint, NSSize)] = [
-    ("manticore", NSPoint(x: 115, y: 430), NSSize(width: 255, height: 305)),
-    ("celestial-musicbox", NSPoint(x: 285, y: 470), NSSize(width: 210, height: 250)),
-    ("halite-crown", NSPoint(x: 420, y: 455), NSSize(width: 175, height: 215)),
-    ("runic-grimoire", NSPoint(x: 1_180, y: 455), NSSize(width: 175, height: 215)),
-    ("sky-temple", NSPoint(x: 1_315, y: 470), NSSize(width: 210, height: 250)),
-    ("fossil-reef", NSPoint(x: 1_485, y: 430), NSSize(width: 255, height: 305))
-]
-for (theme, center, size) in sideCharacters {
-    drawCharacter(theme, "legendary", centeredAt: center, size: size, alpha: 0.98)
-}
-
-let foregroundCharacters: [(String, NSPoint, NSSize, NSColor)] = [
-    ("mecha", NSPoint(x: 245, y: 185), NSSize(width: 480, height: 475), violet),
-    ("nova", NSPoint(x: 535, y: 205), NSSize(width: 430, height: 470), cyan),
-    ("walking-treehouse", NSPoint(x: 1_065, y: 205), NSSize(width: 430, height: 470), gold),
-    ("aether-frigate", NSPoint(x: 1_355, y: 185), NSSize(width: 480, height: 475), violet)
-]
-for (theme, center, size, color) in foregroundCharacters {
-    glow(at: center, radius: size.width * 0.44, color: color)
-    drawCharacter(theme, "legendary", centeredAt: center, size: size)
-}
-
-// Central quiet zone keeps the brand instantly readable at GitHub width.
-let logoPlate = NSRect(x: 495, y: 255, width: 610, height: 330)
-NSGradient(colors: [
-    NSColor(calibratedRed: 0.035, green: 0.055, blue: 0.14, alpha: 0.97),
-    NSColor(calibratedRed: 0.11, green: 0.055, blue: 0.23, alpha: 0.94)
-])?.draw(in: NSBezierPath(roundedRect: logoPlate, xRadius: 76, yRadius: 76), angle: -20)
-cyan.withAlphaComponent(0.24).setStroke()
-let logoBorder = NSBezierPath(roundedRect: logoPlate, xRadius: 76, yRadius: 76)
-logoBorder.lineWidth = 2
-logoBorder.stroke()
-
-let centeredEyebrow: [NSAttributedString.Key: Any] = eyebrow.merging([.paragraphStyle: {
-    let style = NSMutableParagraphStyle(); style.alignment = .center; return style
-}()]) { _, new in new }
-let centeredTitle: [NSAttributedString.Key: Any] = title.merging([
-    .font: NSFont.systemFont(ofSize: 104, weight: .black),
-    .paragraphStyle: { let style = NSMutableParagraphStyle(); style.alignment = .center; return style }()
-]) { _, new in new }
-let centeredSubtitle: [NSAttributedString.Key: Any] = subtitle.merging([
-    .font: NSFont.systemFont(ofSize: 25, weight: .medium),
-    .paragraphStyle: { let style = NSMutableParagraphStyle(); style.alignment = .center; return style }()
-]) { _, new in new }
-("CODE · CARE · EVOLVE" as NSString).draw(in: NSRect(x: 515, y: 520, width: 570, height: 30), withAttributes: centeredEyebrow)
-("Sidekin" as NSString).draw(in: NSRect(x: 515, y: 392, width: 570, height: 125), withAttributes: centeredTitle)
-("A live Codex companion for macOS + Windows" as NSString).draw(in: NSRect(x: 515, y: 352, width: 570, height: 36), withAttributes: centeredSubtitle)
-let heroPills: [(String, NSColor)] = [("100 lineages", cyan), ("500 forms", violet), ("13 motions", gold)]
-let totalPillWidth = heroPills.reduce(CGFloat(0)) { partial, value in
-    let attributes: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 18, weight: .semibold)]
-    return partial + (value.0 as NSString).size(withAttributes: attributes).width + 34
-} + CGFloat(heroPills.count - 1) * 12
-var pillX = 800 - totalPillWidth / 2
-for (label, color) in heroPills {
-    pillX += drawPill(label, at: NSPoint(x: pillX, y: 290), color: color) + 12
-}
+heroSource.draw(
+    in: NSRect(origin: .zero, size: heroSize),
+    from: NSRect(origin: .zero, size: heroSource.size),
+    operation: .copy,
+    fraction: 1,
+    respectFlipped: true,
+    hints: [.interpolation: NSImageInterpolation.high]
+)
 hero.unlockFocus()
-try saveJPEG(hero, named: "hero.jpg", quality: 0.9)
+try saveJPEG(hero, named: "hero.jpg", quality: 0.94)
 
 // MARK: Five-stage evolution
 
