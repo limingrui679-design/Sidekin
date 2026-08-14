@@ -34,6 +34,21 @@ Sidekin is intentionally broader than an animal pet collection. Its catalog incl
 
 ![Sidekin Command Center and transparent floating companion showing live Codex task cards](docs/readme/live-desktop.jpg)
 
+## Poster collection
+
+Four alternate key-art compositions show different sides of the same catalog: competitive action, evolution, playful companionship, and the larger ten-category world.
+
+<table>
+  <tr>
+    <td width="50%" align="center"><img src="docs/readme/poster-arena-convergence.png" alt="Arena Convergence Sidekin poster with creatures charging through a cosmic arena"><br><sub><strong>Arena Convergence</strong> · kinetic competitive ensemble</sub></td>
+    <td width="50%" align="center"><img src="docs/readme/poster-evolution-odyssey.png" alt="Evolution Odyssey Sidekin poster with small forms traveling toward crown forms"><br><sub><strong>Evolution Odyssey</strong> · growth across one connected world</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="docs/readme/poster-prismatic-festival.png" alt="Prismatic Pet Festival Sidekin poster with playful nonhuman companions"><br><sub><strong>Prismatic Pet Festival</strong> · bright companion celebration</sub></td>
+    <td width="50%" align="center"><img src="docs/readme/poster-chronicle-ten-worlds.png" alt="Chronicle of Ten Worlds Sidekin poster spanning ten creature categories"><br><sub><strong>Chronicle of Ten Worlds</strong> · epic catalog worldbuilding</sub></td>
+  </tr>
+</table>
+
 ## At a glance
 
 | | Current local Beta |
