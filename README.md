@@ -1,9 +1,13 @@
 <div align="center">
-  <img src="docs/readme/hero.jpg" alt="Sidekin — a live local-first Codex companion for macOS and Windows" width="100%">
+  <a href="docs/readme/poster-arena-convergence.png"><img src="docs/readme/poster-arena-convergence.jpg" alt="Arena Convergence — Sidekin creatures charging through a cosmic arena" width="100%"></a>
   <br><br>
-  <img src="docs/readme/app-icon.png" alt="Sidekin app icon" width="96">
+</div>
+
+<h1 align="center">Sidekin</h1>
+
+<div align="center">
+  <img src="docs/readme/app-icon-readme.png" alt="Sidekin app icon" width="96">
   <br>
-  <img src="https://img.shields.io/badge/local%20suite-passing-21c55d?style=flat-square" alt="Local verification suite passing">
   <img src="https://img.shields.io/badge/macOS-13%2B-0b1026?style=flat-square&logo=apple&logoColor=white" alt="macOS 13 or newer">
   <img src="https://img.shields.io/badge/Windows-10%2F11-0b1026?style=flat-square&logo=windows11&logoColor=white" alt="Windows 10 and 11">
   <img src="https://img.shields.io/badge/Electron-43-47848f?style=flat-square&logo=electron&logoColor=white" alt="Electron 43">
@@ -17,7 +21,7 @@
   <br><br>
   <a href="#why-sidekin">Why Sidekin</a> ·
   <a href="#quick-start">Quick start</a> ·
-  <a href="#100-lineages--500-forms">Gallery</a> ·
+  <a href="#visual-gallery">Gallery</a> ·
   <a href="#privacy-boundary">Privacy</a> ·
   <a href="#verification">Verification</a>
 </div>
@@ -32,30 +36,61 @@ Most desktop pets are decorative overlays. Sidekin has a persistent life of its 
 
 Sidekin is intentionally broader than an animal pet collection. Its catalog includes mythic beings, unmistakably nonhuman humanoids, deities, mecha, vehicles, plants, fungi, minerals, artifacts, food beings, weather systems, abstract entities, architecture, and distributed colonies.
 
-![Sidekin Command Center and transparent floating companion showing live Codex task cards](docs/readme/live-desktop.jpg)
+![Sidekin Command Center and transparent floating companion showing live Codex task cards](docs/readme/live-desktop-readme.jpg)
 
-## Poster collection
+## Visual gallery
 
-Eight alternate key-art compositions show different sides of the same catalog: competition, evolution, companionship, daily care, mythology, scale, and the larger ten-category world.
+Arena Convergence leads the page. The eight remaining compositions each use one full-width lightweight preview below, while a click opens the preserved full-resolution source.
 
-<table>
-  <tr>
-    <td width="50%" align="center"><img src="docs/readme/poster-arena-convergence.png" alt="Arena Convergence Sidekin poster with creatures charging through a cosmic arena"><br><sub><strong>Arena Convergence</strong> · kinetic competitive ensemble</sub></td>
-    <td width="50%" align="center"><img src="docs/readme/poster-evolution-odyssey.png" alt="Evolution Odyssey Sidekin poster with small forms traveling toward crown forms"><br><sub><strong>Evolution Odyssey</strong> · growth across one connected world</sub></td>
-  </tr>
-  <tr>
-    <td width="50%" align="center"><img src="docs/readme/poster-prismatic-festival.png" alt="Prismatic Pet Festival Sidekin poster with playful nonhuman companions"><br><sub><strong>Prismatic Pet Festival</strong> · bright companion celebration</sub></td>
-    <td width="50%" align="center"><img src="docs/readme/poster-chronicle-ten-worlds.png" alt="Chronicle of Ten Worlds Sidekin poster spanning ten creature categories"><br><sub><strong>Chronicle of Ten Worlds</strong> · epic catalog worldbuilding</sub></td>
-  </tr>
-  <tr>
-    <td width="50%" align="center"><img src="docs/readme/poster-neon-night-league.png" alt="Neon Night League Sidekin poster with nonhuman pets racing through a futuristic arena"><br><sub><strong>Neon Night League</strong> · high-speed competitive action</sub></td>
-    <td width="50%" align="center"><img src="docs/readme/poster-companion-workshop.png" alt="Codex Companion Workshop Sidekin poster showing care, rest, play, and task activity"><br><sub><strong>Codex Companion Workshop</strong> · the care and work loop made visible</sub></td>
-  </tr>
-  <tr>
-    <td width="50%" align="center"><img src="docs/readme/poster-mythic-dawn.png" alt="Mythic Dawn Assembly Sidekin poster with nonhuman deities, spirits, plants, and constructs"><br><sub><strong>Mythic Dawn Assembly</strong> · monumental nonhuman mythology</sub></td>
-    <td width="50%" align="center"><img src="docs/readme/poster-microverse-mayhem.png" alt="Microverse Mayhem Sidekin poster with tiny collectives and enormous evolved guardians"><br><sub><strong>Microverse Mayhem</strong> · tiny societies and giant guardians</sub></td>
-  </tr>
-</table>
+### Cosmic Grand Assembly
+
+[![Cosmic Grand Assembly Sidekin poster with a dense full-catalog constellation](docs/readme/hero-readme.jpg)](docs/readme/hero.jpg)
+
+*A starfield ensemble spanning mythic beings, mecha, architecture, artifacts, and abstract life.*
+
+### Evolution Odyssey
+
+[![Evolution Odyssey Sidekin poster with small forms traveling toward crown forms](docs/readme/poster-evolution-odyssey.jpg)](docs/readme/poster-evolution-odyssey.png)
+
+*Growth and transformation moving through one connected world.*
+
+### Prismatic Pet Festival
+
+[![Prismatic Pet Festival Sidekin poster with playful nonhuman companions](docs/readme/poster-prismatic-festival.jpg)](docs/readme/poster-prismatic-festival.png)
+
+*Bright companionship, racing, dancing, and playful scale changes.*
+
+### Chronicle of Ten Worlds
+
+[![Chronicle of Ten Worlds Sidekin poster spanning ten creature categories](docs/readme/poster-chronicle-ten-worlds.jpg)](docs/readme/poster-chronicle-ten-worlds.png)
+
+*Ten catalog categories joined into one epic world map.*
+
+### Neon Night League
+
+[![Neon Night League Sidekin poster with nonhuman pets racing through a futuristic arena](docs/readme/poster-neon-night-league.jpg)](docs/readme/poster-neon-night-league.png)
+
+*High-speed competitive action across a neon creature arena.*
+
+### Codex Companion Workshop
+
+[![Codex Companion Workshop Sidekin poster showing care, rest, play, and task activity](docs/readme/poster-companion-workshop.jpg)](docs/readme/poster-companion-workshop.png)
+
+*Feeding, rest, play, study, and live task response inside one shared workshop.*
+
+### Mythic Dawn Assembly
+
+[![Mythic Dawn Assembly Sidekin poster with nonhuman deities, spirits, plants, and constructs](docs/readme/poster-mythic-dawn.jpg)](docs/readme/poster-mythic-dawn.png)
+
+*Monumental nonhuman mythology formed from plants, crystal, weather, and divine constructs.*
+
+### Microverse Mayhem
+
+[![Microverse Mayhem Sidekin poster with tiny collectives and enormous evolved guardians](docs/readme/poster-microverse-mayhem.jpg)](docs/readme/poster-microverse-mayhem.png)
+
+*Tiny societies, living habitats, and enormous evolved guardians.*
+
+[Open the dedicated visual gallery](docs/GALLERY.md) for the selected homepage poster and all eight supporting themes.
 
 ## At a glance
 
@@ -96,7 +131,7 @@ npm run package
 
 Every lineage defines a persistent existence type, silhouette logic, material system, energy motif, locomotion class, five named forms, and stage-specific visual anchors.
 
-![Three Sidekin lineages evolving through all five audited stages](docs/readme/evolution.jpg)
+![Three Sidekin lineages evolving through all five audited stages](docs/readme/evolution-readme.jpg)
 
 The showcase deliberately exposes the full progression instead of selecting isolated hero poses. Nova keeps one bow-based combat language from its first compact starbow to its crown-scale compass bow. Walking Treehouse advances by architecture—not recolor—from one room to a two-room bridge home, a terraced village, and a circular crown borough.
 
@@ -106,7 +141,7 @@ The final audit checks common-sense anatomy or construction, identity continuity
 
 ### Twenty-lineage sampler
 
-![Twenty Sidekin lineages represented by final legendary forms](docs/readme/showcase-20.jpg)
+![Twenty Sidekin lineages represented by final legendary forms](docs/readme/showcase-20-readme.jpg)
 
 This sampler pairs two contrasting lineages from every category so the gallery shows variation within a category—not only one mascot per label.
 
@@ -125,7 +160,7 @@ The catalog contains ten lineages in each category:
 
 ### Every built-in lineage
 
-[![All 100 Sidekin lineages represented by their final legendary forms](docs/readme/all-100.jpg)](docs/readme/all-100.jpg)
+[![All 100 Sidekin lineages represented by their final legendary forms](docs/readme/all-100-readme.jpg)](docs/readme/all-100.jpg)
 
 The complete contact sheet is generated directly from the same 100-theme catalog and final assets consumed by the app. It is an inventory view, not a separate hand-picked marketing set. Click it to inspect the full-resolution sheet.
 
@@ -167,7 +202,7 @@ Pet Workshop supports:
 - Raw / processed side-by-side previews
 - Rename, delete, import, export, replace, and regenerate template stages
 
-![Pet Workshop showing paid raw persistence, local cutout recovery, stage controls, and user-owned API key storage](docs/readme/workshop.jpg)
+![Pet Workshop showing paid raw persistence, local cutout recovery, stage controls, and user-owned API key storage](docs/readme/workshop-readme.jpg)
 
 ### Bring your own API key
 

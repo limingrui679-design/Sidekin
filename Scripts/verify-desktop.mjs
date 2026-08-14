@@ -41,6 +41,29 @@ for (const retiredIdentifier of [
 const lifecycle = await readFile(path.join(root, "src/shared/lifecycle.ts"), "utf8");
 requireCondition(lifecycle.includes("schemaVersion: 5") && lifecycle.includes("delete current.cosmetics"), "Legacy cosmetic data is not removed during migration.");
 
+const readme = await readFile(path.join(root, "README.md"), "utf8");
+requireCondition(
+  readme.includes('<a href="docs/readme/poster-arena-convergence.png"><img src="docs/readme/poster-arena-convergence.jpg"') && readme.includes('width="100%"'),
+  "Arena Convergence must remain the full-width homepage poster."
+);
+const visualGallery = readme.split("## Visual gallery")[1]?.split("## At a glance")[0] ?? "";
+requireCondition(!visualGallery.includes("<table>"), "Supporting posters must remain full-width instead of returning to a compact table.");
+const supportingPosters = [
+  ["Cosmic Grand Assembly", "hero-readme.jpg", "hero.jpg"],
+  ["Evolution Odyssey", "poster-evolution-odyssey.jpg", "poster-evolution-odyssey.png"],
+  ["Prismatic Pet Festival", "poster-prismatic-festival.jpg", "poster-prismatic-festival.png"],
+  ["Chronicle of Ten Worlds", "poster-chronicle-ten-worlds.jpg", "poster-chronicle-ten-worlds.png"],
+  ["Neon Night League", "poster-neon-night-league.jpg", "poster-neon-night-league.png"],
+  ["Codex Companion Workshop", "poster-companion-workshop.jpg", "poster-companion-workshop.png"],
+  ["Mythic Dawn Assembly", "poster-mythic-dawn.jpg", "poster-mythic-dawn.png"],
+  ["Microverse Mayhem", "poster-microverse-mayhem.jpg", "poster-microverse-mayhem.png"]
+];
+for (const [title, preview, source] of supportingPosters) {
+  requireCondition(visualGallery.includes(`### ${title}`), `Missing full-width supporting poster: ${title}`);
+  requireCondition(existsSync(path.join(root, "docs/readme", preview)), `Missing README poster preview: ${preview}`);
+  requireCondition(existsSync(path.join(root, "docs/readme", source)), `Missing full-resolution poster source: ${source}`);
+}
+
 const floatingCSS = await readFile(path.join(root, "src/renderer/floating.css"), "utf8");
 const motions = ["idle-float", "idle-look", "idle-stretch", "idle-hop", "working-scan", "working-run", "celebrate", "fail", "feed", "play", "sleep", "wake", "evolve"];
 requireCondition(motions.length === 13, "Expected exactly 13 named motion states.");
@@ -75,4 +98,4 @@ const workflow = await readFile(path.join(root, ".github/workflows/desktop.yml")
 requireCondition(workflow.includes("macos-latest") && workflow.includes("windows-latest"), "Desktop CI must run on macOS and Windows.");
 requireCondition(workflow.includes("npm run make") && workflow.includes("actions/upload-artifact@v4"), "Desktop CI must create and retain platform artifacts.");
 
-console.log("Verified secure shared desktop runtime, retired cosmetic slots, 13 motions, 100 lineages, 500 forms, and macOS/Windows packaging gates.");
+console.log("Verified the Arena homepage poster, eight full-width themes, secure shared desktop runtime, retired cosmetic slots, 13 motions, 100 lineages, 500 forms, and macOS/Windows packaging gates.");
