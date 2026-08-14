@@ -2,7 +2,7 @@ import { packager } from "@electron/packager";
 import { createHash } from "node:crypto";
 import { execFile } from "node:child_process";
 import { createReadStream, existsSync } from "node:fs";
-import { mkdir, readdir, rm, stat, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
@@ -14,6 +14,8 @@ const make = path.join(out, "make");
 const zipRequested = process.argv.includes("--zip");
 const platform = process.platform;
 const arch = process.arch;
+const packageJSON = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
+const version = packageJSON.version;
 
 if (!['darwin', 'win32'].includes(platform)) throw new Error("Sidekin desktop packaging supports macOS and Windows.");
 if (!out.startsWith(`${root}${path.sep}`) || path.basename(out) !== "out") throw new Error("Refusing an unsafe package output path.");
@@ -124,15 +126,15 @@ await mkdir(make, { recursive: true });
 const report = {
   schemaVersion: 1,
   product: "Sidekin",
-  version: "2.0.0",
+  version,
   platform,
   arch,
-  packageDirectory,
-  application,
+  packageDirectory: path.relative(root, packageDirectory).split(path.sep).join("/"),
+  application: path.relative(root, application).split(path.sep).join("/"),
   characterAssets: characterFiles.length,
   signing: platform === "darwin" ? "ad-hoc" : "unsigned",
-  archive: archive ?? null,
+  archive: archive ? path.relative(root, archive).split(path.sep).join("/") : null,
   archiveSHA256: archiveSHA256 ?? null
 };
 await writeFile(path.join(make, `package-report-${platform}-${arch}.json`), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Packaged Sidekin 2.0.0 for ${packageLabel} ${arch}: 500 assets${archive ? `, ${archiveName}` : ""}.`);
+console.log(`Packaged Sidekin ${version} for ${packageLabel} ${arch}: 500 assets${archive ? `, ${archiveName}` : ""}.`);

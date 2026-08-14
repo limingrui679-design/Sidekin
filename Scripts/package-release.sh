@@ -53,7 +53,10 @@ mv -f -- "$ARCHIVE_TEMP" "$ARCHIVE"
 
 swift "$PROJECT_ROOT/Scripts/generate-release-manifest.swift" \
   "$APP_BUNDLE" "$EXTERNAL_MANIFEST" "$ARCHIVE"
-/usr/bin/shasum -a 256 "$ARCHIVE" > "$CHECKSUM"
+(
+  cd "$PROJECT_ROOT/artifacts"
+  /usr/bin/shasum -a 256 "${ARCHIVE:t}" > "${CHECKSUM:t}"
+)
 
 "$PROJECT_ROOT/Scripts/verify-release.sh" "$APP_BUNDLE" "$ARCHIVE"
 print "Packaged $ARCHIVE"

@@ -12,7 +12,7 @@ for (const file of [
 ]) requireCondition(existsSync(path.join(root, file)), `Missing desktop build artifact: ${file}`);
 
 const packageJSON = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
-requireCondition(packageJSON.version === "2.0.0", "Expected Sidekin 2.0.0 desktop version.");
+requireCondition(packageJSON.version === "2.0.0-beta.1", "Expected Sidekin 2.0.0-beta.1 desktop version.");
 requireCondition(packageJSON.devDependencies.electron, "Electron dependency is missing.");
 
 const main = await readFile(path.join(root, "src/main/index.ts"), "utf8");
@@ -96,6 +96,6 @@ for (const theme of catalog.themes) {
 
 const workflow = await readFile(path.join(root, ".github/workflows/desktop.yml"), "utf8");
 requireCondition(workflow.includes("macos-latest") && workflow.includes("windows-latest"), "Desktop CI must run on macOS and Windows.");
-requireCondition(workflow.includes("npm run make") && workflow.includes("actions/upload-artifact@v4"), "Desktop CI must create and retain platform artifacts.");
+requireCondition(workflow.includes("npm run make") && workflow.includes("actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a"), "Desktop CI must create and retain platform artifacts with a pinned action.");
 
 console.log("Verified the Arena homepage poster, eight full-width themes, secure shared desktop runtime, retired cosmetic slots, 13 motions, 100 lineages, 500 forms, and macOS/Windows packaging gates.");

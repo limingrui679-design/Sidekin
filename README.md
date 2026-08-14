@@ -12,6 +12,7 @@
   <img src="https://img.shields.io/badge/Windows-10%2F11-0b1026?style=flat-square&logo=windows11&logoColor=white" alt="Windows 10 and 11">
   <img src="https://img.shields.io/badge/Electron-43-47848f?style=flat-square&logo=electron&logoColor=white" alt="Electron 43">
   <a href="https://github.com/limingrui679-design/Sidekin/actions/workflows/desktop.yml"><img src="https://github.com/limingrui679-design/Sidekin/actions/workflows/desktop.yml/badge.svg" alt="macOS and Windows desktop verification"></a>
+  <a href="https://github.com/limingrui679-design/Sidekin/actions/workflows/codeql.yml"><img src="https://github.com/limingrui679-design/Sidekin/actions/workflows/codeql.yml/badge.svg" alt="CodeQL analysis"></a>
   <img src="https://img.shields.io/badge/lineages-100-26c6c3?style=flat-square" alt="100 lineages">
   <img src="https://img.shields.io/badge/forms-500-8b5cf6?style=flat-square" alt="500 forms">
   <br><br>
@@ -21,6 +22,7 @@
   <br><br>
   <a href="#why-sidekin">Why Sidekin</a> ·
   <a href="#quick-start">Quick start</a> ·
+  <a href="#how-sidekin-works">Workflow</a> ·
   <a href="#visual-gallery">Gallery</a> ·
   <a href="#privacy-boundary">Privacy</a> ·
   <a href="#verification">Verification</a>
@@ -37,6 +39,14 @@ Most desktop pets are decorative overlays. Sidekin has a persistent life of its 
 Sidekin is intentionally broader than an animal pet collection. Its catalog includes mythic beings, unmistakably nonhuman humanoids, deities, mecha, vehicles, plants, fungi, minerals, artifacts, food beings, weather systems, abstract entities, architecture, and distributed colonies.
 
 ![Sidekin Command Center and transparent floating companion showing live Codex task cards](docs/readme/live-desktop-readme.jpg)
+
+## How Sidekin works
+
+<p align="center">
+  <img src="docs/readme/sidekin-workflow.svg" alt="Sidekin compact workflow from local Codex lifecycle signals through classification and care state to the floating companion" width="100%">
+</p>
+
+The core path remains local: Sidekin classifies lifecycle metadata, updates one deterministic care-and-growth state, renders the companion, and saves only bounded local state. The separate image workshop contacts the OpenAI Image API only after the user confirms a request with their own key.
 
 ## Visual gallery
 
@@ -96,7 +106,7 @@ Arena Convergence leads the page. The eight remaining compositions each use one 
 
 | | Current local Beta |
 |---|---|
-| Version | `2.0.0` cross-platform source Beta |
+| Version | `2.0.0-beta.1` cross-platform source Beta |
 | Platform | macOS 13+ · Windows 10/11 · 64-bit |
 | Stack | Electron 43 · TypeScript · secure isolated renderers |
 | Built-in content | 100 lineages · 500 transparent `1254×1254` PNG forms |
@@ -104,11 +114,13 @@ Arena Convergence leads the page. The eight remaining compositions each use one 
 | Codex response | Live task cards · running · completed · failed · elapsed time |
 | Storage | Local JSON, template packages, stage images, and resumable jobs |
 | Credential storage | macOS Keychain · Windows DPAPI through Electron `safeStorage` |
-| Distribution scope | Source project and CI-verifiable local Beta; no signed public app release |
+| Distribution scope | Public source-Beta archives for inspection; no signed consumer installer |
 
 ## Quick start
 
 Sidekin is currently built from source. Git LFS is required because the audited visual corpus is intentionally large.
+
+The [`v2.0.0-beta.1` prerelease](https://github.com/limingrui679-design/Sidekin/releases/tag/v2.0.0-beta.1) also retains native macOS and Windows CI archives, portable checksum files, package reports, and a tracked-source snapshot. The macOS archive is ad-hoc signed and the Windows archive is unsigned; neither is a consumer-trust or store-distribution claim.
 
 ```bash
 git lfs install
@@ -125,7 +137,7 @@ To create an unpacked app for the current operating system:
 npm run package
 ```
 
-> Sidekin does not currently publish signed consumer installers. This repository publishes source plus reproducible macOS and Windows packaging workflows.
+> Sidekin does not publish signed consumer installers. The prerelease archives are transparent source-Beta build evidence and must be verified with their adjacent SHA-256 files.
 
 ## Five stages, one identity
 
@@ -220,7 +232,7 @@ Because model capabilities and prices can change, consult the current [GPT Image
 | Codex prompts, responses, code, tool output, and project files | No — Sidekin does not collect, extract, or persist them |
 | Codex lifecycle classification: running, completed, failed | No |
 | Custom templates, raw stages, processed stages, and resumable jobs | No |
-| User's API key | No — encrypted through macOS Keychain or Windows DPAPI |
+| User's API key | Only to `api.openai.com` when the user confirms an image request; encrypted locally through macOS Keychain or Windows DPAPI |
 | Confirmed image-generation description and required visual references | Yes — only when the user explicitly confirms an OpenAI Image API request |
 
 Local files are stored in the operating-system application-data directory:
@@ -268,15 +280,16 @@ The GitHub Actions matrix runs natively on `macos-latest` and `windows-latest`, 
 | [`ArtSources`](ArtSources) | Catalog, prompts, curated sources, repair candidates, and audit sheets |
 | [`Scripts`](Scripts) | Shared build/verification/media tools plus historical macOS art tooling |
 | [`.github/workflows/desktop.yml`](.github/workflows/desktop.yml) | Native macOS and Windows verification and packaging matrix |
+| [`.github/workflows/release.yml`](.github/workflows/release.yml) | Tagged prerelease build, checksum, and GitHub Release publication |
 | [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) | Final 100-lineage visual QA results |
 | [`docs/COMPLETION_AUDIT.md`](docs/COMPLETION_AUDIT.md) | Feature and evidence-bound completion audit |
 | [`docs/RELEASING.md`](docs/RELEASING.md) | Current source-build and native CI packaging guide |
 
 ## Project status
 
-Sidekin 2.0 is an openly reviewable macOS and Windows source Beta. The same runtime is tested on both platforms, locally packaged and launched on macOS, and packaged by the repository's native Windows CI job. It is not represented as a signed public product, a production deployment, or a real-API end-to-end validation performed with the author's key.
+Sidekin 2.0.0-beta.1 is an openly reviewable macOS and Windows source Beta. The same runtime is tested on both platforms, locally packaged and launched on macOS, and packaged by the repository's native Windows CI job. It is not represented as a signed public product, a production deployment, external adoption, or a real-API end-to-end validation performed with the author's key.
 
-The repository currently has no reuse license. Source and art are visible for review, but no permission to copy, redistribute, or create derivatives is granted until a license is added.
+The repository is proprietary and all rights are reserved. Source and art are visible for review, but no permission to copy, redistribute, or create derivatives is granted by the repository's [`LICENSE`](LICENSE).
 
 ## Acknowledgements
 

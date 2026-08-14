@@ -3,8 +3,14 @@ set -euo pipefail
 
 PROJECT_ROOT="${0:A:h:h}"
 OUTPUT_DIR="$PROJECT_ROOT/artifacts"
-ARCHIVE="$OUTPUT_DIR/Sidekin-GitHub-Source.zip"
+VERSION="$(cd "$PROJECT_ROOT" && node -p 'require("./package.json").version')"
+ARCHIVE="$OUTPUT_DIR/Sidekin-$VERSION-GitHub-Source.zip"
 CHECKSUM="$ARCHIVE.sha256"
+
+if ! /usr/bin/git -C "$PROJECT_ROOT" diff --quiet HEAD --; then
+  print -u2 "Source archives require tracked files to match HEAD."
+  exit 1
+fi
 
 mkdir -p "$OUTPUT_DIR"
 PACKAGE_TEMP="$(mktemp -d /tmp/sidekin-source.XXXXXX)"
@@ -18,13 +24,9 @@ trap cleanup EXIT
 STAGING="$PACKAGE_TEMP/Sidekin"
 mkdir -p "$STAGING"
 
-COPYFILE_DISABLE=1 /usr/bin/rsync -a \
-  --exclude '.git/' \
-  --exclude '.build/' \
-  --exclude '.swiftpm/' \
-  --exclude 'artifacts/' \
-  --exclude '.DS_Store' \
-  --exclude '._*' \
+TRACKED_LIST="$PACKAGE_TEMP/tracked-files"
+/usr/bin/git -C "$PROJECT_ROOT" ls-files -z > "$TRACKED_LIST"
+COPYFILE_DISABLE=1 /usr/bin/rsync -a --from0 --files-from="$TRACKED_LIST" \
   "$PROJECT_ROOT/" "$STAGING/"
 
 "$STAGING/Scripts/verify-english-text.sh"
@@ -70,6 +72,9 @@ AUDIT_SHEET_COUNT="$(print -r -- "$ZIP_LIST" | /usr/bin/grep -Ec \
   exit 1
 }
 
-/usr/bin/shasum -a 256 "$ARCHIVE" > "$CHECKSUM"
+(
+  cd "$OUTPUT_DIR"
+  /usr/bin/shasum -a 256 "${ARCHIVE:t}" > "${CHECKSUM:t}"
+)
 print "Packaged local GitHub source snapshot: $ARCHIVE"
 print "SHA-256 file: $CHECKSUM"
