@@ -16,7 +16,7 @@ describe("Codex lifecycle integration", () => {
   });
 
   it("uses only safe working-directory metadata for the project label", () => {
-    const context = inspectCodexLine(JSON.stringify({ type: "session_meta", payload: { cwd: "C:\\Users\\li\\Projects\\Sidekin", prompt: "private" } }));
+    const context = inspectCodexLine(JSON.stringify({ type: "session_meta", payload: { cwd: "C:\\Users\\example\\Projects\\Sidekin", prompt: "private" } }));
     expect(context).toEqual({ project: "Sidekin" });
     expect(classifyCodexLine(JSON.stringify({ type: "event_msg", payload: { type: "task_started", turn_id: "turn-3", message: "private" } }), context)).toMatchObject({
       activity: "running", eventID: "turn-3", project: "Sidekin"
