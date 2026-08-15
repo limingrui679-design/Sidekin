@@ -21,9 +21,8 @@ struct Form: Decodable {
 struct Theme: Decodable {
     let id: String
     let displayName: String
-    let category: String?
-    let tags: [String]?
-    let artStyle: String?
+    let tags: [String]
+    let artStyle: String
     let subtitle: String
     let lineageIntroduction: String
     let existenceAnchor: String
@@ -73,24 +72,8 @@ func chromaKey(for theme: Theme) -> String {
     }!.hex
 }
 
-func categoryName(_ rawValue: String) -> String {
-    [
-        "faunaMythic": "Fauna & Mythic",
-        "machinesVehicles": "Machines & Vehicles",
-        "floraFungi": "Flora & Fungi",
-        "mineralGeological": "Mineral & Geological",
-        "artifactsInstruments": "Artifacts & Instruments",
-        "foodAlchemy": "Food & Alchemy",
-        "elementalWeather": "Elemental & Weather",
-        "cosmicAbstract": "Cosmic & Abstract",
-        "livingArchitecture": "Living Architecture",
-        "collectiveSystems": "Collective Systems"
-    ][rawValue] ?? rawValue
-}
-
 func taxonomyName(for theme: Theme) -> String {
-    if let category = theme.category { return categoryName(category) }
-    return (theme.tags ?? []).joined(separator: " · ")
+    theme.tags.joined(separator: " · ")
 }
 
 let stageRules = [
@@ -128,7 +111,7 @@ for theme in catalog.themes {
         Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
 
         Theme: \(theme.displayName) [\(taxonomyName(for: theme))]
-        Art-style direction: \(theme.artStyle ?? "catalog-defined premium competitive-game companion")
+        Art-style direction: \(theme.artStyle)
         Form: \(form.name), canonical \(form.stage) stage
         Lineage concept: \(theme.lineageIntroduction)
         Existence anchor: \(theme.existenceAnchor)

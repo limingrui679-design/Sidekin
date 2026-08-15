@@ -21,9 +21,8 @@ struct ThemeForm: Codable {
 struct Theme: Codable {
     let id: String
     let displayName: String
-    let category: String?
-    let tags: [String]?
-    let artStyle: String?
+    let tags: [String]
+    let artStyle: String
     let subtitle: String
     let symbolName: String
     let lineageIntroduction: String
@@ -63,18 +62,6 @@ let catalogDirectory = URL(fileURLWithPath: CommandLine.arguments[1], isDirector
 let swiftOutput = URL(fileURLWithPath: CommandLine.arguments[2])
 let jsonOutput = URL(fileURLWithPath: CommandLine.arguments[3])
 let fileManager = FileManager.default
-let categoryOrder = [
-    "faunaMythic",
-    "machinesVehicles",
-    "floraFungi",
-    "mineralGeological",
-    "artifactsInstruments",
-    "foodAlchemy",
-    "elementalWeather",
-    "cosmicAbstract",
-    "livingArchitecture",
-    "collectiveSystems"
-]
 let motionProfiles = Set([
     "buoyant", "mechanical", "agile", "poised", "swimming", "heavy", "bouncing",
     "prowling", "spectral", "rooted", "winged", "orbiting", "skittering", "serpentine",
@@ -103,17 +90,13 @@ do {
     )
     .filter { $0.pathExtension.lowercased() == "json" }
     .sorted { $0.lastPathComponent < $1.lastPathComponent }
-    try require(files.count == 11, "Expected 10 category fragments and one expansion fragment, found \(files.count)")
+    try require(files.count == 11, "Expected 11 lineage source fragments, found \(files.count)")
 
     var themes: [Theme] = []
     let decoder = JSONDecoder()
     for file in files {
         let fragment = try decoder.decode(Fragment.self, from: Data(contentsOf: file))
-        let expectedCount = file.lastPathComponent == "11-expansion.json" ? 100 : 10
-        try require(
-            fragment.themes.count == expectedCount,
-            "\(file.lastPathComponent) must contain \(expectedCount) themes"
-        )
+        try require(!fragment.themes.isEmpty, "\(file.lastPathComponent) contains no themes")
         themes.append(contentsOf: fragment.themes)
     }
 
@@ -127,16 +110,6 @@ do {
     try unique(themes.map(\.materialAnchor), label: "material anchor")
     try unique(themes.map(\.energyAnchor), label: "energy anchor")
 
-    let categorizedThemes = themes.filter { $0.category != nil }
-    let tagBasedThemes = themes.filter { $0.category == nil }
-    try require(categorizedThemes.count == 100, "Expected 100 category-based legacy themes")
-    try require(tagBasedThemes.count == 100, "Expected 100 tag-based expansion themes")
-    let categoryCounts = Dictionary(grouping: categorizedThemes, by: { $0.category! }).mapValues(\.count)
-    try require(Set(categoryCounts.keys) == Set(categoryOrder), "Catalog categories do not match the ten-category plan")
-    for category in categoryOrder {
-        try require(categoryCounts[category] == 10, "Category \(category) must contain exactly 10 themes")
-    }
-
     let idCharacters = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyz0123456789-")
     for theme in themes {
         try require(!theme.id.isEmpty, "A theme has an empty ID")
@@ -148,12 +121,10 @@ do {
         try require(theme.materialAnchor.count >= 20, "\(theme.id) has a weak material anchor")
         try require(theme.energyAnchor.count >= 18, "\(theme.id) has a weak energy anchor")
         try require(motionProfiles.contains(theme.motionProfile), "\(theme.id) has unknown motion profile \(theme.motionProfile)")
-        if theme.category == nil {
-            let tags = theme.tags ?? []
-            try require(tags.count >= 3, "\(theme.id) must provide at least three searchable tags")
-            try require(Set(tags).count == tags.count, "\(theme.id) contains duplicate tags")
-            try require(!(theme.artStyle ?? "").isEmpty, "\(theme.id) must provide an art-style direction")
-        }
+        try require(theme.tags.count >= 3, "\(theme.id) must provide at least three searchable tags")
+        try require(Set(theme.tags.map { $0.lowercased() }).count == theme.tags.count, "\(theme.id) contains duplicate tags")
+        try require(theme.tags.allSatisfy { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }, "\(theme.id) contains an empty tag")
+        try require(!theme.artStyle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty, "\(theme.id) must provide an art-style direction")
         try validateColor(theme.accent, label: theme.id)
         try validateColor(theme.secondaryAccent, label: theme.id)
         try require(theme.forms.map(\.stage) == stages, "\(theme.id) must define the five canonical stages in order")
@@ -175,7 +146,7 @@ do {
 
     let encoder = JSONEncoder()
     encoder.outputFormatting = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
-    let data = try encoder.encode(Envelope(schemaVersion: 1, themes: themes))
+    let data = try encoder.encode(Envelope(schemaVersion: 2, themes: themes))
     guard let json = String(data: data, encoding: .utf8) else {
         throw CatalogError.invalid("Could not encode the catalog as UTF-8")
     }

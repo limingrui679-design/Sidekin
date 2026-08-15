@@ -1,7 +1,7 @@
 Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
 
-Theme: Pollinator Array [Machines & Vehicles]
-Art-style direction: catalog-defined premium competitive-game companion
+Theme: Pollinator Array [mecha construct · aerial · radial four rotor drone]
+Art-style direction: hard-surface arena mecha rendering with readable modular engineering
 Form: Pollen Scoutlet, canonical hatchling stage
 Lineage concept: A modular garden drone whose detachable rotors coordinate pollination as a flying array.
 Existence anchor: Autonomous Pollination Drone

@@ -123,7 +123,7 @@ do {
         )
     }
     let expansionRepairedRows = expansionRows.filter { $0.2 != "Pass" }.count
-    try require(expansionRepairedRows == 7, "Expected 7 repaired expansion rows, found \(expansionRepairedRows).")
+    try require(expansionRepairedRows == 17, "Expected 17 repaired expansion rows, found \(expansionRepairedRows).")
 
     let progress = try JSONDecoder().decode(
         ExpansionProgress.self,
@@ -145,7 +145,7 @@ do {
 
     print(
         "Verified 200 individual lineage audit rows: 100 legacy rows with 63 repaired lineages, "
-            + "83 raw candidates and 20 sheets; plus 100 expansion rows with 7 repaired lineages "
+            + "83 raw candidates and 20 sheets; plus 100 expansion rows with 17 repaired lineages "
             + "and 20 final asset sheets."
     )
 } catch {

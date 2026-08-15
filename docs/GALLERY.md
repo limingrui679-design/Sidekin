@@ -32,11 +32,11 @@ The homepage uses Arena Convergence as its main poster. Eight supporting composi
 
 *Bright companionship, racing, dancing, and playful scale changes.*
 
-### Chronicle of Ten Worlds
+### Chronicle of Living Worlds
 
-[![Chronicle of Ten Worlds Sidekin poster spanning ten creature categories](readme/poster-chronicle-ten-worlds.jpg)](readme/poster-chronicle-ten-worlds.png)
+[![Chronicle of Living Worlds Sidekin poster spanning contrasting creature realms](readme/poster-chronicle-ten-worlds.jpg)](readme/poster-chronicle-ten-worlds.png)
 
-*Ten catalog categories joined into one epic world map.*
+*Contrasting creatures, constructs, spirits, and habitats joined into one epic world map.*
 
 ### Neon Night League
 
@@ -62,4 +62,4 @@ The homepage uses Arena Convergence as its main poster. Eight supporting composi
 
 *Tiny societies, living habitats, and enormous evolved guardians.*
 
-These are alternate presentations of the same audited catalog, not additional products, releases, or user deployments. Character-level provenance and acceptance evidence remain in the [original lineage audit](LINEAGE_AUDIT.md), [expansion audit](EXPANSION_AUDIT.md), [production standard](../ArtSources/ART_PRODUCTION_500.md), and machine-readable [theme catalog](../ArtSources/PET_THEME_CATALOG.json).
+These are alternate presentations of the same audited catalog, not additional products, releases, or user deployments. Character-level provenance and acceptance evidence remain in the [original lineage audit](LINEAGE_AUDIT.md), [expansion audit](EXPANSION_AUDIT.md), [production standard](../ArtSources/ART_PRODUCTION.md), and machine-readable [theme catalog](../ArtSources/PET_THEME_CATALOG.json).

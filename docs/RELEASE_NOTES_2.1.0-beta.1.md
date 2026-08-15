@@ -5,7 +5,7 @@ This prerelease doubles the built-in visual system while preserving Sidekin's lo
 ## Included
 
 - 200 built-in lineages and 1,000 transparent `1254×1254` five-stage forms;
-- the original balanced ten-category foundation plus 100 searchable tag-based expansion lineages;
+- one continuous searchable tag catalog spanning all 200 built-in lineages;
 - a completed 100/100 generation, processing, and manual-review ledger for the expansion;
 - six visually repaired expansion lineages that were regenerated and reprocessed, plus one hash-pinned final asset normalization after the readability gate;
 - separate legacy and expansion audit reports with 40 total final contact sheets;

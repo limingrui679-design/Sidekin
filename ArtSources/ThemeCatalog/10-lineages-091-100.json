@@ -3,7 +3,6 @@
     {
       "id": "slime-parliament",
       "displayName": "Slime Parliament",
-      "category": "collectiveSystems",
       "subtitle": "Gel bodies · consensus-gold bubbles",
       "symbolName": "person.3.fill",
       "lineageIntroduction": "A colony of colored slimes that votes by exchanging bubbles and temporarily merges into one body.",
@@ -15,8 +14,16 @@
       "materialAnchor": "Transparent colored gel, pearl nuclei, trapped bubbles, and glossy membrane",
       "energyAnchor": "Consensus-gold bubbles and connecting white decision threads",
       "motionProfile": "bouncing",
-      "accent": {"red": 0.28, "green": 0.9, "blue": 0.7},
-      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.16},
+      "accent": {
+        "red": 0.28,
+        "green": 0.9,
+        "blue": 0.7
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.72,
+        "blue": 0.16
+      },
       "forms": [
         {
           "stage": "egg",
@@ -48,12 +55,17 @@
           "introduction": "A circular chamber of living gel lets hundreds of voices move as one transparent form.",
           "visualAnchor": "Ring-shaped slime body containing many colored nuclei around a clear central council void"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "cute",
+        "cluster of merging gel blobs"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     },
     {
       "id": "nanite-swarm",
       "displayName": "Nanite Swarm",
-      "category": "collectiveSystems",
       "subtitle": "Metal motes · command-blue lattice",
       "symbolName": "circle.grid.3x3.fill",
       "lineageIntroduction": "A cloud of microscopic machines that assembles tools, limbs, and shells around a command lattice.",
@@ -65,8 +77,16 @@
       "materialAnchor": "Silver microtiles, black carbon dust, blue command crystals, and copper contact sparks",
       "energyAnchor": "Cobalt coordination lattice and white assembly pulses",
       "motionProfile": "swarming",
-      "accent": {"red": 0.2, "green": 0.62, "blue": 1.0},
-      "secondaryAccent": {"red": 0.86, "green": 0.9, "blue": 0.96},
+      "accent": {
+        "red": 0.2,
+        "green": 0.62,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.86,
+        "green": 0.9,
+        "blue": 0.96
+      },
       "forms": [
         {
           "stage": "egg",
@@ -98,12 +118,17 @@
           "introduction": "A vast intelligent swarm builds a complete moving citadel from individually visible machines.",
           "visualAnchor": "Towering porous structure of silver particles around a bright blue lattice skeleton"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "many-bodied",
+        "porous cloud of metal motes"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     },
     {
       "id": "firefly-chorus",
       "displayName": "Firefly Chorus",
-      "category": "collectiveSystems",
       "subtitle": "Midnight wings · pulse-gold rhythm",
       "symbolName": "sparkles",
       "lineageIntroduction": "A coordinated firefly colony that communicates through rhythm and assembles luminous group silhouettes.",
@@ -115,8 +140,16 @@
       "materialAnchor": "Black chitin, clear wings, warm light organs, and dark twigwood",
       "energyAnchor": "Pulse-gold rhythm waves and emerald timing points",
       "motionProfile": "swarming",
-      "accent": {"red": 1.0, "green": 0.82, "blue": 0.18},
-      "secondaryAccent": {"red": 0.28, "green": 1.0, "blue": 0.54},
+      "accent": {
+        "red": 1,
+        "green": 0.82,
+        "blue": 0.18
+      },
+      "secondaryAccent": {
+        "red": 0.28,
+        "green": 1,
+        "blue": 0.54
+      },
       "forms": [
         {
           "stage": "egg",
@@ -148,12 +181,17 @@
           "introduction": "A vast firefly chorus becomes a radiant crown while every individual remains visible.",
           "visualAnchor": "Crown-shaped cloud of countless gold-green winged lights around an empty center"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "many-bodied",
+        "flock of lights around branch"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     },
     {
       "id": "plankton-bloom",
       "displayName": "Plankton Bloom",
-      "category": "collectiveSystems",
       "subtitle": "Translucent cells · ocean-blue biolight",
       "symbolName": "drop.fill",
       "lineageIntroduction": "A drifting plankton community that links translucent cells into ribbons, fans, and luminous blooms.",
@@ -165,8 +203,16 @@
       "materialAnchor": "Transparent cell membranes, pearl organelles, blue biolight, and soft mucous threads",
       "energyAnchor": "Ocean-blue bloom pulse and turquoise communication waves",
       "motionProfile": "swimming",
-      "accent": {"red": 0.12, "green": 0.86, "blue": 1.0},
-      "secondaryAccent": {"red": 0.24, "green": 1.0, "blue": 0.68},
+      "accent": {
+        "red": 0.12,
+        "green": 0.86,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.24,
+        "green": 1,
+        "blue": 0.68
+      },
       "forms": [
         {
           "stage": "egg",
@@ -198,12 +244,17 @@
           "introduction": "A vast circular plankton bloom turns a dark sea into one coherent field of light.",
           "visualAnchor": "Large radial disc made from countless clear cells around a brilliant blue center"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "aquatic",
+        "cell ribbons around jelly bloom"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     },
     {
       "id": "lichen-commune",
       "displayName": "Lichen Commune",
-      "category": "collectiveSystems",
       "subtitle": "Fungal stone mats · algae-green exchange",
       "symbolName": "leaf.circle.fill",
       "lineageIntroduction": "A fungal-algal commune that grows walking stone mats through continuous exchange between partners.",
@@ -215,8 +266,16 @@
       "materialAnchor": "Gray stone, pale fungal lace, green algal glass, and orange crust patches",
       "energyAnchor": "Green-gold nutrient exchange lines and white symbiosis knots",
       "motionProfile": "pulsing",
-      "accent": {"red": 0.5, "green": 0.82, "blue": 0.22},
-      "secondaryAccent": {"red": 1.0, "green": 0.5, "blue": 0.12},
+      "accent": {
+        "red": 0.5,
+        "green": 0.82,
+        "blue": 0.22
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.5,
+        "blue": 0.12
+      },
       "forms": [
         {
           "stage": "egg",
@@ -248,12 +307,17 @@
           "introduction": "A vast living stone crown displays many partners joined by one nutrient circulation.",
           "visualAnchor": "Radial lichen-covered rock formation with white veins converging on a gold center"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "luminous",
+        "flat symbiotic mat on holdfasts"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     },
     {
       "id": "microbe-metropolis",
       "displayName": "Microbe Metropolis",
-      "category": "collectiveSystems",
       "subtitle": "Cell membranes · enzyme-city glow",
       "symbolName": "circle.grid.cross.fill",
       "lineageIntroduction": "A microbial city where specialized cells become transport, defense, energy, and communication districts.",
@@ -265,8 +329,16 @@
       "materialAnchor": "Translucent membranes, colored cytoplasm, protein scaffolds, and lipid bubbles",
       "energyAnchor": "Enzyme-green production glow and violet communication pulses",
       "motionProfile": "swarming",
-      "accent": {"red": 0.26, "green": 0.94, "blue": 0.52},
-      "secondaryAccent": {"red": 0.7, "green": 0.32, "blue": 1.0},
+      "accent": {
+        "red": 0.26,
+        "green": 0.94,
+        "blue": 0.52
+      },
+      "secondaryAccent": {
+        "red": 0.7,
+        "green": 0.32,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -298,12 +370,17 @@
           "introduction": "A complete microbial biosphere balances many species inside one coordinated living city.",
           "visualAnchor": "Spherical membrane metropolis with layered districts around a bright green core"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "many-bodied",
+        "clustered cell city under membrane"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     },
     {
       "id": "coral-commonwealth",
       "displayName": "Coral Commonwealth",
-      "category": "collectiveSystems",
       "subtitle": "Calcium branches · reef-cyan exchange",
       "symbolName": "water.waves",
       "lineageIntroduction": "A mobile coral commonwealth whose many polyps grow branches, fans, and shared defensive forms.",
@@ -315,8 +392,16 @@
       "materialAnchor": "White calcium skeleton, colored living tissue, translucent fans, and wet reef stone",
       "energyAnchor": "Reef-cyan nutrient exchange and pink polyp warning pulses",
       "motionProfile": "flowing",
-      "accent": {"red": 0.12, "green": 0.9, "blue": 0.9},
-      "secondaryAccent": {"red": 1.0, "green": 0.32, "blue": 0.56},
+      "accent": {
+        "red": 0.12,
+        "green": 0.9,
+        "blue": 0.9
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.32,
+        "blue": 0.56
+      },
       "forms": [
         {
           "stage": "egg",
@@ -348,12 +433,17 @@
           "introduction": "A radiant coral crown carries thousands of cooperating polyps across a living reef ring.",
           "visualAnchor": "Circular reef foundation beneath a vast radial crown of many coral growth forms"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "ethereal",
+        "branching coral crown on reef foot"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     },
     {
       "id": "stardust-chorus",
       "displayName": "Stardust Chorus",
-      "category": "collectiveSystems",
       "subtitle": "Cosmic grains · resonance-violet cloud",
       "symbolName": "sparkles",
       "lineageIntroduction": "A cloud of cosmic dust grains that sings through resonance and condenses into shared celestial shapes.",
@@ -365,8 +455,16 @@
       "materialAnchor": "Gold silicate dust, carbon-black grains, ice crystals, and violet gas haze",
       "energyAnchor": "Violet harmonic rings and white condensation nodes",
       "motionProfile": "swarming",
-      "accent": {"red": 0.7, "green": 0.36, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.22},
+      "accent": {
+        "red": 0.7,
+        "green": 0.36,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.72,
+        "blue": 0.22
+      },
       "forms": [
         {
           "stage": "egg",
@@ -398,12 +496,17 @@
           "introduction": "A vast spiral of singing grains holds several newborn lights without losing coherence.",
           "visualAnchor": "Large stardust spiral with many bright nodes and concentric violet sound waves"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "many-bodied",
+        "resonant particle nebula"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     },
     {
       "id": "rune-swarm",
       "displayName": "Rune Swarm",
-      "category": "collectiveSystems",
       "subtitle": "Stone glyphs · syntax-blue links",
       "symbolName": "textformat",
       "lineageIntroduction": "A flock of carved runes that combines symbols into temporary commands, tools, and protective forms.",
@@ -415,8 +518,16 @@
       "materialAnchor": "Dark slate glyphs, white carving dust, blue syntax light, and red punctuation seals",
       "energyAnchor": "Cobalt grammar links and crimson execution marks",
       "motionProfile": "swarming",
-      "accent": {"red": 0.28, "green": 0.64, "blue": 1.0},
-      "secondaryAccent": {"red": 0.94, "green": 0.18, "blue": 0.22},
+      "accent": {
+        "red": 0.28,
+        "green": 0.64,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.94,
+        "green": 0.18,
+        "blue": 0.22
+      },
       "forms": [
         {
           "stage": "egg",
@@ -448,12 +559,17 @@
           "introduction": "A radiant crown of symbols rewrites its own rules while preserving every rune.",
           "visualAnchor": "Large circular crown of stone glyphs around a red execution mark and blue syntax web"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "many-bodied",
+        "flock of glyphs in sentence form"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     },
     {
       "id": "terrarium-ecosystem",
       "displayName": "Terrarium Ecosystem",
-      "category": "collectiveSystems",
       "subtitle": "Glass biome · closed-cycle greenlight",
       "symbolName": "globe.americas.fill",
       "lineageIntroduction": "A closed miniature ecosystem that walks by coordinating soil, water, plants, fungi, and weather.",
@@ -465,8 +581,16 @@
       "materialAnchor": "Clear glass, dark soil, living moss, open water, mist, and mineral gravel",
       "energyAnchor": "Green cycle arrows and soft blue water-loop light",
       "motionProfile": "rooted",
-      "accent": {"red": 0.24, "green": 0.86, "blue": 0.34},
-      "secondaryAccent": {"red": 0.16, "green": 0.68, "blue": 1.0},
+      "accent": {
+        "red": 0.24,
+        "green": 0.86,
+        "blue": 0.34
+      },
+      "secondaryAccent": {
+        "red": 0.16,
+        "green": 0.68,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -498,7 +622,13 @@
           "introduction": "A complete miniature world sustains every internal cycle while walking as one system.",
           "visualAnchor": "Huge clear spherical biosphere on root feet with clouds, river, forest, and glowing cycle ring"
         }
-      ]
+      ],
+      "tags": [
+        "collective intelligence",
+        "ancient",
+        "glass biome sphere on root feet"
+      ],
+      "artStyle": "micro-world ensemble rendering with a coherent many-bodied silhouette"
     }
   ]
 }

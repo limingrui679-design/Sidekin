@@ -13,7 +13,7 @@ Every lineage was reviewed as a five-stage sequence for persistent identity, vis
 | No. | Lineage | Result | Review note |
 |---:|---|---|---|
 | 101 | Astral Vowkeeper | Pass | Five stages preserve faceless four-armed celestial knight; final transparent assets were reviewed together on assets-01.jpg. |
-| 102 | Moonveil Oracle | Pass | Five stages preserve owl-masked floating oracle; final transparent assets were reviewed together on assets-01.jpg. |
+| 102 | Moonveil Oracle | Pass after repair | Faint separators were removed, the smaller forms were rescaled, and all five stages were re-reviewed for owl-mask continuity. |
 | 103 | Prism Antler Warden | Pass | Five stages preserve crystal stag sentinel; final transparent assets were reviewed together on assets-01.jpg. |
 | 104 | Tide-Song Magus | Pass | Five stages preserve nautilus-headed tide mage; final transparent assets were reviewed together on assets-01.jpg. |
 | 105 | Inkshadow Dancer | Pass | Five stages preserve living-ink masked dancer; final transparent assets were reviewed together on assets-01.jpg. |
@@ -45,10 +45,10 @@ Every lineage was reviewed as a five-stage sequence for persistent identity, vis
 | 131 | Celestial Garuda | Pass after repair | Vertical separator artifacts were removed; all five stages were regenerated, reprocessed, and re-reviewed. |
 | 132 | Moonstone Golem Adept | Pass | Five stages preserve gentle moonstone martial golem; final transparent assets were reviewed together on assets-07.jpg. |
 | 133 | Mirror-Mask Trickster | Pass | Five stages preserve reflective mask illusionist; final transparent assets were reviewed together on assets-07.jpg. |
-| 134 | Auric Seraph Construct | Pass | Five stages preserve mechanical angel guardian; final transparent assets were reviewed together on assets-07.jpg. |
+| 134 | Auric Seraph Construct | Pass after repair | The sequence was rebuilt as distinct drone, diver, guardian, and sovereign structures while retaining one mechanical-seraph core. |
 | 135 | Velvet Bat Duchess | Pass | Five stages preserve bat-faced night noble; final transparent assets were reviewed together on assets-07.jpg. |
-| 136 | Solar Ring Wyrm | Pass | Five stages preserve ring-bodied solar dragon; final transparent assets were reviewed together on assets-08.jpg. |
-| 137 | Glacier Sky Dragon | Pass | Five stages preserve four-winged ice dragon; final transparent assets were reviewed together on assets-08.jpg. |
+| 136 | Solar Ring Wyrm | Pass after repair | Repeated ring poses were replaced with structural growth while preserving the solar wyrm identity. |
+| 137 | Glacier Sky Dragon | Pass after repair | Faint separators were removed, juvenile scale was restored, and the five flight silhouettes were made more distinct. |
 | 138 | Emberglass Hound | Pass | Five stages preserve obsidian jackal hound; final transparent assets were reviewed together on assets-08.jpg. |
 | 139 | Roseglass Fennec | Pass | Five stages preserve rose-crystal desert fox; final transparent assets were reviewed together on assets-08.jpg. |
 | 140 | Starrail Gryphon | Pass | Five stages preserve cosmic gryphon courier; final transparent assets were reviewed together on assets-08.jpg. |
@@ -57,7 +57,7 @@ Every lineage was reviewed as a five-stage sequence for persistent identity, vis
 | 143 | Moon-Tide Leviathan | Pass | Five stages preserve crescent sea leviathan; final transparent assets were reviewed together on assets-09.jpg. |
 | 144 | Duskfeather Phoenix | Pass | Five stages preserve twilight phoenix; final transparent assets were reviewed together on assets-09.jpg. |
 | 145 | Voidmane Panther | Pass | Five stages preserve black-hole panther; final transparent assets were reviewed together on assets-09.jpg. |
-| 146 | Rune-Shell Tortoise | Pass | Five stages preserve ancient rune tortoise; final transparent assets were reviewed together on assets-10.jpg. |
+| 146 | Rune-Shell Tortoise | Pass after repair | Shell construction, stance, and fortress growth were separated across stages without changing the tortoise species. |
 | 147 | Aurora Snow Leopard | Pass | Five stages preserve polar-light snow leopard; final transparent assets were reviewed together on assets-10.jpg. |
 | 148 | Comet-Tail Tanuki | Pass | Five stages preserve comet raccoon dog; final transparent assets were reviewed together on assets-10.jpg. |
 | 149 | Abyssal Crown Whale | Pass | Five stages preserve deep-sea crown whale; final transparent assets were reviewed together on assets-10.jpg. |
@@ -66,7 +66,7 @@ Every lineage was reviewed as a five-stage sequence for persistent identity, vis
 | 152 | Crystal Mantis | Pass | Five stages preserve prismatic mantis; final transparent assets were reviewed together on assets-11.jpg. |
 | 153 | Magma Armadillo | Pass | Five stages preserve rolling lava armadillo; final transparent assets were reviewed together on assets-11.jpg. |
 | 154 | Spectral Axolotl | Pass after repair | Faint separator artifacts were removed; all five stages were regenerated, reprocessed, and re-reviewed. |
-| 155 | Cosmic Orca | Pass | Five stages preserve starfield orca; final transparent assets were reviewed together on assets-11.jpg. |
+| 155 | Cosmic Orca | Pass after repair | Faint separators were removed, juvenile scale was restored, and the swim actions were differentiated. |
 | 156 | Storm Hare Courier | Pass | Five stages preserve lightning hare; final transparent assets were reviewed together on assets-12.jpg. |
 | 157 | Jade Moon Serpent | Pass | Five stages preserve wingless lunar serpent; final transparent assets were reviewed together on assets-12.jpg. |
 | 158 | Obsidian Raven | Pass after repair | Faint separator artifacts were removed; all five stages were regenerated, reprocessed, and re-reviewed. |
@@ -75,12 +75,12 @@ Every lineage was reviewed as a five-stage sequence for persistent identity, vis
 | 161 | Starlight Red Panda | Pass | Five stages preserve stellar red panda; final transparent assets were reviewed together on assets-13.jpg. |
 | 162 | Moonbell Owl | Pass | Five stages preserve bell-bodied moon owl; final transparent assets were reviewed together on assets-13.jpg. |
 | 163 | Rainbow-Shell Snail | Pass | Five stages preserve prismatic racing snail; final transparent assets were reviewed together on assets-13.jpg. |
-| 164 | Velvet Cloud Baku | Pass | Five stages preserve dream-eating tapir spirit; final transparent assets were reviewed together on assets-13.jpg. |
+| 164 | Velvet Cloud Baku | Pass after repair | A faint panel grid was removed and the ascended silhouette was rescaled while preserving the tapir-spirit identity. |
 | 165 | Neon Ribbon Lizard | Pass | Five stages preserve arena ribbon lizard; final transparent assets were reviewed together on assets-13.jpg. |
 | 166 | Dawnwheel Seraph | Pass | Five stages preserve faceless winged dawn deity; final transparent assets were reviewed together on assets-14.jpg. |
 | 167 | Moon-Eclipse Archon | Pass | Five stages preserve crescent eclipse deity; final transparent assets were reviewed together on assets-14.jpg. |
 | 168 | Thousand-Eye Tempest | Pass | Five stages preserve many-eyed storm colossus; final transparent assets were reviewed together on assets-14.jpg. |
-| 169 | Sacred Lotus Avatar | Pass | Five stages preserve lotus-born divine spirit; final transparent assets were reviewed together on assets-14.jpg. |
+| 169 | Sacred Lotus Avatar | Pass after repair | Near-identical poses were replaced with distinct dancer, guardian, and sovereign structures anchored by the same lotus face. |
 | 170 | Golden Sun Sphinx | Pass | Five stages preserve solar sphinx; final transparent assets were reviewed together on assets-14.jpg. |
 | 171 | Void Gate Keeper | Pass after repair | Vertical separator artifacts were removed; all five stages were regenerated, reprocessed, and re-reviewed. |
 | 172 | Starlight Naga Deity | Pass | Five stages preserve serpentine star deity; final transparent assets were reviewed together on assets-15.jpg. |
@@ -93,7 +93,7 @@ Every lineage was reviewed as a five-stage sequence for persistent identity, vis
 | 179 | Scarlet War Kami | Pass | Five stages preserve nonhuman armored battle spirit; final transparent assets were reviewed together on assets-16.jpg. |
 | 180 | Ocean Pearl Sovereign | Pass | Five stages preserve pearl-headed sea divinity; final transparent assets were reviewed together on assets-16.jpg. |
 | 181 | Cosmic Hour Keeper | Pass | Five stages preserve timekeeping celestial idol; final transparent assets were reviewed together on assets-17.jpg. |
-| 182 | Jade Comet Empress | Pass | Five stages preserve faceless jade comet sovereign; final transparent assets were reviewed together on assets-17.jpg. |
+| 182 | Jade Comet Empress | Pass after repair | The lineup was regenerated on a safe alternate key color so the jade body remained intact through transparent cutout processing. |
 | 183 | Prism Crown Judicator | Pass | Five stages preserve rainbow law deity; final transparent assets were reviewed together on assets-17.jpg. |
 | 184 | Eclipse Wing Oracle | Pass | Five stages preserve winged eclipse prophet; final transparent assets were reviewed together on assets-17.jpg. |
 | 185 | Constellation King | Pass | Five stages preserve star-map monarch construct; final transparent assets were reviewed together on assets-17.jpg. |
@@ -109,7 +109,7 @@ Every lineage was reviewed as a five-stage sequence for persistent identity, vis
 | 195 | Arc Lion Vanguard | Pass | Five stages preserve electric lion assault frame; final transparent assets were reviewed together on assets-19.jpg. |
 | 196 | Prism Samurai Frame | Pass after repair | Faint separator artifacts were removed; all five stages were regenerated, reprocessed, and re-reviewed. |
 | 197 | Chrono Scarab Drone | Pass | Five stages preserve time-shifting scarab robot; final transparent assets were reviewed together on assets-20.jpg. |
-| 198 | Lunar Rabbit Rover | Pass | Five stages preserve rabbit-shaped moon rover; final transparent assets were reviewed together on assets-20.jpg. |
+| 198 | Lunar Rabbit Rover | Pass after repair | The sequence now progresses from capsule to two-wheel, four-wheel, six-legged, and command rover forms with one rabbit-machine identity. |
 | 199 | Void Gravity Spider | Pass | Five stages preserve eight-legged gravity machine; final transparent assets were reviewed together on assets-20.jpg. |
 | 200 | Solar Wyrm Mech | Pass | Five stages preserve segmented solar dragon machine; final transparent assets were reviewed together on assets-20.jpg. |
 
@@ -118,7 +118,7 @@ Every lineage was reviewed as a five-stage sequence for persistent identity, vis
 - 100 expansion lineages and 500 described forms are integrated into the 200-lineage master catalog.
 - All 500 expansion PNGs are present at exact 1254×1254 dimensions with alpha channels.
 - The progress ledger records 100 generated lineups, 100 processed lineages, and 100 reviewed lineages.
-- Six lineages were regenerated and reprocessed after visual findings; one additional hatchling received a hash-pinned final normalization after the automated readability gate. The affected sheets were rebuilt and reviewed again.
+- Seventeen lineages received regenerated or targeted reprocessing corrections after visual findings. Repairs addressed separators, unsafe emblem ambiguity, insufficient structural progression, weak desktop scale, chroma-key damage, and stage sameness; every affected sheet was rebuilt and reviewed again.
 - The combined application corpus contains 200 lineages and 1,000 named five-stage assets.
 
 This is internal reproducibility and visual-QA evidence. It is not external user validation, marketplace approval, production deployment, or an independent third-party art review.

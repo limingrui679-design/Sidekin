@@ -236,22 +236,22 @@ catalogImage.lockFocus()
 NSGraphicsContext.current?.imageInterpolation = .high
 fillBackground(NSRect(origin: .zero, size: catalogSize))
 ("NOT JUST ANIMALS." as NSString).draw(at: NSPoint(x: 62, y: 920), withAttributes: eyebrow)
-("Creatures, mecha, gods, artifacts, worlds, and living systems." as NSString).draw(
+("Nonhuman heroes, mythic creatures, gods, animals, and mecha." as NSString).draw(
     at: NSPoint(x: 62, y: 872),
     withAttributes: subtitle
 )
 
 let catalogEntries: [(String, String, String, NSColor)] = [
-    ("manticore", "MYTHIC", "Manticore", gold),
-    ("mecha", "MECHA", "Vanguard", violet),
-    ("moon-lotus", "FLORA", "Moon Lotus", cyan),
-    ("halite-crown", "MINERAL", "Halite Crown", gold),
-    ("celestial-musicbox", "ARTIFACT", "Musicbox", violet),
-    ("ramen-nebula", "ALCHEMY", "Ramen Nebula", cyan),
-    ("cyclone-dancer", "ELEMENTAL", "Cyclone", gold),
-    ("event-horizon", "COSMIC", "Event Horizon", violet),
-    ("sky-temple", "ARCHITECTURE", "Sky Temple", cyan),
-    ("slime-parliament", "COLLECTIVE", "Parliament", gold)
+    ("astral-vowkeeper", "SACRED", "Vowkeeper", gold),
+    ("moonveil-oracle", "MYSTERIOUS", "Moonveil Oracle", violet),
+    ("dreamglass-fencer", "EXQUISITE", "Dreamglass", cyan),
+    ("celestial-garuda", "WINGED HERO", "Garuda", gold),
+    ("roseglass-fennec", "CUTE BEAST", "Roseglass Fennec", violet),
+    ("glacier-sky-dragon", "MYTHIC", "Sky Dragon", cyan),
+    ("sacred-lotus-avatar", "DIVINE", "Lotus Avatar", gold),
+    ("eclipse-wing-oracle", "GOTHIC", "Eclipse Oracle", violet),
+    ("neon-raptor-racer", "NEON MECHA", "Raptor Racer", cyan),
+    ("prism-samurai-frame", "ARENA MECHA", "Prism Frame", gold)
 ]
 let columns = 5
 let cardWidth: CGFloat = 286
@@ -293,32 +293,32 @@ showcaseImage.lockFocus()
 NSGraphicsContext.current?.imageInterpolation = .high
 fillBackground(NSRect(origin: .zero, size: showcaseSize))
 ("TWENTY WAYS TO EXIST." as NSString).draw(at: NSPoint(x: 62, y: 1_250), withAttributes: eyebrow)
-("A broader sample across every category in the built-in catalog." as NSString).draw(
+("A broad sample from the continuous tag-based built-in catalog." as NSString).draw(
     at: NSPoint(x: 62, y: 1_202),
     withAttributes: subtitle
 )
 
 let showcaseEntries: [(String, String, String, NSColor)] = [
-    ("nova", "MYTHIC", "Nova Arena", cyan),
-    ("manticore", "MYTHIC", "Manticore", gold),
-    ("mecha", "MACHINE", "Vanguard", violet),
-    ("aether-frigate", "VEHICLE", "Aether Frigate", cyan),
-    ("moon-lotus", "FLORA", "Moon Lotus", gold),
-    ("mycelium", "FUNGI", "Mycelium", violet),
-    ("halite-crown", "MINERAL", "Halite Crown", cyan),
-    ("fossil-reef", "GEOLOGIC", "Fossil Reef", gold),
-    ("celestial-musicbox", "ARTIFACT", "Music Box", violet),
-    ("runic-grimoire", "INSTRUMENT", "Grimoire", cyan),
-    ("ramen-nebula", "ALCHEMY", "Ramen Nebula", gold),
-    ("cacao-citadel", "FOOD BEING", "Cacao Citadel", violet),
-    ("cyclone-dancer", "ELEMENTAL", "Cyclone", cyan),
-    ("living-voltage", "WEATHER", "Voltage", gold),
-    ("event-horizon", "COSMIC", "Event Horizon", violet),
-    ("quantum-chance", "ABSTRACT", "Quantum Chance", cyan),
-    ("walking-treehouse", "ARCHITECTURE", "Treehouse", gold),
-    ("sky-temple", "ARCHITECTURE", "Sky Temple", violet),
-    ("slime-parliament", "COLLECTIVE", "Parliament", cyan),
-    ("microbe-metropolis", "COLLECTIVE", "Metropolis", gold)
+    ("astral-vowkeeper", "SACRED", "Vowkeeper", cyan),
+    ("moonveil-oracle", "MYSTERIOUS", "Moonveil Oracle", gold),
+    ("dreamglass-fencer", "EXQUISITE", "Dreamglass", violet),
+    ("storm-mask-runner", "HEROIC", "Storm Runner", cyan),
+    ("candy-star-idol", "CUTE", "Candy Star", gold),
+    ("celestial-garuda", "WINGED HERO", "Garuda", violet),
+    ("glacier-sky-dragon", "MYTHIC", "Sky Dragon", cyan),
+    ("roseglass-fennec", "CUTE BEAST", "Roseglass Fennec", gold),
+    ("cosmic-orca", "MAJESTIC", "Cosmic Orca", violet),
+    ("spectral-axolotl", "DREAMLIKE", "Spectral Axolotl", cyan),
+    ("dawnwheel-seraph", "DIVINE", "Dawnwheel Seraph", gold),
+    ("sacred-lotus-avatar", "SACRED", "Lotus Avatar", violet),
+    ("jade-comet-empress", "REGAL", "Comet Empress", cyan),
+    ("void-gate-keeper", "DARK DIVINE", "Void Keeper", gold),
+    ("eclipse-wing-oracle", "GOTHIC", "Eclipse Oracle", violet),
+    ("neon-raptor-racer", "NEON MECHA", "Raptor Racer", cyan),
+    ("prism-samurai-frame", "ARENA MECHA", "Prism Frame", gold),
+    ("lunar-rabbit-rover", "CUTE MECHA", "Rabbit Rover", violet),
+    ("stealth-manta-jet", "STEALTH MECHA", "Manta Jet", cyan),
+    ("solar-wyrm-mech", "REGAL MECHA", "Solar Wyrm", gold)
 ]
 let showcaseColumns = 5
 let showcaseCardWidth: CGFloat = 286
@@ -409,10 +409,10 @@ for (index, theme) in catalog.themes.enumerated() {
         width: allCellWidth - 8,
         height: allCellHeight - 8
     )
-    let categoryColor = [cyan, violet, gold][row % 3]
+    let rowColor = [cyan, violet, gold][row % 3]
     panel.withAlphaComponent(0.78).setFill()
     NSBezierPath(roundedRect: rect, xRadius: 16, yRadius: 16).fill()
-    categoryColor.withAlphaComponent(0.18).setStroke()
+    rowColor.withAlphaComponent(0.18).setStroke()
     let border = NSBezierPath(roundedRect: rect, xRadius: 16, yRadius: 16)
     border.lineWidth = 1.2
     border.stroke()

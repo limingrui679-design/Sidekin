@@ -4,7 +4,7 @@ import Foundation
 enum PetThemeCatalogGenerated {
     static let json = #"""
 {
-  "schemaVersion" : 1,
+  "schemaVersion" : 2,
   "themes" : [
     {
       "accent" : {
@@ -12,7 +12,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.92,
         "red" : 0.12
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Nova Arena",
       "energyAnchor" : "Four-point star core and nested gravity orbits",
       "existenceAnchor" : "Astral Crystal Moonhare",
@@ -62,7 +62,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Crescent ears, comet-tail streamers, long spring legs, and one evolving crystal starbow",
       "silhouetteClass" : "upright-long-eared-archer",
       "subtitle" : "Crystal energy · astral arena",
-      "symbolName" : "sparkles"
+      "symbolName" : "sparkles",
+      "tags" : [
+        "mythic creature",
+        "whimsical",
+        "upright long eared archer"
+      ]
     },
     {
       "accent" : {
@@ -70,7 +75,7 @@ enum PetThemeCatalogGenerated {
         "green" : 1,
         "red" : 0.7
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Street Brawl",
       "energyAnchor" : "Acid-green soundwaves and red graffiti bursts",
       "existenceAnchor" : "Graffiti Gecko",
@@ -120,7 +125,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Long suction limbs, a spray-can tail, low shoulders, and skateboard side rails",
       "silhouetteClass" : "low-four-limbed-board-rider",
       "subtitle" : "Graffiti armor · acid neon",
-      "symbolName" : "bolt.fill"
+      "symbolName" : "bolt.fill",
+      "tags" : [
+        "mythic creature",
+        "dynamic",
+        "low four limbed board rider"
+      ]
     },
     {
       "accent" : {
@@ -128,7 +138,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.24,
         "red" : 1
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Sakura Blade",
       "energyAnchor" : "A petal crescent gathering along each drawn blade",
       "existenceAnchor" : "Red Fox × Crane",
@@ -178,7 +188,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Crane-legged profile, fox muzzle, fan-feather tail, and crescent wing blades",
       "silhouetteClass" : "tall-avian-canine-swordsman",
       "subtitle" : "Vermilion warplate · sakura energy",
-      "symbolName" : "fan.fill"
+      "symbolName" : "fan.fill",
+      "tags" : [
+        "mythic creature",
+        "elegant",
+        "tall avian canine swordsman"
+      ]
     },
     {
       "accent" : {
@@ -186,7 +201,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.84,
         "red" : 0
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Abyssal Tidehunter",
       "energyAnchor" : "Cyan bioluminescence and expanding tidal rings",
       "existenceAnchor" : "Salamander × Crab × Manta",
@@ -236,7 +251,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Wide horizontal body, many fins and limbs, pincer forearms, and ring-shaped manta wings",
       "silhouetteClass" : "wide-multi-limbed-swimmer",
       "subtitle" : "Deep-sea carapace · tidal bioluminescence",
-      "symbolName" : "water.waves"
+      "symbolName" : "water.waves",
+      "tags" : [
+        "mythic creature",
+        "aquatic",
+        "wide multi limbed swimmer"
+      ]
     },
     {
       "accent" : {
@@ -244,7 +264,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.78,
         "red" : 0.35
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Tempest Aerie",
       "energyAnchor" : "White-blue lightning vortex and ionized feather trails",
       "existenceAnchor" : "Thunder Roc",
@@ -294,7 +314,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Hooked beak, two taloned legs, broad storm wings, and a swept feather crest",
       "silhouetteClass" : "broad-winged-bipedal-raptor",
       "subtitle" : "Storm feathers · copper lightning vanes",
-      "symbolName" : "cloud.bolt.fill"
+      "symbolName" : "cloud.bolt.fill",
+      "tags" : [
+        "mythic creature",
+        "aerial",
+        "broad winged bipedal raptor"
+      ]
     },
     {
       "accent" : {
@@ -302,7 +327,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.9,
         "red" : 0.6
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Glacier Colossus",
       "energyAnchor" : "Aurora heart, frost breath, and pressure-cracked ice runes",
       "existenceAnchor" : "Glacier Mammoth",
@@ -352,7 +377,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Massive fur arch, four column legs, long paired tusks, and a ridged ice saddle",
       "silhouetteClass" : "massive-four-column-mammoth",
       "subtitle" : "Rime fur · blue-ice armor",
-      "symbolName" : "snowflake"
+      "symbolName" : "snowflake",
+      "tags" : [
+        "mythic creature",
+        "colossal",
+        "massive four column mammoth"
+      ]
     },
     {
       "accent" : {
@@ -360,7 +390,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.7,
         "red" : 1
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Sunscarab Dominion",
       "energyAnchor" : "Amber solar lens and rotating heliostat glyphs",
       "existenceAnchor" : "Solar Scarab",
@@ -410,7 +440,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Low hexagonal body, six splayed legs, split wing cases, and a sun-disc horn",
       "silhouetteClass" : "low-six-legged-beetle",
       "subtitle" : "Sunstone shell · gilded wing cases",
-      "symbolName" : "sun.max.fill"
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "mythic creature",
+        "swift",
+        "low six legged beetle"
+      ]
     },
     {
       "accent" : {
@@ -418,7 +453,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.95,
         "red" : 0.1
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Neon Koi Circuit",
       "energyAnchor" : "Magenta-cyan current lines and a pulsing circuit pearl",
       "existenceAnchor" : "Neon Koi Wyrm",
@@ -468,7 +503,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Legless S-curve body, long side fins, twin fan tail, and floating circuit loops",
       "silhouetteClass" : "ribbon-bodied-air-swimmer",
       "subtitle" : "Holographic scales · conductive neon fins",
-      "symbolName" : "waveform.path"
+      "symbolName" : "waveform.path",
+      "tags" : [
+        "mythic creature",
+        "serpentine",
+        "ribbon bodied air swimmer"
+      ]
     },
     {
       "accent" : {
@@ -476,7 +516,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.48,
         "red" : 1
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Solar Manticore",
       "energyAnchor" : "Solar corona mane and a star-bright scorpion stinger",
       "existenceAnchor" : "Sunmane Manticore",
@@ -526,7 +566,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Low feline frame, radial sun mane, broad paws, and a segmented scorpion tail",
       "silhouetteClass" : "low-feline-with-arched-tail",
       "subtitle" : "Dark feline hide · stained-gold sun plates",
-      "symbolName" : "sun.horizon.fill"
+      "symbolName" : "sun.horizon.fill",
+      "tags" : [
+        "mythic creature",
+        "fierce",
+        "low feline with arched tail"
+      ]
     },
     {
       "accent" : {
@@ -534,7 +579,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.42,
         "red" : 0.65
       },
-      "category" : "faunaMythic",
+      "artStyle" : "premium fantasy creature rendering with competitive-game silhouette clarity",
       "displayName" : "Prism Web",
       "energyAnchor" : "Refracted spectrum web and a white prism-heart flare",
       "existenceAnchor" : "Prism Orb-Weaver",
@@ -584,7 +629,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Radial body, eight long jointed legs, loom-shaped abdomen, and an open web ring",
       "silhouetteClass" : "radial-eight-legged-weaver",
       "subtitle" : "Prism quartz · spectral silk",
-      "symbolName" : "circle.hexagongrid.fill"
+      "symbolName" : "circle.hexagongrid.fill",
+      "tags" : [
+        "mythic creature",
+        "swift",
+        "radial eight legged weaver"
+      ]
     },
     {
       "accent" : {
@@ -592,7 +642,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.52,
         "red" : 1
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Vanguard Mecha",
       "energyAnchor" : "Alert-orange hexagonal reactor and segmented targeting lines",
       "existenceAnchor" : "Wheel-Paw Mecha Mastiff",
@@ -642,7 +692,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Low broad shoulders, four wheel-paws, a wedge head, and a deployable turret spine",
       "silhouetteClass" : "low-four-wheel-mecha-hound",
       "subtitle" : "Ceramic armor · alert-orange core",
-      "symbolName" : "cpu.fill"
+      "symbolName" : "cpu.fill",
+      "tags" : [
+        "mecha construct",
+        "precision",
+        "low four wheel mecha hound"
+      ]
     },
     {
       "accent" : {
@@ -650,7 +705,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.58,
         "red" : 0.92
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Wasteland Salvager",
       "energyAnchor" : "Amber reclaimed battery and sandstorm electrical arcs",
       "existenceAnchor" : "Armored Fennec Salvage Rig",
@@ -700,7 +755,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Huge-eared quadruped with cargo modules, a folding crane rig, and a radio array",
       "silhouetteClass" : "four-legged-salvage-carrier",
       "subtitle" : "Scrap-built armor · corroded brass",
-      "symbolName" : "wrench.and.screwdriver.fill"
+      "symbolName" : "wrench.and.screwdriver.fill",
+      "tags" : [
+        "mecha construct",
+        "fierce",
+        "four legged salvage carrier"
+      ]
     },
     {
       "accent" : {
@@ -708,7 +768,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.16,
         "red" : 0.95
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Ironline Rail Spirit",
       "energyAnchor" : "Signal-red steam and white-hot switch-point sparks",
       "existenceAnchor" : "Autonomous Living Locomotive",
@@ -758,7 +818,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Long horizontal boiler, cowcatcher jaw, piston legs, and a rail-loop tail",
       "silhouetteClass" : "elongated-locomotive-centipede",
       "subtitle" : "Blackened steel · signal-red steam",
-      "symbolName" : "tram.fill"
+      "symbolName" : "tram.fill",
+      "tags" : [
+        "mecha construct",
+        "precision",
+        "elongated locomotive centipede"
+      ]
     },
     {
       "accent" : {
@@ -766,7 +831,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.82,
         "red" : 0.22
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Hadal Bathysphere",
       "energyAnchor" : "Pale searchlight cone and violet sonar ripples",
       "existenceAnchor" : "Sentient Deep-Sea Bathysphere",
@@ -816,7 +881,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Round pressure hull, three viewport eyes, ballast keel, and telescoping manipulator arms",
       "silhouetteClass" : "spherical-submersible-with-arms",
       "subtitle" : "Pressure brass · abyssal searchlight",
-      "symbolName" : "water.waves"
+      "symbolName" : "water.waves",
+      "tags" : [
+        "mecha construct",
+        "aquatic",
+        "spherical submersible with arms"
+      ]
     },
     {
       "accent" : {
@@ -824,7 +894,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.78,
         "red" : 0.92
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Pollinator Array",
       "energyAnchor" : "Pollen-gold scan cones and green route lattices",
       "existenceAnchor" : "Autonomous Pollination Drone",
@@ -874,7 +944,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Central seed-shaped fuselage, four petal rotors, needle nose, and detachable satellite pods",
       "silhouetteClass" : "radial-four-rotor-drone",
       "subtitle" : "Petal rotors · pollen-gold optics",
-      "symbolName" : "dot.radiowaves.left.and.right"
+      "symbolName" : "dot.radiowaves.left.and.right",
+      "tags" : [
+        "mecha construct",
+        "aerial",
+        "radial four rotor drone"
+      ]
     },
     {
       "accent" : {
@@ -882,7 +957,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.62,
         "red" : 0.32
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Moonbase Crawler",
       "energyAnchor" : "Cobalt survey beams and geometric regolith scans",
       "existenceAnchor" : "Expandable Lunar Research Rover",
@@ -932,7 +1007,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Low rectangular chassis, six rocker wheels, mast head, and unfolding laboratory wings",
       "silhouetteClass" : "low-six-wheel-rover",
       "subtitle" : "Regolith armor · cobalt survey light",
-      "symbolName" : "moon.fill"
+      "symbolName" : "moon.fill",
+      "tags" : [
+        "mecha construct",
+        "mobile",
+        "low six wheel rover"
+      ]
     },
     {
       "accent" : {
@@ -940,7 +1020,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.88,
         "red" : 0.2
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Aether Frigate",
       "energyAnchor" : "Teal wind runes and pearly buoyancy currents",
       "existenceAnchor" : "Autonomous Cloud-Sailing Frigate",
@@ -990,7 +1070,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Long boat hull, high prow, stacked lift sails, and two detached cloud outriggers",
       "silhouetteClass" : "long-hulled-floating-airship",
       "subtitle" : "Cloudwood hull · turquoise lift sails",
-      "symbolName" : "wind"
+      "symbolName" : "wind",
+      "tags" : [
+        "mecha construct",
+        "graceful",
+        "long hulled floating airship"
+      ]
     },
     {
       "accent" : {
@@ -998,7 +1083,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.3,
         "red" : 1
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Mobile Foundry",
       "energyAnchor" : "White-orange crucible core and showers of forging sparks",
       "existenceAnchor" : "Self-Repairing Walking Foundry",
@@ -1048,7 +1133,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Tall furnace torso, four gantry legs, overhead chimney, and asymmetric casting arms",
       "silhouetteClass" : "four-legged-industrial-tower",
       "subtitle" : "Furnace iron · molten casting arms",
-      "symbolName" : "hammer.fill"
+      "symbolName" : "hammer.fill",
+      "tags" : [
+        "mecha construct",
+        "colossal",
+        "four legged industrial tower"
+      ]
     },
     {
       "accent" : {
@@ -1056,7 +1146,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.68,
         "red" : 0.2
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Arcade Titan",
       "energyAnchor" : "Primary-color pixels and scanline combo meters",
       "existenceAnchor" : "Transforming Arcade Cabinet",
@@ -1106,7 +1196,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Upright cabinet torso, screen face, joystick shoulder, and button-cluster limbs",
       "silhouetteClass" : "upright-cabinet-transformer",
       "subtitle" : "Cabinet plastic · pixel power",
-      "symbolName" : "gamecontroller.fill"
+      "symbolName" : "gamecontroller.fill",
+      "tags" : [
+        "mecha construct",
+        "regal",
+        "upright cabinet transformer"
+      ]
     },
     {
       "accent" : {
@@ -1114,7 +1209,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.62,
         "red" : 0.12
       },
-      "category" : "machinesVehicles",
+      "artStyle" : "hard-surface arena mecha rendering with readable modular engineering",
       "displayName" : "Rescue Convoy",
       "energyAnchor" : "Rotating blue beacon bands and clean white rescue grids",
       "existenceAnchor" : "Transforming Multi-Role Rescue Convoy",
@@ -1164,7 +1259,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Wedge ambulance body, four telescoping legs, roof beacon, and detachable side modules",
       "silhouetteClass" : "modular-emergency-vehicle",
       "subtitle" : "Safety composite · beacon-blue modules",
-      "symbolName" : "cross.case.fill"
+      "symbolName" : "cross.case.fill",
+      "tags" : [
+        "mecha construct",
+        "mobile",
+        "modular emergency vehicle"
+      ]
     },
     {
       "accent" : {
@@ -1172,7 +1272,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.76,
         "red" : 0.58
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Verdant Totem",
       "energyAnchor" : "Amber heartwood and luminous growth-ring waves",
       "existenceAnchor" : "Ancient Tree Stag × Boar",
@@ -1222,7 +1322,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Four root-hooves, boar-like shoulders, a carved trunk face, and worldtree crown antlers",
       "silhouetteClass" : "root-hoofed-canopy-beast",
       "subtitle" : "Carved wood and stone · amber tree energy",
-      "symbolName" : "leaf.fill"
+      "symbolName" : "leaf.fill",
+      "tags" : [
+        "botanical entity",
+        "ancient",
+        "root hoofed canopy beast"
+      ]
     },
     {
       "accent" : {
@@ -1230,7 +1335,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.95,
         "red" : 0.24
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Mycelium Grove",
       "energyAnchor" : "Teal spore constellations and a breathing lantern throat",
       "existenceAnchor" : "Mycelium Toad",
@@ -1280,7 +1385,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Wide squat frog body, oversized mushroom cap, lantern throat, and branching root toes",
       "silhouetteClass" : "squat-cap-bodied-hopper",
       "subtitle" : "Velvet caps · bioluminescent mycelium",
-      "symbolName" : "circle.dotted.circle.fill"
+      "symbolName" : "circle.dotted.circle.fill",
+      "tags" : [
+        "botanical entity",
+        "cute",
+        "squat cap bodied hopper"
+      ]
     },
     {
       "accent" : {
@@ -1288,7 +1398,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.3,
         "red" : 0.72
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Thunder Orchid",
       "energyAnchor" : "Violet lightning beads traveling down copper-blue roots",
       "existenceAnchor" : "Self-Flying Storm Orchid",
@@ -1338,7 +1448,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Five broad petals, a narrow hanging stem, tangled aerial roots, and two vane leaves",
       "silhouetteClass" : "radial-flower-with-root-tail",
       "subtitle" : "Rain-silk petals · charged aerial roots",
-      "symbolName" : "bolt.circle.fill"
+      "symbolName" : "bolt.circle.fill",
+      "tags" : [
+        "botanical entity",
+        "aerial",
+        "radial flower with root tail"
+      ]
     },
     {
       "accent" : {
@@ -1346,7 +1461,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.84,
         "red" : 0.34
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Mirage Cactus",
       "energyAnchor" : "Gold heat haze and inverted horizon reflections",
       "existenceAnchor" : "Ambulatory Mirage Cactus",
@@ -1396,7 +1511,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Tall ribbed column, two uneven arms, a ring of root feet, and a crown blossom",
       "silhouetteClass" : "upright-branching-column-plant",
       "subtitle" : "Waxy jade · heat-haze blossoms",
-      "symbolName" : "sun.dust.fill"
+      "symbolName" : "sun.dust.fill",
+      "tags" : [
+        "botanical entity",
+        "regal",
+        "upright branching column plant"
+      ]
     },
     {
       "accent" : {
@@ -1404,7 +1524,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.72,
         "red" : 0.12
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Tidal Mangrove",
       "energyAnchor" : "Lagoon-blue tide marks and silver salt pulses",
       "existenceAnchor" : "Ambulatory Mangrove Ecosystem",
@@ -1454,7 +1574,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Broad canopy, hollow trunk basin, many arching stilt roots, and hanging seed pods",
       "silhouetteClass" : "canopy-on-stilt-root-arches",
       "subtitle" : "Salt bark · lagoon-blue sap",
-      "symbolName" : "water.waves.and.arrow.up"
+      "symbolName" : "water.waves.and.arrow.up",
+      "tags" : [
+        "botanical entity",
+        "ancient",
+        "canopy on stilt root arches"
+      ]
     },
     {
       "accent" : {
@@ -1462,7 +1587,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.88,
         "red" : 0.78
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Moonlit Lotus",
       "energyAnchor" : "Cool moon disc and concentric luminous dew rings",
       "existenceAnchor" : "Airborne Lunar Lotus",
@@ -1512,7 +1637,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Wide petal rosette, central seed cup, trailing ribbon stems, and a vertical moon disc",
       "silhouetteClass" : "floating-horizontal-rosette",
       "subtitle" : "Pearl petals · lunar dew",
-      "symbolName" : "moon.stars.fill"
+      "symbolName" : "moon.stars.fill",
+      "tags" : [
+        "botanical entity",
+        "whimsical",
+        "floating horizontal rosette"
+      ]
     },
     {
       "accent" : {
@@ -1520,7 +1650,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.74,
         "red" : 0.08
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Abyss Kelp Choir",
       "energyAnchor" : "Sonar-blue harmonics and visible standing-wave knots",
       "existenceAnchor" : "Colonial Singing Kelp",
@@ -1570,7 +1700,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Weighted anchor bulb, tall ribbon fronds, side air bladders, and a tuning-fork crown",
       "silhouetteClass" : "vertical-ribbon-column",
       "subtitle" : "Black kelp ribbons · sonar-blue nodes",
-      "symbolName" : "waveform"
+      "symbolName" : "waveform",
+      "tags" : [
+        "botanical entity",
+        "ethereal",
+        "vertical ribbon column"
+      ]
     },
     {
       "accent" : {
@@ -1578,7 +1713,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.82,
         "red" : 0.36
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Seedvault Baobab",
       "energyAnchor" : "Emerald germination lights and soft climate-control spirals",
       "existenceAnchor" : "Mobile Botanical Seed Vault",
@@ -1628,7 +1763,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Enormous bottle trunk, short root legs, sparse crown branches, and circular seed windows",
       "silhouetteClass" : "bottle-trunk-on-root-legs",
       "subtitle" : "Pale cork bark · emerald seed windows",
-      "symbolName" : "archivebox.fill"
+      "symbolName" : "archivebox.fill",
+      "tags" : [
+        "botanical entity",
+        "colossal",
+        "bottle trunk on root legs"
+      ]
     },
     {
       "accent" : {
@@ -1636,7 +1776,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.08,
         "red" : 0.86
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Crown Bramble",
       "energyAnchor" : "Crimson sap pulses and thorn-tip warning sparks",
       "existenceAnchor" : "Ambulatory Thorn-Vine Colony",
@@ -1686,7 +1826,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Hollow rolling vine cage, hooked thorn spokes, trailing tendrils, and a central ruby bud",
       "silhouetteClass" : "hollow-thorn-wheel",
       "subtitle" : "Iron thorns · ruby sap",
-      "symbolName" : "crown.fill"
+      "symbolName" : "crown.fill",
+      "tags" : [
+        "botanical entity",
+        "mobile",
+        "hollow thorn wheel"
+      ]
     },
     {
       "accent" : {
@@ -1694,7 +1839,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.95,
         "red" : 0.35
       },
-      "category" : "floraFungi",
+      "artStyle" : "luminous organic fantasy rendering with sculptural botanical materials",
       "displayName" : "Glassfern Oracle",
       "energyAnchor" : "Prismatic forecast lines and a white refraction eye",
       "existenceAnchor" : "Photosensitive Silica Fern",
@@ -1744,7 +1889,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Fan-shaped frond crown, jointed black stem, tripod rhizome, and a central prism eye",
       "silhouetteClass" : "fan-frond-on-tripod-stem",
       "subtitle" : "Silica fronds · prismatic veinlight",
-      "symbolName" : "triangle.fill"
+      "symbolName" : "triangle.fill",
+      "tags" : [
+        "botanical entity",
+        "elegant",
+        "fan frond on tripod stem"
+      ]
     },
     {
       "accent" : {
@@ -1752,7 +1902,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.24,
         "red" : 1
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Molten Tyrant",
       "energyAnchor" : "Orange-white underfire and erupting crown ridges",
       "existenceAnchor" : "Pangolin × Ankylosaur Magma Beast",
@@ -1802,7 +1952,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Ground-hugging arched back, layered rock plates, basalt horns, and a massive hammer tail",
       "silhouetteClass" : "low-armored-hammer-tail-beast",
       "subtitle" : "Obsidian layers · molten fissures",
-      "symbolName" : "flame.fill"
+      "symbolName" : "flame.fill",
+      "tags" : [
+        "mineral being",
+        "colossal",
+        "low armored hammer tail beast"
+      ]
     },
     {
       "accent" : {
@@ -1810,7 +1965,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.28,
         "red" : 0.66
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Amethyst Heart",
       "energyAnchor" : "Deep-violet heart pulse and refracted triangular rays",
       "existenceAnchor" : "Ambulatory Amethyst Geode",
@@ -1860,7 +2015,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Rough oval shell, split crystal jaws, three stone feet, and a suspended heart prism",
       "silhouetteClass" : "split-geode-on-tripod-feet",
       "subtitle" : "Geode shell · violet crystal pulse",
-      "symbolName" : "diamond.fill"
+      "symbolName" : "diamond.fill",
+      "tags" : [
+        "mineral being",
+        "cute",
+        "split geode on tripod feet"
+      ]
     },
     {
       "accent" : {
@@ -1868,7 +2028,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.48,
         "red" : 0.92
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Dune Monolith",
       "energyAnchor" : "Golden contour lines and luminous erosion windows",
       "existenceAnchor" : "Sentient Stratified Sandstone",
@@ -1918,7 +2078,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Tall narrow slab, offset rock fins, a flowing sand foot, and one eroded window",
       "silhouetteClass" : "vertical-slab-on-sand-base",
       "subtitle" : "Layered sandstone · wind-carved light",
-      "symbolName" : "rectangle.portrait.fill"
+      "symbolName" : "rectangle.portrait.fill",
+      "tags" : [
+        "mineral being",
+        "graceful",
+        "vertical slab on sand base"
+      ]
     },
     {
       "accent" : {
@@ -1926,7 +2091,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.52,
         "red" : 0.18
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Magnetite Orbit",
       "energyAnchor" : "Blue-red polar arcs and fine visible field lines",
       "existenceAnchor" : "Self-Assembling Magnetite Field",
@@ -1976,7 +2141,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Central compass needle, floating black shards, two polar arcs, and no fixed body shell",
       "silhouetteClass" : "floating-shard-field",
       "subtitle" : "Iron crystal · polar aurora",
-      "symbolName" : "scope"
+      "symbolName" : "scope",
+      "tags" : [
+        "mineral being",
+        "arcane",
+        "floating shard field"
+      ]
     },
     {
       "accent" : {
@@ -1984,7 +2154,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.58,
         "red" : 1
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Amber Archive",
       "energyAnchor" : "Memory-gold backlight and concentric magnification halos",
       "existenceAnchor" : "Sentient Fossil-Resin Archive",
@@ -2034,7 +2204,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Tapered amber obelisk, four resin rollers, suspended inclusions, and a magnifying crown lens",
       "silhouetteClass" : "tapered-obelisk-on-rollers",
       "subtitle" : "Fossil resin · memory-gold glow",
-      "symbolName" : "archivebox.fill"
+      "symbolName" : "archivebox.fill",
+      "tags" : [
+        "mineral being",
+        "mobile",
+        "tapered obelisk on rollers"
+      ]
     },
     {
       "accent" : {
@@ -2042,7 +2217,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.68,
         "red" : 0.2
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Fossil Reef",
       "energyAnchor" : "Ocean-blue reconstruction outlines and pale sediment clouds",
       "existenceAnchor" : "Mobile Fossil Reef Formation",
@@ -2092,7 +2267,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Low limestone shelf, branching fossil spires, shell-wheel feet, and an ammonite arch",
       "silhouetteClass" : "low-branching-reef-platform",
       "subtitle" : "Petrified bone · ocean-blue strata",
-      "symbolName" : "fossil.shell.fill"
+      "symbolName" : "fossil.shell.fill",
+      "tags" : [
+        "mineral being",
+        "colossal",
+        "low branching reef platform"
+      ]
     },
     {
       "accent" : {
@@ -2100,7 +2280,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.78,
         "red" : 1
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Resonant Quartz",
       "energyAnchor" : "Golden standing waves and white harmonic nodes",
       "existenceAnchor" : "Self-Tuning Quartz Cluster",
@@ -2150,7 +2330,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Tall central crystal, two tuning-fork limbs, low base shards, and floating harmonic bars",
       "silhouetteClass" : "crystal-spire-with-fork-limbs",
       "subtitle" : "Clear crystal · harmonic gold",
-      "symbolName" : "tuningfork"
+      "symbolName" : "tuningfork",
+      "tags" : [
+        "mineral being",
+        "elegant",
+        "crystal spire with fork limbs"
+      ]
     },
     {
       "accent" : {
@@ -2158,7 +2343,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.34,
         "red" : 0.92
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Terracotta Fault",
       "energyAnchor" : "Kiln-blue rift glow and orange seismic pulse rings",
       "existenceAnchor" : "Living Terracotta Microcontinent",
@@ -2208,7 +2393,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Flat layered body, six slab feet, central rift valley, and two raised fault ridges",
       "silhouetteClass" : "flat-segmented-plate-crawler",
       "subtitle" : "Fired clay plates · kiln-blue seams",
-      "symbolName" : "square.3.layers.3d"
+      "symbolName" : "square.3.layers.3d",
+      "tags" : [
+        "mineral being",
+        "swift",
+        "flat segmented plate crawler"
+      ]
     },
     {
       "accent" : {
@@ -2216,7 +2406,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.62,
         "red" : 0.3
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Meteor Iron",
       "energyAnchor" : "Blue-white impact plasma and orange cooling seams",
       "existenceAnchor" : "Self-Rebuilding Iron Meteorite",
@@ -2266,7 +2456,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Irregular dense core, four shard limbs, a tilted crater ring, and a trailing plasma scar",
       "silhouetteClass" : "irregular-core-inside-crater-ring",
       "subtitle" : "Widmanstätten steel · impact plasma",
-      "symbolName" : "circle.hexagongrid.fill"
+      "symbolName" : "circle.hexagongrid.fill",
+      "tags" : [
+        "mineral being",
+        "colossal",
+        "irregular core inside crater ring"
+      ]
     },
     {
       "accent" : {
@@ -2274,7 +2469,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.9,
         "red" : 0.62
       },
-      "category" : "mineralGeological",
+      "artStyle" : "jewel-like elemental rendering with monumental crystalline geometry",
       "displayName" : "Halite Crown",
       "energyAnchor" : "Brine-blue capillary light and square evaporation halos",
       "existenceAnchor" : "Ambulatory Halite Crystal Palace",
@@ -2324,7 +2519,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Stepped cubic tower, four brine feet, hollow square windows, and a crown of salt forks",
       "silhouetteClass" : "stepped-cubic-crystal-tower",
       "subtitle" : "Salt crystal steps · brine-blue core",
-      "symbolName" : "cube.fill"
+      "symbolName" : "cube.fill",
+      "tags" : [
+        "mineral being",
+        "graceful",
+        "stepped cubic crystal tower"
+      ]
     },
     {
       "accent" : {
@@ -2332,7 +2532,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.58,
         "red" : 0.78
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Chrono Spiral",
       "energyAnchor" : "Pendulum eye, ticking orbit marks, and split-second halo",
       "existenceAnchor" : "Clockwork Nautilus",
@@ -2382,7 +2582,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Dominant spiral shell, eight short tentacles, and one offset gyroscopic ring",
       "silhouetteClass" : "spiral-shell-with-tentacle-base",
       "subtitle" : "Clockwork shell · gyroscopic time rings",
-      "symbolName" : "clock.fill"
+      "symbolName" : "clock.fill",
+      "tags" : [
+        "living artifact",
+        "arcane",
+        "spiral shell with tentacle base"
+      ]
     },
     {
       "accent" : {
@@ -2390,7 +2595,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.58,
         "red" : 0.35
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Origami Skyfold",
       "energyAnchor" : "Cobalt fold lines and floating wind-seal characters",
       "existenceAnchor" : "Origami Kite Dragon",
@@ -2440,7 +2645,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Diamond-fold torso, angular paper wings, pointed snout, and segmented ribbon tail",
       "silhouetteClass" : "angular-paper-kite-dragon",
       "subtitle" : "Lacquered paper · luminous fold lines",
-      "symbolName" : "paperplane.fill"
+      "symbolName" : "paperplane.fill",
+      "tags" : [
+        "living artifact",
+        "graceful",
+        "angular paper kite dragon"
+      ]
     },
     {
       "accent" : {
@@ -2448,7 +2658,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.18,
         "red" : 0.92
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Inkbrush Guardian",
       "energyAnchor" : "Black ink orbit, white negative-space strokes, and red seal pulse",
       "existenceAnchor" : "Inkbrush Panda",
@@ -2498,7 +2708,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Upright round panda, oversized brush staff, scroll sash, and orbiting ink ribbon",
       "silhouetteClass" : "upright-round-brush-wielder",
       "subtitle" : "Bamboo armor · living sumi ink",
-      "symbolName" : "paintbrush.pointed.fill"
+      "symbolName" : "paintbrush.pointed.fill",
+      "tags" : [
+        "living artifact",
+        "elegant",
+        "upright round brush wielder"
+      ]
     },
     {
       "accent" : {
@@ -2506,7 +2721,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.7,
         "red" : 0.96
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Celestial Music Box",
       "energyAnchor" : "Tiny star notes and concentric golden rhythm rings",
       "existenceAnchor" : "Sentient Astronomical Music Box",
@@ -2556,7 +2771,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Square wooden case, rotating pinned cylinder, fan-shaped comb, and orbiting brass chimes",
       "silhouetteClass" : "box-body-with-orbiting-chimes",
       "subtitle" : "Walnut case · starlight comb",
-      "symbolName" : "music.note.list"
+      "symbolName" : "music.note.list",
+      "tags" : [
+        "living artifact",
+        "elegant",
+        "box body with orbiting chimes"
+      ]
     },
     {
       "accent" : {
@@ -2564,7 +2784,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.82,
         "red" : 0.98
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Wayfinder Lantern",
       "energyAnchor" : "Needle-white flame and projected compass paths",
       "existenceAnchor" : "Sentient Compass Lantern",
@@ -2614,7 +2834,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Tall glass chamber, arched handle, three shutter legs, and a needle-shaped inner flame",
       "silhouetteClass" : "handled-lantern-on-tripod-shutters",
       "subtitle" : "Patinated copper · compass flame",
-      "symbolName" : "lantern.fill"
+      "symbolName" : "lantern.fill",
+      "tags" : [
+        "living artifact",
+        "regal",
+        "handled lantern on tripod shutters"
+      ]
     },
     {
       "accent" : {
@@ -2622,7 +2847,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.36,
         "red" : 0.92
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Masquerade Reliquary",
       "energyAnchor" : "Rose-gold expression lines and violet memory smoke",
       "existenceAnchor" : "Collective Enchanted Mask Reliquary",
@@ -2672,7 +2897,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Central blank mask, layered side masks, trailing velvet panels, and a broken halo frame",
       "silhouetteClass" : "floating-multi-mask-cloak",
       "subtitle" : "Porcelain masks · velvet memory",
-      "symbolName" : "theatermasks.fill"
+      "symbolName" : "theatermasks.fill",
+      "tags" : [
+        "living artifact",
+        "mysterious",
+        "floating multi mask cloak"
+      ]
     },
     {
       "accent" : {
@@ -2680,7 +2910,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.42,
         "red" : 0.42
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Dreamweaver Loom",
       "energyAnchor" : "Lucid rainbow warp and softly glowing memory knots",
       "existenceAnchor" : "Ambulatory Enchanted Loom",
@@ -2730,7 +2960,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Tall rectangular frame, four shuttle feet, dense vertical warp, and a wide flying beater",
       "silhouetteClass" : "rectangular-frame-on-shuttle-feet",
       "subtitle" : "Moonwood frame · lucid warp threads",
-      "symbolName" : "rectangle.split.3x3.fill"
+      "symbolName" : "rectangle.split.3x3.fill",
+      "tags" : [
+        "living artifact",
+        "precision",
+        "rectangular frame on shuttle feet"
+      ]
     },
     {
       "accent" : {
@@ -2738,7 +2973,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.75,
         "red" : 0.42
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Thunder Bell",
       "energyAnchor" : "White thunder rings and blue sound-pressure fractures",
       "existenceAnchor" : "Sentient Storm Temple Bell",
@@ -2788,7 +3023,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Large inverted bell body, long clapper tail, two cracked rim arms, and a cloud handle",
       "silhouetteClass" : "inverted-bell-with-clapper-tail",
       "subtitle" : "Temple bronze · storm-white resonance",
-      "symbolName" : "bell.fill"
+      "symbolName" : "bell.fill",
+      "tags" : [
+        "living artifact",
+        "luminous",
+        "inverted bell with clapper tail"
+      ]
     },
     {
       "accent" : {
@@ -2796,7 +3036,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.58,
         "red" : 0.3
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Astral Astrolabe",
       "energyAnchor" : "Fine blue coordinate lines and a fixed white pole star",
       "existenceAnchor" : "Sentient Navigational Astrolabe",
@@ -2846,7 +3086,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Nested open rings, offset pointer, three compass feet, and a suspended star plate",
       "silhouetteClass" : "nested-rings-on-tripod-compass",
       "subtitle" : "Silver rings · midnight enamel",
-      "symbolName" : "scope"
+      "symbolName" : "scope",
+      "tags" : [
+        "living artifact",
+        "arcane",
+        "nested rings on tripod compass"
+      ]
     },
     {
       "accent" : {
@@ -2854,7 +3099,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.56,
         "red" : 0.22
       },
-      "category" : "artifactsInstruments",
+      "artStyle" : "ornate living-object character art with animated mechanical detail",
       "displayName" : "Runic Grimoire",
       "energyAnchor" : "Cobalt scriptfire and floating geometric punctuation",
       "existenceAnchor" : "Self-Rewriting Enchanted Grimoire",
@@ -2904,7 +3149,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Thick book torso, page-fan wings, bookmark legs, metal corner jaws, and a rune clasp",
       "silhouetteClass" : "open-book-with-page-wings",
       "subtitle" : "Leather pages · cobalt scriptfire",
-      "symbolName" : "book.closed.fill"
+      "symbolName" : "book.closed.fill",
+      "tags" : [
+        "living artifact",
+        "aerial",
+        "open book with page wings"
+      ]
     },
     {
       "accent" : {
@@ -2912,7 +3162,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.36,
         "red" : 1
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Candy Carnival",
       "energyAnchor" : "Rainbow bubbles and a heart-shaped candy core",
       "existenceAnchor" : "Balloon Hare × Gummy Spirit",
@@ -2962,7 +3212,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Rounded springy body, ribbon-like ears, transparent belly, and a halo of balloon rings",
       "silhouetteClass" : "round-gummy-hare-with-balloon-halo",
       "subtitle" : "Candy toys · gummy energy",
-      "symbolName" : "heart.fill"
+      "symbolName" : "heart.fill",
+      "tags" : [
+        "alchemy familiar",
+        "cute",
+        "round gummy hare with balloon halo"
+      ]
     },
     {
       "accent" : {
@@ -2970,7 +3225,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.82,
         "red" : 0.36
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Tea Alchemist",
       "energyAnchor" : "Amber infusion spirals and mint-white steam characters",
       "existenceAnchor" : "Sentient Celadon Teapot Laboratory",
@@ -3020,7 +3275,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Round pot torso, long spout arm, handle arch, four cup feet, and a lid-cap chimney",
       "silhouetteClass" : "round-teapot-on-cup-feet",
       "subtitle" : "Celadon glaze · fragrant steam sigils",
-      "symbolName" : "cup.and.saucer.fill"
+      "symbolName" : "cup.and.saucer.fill",
+      "tags" : [
+        "alchemy familiar",
+        "luminous",
+        "round teapot on cup feet"
+      ]
     },
     {
       "accent" : {
@@ -3028,7 +3288,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.68,
         "red" : 1
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Ramen Nebula",
       "energyAnchor" : "Golden broth spiral and red-blue topping constellations",
       "existenceAnchor" : "Self-Orbiting Cosmic Ramen Bowl",
@@ -3078,7 +3338,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Wide bowl body, two chopstick masts, looping noodle arms, and orbiting topping moons",
       "silhouetteClass" : "floating-bowl-with-noodle-orbits",
       "subtitle" : "Broth-gold orbit · noodle constellations",
-      "symbolName" : "takeoutbag.and.cup.and.straw.fill"
+      "symbolName" : "takeoutbag.and.cup.and.straw.fill",
+      "tags" : [
+        "alchemy familiar",
+        "arcane",
+        "floating bowl with noodle orbits"
+      ]
     },
     {
       "accent" : {
@@ -3086,7 +3351,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.58,
         "red" : 0.92
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Hearthbread Golem",
       "energyAnchor" : "Orange oven ember and warm rising-steam rings",
       "existenceAnchor" : "Living Sourdough Hearth Golem",
@@ -3136,7 +3401,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Round loaf torso, four crusty limbs, scored face, and a chimney-like starter crown",
       "silhouetteClass" : "round-loaf-four-limbed-golem",
       "subtitle" : "Golden crust · sourdough ember",
-      "symbolName" : "oven.fill"
+      "symbolName" : "oven.fill",
+      "tags" : [
+        "alchemy familiar",
+        "cute",
+        "round loaf four limbed golem"
+      ]
     },
     {
       "accent" : {
@@ -3144,7 +3414,7 @@ enum PetThemeCatalogGenerated {
         "green" : 1,
         "red" : 0.7
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Citrus Reactor",
       "energyAnchor" : "Acid-green juice charge and yellow zest-oil sparks",
       "existenceAnchor" : "Living Citrus Bio-Reactor",
@@ -3194,7 +3464,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Spherical fruit core, peel-segment armor, seed feet, and a turbine-slice crown",
       "silhouetteClass" : "segmented-fruit-reactor-on-seed-feet",
       "subtitle" : "Zest armor · acid-green charge",
-      "symbolName" : "circle.hexagongrid.fill"
+      "symbolName" : "circle.hexagongrid.fill",
+      "tags" : [
+        "alchemy familiar",
+        "mobile",
+        "segmented fruit reactor on seed feet"
+      ]
     },
     {
       "accent" : {
@@ -3202,7 +3477,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.18,
         "red" : 0.48
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Cacao Citadel",
       "energyAnchor" : "Ruby-red heat lines and warm ganache cascades",
       "existenceAnchor" : "Self-Tempering Chocolate Citadel",
@@ -3252,7 +3527,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Stepped bar walls, four cocoa-pod wheels, central fondue tower, and wafer battlements",
       "silhouetteClass" : "stepped-fortress-on-pod-wheels",
       "subtitle" : "Dark chocolate walls · molten ganache",
-      "symbolName" : "building.columns.fill"
+      "symbolName" : "building.columns.fill",
+      "tags" : [
+        "alchemy familiar",
+        "colossal",
+        "stepped fortress on pod wheels"
+      ]
     },
     {
       "accent" : {
@@ -3260,7 +3540,7 @@ enum PetThemeCatalogGenerated {
         "green" : 1,
         "red" : 0.46
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Aurora Gelato",
       "energyAnchor" : "Mint-violet aurora ribbon and sparkling frost sugar",
       "existenceAnchor" : "Living Multi-Flavor Gelato",
@@ -3310,7 +3590,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Swirled scoop body, waffle-cone base, syrup ribbon arms, and a translucent aurora crest",
       "silhouetteClass" : "swirl-body-on-cone-base",
       "subtitle" : "Frozen cream folds · polar syrup",
-      "symbolName" : "snowflake"
+      "symbolName" : "snowflake",
+      "tags" : [
+        "alchemy familiar",
+        "cute",
+        "swirl body on cone base"
+      ]
     },
     {
       "accent" : {
@@ -3318,7 +3603,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.52,
         "red" : 1
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Spice Djinn",
       "energyAnchor" : "Saffron-gold aroma currents and crimson heat motes",
       "existenceAnchor" : "Collective Aromatic Spice Spirit",
@@ -3368,7 +3653,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Heavy mortar base, smoke torso, pestle staff, layered spice fans, and no fixed legs",
       "silhouetteClass" : "smoke-torso-rising-from-mortar",
       "subtitle" : "Copper mortar · saffron smoke",
-      "symbolName" : "smoke.fill"
+      "symbolName" : "smoke.fill",
+      "tags" : [
+        "alchemy familiar",
+        "mysterious",
+        "smoke torso rising from mortar"
+      ]
     },
     {
       "accent" : {
@@ -3376,7 +3666,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.68,
         "red" : 1
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Honeycomb Alchemist",
       "energyAnchor" : "Amber viscosity waves and bright pollen reaction sparks",
       "existenceAnchor" : "Sentient Honeycomb Laboratory",
@@ -3426,7 +3716,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Hexagonal cell torso, six wax legs, dripping retort arm, and a crown of pollen flasks",
       "silhouetteClass" : "hexagonal-lab-on-six-wax-legs",
       "subtitle" : "Beeswax cells · amber viscosity",
-      "symbolName" : "hexagon.fill"
+      "symbolName" : "hexagon.fill",
+      "tags" : [
+        "alchemy familiar",
+        "swift",
+        "hexagonal lab on six wax legs"
+      ]
     },
     {
       "accent" : {
@@ -3434,7 +3729,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.18,
         "red" : 0.94
       },
-      "category" : "foodAlchemy",
+      "artStyle" : "playful collectible-game rendering with tactile confection and alchemy materials",
       "displayName" : "Dumpling Dojo",
       "energyAnchor" : "Red chili-oil arcs and white steam focus rings",
       "existenceAnchor" : "Living Pleated Dumpling Fighter",
@@ -3484,7 +3779,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Round stuffed body, radial pleat crown, short dough limbs, and a bamboo steamer shield",
       "silhouetteClass" : "round-pleated-biped-with-steamer",
       "subtitle" : "Steamed dough · chili-oil focus",
-      "symbolName" : "flame.circle.fill"
+      "symbolName" : "flame.circle.fill",
+      "tags" : [
+        "alchemy familiar",
+        "dynamic",
+        "round pleated biped with steamer"
+      ]
     },
     {
       "accent" : {
@@ -3492,7 +3792,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.28,
         "red" : 1
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Emberwild Spirit",
       "energyAnchor" : "Controlled crown fire and green renewal sparks",
       "existenceAnchor" : "Self-Shaping Wildfire Elemental",
@@ -3542,7 +3842,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Hollow charcoal rib cage, three flame limbs, branching smoke crown, and a seed-ember heart",
       "silhouetteClass" : "hollow-flame-rib-elemental",
       "subtitle" : "Charcoal bark · controlled wildfire",
-      "symbolName" : "flame.fill"
+      "symbolName" : "flame.fill",
+      "tags" : [
+        "elemental spirit",
+        "ethereal",
+        "hollow flame rib elemental"
+      ]
     },
     {
       "accent" : {
@@ -3550,7 +3855,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.68,
         "red" : 0.08
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Tidal Crown",
       "energyAnchor" : "Moon-white pull lines and cyan tidal height bands",
       "existenceAnchor" : "Self-Contained Tidal Elemental",
@@ -3600,7 +3905,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Crescent wave body, suspended moon sphere, two foam arms, and a trailing undertow ribbon",
       "silhouetteClass" : "crescent-wave-around-moon-core",
       "subtitle" : "Deep water arcs · moon-pull core",
-      "symbolName" : "water.waves"
+      "symbolName" : "water.waves",
+      "tags" : [
+        "elemental spirit",
+        "ethereal",
+        "crescent wave around moon core"
+      ]
     },
     {
       "accent" : {
@@ -3608,7 +3918,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.72,
         "red" : 0.42
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Cyclone Dancer",
       "energyAnchor" : "Cobalt calm eye and white spiral velocity bands",
       "existenceAnchor" : "Sentient Cyclonic Pressure Column",
@@ -3658,7 +3968,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Narrow funnel torso, wide spiral skirt, two ribbon arms, and a calm circular eye",
       "silhouetteClass" : "funnel-body-with-spiral-skirt",
       "subtitle" : "Pressure-silk wind · cobalt eye",
-      "symbolName" : "tornado"
+      "symbolName" : "tornado",
+      "tags" : [
+        "elemental spirit",
+        "arcane",
+        "funnel body with spiral skirt"
+      ]
     },
     {
       "accent" : {
@@ -3666,7 +3981,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.9,
         "red" : 0.72
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Whiteout Wisp",
       "energyAnchor" : "Visibility-blue eye and pale compass gust lines",
       "existenceAnchor" : "Sentient Whiteout Blizzard",
@@ -3716,7 +4031,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Soft hooded snow mass, one blue lantern eye, long spindrift sleeves, and no visible feet",
       "silhouetteClass" : "hooded-snow-cloud-wisp",
       "subtitle" : "Powder snow · visibility-blue lantern",
-      "symbolName" : "snowflake.circle.fill"
+      "symbolName" : "snowflake.circle.fill",
+      "tags" : [
+        "elemental spirit",
+        "mysterious",
+        "hooded snow cloud wisp"
+      ]
     },
     {
       "accent" : {
@@ -3724,7 +4044,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.7,
         "red" : 1
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Thunderhead Forge Mecha",
       "energyAnchor" : "Triangular amber reactor visor and molten-white lightning tools",
       "existenceAnchor" : "Storm-Forged Thunderhead Mecha",
@@ -3774,7 +4094,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Armored anvil chest, triangular amber visor, two rain-piston legs, hammer forearm, and flat storm shoulders",
       "silhouetteClass" : "bipedal-anvil-chested-storm-mecha",
       "subtitle" : "Storm steel · molten-lightning reactor",
-      "symbolName" : "cloud.bolt.fill"
+      "symbolName" : "cloud.bolt.fill",
+      "tags" : [
+        "elemental spirit",
+        "colossal",
+        "bipedal anvil chested storm mecha"
+      ]
     },
     {
       "accent" : {
@@ -3782,7 +4107,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.9,
         "red" : 0.3
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Prism Rain Peacock",
       "energyAnchor" : "White prism crest and seven separated tail-rain colors",
       "existenceAnchor" : "Spectral Rain Peacock",
@@ -3832,7 +4157,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Recognizable peafowl head and beak, prism crest, two bird legs, folded wings, and seven rain-feather tail eyes",
       "silhouetteClass" : "peafowl-with-spectral-rain-fan",
       "subtitle" : "Rain-glass plumage · seven-color fan",
-      "symbolName" : "rainbow"
+      "symbolName" : "rainbow",
+      "tags" : [
+        "elemental spirit",
+        "ethereal",
+        "peafowl with spectral rain fan"
+      ]
     },
     {
       "accent" : {
@@ -3840,7 +4170,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.62,
         "red" : 0.12
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Monsoon Leviathan",
       "energyAnchor" : "White forked brow, crimson pressure arrows, and deep-blue rainwake",
       "existenceAnchor" : "Mythic Monsoon Leviathan",
@@ -3890,7 +4220,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Long limbless rain-serpent body, white forked brow, cloud mane, crimson dorsal pressure sail, and twin water whiskers",
       "silhouetteClass" : "serpentine-monsoon-leviathan",
       "subtitle" : "Rain-serpent body · pressure-red dorsal sail",
-      "symbolName" : "cloud.heavyrain.fill"
+      "symbolName" : "cloud.heavyrain.fill",
+      "tags" : [
+        "elemental spirit",
+        "graceful",
+        "serpentine monsoon leviathan"
+      ]
     },
     {
       "accent" : {
@@ -3898,7 +4233,7 @@ enum PetThemeCatalogGenerated {
         "green" : 1,
         "red" : 0.32
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Aurora Veil Deity",
       "energyAnchor" : "Vertical blue eye slit, polar gradient sleeves, and bright magnetic halo flares",
       "existenceAnchor" : "Nonhuman Humanoid Aurora Deity",
@@ -3948,7 +4283,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Serene silver mask, single vertical blue eye slit, two aurora-sleeve arms, magnetic halo, and tapering light-robe body",
       "silhouetteClass" : "floating-masked-aurora-deity",
       "subtitle" : "Polar-light robes · magnetic halo",
-      "symbolName" : "waveform.path"
+      "symbolName" : "waveform.path",
+      "tags" : [
+        "elemental spirit",
+        "ethereal",
+        "floating masked aurora deity"
+      ]
     },
     {
       "accent" : {
@@ -3956,7 +4296,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.68,
         "red" : 1
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Drought Mirage Dancer",
       "energyAnchor" : "Single crescent eye slit, distorted horizon bands, and searing white fan trails",
       "existenceAnchor" : "Nonhuman Humanoid Mirage Effigy",
@@ -4006,7 +4346,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Smooth sunstone mask with one crescent eye slit, hollow neck gap, faceted torso, two segmented arms, two reverse-jointed legs, heatglass scarf, and twin fans; no skin, hair, human face, or human anatomy",
       "silhouetteClass" : "nonhuman-humanoid-mirage-effigy",
       "subtitle" : "Nonhuman mirage effigy · heatglass fans",
-      "symbolName" : "sun.max.trianglebadge.exclamationmark.fill"
+      "symbolName" : "sun.max.trianglebadge.exclamationmark.fill",
+      "tags" : [
+        "elemental spirit",
+        "mysterious",
+        "nonhuman humanoid mirage effigy"
+      ]
     },
     {
       "accent" : {
@@ -4014,7 +4359,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.76,
         "red" : 0.3
       },
-      "category" : "elementalWeather",
+      "artStyle" : "high-contrast elemental VFX character art with a stable central silhouette",
       "displayName" : "Living Voltage",
       "energyAnchor" : "Branching voltage arcs and pulsing blue charge nodes",
       "existenceAnchor" : "Self-Organizing Electrical Discharge",
@@ -4064,7 +4409,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Three blue capacitor nodes, branching bolt limbs, a zigzag spine, and no solid outer body",
       "silhouetteClass" : "branching-lightning-between-nodes",
       "subtitle" : "Plasma filament · capacitor-blue nodes",
-      "symbolName" : "bolt.fill"
+      "symbolName" : "bolt.fill",
+      "tags" : [
+        "elemental spirit",
+        "luminous",
+        "branching lightning between nodes"
+      ]
     },
     {
       "accent" : {
@@ -4072,7 +4422,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.18,
         "red" : 0.88
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Phantom Veil",
       "energyAnchor" : "Spectral green maskfire and a vertical eclipse disc",
       "existenceAnchor" : "Moth-Cat Wraith",
@@ -4122,7 +4472,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Footless smoke tail, cloak-like moth wings, cat-mask face, and a vertical eclipse disc",
       "silhouetteClass" : "footless-winged-wraith",
       "subtitle" : "Shadow plate · spectral green ectoplasm",
-      "symbolName" : "moon.stars.fill"
+      "symbolName" : "moon.stars.fill",
+      "tags" : [
+        "cosmic entity",
+        "mysterious",
+        "footless winged wraith"
+      ]
     },
     {
       "accent" : {
@@ -4130,7 +4485,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.58,
         "red" : 1
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Event Horizon",
       "energyAnchor" : "White photon ring and red-gold accretion spiral",
       "existenceAnchor" : "Contained Micro Black Hole",
@@ -4180,7 +4535,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Perfect black center, tilted luminous disc, two lensing arcs, and four stretched light limbs",
       "silhouetteClass" : "dark-sphere-inside-tilted-disc",
       "subtitle" : "Black core · accretion-gold light",
-      "symbolName" : "circle.dotted.circle.fill"
+      "symbolName" : "circle.dotted.circle.fill",
+      "tags" : [
+        "cosmic entity",
+        "arcane",
+        "dark sphere inside tilted disc"
+      ]
     },
     {
       "accent" : {
@@ -4188,7 +4548,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.88,
         "red" : 0.76
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Constellation Scribe",
       "energyAnchor" : "Pulsing star nodes and freshly drawn luminous linework",
       "existenceAnchor" : "Living Stellar Diagram",
@@ -4238,7 +4598,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Disconnected star joints, silver line limbs, compass-pen head, and a trailing coordinate grid",
       "silhouetteClass" : "wireframe-figure-of-star-joints",
       "subtitle" : "Star points · silver coordinate ink",
-      "symbolName" : "sparkles"
+      "symbolName" : "sparkles",
+      "tags" : [
+        "cosmic entity",
+        "luminous",
+        "wireframe figure of star joints"
+      ]
     },
     {
       "accent" : {
@@ -4246,7 +4611,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.72,
         "red" : 0.38
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Comet Pilgrim",
       "energyAnchor" : "Cobalt ion tail and sunlit golden dust fan",
       "existenceAnchor" : "Sentient Long-Period Comet",
@@ -4296,7 +4661,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Irregular ice-rock head, two unequal tails, sail-like dust veil, and a small shrine arch",
       "silhouetteClass" : "stone-head-with-long-twin-tails",
       "subtitle" : "Ice-rock core · twin plasma tails",
-      "symbolName" : "sparkle"
+      "symbolName" : "sparkle",
+      "tags" : [
+        "cosmic entity",
+        "graceful",
+        "stone head with long twin tails"
+      ]
     },
     {
       "accent" : {
@@ -4304,7 +4674,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.56,
         "red" : 0.28
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Möbius Wanderer",
       "energyAnchor" : "Traveling blue edge pulse and a fixed paradox point",
       "existenceAnchor" : "Living Möbius Surface",
@@ -4354,7 +4724,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Single twisted band body, two edge loops, one traveling marker light, and an empty center",
       "silhouetteClass" : "single-twisted-loop-surface",
       "subtitle" : "One-sided ribbon · paradox-blue edge",
-      "symbolName" : "infinity"
+      "symbolName" : "infinity",
+      "tags" : [
+        "cosmic entity",
+        "arcane",
+        "single twisted loop surface"
+      ]
     },
     {
       "accent" : {
@@ -4362,7 +4737,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.24,
         "red" : 0.92
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Fractal Bloom",
       "energyAnchor" : "Magenta iteration pulses and recursive blue outlines",
       "existenceAnchor" : "Self-Similar Fractal Organism",
@@ -4412,7 +4787,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Central triangular seed, repeating branch fans, nested copies, and three iteration roots",
       "silhouetteClass" : "recursive-radial-branching-form",
       "subtitle" : "Recursive crystal · iteration light",
-      "symbolName" : "point.3.connected.trianglepath.dotted"
+      "symbolName" : "point.3.connected.trianglepath.dotted",
+      "tags" : [
+        "cosmic entity",
+        "luminous",
+        "recursive radial branching form"
+      ]
     },
     {
       "accent" : {
@@ -4420,7 +4800,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.34,
         "red" : 0.6
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Lucid Dream",
       "energyAnchor" : "Waking-gold tether and violet lucid ripples",
       "existenceAnchor" : "Self-Aware Oneiric Construct",
@@ -4470,7 +4850,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Floating door face, impossible stair limbs, pillow-cloud body, and one gold waking thread",
       "silhouetteClass" : "floating-door-and-impossible-stairs",
       "subtitle" : "Soft logic · waking-gold thread",
-      "symbolName" : "moon.zzz.fill"
+      "symbolName" : "moon.zzz.fill",
+      "tags" : [
+        "cosmic entity",
+        "mysterious",
+        "floating door and impossible stairs"
+      ]
     },
     {
       "accent" : {
@@ -4478,7 +4863,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.5,
         "red" : 0.18
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Gravity Well",
       "energyAnchor" : "Cobalt curvature gradient and white orbital traces",
       "existenceAnchor" : "Localized Sentient Gravity Field",
@@ -4528,7 +4913,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Blue mass core, sagging wire grid body, four tension legs, and orbiting test spheres",
       "silhouetteClass" : "deformed-grid-around-mass-core",
       "subtitle" : "Curved grid · mass-blue core",
-      "symbolName" : "circle.grid.cross.fill"
+      "symbolName" : "circle.grid.cross.fill",
+      "tags" : [
+        "cosmic entity",
+        "colossal",
+        "deformed grid around mass core"
+      ]
     },
     {
       "accent" : {
@@ -4536,7 +4926,7 @@ enum PetThemeCatalogGenerated {
         "green" : 1,
         "red" : 0.2
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Deep-Space Signal",
       "energyAnchor" : "Emerald carrier wave and rhythmic white pulse packets",
       "existenceAnchor" : "Self-Propagating Intelligent Radio Signal",
@@ -4586,7 +4976,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Central pulse beacon, two waveform wings, static-noise tail, and concentric carrier rings",
       "silhouetteClass" : "waveform-body-with-carrier-rings",
       "subtitle" : "Radio geometry · emerald carrier wave",
-      "symbolName" : "antenna.radiowaves.left.and.right"
+      "symbolName" : "antenna.radiowaves.left.and.right",
+      "tags" : [
+        "cosmic entity",
+        "luminous",
+        "waveform body with carrier rings"
+      ]
     },
     {
       "accent" : {
@@ -4594,7 +4989,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.84,
         "red" : 0.18
       },
-      "category" : "cosmicAbstract",
+      "artStyle" : "surreal cosmic entity rendering with controlled luminous geometry",
       "displayName" : "Quantum Chance",
       "energyAnchor" : "Branching cyan-magenta outcomes and collapse-white flash",
       "existenceAnchor" : "Sentient Quantum Superposition",
@@ -4644,7 +5039,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Transparent dice core, overlapping ghost silhouettes, branching outcome paths, and one white observer eye",
       "silhouetteClass" : "overlapping-probability-forms-around-die",
       "subtitle" : "Probability glass · collapse-white flash",
-      "symbolName" : "dice.fill"
+      "symbolName" : "dice.fill",
+      "tags" : [
+        "cosmic entity",
+        "mysterious",
+        "overlapping probability forms around die"
+      ]
     },
     {
       "accent" : {
@@ -4652,7 +5052,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.78,
         "red" : 0.34
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Walking Treehouse",
       "energyAnchor" : "Window-gold hearthlight and green growth-ring pulses",
       "existenceAnchor" : "Ambulatory Living Treehouse",
@@ -4702,7 +5102,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Central trunk tower, four root-stilt legs, offset wooden rooms, and a leafy roof crown",
       "silhouetteClass" : "multi-room-tree-on-four-stilts",
       "subtitle" : "Cedar rooms · root-stilt legs",
-      "symbolName" : "house.and.flag.fill"
+      "symbolName" : "house.and.flag.fill",
+      "tags" : [
+        "living habitat",
+        "ancient",
+        "multi room tree on four stilts"
+      ]
     },
     {
       "accent" : {
@@ -4710,7 +5115,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.82,
         "red" : 0.18
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Tideglass Lighthouse",
       "energyAnchor" : "Warm dawn beam and concentric cyan warning rings",
       "existenceAnchor" : "Ambulatory Tideglass Lighthouse",
@@ -4760,7 +5165,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Tall tapered tower, rotating lens crown, three wave feet, and a spiral balcony",
       "silhouetteClass" : "tapered-tower-on-three-wave-feet",
       "subtitle" : "Sea glass tower · rotating dawn beam",
-      "symbolName" : "light.beacon.max.fill"
+      "symbolName" : "light.beacon.max.fill",
+      "tags" : [
+        "living habitat",
+        "graceful",
+        "tapered tower on three wave feet"
+      ]
     },
     {
       "accent" : {
@@ -4768,7 +5178,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.18,
         "red" : 0.92
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Pocket Citadel",
       "energyAnchor" : "Banner-red command lines and white geometric ward grids",
       "existenceAnchor" : "Transforming Modular Citadel",
@@ -4818,7 +5228,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Square keep core, four corner tower legs, folding wall shields, and a central banner mast",
       "silhouetteClass" : "square-fortress-on-tower-legs",
       "subtitle" : "Folded stone · banner-red joints",
-      "symbolName" : "building.columns.fill"
+      "symbolName" : "building.columns.fill",
+      "tags" : [
+        "living habitat",
+        "regal",
+        "square fortress on tower legs"
+      ]
     },
     {
       "accent" : {
@@ -4826,7 +5241,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.64,
         "red" : 1
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Sky Temple",
       "energyAnchor" : "Golden updraft columns and turquoise prayer circles",
       "existenceAnchor" : "Sentient Floating Terrace Temple",
@@ -4876,7 +5291,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Stepped pyramid body, four cantilever terraces, central spire, and hanging prayer ribbons",
       "silhouetteClass" : "floating-stepped-pyramid-temple",
       "subtitle" : "White stone terraces · saffron updraft",
-      "symbolName" : "building.columns.fill"
+      "symbolName" : "building.columns.fill",
+      "tags" : [
+        "living habitat",
+        "whimsical",
+        "floating stepped pyramid temple"
+      ]
     },
     {
       "accent" : {
@@ -4884,7 +5304,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.58,
         "red" : 0.22
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Living Library",
       "energyAnchor" : "Index-blue route lines and warm reading-lamp constellations",
       "existenceAnchor" : "Ambulatory Self-Indexing Library",
@@ -4934,7 +5354,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Tall shelf torso, rolling ladder legs, open-book roof, and two swinging reading-room wings",
       "silhouetteClass" : "shelf-tower-with-room-wings",
       "subtitle" : "Oak shelves · index-blue corridors",
-      "symbolName" : "books.vertical.fill"
+      "symbolName" : "books.vertical.fill",
+      "tags" : [
+        "living habitat",
+        "precision",
+        "shelf tower with room wings"
+      ]
     },
     {
       "accent" : {
@@ -4942,7 +5367,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.88,
         "red" : 0.24
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Wandering Greenhouse",
       "energyAnchor" : "Climate-green heart and color-coded temperature currents",
       "existenceAnchor" : "Ambulatory Climate-Controlled Greenhouse",
@@ -4992,7 +5417,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Large glass dome, four root wheels, segmented climate wings, and a central vent chimney",
       "silhouetteClass" : "glass-dome-on-root-wheels",
       "subtitle" : "Curved glass · climate-green heart",
-      "symbolName" : "house.lodge.fill"
+      "symbolName" : "house.lodge.fill",
+      "tags" : [
+        "living habitat",
+        "mobile",
+        "glass dome on root wheels"
+      ]
     },
     {
       "accent" : {
@@ -5000,7 +5430,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.5,
         "red" : 0.42
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Star Observatory",
       "energyAnchor" : "Violet star-tracking rays and white coordinate reticles",
       "existenceAnchor" : "Ambulatory Astronomical Observatory",
@@ -5050,7 +5480,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Rotating dome torso, three telescope legs, open shutter slit, and a ring-shaped balcony",
       "silhouetteClass" : "dome-body-on-three-telescope-legs",
       "subtitle" : "Midnight dome · brass telescope limbs",
-      "symbolName" : "telescope.fill"
+      "symbolName" : "telescope.fill",
+      "tags" : [
+        "living habitat",
+        "elegant",
+        "dome body on three telescope legs"
+      ]
     },
     {
       "accent" : {
@@ -5058,7 +5493,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.24,
         "red" : 1
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Night Market Spirit",
       "energyAnchor" : "Lantern-red street glow and warm signboard flicker",
       "existenceAnchor" : "Ambulatory Folding Night Market",
@@ -5108,7 +5543,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Long awning spine, many stall-box legs, lantern arch, and a central empty street channel",
       "silhouetteClass" : "long-market-arcade-on-stall-legs",
       "subtitle" : "Canvas stalls · lantern-red streets",
-      "symbolName" : "storefront.fill"
+      "symbolName" : "storefront.fill",
+      "tags" : [
+        "living habitat",
+        "regal",
+        "long market arcade on stall legs"
+      ]
     },
     {
       "accent" : {
@@ -5116,7 +5556,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.6,
         "red" : 0.18
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Bridgekeeper Span",
       "energyAnchor" : "River-blue joint lines and amber deck guidance pulses",
       "existenceAnchor" : "Ambulatory Transforming Bridge",
@@ -5166,7 +5606,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Long deck spine, four pier legs, two cable arches, and a folding central drawspan",
       "silhouetteClass" : "long-deck-on-four-pier-legs",
       "subtitle" : "Articulated steel · river-blue joints",
-      "symbolName" : "point.topleft.down.curvedto.point.bottomright.up"
+      "symbolName" : "point.topleft.down.curvedto.point.bottomright.up",
+      "tags" : [
+        "living habitat",
+        "colossal",
+        "long deck on four pier legs"
+      ]
     },
     {
       "accent" : {
@@ -5174,7 +5619,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.82,
         "red" : 0.16
       },
-      "category" : "livingArchitecture",
+      "artStyle" : "storybook living-habitat rendering with readable mobile construction",
       "displayName" : "Canal Palace",
       "energyAnchor" : "Jade current paths and pearl-white courtyard fountains",
       "existenceAnchor" : "Self-Navigating Floating Canal Palace",
@@ -5224,7 +5669,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Wide barge foundation, central watercourt, four pavilion towers, and ribbon-like canal arms",
       "silhouetteClass" : "wide-palace-barge-with-watercourt",
       "subtitle" : "Ivory pavilions · jade watercourt",
-      "symbolName" : "sailboat.fill"
+      "symbolName" : "sailboat.fill",
+      "tags" : [
+        "living habitat",
+        "graceful",
+        "wide palace barge with watercourt"
+      ]
     },
     {
       "accent" : {
@@ -5232,7 +5682,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.9,
         "red" : 0.28
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Slime Parliament",
       "energyAnchor" : "Consensus-gold bubbles and connecting white decision threads",
       "existenceAnchor" : "Cooperative Amoeboid Slime Colony",
@@ -5282,7 +5732,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Several unequal gel blobs, shared bubble crown, merging pseudopod base, and no permanent leader",
       "silhouetteClass" : "cluster-of-merging-gel-blobs",
       "subtitle" : "Gel bodies · consensus-gold bubbles",
-      "symbolName" : "person.3.fill"
+      "symbolName" : "person.3.fill",
+      "tags" : [
+        "collective intelligence",
+        "cute",
+        "cluster of merging gel blobs"
+      ]
     },
     {
       "accent" : {
@@ -5290,7 +5745,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.62,
         "red" : 0.2
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Nanite Swarm",
       "energyAnchor" : "Cobalt coordination lattice and white assembly pulses",
       "existenceAnchor" : "Coordinated Programmable Nanite Cloud",
@@ -5340,7 +5795,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Dense metallic mote cloud, blue command nodes, temporary tool limbs, and porous outer edges",
       "silhouetteClass" : "porous-cloud-of-metal-motes",
       "subtitle" : "Metal motes · command-blue lattice",
-      "symbolName" : "circle.grid.3x3.fill"
+      "symbolName" : "circle.grid.3x3.fill",
+      "tags" : [
+        "collective intelligence",
+        "many-bodied",
+        "porous cloud of metal motes"
+      ]
     },
     {
       "accent" : {
@@ -5348,7 +5808,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.82,
         "red" : 1
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Firefly Chorus",
       "energyAnchor" : "Pulse-gold rhythm waves and emerald timing points",
       "existenceAnchor" : "Synchronized Bioluminescent Firefly Colony",
@@ -5398,7 +5858,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Many tiny winged lights, one dark conductor branch, pulse-wave wings, and an open center",
       "silhouetteClass" : "flock-of-lights-around-branch",
       "subtitle" : "Midnight wings · pulse-gold rhythm",
-      "symbolName" : "sparkles"
+      "symbolName" : "sparkles",
+      "tags" : [
+        "collective intelligence",
+        "many-bodied",
+        "flock of lights around branch"
+      ]
     },
     {
       "accent" : {
@@ -5406,7 +5871,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.86,
         "red" : 0.12
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Plankton Bloom",
       "energyAnchor" : "Ocean-blue bloom pulse and turquoise communication waves",
       "existenceAnchor" : "Cooperative Bioluminescent Plankton Community",
@@ -5456,7 +5921,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Many clear cell discs, long colony ribbons, blue light nodes, and a jellylike central bloom",
       "silhouetteClass" : "cell-ribbons-around-jelly-bloom",
       "subtitle" : "Translucent cells · ocean-blue biolight",
-      "symbolName" : "drop.fill"
+      "symbolName" : "drop.fill",
+      "tags" : [
+        "collective intelligence",
+        "aquatic",
+        "cell ribbons around jelly bloom"
+      ]
     },
     {
       "accent" : {
@@ -5464,7 +5934,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.82,
         "red" : 0.5
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Lichen Commune",
       "energyAnchor" : "Green-gold nutrient exchange lines and white symbiosis knots",
       "existenceAnchor" : "Mobile Symbiotic Lichen Consortium",
@@ -5514,7 +5984,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Flat stone raft, branching fungal rim, green algal panels, and many tiny holdfast feet",
       "silhouetteClass" : "flat-symbiotic-mat-on-holdfasts",
       "subtitle" : "Fungal stone mats · algae-green exchange",
-      "symbolName" : "leaf.circle.fill"
+      "symbolName" : "leaf.circle.fill",
+      "tags" : [
+        "collective intelligence",
+        "luminous",
+        "flat symbiotic mat on holdfasts"
+      ]
     },
     {
       "accent" : {
@@ -5522,7 +5997,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.94,
         "red" : 0.26
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Microbe Metropolis",
       "energyAnchor" : "Enzyme-green production glow and violet communication pulses",
       "existenceAnchor" : "Organized Multispecies Microbial City",
@@ -5572,7 +6047,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Clustered cell towers, flagella roads, membrane dome, enzyme chimneys, and vesicle traffic",
       "silhouetteClass" : "clustered-cell-city-under-membrane",
       "subtitle" : "Cell membranes · enzyme-city glow",
-      "symbolName" : "circle.grid.cross.fill"
+      "symbolName" : "circle.grid.cross.fill",
+      "tags" : [
+        "collective intelligence",
+        "many-bodied",
+        "clustered cell city under membrane"
+      ]
     },
     {
       "accent" : {
@@ -5580,7 +6060,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.9,
         "red" : 0.12
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Coral Commonwealth",
       "energyAnchor" : "Reef-cyan nutrient exchange and pink polyp warning pulses",
       "existenceAnchor" : "Cooperative Mobile Coral Colony",
@@ -5630,7 +6110,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Branching calcium crown, many polyp lights, flat reef foot, and two flexible sea-fan arms",
       "silhouetteClass" : "branching-coral-crown-on-reef-foot",
       "subtitle" : "Calcium branches · reef-cyan exchange",
-      "symbolName" : "water.waves"
+      "symbolName" : "water.waves",
+      "tags" : [
+        "collective intelligence",
+        "ethereal",
+        "branching coral crown on reef foot"
+      ]
     },
     {
       "accent" : {
@@ -5638,7 +6123,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.36,
         "red" : 0.7
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Stardust Chorus",
       "energyAnchor" : "Violet harmonic rings and white condensation nodes",
       "existenceAnchor" : "Coherent Resonant Stardust Cloud",
@@ -5688,7 +6173,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Dense particle cloud, violet resonance rings, bright grain nodes, and shifting celestial outlines",
       "silhouetteClass" : "resonant-particle-nebula",
       "subtitle" : "Cosmic grains · resonance-violet cloud",
-      "symbolName" : "sparkles"
+      "symbolName" : "sparkles",
+      "tags" : [
+        "collective intelligence",
+        "many-bodied",
+        "resonant particle nebula"
+      ]
     },
     {
       "accent" : {
@@ -5696,7 +6186,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.64,
         "red" : 0.28
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Rune Swarm",
       "energyAnchor" : "Cobalt grammar links and crimson execution marks",
       "existenceAnchor" : "Collective Autonomous Glyph Flock",
@@ -5746,7 +6236,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Many floating stone symbols, blue syntax links, changing sentence spine, and no central body",
       "silhouetteClass" : "flock-of-glyphs-in-sentence-form",
       "subtitle" : "Stone glyphs · syntax-blue links",
-      "symbolName" : "textformat"
+      "symbolName" : "textformat",
+      "tags" : [
+        "collective intelligence",
+        "many-bodied",
+        "flock of glyphs in sentence form"
+      ]
     },
     {
       "accent" : {
@@ -5754,7 +6249,7 @@ enum PetThemeCatalogGenerated {
         "green" : 0.86,
         "red" : 0.24
       },
-      "category" : "collectiveSystems",
+      "artStyle" : "micro-world ensemble rendering with a coherent many-bodied silhouette",
       "displayName" : "Terrarium Ecosystem",
       "energyAnchor" : "Green cycle arrows and soft blue water-loop light",
       "existenceAnchor" : "Ambulatory Closed-Loop Terrarium Biome",
@@ -5804,7 +6299,12 @@ enum PetThemeCatalogGenerated {
       "silhouetteAnchor" : "Clear biome sphere, four soil-root feet, cloud cap, stream ribbon, and layered living zones",
       "silhouetteClass" : "glass-biome-sphere-on-root-feet",
       "subtitle" : "Glass biome · closed-cycle greenlight",
-      "symbolName" : "globe.americas.fill"
+      "symbolName" : "globe.americas.fill",
+      "tags" : [
+        "collective intelligence",
+        "ancient",
+        "glass biome sphere on root feet"
+      ]
     },
     {
       "accent" : {

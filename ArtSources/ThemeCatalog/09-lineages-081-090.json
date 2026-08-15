@@ -3,7 +3,6 @@
     {
       "id": "walking-treehouse",
       "displayName": "Walking Treehouse",
-      "category": "livingArchitecture",
       "subtitle": "Cedar rooms · root-stilt legs",
       "symbolName": "house.and.flag.fill",
       "lineageIntroduction": "A cozy treehouse that walks on root stilts and expands new rooms among its living branches.",
@@ -15,8 +14,16 @@
       "materialAnchor": "Warm cedar, living bark, rope bridges, copper gutters, and green leaves",
       "energyAnchor": "Window-gold hearthlight and green growth-ring pulses",
       "motionProfile": "rooted",
-      "accent": {"red": 0.34, "green": 0.78, "blue": 0.24},
-      "secondaryAccent": {"red": 1.0, "green": 0.68, "blue": 0.18},
+      "accent": {
+        "red": 0.34,
+        "green": 0.78,
+        "blue": 0.24
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.68,
+        "blue": 0.18
+      },
       "forms": [
         {
           "stage": "egg",
@@ -48,12 +55,17 @@
           "introduction": "A circular crown borough moves beneath a complete canopy around a radiant civic hearth.",
           "visualAnchor": "Domed ring city with eight grouped towers, radial bridges, central hearth-spire, and four colossal roots"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "ancient",
+        "multi room tree on four stilts"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     },
     {
       "id": "tideglass-lighthouse",
       "displayName": "Tideglass Lighthouse",
-      "category": "livingArchitecture",
       "subtitle": "Sea glass tower · rotating dawn beam",
       "symbolName": "light.beacon.max.fill",
       "lineageIntroduction": "A floating lighthouse that grows decks, lenses, and wave feet around a sea-glass tower.",
@@ -65,8 +77,16 @@
       "materialAnchor": "Blue-green sea glass, white stone, copper rails, and frosted lens crystal",
       "energyAnchor": "Warm dawn beam and concentric cyan warning rings",
       "motionProfile": "gliding",
-      "accent": {"red": 0.18, "green": 0.82, "blue": 0.9},
-      "secondaryAccent": {"red": 1.0, "green": 0.78, "blue": 0.28},
+      "accent": {
+        "red": 0.18,
+        "green": 0.82,
+        "blue": 0.9
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.78,
+        "blue": 0.28
+      },
       "forms": [
         {
           "stage": "egg",
@@ -98,12 +118,17 @@
           "introduction": "A radiant lighthouse crown turns a full horizon of sea into a safe golden path.",
           "visualAnchor": "Tall central tower encircled by a complete rotating lens halo and six wave supports"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "graceful",
+        "tapered tower on three wave feet"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     },
     {
       "id": "pocket-citadel",
       "displayName": "Pocket Citadel",
-      "category": "livingArchitecture",
       "subtitle": "Folded stone · banner-red joints",
       "symbolName": "building.columns.fill",
       "lineageIntroduction": "A compact fortress that unfolds walls, towers, and courtyards from interlocking stone modules.",
@@ -115,8 +140,16 @@
       "materialAnchor": "Gray cut stone, red banners, black iron hinges, and pale mortar joints",
       "energyAnchor": "Banner-red command lines and white geometric ward grids",
       "motionProfile": "marching",
-      "accent": {"red": 0.92, "green": 0.18, "blue": 0.2},
-      "secondaryAccent": {"red": 0.74, "green": 0.78, "blue": 0.86},
+      "accent": {
+        "red": 0.92,
+        "green": 0.18,
+        "blue": 0.2
+      },
+      "secondaryAccent": {
+        "red": 0.74,
+        "green": 0.78,
+        "blue": 0.86
+      },
       "forms": [
         {
           "stage": "egg",
@@ -148,12 +181,17 @@
           "introduction": "A complete walled city folds upward into a crown around its central keep.",
           "visualAnchor": "Radial castle crown built from many towers around a square glowing courtyard"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "regal",
+        "square fortress on tower legs"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     },
     {
       "id": "sky-temple",
       "displayName": "Sky Temple",
-      "category": "livingArchitecture",
       "subtitle": "White stone terraces · saffron updraft",
       "symbolName": "building.columns.fill",
       "lineageIntroduction": "A floating stepped temple that moves by opening prayer terraces into controlled updraft vanes.",
@@ -165,8 +203,16 @@
       "materialAnchor": "White limestone, saffron cloth, dark cedar, and turquoise inlay",
       "energyAnchor": "Golden updraft columns and turquoise prayer circles",
       "motionProfile": "buoyant",
-      "accent": {"red": 1.0, "green": 0.64, "blue": 0.12},
-      "secondaryAccent": {"red": 0.14, "green": 0.76, "blue": 0.82},
+      "accent": {
+        "red": 1,
+        "green": 0.64,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 0.14,
+        "green": 0.76,
+        "blue": 0.82
+      },
       "forms": [
         {
           "stage": "egg",
@@ -198,12 +244,17 @@
           "introduction": "A towering sky temple arranges all terraces into a radiant ascending mandala.",
           "visualAnchor": "Tall radial stepped temple with eight terraces surrounding a turquoise central spire"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "whimsical",
+        "floating stepped pyramid temple"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     },
     {
       "id": "living-library",
       "displayName": "Living Library",
-      "category": "livingArchitecture",
       "subtitle": "Oak shelves · index-blue corridors",
       "symbolName": "books.vertical.fill",
       "lineageIntroduction": "A walking library that rearranges shelves, ladders, and reading rooms around each requested idea.",
@@ -215,8 +266,16 @@
       "materialAnchor": "Dark oak, brass rails, colored book cloth, green lamps, and blue glass labels",
       "energyAnchor": "Index-blue route lines and warm reading-lamp constellations",
       "motionProfile": "mechanical",
-      "accent": {"red": 0.22, "green": 0.58, "blue": 1.0},
-      "secondaryAccent": {"red": 0.2, "green": 0.88, "blue": 0.52},
+      "accent": {
+        "red": 0.22,
+        "green": 0.58,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.2,
+        "green": 0.88,
+        "blue": 0.52
+      },
       "forms": [
         {
           "stage": "egg",
@@ -248,12 +307,17 @@
           "introduction": "A vast moving library folds miles of shelves into a navigable crown of knowledge.",
           "visualAnchor": "Crown-shaped maze of bookshelves around a bright blue central index tower"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "precision",
+        "shelf tower with room wings"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     },
     {
       "id": "wandering-greenhouse",
       "displayName": "Wandering Greenhouse",
-      "category": "livingArchitecture",
       "subtitle": "Curved glass · climate-green heart",
       "symbolName": "house.lodge.fill",
       "lineageIntroduction": "A roaming greenhouse that adjusts glass panels, roots, and climate chambers for its living collection.",
@@ -265,8 +329,16 @@
       "materialAnchor": "Curved greenhouse glass, green iron ribs, wet soil, copper pipes, and white mist",
       "energyAnchor": "Climate-green heart and color-coded temperature currents",
       "motionProfile": "rolling",
-      "accent": {"red": 0.24, "green": 0.88, "blue": 0.48},
-      "secondaryAccent": {"red": 0.16, "green": 0.72, "blue": 1.0},
+      "accent": {
+        "red": 0.24,
+        "green": 0.88,
+        "blue": 0.48
+      },
+      "secondaryAccent": {
+        "red": 0.16,
+        "green": 0.72,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -298,12 +370,17 @@
           "introduction": "A monumental glass crown shelters a complete miniature world in balanced climates.",
           "visualAnchor": "Huge geodesic dome crown divided into many colored biomes around a green core"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "mobile",
+        "glass dome on root wheels"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     },
     {
       "id": "star-observatory",
       "displayName": "Star Observatory",
-      "category": "livingArchitecture",
       "subtitle": "Midnight dome · brass telescope limbs",
       "symbolName": "telescope.fill",
       "lineageIntroduction": "A walking observatory that opens its dome and repositions telescope limbs to follow the sky.",
@@ -315,8 +392,16 @@
       "materialAnchor": "Midnight enamel, brass telescope tubes, white stone, and blue optical glass",
       "energyAnchor": "Violet star-tracking rays and white coordinate reticles",
       "motionProfile": "poised",
-      "accent": {"red": 0.42, "green": 0.5, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.76, "blue": 0.28},
+      "accent": {
+        "red": 0.42,
+        "green": 0.5,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.76,
+        "blue": 0.28
+      },
       "forms": [
         {
           "stage": "egg",
@@ -348,12 +433,17 @@
           "introduction": "A radial observatory crown points many instruments across the entire visible sky.",
           "visualAnchor": "Central dome encircled by a ring balcony and twelve outward-facing telescope tubes"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "elegant",
+        "dome body on three telescope legs"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     },
     {
       "id": "night-market",
       "displayName": "Night Market Spirit",
-      "category": "livingArchitecture",
       "subtitle": "Canvas stalls · lantern-red streets",
       "symbolName": "storefront.fill",
       "lineageIntroduction": "A folding night market that walks on stall legs and carries lights, signs, and tiny empty streets.",
@@ -365,8 +455,16 @@
       "materialAnchor": "Striped canvas, painted wood, red paper lanterns, brass hooks, and wet stone",
       "energyAnchor": "Lantern-red street glow and warm signboard flicker",
       "motionProfile": "marching",
-      "accent": {"red": 1.0, "green": 0.24, "blue": 0.18},
-      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.16},
+      "accent": {
+        "red": 1,
+        "green": 0.24,
+        "blue": 0.18
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.72,
+        "blue": 0.16
+      },
       "forms": [
         {
           "stage": "egg",
@@ -398,12 +496,17 @@
           "introduction": "A complete night market folds into a luminous circular city around an open plaza.",
           "visualAnchor": "Ring-shaped market of stalls and awnings with a central plaza and lantern crown"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "regal",
+        "long market arcade on stall legs"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     },
     {
       "id": "bridgekeeper-span",
       "displayName": "Bridgekeeper Span",
-      "category": "livingArchitecture",
       "subtitle": "Articulated steel · river-blue joints",
       "symbolName": "point.topleft.down.curvedto.point.bottomright.up",
       "lineageIntroduction": "A self-relocating bridge that folds its deck, piers, and cables into an articulated walker.",
@@ -415,8 +518,16 @@
       "materialAnchor": "Weathered steel, concrete piers, blue suspension cable, and amber road lights",
       "energyAnchor": "River-blue joint lines and amber deck guidance pulses",
       "motionProfile": "heavy",
-      "accent": {"red": 0.18, "green": 0.6, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.64, "blue": 0.1},
+      "accent": {
+        "red": 0.18,
+        "green": 0.6,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.64,
+        "blue": 0.1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -448,12 +559,17 @@
           "introduction": "A vast bridge folds its deck into a complete ring supported by moving piers.",
           "visualAnchor": "Circular roadway crown on many pier legs with blue cables radiating inward"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "colossal",
+        "long deck on four pier legs"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     },
     {
       "id": "canal-palace",
       "displayName": "Canal Palace",
-      "category": "livingArchitecture",
       "subtitle": "Ivory pavilions · jade watercourt",
       "symbolName": "sailboat.fill",
       "lineageIntroduction": "A floating palace that rearranges pavilions and canals around a self-contained jade watercourt.",
@@ -465,8 +581,16 @@
       "materialAnchor": "Ivory stone, jade tile, dark teak, silk roofs, and clear turquoise water",
       "energyAnchor": "Jade current paths and pearl-white courtyard fountains",
       "motionProfile": "gliding",
-      "accent": {"red": 0.16, "green": 0.82, "blue": 0.68},
-      "secondaryAccent": {"red": 0.96, "green": 0.82, "blue": 0.52},
+      "accent": {
+        "red": 0.16,
+        "green": 0.82,
+        "blue": 0.68
+      },
+      "secondaryAccent": {
+        "red": 0.96,
+        "green": 0.82,
+        "blue": 0.52
+      },
       "forms": [
         {
           "stage": "egg",
@@ -498,7 +622,13 @@
           "introduction": "A radial palace city surrounds a jade lagoon and navigates as one serene body.",
           "visualAnchor": "Circular ring of ivory pavilions around a central lagoon with outward canal arms"
         }
-      ]
+      ],
+      "tags": [
+        "living habitat",
+        "graceful",
+        "wide palace barge with watercourt"
+      ],
+      "artStyle": "storybook living-habitat rendering with readable mobile construction"
     }
   ]
 }

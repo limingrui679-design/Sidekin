@@ -19,7 +19,9 @@ Every lineage was checked for:
 
 The audit and README showcase follow-up produced 83 raw repair candidates for 80 unique stage targets across 63 lineages. Some targets needed more than one candidate before acceptance. Accepted resources were normalized to the same `1254×1254` transparent format and then rechecked in their regenerated final sheet. A lineage with accepted replacement evidence is marked with a repair result; all others passed the complete-set review without a new replacement.
 
-## 01 · Fauna & Mythic
+The rows are now organized only by ordinal range. Sidekin's live catalog uses overlapping free-form tags and does not assign these lineages to fixed categories.
+
+## Lineages 001–010
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
@@ -34,7 +36,7 @@ The audit and README showcase follow-up produced 83 raw repair candidates for 80
 | 009 | Solar Manticore | Pass | Feline stance, sun mane, and articulated scorpion tail stay readable throughout the five-form escalation. |
 | 010 | Prism Web | Pass | Eight-legged orb-weaver anatomy and the faceted prism abdomen remain intact as the spectral web system expands. |
 
-## 02 · Machines & Vehicles
+## Lineages 011–020
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
@@ -49,7 +51,7 @@ The audit and README showcase follow-up produced 83 raw repair candidates for 80
 | 019 | Arcade Titan | Pass | Cabinet, screen, controls, coin mechanism, and pixel weapons remain one transforming arcade-machine lineage. |
 | 020 | Rescue Convoy | Pass | Emergency-vehicle modules grow from one compact unit into a coordinated convoy without losing the shared design language. |
 
-## 03 · Flora & Fungi
+## Lineages 021–030
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
@@ -64,7 +66,7 @@ The audit and README showcase follow-up produced 83 raw repair candidates for 80
 | 029 | Crown Bramble | Pass | The ruby bud and self-knotting thorn-vine body persist through rolling, arching, and crowned colony forms. |
 | 030 | Glassfern Oracle | Pass | Mirrored silica fronds and photosensitive pivots remain the defining plant structures across all stages. |
 
-## 04 · Mineral & Geological
+## Lineages 031–040
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
@@ -79,7 +81,7 @@ The audit and README showcase follow-up produced 83 raw repair candidates for 80
 | 039 | Meteor Iron | Pass | Crater fragments, cooling iron core, and self-rebuilding limbs remain recognizable through the full progression. |
 | 040 | Halite Crown | Pass after repair | The origin was reduced to a compact salt seed; cubic terraces and moisture-grown palace anatomy then increase distinctly. |
 
-## 05 · Artifacts & Instruments
+## Lineages 041–050
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
@@ -94,7 +96,7 @@ The audit and README showcase follow-up produced 83 raw repair candidates for 80
 | 049 | Astral Astrolabe | Pass after repair | The origin now precedes the complete ring walker; calibrated rings and navigational geometry remain consistent. |
 | 050 | Runic Grimoire | Pass after repair | The compact closed origin is now distinct; pages become wings, limbs, and shields without losing book identity. |
 
-## 06 · Food & Alchemy
+## Lineages 051–060
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
@@ -109,7 +111,7 @@ The audit and README showcase follow-up produced 83 raw repair candidates for 80
 | 059 | Honeycomb Alchemist | Pass after repair | The compact origin was clarified; hexagonal wax laboratory, honey, pollen, and thermal systems remain stable. |
 | 060 | Dumpling Dojo | Pass after repair | The origin became a compact folded dumpling; pleat armor and fighter poses develop without becoming a real person. |
 
-## 07 · Elemental & Weather
+## Lineages 061–070
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
@@ -124,7 +126,7 @@ The audit and README showcase follow-up produced 83 raw repair candidates for 80
 | 069 | Drought Mirage Dancer | Pass after repair | The origin was simplified; sun-glass mask and segmented effigy body remain nonhuman while heat-haze dance anatomy develops. |
 | 070 | Living Voltage | Pass after repair | The origin now precedes the mature discharge; capacitor nodes and branching electrical limbs remain the only body system. |
 
-## 08 · Cosmic & Abstract
+## Lineages 071–080
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
@@ -139,7 +141,7 @@ The audit and README showcase follow-up produced 83 raw repair candidates for 80
 | 079 | Deep-Space Signal | Pass after repair | Origin and juvenile were corrected; carrier core, wave hoops, and amber pulse packets now remain a readable radio transmission at every stage. |
 | 080 | Quantum Chance | Pass after repair | The origin was simplified; overlapping alternative outcomes and observation-driven selection remain the body logic. |
 
-## 09 · Living Architecture
+## Lineages 081–090
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|
@@ -154,7 +156,7 @@ The audit and README showcase follow-up produced 83 raw repair candidates for 80
 | 089 | Bridgekeeper Span | Pass | Deck spine, pier legs, cable arches, and folding drawspan remain one articulated bridge across all forms. |
 | 090 | Canal Palace | Pass | Watercourt, palace barge, pavilions, and canal arms expand without turning into an unrelated castle creature. |
 
-## 10 · Collective Systems
+## Lineages 091–100
 
 | # | Lineage | Result | Final continuity finding |
 |---:|---|---|---|

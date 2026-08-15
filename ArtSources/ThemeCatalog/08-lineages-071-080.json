@@ -3,7 +3,6 @@
     {
       "id": "phantom",
       "displayName": "Phantom Veil",
-      "category": "cosmicAbstract",
       "subtitle": "Shadow plate · spectral green ectoplasm",
       "symbolName": "moon.stars.fill",
       "lineageIntroduction": "A footless moth-cat wraith that bends smoke, masks, and eclipses into silent spellwork.",
@@ -15,8 +14,16 @@
       "materialAnchor": "Velvet shadow, cold smoke, moon-silver foil, and black glass",
       "energyAnchor": "Spectral green maskfire and a vertical eclipse disc",
       "motionProfile": "spectral",
-      "accent": {"red": 0.88, "green": 0.18, "blue": 1.0},
-      "secondaryAccent": {"red": 0.25, "green": 1.0, "blue": 0.75},
+      "accent": {
+        "red": 0.88,
+        "green": 0.18,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.25,
+        "green": 1,
+        "blue": 0.75
+      },
       "forms": [
         {
           "stage": "egg",
@@ -48,12 +55,17 @@
           "introduction": "A faceless nightveil whose many wings erase its outline between attacks.",
           "visualAnchor": "Central empty mask surrounded by layered moth wings and a broken green eclipse ring"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "mysterious",
+        "footless winged wraith"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     },
     {
       "id": "event-horizon",
       "displayName": "Event Horizon",
-      "category": "cosmicAbstract",
       "subtitle": "Black core · accretion-gold light",
       "symbolName": "circle.dotted.circle.fill",
       "lineageIntroduction": "A miniature black hole that shapes its accretion disc into limbs while protecting a stable horizon.",
@@ -65,8 +77,16 @@
       "materialAnchor": "Absolute black void, gold plasma, blue lensing glass, and redshift haze",
       "energyAnchor": "White photon ring and red-gold accretion spiral",
       "motionProfile": "orbiting",
-      "accent": {"red": 1.0, "green": 0.58, "blue": 0.12},
-      "secondaryAccent": {"red": 0.32, "green": 0.62, "blue": 1.0},
+      "accent": {
+        "red": 1,
+        "green": 0.58,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 0.32,
+        "green": 0.62,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -98,12 +118,17 @@
           "introduction": "A vast photon crown stabilizes a black center that never reveals its surface.",
           "visualAnchor": "Radial white-gold photon crown around an absolute black disc and two polar jets"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "arcane",
+        "dark sphere inside tilted disc"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     },
     {
       "id": "constellation-scribe",
       "displayName": "Constellation Scribe",
-      "category": "cosmicAbstract",
       "subtitle": "Star points · silver coordinate ink",
       "symbolName": "sparkles",
       "lineageIntroduction": "A self-drawing constellation that rearranges stars and lines into a mobile geometric figure.",
@@ -115,8 +140,16 @@
       "materialAnchor": "White starlight, silver coordinate ink, navy void film, and brass compass points",
       "energyAnchor": "Pulsing star nodes and freshly drawn luminous linework",
       "motionProfile": "pulsing",
-      "accent": {"red": 0.76, "green": 0.88, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.28},
+      "accent": {
+        "red": 0.76,
+        "green": 0.88,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.72,
+        "blue": 0.28
+      },
       "forms": [
         {
           "stage": "egg",
@@ -148,12 +181,17 @@
           "introduction": "A complete celestial atlas folds into a towering figure drawn from hundreds of stars.",
           "visualAnchor": "Vast wireframe titan whose torso is a gridded sky map and limbs are star chains"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "luminous",
+        "wireframe figure of star joints"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     },
     {
       "id": "comet-pilgrim",
       "displayName": "Comet Pilgrim",
-      "category": "cosmicAbstract",
       "subtitle": "Ice-rock core · twin plasma tails",
       "symbolName": "sparkle",
       "lineageIntroduction": "A wandering comet that folds its dust and ion tails into sails, limbs, and a traveling shrine.",
@@ -165,8 +203,16 @@
       "materialAnchor": "Dark ice-rock, white vapor, blue ion plasma, and gold dust particles",
       "energyAnchor": "Cobalt ion tail and sunlit golden dust fan",
       "motionProfile": "gliding",
-      "accent": {"red": 0.38, "green": 0.72, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.25},
+      "accent": {
+        "red": 0.38,
+        "green": 0.72,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.72,
+        "blue": 0.25
+      },
       "forms": [
         {
           "stage": "egg",
@@ -198,12 +244,17 @@
           "introduction": "A vast pilgrim writes a luminous orbit around itself before beginning another century.",
           "visualAnchor": "Shrine-crowned comet inside a complete elliptical path drawn by blue and gold tails"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "graceful",
+        "stone head with long twin tails"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     },
     {
       "id": "mobius-wanderer",
       "displayName": "Möbius Wanderer",
-      "category": "cosmicAbstract",
       "subtitle": "One-sided ribbon · paradox-blue edge",
       "symbolName": "infinity",
       "lineageIntroduction": "A one-sided geometric being that walks, turns, and shelters itself along a continuous Möbius surface.",
@@ -215,8 +266,16 @@
       "materialAnchor": "Matte white ribbon, cobalt edge light, graphite underside, and silver marker bead",
       "energyAnchor": "Traveling blue edge pulse and a fixed paradox point",
       "motionProfile": "orbiting",
-      "accent": {"red": 0.28, "green": 0.56, "blue": 1.0},
-      "secondaryAccent": {"red": 0.92, "green": 0.92, "blue": 0.96},
+      "accent": {
+        "red": 0.28,
+        "green": 0.56,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.92,
+        "blue": 0.96
+      },
       "forms": [
         {
           "stage": "egg",
@@ -248,12 +307,17 @@
           "introduction": "A nested Möbius crown carries several impossible routes on one unbroken surface.",
           "visualAnchor": "Three interwoven one-sided loops forming a crown around a clean central void"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "arcane",
+        "single twisted loop surface"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     },
     {
       "id": "fractal-bloom",
       "displayName": "Fractal Bloom",
-      "category": "cosmicAbstract",
       "subtitle": "Recursive crystal · iteration light",
       "symbolName": "point.3.connected.trianglepath.dotted",
       "lineageIntroduction": "A recursive mathematical bloom that grows the same branching form at many visible scales.",
@@ -265,8 +329,16 @@
       "materialAnchor": "Clear mathematical crystal, black graph lines, white nodes, and violet depth haze",
       "energyAnchor": "Magenta iteration pulses and recursive blue outlines",
       "motionProfile": "pulsing",
-      "accent": {"red": 0.92, "green": 0.24, "blue": 0.78},
-      "secondaryAccent": {"red": 0.26, "green": 0.68, "blue": 1.0},
+      "accent": {
+        "red": 0.92,
+        "green": 0.24,
+        "blue": 0.78
+      },
+      "secondaryAccent": {
+        "red": 0.26,
+        "green": 0.68,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -298,12 +370,17 @@
           "introduction": "A complete radial fractal reveals the same luminous bloom from every viewing scale.",
           "visualAnchor": "Large symmetric recursive flower with six primary arms and countless nested copies"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "luminous",
+        "recursive radial branching form"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     },
     {
       "id": "lucid-dream",
       "displayName": "Lucid Dream",
-      "category": "cosmicAbstract",
       "subtitle": "Soft logic · waking-gold thread",
       "symbolName": "moon.zzz.fill",
       "lineageIntroduction": "A conscious dream that assembles doors, stairs, and soft impossible shapes around a waking thread.",
@@ -315,8 +392,16 @@
       "materialAnchor": "Velvet night, cloud foam, painted doors, translucent stairs, and gold thread",
       "energyAnchor": "Waking-gold tether and violet lucid ripples",
       "motionProfile": "spectral",
-      "accent": {"red": 0.6, "green": 0.34, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.78, "blue": 0.24},
+      "accent": {
+        "red": 0.6,
+        "green": 0.34,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.78,
+        "blue": 0.24
+      },
       "forms": [
         {
           "stage": "egg",
@@ -348,12 +433,17 @@
           "introduction": "A complete dream palace awakens while every door still opens into the same self.",
           "visualAnchor": "Crown-shaped impossible house of many doors above a cloud base and golden tether"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "mysterious",
+        "floating door and impossible stairs"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     },
     {
       "id": "gravity-well",
       "displayName": "Gravity Well",
-      "category": "cosmicAbstract",
       "subtitle": "Curved grid · mass-blue core",
       "symbolName": "circle.grid.cross.fill",
       "lineageIntroduction": "A visible pocket of curved spacetime that walks by moving its own mass across a flexible grid.",
@@ -365,8 +455,16 @@
       "materialAnchor": "Black wire lattice, blue mass glass, white test spheres, and silver tension joints",
       "energyAnchor": "Cobalt curvature gradient and white orbital traces",
       "motionProfile": "heavy",
-      "accent": {"red": 0.18, "green": 0.5, "blue": 1.0},
-      "secondaryAccent": {"red": 0.94, "green": 0.96, "blue": 1.0},
+      "accent": {
+        "red": 0.18,
+        "green": 0.5,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.94,
+        "green": 0.96,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -398,12 +496,17 @@
           "introduction": "A spherical lattice crown wraps an immense mass core and controls many stable orbits.",
           "visualAnchor": "Full warped wire sphere around a dark-blue center and a ring of white orbiting beads"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "colossal",
+        "deformed grid around mass core"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     },
     {
       "id": "deep-space-signal",
       "displayName": "Deep-Space Signal",
-      "category": "cosmicAbstract",
       "subtitle": "Radio geometry · emerald carrier wave",
       "symbolName": "antenna.radiowaves.left.and.right",
       "lineageIntroduction": "A wandering radio transmission that assembles carrier waves, pulses, and static into a body.",
@@ -415,8 +518,16 @@
       "materialAnchor": "Green radio light, black noise grain, silver antenna lines, and amber data blocks",
       "energyAnchor": "Emerald carrier wave and rhythmic white pulse packets",
       "motionProfile": "pulsing",
-      "accent": {"red": 0.2, "green": 1.0, "blue": 0.62},
-      "secondaryAccent": {"red": 1.0, "green": 0.66, "blue": 0.18},
+      "accent": {
+        "red": 0.2,
+        "green": 1,
+        "blue": 0.62
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.66,
+        "blue": 0.18
+      },
       "forms": [
         {
           "stage": "egg",
@@ -448,12 +559,17 @@
           "introduction": "A complete radial transmission returns a new structured answer along every carrier path.",
           "visualAnchor": "Radial antenna crown of waveforms and packet arcs around a brilliant white response core"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "luminous",
+        "waveform body with carrier rings"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     },
     {
       "id": "quantum-chance",
       "displayName": "Quantum Chance",
-      "category": "cosmicAbstract",
       "subtitle": "Probability glass · collapse-white flash",
       "symbolName": "dice.fill",
       "lineageIntroduction": "A probability construct that carries several visible forms until observation selects one outcome.",
@@ -465,8 +581,16 @@
       "materialAnchor": "Clear probability glass, smoky duplicates, black path lines, and white measurement light",
       "energyAnchor": "Branching cyan-magenta outcomes and collapse-white flash",
       "motionProfile": "spectral",
-      "accent": {"red": 0.18, "green": 0.84, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.22, "blue": 0.72},
+      "accent": {
+        "red": 0.18,
+        "green": 0.84,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.22,
+        "blue": 0.72
+      },
       "forms": [
         {
           "stage": "egg",
@@ -498,7 +622,13 @@
           "introduction": "A probability crown displays countless paths before choosing one flawless final form.",
           "visualAnchor": "Large radial tree of translucent outcomes converging on one sharp white central figure"
         }
-      ]
+      ],
+      "tags": [
+        "cosmic entity",
+        "mysterious",
+        "overlapping probability forms around die"
+      ],
+      "artStyle": "surreal cosmic entity rendering with controlled luminous geometry"
     }
   ]
 }

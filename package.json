@@ -10,7 +10,7 @@
     "build": "node Scripts/build.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "verify": "npm run typecheck && npm run test && npm run build && node Scripts/verify-desktop.mjs",
+    "verify": "npm run typecheck && npm run test && npm run build && node Scripts/verify-expansion-assets.mjs && node Scripts/verify-desktop.mjs",
     "start": "npm run build && electron .",
     "capture": "npm run build && SIDEKIN_CAPTURE_DIR=artifacts/previews electron .",
     "media:runtime": "node Scripts/make-runtime-media.mjs",

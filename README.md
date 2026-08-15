@@ -34,9 +34,9 @@ Most desktop pets are decorative overlays. Sidekin has a persistent life of its 
 
 | Live companion | Real care loop | Deep lineage system | Resumable workshop |
 |---|---|---|---|
-| Running, completed, and failed Codex tasks become timed local cards and animated pet reactions. | Hunger, mood, energy, feeding, play, sleep, wake, and local saves. | 200 built-in lineages and 1,000 audited forms: a ten-category foundation plus a tag-based expansion. | Generate 1–8 stages, save every paid result immediately, retry one stage, or continue after failure. |
+| Running, completed, and failed Codex tasks become timed local cards and animated pet reactions. | Hunger, mood, energy, feeding, play, sleep, wake, and local saves. | 200 built-in lineages and 1,000 audited forms in one continuous, tag-based catalog. | Generate 1–8 stages, save every paid result immediately, retry one stage, or continue after failure. |
 
-Sidekin is intentionally broader than an animal pet collection. Its catalog includes mythic beings, unmistakably nonhuman humanoids, deities, mecha, vehicles, plants, fungi, minerals, artifacts, food beings, weather systems, abstract entities, architecture, and distributed colonies.
+Sidekin is intentionally broader than an animal pet collection. Its continuous catalog moves freely among unmistakably nonhuman humanoids, mythic creatures, animal companions, divine entities, guardians, arena racers, playful familiars, and mecha. Mysterious, cute, sacred, gothic, exquisite, heroic, and neon directions overlap instead of defining fixed classes.
 
 ![Sidekin Command Center and transparent floating companion showing live Codex task cards](docs/readme/live-desktop-readme.jpg)
 
@@ -70,11 +70,11 @@ Arena Convergence leads the page. The eight remaining compositions each use one 
 
 *Bright companionship, racing, dancing, and playful scale changes.*
 
-### Chronicle of Ten Worlds
+### Chronicle of Living Worlds
 
-[![Chronicle of Ten Worlds Sidekin poster spanning ten creature categories](docs/readme/poster-chronicle-ten-worlds.jpg)](docs/readme/poster-chronicle-ten-worlds.png)
+[![Chronicle of Living Worlds Sidekin poster spanning contrasting creature realms](docs/readme/poster-chronicle-ten-worlds.jpg)](docs/readme/poster-chronicle-ten-worlds.png)
 
-*Ten catalog categories joined into one epic world map.*
+*Contrasting creatures, constructs, spirits, and habitats joined into one epic world map.*
 
 ### Neon Night League
 
@@ -114,13 +114,11 @@ Arena Convergence leads the page. The eight remaining compositions each use one 
 | Codex response | Live task cards · running · completed · failed · elapsed time |
 | Storage | Local JSON, template packages, stage images, and resumable jobs |
 | Credential storage | macOS Keychain · Windows DPAPI through Electron `safeStorage` |
-| Distribution scope | Public source-Beta archives for inspection; no signed consumer installer |
+| Distribution scope | GitHub source project only; no consumer installer or public-release claim |
 
 ## Quick start
 
-Sidekin is currently built from source. Git LFS is required because the audited visual corpus is intentionally large.
-
-The [`v2.1.0-beta.1` prerelease](https://github.com/limingrui679-design/Sidekin/releases/tag/v2.1.0-beta.1) retains native macOS and Windows CI archives, portable checksum files, package reports, and a tracked-source snapshot. The macOS archive is ad-hoc signed and the Windows archive is unsigned; neither is a consumer-trust or store-distribution claim.
+Sidekin is currently built from source. Git LFS is required because the audited visual corpus is intentionally large. This repository does not claim a signed, notarized, or public consumer release.
 
 ```bash
 git lfs install
@@ -137,7 +135,7 @@ To create an unpacked app for the current operating system:
 npm run package
 ```
 
-> Sidekin does not publish signed consumer installers. The prerelease archives are transparent source-Beta build evidence and must be verified with their adjacent SHA-256 files.
+> `npm run package` builds only on the current computer. It does not publish an installer or create a GitHub Release.
 
 ## Five stages, one identity
 
@@ -151,26 +149,15 @@ The final audit checks common-sense anatomy or construction, identity continuity
 
 ## 200 lineages · 1,000 forms
 
-### Twenty-lineage sampler
+### Twenty contrasting lineages
 
 ![Twenty Sidekin lineages represented by final legendary forms](docs/readme/showcase-20-readme.jpg)
 
-This sampler pairs two contrasting lineages from every original category so the gallery shows variation within a category—not only one mascot per label.
+This sampler selects twenty deliberately contrasting silhouettes and materials from the same continuous catalog—not one mascot per artificial bucket.
 
-The first 100 lineages form a balanced foundation with ten lineages in each category:
+All 200 lineages use overlapping free-form tags. Search can move naturally across nonhuman humanoids, mythic creatures, divine entities, animal companions, mecha, cute familiars, mysterious spirits, sacred guardians, exquisite jewel forms, fierce racers, and many other combinations without forcing a lineage into one fixed class.
 
-1. Fauna & Mythic
-2. Machines & Vehicles
-3. Flora & Fungi
-4. Mineral & Geological
-5. Artifacts & Instruments
-6. Food & Alchemy
-7. Elemental & Weather
-8. Cosmic & Abstract
-9. Living Architecture
-10. Collective Systems
-
-The second 100 lineages use searchable free-form tags rather than forcing every idea back into those ten buckets. This expansion adds nonhuman champions, spirits, legendary creatures, deities, racing forms, guardians, and mecha while preserving the same five-stage data contract and visual continuity rules.
+The added 100 concentrate on nonhuman champions, spirits, legendary creatures, deities, racing forms, guardians, and mecha. No additional architecture or botanical lineage was introduced; only pre-existing poster-canonical subjects remain from the original collection. Every addition preserves the same five-stage data contract and visual-continuity rules.
 
 ### Every built-in lineage
 
@@ -180,14 +167,14 @@ The complete contact sheet is generated directly from the same 200-theme catalog
 
 Humanoid silhouettes remain unmistakably nonhuman: the art standard forbids real people, children, realistic human skin, realistic human hair, and ordinary human faces.
 
-The original 500 images existed before the first 100-lineage audit began. That audit plus a later README showcase review produced 83 raw candidates for 80 stage targets across 63 lineages before acceptance. A second, separately tracked expansion added another 100 lineages and 500 forms; all 100 expansion sequences were reviewed, six lineages were regenerated and reprocessed after visible findings, and one additional hatchling received a hash-pinned final normalization after the automated readability gate. The evidence is reviewable in:
+The original 500 images existed before the first 100-lineage audit began. That audit plus a later README showcase review produced 83 raw candidates for 80 stage targets across 63 lineages before acceptance. A second, separately tracked expansion added another 100 lineages and 500 forms; all 100 expansion sequences were reviewed, and 17 lineages received regenerated or targeted post-processing corrections for separators, weak progression, scale, continuity, or unsafe iconography before final acceptance. The evidence is reviewable in:
 
 - [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) — one result for each of the original 100 lineages
 - [`docs/EXPANSION_AUDIT.md`](docs/EXPANSION_AUDIT.md) — one result for each of the 100 expansion lineages
 - [`ArtSources/AuditSheets`](ArtSources/AuditSheets) — 20 five-lineage audit sheets
 - [`ArtSources/Expansion200/ReviewSheets`](ArtSources/Expansion200/ReviewSheets) — 20 final expansion asset sheets
 - [`ArtSources/PET_THEME_CATALOG.json`](ArtSources/PET_THEME_CATALOG.json) — machine-readable source of truth
-- [`ArtSources/ART_PRODUCTION_500.md`](ArtSources/ART_PRODUCTION_500.md) — production and continuity constraints
+- [`ArtSources/ART_PRODUCTION.md`](ArtSources/ART_PRODUCTION.md) — production and continuity constraints
 
 ## Care, growth, and Codex response
 
@@ -284,7 +271,6 @@ The GitHub Actions matrix runs natively on `macos-latest` and `windows-latest`, 
 | [`ArtSources`](ArtSources) | Catalog, prompts, curated sources, repair candidates, and audit sheets |
 | [`Scripts`](Scripts) | Shared build/verification/media tools plus historical macOS art tooling |
 | [`.github/workflows/desktop.yml`](.github/workflows/desktop.yml) | Native macOS and Windows verification and packaging matrix |
-| [`.github/workflows/release.yml`](.github/workflows/release.yml) | Tagged prerelease build, checksum, and GitHub Release publication |
 | [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) | Final visual QA results for the original 100 lineages |
 | [`docs/EXPANSION_AUDIT.md`](docs/EXPANSION_AUDIT.md) | Final visual QA results for the 100-lineage expansion |
 | [`docs/COMPLETION_AUDIT.md`](docs/COMPLETION_AUDIT.md) | Feature and evidence-bound completion audit |
@@ -292,7 +278,7 @@ The GitHub Actions matrix runs natively on `macos-latest` and `windows-latest`, 
 
 ## Project status
 
-Sidekin 2.1.0-beta.1 is an openly reviewable macOS and Windows source Beta. The same runtime is tested on both platforms, locally packaged and launched on macOS, and packaged by the repository's native Windows CI job. It is not represented as a signed public product, a production deployment, external adoption, or a real-API end-to-end validation performed with the author's key.
+Sidekin 2.1.0-beta.1 is an openly reviewable macOS and Windows source Beta. The same runtime is tested on both platforms, locally packaged and launched on macOS, and packaged by the repository's native Windows CI job. CI uploads temporary workflow artifacts for verification but does not create a GitHub Release. The project is not represented as a signed public product, a production deployment, external adoption, or a real-API end-to-end validation performed with the author's key.
 
 The repository is proprietary and all rights are reserved. Source and art are visible for review, but no permission to copy, redistribute, or create derivatives is granted by the repository's [`LICENSE`](LICENSE).
 

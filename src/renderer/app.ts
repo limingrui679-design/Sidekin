@@ -67,8 +67,7 @@ function asset(theme: ThemeProfile, stage: string): string {
 function formFor(theme: ThemeProfile, stage: string) { return theme.forms.find((form) => form.stage === stage) ?? theme.forms[0]!; }
 
 function taxonomy(theme: ThemeProfile): string {
-  if (theme.category) return theme.category.replace(/([A-Z])/g, " $1").trim();
-  return (theme.tags ?? []).slice(0, 2).join(" · ") || "Original lineage";
+  return theme.tags.slice(0, 2).join(" · ");
 }
 
 function renderState(state: PublicPetState): void {
@@ -125,9 +124,9 @@ function renderLineages(filter = ""): void {
   const themes = data.catalog.filter((theme) => [
     theme.displayName,
     taxonomy(theme),
-    ...(theme.tags ?? []),
+    ...theme.tags,
     theme.existenceAnchor,
-    theme.artStyle ?? ""
+    theme.artStyle
   ].join(" ").toLowerCase().includes(query));
   $("#lineage-grid").innerHTML = themes.map((theme) => `
     <button class="lineage-card ${theme.id === data.activeTheme.id && !data.pet.wardrobe.customTemplateID ? "active" : ""}" data-theme="${theme.id}">

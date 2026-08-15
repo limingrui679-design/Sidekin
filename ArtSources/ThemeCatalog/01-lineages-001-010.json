@@ -3,7 +3,6 @@
     {
       "id": "nova",
       "displayName": "Nova Arena",
-      "category": "faunaMythic",
       "subtitle": "Crystal energy · astral arena",
       "symbolName": "sparkles",
       "lineageIntroduction": "A moonhare lineage that converts gravity into crystal arrows and weightless leaps.",
@@ -15,8 +14,16 @@
       "materialAnchor": "Translucent star crystal and flexible deep-blue armor",
       "energyAnchor": "Four-point star core and nested gravity orbits",
       "motionProfile": "buoyant",
-      "accent": {"red": 0.12, "green": 0.92, "blue": 1.0},
-      "secondaryAccent": {"red": 0.58, "green": 0.28, "blue": 1.0},
+      "accent": {
+        "red": 0.12,
+        "green": 0.92,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.58,
+        "green": 0.28,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -48,12 +55,17 @@
           "introduction": "The moonhare apex charts safe routes with a crown mantle and a celestial compass bow.",
           "visualAnchor": "Regal moonhare archer framed by long star trails and an enormous double-crescent compass bow"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "whimsical",
+        "upright long eared archer"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     },
     {
       "id": "street",
       "displayName": "Street Brawl",
-      "category": "faunaMythic",
       "subtitle": "Graffiti armor · acid neon",
       "symbolName": "bolt.fill",
       "lineageIntroduction": "A graffiti gecko that turns street movement, spray paint, and sound into arena weapons.",
@@ -65,8 +77,16 @@
       "materialAnchor": "Worn rubber, layered stickers, and spray-painted polymer",
       "energyAnchor": "Acid-green soundwaves and red graffiti bursts",
       "motionProfile": "agile",
-      "accent": {"red": 0.7, "green": 1.0, "blue": 0.05},
-      "secondaryAccent": {"red": 1.0, "green": 0.2, "blue": 0.25},
+      "accent": {
+        "red": 0.7,
+        "green": 1,
+        "blue": 0.05
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.2,
+        "blue": 0.25
+      },
       "forms": [
         {
           "stage": "egg",
@@ -98,12 +118,17 @@
           "introduction": "A city-scale gecko whose tail rail loops every beat back into the arena.",
           "visualAnchor": "Broad street champion encircled by a tail rail, stacked speakers, and neon tags"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "dynamic",
+        "low four limbed board rider"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     },
     {
       "id": "samurai",
       "displayName": "Sakura Blade",
-      "category": "faunaMythic",
       "subtitle": "Vermilion warplate · sakura energy",
       "symbolName": "fan.fill",
       "lineageIntroduction": "A disciplined fox-crane lineage whose petal energy sharpens into crescent draw-cuts.",
@@ -115,8 +140,16 @@
       "materialAnchor": "Vermilion lacquer, black iron, washi, and pale-gold knots",
       "energyAnchor": "A petal crescent gathering along each drawn blade",
       "motionProfile": "poised",
-      "accent": {"red": 1.0, "green": 0.24, "blue": 0.48},
-      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.15},
+      "accent": {
+        "red": 1,
+        "green": 0.24,
+        "blue": 0.48
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.72,
+        "blue": 0.15
+      },
       "forms": [
         {
           "stage": "egg",
@@ -148,12 +181,17 @@
           "introduction": "A winglord commanding a thousand blade-feathers without breaking its stance.",
           "visualAnchor": "Tall unmoving winglord crowned by radial blade feathers and two crescent wings"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "elegant",
+        "tall avian canine swordsman"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     },
     {
       "id": "abyss",
       "displayName": "Abyssal Tidehunter",
-      "category": "faunaMythic",
       "subtitle": "Deep-sea carapace · tidal bioluminescence",
       "symbolName": "water.waves",
       "lineageIntroduction": "A horizontally swimming deep-sea hybrid that commands pressure rings and tidal light.",
@@ -165,8 +203,16 @@
       "materialAnchor": "Pearlescent shell, wet skin, and transparent pressure fins",
       "energyAnchor": "Cyan bioluminescence and expanding tidal rings",
       "motionProfile": "swimming",
-      "accent": {"red": 0.0, "green": 0.84, "blue": 0.72},
-      "secondaryAccent": {"red": 0.1, "green": 0.42, "blue": 0.92},
+      "accent": {
+        "red": 0,
+        "green": 0.84,
+        "blue": 0.72
+      },
+      "secondaryAccent": {
+        "red": 0.1,
+        "green": 0.42,
+        "blue": 0.92
+      },
       "forms": [
         {
           "stage": "egg",
@@ -198,12 +244,17 @@
           "introduction": "A sovereign ring-ray that surrounds the battlefield with living ocean pressure.",
           "visualAnchor": "Vast manta-crab sovereign passing through two giant concentric water rings"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "aquatic",
+        "wide multi limbed swimmer"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     },
     {
       "id": "tempest",
       "displayName": "Tempest Aerie",
-      "category": "faunaMythic",
       "subtitle": "Storm feathers · copper lightning vanes",
       "symbolName": "cloud.bolt.fill",
       "lineageIntroduction": "A two-legged thunder roc that learns to brake, dive, and steer storms with its wings.",
@@ -215,8 +266,16 @@
       "materialAnchor": "Layered storm feathers, slate keratin, and flexible copper vanes",
       "energyAnchor": "White-blue lightning vortex and ionized feather trails",
       "motionProfile": "winged",
-      "accent": {"red": 0.35, "green": 0.78, "blue": 1.0},
-      "secondaryAccent": {"red": 0.85, "green": 0.95, "blue": 1.0},
+      "accent": {
+        "red": 0.35,
+        "green": 0.78,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.85,
+        "green": 0.95,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -248,12 +307,17 @@
           "introduction": "A crownstorm roc that dives through its own lightning vortex without losing control.",
           "visualAnchor": "Diagonal diving roc piercing a circular lightning ring with a swept crown crest"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "aerial",
+        "broad winged bipedal raptor"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     },
     {
       "id": "glacier",
       "displayName": "Glacier Colossus",
-      "category": "faunaMythic",
       "subtitle": "Rime fur · blue-ice armor",
       "symbolName": "snowflake",
       "lineageIntroduction": "A monumental mammoth lineage that carries aurora ice through tusks, trunk, and rime armor.",
@@ -265,8 +329,16 @@
       "materialAnchor": "Dense white rime fur, translucent blue ice, and dark glacial stone",
       "energyAnchor": "Aurora heart, frost breath, and pressure-cracked ice runes",
       "motionProfile": "heavy",
-      "accent": {"red": 0.6, "green": 0.9, "blue": 1.0},
-      "secondaryAccent": {"red": 0.55, "green": 0.35, "blue": 1.0},
+      "accent": {
+        "red": 0.6,
+        "green": 0.9,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.55,
+        "green": 0.35,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -298,12 +370,17 @@
           "introduction": "A glacier colossus carrying the aurora across an unbreakable moving mountain.",
           "visualAnchor": "Mountain-sized mammoth arch beneath an aurora crown and stepped glacier saddle"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "colossal",
+        "massive four column mammoth"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     },
     {
       "id": "scarab",
       "displayName": "Sunscarab Dominion",
-      "category": "faunaMythic",
       "subtitle": "Sunstone shell · gilded wing cases",
       "symbolName": "sun.max.fill",
       "lineageIntroduction": "A six-legged solar scarab that unfolds gilded wing cases into a desert heliostat.",
@@ -315,8 +392,16 @@
       "materialAnchor": "Sunbaked sandstone, gold leaf, black enamel, and amber wing glass",
       "energyAnchor": "Amber solar lens and rotating heliostat glyphs",
       "motionProfile": "skittering",
-      "accent": {"red": 1.0, "green": 0.7, "blue": 0.08},
-      "secondaryAccent": {"red": 0.95, "green": 0.3, "blue": 0.08},
+      "accent": {
+        "red": 1,
+        "green": 0.7,
+        "blue": 0.08
+      },
+      "secondaryAccent": {
+        "red": 0.95,
+        "green": 0.3,
+        "blue": 0.08
+      },
       "forms": [
         {
           "stage": "egg",
@@ -348,12 +433,17 @@
           "introduction": "A zenith scarab that turns its split shell into a rotating desert sun.",
           "visualAnchor": "Six-legged beetle beneath a full radial sun machine built from opened shell plates"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "swift",
+        "low six legged beetle"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     },
     {
       "id": "koi",
       "displayName": "Neon Koi Circuit",
-      "category": "faunaMythic",
       "subtitle": "Holographic scales · conductive neon fins",
       "symbolName": "waveform.path",
       "lineageIntroduction": "A legless neon koi wyrm that swims through open air on loops of electrical current.",
@@ -365,8 +455,16 @@
       "materialAnchor": "Holographic scales, neon acrylic fins, and flexible conductive filament",
       "energyAnchor": "Magenta-cyan current lines and a pulsing circuit pearl",
       "motionProfile": "serpentine",
-      "accent": {"red": 0.1, "green": 0.95, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.12, "blue": 0.72},
+      "accent": {
+        "red": 0.1,
+        "green": 0.95,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.12,
+        "blue": 0.72
+      },
       "forms": [
         {
           "stage": "egg",
@@ -398,12 +496,17 @@
           "introduction": "A current sovereign whose twin fan tail closes an endless luminous circuit.",
           "visualAnchor": "Figure-eight koi sovereign with a huge split fan tail completing an infinity circuit"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "serpentine",
+        "ribbon bodied air swimmer"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     },
     {
       "id": "manticore",
       "displayName": "Solar Manticore",
-      "category": "faunaMythic",
       "subtitle": "Dark feline hide · stained-gold sun plates",
       "symbolName": "sun.horizon.fill",
       "lineageIntroduction": "A prowling feline guardian whose sun mane and articulated scorpion tail store solar force.",
@@ -415,8 +518,16 @@
       "materialAnchor": "Midnight feline hide, brushed gold, smoked crystal, and stained-sun plates",
       "energyAnchor": "Solar corona mane and a star-bright scorpion stinger",
       "motionProfile": "prowling",
-      "accent": {"red": 1.0, "green": 0.48, "blue": 0.12},
-      "secondaryAccent": {"red": 1.0, "green": 0.86, "blue": 0.18},
+      "accent": {
+        "red": 1,
+        "green": 0.48,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.86,
+        "blue": 0.18
+      },
       "forms": [
         {
           "stage": "egg",
@@ -448,12 +559,17 @@
           "introduction": "A Helios manticore whose mane and tail form one controlled solar corona.",
           "visualAnchor": "Leaping feline inside a broken solar ring completed by its curved blazing tail"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "fierce",
+        "low feline with arched tail"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     },
     {
       "id": "spider",
       "displayName": "Prism Web",
-      "category": "faunaMythic",
       "subtitle": "Prism quartz · spectral silk",
       "symbolName": "circle.hexagongrid.fill",
       "lineageIntroduction": "An eight-legged orb-weaver that spins spectral silk through a faceted prism abdomen.",
@@ -465,8 +581,16 @@
       "materialAnchor": "Clear prism quartz, chrome joints, spectral silk, and dark velvet facets",
       "energyAnchor": "Refracted spectrum web and a white prism-heart flare",
       "motionProfile": "skittering",
-      "accent": {"red": 0.65, "green": 0.42, "blue": 1.0},
-      "secondaryAccent": {"red": 0.2, "green": 1.0, "blue": 0.92},
+      "accent": {
+        "red": 0.65,
+        "green": 0.42,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.2,
+        "green": 1,
+        "blue": 0.92
+      },
       "forms": [
         {
           "stage": "egg",
@@ -498,7 +622,13 @@
           "introduction": "A crownprism araneid whose radiant loom can reshape the battlefield from above.",
           "visualAnchor": "Inverted crown-shaped spider descending through a vast broken ring of spectral silk"
         }
-      ]
+      ],
+      "tags": [
+        "mythic creature",
+        "swift",
+        "radial eight legged weaver"
+      ],
+      "artStyle": "premium fantasy creature rendering with competitive-game silhouette clarity"
     }
   ]
 }

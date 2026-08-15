@@ -3,7 +3,6 @@
     {
       "id": "volcanic",
       "displayName": "Molten Tyrant",
-      "category": "mineralGeological",
       "subtitle": "Obsidian layers · molten fissures",
       "symbolName": "flame.fill",
       "lineageIntroduction": "A plated burrower that stores geological heat before becoming a living siege volcano.",
@@ -15,8 +14,16 @@
       "materialAnchor": "Obsidian, basalt horns, ash scale, and white-hot molten cracks",
       "energyAnchor": "Orange-white underfire and erupting crown ridges",
       "motionProfile": "heavy",
-      "accent": {"red": 1.0, "green": 0.24, "blue": 0.05},
-      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.05},
+      "accent": {
+        "red": 1,
+        "green": 0.24,
+        "blue": 0.05
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.72,
+        "blue": 0.05
+      },
       "forms": [
         {
           "stage": "egg",
@@ -48,12 +55,17 @@
           "introduction": "A ley dragon crowned by a walking volcano and a molten fault line.",
           "visualAnchor": "Massive low dragon carrying a volcanic cone along its spine and a glowing fault tail"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "colossal",
+        "low armored hammer tail beast"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     },
     {
       "id": "amethyst-heart",
       "displayName": "Amethyst Heart",
-      "category": "mineralGeological",
       "subtitle": "Geode shell · violet crystal pulse",
       "symbolName": "diamond.fill",
       "lineageIntroduction": "A walking geode that opens, closes, and rearranges its crystal chamber around a bright heart.",
@@ -65,8 +77,16 @@
       "materialAnchor": "Weathered gray basalt, violet quartz teeth, white calcite, and smoky crystal",
       "energyAnchor": "Deep-violet heart pulse and refracted triangular rays",
       "motionProfile": "bouncing",
-      "accent": {"red": 0.66, "green": 0.28, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.55, "blue": 0.9},
+      "accent": {
+        "red": 0.66,
+        "green": 0.28,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.55,
+        "blue": 0.9
+      },
       "forms": [
         {
           "stage": "egg",
@@ -98,12 +118,17 @@
           "introduction": "A ring of orbiting geode plates protects a flawless heart prism at its center.",
           "visualAnchor": "Exploded circular shell of rough stone slabs surrounding a huge radiant violet diamond"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "cute",
+        "split geode on tripod feet"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     },
     {
       "id": "dune-monolith",
       "displayName": "Dune Monolith",
-      "category": "mineralGeological",
       "subtitle": "Layered sandstone · wind-carved light",
       "symbolName": "rectangle.portrait.fill",
       "lineageIntroduction": "A migrating sandstone monolith that walks on flowing dunes and records every wind in its layers.",
@@ -115,8 +140,16 @@
       "materialAnchor": "Red sandstone layers, pale quartz grains, iron crust, and loose wind sand",
       "energyAnchor": "Golden contour lines and luminous erosion windows",
       "motionProfile": "gliding",
-      "accent": {"red": 0.92, "green": 0.48, "blue": 0.18},
-      "secondaryAccent": {"red": 1.0, "green": 0.82, "blue": 0.38},
+      "accent": {
+        "red": 0.92,
+        "green": 0.48,
+        "blue": 0.18
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.82,
+        "blue": 0.38
+      },
       "forms": [
         {
           "stage": "egg",
@@ -148,12 +181,17 @@
           "introduction": "A colossal sandstone gate carries an entire moving dune through its central void.",
           "visualAnchor": "Vast rectangular stone arch striding on a crescent dune with a bright horizon inside"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "graceful",
+        "vertical slab on sand base"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     },
     {
       "id": "magnetite-orbit",
       "displayName": "Magnetite Orbit",
-      "category": "mineralGeological",
       "subtitle": "Iron crystal · polar aurora",
       "symbolName": "scope",
       "lineageIntroduction": "A magnetic mineral intelligence that rearranges iron shards around a permanent compass core.",
@@ -165,8 +203,16 @@
       "materialAnchor": "Black magnetite crystals, brushed iron, cobalt filings, and nickel mirrors",
       "energyAnchor": "Blue-red polar arcs and fine visible field lines",
       "motionProfile": "orbiting",
-      "accent": {"red": 0.18, "green": 0.52, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.16, "blue": 0.28},
+      "accent": {
+        "red": 0.18,
+        "green": 0.52,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.16,
+        "blue": 0.28
+      },
       "forms": [
         {
           "stage": "egg",
@@ -198,12 +244,17 @@
           "introduction": "A crown of mineral continents rotates around a blazing planetary compass core.",
           "visualAnchor": "Spherical field cage of dark landlike shards under two sweeping aurora pole arches"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "arcane",
+        "floating shard field"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     },
     {
       "id": "amber-archive",
       "displayName": "Amber Archive",
-      "category": "mineralGeological",
       "subtitle": "Fossil resin · memory-gold glow",
       "symbolName": "archivebox.fill",
       "lineageIntroduction": "A mobile amber archive that preserves harmless moments as layered inclusions inside its body.",
@@ -215,8 +266,16 @@
       "materialAnchor": "Honey amber, dark tree resin, fossil pollen, and polished bronze frames",
       "energyAnchor": "Memory-gold backlight and concentric magnification halos",
       "motionProfile": "rolling",
-      "accent": {"red": 1.0, "green": 0.58, "blue": 0.08},
-      "secondaryAccent": {"red": 0.72, "green": 0.24, "blue": 0.08},
+      "accent": {
+        "red": 1,
+        "green": 0.58,
+        "blue": 0.08
+      },
+      "secondaryAccent": {
+        "red": 0.72,
+        "green": 0.24,
+        "blue": 0.08
+      },
       "forms": [
         {
           "stage": "egg",
@@ -248,12 +307,17 @@
           "introduction": "A radiant amber spire fans every preserved moment into a navigable halo.",
           "visualAnchor": "Tall central resin obelisk surrounded by a ring of floating illuminated amber panels"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "mobile",
+        "tapered obelisk on rollers"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     },
     {
       "id": "fossil-reef",
       "displayName": "Fossil Reef",
-      "category": "mineralGeological",
       "subtitle": "Petrified bone · ocean-blue strata",
       "symbolName": "fossil.shell.fill",
       "lineageIntroduction": "A walking reef of petrified shells and bones that reconstructs vanished seafloor shapes.",
@@ -265,8 +329,16 @@
       "materialAnchor": "Chalk limestone, petrified bone, blue shale, and nacre fossil seams",
       "energyAnchor": "Ocean-blue reconstruction outlines and pale sediment clouds",
       "motionProfile": "heavy",
-      "accent": {"red": 0.2, "green": 0.68, "blue": 0.88},
-      "secondaryAccent": {"red": 0.88, "green": 0.82, "blue": 0.62},
+      "accent": {
+        "red": 0.2,
+        "green": 0.68,
+        "blue": 0.88
+      },
+      "secondaryAccent": {
+        "red": 0.88,
+        "green": 0.82,
+        "blue": 0.62
+      },
       "forms": [
         {
           "stage": "egg",
@@ -298,12 +370,17 @@
           "introduction": "A vast moving reef projects the complete outline of an ancient ocean above itself.",
           "visualAnchor": "Multi-tier fossil reef beneath a luminous blue dome traced with vanished sea life"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "colossal",
+        "low branching reef platform"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     },
     {
       "id": "resonant-quartz",
       "displayName": "Resonant Quartz",
-      "category": "mineralGeological",
       "subtitle": "Clear crystal · harmonic gold",
       "symbolName": "tuningfork",
       "lineageIntroduction": "A quartz formation that walks on tuning prongs and shapes solid harmonics from vibration.",
@@ -315,8 +392,16 @@
       "materialAnchor": "Clear quartz, smoky crystal, brushed gold clamps, and black vibration pads",
       "energyAnchor": "Golden standing waves and white harmonic nodes",
       "motionProfile": "poised",
-      "accent": {"red": 1.0, "green": 0.78, "blue": 0.22},
-      "secondaryAccent": {"red": 0.42, "green": 0.88, "blue": 1.0},
+      "accent": {
+        "red": 1,
+        "green": 0.78,
+        "blue": 0.22
+      },
+      "secondaryAccent": {
+        "red": 0.42,
+        "green": 0.88,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -348,12 +433,17 @@
           "introduction": "A monumental crystal organ holds an entire spectrum as visible standing waves.",
           "visualAnchor": "Radial cluster of tuning crystals around a tall center spire and concentric gold waves"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "elegant",
+        "crystal spire with fork limbs"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     },
     {
       "id": "terracotta-fault",
       "displayName": "Terracotta Fault",
-      "category": "mineralGeological",
       "subtitle": "Fired clay plates · kiln-blue seams",
       "symbolName": "square.3.layers.3d",
       "lineageIntroduction": "A segmented clay landform that slides its own tectonic plates across a kiln-hot core.",
@@ -365,8 +455,16 @@
       "materialAnchor": "Red terracotta, black slip, glazed blue seams, and cracked kiln stone",
       "energyAnchor": "Kiln-blue rift glow and orange seismic pulse rings",
       "motionProfile": "skittering",
-      "accent": {"red": 0.92, "green": 0.34, "blue": 0.14},
-      "secondaryAccent": {"red": 0.08, "green": 0.66, "blue": 1.0},
+      "accent": {
+        "red": 0.92,
+        "green": 0.34,
+        "blue": 0.14
+      },
+      "secondaryAccent": {
+        "red": 0.08,
+        "green": 0.66,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -398,12 +496,17 @@
           "introduction": "A walking microcontinent reshapes mountains and rifts across its fired-clay back.",
           "visualAnchor": "Huge flat landmass silhouette on many slab legs with miniature ridges and a blue fault"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "swift",
+        "flat segmented plate crawler"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     },
     {
       "id": "meteor-iron",
       "displayName": "Meteor Iron",
-      "category": "mineralGeological",
       "subtitle": "Widmanstätten steel · impact plasma",
       "symbolName": "circle.hexagongrid.fill",
       "lineageIntroduction": "A fallen iron meteor that reassembles crater fragments into limbs around its cooling core.",
@@ -415,8 +518,16 @@
       "materialAnchor": "Etched meteor iron, fusion crust, nickel crystal, and scorched glass",
       "energyAnchor": "Blue-white impact plasma and orange cooling seams",
       "motionProfile": "heavy",
-      "accent": {"red": 0.3, "green": 0.62, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.4, "blue": 0.1},
+      "accent": {
+        "red": 0.3,
+        "green": 0.62,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.4,
+        "blue": 0.1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -448,12 +559,17 @@
           "introduction": "A sovereign meteor commands a crown of orbiting crater shards before every descent.",
           "visualAnchor": "Central black iron core beneath a radial shard crown and a long vertical plasma trail"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "colossal",
+        "irregular core inside crater ring"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     },
     {
       "id": "halite-crown",
       "displayName": "Halite Crown",
-      "category": "mineralGeological",
       "subtitle": "Salt crystal steps · brine-blue core",
       "symbolName": "cube.fill",
       "lineageIntroduction": "A salt-crystal formation that grows cubic terraces by drawing moisture from the air.",
@@ -465,8 +581,16 @@
       "materialAnchor": "Clear halite cubes, white salt crust, blue brine glass, and silver inclusions",
       "energyAnchor": "Brine-blue capillary light and square evaporation halos",
       "motionProfile": "gliding",
-      "accent": {"red": 0.62, "green": 0.9, "blue": 1.0},
-      "secondaryAccent": {"red": 0.92, "green": 0.98, "blue": 1.0},
+      "accent": {
+        "red": 0.62,
+        "green": 0.9,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.98,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -498,7 +622,13 @@
           "introduction": "A radiant salt palace unfolds a vast crown of cubic forks above its moving base.",
           "visualAnchor": "Towering stepped crystal silhouette topped by a radial crown of square salt prongs"
         }
-      ]
+      ],
+      "tags": [
+        "mineral being",
+        "graceful",
+        "stepped cubic crystal tower"
+      ],
+      "artStyle": "jewel-like elemental rendering with monumental crystalline geometry"
     }
   ]
 }

@@ -5,7 +5,6 @@ import path from "node:path";
 import process from "node:process";
 import sharp from "sharp";
 import { isDeepStrictEqual } from "node:util";
-import { createHash } from "node:crypto";
 
 const root = process.cwd();
 const expansionRoot = path.join(root, "ArtSources", "Expansion200");
@@ -21,7 +20,14 @@ function requireCondition(condition, message) {
 
 requireCondition(expansion.themes.length === 100, `Expected 100 expansion lineages, found ${expansion.themes.length}.`);
 requireCondition(catalog.themes.length === 200, `Expected 200 integrated lineages, found ${catalog.themes.length}.`);
+requireCondition(catalog.schemaVersion === 2, `Expected tag catalog schema 2, found ${catalog.schemaVersion}.`);
 const combined = catalog.themes;
+
+for (const theme of combined) {
+  requireCondition(!Object.hasOwn(theme, "category"), `${theme.id} reintroduces a fixed category.`);
+  requireCondition(Array.isArray(theme.tags) && theme.tags.length >= 3, `${theme.id} needs at least three free-form tags.`);
+  requireCondition(typeof theme.artStyle === "string" && theme.artStyle.trim().length > 0, `${theme.id} needs an explicit art style.`);
+}
 
 for (const key of ["id", "displayName", "lineageIntroduction", "existenceAnchor", "silhouetteAnchor", "motionAnchor", "materialAnchor", "energyAnchor"]) {
   requireCondition(new Set(combined.map((theme) => theme[key])).size === combined.length, `Combined catalog contains a duplicate ${key}.`);
@@ -76,12 +82,6 @@ if (requireFullAssets) {
     const imagePath = path.join(resourceDirectory, name);
     const metadata = await sharp(imagePath).metadata();
     requireCondition(metadata.width === 1254 && metadata.height === 1254 && metadata.hasAlpha, `${name} is not a 1254-square alpha PNG.`);
-  }
-  const overrides = JSON.parse(fs.readFileSync(path.join(expansionRoot, "FINAL_ASSET_OVERRIDES.json"), "utf8"));
-  for (const override of overrides.overrides) {
-    const data = fs.readFileSync(path.join(resourceDirectory, override.fileName));
-    const digest = createHash("sha256").update(data).digest("hex");
-    requireCondition(digest === override.outputSHA256, `${override.fileName} does not match its normalized output hash.`);
   }
   const reviewSheets = fs.readdirSync(path.join(expansionRoot, "ReviewSheets"))
     .filter((name) => /^assets-[0-9]{2}\.jpg$/.test(name));

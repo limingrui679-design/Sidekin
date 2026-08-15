@@ -725,25 +725,19 @@ test("The app includes two hundred complete themes and one thousand described fo
     try expect(Set(materials).count == 200, "Material anchors are duplicated")
     try expect(Set(energies).count == 200, "Energy anchors are duplicated")
 
-    let categorizedThemes = PetVisualTheme.allCases.filter { $0.category != nil }
-    let tagBasedThemes = PetVisualTheme.allCases.filter { $0.category == nil }
-    let categoryCounts = Dictionary(grouping: categorizedThemes, by: { $0.category! }).mapValues(\.count)
-    try expect(categoryCounts.count == 10, "The catalog does not cover ten existence categories")
     try expect(
-        PetThemeCategory.allCases.allSatisfy { categoryCounts[$0] == 10 },
-        "Each existence category must contain exactly ten complete themes"
+        PetVisualTheme.allCases.allSatisfy { $0.tags.count >= 3 },
+        "Every lineage must provide at least three free-form search tags"
     )
     try expect(
-        categorizedThemes.filter { $0.category != .faunaMythic }.count == 90,
-        "The category-based catalog is still over-concentrated on animal forms"
+        PetVisualTheme.allCases.allSatisfy { !$0.profile.artStyle.isEmpty },
+        "Every lineage must provide an explicit art-style direction"
     )
-    try expect(
-        tagBasedThemes.count == 100 && tagBasedThemes.allSatisfy { $0.tags.count >= 3 },
-        "The tag-based expansion must contain 100 themes with at least three tags each"
-    )
+    let uniqueTags = Set(PetVisualTheme.allCases.flatMap(\.tags).map { $0.lowercased() })
+    try expect(uniqueTags.count >= 50, "The tag catalog is not diverse enough")
     try expect(
         PetVisualTheme.allCases.allSatisfy { !$0.taxonomyLabel.isEmpty },
-        "Every theme must expose a category or tag-based taxonomy label"
+        "Every theme must expose a tag-based taxonomy label"
     )
     try expect(
         Set(PetVisualTheme.allCases.map(\.silhouetteClass)).count >= 18,

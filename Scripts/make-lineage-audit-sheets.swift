@@ -19,11 +19,10 @@ struct ThemeCatalogEnvelope: Decodable {
     struct Theme: Decodable {
         let id: String
         let displayName: String
-        let category: String?
-        let tags: [String]?
+        let tags: [String]
 
         var taxonomyLabel: String {
-            category ?? (tags ?? []).prefix(2).joined(separator: " · ")
+            tags.prefix(2).joined(separator: " · ")
         }
     }
 
@@ -72,7 +71,7 @@ let idAttributes: [NSAttributedString.Key: Any] = [
     .font: NSFont.monospacedSystemFont(ofSize: 13, weight: .medium),
     .foregroundColor: NSColor(calibratedWhite: 0.72, alpha: 1)
 ]
-let categoryAttributes: [NSAttributedString.Key: Any] = [
+let tagAttributes: [NSAttributedString.Key: Any] = [
     .font: NSFont.systemFont(ofSize: 13, weight: .regular),
     .foregroundColor: NSColor(calibratedRed: 0.48, green: 0.76, blue: 1, alpha: 1)
 ]
@@ -131,7 +130,7 @@ for sheetIndex in 0..<sheetCount {
         )
         (theme.taxonomyLabel as NSString).draw(
             in: NSRect(x: 16, y: y + 72, width: labelWidth - 28, height: 42),
-            withAttributes: categoryAttributes
+            withAttributes: tagAttributes
         )
 
         for (stageIndex, stage) in stages.enumerated() {

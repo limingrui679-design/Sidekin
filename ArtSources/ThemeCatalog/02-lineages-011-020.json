@@ -3,7 +3,6 @@
     {
       "id": "mecha",
       "displayName": "Vanguard Mecha",
-      "category": "machinesVehicles",
       "subtitle": "Ceramic armor · alert-orange core",
       "symbolName": "cpu.fill",
       "lineageIntroduction": "A wheel-pawed mechanical mastiff built to grow from scout pod into a mobile fortress.",
@@ -15,8 +14,16 @@
       "materialAnchor": "White ceramic panels, gunmetal joints, and black shock absorbers",
       "energyAnchor": "Alert-orange hexagonal reactor and segmented targeting lines",
       "motionProfile": "mechanical",
-      "accent": {"red": 1.0, "green": 0.52, "blue": 0.08},
-      "secondaryAccent": {"red": 0.12, "green": 0.9, "blue": 1.0},
+      "accent": {
+        "red": 1,
+        "green": 0.52,
+        "blue": 0.08
+      },
+      "secondaryAccent": {
+        "red": 0.12,
+        "green": 0.9,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -48,12 +55,17 @@
           "introduction": "A six-point mobile bastion that carries an entire defense grid into battle.",
           "visualAnchor": "Hexagonal fortress beast on six wheel-paws beneath a layered rotating defense crown"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "precision",
+        "low four wheel mecha hound"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     },
     {
       "id": "wasteland",
       "displayName": "Wasteland Salvager",
-      "category": "machinesVehicles",
       "subtitle": "Scrap-built armor · corroded brass",
       "symbolName": "wrench.and.screwdriver.fill",
       "lineageIntroduction": "A four-legged fennec scavenger that assembles every new form from recovered machinery.",
@@ -65,8 +77,16 @@
       "materialAnchor": "Rusty copper, old canvas, improvised steel, and exposed cable",
       "energyAnchor": "Amber reclaimed battery and sandstorm electrical arcs",
       "motionProfile": "prowling",
-      "accent": {"red": 0.92, "green": 0.58, "blue": 0.12},
-      "secondaryAccent": {"red": 0.76, "green": 0.3, "blue": 0.08},
+      "accent": {
+        "red": 0.92,
+        "green": 0.58,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 0.76,
+        "green": 0.3,
+        "blue": 0.08
+      },
       "forms": [
         {
           "stage": "egg",
@@ -98,12 +118,17 @@
           "introduction": "A radio-colossus fox that turns an entire salvage rig into one moving body.",
           "visualAnchor": "Massive mobile workshop on four paws crowned by dishes, crane booms, and antennas"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "fierce",
+        "four legged salvage carrier"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     },
     {
       "id": "ironline",
       "displayName": "Ironline Rail Spirit",
-      "category": "machinesVehicles",
       "subtitle": "Blackened steel · signal-red steam",
       "symbolName": "tram.fill",
       "lineageIntroduction": "A self-laying locomotive spirit that grows new cars, rails, and junctions as one body.",
@@ -115,8 +140,16 @@
       "materialAnchor": "Blackened steel, red enamel, brass rods, and coal-glass windows",
       "energyAnchor": "Signal-red steam and white-hot switch-point sparks",
       "motionProfile": "mechanical",
-      "accent": {"red": 0.95, "green": 0.16, "blue": 0.12},
-      "secondaryAccent": {"red": 1.0, "green": 0.72, "blue": 0.22},
+      "accent": {
+        "red": 0.95,
+        "green": 0.16,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.72,
+        "blue": 0.22
+      },
       "forms": [
         {
           "stage": "egg",
@@ -148,12 +181,17 @@
           "introduction": "A sovereign rail engine bends its entire train into a moving circular junction.",
           "visualAnchor": "Enormous locomotive and linked cars forming a near-complete ring of rails and steam"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "precision",
+        "elongated locomotive centipede"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     },
     {
       "id": "bathysphere",
       "displayName": "Hadal Bathysphere",
-      "category": "machinesVehicles",
       "subtitle": "Pressure brass · abyssal searchlight",
       "symbolName": "water.waves",
       "lineageIntroduction": "A free-swimming exploration sphere that turns ballast, manipulators, and lamps into limbs.",
@@ -165,8 +203,16 @@
       "materialAnchor": "Verdigris brass, thick glass, rubber bellows, and pressure steel",
       "energyAnchor": "Pale searchlight cone and violet sonar ripples",
       "motionProfile": "swimming",
-      "accent": {"red": 0.22, "green": 0.82, "blue": 0.86},
-      "secondaryAccent": {"red": 0.58, "green": 0.38, "blue": 0.95},
+      "accent": {
+        "red": 0.22,
+        "green": 0.82,
+        "blue": 0.86
+      },
+      "secondaryAccent": {
+        "red": 0.58,
+        "green": 0.38,
+        "blue": 0.95
+      },
       "forms": [
         {
           "stage": "egg",
@@ -198,12 +244,17 @@
           "introduction": "A vast living laboratory carries an illuminated map of every trench in its dome.",
           "visualAnchor": "Layered spherical research vessel under a glass atlas dome with six articulated arms"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "aquatic",
+        "spherical submersible with arms"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     },
     {
       "id": "pollinator",
       "displayName": "Pollinator Array",
-      "category": "machinesVehicles",
       "subtitle": "Petal rotors · pollen-gold optics",
       "symbolName": "dot.radiowaves.left.and.right",
       "lineageIntroduction": "A modular garden drone whose detachable rotors coordinate pollination as a flying array.",
@@ -215,8 +266,16 @@
       "materialAnchor": "Cream bioplastic, green carbon stems, mesh petals, and amber optics",
       "energyAnchor": "Pollen-gold scan cones and green route lattices",
       "motionProfile": "winged",
-      "accent": {"red": 0.92, "green": 0.78, "blue": 0.12},
-      "secondaryAccent": {"red": 0.24, "green": 0.9, "blue": 0.42},
+      "accent": {
+        "red": 0.92,
+        "green": 0.78,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 0.24,
+        "green": 0.9,
+        "blue": 0.42
+      },
       "forms": [
         {
           "stage": "egg",
@@ -248,12 +307,17 @@
           "introduction": "A mobile pollination network unfolds into a radiant aerial garden above the canopy.",
           "visualAnchor": "Concentric rotor flower formed by a central craft and twelve linked satellite petals"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "aerial",
+        "radial four rotor drone"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     },
     {
       "id": "lunar-crawler",
       "displayName": "Moonbase Crawler",
-      "category": "machinesVehicles",
       "subtitle": "Regolith armor · cobalt survey light",
       "symbolName": "moon.fill",
       "lineageIntroduction": "A six-wheel lunar rover that expands from sample carrier into a walking research base.",
@@ -265,8 +329,16 @@
       "materialAnchor": "White insulation foil, titanium ribs, black wheels, and dust-stained panels",
       "energyAnchor": "Cobalt survey beams and geometric regolith scans",
       "motionProfile": "rolling",
-      "accent": {"red": 0.32, "green": 0.62, "blue": 1.0},
-      "secondaryAccent": {"red": 0.92, "green": 0.95, "blue": 1.0},
+      "accent": {
+        "red": 0.32,
+        "green": 0.62,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.95,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -298,12 +370,17 @@
           "introduction": "A roaming moonbase carries a dome, antenna forest, and complete field laboratory.",
           "visualAnchor": "Wide mobile base on six wheel towers beneath a glass dome and radial antenna crown"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "mobile",
+        "low six wheel rover"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     },
     {
       "id": "aether-frigate",
       "displayName": "Aether Frigate",
-      "category": "machinesVehicles",
       "subtitle": "Cloudwood hull · turquoise lift sails",
       "symbolName": "wind",
       "lineageIntroduction": "A living skyship that grows sails, decks, and floating outriggers around a buoyant core.",
@@ -315,8 +392,16 @@
       "materialAnchor": "Pale cloudwood, turquoise silk, brass rigging, and opal lift bladders",
       "energyAnchor": "Teal wind runes and pearly buoyancy currents",
       "motionProfile": "gliding",
-      "accent": {"red": 0.2, "green": 0.88, "blue": 0.9},
-      "secondaryAccent": {"red": 1.0, "green": 0.78, "blue": 0.32},
+      "accent": {
+        "red": 0.2,
+        "green": 0.88,
+        "blue": 0.9
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.78,
+        "blue": 0.32
+      },
       "forms": [
         {
           "stage": "egg",
@@ -348,12 +433,17 @@
           "introduction": "A vast flagship surrounds its cloudwood decks with a complete ring of lift sails.",
           "visualAnchor": "Multi-deck skyship framed by a circular crown of sails and four cloud outriggers"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "graceful",
+        "long hulled floating airship"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     },
     {
       "id": "mobile-foundry",
       "displayName": "Mobile Foundry",
-      "category": "machinesVehicles",
       "subtitle": "Furnace iron · molten casting arms",
       "symbolName": "hammer.fill",
       "lineageIntroduction": "A walking industrial furnace that forges replacement limbs and tools from its own heat.",
@@ -365,8 +455,16 @@
       "materialAnchor": "Black furnace iron, firebrick, copper pipes, and glowing cast steel",
       "energyAnchor": "White-orange crucible core and showers of forging sparks",
       "motionProfile": "heavy",
-      "accent": {"red": 1.0, "green": 0.3, "blue": 0.04},
-      "secondaryAccent": {"red": 1.0, "green": 0.78, "blue": 0.12},
+      "accent": {
+        "red": 1,
+        "green": 0.3,
+        "blue": 0.04
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.78,
+        "blue": 0.12
+      },
       "forms": [
         {
           "stage": "egg",
@@ -398,12 +496,17 @@
           "introduction": "A moving steelworks recasts its whole silhouette while marching through the arena.",
           "visualAnchor": "Cathedral-scale furnace walker with four chimney towers and a ring of casting arms"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "colossal",
+        "four legged industrial tower"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     },
     {
       "id": "arcade-titan",
       "displayName": "Arcade Titan",
-      "category": "machinesVehicles",
       "subtitle": "Cabinet plastic · pixel power",
       "symbolName": "gamecontroller.fill",
       "lineageIntroduction": "A coin-operated game machine that unfolds controls, screens, and pixel weapons into a champion.",
@@ -415,8 +518,16 @@
       "materialAnchor": "Colored ABS plastic, smoked screen glass, chrome trim, and rubber buttons",
       "energyAnchor": "Primary-color pixels and scanline combo meters",
       "motionProfile": "marching",
-      "accent": {"red": 0.2, "green": 0.68, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.2, "blue": 0.55},
+      "accent": {
+        "red": 0.2,
+        "green": 0.68,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.2,
+        "blue": 0.55
+      },
       "forms": [
         {
           "stage": "egg",
@@ -448,12 +559,17 @@
           "introduction": "A towering game sovereign projects an entire arena from its crown of screens.",
           "visualAnchor": "Tall multi-screen titan surrounded by a pixel arch and four floating controller hands"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "regal",
+        "upright cabinet transformer"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     },
     {
       "id": "rescue-convoy",
       "displayName": "Rescue Convoy",
-      "category": "machinesVehicles",
       "subtitle": "Safety composite · beacon-blue modules",
       "symbolName": "cross.case.fill",
       "lineageIntroduction": "A modular emergency vehicle that splits into coordinated medical, fire, and recovery units.",
@@ -465,8 +581,16 @@
       "materialAnchor": "White safety composite, red rubber, brushed aluminum, and clear blue lenses",
       "energyAnchor": "Rotating blue beacon bands and clean white rescue grids",
       "motionProfile": "rolling",
-      "accent": {"red": 0.12, "green": 0.62, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.18, "blue": 0.16},
+      "accent": {
+        "red": 0.12,
+        "green": 0.62,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.18,
+        "blue": 0.16
+      },
       "forms": [
         {
           "stage": "egg",
@@ -498,7 +622,13 @@
           "introduction": "A complete emergency fleet locks together into a luminous mobile shelter corridor.",
           "visualAnchor": "Ring-shaped linked convoy forming a protected central passage under blue light arches"
         }
-      ]
+      ],
+      "tags": [
+        "mecha construct",
+        "mobile",
+        "modular emergency vehicle"
+      ],
+      "artStyle": "hard-surface arena mecha rendering with readable modular engineering"
     }
   ]
 }

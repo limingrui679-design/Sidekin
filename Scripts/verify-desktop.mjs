@@ -52,7 +52,7 @@ const supportingPosters = [
   ["Cosmic Grand Assembly", "hero-readme.jpg", "hero.jpg"],
   ["Evolution Odyssey", "poster-evolution-odyssey.jpg", "poster-evolution-odyssey.png"],
   ["Prismatic Pet Festival", "poster-prismatic-festival.jpg", "poster-prismatic-festival.png"],
-  ["Chronicle of Ten Worlds", "poster-chronicle-ten-worlds.jpg", "poster-chronicle-ten-worlds.png"],
+  ["Chronicle of Living Worlds", "poster-chronicle-ten-worlds.jpg", "poster-chronicle-ten-worlds.png"],
   ["Neon Night League", "poster-neon-night-league.jpg", "poster-neon-night-league.png"],
   ["Codex Companion Workshop", "poster-companion-workshop.jpg", "poster-companion-workshop.png"],
   ["Mythic Dawn Assembly", "poster-mythic-dawn.jpg", "poster-mythic-dawn.png"],
@@ -92,7 +92,10 @@ const codex = await readFile(path.join(root, "src/shared/codex.ts"), "utf8");
 requireCondition(codex.includes('object.type === "session_meta"') && codex.includes('object.type === "turn_context"'), "Safe project-label metadata extraction is missing.");
 
 const catalog = JSON.parse(await readFile(path.join(root, "ArtSources/PET_THEME_CATALOG.json"), "utf8"));
+requireCondition(catalog.schemaVersion === 2, "Expected the category-free tag catalog schema.");
 requireCondition(catalog.themes.length === 200, "Expected 200 built-in lineages.");
+requireCondition(catalog.themes.every((theme) => !Object.hasOwn(theme, "category")), "A fixed theme category remains in the catalog.");
+requireCondition(catalog.themes.every((theme) => Array.isArray(theme.tags) && theme.tags.length >= 3), "Every lineage must expose free-form tags.");
 const assets = (await readdir(path.join(root, "Sources/SidekinApp/Resources/Characters"))).filter((file) => file.endsWith(".png"));
 requireCondition(assets.length === 1_000, "Expected 1,000 built-in character assets.");
 for (const theme of catalog.themes) {
@@ -106,4 +109,4 @@ requireCondition(workflow.includes("macos-latest") && workflow.includes("windows
 requireCondition(workflow.includes("npm run make") && workflow.includes("actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a"), "Desktop CI must create and retain platform artifacts with a pinned action.");
 requireCondition(workflow.includes("node Scripts/verify-expansion-plan.mjs --full"), "Desktop CI must verify the completed expansion before packaging.");
 
-console.log("Verified the Arena homepage poster, eight full-width themes, secure shared desktop runtime, retired cosmetic slots, 13 motions, 200 lineages, 1,000 forms, and macOS/Windows packaging gates.");
+console.log("Verified the Arena homepage poster, eight full-width themes, secure shared desktop runtime, retired cosmetic slots, 13 motions, one tag-based catalog with 200 lineages and 1,000 forms, and macOS/Windows packaging gates.");

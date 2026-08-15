@@ -1,19 +1,8 @@
-# Sidekin 100-Theme / 500-Form Art Production Standard
+# Sidekin 200-Lineage / 1,000-Form Art Production Standard
 
-Sidekin contains 100 independent five-stage lineages, not 100 isolated form names. The source of truth is the ten category files in `ArtSources/ThemeCatalog/`. The generated `ArtSources/PET_THEME_CATALOG.json` combines them into a machine-readable production manifest.
+Sidekin contains 200 independent five-stage lineages, not 1,000 isolated form names. The source of truth is the neutral lineage fragments in `ArtSources/ThemeCatalog/`. The generated `ArtSources/PET_THEME_CATALOG.json` combines them into one machine-readable, tag-based production manifest.
 
-Each lineage defines a unique existence anchor, silhouette topology, locomotion class, material system, energy motif, five form names, five concise introductions, and five stage-specific visual anchors. Ten themes belong to each of these categories:
-
-1. Fauna & Mythic
-2. Machines & Vehicles
-3. Flora & Fungi
-4. Mineral & Geological
-5. Artifacts & Instruments
-6. Food & Alchemy
-7. Elemental & Weather
-8. Cosmic & Abstract
-9. Living Architecture
-10. Collective Systems
+Each lineage defines at least three searchable free-form tags, an explicit art direction, a unique existence anchor, silhouette topology, locomotion class, material system, energy motif, five form names, five concise introductions, and five stage-specific visual anchors. Tags overlap naturally; they are descriptors, not mutually exclusive buckets.
 
 ## Shared production prompt
 
@@ -39,7 +28,7 @@ Hard constraints: no scenery, detached decorative props unrelated to the existen
 
 ## Required files
 
-- Exactly 500 final resources: 100 theme IDs × 5 canonical stages.
+- Exactly 1,000 final resources: 200 lineage IDs × 5 canonical stages.
 - Resource name: `<theme-id>-<stage-id>.png`.
 - Canonical stage IDs: `egg`, `hatchling`, `juvenile`, `ascended`, `legendary`.
 - Final canvas: `1254×1254` transparent PNG.
@@ -56,7 +45,7 @@ Hard constraints: no scenery, detached decorative props unrelated to the existen
 - The two-stage comparison prevents intentionally compact eggs or round cores from failing merely because their outer masks are similar while still rejecting near-duplicate visible designs.
 - Every high-IoU candidate remains subject to visual inspection even when its appearance score is below the automated rejection threshold.
 - Every stage is checked at desktop scale for clean cutout, full construction, anchor retention, readable focal feature, and stage continuity.
-- Every lineage is checked against all 99 other themes for silhouette topology, locomotion, materials, energy motif, and existence-type collision.
+- Every lineage is checked against all 199 other themes for silhouette topology, locomotion, materials, energy motif, and existence-type collision.
 - Weak or derivative images are regenerated; quantity never lowers the standard.
 
-Run `Scripts/verify-theme-catalog.sh` to confirm the 100-theme source and generated catalog match. Run `Scripts/verify-character-assets.swift` after all 500 resources exist. The individual final review record is in `docs/LINEAGE_AUDIT.md`; its 20 visual contact sheets are in `ArtSources/AuditSheets/`.
+Run `Scripts/verify-theme-catalog.sh` to confirm the 200-lineage source and generated catalog match. Run `Scripts/verify-character-assets.swift` after all 1,000 resources exist. The individual final review records are in `docs/LINEAGE_AUDIT.md` and `docs/EXPANSION_AUDIT.md`; their visual contact sheets are in `ArtSources/AuditSheets/` and `ArtSources/Expansion200/ReviewSheets/`.

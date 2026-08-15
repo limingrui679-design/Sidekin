@@ -1,7 +1,7 @@
 Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
 
-Theme: Aether Frigate [Machines & Vehicles]
-Art-style direction: catalog-defined premium competitive-game companion
+Theme: Aether Frigate [mecha construct · graceful · long hulled floating airship]
+Art-style direction: hard-surface arena mecha rendering with readable modular engineering
 Form: Cloudskiff Sprout, canonical hatchling stage
 Lineage concept: A living skyship that grows sails, decks, and floating outriggers around a buoyant core.
 Existence anchor: Autonomous Cloud-Sailing Frigate

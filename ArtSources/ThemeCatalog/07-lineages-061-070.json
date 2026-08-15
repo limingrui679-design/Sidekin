@@ -3,7 +3,6 @@
     {
       "id": "emberwild",
       "displayName": "Emberwild Spirit",
-      "category": "elementalWeather",
       "subtitle": "Charcoal bark · controlled wildfire",
       "symbolName": "flame.fill",
       "lineageIntroduction": "A wildfire intelligence that builds a temporary body from charcoal, flame fronts, and seed embers.",
@@ -15,8 +14,16 @@
       "materialAnchor": "Charcoal bark, white ash, orange flame, and red seed embers",
       "energyAnchor": "Controlled crown fire and green renewal sparks",
       "motionProfile": "flowing",
-      "accent": {"red": 1.0, "green": 0.28, "blue": 0.04},
-      "secondaryAccent": {"red": 0.34, "green": 0.9, "blue": 0.28},
+      "accent": {
+        "red": 1,
+        "green": 0.28,
+        "blue": 0.04
+      },
+      "secondaryAccent": {
+        "red": 0.34,
+        "green": 0.9,
+        "blue": 0.28
+      },
       "forms": [
         {
           "stage": "egg",
@@ -48,12 +55,17 @@
           "introduction": "A vast controlled blaze forms a ring that burns outward and sprouts inward.",
           "visualAnchor": "Circular wall of orange fire surrounding a dark center filled with bright green seedlings"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "ethereal",
+        "hollow flame rib elemental"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     },
     {
       "id": "tidal-crown",
       "displayName": "Tidal Crown",
-      "category": "elementalWeather",
       "subtitle": "Deep water arcs · moon-pull core",
       "symbolName": "water.waves",
       "lineageIntroduction": "A gravity-bound body of seawater that changes shape with a suspended miniature moon.",
@@ -65,8 +77,16 @@
       "materialAnchor": "Clear deep water, white foam, dark suspended sediment, and pearl moonstone",
       "energyAnchor": "Moon-white pull lines and cyan tidal height bands",
       "motionProfile": "flowing",
-      "accent": {"red": 0.08, "green": 0.68, "blue": 1.0},
-      "secondaryAccent": {"red": 0.92, "green": 0.95, "blue": 1.0},
+      "accent": {
+        "red": 0.08,
+        "green": 0.68,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.95,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -98,12 +118,17 @@
           "introduction": "A complete rotating crown of seawater surrounds the moon that commands it.",
           "visualAnchor": "Radial water crown of eight breaking waves around a brilliant pearl moon core"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "ethereal",
+        "crescent wave around moon core"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     },
     {
       "id": "cyclone-dancer",
       "displayName": "Cyclone Dancer",
-      "category": "elementalWeather",
       "subtitle": "Pressure-silk wind · cobalt eye",
       "symbolName": "tornado",
       "lineageIntroduction": "A pressure vortex that balances ribbon winds around a calm blue eye and dances to steer itself.",
@@ -115,8 +140,16 @@
       "materialAnchor": "Translucent wind silk, gray vapor, airborne dust, and blue pressure glass",
       "energyAnchor": "Cobalt calm eye and white spiral velocity bands",
       "motionProfile": "orbiting",
-      "accent": {"red": 0.42, "green": 0.72, "blue": 1.0},
-      "secondaryAccent": {"red": 0.88, "green": 0.94, "blue": 1.0},
+      "accent": {
+        "red": 0.42,
+        "green": 0.72,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.88,
+        "green": 0.94,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -148,12 +181,17 @@
           "introduction": "A colossal dancer opens a complete pressure disc around one perfectly calm center.",
           "visualAnchor": "Wide top-down cyclone disc tapering into a thin dancing funnel beneath"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "arcane",
+        "funnel body with spiral skirt"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     },
     {
       "id": "whiteout-wisp",
       "displayName": "Whiteout Wisp",
-      "category": "elementalWeather",
       "subtitle": "Powder snow · visibility-blue lantern",
       "symbolName": "snowflake.circle.fill",
       "lineageIntroduction": "A blizzard intelligence that folds powder, wind, and visibility into a soft shifting body.",
@@ -165,8 +203,16 @@
       "materialAnchor": "Powder snow, rime lace, frosted air, and blue ice lantern glass",
       "energyAnchor": "Visibility-blue eye and pale compass gust lines",
       "motionProfile": "spectral",
-      "accent": {"red": 0.72, "green": 0.9, "blue": 1.0},
-      "secondaryAccent": {"red": 0.24, "green": 0.58, "blue": 1.0},
+      "accent": {
+        "red": 0.72,
+        "green": 0.9,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.24,
+        "green": 0.58,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -198,12 +244,17 @@
           "introduction": "A circular white storm hides its entire body behind one calm ring of blue visibility.",
           "visualAnchor": "Huge radial snow cloud with a clean blue circular aperture and long spindrift tails"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "mysterious",
+        "hooded snow cloud wisp"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     },
     {
       "id": "thunderhead-forge",
       "displayName": "Thunderhead Forge Mecha",
-      "category": "elementalWeather",
       "subtitle": "Storm steel · molten-lightning reactor",
       "symbolName": "cloud.bolt.fill",
       "lineageIntroduction": "A purpose-built storm mecha that grows around one anvil reactor while forging lightning into articulated weapons.",
@@ -215,8 +266,16 @@
       "materialAnchor": "Gunmetal storm plate, dense charcoal vapor, silver rain pistons, and orange plasma conduits",
       "energyAnchor": "Triangular amber reactor visor and molten-white lightning tools",
       "motionProfile": "heavy",
-      "accent": {"red": 1.0, "green": 0.7, "blue": 0.12},
-      "secondaryAccent": {"red": 0.42, "green": 0.64, "blue": 1.0},
+      "accent": {
+        "red": 1,
+        "green": 0.7,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 0.42,
+        "green": 0.64,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -248,12 +307,17 @@
           "introduction": "A towering final warframe opens its anvil shoulders into a complete mobile foundry without losing its original visor.",
           "visualAnchor": "Colossal two-legged storm mecha framed by flat forge wings, four working arms, amber triangle face, and bolt crown"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "colossal",
+        "bipedal anvil chested storm mecha"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     },
     {
       "id": "prism-rain",
       "displayName": "Prism Rain Peacock",
-      "category": "elementalWeather",
       "subtitle": "Rain-glass plumage · seven-color fan",
       "symbolName": "rainbow",
       "lineageIntroduction": "A true peafowl lineage whose rain-glass feathers refract one silver downpour into seven persistent colors.",
@@ -265,8 +329,16 @@
       "materialAnchor": "Iridescent blue plumage, clear rain-glass feathers, silver mist, and saturated spectral droplets",
       "energyAnchor": "White prism crest and seven separated tail-rain colors",
       "motionProfile": "flowing",
-      "accent": {"red": 0.3, "green": 0.9, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.28, "blue": 0.68},
+      "accent": {
+        "red": 0.3,
+        "green": 0.9,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.28,
+        "blue": 0.68
+      },
       "forms": [
         {
           "stage": "egg",
@@ -298,12 +370,17 @@
           "introduction": "The same peacock raises a monumental cathedral-shaped tail while its bird body and face remain clearly visible.",
           "visualAnchor": "Regal peacock centered before seven towering rain-glass feather arches with unchanged beak and prism crown"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "ethereal",
+        "peafowl with spectral rain fan"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     },
     {
       "id": "monsoon-vessel",
       "displayName": "Monsoon Leviathan",
-      "category": "elementalWeather",
       "subtitle": "Rain-serpent body · pressure-red dorsal sail",
       "symbolName": "cloud.heavyrain.fill",
       "lineageIntroduction": "A mythic monsoon leviathan that keeps one white forked brow while growing a serpentine rain body and pressure sail.",
@@ -315,8 +392,16 @@
       "materialAnchor": "Dense blue rainwater scales, graphite cloud mane, red pressure silk, and silver wind foam",
       "energyAnchor": "White forked brow, crimson pressure arrows, and deep-blue rainwake",
       "motionProfile": "gliding",
-      "accent": {"red": 0.12, "green": 0.62, "blue": 1.0},
-      "secondaryAccent": {"red": 0.94, "green": 0.22, "blue": 0.28},
+      "accent": {
+        "red": 0.12,
+        "green": 0.62,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.94,
+        "green": 0.22,
+        "blue": 0.28
+      },
       "forms": [
         {
           "stage": "egg",
@@ -348,12 +433,17 @@
           "introduction": "The legendary leviathan forms a vast vertical worldcoil that carries layered rain bands along its unbroken body.",
           "visualAnchor": "Towering limbless rain leviathan coiled three times around a storm core, face visible above a huge crimson dorsal sail"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "graceful",
+        "serpentine monsoon leviathan"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     },
     {
       "id": "aurora-ribbon",
       "displayName": "Aurora Veil Deity",
-      "category": "elementalWeather",
       "subtitle": "Polar-light robes · magnetic halo",
       "symbolName": "waveform.path",
       "lineageIntroduction": "A nonhuman polar-sky deity that matures around one serene silver mask, vertical eye slit, and magnetic aurora halo.",
@@ -365,8 +455,16 @@
       "materialAnchor": "Translucent green-violet light robes, silver mask metal, black field glass, and fine polar particles",
       "energyAnchor": "Vertical blue eye slit, polar gradient sleeves, and bright magnetic halo flares",
       "motionProfile": "flowing",
-      "accent": {"red": 0.32, "green": 1.0, "blue": 0.7},
-      "secondaryAccent": {"red": 0.72, "green": 0.36, "blue": 1.0},
+      "accent": {
+        "red": 0.32,
+        "green": 1,
+        "blue": 0.7
+      },
+      "secondaryAccent": {
+        "red": 0.72,
+        "green": 0.36,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -398,12 +496,17 @@
           "introduction": "The final god opens a seven-point aurora crown while its masked humanoid body remains visible at the center.",
           "visualAnchor": "Majestic masked deity centered under seven polar-light crown points with four sleeves, blue eye slit, and black halo"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "ethereal",
+        "floating masked aurora deity"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     },
     {
       "id": "drought-mirage",
       "displayName": "Drought Mirage Dancer",
-      "category": "elementalWeather",
       "subtitle": "Nonhuman mirage effigy · heatglass fans",
       "symbolName": "sun.max.trianglebadge.exclamationmark.fill",
       "lineageIntroduction": "A nonhuman humanoid mirage effigy unfolds from a sun-glass cradle into a master of heat-haze dance while preserving the same mask, segmented body, and identity.",
@@ -415,8 +518,16 @@
       "materialAnchor": "Carved sunstone mask, faceted heat glass, flowing sand veil, salt-ceramic joints, and sun-gold fan frames",
       "energyAnchor": "Single crescent eye slit, distorted horizon bands, and searing white fan trails",
       "motionProfile": "spectral",
-      "accent": {"red": 1.0, "green": 0.68, "blue": 0.12},
-      "secondaryAccent": {"red": 0.92, "green": 0.2, "blue": 0.08},
+      "accent": {
+        "red": 1,
+        "green": 0.68,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.2,
+        "blue": 0.08
+      },
       "forms": [
         {
           "stage": "egg",
@@ -448,12 +559,17 @@
           "introduction": "The fully realized effigy performs inside a complete ring of fan-made horizons without becoming human or dissolving into abstraction.",
           "visualAnchor": "Physical nonhuman humanoid construct centered within eight heatglass fan echoes, retaining one crescent-slit mask, hollow joints, faceted torso, two arms, and two reverse-jointed legs"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "mysterious",
+        "nonhuman humanoid mirage effigy"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     },
     {
       "id": "living-voltage",
       "displayName": "Living Voltage",
-      "category": "elementalWeather",
       "subtitle": "Plasma filament · capacitor-blue nodes",
       "symbolName": "bolt.fill",
       "lineageIntroduction": "A free electrical charge that builds branching limbs between floating capacitor nodes.",
@@ -465,8 +581,16 @@
       "materialAnchor": "White-blue plasma, ceramic capacitors, copper contact rings, and ionized air",
       "energyAnchor": "Branching voltage arcs and pulsing blue charge nodes",
       "motionProfile": "pulsing",
-      "accent": {"red": 0.3, "green": 0.76, "blue": 1.0},
-      "secondaryAccent": {"red": 0.94, "green": 0.98, "blue": 1.0},
+      "accent": {
+        "red": 0.3,
+        "green": 0.76,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.94,
+        "green": 0.98,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -498,7 +622,13 @@
           "introduction": "A radial voltage crown links dozens of nodes around a silent zero-potential center.",
           "visualAnchor": "Circular lightning network of blue nodes and white arcs surrounding an empty dark core"
         }
-      ]
+      ],
+      "tags": [
+        "elemental spirit",
+        "luminous",
+        "branching lightning between nodes"
+      ],
+      "artStyle": "high-contrast elemental VFX character art with a stable central silhouette"
     }
   ]
 }

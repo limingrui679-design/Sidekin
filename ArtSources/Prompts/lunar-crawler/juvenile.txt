@@ -1,7 +1,7 @@
 Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
 
-Theme: Moonbase Crawler [Machines & Vehicles]
-Art-style direction: catalog-defined premium competitive-game companion
+Theme: Moonbase Crawler [mecha construct · mobile · low six wheel rover]
+Art-style direction: hard-surface arena mecha rendering with readable modular engineering
 Form: Ridge Survey Crawler, canonical juvenile stage
 Lineage concept: A six-wheel lunar rover that expands from sample carrier into a walking research base.
 Existence anchor: Expandable Lunar Research Rover

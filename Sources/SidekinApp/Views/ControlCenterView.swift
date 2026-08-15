@@ -416,7 +416,6 @@ private struct PetWorkshopDashboard: View {
     @State private var pendingRegeneration: StageTemplateAction?
     @State private var showRegenerationAlert = false
     @State private var themeSearch = ""
-    @State private var selectedThemeCategory: PetThemeCategory?
 
     private let artPresets = [
         "Competitive-game 3D character art, readable silhouette, premium materials",
@@ -578,7 +577,7 @@ private struct PetWorkshopDashboard: View {
                 VStack(alignment: .leading, spacing: 3) {
                     Text("TEMPLATE LIBRARY")
                         .font(.headline.bold())
-                    Text("200 offline lineages: a balanced ten-category core plus a searchable tag-based expansion. Generated templates appear here.")
+                    Text("200 offline lineages in one searchable, tag-based catalog. Generated templates appear here.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -617,28 +616,6 @@ private struct PetWorkshopDashboard: View {
             .background(Color.white.opacity(0.055), in: RoundedRectangle(cornerRadius: 9))
             .overlay(RoundedRectangle(cornerRadius: 9).stroke(Color.white.opacity(0.08), lineWidth: 1))
 
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 7) {
-                    ThemeCategoryFilterButton(
-                        title: "All 200",
-                        symbol: "square.grid.3x3.fill",
-                        isSelected: selectedThemeCategory == nil
-                    ) {
-                        selectedThemeCategory = nil
-                    }
-
-                    ForEach(PetThemeCategory.allCases) { category in
-                        ThemeCategoryFilterButton(
-                            title: category.displayName,
-                            symbol: category.symbolName,
-                            isSelected: selectedThemeCategory == category
-                        ) {
-                            selectedThemeCategory = category
-                        }
-                    }
-                }
-            }
-
             LazyVGrid(
                 columns: [GridItem(.adaptive(minimum: 116, maximum: 152), spacing: 8)],
                 spacing: 8
@@ -658,7 +635,7 @@ private struct PetWorkshopDashboard: View {
                 ContentUnavailableView(
                     "No Matching Theme",
                     systemImage: "magnifyingglass",
-                    description: Text("Try another name, material, existence type, or clear the category filter.")
+                    description: Text("Try another name, tag, material, or existence type.")
                 )
                 .frame(maxWidth: .infinity, minHeight: 180)
             }
@@ -712,8 +689,6 @@ private struct PetWorkshopDashboard: View {
     private var filteredThemes: [PetVisualTheme] {
         let query = themeSearch.trimmingCharacters(in: .whitespacesAndNewlines)
         return PetVisualTheme.allCases.filter { theme in
-            let categoryMatches = selectedThemeCategory.map { theme.category == $0 } ?? true
-            guard categoryMatches else { return false }
             guard !query.isEmpty else { return true }
             let searchable = [
                 theme.displayName,
@@ -1596,32 +1571,6 @@ private struct MiniMetric: View {
             Text(label).font(.caption2).foregroundStyle(.secondary)
         }
         .frame(maxWidth: .infinity)
-    }
-}
-
-private struct ThemeCategoryFilterButton: View {
-    let title: String
-    let symbol: String
-    let isSelected: Bool
-    let action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            Label(title, systemImage: symbol)
-                .font(.system(size: 10.5, weight: .bold, design: .rounded))
-                .foregroundStyle(isSelected ? Color.black : Color.primary.opacity(0.82))
-                .padding(.horizontal, 10)
-                .padding(.vertical, 7)
-                .background(
-                    isSelected ? Color.mint : Color.white.opacity(0.055),
-                    in: Capsule()
-                )
-                .overlay(
-                    Capsule()
-                        .stroke(isSelected ? Color.mint : Color.white.opacity(0.09), lineWidth: 1)
-                )
-        }
-        .buttonStyle(.plain)
     }
 }
 

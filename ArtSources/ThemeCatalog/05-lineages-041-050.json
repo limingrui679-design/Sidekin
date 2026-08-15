@@ -3,7 +3,6 @@
     {
       "id": "chrono",
       "displayName": "Chrono Spiral",
-      "category": "artifactsInstruments",
       "subtitle": "Clockwork shell · gyroscopic time rings",
       "symbolName": "clock.fill",
       "lineageIntroduction": "A floating clockwork nautilus whose spiral shell measures and redirects the flow of time.",
@@ -15,8 +14,16 @@
       "materialAnchor": "Aged brass, smoked glass, ivory gears, and blue-steel springs",
       "energyAnchor": "Pendulum eye, ticking orbit marks, and split-second halo",
       "motionProfile": "orbiting",
-      "accent": {"red": 0.78, "green": 0.58, "blue": 0.24},
-      "secondaryAccent": {"red": 0.3, "green": 0.82, "blue": 1.0},
+      "accent": {
+        "red": 0.78,
+        "green": 0.58,
+        "blue": 0.24
+      },
+      "secondaryAccent": {
+        "red": 0.3,
+        "green": 0.82,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -48,12 +55,17 @@
           "introduction": "An epoch leviathan carrying layered timelines inside one vast gyroscopic spiral.",
           "visualAnchor": "Huge multi-ring spiral entity with nested clock faces and tentacles tracing a time vortex"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "arcane",
+        "spiral shell with tentacle base"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     },
     {
       "id": "origami",
       "displayName": "Origami Skyfold",
-      "category": "artifactsInstruments",
       "subtitle": "Lacquered paper · luminous fold lines",
       "symbolName": "paperplane.fill",
       "lineageIntroduction": "A weightless paper dragon that transforms by refolding its wings, body, and ribbon tail.",
@@ -65,8 +77,16 @@
       "materialAnchor": "Lacquered folded paper, carbon-fiber creases, and razor-thin foil edges",
       "energyAnchor": "Cobalt fold lines and floating wind-seal characters",
       "motionProfile": "gliding",
-      "accent": {"red": 0.35, "green": 0.58, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.42, "blue": 0.25},
+      "accent": {
+        "red": 0.35,
+        "green": 0.58,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.42,
+        "blue": 0.25
+      },
       "forms": [
         {
           "stage": "egg",
@@ -98,12 +118,17 @@
           "introduction": "A sky regent whose infinite folds turn wind into a precise geometric domain.",
           "visualAnchor": "Circular origami dragon formed from repeating folded segments around an empty center"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "graceful",
+        "angular paper kite dragon"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     },
     {
       "id": "ink",
       "displayName": "Inkbrush Guardian",
-      "category": "artifactsInstruments",
       "subtitle": "Bamboo armor · living sumi ink",
       "symbolName": "paintbrush.pointed.fill",
       "lineageIntroduction": "An upright panda calligrapher that paints living wards with bamboo, ink, and seal energy.",
@@ -115,8 +140,16 @@
       "materialAnchor": "Pale bamboo, rice-paper cloth, wet sumi ink, and carved cinnabar seals",
       "energyAnchor": "Black ink orbit, white negative-space strokes, and red seal pulse",
       "motionProfile": "poised",
-      "accent": {"red": 0.92, "green": 0.18, "blue": 0.2},
-      "secondaryAccent": {"red": 0.94, "green": 0.94, "blue": 0.9},
+      "accent": {
+        "red": 0.92,
+        "green": 0.18,
+        "blue": 0.2
+      },
+      "secondaryAccent": {
+        "red": 0.94,
+        "green": 0.94,
+        "blue": 0.9
+      },
       "forms": [
         {
           "stage": "egg",
@@ -148,12 +181,17 @@
           "introduction": "A vermilion sealmaster whose final stamp brings an entire painted guardian to life.",
           "visualAnchor": "Upright panda before a giant red seal while a black painted guardian rises behind"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "elegant",
+        "upright round brush wielder"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     },
     {
       "id": "celestial-musicbox",
       "displayName": "Celestial Music Box",
-      "category": "artifactsInstruments",
       "subtitle": "Walnut case · starlight comb",
       "symbolName": "music.note.list",
       "lineageIntroduction": "A self-playing music box that unfolds cylinders, combs, and orbital chimes into a concert body.",
@@ -165,8 +203,16 @@
       "materialAnchor": "Dark walnut, polished brass, blue velvet, and etched steel music teeth",
       "energyAnchor": "Tiny star notes and concentric golden rhythm rings",
       "motionProfile": "poised",
-      "accent": {"red": 0.96, "green": 0.7, "blue": 0.22},
-      "secondaryAccent": {"red": 0.26, "green": 0.58, "blue": 1.0},
+      "accent": {
+        "red": 0.96,
+        "green": 0.7,
+        "blue": 0.22
+      },
+      "secondaryAccent": {
+        "red": 0.26,
+        "green": 0.58,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -198,12 +244,17 @@
           "introduction": "A vast musical orrery turns planets, bells, and combs through one complete composition.",
           "visualAnchor": "Layered circular music mechanism surrounded by planet chimes and a radial steel comb"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "elegant",
+        "box body with orbiting chimes"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     },
     {
       "id": "wayfinder-lantern",
       "displayName": "Wayfinder Lantern",
-      "category": "artifactsInstruments",
       "subtitle": "Patinated copper · compass flame",
       "symbolName": "lantern.fill",
       "lineageIntroduction": "A walking lantern that reshapes its shutters and handle to reveal the safest available path.",
@@ -215,8 +266,16 @@
       "materialAnchor": "Patinated copper, smoked glass, parchment shutters, and black iron hinges",
       "energyAnchor": "Needle-white flame and projected compass paths",
       "motionProfile": "marching",
-      "accent": {"red": 0.98, "green": 0.82, "blue": 0.32},
-      "secondaryAccent": {"red": 0.16, "green": 0.8, "blue": 0.72},
+      "accent": {
+        "red": 0.98,
+        "green": 0.82,
+        "blue": 0.32
+      },
+      "secondaryAccent": {
+        "red": 0.16,
+        "green": 0.8,
+        "blue": 0.72
+      },
       "forms": [
         {
           "stage": "egg",
@@ -248,12 +307,17 @@
           "introduction": "A crown lantern maps a complete safe passage as luminous roads around its flame.",
           "visualAnchor": "Tall central lantern within a radial compass rose made from eight projected light paths"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "regal",
+        "handled lantern on tripod shutters"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     },
     {
       "id": "masquerade-reliquary",
       "displayName": "Masquerade Reliquary",
-      "category": "artifactsInstruments",
       "subtitle": "Porcelain masks · velvet memory",
       "symbolName": "theatermasks.fill",
       "lineageIntroduction": "A floating reliquary of theatrical masks that changes role by rebuilding its shared silhouette.",
@@ -265,8 +329,16 @@
       "materialAnchor": "Glazed porcelain, black velvet, gold leaf, and hairline lacquer cracks",
       "energyAnchor": "Rose-gold expression lines and violet memory smoke",
       "motionProfile": "spectral",
-      "accent": {"red": 0.92, "green": 0.36, "blue": 0.7},
-      "secondaryAccent": {"red": 0.96, "green": 0.78, "blue": 0.34},
+      "accent": {
+        "red": 0.92,
+        "green": 0.36,
+        "blue": 0.7
+      },
+      "secondaryAccent": {
+        "red": 0.96,
+        "green": 0.78,
+        "blue": 0.34
+      },
       "forms": [
         {
           "stage": "egg",
@@ -298,12 +370,17 @@
           "introduction": "A circular parliament of masks surrounds an empty center where any role may appear.",
           "visualAnchor": "Large ring of distinct porcelain masks with long velvet ribbons flowing outward"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "mysterious",
+        "floating multi mask cloak"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     },
     {
       "id": "dreamweaver-loom",
       "displayName": "Dreamweaver Loom",
-      "category": "artifactsInstruments",
       "subtitle": "Moonwood frame · lucid warp threads",
       "symbolName": "rectangle.split.3x3.fill",
       "lineageIntroduction": "A walking loom that weaves temporary dreamscapes from colored warp threads and memory knots.",
@@ -315,8 +392,16 @@
       "materialAnchor": "Pale moonwood, indigo thread, silver heddles, and translucent woven cloth",
       "energyAnchor": "Lucid rainbow warp and softly glowing memory knots",
       "motionProfile": "mechanical",
-      "accent": {"red": 0.42, "green": 0.42, "blue": 1.0},
-      "secondaryAccent": {"red": 1.0, "green": 0.42, "blue": 0.72},
+      "accent": {
+        "red": 0.42,
+        "green": 0.42,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.42,
+        "blue": 0.72
+      },
       "forms": [
         {
           "stage": "egg",
@@ -348,12 +433,17 @@
           "introduction": "A monumental loom weaves foreground, horizon, and sky as three independent layers.",
           "visualAnchor": "Towering triple-frame loom with three translucent world tapestries extending outward"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "precision",
+        "rectangular frame on shuttle feet"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     },
     {
       "id": "thunder-bell",
       "displayName": "Thunder Bell",
-      "category": "artifactsInstruments",
       "subtitle": "Temple bronze · storm-white resonance",
       "symbolName": "bell.fill",
       "lineageIntroduction": "A floating temple bell that uses its clapper, cracks, and ringing arcs as articulated limbs.",
@@ -365,8 +455,16 @@
       "materialAnchor": "Dark temple bronze, silver crack inlay, braided rope, and clouded iron",
       "energyAnchor": "White thunder rings and blue sound-pressure fractures",
       "motionProfile": "pulsing",
-      "accent": {"red": 0.42, "green": 0.75, "blue": 1.0},
-      "secondaryAccent": {"red": 0.92, "green": 0.78, "blue": 0.34},
+      "accent": {
+        "red": 0.42,
+        "green": 0.75,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.78,
+        "blue": 0.34
+      },
       "forms": [
         {
           "stage": "egg",
@@ -398,12 +496,17 @@
           "introduction": "A crowned storm bell turns every fracture into a branching path for thunder.",
           "visualAnchor": "Huge bronze bell inside a radial halo of lightning cracks and concentric white rings"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "luminous",
+        "inverted bell with clapper tail"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     },
     {
       "id": "astral-astrolabe",
       "displayName": "Astral Astrolabe",
-      "category": "artifactsInstruments",
       "subtitle": "Silver rings · midnight enamel",
       "symbolName": "scope",
       "lineageIntroduction": "A walking astrolabe that rearranges calibrated rings to navigate locations that have no map.",
@@ -415,8 +518,16 @@
       "materialAnchor": "Brushed silver, midnight enamel, etched brass, and sapphire pivot jewels",
       "energyAnchor": "Fine blue coordinate lines and a fixed white pole star",
       "motionProfile": "orbiting",
-      "accent": {"red": 0.3, "green": 0.58, "blue": 1.0},
-      "secondaryAccent": {"red": 0.94, "green": 0.82, "blue": 0.32},
+      "accent": {
+        "red": 0.3,
+        "green": 0.58,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.94,
+        "green": 0.82,
+        "blue": 0.32
+      },
       "forms": [
         {
           "stage": "egg",
@@ -448,12 +559,17 @@
           "introduction": "A vast open instrument builds a navigable coordinate system around any destination.",
           "visualAnchor": "Crownlike sphere of many engraved rings with a brilliant fixed star at its apex"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "arcane",
+        "nested rings on tripod compass"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     },
     {
       "id": "runic-grimoire",
       "displayName": "Runic Grimoire",
-      "category": "artifactsInstruments",
       "subtitle": "Leather pages · cobalt scriptfire",
       "symbolName": "book.closed.fill",
       "lineageIntroduction": "A living book that folds pages into wings, limbs, and shields while rewriting its own spells.",
@@ -465,8 +581,16 @@
       "materialAnchor": "Dark leather, ivory paper, brass corners, blue ink, and red silk markers",
       "energyAnchor": "Cobalt scriptfire and floating geometric punctuation",
       "motionProfile": "winged",
-      "accent": {"red": 0.22, "green": 0.56, "blue": 1.0},
-      "secondaryAccent": {"red": 0.92, "green": 0.18, "blue": 0.28},
+      "accent": {
+        "red": 0.22,
+        "green": 0.56,
+        "blue": 1
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.18,
+        "blue": 0.28
+      },
       "forms": [
         {
           "stage": "egg",
@@ -498,7 +622,13 @@
           "introduction": "A ring of turning pages surrounds a central volume that never reaches its final chapter.",
           "visualAnchor": "Large upright book inside a complete circular storm of pages and cobalt runes"
         }
-      ]
+      ],
+      "tags": [
+        "living artifact",
+        "aerial",
+        "open book with page wings"
+      ],
+      "artStyle": "ornate living-object character art with animated mechanical detail"
     }
   ]
 }

@@ -3,7 +3,6 @@
     {
       "id": "candy",
       "displayName": "Candy Carnival",
-      "category": "foodAlchemy",
       "subtitle": "Candy toys · gummy energy",
       "symbolName": "heart.fill",
       "lineageIntroduction": "A buoyant gummy hare whose playful sugar core grows into carnival-scale illusion magic.",
@@ -15,8 +14,16 @@
       "materialAnchor": "Transparent gummy, foil wrappers, frosting, jelly, and sugar glass",
       "energyAnchor": "Rainbow bubbles and a heart-shaped candy core",
       "motionProfile": "bouncing",
-      "accent": {"red": 1.0, "green": 0.36, "blue": 0.72},
-      "secondaryAccent": {"red": 0.25, "green": 0.95, "blue": 0.84},
+      "accent": {
+        "red": 1,
+        "green": 0.36,
+        "blue": 0.72
+      },
+      "secondaryAccent": {
+        "red": 0.25,
+        "green": 0.95,
+        "blue": 0.84
+      },
       "forms": [
         {
           "stage": "egg",
@@ -48,12 +55,17 @@
           "introduction": "A dreamsmith rabbit shaping constellations from sugar glass and rainbow bubbles.",
           "visualAnchor": "Round-eared hare framed by a huge heart-ring and a spiral of star-shaped candies"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "cute",
+        "round gummy hare with balloon halo"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     },
     {
       "id": "tea-alchemist",
       "displayName": "Tea Alchemist",
-      "category": "foodAlchemy",
       "subtitle": "Celadon glaze · fragrant steam sigils",
       "symbolName": "cup.and.saucer.fill",
       "lineageIntroduction": "A walking teapot laboratory that blends leaves, temperature, and steam into restorative brews.",
@@ -65,8 +77,16 @@
       "materialAnchor": "Crackled celadon, dark tea, bamboo fittings, and translucent steam cloth",
       "energyAnchor": "Amber infusion spirals and mint-white steam characters",
       "motionProfile": "pulsing",
-      "accent": {"red": 0.36, "green": 0.82, "blue": 0.62},
-      "secondaryAccent": {"red": 0.92, "green": 0.58, "blue": 0.16},
+      "accent": {
+        "red": 0.36,
+        "green": 0.82,
+        "blue": 0.62
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.58,
+        "blue": 0.16
+      },
       "forms": [
         {
           "stage": "egg",
@@ -98,12 +118,17 @@
           "introduction": "A ceremonial pot pours several perfect infusions through a ring of floating cups.",
           "visualAnchor": "Large teapot at center of a circular tea service with ten cups and braided steam"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "luminous",
+        "round teapot on cup feet"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     },
     {
       "id": "ramen-nebula",
       "displayName": "Ramen Nebula",
-      "category": "foodAlchemy",
       "subtitle": "Broth-gold orbit · noodle constellations",
       "symbolName": "takeoutbag.and.cup.and.straw.fill",
       "lineageIntroduction": "A levitating ramen bowl that coils noodles, broth, and toppings into a miniature edible galaxy.",
@@ -115,8 +140,16 @@
       "materialAnchor": "Glazed ceramic, glossy noodles, clear broth, lacquered wood, and sesame stars",
       "energyAnchor": "Golden broth spiral and red-blue topping constellations",
       "motionProfile": "orbiting",
-      "accent": {"red": 1.0, "green": 0.68, "blue": 0.12},
-      "secondaryAccent": {"red": 0.92, "green": 0.18, "blue": 0.18},
+      "accent": {
+        "red": 1,
+        "green": 0.68,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.18,
+        "blue": 0.18
+      },
       "forms": [
         {
           "stage": "egg",
@@ -148,12 +181,17 @@
           "introduction": "A cosmic ramen sovereign turns its complete meal into a bright spiral galaxy.",
           "visualAnchor": "Central bowl encircled by a vast noodle spiral, topping planets, and chopstick axis"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "arcane",
+        "floating bowl with noodle orbits"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     },
     {
       "id": "hearthbread-golem",
       "displayName": "Hearthbread Golem",
-      "category": "foodAlchemy",
       "subtitle": "Golden crust · sourdough ember",
       "symbolName": "oven.fill",
       "lineageIntroduction": "A warm bread golem that reshapes scored crust, crumb, and oven heat into sturdy limbs.",
@@ -165,8 +203,16 @@
       "materialAnchor": "Golden blistered crust, soft white crumb, flour dust, and cast-iron fittings",
       "energyAnchor": "Orange oven ember and warm rising-steam rings",
       "motionProfile": "bouncing",
-      "accent": {"red": 0.92, "green": 0.58, "blue": 0.18},
-      "secondaryAccent": {"red": 1.0, "green": 0.82, "blue": 0.44},
+      "accent": {
+        "red": 0.92,
+        "green": 0.58,
+        "blue": 0.18
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.82,
+        "blue": 0.44
+      },
       "forms": [
         {
           "stage": "egg",
@@ -198,12 +244,17 @@
           "introduction": "A towering sourdough colossus carries a glowing communal hearth in its chest.",
           "visualAnchor": "Massive arched loaf body with an open oven-heart and a crown of rising steam"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "cute",
+        "round loaf four limbed golem"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     },
     {
       "id": "citrus-reactor",
       "displayName": "Citrus Reactor",
-      "category": "foodAlchemy",
       "subtitle": "Zest armor · acid-green charge",
       "symbolName": "circle.hexagongrid.fill",
       "lineageIntroduction": "A segmented citrus engine that converts juice pressure, zest oil, and seeds into clean power.",
@@ -215,8 +266,16 @@
       "materialAnchor": "Glossy citrus peel, translucent pulp, white pith, and brushed juicer steel",
       "energyAnchor": "Acid-green juice charge and yellow zest-oil sparks",
       "motionProfile": "rolling",
-      "accent": {"red": 0.7, "green": 1.0, "blue": 0.08},
-      "secondaryAccent": {"red": 1.0, "green": 0.64, "blue": 0.05},
+      "accent": {
+        "red": 0.7,
+        "green": 1,
+        "blue": 0.08
+      },
+      "secondaryAccent": {
+        "red": 1,
+        "green": 0.64,
+        "blue": 0.05
+      },
       "forms": [
         {
           "stage": "egg",
@@ -248,12 +307,17 @@
           "introduction": "A radiant citrus crown opens every segment around a contained green fusion star.",
           "visualAnchor": "Giant peeled fruit forming a radial sun around a bright acid-green central reactor"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "mobile",
+        "segmented fruit reactor on seed feet"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     },
     {
       "id": "cacao-citadel",
       "displayName": "Cacao Citadel",
-      "category": "foodAlchemy",
       "subtitle": "Dark chocolate walls · molten ganache",
       "symbolName": "building.columns.fill",
       "lineageIntroduction": "A mobile chocolate fortress that tempers, molds, and repairs its own walls with flowing ganache.",
@@ -265,8 +329,16 @@
       "materialAnchor": "Dark tempered chocolate, golden wafer, cocoa husk, and glossy molten ganache",
       "energyAnchor": "Ruby-red heat lines and warm ganache cascades",
       "motionProfile": "heavy",
-      "accent": {"red": 0.48, "green": 0.18, "blue": 0.1},
-      "secondaryAccent": {"red": 0.92, "green": 0.28, "blue": 0.22},
+      "accent": {
+        "red": 0.48,
+        "green": 0.18,
+        "blue": 0.1
+      },
+      "secondaryAccent": {
+        "red": 0.92,
+        "green": 0.28,
+        "blue": 0.22
+      },
       "forms": [
         {
           "stage": "egg",
@@ -298,12 +370,17 @@
           "introduction": "A grand chocolate city folds its bar walls into a crown around an endless fountain.",
           "visualAnchor": "Crown-shaped dark citadel on cocoa-pod wheels with a glowing ganache core"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "colossal",
+        "stepped fortress on pod wheels"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     },
     {
       "id": "aurora-gelato",
       "displayName": "Aurora Gelato",
-      "category": "foodAlchemy",
       "subtitle": "Frozen cream folds · polar syrup",
       "symbolName": "snowflake",
       "lineageIntroduction": "A cold gelato spirit that stacks flavors into sculpted forms beneath an aurora ribbon.",
@@ -315,8 +392,16 @@
       "materialAnchor": "Velvet frozen cream, crisp waffle, glossy syrup, and translucent sugar ice",
       "energyAnchor": "Mint-violet aurora ribbon and sparkling frost sugar",
       "motionProfile": "bouncing",
-      "accent": {"red": 0.46, "green": 1.0, "blue": 0.78},
-      "secondaryAccent": {"red": 0.72, "green": 0.42, "blue": 1.0},
+      "accent": {
+        "red": 0.46,
+        "green": 1,
+        "blue": 0.78
+      },
+      "secondaryAccent": {
+        "red": 0.72,
+        "green": 0.42,
+        "blue": 1
+      },
       "forms": [
         {
           "stage": "egg",
@@ -348,12 +433,17 @@
           "introduction": "A towering dessert palace layers every flavor beneath a complete frozen aurora.",
           "visualAnchor": "Multi-tier cone-and-scoop tower framed by a full rainbow ice ribbon"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "cute",
+        "swirl body on cone base"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     },
     {
       "id": "spice-djinn",
       "displayName": "Spice Djinn",
-      "category": "foodAlchemy",
       "subtitle": "Copper mortar · saffron smoke",
       "symbolName": "smoke.fill",
       "lineageIntroduction": "A fragrant spice cloud that shapes itself around a copper mortar and grinding-stone heart.",
@@ -365,8 +455,16 @@
       "materialAnchor": "Hammered copper, saffron threads, black pepper, cinnamon bark, and colored powder",
       "energyAnchor": "Saffron-gold aroma currents and crimson heat motes",
       "motionProfile": "spectral",
-      "accent": {"red": 1.0, "green": 0.52, "blue": 0.08},
-      "secondaryAccent": {"red": 0.76, "green": 0.08, "blue": 0.2},
+      "accent": {
+        "red": 1,
+        "green": 0.52,
+        "blue": 0.08
+      },
+      "secondaryAccent": {
+        "red": 0.76,
+        "green": 0.08,
+        "blue": 0.2
+      },
       "forms": [
         {
           "stage": "egg",
@@ -398,12 +496,17 @@
           "introduction": "A crowned spice spirit surrounds its mortar with seven distinct aromatic currents.",
           "visualAnchor": "Large vapor sovereign above a copper bowl inside seven petal-like colored smoke loops"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "mysterious",
+        "smoke torso rising from mortar"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     },
     {
       "id": "honeycomb-alchemist",
       "displayName": "Honeycomb Alchemist",
-      "category": "foodAlchemy",
       "subtitle": "Beeswax cells · amber viscosity",
       "symbolName": "hexagon.fill",
       "lineageIntroduction": "A six-sided wax laboratory that mixes honey density, pollen, and heat into useful compounds.",
@@ -415,8 +518,16 @@
       "materialAnchor": "Golden beeswax, clear honey, dark propolis, glass retorts, and pollen powder",
       "energyAnchor": "Amber viscosity waves and bright pollen reaction sparks",
       "motionProfile": "skittering",
-      "accent": {"red": 1.0, "green": 0.68, "blue": 0.08},
-      "secondaryAccent": {"red": 0.44, "green": 0.22, "blue": 0.08},
+      "accent": {
+        "red": 1,
+        "green": 0.68,
+        "blue": 0.08
+      },
+      "secondaryAccent": {
+        "red": 0.44,
+        "green": 0.22,
+        "blue": 0.08
+      },
       "forms": [
         {
           "stage": "egg",
@@ -448,12 +559,17 @@
           "introduction": "A crown of laboratory cells refines a perfect suspended drop of luminous honey.",
           "visualAnchor": "Radial honeycomb crown around a huge floating amber drop and six glass instruments"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "swift",
+        "hexagonal lab on six wax legs"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     },
     {
       "id": "dumpling-dojo",
       "displayName": "Dumpling Dojo",
-      "category": "foodAlchemy",
       "subtitle": "Steamed dough · chili-oil focus",
       "symbolName": "flame.circle.fill",
       "lineageIntroduction": "A disciplined dumpling spirit that folds dough pleats into armor and practices bamboo-steamer forms.",
@@ -465,8 +581,16 @@
       "materialAnchor": "Soft steamed dough, bamboo slats, glossy chili oil, and sesame-black accents",
       "energyAnchor": "Red chili-oil arcs and white steam focus rings",
       "motionProfile": "agile",
-      "accent": {"red": 0.94, "green": 0.18, "blue": 0.12},
-      "secondaryAccent": {"red": 0.96, "green": 0.86, "blue": 0.68},
+      "accent": {
+        "red": 0.94,
+        "green": 0.18,
+        "blue": 0.12
+      },
+      "secondaryAccent": {
+        "red": 0.96,
+        "green": 0.86,
+        "blue": 0.68
+      },
       "forms": [
         {
           "stage": "egg",
@@ -498,7 +622,13 @@
           "introduction": "A serene dumpling sovereign opens a halo of perfect folds and white steam rings.",
           "visualAnchor": "Central round fighter before a radial pleat halo with steamer lids at both sides"
         }
-      ]
+      ],
+      "tags": [
+        "alchemy familiar",
+        "dynamic",
+        "round pleated biped with steamer"
+      ],
+      "artStyle": "playful collectible-game rendering with tactile confection and alchemy materials"
     }
   ]
 }

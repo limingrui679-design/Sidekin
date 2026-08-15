@@ -1,7 +1,7 @@
 Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
 
-Theme: Rescue Convoy [Machines & Vehicles]
-Art-style direction: catalog-defined premium competitive-game companion
+Theme: Rescue Convoy [mecha construct · mobile · modular emergency vehicle]
+Art-style direction: hard-surface arena mecha rendering with readable modular engineering
 Form: Stabilizer Field Unit, canonical juvenile stage
 Lineage concept: A modular emergency vehicle that splits into coordinated medical, fire, and recovery units.
 Existence anchor: Transforming Multi-Role Rescue Convoy
