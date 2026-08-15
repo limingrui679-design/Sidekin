@@ -12,7 +12,8 @@ const stages = ["egg", "hatchling", "juvenile", "ascended", "legendary"];
 const localCuratedRoot = path.join(expansionRoot, "Resources");
 const localProcessedRoot = path.join(expansionRoot, "Processed");
 const integratedRoot = path.join(root, "Sources", "SidekinApp", "Resources", "Characters");
-const curatedRoot = fs.existsSync(localCuratedRoot) ? localCuratedRoot : integratedRoot;
+const useLocalAuthoring = fs.existsSync(localCuratedRoot) && !process.argv.includes("--integrated-only");
+const curatedRoot = useLocalAuthoring ? localCuratedRoot : integratedRoot;
 
 function requireCondition(condition, message) {
   if (!condition) throw new Error(message);
@@ -21,8 +22,13 @@ function requireCondition(condition, message) {
 requireCondition(expansion.themes.length === 100, `Expected 100 expansion lineages, found ${expansion.themes.length}.`);
 const expectedNames = expansion.themes.flatMap((theme) => stages.map((stage) => `${theme.id}-${stage}.png`));
 requireCondition(expectedNames.length === 500 && new Set(expectedNames).size === 500, "Expansion asset names are incomplete or duplicated.");
+const expectedNameSet = new Set(expectedNames);
 
-const curatedNames = fs.readdirSync(curatedRoot).filter((name) => name.endsWith(".png")).sort();
+const integratedNames = fs.readdirSync(integratedRoot).filter((name) => name.endsWith(".png")).sort();
+requireCondition(integratedNames.length === 1_000, `Expected exactly 1,000 integrated PNGs, found ${integratedNames.length}.`);
+const curatedNames = fs.readdirSync(curatedRoot)
+  .filter((name) => name.endsWith(".png") && (useLocalAuthoring || expectedNameSet.has(name)))
+  .sort();
 requireCondition(curatedNames.length === 500, `Expected exactly 500 curated expansion PNGs, found ${curatedNames.length}.`);
 requireCondition(curatedNames.join("\n") === expectedNames.slice().sort().join("\n"), "Curated expansion asset names drifted from the lineage plan.");
 
@@ -34,7 +40,7 @@ for (const theme of expansion.themes) {
     const processedPath = path.join(localProcessedRoot, theme.id, `${stage}-source.png`);
     const integratedPath = path.join(integratedRoot, name);
     const requiredCopies = [curatedPath, integratedPath];
-    if (fs.existsSync(localProcessedRoot)) requiredCopies.push(processedPath);
+    if (useLocalAuthoring && fs.existsSync(localProcessedRoot)) requiredCopies.push(processedPath);
     for (const candidate of requiredCopies) {
       requireCondition(fs.existsSync(candidate), `Missing expansion asset copy: ${path.relative(root, candidate)}.`);
     }
@@ -69,4 +75,7 @@ for (const theme of expansion.themes) {
   }
 }
 
-console.log("Verified 500 unique expansion PNGs, every source crop, exact integrated copies, dimensions, alpha occupancy, and transparent corners.");
+const provenance = useLocalAuthoring
+  ? "every local source crop and exact integrated copy"
+  : "their exact membership in the 1,000-asset integrated corpus";
+console.log(`Verified 500 unique expansion PNGs, ${provenance}, dimensions, alpha occupancy, and transparent corners.`);
