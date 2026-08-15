@@ -704,10 +704,10 @@ test("Both legacy final evolutions migrate safely to stage four") {
     try expect(legacyPet.stage == .ascended, "The migrated legacy pet was downgraded")
 }
 
-test("The app includes one hundred complete themes and five hundred described forms") {
-    try expect(PetVisualTheme.allCases.count == 100, "The theme count is not 100")
+test("The app includes two hundred complete themes and one thousand described forms") {
+    try expect(PetVisualTheme.allCases.count == 200, "The theme count is not 200")
     try expect(PetStage.allCases.count == 5, "The growth-stage count is not 5")
-    try expect(Set(PetVisualTheme.allCases.map(\.rawValue)).count == 100, "Theme identifiers are duplicated")
+    try expect(Set(PetVisualTheme.allCases.map(\.rawValue)).count == 200, "Theme identifiers are duplicated")
 
     let themeNames = PetVisualTheme.allCases.map(\.displayName)
     let lineageIntroductions = PetVisualTheme.allCases.map(\.lineageIntroduction)
@@ -716,24 +716,34 @@ test("The app includes one hundred complete themes and five hundred described fo
     let motions = PetVisualTheme.allCases.map(\.motionAnchor)
     let materials = PetVisualTheme.allCases.map(\.materialAnchor)
     let energies = PetVisualTheme.allCases.map(\.energyAnchor)
-    try expect(Set(themeNames).count == 100, "Theme names are duplicated")
-    try expect(Set(lineageIntroductions).count == 100, "Lineage introductions are duplicated")
+    try expect(Set(themeNames).count == 200, "Theme names are duplicated")
+    try expect(Set(lineageIntroductions).count == 200, "Lineage introductions are duplicated")
     try expect(lineageIntroductions.allSatisfy { $0.count >= 60 }, "A lineage introduction is too short")
-    try expect(Set(existenceAnchors).count == 100, "Existence anchors are duplicated")
-    try expect(Set(silhouettes).count == 100, "Silhouette anchors are duplicated")
-    try expect(Set(motions).count == 100, "Movement anchors are duplicated")
-    try expect(Set(materials).count == 100, "Material anchors are duplicated")
-    try expect(Set(energies).count == 100, "Energy anchors are duplicated")
+    try expect(Set(existenceAnchors).count == 200, "Existence anchors are duplicated")
+    try expect(Set(silhouettes).count == 200, "Silhouette anchors are duplicated")
+    try expect(Set(motions).count == 200, "Movement anchors are duplicated")
+    try expect(Set(materials).count == 200, "Material anchors are duplicated")
+    try expect(Set(energies).count == 200, "Energy anchors are duplicated")
 
-    let categoryCounts = Dictionary(grouping: PetVisualTheme.allCases, by: \.category).mapValues(\.count)
+    let categorizedThemes = PetVisualTheme.allCases.filter { $0.category != nil }
+    let tagBasedThemes = PetVisualTheme.allCases.filter { $0.category == nil }
+    let categoryCounts = Dictionary(grouping: categorizedThemes, by: { $0.category! }).mapValues(\.count)
     try expect(categoryCounts.count == 10, "The catalog does not cover ten existence categories")
     try expect(
         PetThemeCategory.allCases.allSatisfy { categoryCounts[$0] == 10 },
         "Each existence category must contain exactly ten complete themes"
     )
     try expect(
-        PetVisualTheme.allCases.filter { $0.category != .faunaMythic }.count == 90,
-        "The catalog is still over-concentrated on animal forms"
+        categorizedThemes.filter { $0.category != .faunaMythic }.count == 90,
+        "The category-based catalog is still over-concentrated on animal forms"
+    )
+    try expect(
+        tagBasedThemes.count == 100 && tagBasedThemes.allSatisfy { $0.tags.count >= 3 },
+        "The tag-based expansion must contain 100 themes with at least three tags each"
+    )
+    try expect(
+        PetVisualTheme.allCases.allSatisfy { !$0.taxonomyLabel.isEmpty },
+        "Every theme must expose a category or tag-based taxonomy label"
     )
     try expect(
         Set(PetVisualTheme.allCases.map(\.silhouetteClass)).count >= 18,
@@ -759,12 +769,12 @@ test("The app includes one hundred complete themes and five hundred described fo
     let formVisualAnchors = PetVisualTheme.allCases.flatMap { theme in
         PetStage.allCases.map { theme.formVisualAnchor(at: $0) }
     }
-    try expect(formNames.count == 500, "One hundred five-stage lines did not produce 500 forms")
-    try expect(Set(formNames).count == 500, "The 500 forms contain duplicate names")
-    try expect(formIntroductions.count == 500, "The app does not provide 500 form introductions")
-    try expect(Set(formIntroductions).count == 500, "The 500 form introductions are not unique")
-    try expect(formVisualAnchors.count == 500, "The app does not provide 500 stage visual anchors")
-    try expect(Set(formVisualAnchors).count == 500, "The 500 stage visual anchors are not unique")
+    try expect(formNames.count == 1_000, "Two hundred five-stage lines did not produce 1,000 forms")
+    try expect(Set(formNames).count == 1_000, "The 1,000 forms contain duplicate names")
+    try expect(formIntroductions.count == 1_000, "The app does not provide 1,000 form introductions")
+    try expect(Set(formIntroductions).count == 1_000, "The 1,000 form introductions are not unique")
+    try expect(formVisualAnchors.count == 1_000, "The app does not provide 1,000 stage visual anchors")
+    try expect(Set(formVisualAnchors).count == 1_000, "The 1,000 stage visual anchors are not unique")
     let shortestIntroduction = zip(formNames, formIntroductions).min {
         $0.1.count < $1.1.count
     }

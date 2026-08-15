@@ -55,7 +55,7 @@ enum ManifestError: LocalizedError {
         case .missingInfoPlist: "App bundle is missing Contents/Info.plist."
         case .invalidInfoPlist: "App Info.plist is invalid or incomplete."
         case .missingExecutable: "App bundle is missing its main executable."
-        case let .invalidCharacterCount(count): "Expected 500 character assets, found \(count)."
+        case let .invalidCharacterCount(count): "Expected 1,000 character assets, found \(count)."
         }
     }
 }
@@ -186,7 +186,7 @@ do {
         file.path.contains("Sidekin_SidekinApp.bundle/")
             && file.path.hasSuffix(".png")
     }
-    guard characterAssets.count == 500 else {
+    guard characterAssets.count == 1_000 else {
         throw ManifestError.invalidCharacterCount(characterAssets.count)
     }
 

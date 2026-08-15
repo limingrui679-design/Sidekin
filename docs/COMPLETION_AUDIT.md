@@ -1,4 +1,4 @@
-# Sidekin 2.0 Cross-Platform Completion Audit
+# Sidekin 2.1 Cross-Platform Completion Audit
 
 This audit covers the shared macOS and Windows source Beta. The completion target is a reproducible GitHub project with native CI evidence on both operating systems, not a signed consumer release. A simulated image client is used for paid-flow tests; no author API key or paid request is part of verification.
 
@@ -20,9 +20,9 @@ This audit covers the shared macOS and Windows source Beta. The completion targe
 | Pink/purple-safe cutout | Background removal flood-fills only edge-connected adaptive key color, preserving enclosed pink and purple subject regions. | `src/main/image-processor.ts`, synthetic image test in `tests/workshop.test.ts` |
 | Template management | Rename, delete, import, export, local stage replacement, single-stage regeneration, saved-raw retry, and corrupt-image rejection are implemented in the shared runtime. | `src/main/template-store.ts`, `src/main/workshop.ts`, renderer management UI, tests |
 | Cost boundary | Low, medium, and high tiers show output estimates before generation or single-stage regeneration. Confirmation states that reference input cost is additional and the user's account is charged. | `src/renderer/app.ts` |
-| Visual corpus | The verifier requires exactly 100 catalog lineages and all 500 named stage assets. Existing 100-lineage visual continuity audits remain the source of art QA evidence. | `ArtSources/PET_THEME_CATALOG.json`, `docs/LINEAGE_AUDIT.md`, `Scripts/verify-desktop.mjs` |
+| Visual corpus | The verifier requires exactly 200 catalog lineages and all 1,000 named stage assets. The original 100-category audit and the separate 100-lineage tag-based expansion audit together provide one visual QA result per lineage. | `ArtSources/PET_THEME_CATALOG.json`, `docs/LINEAGE_AUDIT.md`, `docs/EXPANSION_AUDIT.md`, `Scripts/verify-desktop.mjs` |
 | Renderer security | Renderers use sandboxing, context isolation, no Node integration, a narrow preload API, sender validation, CSP, denied permissions, denied popups, and blocked remote navigation. | `src/main/index.ts`, `src/preload/index.ts`, `Scripts/verify-desktop.mjs` |
-| README presentation | The centered poster uses a dense action ensemble with changed poses, foreground cropping, overlap, atmospheric depth, and no catalog-style empty ring; the README also includes a 20-lineage sampler and all-100 contact sheet. | `ArtSources/READMEHero/hero-dynamic-source.png`, `docs/readme/hero.jpg`, `docs/readme/all-100.jpg`, `docs/readme/live-desktop.jpg` |
+| README presentation | The centered poster uses a dense action ensemble with changed poses, foreground cropping, overlap, atmospheric depth, and no catalog-style empty ring; the README also includes a 20-lineage sampler and all-200 contact sheet. | `ArtSources/READMEHero/hero-dynamic-source.png`, `docs/readme/hero.jpg`, `docs/readme/all-200.jpg`, `docs/readme/live-desktop.jpg` |
 | Native packaging evidence | Electron Packager 20 packages the current operating system; GitHub Actions runs the same verification and creates artifacts on native macOS and Windows runners. | `Scripts/package-desktop.mjs`, `.github/workflows/desktop.yml` |
 
 ## Reproducible Checks
@@ -35,13 +35,14 @@ npm run media:runtime
 npm run make
 ```
 
-`npm run verify` performs TypeScript checking, deterministic tests, a clean build, renderer/security inspection, exact motion enumeration, and the 100-lineage / 500-form gate. `npm run capture` uses an isolated temporary application-data directory with synthetic lifecycle and workshop data; it does not inspect the user's API key or send a network request.
+`npm run verify` performs TypeScript checking, deterministic tests, a clean build, renderer/security inspection, exact motion enumeration, and the 200-lineage / 1,000-form gate. `npm run capture` uses an isolated temporary application-data directory with synthetic lifecycle and workshop data; it does not inspect the user's API key or send a network request.
 
 The historical macOS art pipeline remains separately reproducible:
 
 ```bash
 ./Scripts/verify-theme-catalog.sh
 swift Scripts/verify-lineage-audit.swift
+node Scripts/verify-expansion-plan.mjs --full
 ```
 
 ## Boundaries

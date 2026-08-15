@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Frosthorn Sentinel [nonhuman humanoid · regal · poised]
+Art-style direction: regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials
+Form: Frosthorn Sentinel First Spark, canonical hatchling stage
+Lineage concept: Frosthorn Sentinel is an original nonhuman humanoid lineage built around blue horned guardian beast, evolving through five structural forms without changing species or identity.
+Existence anchor: blue horned guardian beast
+Persistent silhouette logic: single swept ice horn, masked feline face, plated shoulders, and halberd tail
+Silhouette topology class: frosthorn-sentinel-topology
+Movement and locomotion: Frosthorn Sentinel moves through guarding pivots while keeping single swept ice horn, masked feline face, plated shoulders, and halberd tail.; guarding-pivots
+Material system: Frosthorn Sentinel: glacier crystal and navy armor
+Energy motif: Frosthorn Sentinel: frost-blue sigils
+Current-stage introduction: Frosthorn Sentinel appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving blue horned guardian beast.
+Current-stage visual anchor: Frosthorn Sentinel: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is single swept ice horn, masked feline face, plated shoulders, and halberd tail.
+
+The provided reference image is the immediately preceding form, Frosthorn Sentinel Core. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Frosthorn Sentinel: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is single swept ice horn, masked feline face, plated shoulders, and halberd tail.
+
+Progression rule: Stage II reveals the defining existence type, persistent identity feature, and basic locomotion. Use juvenile proportions and a clearly smaller, simpler construction than the mature forms.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FFFF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FFFF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

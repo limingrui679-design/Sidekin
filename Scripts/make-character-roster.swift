@@ -26,9 +26,9 @@ let projectRoot = URL(fileURLWithPath: #filePath)
 let catalogURL = projectRoot.appendingPathComponent("ArtSources/PET_THEME_CATALOG.json")
 guard let catalogData = try? Data(contentsOf: catalogURL),
       let catalog = try? JSONDecoder().decode(ThemeCatalogEnvelope.self, from: catalogData),
-      catalog.themes.count == 100
+      catalog.themes.count == 200
 else {
-    fputs("Could not decode the 100-theme catalog at \(catalogURL.path)\n", stderr)
+    fputs("Could not decode the 200-theme catalog at \(catalogURL.path)\n", stderr)
     exit(1)
 }
 let themes = catalog.themes.map { (id: $0.id, name: $0.displayName) }

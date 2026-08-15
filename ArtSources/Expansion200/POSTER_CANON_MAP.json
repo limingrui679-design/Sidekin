@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "scope": "Named foreground and clearly readable supporting companions; scenery and indistinct crowd silhouettes are excluded.",
+  "posters": [
+    {
+      "file": "docs/readme/poster-arena-convergence.png",
+      "subjects": [
+        ["solar ring guardian", "solar-ring-wyrm"],
+        ["astral machinery", "astral-astrolabe"],
+        ["lunar lotus", "moon-lotus"],
+        ["walking treehouse", "walking-treehouse"],
+        ["white quadruped mecha", "mecha"],
+        ["crystal arena ranger", "nova"],
+        ["aether vessel", "aether-frigate"],
+        ["blue horn sentinel", "frosthorn-sentinel"],
+        ["rose crystal fennec", "roseglass-fennec"],
+        ["obsidian ember hound", "emberglass-hound"],
+        ["gravity lens", "event-horizon"]
+      ]
+    },
+    {
+      "file": "docs/readme/hero.jpg",
+      "subjects": [
+        ["solar manticore", "manticore"],
+        ["Vanguard Mecha", "mecha"],
+        ["crystalline arena humanoid", "astral-vowkeeper"],
+        ["walking treehouse", "walking-treehouse"],
+        ["aether frigate", "aether-frigate"],
+        ["moon lotus", "moon-lotus"],
+        ["celestial mechanisms", "astral-astrolabe"],
+        ["event horizon", "event-horizon"]
+      ]
+    },
+    {
+      "file": "docs/readme/poster-evolution-odyssey.png",
+      "subjects": [
+        ["jelly drake procession", "lantern-jelly-drake"],
+        ["mycelium walkers", "mycelium"],
+        ["walking treehouse", "walking-treehouse"],
+        ["Vanguard Mecha", "mecha"],
+        ["solar manticore", "manticore"],
+        ["phantom arena champion", "phantom-blade-wraith"],
+        ["glacier colossus", "glacier"],
+        ["aether frigate", "aether-frigate"],
+        ["living library", "living-library"],
+        ["microbe metropolis", "microbe-metropolis"]
+      ]
+    },
+    {
+      "file": "docs/readme/poster-prismatic-festival.png",
+      "subjects": [
+        ["rose crystal rabbit", "roseglass-ranger"],
+        ["honey golem", "honeycomb-alchemist"],
+        ["dumpling martial artist", "dumpling-dojo"],
+        ["arcade titan", "arcade-titan"],
+        ["rescue convoy", "rescue-convoy"],
+        ["clockwork hummingbird", "clockwork-hummingbird"],
+        ["prismatic web dancer", "spider"],
+        ["prism rain peacock", "prism-rain"],
+        ["plankton jelly", "plankton-bloom"],
+        ["slime assembly", "slime-parliament"],
+        ["aurora gelato", "aurora-gelato"],
+        ["citrus reactor", "citrus-reactor"]
+      ]
+    },
+    {
+      "file": "docs/readme/poster-chronicle-ten-worlds.png",
+      "subjects": [
+        ["glacier sky dragon", "glacier-sky-dragon"],
+        ["solar ring wyrm", "solar-ring-wyrm"],
+        ["obsidian lion champion", "obsidian-lion-champion"],
+        ["golden cloud spirit", "spice-djinn"],
+        ["runic grimoire", "runic-grimoire"],
+        ["event horizon", "event-horizon"],
+        ["prism crown guardian", "prism-crown-judicator"],
+        ["abyss kelp choir", "abyss-kelp"],
+        ["mechanical world disc", "mobile-foundry"]
+      ]
+    },
+    {
+      "file": "docs/readme/poster-neon-night-league.png",
+      "subjects": [
+        ["neon koi", "koi"],
+        ["crystal starbow ranger", "nova"],
+        ["white feline racer", "aegis-pounce-unit"],
+        ["neon raptor racer", "neon-raptor-racer"],
+        ["arcade titan", "arcade-titan"],
+        ["event horizon", "event-horizon"],
+        ["rescue drone hound", "rescue-drone-hound"],
+        ["firefly racers", "firefly-chorus"],
+        ["neon ribbon lizard", "neon-ribbon-lizard"]
+      ]
+    },
+    {
+      "file": "docs/readme/poster-companion-workshop.png",
+      "subjects": [
+        ["crystal starbow ranger", "nova"],
+        ["living library", "living-library"],
+        ["sleeping dumpling", "dumpling-dojo"],
+        ["firefly chorus", "firefly-chorus"],
+        ["tea alchemist", "tea-alchemist"],
+        ["rescue drone hound", "rescue-drone-hound"],
+        ["lotus crown sage", "lotus-crown-sage"],
+        ["clockwork hummingbird", "clockwork-hummingbird"],
+        ["walking treehouse", "walking-treehouse"]
+      ]
+    },
+    {
+      "file": "docs/readme/poster-mythic-dawn.png",
+      "subjects": [
+        ["dawnwheel seraph", "dawnwheel-seraph"],
+        ["glacier sky dragon", "glacier-sky-dragon"],
+        ["thousand-eye tempest", "thousand-eye-tempest"],
+        ["mirage cactus", "mirage-cactus"],
+        ["obsidian lion champion", "obsidian-lion-champion"],
+        ["prism antler warden", "prism-antler-warden"],
+        ["runic grimoire", "runic-grimoire"],
+        ["event horizon", "event-horizon"],
+        ["aurora choir spirit", "aurora-choir-spirit"],
+        ["moonstone golem adept", "moonstone-golem-adept"],
+        ["sky temple walker", "sky-temple"]
+      ]
+    },
+    {
+      "file": "docs/readme/poster-microverse-mayhem.png",
+      "subjects": [
+        ["plankton jelly", "plankton-bloom"],
+        ["rune shell tortoise", "rune-shell-tortoise"],
+        ["terrarium ecosystem", "terrarium-ecosystem"],
+        ["mycelium village", "mycelium"],
+        ["firefly chorus", "firefly-chorus"],
+        ["honeycomb alchemist", "honeycomb-alchemist"],
+        ["slime parliament", "slime-parliament"],
+        ["ramen nebula", "ramen-nebula"],
+        ["lichen commune", "lichen-commune"],
+        ["microbe metropolis", "microbe-metropolis"]
+      ]
+    }
+  ]
+}

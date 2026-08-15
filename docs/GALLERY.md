@@ -62,4 +62,4 @@ The homepage uses Arena Convergence as its main poster. Eight supporting composi
 
 *Tiny societies, living habitats, and enormous evolved guardians.*
 
-These are alternate presentations of the same audited catalog, not additional products, releases, or user deployments. Character-level provenance and acceptance evidence remain in the [lineage audit](LINEAGE_AUDIT.md), [production standard](../ArtSources/ART_PRODUCTION_500.md), and machine-readable [theme catalog](../ArtSources/PET_THEME_CATALOG.json).
+These are alternate presentations of the same audited catalog, not additional products, releases, or user deployments. Character-level provenance and acceptance evidence remain in the [original lineage audit](LINEAGE_AUDIT.md), [expansion audit](EXPANSION_AUDIT.md), [production standard](../ArtSources/ART_PRODUCTION_500.md), and machine-readable [theme catalog](../ArtSources/PET_THEME_CATALOG.json).

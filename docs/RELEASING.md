@@ -4,7 +4,7 @@ Sidekin is a GitHub source project, not a signed public application release. The
 
 ## Build from Source
 
-Git LFS is required for the 500 built-in character assets.
+Git LFS is required for the 1,000 built-in character assets.
 
 ```bash
 git lfs install
@@ -30,6 +30,8 @@ The packaging script writes generated files under `out/`. They are ignored by Gi
 
 - `macos-latest`: catalog and lineage audit, shared verification, macOS packaging
 - `windows-latest`: shared verification and Windows ZIP packaging
+
+Both jobs also verify the completed 100-lineage expansion ledger and all 500 integrated expansion assets before packaging.
 
 Each successful job uploads its `out/make/` files as a workflow artifact. The workflow does not create a GitHub Release or publish an installer.
 

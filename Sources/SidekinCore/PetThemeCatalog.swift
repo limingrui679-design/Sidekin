@@ -99,7 +99,9 @@ public struct PetThemeFormProfile: Codable, Equatable, Sendable {
 public struct PetThemeProfile: Codable, Equatable, Identifiable, Sendable {
     public let id: String
     public let displayName: String
-    public let category: PetThemeCategory
+    public let category: PetThemeCategory?
+    public let tags: [String]?
+    public let artStyle: String?
     public let subtitle: String
     public let symbolName: String
     public let lineageIntroduction: String
@@ -127,7 +129,7 @@ private enum PetThemeCatalogStore {
             let data = Data(PetThemeCatalogGenerated.json.utf8)
             let envelope = try JSONDecoder().decode(PetThemeCatalogEnvelope.self, from: data)
             precondition(envelope.schemaVersion == 1, "Unsupported built-in theme catalog schema")
-            precondition(envelope.themes.count == 100, "Built-in theme catalog must contain 100 themes")
+            precondition(envelope.themes.count == 200, "Built-in theme catalog must contain 200 themes")
             precondition(Set(envelope.themes.map(\.id)).count == envelope.themes.count, "Duplicate theme IDs")
             return envelope.themes
         } catch {
@@ -196,7 +198,13 @@ public struct PetVisualTheme: RawRepresentable, Codable, CaseIterable, Identifia
     }
 
     public var displayName: String { profile.displayName }
-    public var category: PetThemeCategory { profile.category }
+    public var category: PetThemeCategory? { profile.category }
+    public var tags: [String] { profile.tags ?? [] }
+    public var taxonomyLabel: String {
+        if let category = profile.category { return category.displayName }
+        return tags.prefix(2).joined(separator: " · ")
+    }
+    public var taxonomySymbol: String { profile.category?.symbolName ?? profile.symbolName }
     public var subtitle: String { profile.subtitle }
     public var symbolName: String { profile.symbolName }
     public var lineageIntroduction: String { profile.lineageIntroduction }

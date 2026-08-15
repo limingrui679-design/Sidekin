@@ -88,7 +88,7 @@ const resources = platform === "darwin"
   : path.join(packageDirectory, "resources");
 const characters = path.join(resources, "Characters");
 const characterFiles = (await readdir(characters)).filter((file) => file.endsWith(".png"));
-if (characterFiles.length !== 500) throw new Error(`Packaged application contains ${characterFiles.length} character assets instead of 500.`);
+if (characterFiles.length !== 1_000) throw new Error(`Packaged application contains ${characterFiles.length} character assets instead of 1,000.`);
 for (const file of [path.join(resources, "PET_THEME_CATALOG.json"), path.join(resources, "tray-template.png"), path.join(resources, "app.asar")]) {
   if (!existsSync(file)) throw new Error(`Packaged application is missing ${path.basename(file)}.`);
 }
@@ -137,4 +137,4 @@ const report = {
   archiveSHA256: archiveSHA256 ?? null
 };
 await writeFile(path.join(make, `package-report-${platform}-${arch}.json`), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Packaged Sidekin ${version} for ${packageLabel} ${arch}: 500 assets${archive ? `, ${archiveName}` : ""}.`);
+console.log(`Packaged Sidekin ${version} for ${packageLabel} ${arch}: 1,000 assets${archive ? `, ${archiveName}` : ""}.`);

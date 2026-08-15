@@ -1,0 +1,30 @@
+Create one production asset: a clean horizontal five-stage evolution lineup for the original Sidekin desktop companion Arc Lion Vanguard.
+
+Identity bible:
+- Existence type: electric lion assault frame.
+- Persistent silhouette anatomy: angular lion head, circular cable mane, four armored legs, and coil tail.
+- Materials: Arc Lion Vanguard: silver armor and cobalt alloy.
+- Energy motif: Arc Lion Vanguard: blue arc mane.
+- Movement logic: Arc Lion Vanguard moves through assault lion charges while keeping angular lion head, circular cable mane, four armored legs, and coil tail..
+- Art mood: heroic; clear champion silhouette, athletic motion, confident focal pose.
+
+Canvas and mandatory slot layout:
+- Very wide 2:1 landscape canvas with a perfectly flat, uniform pure green #00FF00 background edge to edge.
+- Exactly five separate full-body subjects in one straight horizontal row, one stage centered in each invisible equal-width cell.
+- Scale every subject to stay completely inside its own cell. Leave an uninterrupted vertical gutter of pure green between every neighboring pair from top edge to bottom edge. No limb, tail, wing, halo, particle, ribbon, or effect may cross a gutter.
+- No overlap, touching, cropping, floor, cast shadow, scenery, text, numbers, labels, dividers, frame, UI, logo, or watermark. Keep pure green out of every subject.
+
+Stages, left to right:
+1. Arc Lion Vanguard Core: Arc Lion Vanguard appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving electric lion assault frame. Visual requirement: Arc Lion Vanguard: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail.
+2. Arc Lion Vanguard First Spark: Arc Lion Vanguard appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving electric lion assault frame. Visual requirement: Arc Lion Vanguard: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail.
+3. Arc Lion Vanguard Pathfinder: Arc Lion Vanguard appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving electric lion assault frame. Visual requirement: Arc Lion Vanguard: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail.
+4. Arc Lion Vanguard Ascendant: Arc Lion Vanguard appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving electric lion assault frame. Visual requirement: Arc Lion Vanguard: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail.
+5. Arc Lion Vanguard Crown: Arc Lion Vanguard appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving electric lion assault frame. Visual requirement: Arc Lion Vanguard: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail.
+
+Continuity and quality rules:
+- These are five ages of exactly the same individual and species. Preserve the same face or primary core, signature palette, defining material, and at least three identity anchors in all five.
+- Make each stage structurally and proportionally different with a distinct pose. Never produce five recolors or the same body with more accessories.
+- The legendary form must be the largest, most complete, and most visually impressive form, clearly surpassing the ascended form while staying the same species.
+- Polished high-end original competitive-game character render, premium collectible companion, crisp small-size readability, controlled specular detail, production-quality anatomy or construction.
+- Any humanoid form must remain unmistakably nonhuman: no real person, human child, realistic human skin, realistic human hair, or ordinary human face.
+- Exactly these five subjects and nothing else.

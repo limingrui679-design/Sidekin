@@ -1,0 +1,30 @@
+Create one production asset: a clean horizontal five-stage evolution lineup for the original Sidekin desktop companion Aegis Pounce Unit.
+
+Identity bible:
+- Existence type: white feline arena mecha.
+- Persistent silhouette anatomy: low armored cat chassis, massive forepaws, turbine hips, and blade tail.
+- Materials: Aegis Pounce Unit: white ceramic armor and dark alloy.
+- Energy motif: Aegis Pounce Unit: cyan boost trails.
+- Movement logic: Aegis Pounce Unit moves through powered feline sprints while keeping low armored cat chassis, massive forepaws, turbine hips, and blade tail..
+- Art mood: heroic; clear champion silhouette, athletic motion, confident focal pose.
+
+Canvas and mandatory slot layout:
+- Very wide 2:1 landscape canvas with a perfectly flat, uniform pure green #00FF00 background edge to edge.
+- Exactly five separate full-body subjects in one straight horizontal row, one stage centered in each invisible equal-width cell.
+- Scale every subject to stay completely inside its own cell. Leave an uninterrupted vertical gutter of pure green between every neighboring pair from top edge to bottom edge. No limb, tail, wing, halo, particle, ribbon, or effect may cross a gutter.
+- No overlap, touching, cropping, floor, cast shadow, scenery, text, numbers, labels, dividers, frame, UI, logo, or watermark. Keep pure green out of every subject.
+
+Stages, left to right:
+1. Aegis Pounce Unit Core: Aegis Pounce Unit appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving white feline arena mecha. Visual requirement: Aegis Pounce Unit: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail.
+2. Aegis Pounce Unit First Spark: Aegis Pounce Unit appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving white feline arena mecha. Visual requirement: Aegis Pounce Unit: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail.
+3. Aegis Pounce Unit Pathfinder: Aegis Pounce Unit appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving white feline arena mecha. Visual requirement: Aegis Pounce Unit: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail.
+4. Aegis Pounce Unit Ascendant: Aegis Pounce Unit appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving white feline arena mecha. Visual requirement: Aegis Pounce Unit: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail.
+5. Aegis Pounce Unit Crown: Aegis Pounce Unit appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving white feline arena mecha. Visual requirement: Aegis Pounce Unit: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail.
+
+Continuity and quality rules:
+- These are five ages of exactly the same individual and species. Preserve the same face or primary core, signature palette, defining material, and at least three identity anchors in all five.
+- Make each stage structurally and proportionally different with a distinct pose. Never produce five recolors or the same body with more accessories.
+- The legendary form must be the largest, most complete, and most visually impressive form, clearly surpassing the ascended form while staying the same species.
+- Polished high-end original competitive-game character render, premium collectible companion, crisp small-size readability, controlled specular detail, production-quality anatomy or construction.
+- Any humanoid form must remain unmistakably nonhuman: no real person, human child, realistic human skin, realistic human hair, or ordinary human face.
+- Exactly these five subjects and nothing else.

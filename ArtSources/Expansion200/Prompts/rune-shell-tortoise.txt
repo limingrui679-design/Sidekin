@@ -1,0 +1,30 @@
+Create one production asset: a clean horizontal five-stage evolution lineup for the original Sidekin desktop companion Rune-Shell Tortoise.
+
+Identity bible:
+- Existence type: ancient rune tortoise.
+- Persistent silhouette anatomy: broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail.
+- Materials: Rune-Shell Tortoise: jade stone shell and bronze runes.
+- Energy motif: Rune-Shell Tortoise: turquoise memory glyphs.
+- Movement logic: Rune-Shell Tortoise moves through deliberate tortoise steps while keeping broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail..
+- Art mood: ancient; ancient relic craftsmanship, weathered detail, solemn silhouette.
+
+Canvas and mandatory slot layout:
+- Very wide 2:1 landscape canvas with a perfectly flat, uniform pure green #00FF00 background edge to edge.
+- Exactly five separate full-body subjects in one straight horizontal row, one stage centered in each invisible equal-width cell.
+- Scale every subject to stay completely inside its own cell. Leave an uninterrupted vertical gutter of pure green between every neighboring pair from top edge to bottom edge. No limb, tail, wing, halo, particle, ribbon, or effect may cross a gutter.
+- No overlap, touching, cropping, floor, cast shadow, scenery, text, numbers, labels, dividers, frame, UI, logo, or watermark. Keep pure green out of every subject.
+
+Stages, left to right:
+1. Rune-Shell Tortoise Core: Rune-Shell Tortoise appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving ancient rune tortoise. Visual requirement: Rune-Shell Tortoise: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail.
+2. Rune-Shell Tortoise First Spark: Rune-Shell Tortoise appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving ancient rune tortoise. Visual requirement: Rune-Shell Tortoise: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail.
+3. Rune-Shell Tortoise Pathfinder: Rune-Shell Tortoise appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving ancient rune tortoise. Visual requirement: Rune-Shell Tortoise: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail.
+4. Rune-Shell Tortoise Ascendant: Rune-Shell Tortoise appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving ancient rune tortoise. Visual requirement: Rune-Shell Tortoise: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail.
+5. Rune-Shell Tortoise Crown: Rune-Shell Tortoise appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving ancient rune tortoise. Visual requirement: Rune-Shell Tortoise: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail.
+
+Continuity and quality rules:
+- These are five ages of exactly the same individual and species. Preserve the same face or primary core, signature palette, defining material, and at least three identity anchors in all five.
+- Make each stage structurally and proportionally different with a distinct pose. Never produce five recolors or the same body with more accessories.
+- The legendary form must be the largest, most complete, and most visually impressive form, clearly surpassing the ascended form while staying the same species.
+- Polished high-end original competitive-game character render, premium collectible companion, crisp small-size readability, controlled specular detail, production-quality anatomy or construction.
+- Any humanoid form must remain unmistakably nonhuman: no real person, human child, realistic human skin, realistic human hair, or ordinary human face.
+- Exactly these five subjects and nothing else.

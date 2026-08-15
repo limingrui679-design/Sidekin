@@ -1,6 +1,7 @@
 Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
 
 Theme: Pollinator Array [Machines & Vehicles]
+Art-style direction: catalog-defined premium competitive-game companion
 Form: Bloomgrid Grand Array, canonical legendary stage
 Lineage concept: A modular garden drone whose detachable rotors coordinate pollination as a flying array.
 Existence anchor: Autonomous Pollination Drone

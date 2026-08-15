@@ -62,8 +62,8 @@ fi
 
 PACKAGED_RESOURCE_BUNDLE="$CONTENTS/Resources/$(basename "$RESOURCE_BUNDLE")"
 CHARACTER_COUNT="$(find "$PACKAGED_RESOURCE_BUNDLE" -type f -name '*.png' | wc -l | tr -d ' ')"
-if [[ "$CHARACTER_COUNT" != "500" ]]; then
-  print -u2 "Expected exactly 500 packaged character models, found $CHARACTER_COUNT."
+if [[ "$CHARACTER_COUNT" != "1000" ]]; then
+  print -u2 "Expected exactly 1,000 packaged character models, found $CHARACTER_COUNT."
   exit 1
 fi
 if find "$PACKAGED_RESOURCE_BUNDLE" -type f \

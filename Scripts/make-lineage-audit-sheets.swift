@@ -19,7 +19,12 @@ struct ThemeCatalogEnvelope: Decodable {
     struct Theme: Decodable {
         let id: String
         let displayName: String
-        let category: String
+        let category: String?
+        let tags: [String]?
+
+        var taxonomyLabel: String {
+            category ?? (tags ?? []).prefix(2).joined(separator: " · ")
+        }
     }
 
     let themes: [Theme]
@@ -31,9 +36,9 @@ let projectRoot = URL(fileURLWithPath: #filePath)
 let catalogURL = projectRoot.appendingPathComponent("ArtSources/PET_THEME_CATALOG.json")
 guard let catalogData = try? Data(contentsOf: catalogURL),
       let catalog = try? JSONDecoder().decode(ThemeCatalogEnvelope.self, from: catalogData),
-      catalog.themes.count == 100
+      catalog.themes.count == 200
 else {
-    fputs("Could not decode the 100-theme catalog at \(catalogURL.path)\n", stderr)
+    fputs("Could not decode the 200-theme catalog at \(catalogURL.path)\n", stderr)
     exit(1)
 }
 
@@ -77,14 +82,15 @@ try FileManager.default.createDirectory(
     withIntermediateDirectories: true
 )
 
-for sheetIndex in 0..<(catalog.themes.count / themesPerSheet) {
+let sheetCount = catalog.themes.count / themesPerSheet
+for sheetIndex in 0..<sheetCount {
     let sheet = NSImage(size: sheetSize)
     sheet.lockFocus()
 
     NSColor(calibratedRed: 0.018, green: 0.025, blue: 0.055, alpha: 1).setFill()
     NSBezierPath(rect: NSRect(origin: .zero, size: sheetSize)).fill()
 
-    ("Lineage audit \(String(format: "%02d", sheetIndex + 1)) / 20" as NSString).draw(
+    ("Lineage audit \(String(format: "%02d", sheetIndex + 1)) / \(sheetCount)" as NSString).draw(
         at: NSPoint(x: 18, y: sheetSize.height - 36),
         withAttributes: headerAttributes
     )
@@ -123,7 +129,7 @@ for sheetIndex in 0..<(catalog.themes.count / themesPerSheet) {
             in: NSRect(x: 16, y: y + 108, width: labelWidth - 28, height: 24),
             withAttributes: idAttributes
         )
-        (theme.category as NSString).draw(
+        (theme.taxonomyLabel as NSString).draw(
             in: NSRect(x: 16, y: y + 72, width: labelWidth - 28, height: 42),
             withAttributes: categoryAttributes
         )

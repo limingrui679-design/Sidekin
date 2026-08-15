@@ -10,3 +10,11 @@ dist/
 out/
 .vite/
 npm-debug.log*
+
+# Expansion authoring intermediates are kept locally. The integrated final
+# assets, source metadata, prompts, progress ledger, and final review sheets
+# are tracked without duplicating the 500 final PNGs inside ArtSources.
+ArtSources/Expansion200/Lineups/
+ArtSources/Expansion200/Processed/
+ArtSources/Expansion200/Resources/
+ArtSources/Expansion200/ReviewSheets/lineups-*.jpg

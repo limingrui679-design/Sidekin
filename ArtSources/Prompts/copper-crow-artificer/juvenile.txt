@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Copper Crow Artificer [nonhuman humanoid · clever · agile]
+Art-style direction: clever; inventive gadget detail, alert proportions, agile readable shape
+Form: Copper Crow Artificer Pathfinder, canonical juvenile stage
+Lineage concept: Copper Crow Artificer is an original nonhuman humanoid lineage built around crow-headed gadgeteer, evolving through five structural forms without changing species or identity.
+Existence anchor: crow-headed gadgeteer
+Persistent silhouette logic: long metal beak, folded tool wings, spring legs, and monocle lens
+Silhouette topology class: copper-crow-artificer-topology
+Movement and locomotion: Copper Crow Artificer moves through hopping workbench steps while keeping long metal beak, folded tool wings, spring legs, and monocle lens.; hopping-workbench-steps
+Material system: Copper Crow Artificer: hammered copper and black feather steel
+Energy motif: Copper Crow Artificer: cyan calibration sparks
+Current-stage introduction: Copper Crow Artificer appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving crow-headed gadgeteer.
+Current-stage visual anchor: Copper Crow Artificer: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is long metal beak, folded tool wings, spring legs, and monocle lens.
+
+The provided reference image is the immediately preceding form, Copper Crow Artificer First Spark. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Copper Crow Artificer: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is long metal beak, folded tool wings, spring legs, and monocle lens.
+
+Progression rule: Stage III establishes the signature topology, locomotion, functional tool or organ, and material system. Change the outer contour and pose from Stage II without losing identity.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FF00FF, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FF00FF must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

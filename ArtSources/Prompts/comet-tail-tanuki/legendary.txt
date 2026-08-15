@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Comet-Tail Tanuki [mythic animal · cute · bouncing · creature]
+Art-style direction: cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms
+Form: Comet-Tail Tanuki Crown, canonical legendary stage
+Lineage concept: Comet-Tail Tanuki is an original mythic animal lineage built around comet raccoon dog, evolving through five structural forms without changing species or identity.
+Existence anchor: comet raccoon dog
+Persistent silhouette logic: round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell
+Silhouette topology class: comet-tail-tanuki-topology
+Movement and locomotion: Comet-Tail Tanuki moves through rolling hops while keeping round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell.; rolling-hops
+Material system: Comet-Tail Tanuki: soft midnight fur and meteor brass
+Energy motif: Comet-Tail Tanuki: gold-blue comet sparks
+Current-stage introduction: Comet-Tail Tanuki appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving comet raccoon dog.
+Current-stage visual anchor: Comet-Tail Tanuki: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell.
+
+The provided reference image is the immediately preceding form, Comet-Tail Tanuki Ascendant. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Comet-Tail Tanuki: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell.
+
+Progression rule: Stage V is the unmistakable crown form. Make a major outline, scale, formation, or system change while preserving the same lineage, identity marker, and existence type.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #00FF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #00FF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

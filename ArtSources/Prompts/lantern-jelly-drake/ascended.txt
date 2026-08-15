@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Lantern Jelly Drake [mythic creature · dreamlike · swimming · creature]
+Art-style direction: dreamlike; soft luminous materials, surreal flowing contours, gentle mystery
+Form: Lantern Jelly Drake Ascendant, canonical ascended stage
+Lineage concept: Lantern Jelly Drake is an original mythic creature lineage built around jellyfish dragon hybrid, evolving through five structural forms without changing species or identity.
+Existence anchor: jellyfish dragon hybrid
+Persistent silhouette logic: small dragon head under a glowing dome, four veil fins, and luminous tentacle tail
+Silhouette topology class: lantern-jelly-drake-topology
+Movement and locomotion: Lantern Jelly Drake moves through pulsing air swims while keeping small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.; pulsing-air-swims
+Material system: Lantern Jelly Drake: translucent gel and pearl scales
+Energy motif: Lantern Jelly Drake: aqua lantern glow
+Current-stage introduction: Lantern Jelly Drake appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving jellyfish dragon hybrid.
+Current-stage visual anchor: Lantern Jelly Drake: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.
+
+The provided reference image is the immediately preceding form, Lantern Jelly Drake Pathfinder. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Lantern Jelly Drake: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.
+
+Progression rule: Stage IV is a structural ascension: change stance, functional anatomy, formation, or architecture. Preserve the same face, core, facade, or identity marker; do not merely add armor.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FFFF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FFFF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

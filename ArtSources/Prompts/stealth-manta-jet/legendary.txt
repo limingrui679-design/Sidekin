@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Stealth Manta Jet [mecha creature · dark · gliding · mecha · creature]
+Art-style direction: dark; mysterious high-contrast silhouette, controlled void colors, elegant menace
+Form: Stealth Manta Jet Crown, canonical legendary stage
+Lineage concept: Stealth Manta Jet is an original mecha creature lineage built around manta-shaped aerial stealth unit, evolving through five structural forms without changing species or identity.
+Existence anchor: manta-shaped aerial stealth unit
+Persistent silhouette logic: wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes
+Silhouette topology class: stealth-manta-jet-topology
+Movement and locomotion: Stealth Manta Jet moves through stealth wing glides while keeping wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes.; stealth-wing-glides
+Material system: Stealth Manta Jet: matte black composite and violet glass
+Energy motif: Stealth Manta Jet: silent purple ion wake
+Current-stage introduction: Stealth Manta Jet appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving manta-shaped aerial stealth unit.
+Current-stage visual anchor: Stealth Manta Jet: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes.
+
+The provided reference image is the immediately preceding form, Stealth Manta Jet Ascendant. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Stealth Manta Jet: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes.
+
+Progression rule: Stage V is the unmistakable crown form. Make a major outline, scale, formation, or system change while preserving the same lineage, identity marker, and existence type.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FFFF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FFFF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

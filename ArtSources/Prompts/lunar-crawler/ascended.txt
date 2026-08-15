@@ -1,6 +1,7 @@
 Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
 
 Theme: Moonbase Crawler [Machines & Vehicles]
+Art-style direction: catalog-defined premium competitive-game companion
 Form: Deployable Moon Lab, canonical ascended stage
 Lineage concept: A six-wheel lunar rover that expands from sample carrier into a walking research base.
 Existence anchor: Expandable Lunar Research Rover

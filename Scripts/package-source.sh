@@ -12,6 +12,8 @@ if ! /usr/bin/git -C "$PROJECT_ROOT" diff --quiet HEAD --; then
   exit 1
 fi
 
+node "$PROJECT_ROOT/Scripts/verify-expansion-plan.mjs" --full
+
 mkdir -p "$OUTPUT_DIR"
 PACKAGE_TEMP="$(mktemp -d /tmp/sidekin-source.XXXXXX)"
 cleanup() {
@@ -52,6 +54,7 @@ fi
 print -r -- "$ZIP_LIST" | /usr/bin/grep -qx 'Sidekin/Package.swift'
 print -r -- "$ZIP_LIST" | /usr/bin/grep -qx 'Sidekin/ArtSources/PET_THEME_CATALOG.json'
 print -r -- "$ZIP_LIST" | /usr/bin/grep -qx 'Sidekin/docs/LINEAGE_AUDIT.md'
+print -r -- "$ZIP_LIST" | /usr/bin/grep -qx 'Sidekin/docs/EXPANSION_AUDIT.md'
 
 RESOURCE_COUNT="$(print -r -- "$ZIP_LIST" | /usr/bin/grep -Ec \
   '^Sidekin/Sources/SidekinApp/Resources/Characters/[^/]+\.png$')"
@@ -59,16 +62,22 @@ PROMPT_COUNT="$(print -r -- "$ZIP_LIST" | /usr/bin/grep -Ec \
   '^Sidekin/ArtSources/Prompts/[^/]+/[^/]+\.txt$')"
 AUDIT_SHEET_COUNT="$(print -r -- "$ZIP_LIST" | /usr/bin/grep -Ec \
   '^Sidekin/ArtSources/AuditSheets/lineage-audit-[0-9]{2}\.png$')"
-[[ "$RESOURCE_COUNT" == "500" ]] || {
-  print -u2 "Source archive contains $RESOURCE_COUNT final resources, expected 500."
+EXPANSION_AUDIT_SHEET_COUNT="$(print -r -- "$ZIP_LIST" | /usr/bin/grep -Ec \
+  '^Sidekin/ArtSources/Expansion200/ReviewSheets/assets-[0-9]{2}\.jpg$')"
+[[ "$RESOURCE_COUNT" == "1000" ]] || {
+  print -u2 "Source archive contains $RESOURCE_COUNT final resources, expected 1,000."
   exit 1
 }
-[[ "$PROMPT_COUNT" == "500" ]] || {
-  print -u2 "Source archive contains $PROMPT_COUNT prompts, expected 500."
+[[ "$PROMPT_COUNT" == "1000" ]] || {
+  print -u2 "Source archive contains $PROMPT_COUNT prompts, expected 1,000."
   exit 1
 }
 [[ "$AUDIT_SHEET_COUNT" == "20" ]] || {
   print -u2 "Source archive contains $AUDIT_SHEET_COUNT audit sheets, expected 20."
+  exit 1
+}
+[[ "$EXPANSION_AUDIT_SHEET_COUNT" == "20" ]] || {
+  print -u2 "Source archive contains $EXPANSION_AUDIT_SHEET_COUNT expansion audit sheets, expected 20."
   exit 1
 }
 

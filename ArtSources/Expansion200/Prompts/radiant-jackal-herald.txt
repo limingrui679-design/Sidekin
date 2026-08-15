@@ -1,0 +1,30 @@
+Create one production asset: a clean horizontal five-stage evolution lineup for the original Sidekin desktop companion Radiant Jackal Herald.
+
+Identity bible:
+- Existence type: golden jackal divine herald.
+- Persistent silhouette anatomy: tall jackal head, sun staff, narrow armored torso, and twin banner tails.
+- Materials: Radiant Jackal Herald: black stone and radiant gold.
+- Energy motif: Radiant Jackal Herald: sunrise trumpet rays.
+- Movement logic: Radiant Jackal Herald moves through heraldic strides while keeping tall jackal head, sun staff, narrow armored torso, and twin banner tails..
+- Art mood: sacred; luminous holy iconography, serene power, ivory-gold polish.
+
+Canvas and mandatory slot layout:
+- Very wide 2:1 landscape canvas with a perfectly flat, uniform pure green #00FF00 background edge to edge.
+- Exactly five separate full-body subjects in one straight horizontal row, one stage centered in each invisible equal-width cell.
+- Scale every subject to stay completely inside its own cell. Leave an uninterrupted vertical gutter of pure green between every neighboring pair from top edge to bottom edge. No limb, tail, wing, halo, particle, ribbon, or effect may cross a gutter.
+- No overlap, touching, cropping, floor, cast shadow, scenery, text, numbers, labels, dividers, frame, UI, logo, or watermark. Keep pure green out of every subject.
+
+Stages, left to right:
+1. Radiant Jackal Herald Core: Radiant Jackal Herald appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving golden jackal divine herald. Visual requirement: Radiant Jackal Herald: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails.
+2. Radiant Jackal Herald First Spark: Radiant Jackal Herald appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving golden jackal divine herald. Visual requirement: Radiant Jackal Herald: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails.
+3. Radiant Jackal Herald Pathfinder: Radiant Jackal Herald appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving golden jackal divine herald. Visual requirement: Radiant Jackal Herald: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails.
+4. Radiant Jackal Herald Ascendant: Radiant Jackal Herald appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving golden jackal divine herald. Visual requirement: Radiant Jackal Herald: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails.
+5. Radiant Jackal Herald Crown: Radiant Jackal Herald appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving golden jackal divine herald. Visual requirement: Radiant Jackal Herald: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails.
+
+Continuity and quality rules:
+- These are five ages of exactly the same individual and species. Preserve the same face or primary core, signature palette, defining material, and at least three identity anchors in all five.
+- Make each stage structurally and proportionally different with a distinct pose. Never produce five recolors or the same body with more accessories.
+- The legendary form must be the largest, most complete, and most visually impressive form, clearly surpassing the ascended form while staying the same species.
+- Polished high-end original competitive-game character render, premium collectible companion, crisp small-size readability, controlled specular detail, production-quality anatomy or construction.
+- Any humanoid form must remain unmistakably nonhuman: no real person, human child, realistic human skin, realistic human hair, or ordinary human face.
+- Exactly these five subjects and nothing else.

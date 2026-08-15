@@ -79,7 +79,9 @@ export interface ThemeForm {
 export interface ThemeProfile {
   id: string;
   displayName: string;
-  category: string;
+  category?: string;
+  tags?: string[];
+  artStyle?: string;
   subtitle: string;
   lineageIntroduction: string;
   existenceAnchor: string;

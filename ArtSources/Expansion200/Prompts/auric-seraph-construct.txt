@@ -1,0 +1,30 @@
+Create one production asset: a clean horizontal five-stage evolution lineup for the original Sidekin desktop companion Auric Seraph Construct.
+
+Identity bible:
+- Existence type: mechanical angel guardian.
+- Persistent silhouette anatomy: blank gold face, six segmented wings, long spear arm, and gyroscope waist.
+- Materials: Auric Seraph Construct: brushed gold and white ceramic.
+- Energy motif: Auric Seraph Construct: sacred geometric light.
+- Movement logic: Auric Seraph Construct moves through ceremonial flight while keeping blank gold face, six segmented wings, long spear arm, and gyroscope waist..
+- Art mood: sacred; luminous holy iconography, serene power, ivory-gold polish.
+
+Canvas and mandatory slot layout:
+- Very wide 2:1 landscape canvas with a perfectly flat, uniform pure green #00FF00 background edge to edge.
+- Exactly five separate full-body subjects in one straight horizontal row, one stage centered in each invisible equal-width cell.
+- Scale every subject to stay completely inside its own cell. Leave an uninterrupted vertical gutter of pure green between every neighboring pair from top edge to bottom edge. No limb, tail, wing, halo, particle, ribbon, or effect may cross a gutter.
+- No overlap, touching, cropping, floor, cast shadow, scenery, text, numbers, labels, dividers, frame, UI, logo, or watermark. Keep pure green out of every subject.
+
+Stages, left to right:
+1. Auric Seraph Construct Core: Auric Seraph Construct appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving mechanical angel guardian. Visual requirement: Auric Seraph Construct: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist.
+2. Auric Seraph Construct First Spark: Auric Seraph Construct appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving mechanical angel guardian. Visual requirement: Auric Seraph Construct: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist.
+3. Auric Seraph Construct Pathfinder: Auric Seraph Construct appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving mechanical angel guardian. Visual requirement: Auric Seraph Construct: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist.
+4. Auric Seraph Construct Ascendant: Auric Seraph Construct appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving mechanical angel guardian. Visual requirement: Auric Seraph Construct: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist.
+5. Auric Seraph Construct Crown: Auric Seraph Construct appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving mechanical angel guardian. Visual requirement: Auric Seraph Construct: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist.
+
+Continuity and quality rules:
+- These are five ages of exactly the same individual and species. Preserve the same face or primary core, signature palette, defining material, and at least three identity anchors in all five.
+- Make each stage structurally and proportionally different with a distinct pose. Never produce five recolors or the same body with more accessories.
+- The legendary form must be the largest, most complete, and most visually impressive form, clearly surpassing the ascended form while staying the same species.
+- Polished high-end original competitive-game character render, premium collectible companion, crisp small-size readability, controlled specular detail, production-quality anatomy or construction.
+- Any humanoid form must remain unmistakably nonhuman: no real person, human child, realistic human skin, realistic human hair, or ordinary human face.
+- Exactly these five subjects and nothing else.

@@ -1,0 +1,30 @@
+Create one production asset: a clean horizontal five-stage evolution lineup for the original Sidekin desktop companion Lantern Jelly Drake.
+
+Identity bible:
+- Existence type: jellyfish dragon hybrid.
+- Persistent silhouette anatomy: small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.
+- Materials: Lantern Jelly Drake: translucent gel and pearl scales.
+- Energy motif: Lantern Jelly Drake: aqua lantern glow.
+- Movement logic: Lantern Jelly Drake moves through pulsing air swims while keeping small dragon head under a glowing dome, four veil fins, and luminous tentacle tail..
+- Art mood: dreamlike; soft luminous materials, surreal flowing contours, gentle mystery.
+
+Canvas and mandatory slot layout:
+- Very wide 2:1 landscape canvas with a perfectly flat, uniform pure green #00FF00 background edge to edge.
+- Exactly five separate full-body subjects in one straight horizontal row, one stage centered in each invisible equal-width cell.
+- Scale every subject to stay completely inside its own cell. Leave an uninterrupted vertical gutter of pure green between every neighboring pair from top edge to bottom edge. No limb, tail, wing, halo, particle, ribbon, or effect may cross a gutter.
+- No overlap, touching, cropping, floor, cast shadow, scenery, text, numbers, labels, dividers, frame, UI, logo, or watermark. Keep pure green out of every subject.
+
+Stages, left to right:
+1. Lantern Jelly Drake Core: Lantern Jelly Drake appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving jellyfish dragon hybrid. Visual requirement: Lantern Jelly Drake: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.
+2. Lantern Jelly Drake First Spark: Lantern Jelly Drake appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving jellyfish dragon hybrid. Visual requirement: Lantern Jelly Drake: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.
+3. Lantern Jelly Drake Pathfinder: Lantern Jelly Drake appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving jellyfish dragon hybrid. Visual requirement: Lantern Jelly Drake: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.
+4. Lantern Jelly Drake Ascendant: Lantern Jelly Drake appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving jellyfish dragon hybrid. Visual requirement: Lantern Jelly Drake: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.
+5. Lantern Jelly Drake Crown: Lantern Jelly Drake appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving jellyfish dragon hybrid. Visual requirement: Lantern Jelly Drake: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.
+
+Continuity and quality rules:
+- These are five ages of exactly the same individual and species. Preserve the same face or primary core, signature palette, defining material, and at least three identity anchors in all five.
+- Make each stage structurally and proportionally different with a distinct pose. Never produce five recolors or the same body with more accessories.
+- The legendary form must be the largest, most complete, and most visually impressive form, clearly surpassing the ascended form while staying the same species.
+- Polished high-end original competitive-game character render, premium collectible companion, crisp small-size readability, controlled specular detail, production-quality anatomy or construction.
+- Any humanoid form must remain unmistakably nonhuman: no real person, human child, realistic human skin, realistic human hair, or ordinary human face.
+- Exactly these five subjects and nothing else.

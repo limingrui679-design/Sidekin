@@ -12,7 +12,7 @@ for (const file of [
 ]) requireCondition(existsSync(path.join(root, file)), `Missing desktop build artifact: ${file}`);
 
 const packageJSON = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
-requireCondition(packageJSON.version === "2.0.0-beta.2", "Expected Sidekin 2.0.0-beta.2 desktop version.");
+requireCondition(packageJSON.version === "2.1.0-beta.1", "Expected Sidekin 2.1.0-beta.1 desktop version.");
 requireCondition(packageJSON.devDependencies.electron, "Electron dependency is missing.");
 
 const main = await readFile(path.join(root, "src/main/index.ts"), "utf8");
@@ -63,6 +63,13 @@ for (const [title, preview, source] of supportingPosters) {
   requireCondition(existsSync(path.join(root, "docs/readme", preview)), `Missing README poster preview: ${preview}`);
   requireCondition(existsSync(path.join(root, "docs/readme", source)), `Missing full-resolution poster source: ${source}`);
 }
+requireCondition(
+  readme.includes("docs/readme/all-200-readme.jpg") && readme.includes("docs/readme/all-200.jpg"),
+  "README must link the all-200 lineage inventory preview and source."
+);
+for (const file of ["docs/readme/all-200-readme.jpg", "docs/readme/all-200.jpg", "docs/EXPANSION_AUDIT.md"]) {
+  requireCondition(existsSync(path.join(root, file)), `Missing 200-lineage review evidence: ${file}`);
+}
 
 const floatingCSS = await readFile(path.join(root, "src/renderer/floating.css"), "utf8");
 const motions = ["idle-float", "idle-look", "idle-stretch", "idle-hop", "working-scan", "working-run", "celebrate", "fail", "feed", "play", "sleep", "wake", "evolve"];
@@ -85,9 +92,9 @@ const codex = await readFile(path.join(root, "src/shared/codex.ts"), "utf8");
 requireCondition(codex.includes('object.type === "session_meta"') && codex.includes('object.type === "turn_context"'), "Safe project-label metadata extraction is missing.");
 
 const catalog = JSON.parse(await readFile(path.join(root, "ArtSources/PET_THEME_CATALOG.json"), "utf8"));
-requireCondition(catalog.themes.length === 100, "Expected 100 built-in lineages.");
+requireCondition(catalog.themes.length === 200, "Expected 200 built-in lineages.");
 const assets = (await readdir(path.join(root, "Sources/SidekinApp/Resources/Characters"))).filter((file) => file.endsWith(".png"));
-requireCondition(assets.length === 500, "Expected 500 built-in character assets.");
+requireCondition(assets.length === 1_000, "Expected 1,000 built-in character assets.");
 for (const theme of catalog.themes) {
   for (const stage of ["egg", "hatchling", "juvenile", "ascended", "legendary"]) {
     requireCondition(assets.includes(`${theme.id}-${stage}.png`), `Missing ${theme.id}-${stage}.png`);
@@ -97,5 +104,6 @@ for (const theme of catalog.themes) {
 const workflow = await readFile(path.join(root, ".github/workflows/desktop.yml"), "utf8");
 requireCondition(workflow.includes("macos-latest") && workflow.includes("windows-latest"), "Desktop CI must run on macOS and Windows.");
 requireCondition(workflow.includes("npm run make") && workflow.includes("actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a"), "Desktop CI must create and retain platform artifacts with a pinned action.");
+requireCondition(workflow.includes("node Scripts/verify-expansion-plan.mjs --full"), "Desktop CI must verify the completed expansion before packaging.");
 
-console.log("Verified the Arena homepage poster, eight full-width themes, secure shared desktop runtime, retired cosmetic slots, 13 motions, 100 lineages, 500 forms, and macOS/Windows packaging gates.");
+console.log("Verified the Arena homepage poster, eight full-width themes, secure shared desktop runtime, retired cosmetic slots, 13 motions, 200 lineages, 1,000 forms, and macOS/Windows packaging gates.");

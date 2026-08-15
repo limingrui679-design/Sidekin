@@ -27,6 +27,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: node Scripts/verify-expansion-plan.mjs --full
       - if: runner.os == 'macOS'
         run: ./Scripts/verify-theme-catalog.sh && swift Scripts/verify-lineage-audit.swift
       - run: npm run make

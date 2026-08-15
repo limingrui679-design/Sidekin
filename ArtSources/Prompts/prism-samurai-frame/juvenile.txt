@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Prism Samurai Frame [mecha creature · exquisite · poised · mecha · creature]
+Art-style direction: exquisite; jewel-like precision, ornate but readable details, luxury collectible finish
+Form: Prism Samurai Frame Pathfinder, canonical juvenile stage
+Lineage concept: Prism Samurai Frame is an original mecha creature lineage built around nonhuman samurai automaton, evolving through five structural forms without changing species or identity.
+Existence anchor: nonhuman samurai automaton
+Persistent silhouette logic: faceless visor helm, two blade arms, digitigrade legs, and folding prism banner
+Silhouette topology class: prism-samurai-frame-topology
+Movement and locomotion: Prism Samurai Frame moves through precision draw steps while keeping faceless visor helm, two blade arms, digitigrade legs, and folding prism banner.; precision-draw-steps
+Material system: Prism Samurai Frame: black titanium and rainbow crystal
+Energy motif: Prism Samurai Frame: spectrum draw-cut arcs
+Current-stage introduction: Prism Samurai Frame appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving nonhuman samurai automaton.
+Current-stage visual anchor: Prism Samurai Frame: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is faceless visor helm, two blade arms, digitigrade legs, and folding prism banner.
+
+The provided reference image is the immediately preceding form, Prism Samurai Frame First Spark. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Prism Samurai Frame: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is faceless visor helm, two blade arms, digitigrade legs, and folding prism banner.
+
+Progression rule: Stage III establishes the signature topology, locomotion, functional tool or organ, and material system. Change the outer contour and pose from Stage II without losing identity.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FFFF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FFFF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

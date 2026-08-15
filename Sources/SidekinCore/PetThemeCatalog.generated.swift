@@ -5805,6 +5805,6385 @@ enum PetThemeCatalogGenerated {
       "silhouetteClass" : "glass-biome-sphere-on-root-feet",
       "subtitle" : "Glass biome · closed-cycle greenlight",
       "symbolName" : "globe.americas.fill"
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9098039215686274,
+        "red" : 0.3333333333333333
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Astral Vowkeeper",
+      "energyAnchor" : "Astral Vowkeeper: orbiting vow-runes",
+      "existenceAnchor" : "faceless four-armed celestial knight",
+      "forms" : [
+        {
+          "introduction" : "Astral Vowkeeper appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving faceless four-armed celestial knight.",
+          "name" : "Astral Vowkeeper Core",
+          "stage" : "egg",
+          "visualAnchor" : "Astral Vowkeeper: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is split comet helm, four arms, crescent lance, and diamond chest aperture."
+        },
+        {
+          "introduction" : "Astral Vowkeeper appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving faceless four-armed celestial knight.",
+          "name" : "Astral Vowkeeper First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Astral Vowkeeper: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is split comet helm, four arms, crescent lance, and diamond chest aperture."
+        },
+        {
+          "introduction" : "Astral Vowkeeper appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving faceless four-armed celestial knight.",
+          "name" : "Astral Vowkeeper Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Astral Vowkeeper: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is split comet helm, four arms, crescent lance, and diamond chest aperture."
+        },
+        {
+          "introduction" : "Astral Vowkeeper appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving faceless four-armed celestial knight.",
+          "name" : "Astral Vowkeeper Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Astral Vowkeeper: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is split comet helm, four arms, crescent lance, and diamond chest aperture."
+        },
+        {
+          "introduction" : "Astral Vowkeeper appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving faceless four-armed celestial knight.",
+          "name" : "Astral Vowkeeper Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Astral Vowkeeper: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is split comet helm, four arms, crescent lance, and diamond chest aperture."
+        }
+      ],
+      "id" : "astral-vowkeeper",
+      "lineageIntroduction" : "Astral Vowkeeper is an original nonhuman humanoid lineage built around faceless four-armed celestial knight, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "ritual-strides",
+      "materialAnchor" : "Astral Vowkeeper: moonsteel plates and sapphire crystal",
+      "motionAnchor" : "Astral Vowkeeper moves through ritual strides while keeping split comet helm, four arms, crescent lance, and diamond chest aperture.",
+      "motionProfile" : "poised",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.3568627450980392,
+        "red" : 0.5137254901960784
+      },
+      "silhouetteAnchor" : "split comet helm, four arms, crescent lance, and diamond chest aperture",
+      "silhouetteClass" : "astral-vowkeeper-topology",
+      "subtitle" : "sacred · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "sacred",
+        "poised"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.8431372549019608,
+        "red" : 0.7333333333333333
+      },
+      "artStyle" : "mysterious; occult visual logic, restrained glow, uncanny but appealing identity",
+      "displayName" : "Moonveil Oracle",
+      "energyAnchor" : "Moonveil Oracle: silver dream motes",
+      "existenceAnchor" : "owl-masked floating oracle",
+      "forms" : [
+        {
+          "introduction" : "Moonveil Oracle appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving owl-masked floating oracle.",
+          "name" : "Moonveil Oracle Core",
+          "stage" : "egg",
+          "visualAnchor" : "Moonveil Oracle: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is wide owl mask, draped crescent sleeves, three ribbon tails, and a moon disc."
+        },
+        {
+          "introduction" : "Moonveil Oracle appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving owl-masked floating oracle.",
+          "name" : "Moonveil Oracle First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Moonveil Oracle: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is wide owl mask, draped crescent sleeves, three ribbon tails, and a moon disc."
+        },
+        {
+          "introduction" : "Moonveil Oracle appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving owl-masked floating oracle.",
+          "name" : "Moonveil Oracle Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Moonveil Oracle: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is wide owl mask, draped crescent sleeves, three ribbon tails, and a moon disc."
+        },
+        {
+          "introduction" : "Moonveil Oracle appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving owl-masked floating oracle.",
+          "name" : "Moonveil Oracle Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Moonveil Oracle: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is wide owl mask, draped crescent sleeves, three ribbon tails, and a moon disc."
+        },
+        {
+          "introduction" : "Moonveil Oracle appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving owl-masked floating oracle.",
+          "name" : "Moonveil Oracle Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Moonveil Oracle: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is wide owl mask, draped crescent sleeves, three ribbon tails, and a moon disc."
+        }
+      ],
+      "id" : "moonveil-oracle",
+      "lineageIntroduction" : "Moonveil Oracle is an original nonhuman humanoid lineage built around owl-masked floating oracle, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "hovering-glides",
+      "materialAnchor" : "Moonveil Oracle: pearl ceramic and midnight silk",
+      "motionAnchor" : "Moonveil Oracle moves through hovering glides while keeping wide owl mask, draped crescent sleeves, three ribbon tails, and a moon disc.",
+      "motionProfile" : "spectral",
+      "secondaryAccent" : {
+        "blue" : 0.8509803921568627,
+        "green" : 0.3411764705882353,
+        "red" : 0.4392156862745098
+      },
+      "silhouetteAnchor" : "wide owl mask, draped crescent sleeves, three ribbon tails, and a moon disc",
+      "silhouetteClass" : "moonveil-oracle-topology",
+      "subtitle" : "mysterious · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "mysterious",
+        "spectral"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9529411764705882,
+        "red" : 0.5215686274509804
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Prism Antler Warden",
+      "energyAnchor" : "Prism Antler Warden: refracted rainbow wards",
+      "existenceAnchor" : "crystal stag sentinel",
+      "forms" : [
+        {
+          "introduction" : "Prism Antler Warden appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving crystal stag sentinel.",
+          "name" : "Prism Antler Warden Core",
+          "stage" : "egg",
+          "visualAnchor" : "Prism Antler Warden: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is branching prism antlers, digitigrade legs, broad shield forearm, and narrow deer mask."
+        },
+        {
+          "introduction" : "Prism Antler Warden appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving crystal stag sentinel.",
+          "name" : "Prism Antler Warden First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Prism Antler Warden: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is branching prism antlers, digitigrade legs, broad shield forearm, and narrow deer mask."
+        },
+        {
+          "introduction" : "Prism Antler Warden appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving crystal stag sentinel.",
+          "name" : "Prism Antler Warden Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Prism Antler Warden: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is branching prism antlers, digitigrade legs, broad shield forearm, and narrow deer mask."
+        },
+        {
+          "introduction" : "Prism Antler Warden appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving crystal stag sentinel.",
+          "name" : "Prism Antler Warden Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Prism Antler Warden: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is branching prism antlers, digitigrade legs, broad shield forearm, and narrow deer mask."
+        },
+        {
+          "introduction" : "Prism Antler Warden appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving crystal stag sentinel.",
+          "name" : "Prism Antler Warden Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Prism Antler Warden: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is branching prism antlers, digitigrade legs, broad shield forearm, and narrow deer mask."
+        }
+      ],
+      "id" : "prism-antler-warden",
+      "lineageIntroduction" : "Prism Antler Warden is an original nonhuman humanoid lineage built around crystal stag sentinel, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "measured-digitigrade-steps",
+      "materialAnchor" : "Prism Antler Warden: faceted crystal and pale armor",
+      "motionAnchor" : "Prism Antler Warden moves through measured digitigrade steps while keeping branching prism antlers, digitigrade legs, broad shield forearm, and narrow deer mask.",
+      "motionProfile" : "poised",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.3607843137254902,
+        "red" : 0.8509803921568627
+      },
+      "silhouetteAnchor" : "branching prism antlers, digitigrade legs, broad shield forearm, and narrow deer mask",
+      "silhouetteClass" : "prism-antler-warden-topology",
+      "subtitle" : "exquisite · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "exquisite",
+        "poised"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9098039215686274,
+        "green" : 0.8941176470588236,
+        "red" : 0.3215686274509804
+      },
+      "artStyle" : "elegant; long disciplined curves, refined ornament, poised motion",
+      "displayName" : "Tide-Song Magus",
+      "energyAnchor" : "Tide-Song Magus: cyan resonance rings",
+      "existenceAnchor" : "nautilus-headed tide mage",
+      "forms" : [
+        {
+          "introduction" : "Tide-Song Magus appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving nautilus-headed tide mage.",
+          "name" : "Tide-Song Magus Core",
+          "stage" : "egg",
+          "visualAnchor" : "Tide-Song Magus: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is spiral shell head, two finned arms, trailing mantle, and tuning-fork staff."
+        },
+        {
+          "introduction" : "Tide-Song Magus appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving nautilus-headed tide mage.",
+          "name" : "Tide-Song Magus First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Tide-Song Magus: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is spiral shell head, two finned arms, trailing mantle, and tuning-fork staff."
+        },
+        {
+          "introduction" : "Tide-Song Magus appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving nautilus-headed tide mage.",
+          "name" : "Tide-Song Magus Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Tide-Song Magus: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is spiral shell head, two finned arms, trailing mantle, and tuning-fork staff."
+        },
+        {
+          "introduction" : "Tide-Song Magus appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving nautilus-headed tide mage.",
+          "name" : "Tide-Song Magus Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Tide-Song Magus: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is spiral shell head, two finned arms, trailing mantle, and tuning-fork staff."
+        },
+        {
+          "introduction" : "Tide-Song Magus appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving nautilus-headed tide mage.",
+          "name" : "Tide-Song Magus Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Tide-Song Magus: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is spiral shell head, two finned arms, trailing mantle, and tuning-fork staff."
+        }
+      ],
+      "id" : "tide-song-magus",
+      "lineageIntroduction" : "Tide-Song Magus is an original nonhuman humanoid lineage built around nautilus-headed tide mage, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "spiral-swims-and-hovering",
+      "materialAnchor" : "Tide-Song Magus: mother-of-pearl shell and wet bronze",
+      "motionAnchor" : "Tide-Song Magus moves through spiral swims and hovering while keeping spiral shell head, two finned arms, trailing mantle, and tuning-fork staff.",
+      "motionProfile" : "flowing",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.6392156862745098,
+        "red" : 0.7803921568627451
+      },
+      "silhouetteAnchor" : "spiral shell head, two finned arms, trailing mantle, and tuning-fork staff",
+      "silhouetteClass" : "tide-song-magus-topology",
+      "subtitle" : "elegant · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "elegant",
+        "flowing"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9058823529411765,
+        "red" : 0.9294117647058824
+      },
+      "artStyle" : "mysterious; occult visual logic, restrained glow, uncanny but appealing identity",
+      "displayName" : "Inkshadow Dancer",
+      "energyAnchor" : "Inkshadow Dancer: violet brushfire",
+      "existenceAnchor" : "living-ink masked dancer",
+      "forms" : [
+        {
+          "introduction" : "Inkshadow Dancer appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving living-ink masked dancer.",
+          "name" : "Inkshadow Dancer Core",
+          "stage" : "egg",
+          "visualAnchor" : "Inkshadow Dancer: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is white brush mask, ribbon limbs, split calligraphy cloak, and fan-shaped hands."
+        },
+        {
+          "introduction" : "Inkshadow Dancer appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving living-ink masked dancer.",
+          "name" : "Inkshadow Dancer First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Inkshadow Dancer: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is white brush mask, ribbon limbs, split calligraphy cloak, and fan-shaped hands."
+        },
+        {
+          "introduction" : "Inkshadow Dancer appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving living-ink masked dancer.",
+          "name" : "Inkshadow Dancer Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Inkshadow Dancer: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is white brush mask, ribbon limbs, split calligraphy cloak, and fan-shaped hands."
+        },
+        {
+          "introduction" : "Inkshadow Dancer appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving living-ink masked dancer.",
+          "name" : "Inkshadow Dancer Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Inkshadow Dancer: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is white brush mask, ribbon limbs, split calligraphy cloak, and fan-shaped hands."
+        },
+        {
+          "introduction" : "Inkshadow Dancer appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving living-ink masked dancer.",
+          "name" : "Inkshadow Dancer Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Inkshadow Dancer: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is white brush mask, ribbon limbs, split calligraphy cloak, and fan-shaped hands."
+        }
+      ],
+      "id" : "inkshadow-dancer",
+      "lineageIntroduction" : "Inkshadow Dancer is an original nonhuman humanoid lineage built around living-ink masked dancer, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "ribbon-spins",
+      "materialAnchor" : "Inkshadow Dancer: liquid black ink and rice-paper highlights",
+      "motionAnchor" : "Inkshadow Dancer moves through ribbon spins while keeping white brush mask, ribbon limbs, split calligraphy cloak, and fan-shaped hands.",
+      "motionProfile" : "agile",
+      "secondaryAccent" : {
+        "blue" : 0.9294117647058824,
+        "green" : 0.22745098039215686,
+        "red" : 0.48627450980392156
+      },
+      "silhouetteAnchor" : "white brush mask, ribbon limbs, split calligraphy cloak, and fan-shaped hands",
+      "silhouetteClass" : "inkshadow-dancer-topology",
+      "subtitle" : "mysterious · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "mysterious",
+        "agile"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.788235294117647,
+        "green" : 0.9450980392156862,
+        "red" : 1
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Ivory Bell Paladin",
+      "energyAnchor" : "Ivory Bell Paladin: warm harmonic halos",
+      "existenceAnchor" : "porcelain bell golem knight",
+      "forms" : [
+        {
+          "introduction" : "Ivory Bell Paladin appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving porcelain bell golem knight.",
+          "name" : "Ivory Bell Paladin Core",
+          "stage" : "egg",
+          "visualAnchor" : "Ivory Bell Paladin: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is bell-shaped torso, arched shoulder handles, stout legs, and hammer clapper."
+        },
+        {
+          "introduction" : "Ivory Bell Paladin appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving porcelain bell golem knight.",
+          "name" : "Ivory Bell Paladin First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Ivory Bell Paladin: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is bell-shaped torso, arched shoulder handles, stout legs, and hammer clapper."
+        },
+        {
+          "introduction" : "Ivory Bell Paladin appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving porcelain bell golem knight.",
+          "name" : "Ivory Bell Paladin Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Ivory Bell Paladin: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is bell-shaped torso, arched shoulder handles, stout legs, and hammer clapper."
+        },
+        {
+          "introduction" : "Ivory Bell Paladin appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving porcelain bell golem knight.",
+          "name" : "Ivory Bell Paladin Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Ivory Bell Paladin: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is bell-shaped torso, arched shoulder handles, stout legs, and hammer clapper."
+        },
+        {
+          "introduction" : "Ivory Bell Paladin appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving porcelain bell golem knight.",
+          "name" : "Ivory Bell Paladin Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Ivory Bell Paladin: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is bell-shaped torso, arched shoulder handles, stout legs, and hammer clapper."
+        }
+      ],
+      "id" : "ivory-bell-paladin",
+      "lineageIntroduction" : "Ivory Bell Paladin is an original nonhuman humanoid lineage built around porcelain bell golem knight, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "measured-bell-steps",
+      "materialAnchor" : "Ivory Bell Paladin: crackled ivory porcelain and antique gold",
+      "motionAnchor" : "Ivory Bell Paladin moves through measured bell steps while keeping bell-shaped torso, arched shoulder handles, stout legs, and hammer clapper.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 0.23137254901960785,
+        "green" : 0.6509803921568628,
+        "red" : 0.8980392156862745
+      },
+      "silhouetteAnchor" : "bell-shaped torso, arched shoulder handles, stout legs, and hammer clapper",
+      "silhouetteClass" : "ivory-bell-paladin-topology",
+      "subtitle" : "sacred · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "sacred",
+        "heavy"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.3058823529411765,
+        "green" : 0.8274509803921568,
+        "red" : 1
+      },
+      "artStyle" : "regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials",
+      "displayName" : "Scarab Sun Priest",
+      "energyAnchor" : "Scarab Sun Priest: sun-disc glyphs",
+      "existenceAnchor" : "beetle-faced solar priest",
+      "forms" : [
+        {
+          "introduction" : "Scarab Sun Priest appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving beetle-faced solar priest.",
+          "name" : "Scarab Sun Priest Core",
+          "stage" : "egg",
+          "visualAnchor" : "Scarab Sun Priest: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is scarab mask, four folded wing panels, staff arms, and radiant abdomen."
+        },
+        {
+          "introduction" : "Scarab Sun Priest appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving beetle-faced solar priest.",
+          "name" : "Scarab Sun Priest First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Scarab Sun Priest: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is scarab mask, four folded wing panels, staff arms, and radiant abdomen."
+        },
+        {
+          "introduction" : "Scarab Sun Priest appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving beetle-faced solar priest.",
+          "name" : "Scarab Sun Priest Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Scarab Sun Priest: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is scarab mask, four folded wing panels, staff arms, and radiant abdomen."
+        },
+        {
+          "introduction" : "Scarab Sun Priest appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving beetle-faced solar priest.",
+          "name" : "Scarab Sun Priest Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Scarab Sun Priest: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is scarab mask, four folded wing panels, staff arms, and radiant abdomen."
+        },
+        {
+          "introduction" : "Scarab Sun Priest appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving beetle-faced solar priest.",
+          "name" : "Scarab Sun Priest Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Scarab Sun Priest: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is scarab mask, four folded wing panels, staff arms, and radiant abdomen."
+        }
+      ],
+      "id" : "scarab-sun-priest",
+      "lineageIntroduction" : "Scarab Sun Priest is an original nonhuman humanoid lineage built around beetle-faced solar priest, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "ceremonial-marches",
+      "materialAnchor" : "Scarab Sun Priest: lapis carapace and chased gold",
+      "motionAnchor" : "Scarab Sun Priest moves through ceremonial marches while keeping scarab mask, four folded wing panels, staff arms, and radiant abdomen.",
+      "motionProfile" : "poised",
+      "secondaryAccent" : {
+        "blue" : 0.807843137254902,
+        "green" : 0.3568627450980392,
+        "red" : 0.14901960784313725
+      },
+      "silhouetteAnchor" : "scarab mask, four folded wing panels, staff arms, and radiant abdomen",
+      "silhouetteClass" : "scarab-sun-priest-topology",
+      "subtitle" : "regal · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "regal",
+        "poised"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9058823529411765,
+        "red" : 0.4745098039215686
+      },
+      "artStyle" : "heroic; clear champion silhouette, athletic motion, confident focal pose",
+      "displayName" : "Storm-Mask Runner",
+      "energyAnchor" : "Storm-Mask Runner: electric-blue slipstream",
+      "existenceAnchor" : "faceless cloud courier",
+      "forms" : [
+        {
+          "introduction" : "Storm-Mask Runner appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving faceless cloud courier.",
+          "name" : "Storm-Mask Runner Core",
+          "stage" : "egg",
+          "visualAnchor" : "Storm-Mask Runner: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is lightning mask, runner legs, wind-sock scarf, and two turbine calves."
+        },
+        {
+          "introduction" : "Storm-Mask Runner appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving faceless cloud courier.",
+          "name" : "Storm-Mask Runner First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Storm-Mask Runner: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is lightning mask, runner legs, wind-sock scarf, and two turbine calves."
+        },
+        {
+          "introduction" : "Storm-Mask Runner appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving faceless cloud courier.",
+          "name" : "Storm-Mask Runner Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Storm-Mask Runner: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is lightning mask, runner legs, wind-sock scarf, and two turbine calves."
+        },
+        {
+          "introduction" : "Storm-Mask Runner appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving faceless cloud courier.",
+          "name" : "Storm-Mask Runner Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Storm-Mask Runner: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is lightning mask, runner legs, wind-sock scarf, and two turbine calves."
+        },
+        {
+          "introduction" : "Storm-Mask Runner appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving faceless cloud courier.",
+          "name" : "Storm-Mask Runner Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Storm-Mask Runner: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is lightning mask, runner legs, wind-sock scarf, and two turbine calves."
+        }
+      ],
+      "id" : "storm-mask-runner",
+      "lineageIntroduction" : "Storm-Mask Runner is an original nonhuman humanoid lineage built around faceless cloud courier, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "thunder-sprints",
+      "materialAnchor" : "Storm-Mask Runner: stormglass and flexible white armor",
+      "motionAnchor" : "Storm-Mask Runner moves through thunder sprints while keeping lightning mask, runner legs, wind-sock scarf, and two turbine calves.",
+      "motionProfile" : "agile",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.403921568627451,
+        "red" : 0.3254901960784314
+      },
+      "silhouetteAnchor" : "lightning mask, runner legs, wind-sock scarf, and two turbine calves",
+      "silhouetteClass" : "storm-mask-runner-topology",
+      "subtitle" : "heroic · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "heroic",
+        "agile"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.8352941176470589,
+        "green" : 0.9686274509803922,
+        "red" : 0.4470588235294118
+      },
+      "artStyle" : "elegant; long disciplined curves, refined ornament, poised motion",
+      "displayName" : "Aurora Fox Envoy",
+      "energyAnchor" : "Aurora Fox Envoy: polar-light ribbons",
+      "existenceAnchor" : "bipedal fox spirit envoy",
+      "forms" : [
+        {
+          "introduction" : "Aurora Fox Envoy appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving bipedal fox spirit envoy.",
+          "name" : "Aurora Fox Envoy Core",
+          "stage" : "egg",
+          "visualAnchor" : "Aurora Fox Envoy: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is long fox mask, two upright ears, fan tail, and aurora sleeve fins."
+        },
+        {
+          "introduction" : "Aurora Fox Envoy appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving bipedal fox spirit envoy.",
+          "name" : "Aurora Fox Envoy First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Aurora Fox Envoy: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is long fox mask, two upright ears, fan tail, and aurora sleeve fins."
+        },
+        {
+          "introduction" : "Aurora Fox Envoy appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving bipedal fox spirit envoy.",
+          "name" : "Aurora Fox Envoy Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Aurora Fox Envoy: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is long fox mask, two upright ears, fan tail, and aurora sleeve fins."
+        },
+        {
+          "introduction" : "Aurora Fox Envoy appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving bipedal fox spirit envoy.",
+          "name" : "Aurora Fox Envoy Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Aurora Fox Envoy: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is long fox mask, two upright ears, fan tail, and aurora sleeve fins."
+        },
+        {
+          "introduction" : "Aurora Fox Envoy appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving bipedal fox spirit envoy.",
+          "name" : "Aurora Fox Envoy Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Aurora Fox Envoy: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is long fox mask, two upright ears, fan tail, and aurora sleeve fins."
+        }
+      ],
+      "id" : "aurora-fox-envoy",
+      "lineageIntroduction" : "Aurora Fox Envoy is an original nonhuman humanoid lineage built around bipedal fox spirit envoy, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "light-footed-leaps",
+      "materialAnchor" : "Aurora Fox Envoy: opal fur plates and translucent silk",
+      "motionAnchor" : "Aurora Fox Envoy moves through light footed leaps while keeping long fox mask, two upright ears, fan tail, and aurora sleeve fins.",
+      "motionProfile" : "buoyant",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.3607843137254902,
+        "red" : 0.6941176470588235
+      },
+      "silhouetteAnchor" : "long fox mask, two upright ears, fan tail, and aurora sleeve fins",
+      "silhouetteClass" : "aurora-fox-envoy-topology",
+      "subtitle" : "elegant · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "elegant",
+        "buoyant"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.19607843137254902,
+        "green" : 0.47843137254901963,
+        "red" : 1
+      },
+      "artStyle" : "fierce; arena-ready anatomy, forceful stance, sharp readable massing",
+      "displayName" : "Obsidian Lion Champion",
+      "energyAnchor" : "Obsidian Lion Champion: solar flame arcs",
+      "existenceAnchor" : "volcanic lion arena champion",
+      "forms" : [
+        {
+          "introduction" : "Obsidian Lion Champion appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving volcanic lion arena champion.",
+          "name" : "Obsidian Lion Champion Core",
+          "stage" : "egg",
+          "visualAnchor" : "Obsidian Lion Champion: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is lion mask, massive gauntlets, digitigrade feet, and circular ember mane."
+        },
+        {
+          "introduction" : "Obsidian Lion Champion appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving volcanic lion arena champion.",
+          "name" : "Obsidian Lion Champion First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Obsidian Lion Champion: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is lion mask, massive gauntlets, digitigrade feet, and circular ember mane."
+        },
+        {
+          "introduction" : "Obsidian Lion Champion appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving volcanic lion arena champion.",
+          "name" : "Obsidian Lion Champion Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Obsidian Lion Champion: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is lion mask, massive gauntlets, digitigrade feet, and circular ember mane."
+        },
+        {
+          "introduction" : "Obsidian Lion Champion appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving volcanic lion arena champion.",
+          "name" : "Obsidian Lion Champion Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Obsidian Lion Champion: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is lion mask, massive gauntlets, digitigrade feet, and circular ember mane."
+        },
+        {
+          "introduction" : "Obsidian Lion Champion appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving volcanic lion arena champion.",
+          "name" : "Obsidian Lion Champion Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Obsidian Lion Champion: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is lion mask, massive gauntlets, digitigrade feet, and circular ember mane."
+        }
+      ],
+      "id" : "obsidian-lion-champion",
+      "lineageIntroduction" : "Obsidian Lion Champion is an original nonhuman humanoid lineage built around volcanic lion arena champion, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "arena-charges",
+      "materialAnchor" : "Obsidian Lion Champion: obsidian armor and molten brass",
+      "motionAnchor" : "Obsidian Lion Champion moves through arena charges while keeping lion mask, massive gauntlets, digitigrade feet, and circular ember mane.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 0.1607843137254902,
+        "green" : 0.10588235294117647,
+        "red" : 0.10588235294117647
+      },
+      "silhouetteAnchor" : "lion mask, massive gauntlets, digitigrade feet, and circular ember mane",
+      "silhouetteClass" : "obsidian-lion-champion-topology",
+      "subtitle" : "fierce · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "fierce",
+        "heavy"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.7843137254901961,
+        "green" : 0.36470588235294116,
+        "red" : 1
+      },
+      "artStyle" : "playful; toyetic motion, surprising asymmetry, bright confident character",
+      "displayName" : "Clockwork Harlequin",
+      "energyAnchor" : "Clockwork Harlequin: tick-tock neon sparks",
+      "existenceAnchor" : "mechanical jester construct",
+      "forms" : [
+        {
+          "introduction" : "Clockwork Harlequin appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving mechanical jester construct.",
+          "name" : "Clockwork Harlequin Core",
+          "stage" : "egg",
+          "visualAnchor" : "Clockwork Harlequin: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is split crescent mask, spring limbs, diamond torso, and twin ribbon blades."
+        },
+        {
+          "introduction" : "Clockwork Harlequin appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving mechanical jester construct.",
+          "name" : "Clockwork Harlequin First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Clockwork Harlequin: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is split crescent mask, spring limbs, diamond torso, and twin ribbon blades."
+        },
+        {
+          "introduction" : "Clockwork Harlequin appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving mechanical jester construct.",
+          "name" : "Clockwork Harlequin Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Clockwork Harlequin: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is split crescent mask, spring limbs, diamond torso, and twin ribbon blades."
+        },
+        {
+          "introduction" : "Clockwork Harlequin appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving mechanical jester construct.",
+          "name" : "Clockwork Harlequin Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Clockwork Harlequin: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is split crescent mask, spring limbs, diamond torso, and twin ribbon blades."
+        },
+        {
+          "introduction" : "Clockwork Harlequin appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving mechanical jester construct.",
+          "name" : "Clockwork Harlequin Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Clockwork Harlequin: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is split crescent mask, spring limbs, diamond torso, and twin ribbon blades."
+        }
+      ],
+      "id" : "clockwork-harlequin",
+      "lineageIntroduction" : "Clockwork Harlequin is an original nonhuman humanoid lineage built around mechanical jester construct, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "springing-cartwheels",
+      "materialAnchor" : "Clockwork Harlequin: enameled clockwork and polished brass",
+      "motionAnchor" : "Clockwork Harlequin moves through springing cartwheels while keeping split crescent mask, spring limbs, diamond torso, and twin ribbon blades.",
+      "motionProfile" : "bouncing",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.8980392156862745,
+        "red" : 0.33725490196078434
+      },
+      "silhouetteAnchor" : "split crescent mask, spring limbs, diamond torso, and twin ribbon blades",
+      "silhouetteClass" : "clockwork-harlequin-topology",
+      "subtitle" : "playful · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "playful",
+        "bouncing"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.403921568627451,
+        "red" : 0.49019607843137253
+      },
+      "artStyle" : "mysterious; occult visual logic, restrained glow, uncanny but appealing identity",
+      "displayName" : "Void Moth Seer",
+      "energyAnchor" : "Void Moth Seer: indigo omen dust",
+      "existenceAnchor" : "moth-headed cosmic seer",
+      "forms" : [
+        {
+          "introduction" : "Void Moth Seer appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving moth-headed cosmic seer.",
+          "name" : "Void Moth Seer Core",
+          "stage" : "egg",
+          "visualAnchor" : "Void Moth Seer: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is wide antennae, four patterned wings, slim robed body, and eye-shaped lantern."
+        },
+        {
+          "introduction" : "Void Moth Seer appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving moth-headed cosmic seer.",
+          "name" : "Void Moth Seer First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Void Moth Seer: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is wide antennae, four patterned wings, slim robed body, and eye-shaped lantern."
+        },
+        {
+          "introduction" : "Void Moth Seer appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving moth-headed cosmic seer.",
+          "name" : "Void Moth Seer Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Void Moth Seer: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is wide antennae, four patterned wings, slim robed body, and eye-shaped lantern."
+        },
+        {
+          "introduction" : "Void Moth Seer appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving moth-headed cosmic seer.",
+          "name" : "Void Moth Seer Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Void Moth Seer: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is wide antennae, four patterned wings, slim robed body, and eye-shaped lantern."
+        },
+        {
+          "introduction" : "Void Moth Seer appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving moth-headed cosmic seer.",
+          "name" : "Void Moth Seer Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Void Moth Seer: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is wide antennae, four patterned wings, slim robed body, and eye-shaped lantern."
+        }
+      ],
+      "id" : "void-moth-seer",
+      "lineageIntroduction" : "Void Moth Seer is an original nonhuman humanoid lineage built around moth-headed cosmic seer, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "silent-fluttering",
+      "materialAnchor" : "Void Moth Seer: velvet chitin and starlit membrane",
+      "motionAnchor" : "Void Moth Seer moves through silent fluttering while keeping wide antennae, four patterned wings, slim robed body, and eye-shaped lantern.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.7215686274509804,
+        "red" : 0.9098039215686274
+      },
+      "silhouetteAnchor" : "wide antennae, four patterned wings, slim robed body, and eye-shaped lantern",
+      "silhouetteClass" : "void-moth-seer-topology",
+      "subtitle" : "mysterious · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "mysterious",
+        "winged"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9254901960784314,
+        "red" : 0.9607843137254902
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Lotus Crown Sage",
+      "energyAnchor" : "Lotus Crown Sage: lavender serenity rings",
+      "existenceAnchor" : "porcelain lotus spirit",
+      "forms" : [
+        {
+          "introduction" : "Lotus Crown Sage appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving porcelain lotus spirit.",
+          "name" : "Lotus Crown Sage Core",
+          "stage" : "egg",
+          "visualAnchor" : "Lotus Crown Sage: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is petal crown, smooth mask face, floating prayer hands, and seated bud skirt."
+        },
+        {
+          "introduction" : "Lotus Crown Sage appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving porcelain lotus spirit.",
+          "name" : "Lotus Crown Sage First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Lotus Crown Sage: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is petal crown, smooth mask face, floating prayer hands, and seated bud skirt."
+        },
+        {
+          "introduction" : "Lotus Crown Sage appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving porcelain lotus spirit.",
+          "name" : "Lotus Crown Sage Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Lotus Crown Sage: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is petal crown, smooth mask face, floating prayer hands, and seated bud skirt."
+        },
+        {
+          "introduction" : "Lotus Crown Sage appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving porcelain lotus spirit.",
+          "name" : "Lotus Crown Sage Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Lotus Crown Sage: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is petal crown, smooth mask face, floating prayer hands, and seated bud skirt."
+        },
+        {
+          "introduction" : "Lotus Crown Sage appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving porcelain lotus spirit.",
+          "name" : "Lotus Crown Sage Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Lotus Crown Sage: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is petal crown, smooth mask face, floating prayer hands, and seated bud skirt."
+        }
+      ],
+      "id" : "lotus-crown-sage",
+      "lineageIntroduction" : "Lotus Crown Sage is an original nonhuman humanoid lineage built around porcelain lotus spirit, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "meditative-hovering",
+      "materialAnchor" : "Lotus Crown Sage: white porcelain and amethyst crystal",
+      "motionAnchor" : "Lotus Crown Sage moves through meditative hovering while keeping petal crown, smooth mask face, floating prayer hands, and seated bud skirt.",
+      "motionProfile" : "buoyant",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.45098039215686275,
+        "red" : 0.615686274509804
+      },
+      "silhouetteAnchor" : "petal crown, smooth mask face, floating prayer hands, and seated bud skirt",
+      "silhouetteClass" : "lotus-crown-sage-topology",
+      "subtitle" : "sacred · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "sacred",
+        "buoyant"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.788235294117647,
+        "green" : 0.8627450980392157,
+        "red" : 0.2196078431372549
+      },
+      "artStyle" : "ancient; ancient relic craftsmanship, weathered detail, solemn silhouette",
+      "displayName" : "Rune Coral Warden",
+      "energyAnchor" : "Rune Coral Warden: aquamarine ward currents",
+      "existenceAnchor" : "coral-armored reef guardian",
+      "forms" : [
+        {
+          "introduction" : "Rune Coral Warden appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving coral-armored reef guardian.",
+          "name" : "Rune Coral Warden Core",
+          "stage" : "egg",
+          "visualAnchor" : "Rune Coral Warden: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is branching coral helm, pincer gauntlet, finned calves, and rune shield."
+        },
+        {
+          "introduction" : "Rune Coral Warden appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving coral-armored reef guardian.",
+          "name" : "Rune Coral Warden First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Rune Coral Warden: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is branching coral helm, pincer gauntlet, finned calves, and rune shield."
+        },
+        {
+          "introduction" : "Rune Coral Warden appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving coral-armored reef guardian.",
+          "name" : "Rune Coral Warden Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Rune Coral Warden: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is branching coral helm, pincer gauntlet, finned calves, and rune shield."
+        },
+        {
+          "introduction" : "Rune Coral Warden appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving coral-armored reef guardian.",
+          "name" : "Rune Coral Warden Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Rune Coral Warden: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is branching coral helm, pincer gauntlet, finned calves, and rune shield."
+        },
+        {
+          "introduction" : "Rune Coral Warden appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving coral-armored reef guardian.",
+          "name" : "Rune Coral Warden Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Rune Coral Warden: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is branching coral helm, pincer gauntlet, finned calves, and rune shield."
+        }
+      ],
+      "id" : "rune-coral-warden",
+      "lineageIntroduction" : "Rune Coral Warden is an original nonhuman humanoid lineage built around coral-armored reef guardian, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "tidal-strides",
+      "materialAnchor" : "Rune Coral Warden: blue coral stone and pearl shell",
+      "motionAnchor" : "Rune Coral Warden moves through tidal strides while keeping branching coral helm, pincer gauntlet, finned calves, and rune shield.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 0.8666666666666667,
+        "green" : 0.43137254901960786,
+        "red" : 0.22745098039215686
+      },
+      "silhouetteAnchor" : "branching coral helm, pincer gauntlet, finned calves, and rune shield",
+      "silhouetteClass" : "rune-coral-warden-topology",
+      "subtitle" : "ancient · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "ancient",
+        "heavy"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.7098039215686275,
+        "red" : 0.9137254901960784
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Dreamglass Fencer",
+      "energyAnchor" : "Dreamglass Fencer: rose-violet afterimages",
+      "existenceAnchor" : "faceless glass duelist",
+      "forms" : [
+        {
+          "introduction" : "Dreamglass Fencer appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving faceless glass duelist.",
+          "name" : "Dreamglass Fencer Core",
+          "stage" : "egg",
+          "visualAnchor" : "Dreamglass Fencer: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is teardrop mask, needle rapier arm, long coat shards, and crescent heels."
+        },
+        {
+          "introduction" : "Dreamglass Fencer appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving faceless glass duelist.",
+          "name" : "Dreamglass Fencer First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Dreamglass Fencer: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is teardrop mask, needle rapier arm, long coat shards, and crescent heels."
+        },
+        {
+          "introduction" : "Dreamglass Fencer appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving faceless glass duelist.",
+          "name" : "Dreamglass Fencer Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Dreamglass Fencer: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is teardrop mask, needle rapier arm, long coat shards, and crescent heels."
+        },
+        {
+          "introduction" : "Dreamglass Fencer appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving faceless glass duelist.",
+          "name" : "Dreamglass Fencer Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Dreamglass Fencer: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is teardrop mask, needle rapier arm, long coat shards, and crescent heels."
+        },
+        {
+          "introduction" : "Dreamglass Fencer appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving faceless glass duelist.",
+          "name" : "Dreamglass Fencer Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Dreamglass Fencer: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is teardrop mask, needle rapier arm, long coat shards, and crescent heels."
+        }
+      ],
+      "id" : "dreamglass-fencer",
+      "lineageIntroduction" : "Dreamglass Fencer is an original nonhuman humanoid lineage built around faceless glass duelist, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "weightless-lunges",
+      "materialAnchor" : "Dreamglass Fencer: smoked dreamglass and silver wire",
+      "motionAnchor" : "Dreamglass Fencer moves through weightless lunges while keeping teardrop mask, needle rapier arm, long coat shards, and crescent heels.",
+      "motionProfile" : "agile",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.4470588235294118,
+        "red" : 0.43137254901960786
+      },
+      "silhouetteAnchor" : "teardrop mask, needle rapier arm, long coat shards, and crescent heels",
+      "silhouetteClass" : "dreamglass-fencer-topology",
+      "subtitle" : "exquisite · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "exquisite",
+        "agile"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.7490196078431373,
+        "red" : 0.4117647058823529
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Thunder Komainu Guard",
+      "energyAnchor" : "Thunder Komainu Guard: white lightning knots",
+      "existenceAnchor" : "lion-dog temple guardian",
+      "forms" : [
+        {
+          "introduction" : "Thunder Komainu Guard appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving lion-dog temple guardian.",
+          "name" : "Thunder Komainu Guard Core",
+          "stage" : "egg",
+          "visualAnchor" : "Thunder Komainu Guard: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is komainu muzzle, cloud mane, armored bipedal stance, and thunder drum shield."
+        },
+        {
+          "introduction" : "Thunder Komainu Guard appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving lion-dog temple guardian.",
+          "name" : "Thunder Komainu Guard First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Thunder Komainu Guard: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is komainu muzzle, cloud mane, armored bipedal stance, and thunder drum shield."
+        },
+        {
+          "introduction" : "Thunder Komainu Guard appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving lion-dog temple guardian.",
+          "name" : "Thunder Komainu Guard Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Thunder Komainu Guard: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is komainu muzzle, cloud mane, armored bipedal stance, and thunder drum shield."
+        },
+        {
+          "introduction" : "Thunder Komainu Guard appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving lion-dog temple guardian.",
+          "name" : "Thunder Komainu Guard Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Thunder Komainu Guard: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is komainu muzzle, cloud mane, armored bipedal stance, and thunder drum shield."
+        },
+        {
+          "introduction" : "Thunder Komainu Guard appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving lion-dog temple guardian.",
+          "name" : "Thunder Komainu Guard Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Thunder Komainu Guard: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is komainu muzzle, cloud mane, armored bipedal stance, and thunder drum shield."
+        }
+      ],
+      "id" : "thunder-komainu-guard",
+      "lineageIntroduction" : "Thunder Komainu Guard is an original nonhuman humanoid lineage built around lion-dog temple guardian, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "guardian-stomps",
+      "materialAnchor" : "Thunder Komainu Guard: blue stone hide and gold armor",
+      "motionAnchor" : "Thunder Komainu Guard moves through guardian stomps while keeping komainu muzzle, cloud mane, armored bipedal stance, and thunder drum shield.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 0.40784313725490196,
+        "green" : 0.8431372549019608,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "komainu muzzle, cloud mane, armored bipedal stance, and thunder drum shield",
+      "silhouetteClass" : "thunder-komainu-guard-topology",
+      "subtitle" : "sacred · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "sacred",
+        "heavy"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.4392156862745098,
+        "green" : 0.8392156862745098,
+        "red" : 0.9725490196078431
+      },
+      "artStyle" : "serene; balanced silhouette, gentle expression, quiet luminous movement",
+      "displayName" : "Silk Comet Monk",
+      "energyAnchor" : "Silk Comet Monk: golden comet script",
+      "existenceAnchor" : "faceless comet-silk monk",
+      "forms" : [
+        {
+          "introduction" : "Silk Comet Monk appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving faceless comet-silk monk.",
+          "name" : "Silk Comet Monk Core",
+          "stage" : "egg",
+          "visualAnchor" : "Silk Comet Monk: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is smooth comet mask, elongated sleeves, orbit sash, and three floating palms."
+        },
+        {
+          "introduction" : "Silk Comet Monk appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving faceless comet-silk monk.",
+          "name" : "Silk Comet Monk First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Silk Comet Monk: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is smooth comet mask, elongated sleeves, orbit sash, and three floating palms."
+        },
+        {
+          "introduction" : "Silk Comet Monk appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving faceless comet-silk monk.",
+          "name" : "Silk Comet Monk Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Silk Comet Monk: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is smooth comet mask, elongated sleeves, orbit sash, and three floating palms."
+        },
+        {
+          "introduction" : "Silk Comet Monk appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving faceless comet-silk monk.",
+          "name" : "Silk Comet Monk Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Silk Comet Monk: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is smooth comet mask, elongated sleeves, orbit sash, and three floating palms."
+        },
+        {
+          "introduction" : "Silk Comet Monk appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving faceless comet-silk monk.",
+          "name" : "Silk Comet Monk Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Silk Comet Monk: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is smooth comet mask, elongated sleeves, orbit sash, and three floating palms."
+        }
+      ],
+      "id" : "silk-comet-monk",
+      "lineageIntroduction" : "Silk Comet Monk is an original nonhuman humanoid lineage built around faceless comet-silk monk, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "circular-martial-glides",
+      "materialAnchor" : "Silk Comet Monk: luminous silk and meteor iron",
+      "motionAnchor" : "Silk Comet Monk moves through circular martial glides while keeping smooth comet mask, elongated sleeves, orbit sash, and three floating palms.",
+      "motionProfile" : "flowing",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.4823529411764706,
+        "red" : 0.4235294117647059
+      },
+      "silhouetteAnchor" : "smooth comet mask, elongated sleeves, orbit sash, and three floating palms",
+      "silhouetteClass" : "silk-comet-monk-topology",
+      "subtitle" : "serene · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "serene",
+        "flowing"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.4588235294117647,
+        "green" : 0.30980392156862746,
+        "red" : 1
+      },
+      "artStyle" : "dark; mysterious high-contrast silhouette, controlled void colors, elegant menace",
+      "displayName" : "Eclipse Puppeteer",
+      "energyAnchor" : "Eclipse Puppeteer: red eclipse strings",
+      "existenceAnchor" : "marionette eclipse spirit",
+      "forms" : [
+        {
+          "introduction" : "Eclipse Puppeteer appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving marionette eclipse spirit.",
+          "name" : "Eclipse Puppeteer Core",
+          "stage" : "egg",
+          "visualAnchor" : "Eclipse Puppeteer: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is crescent faceplate, jointed limbs, suspended control halo, and four thread fingers."
+        },
+        {
+          "introduction" : "Eclipse Puppeteer appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving marionette eclipse spirit.",
+          "name" : "Eclipse Puppeteer First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Eclipse Puppeteer: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is crescent faceplate, jointed limbs, suspended control halo, and four thread fingers."
+        },
+        {
+          "introduction" : "Eclipse Puppeteer appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving marionette eclipse spirit.",
+          "name" : "Eclipse Puppeteer Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Eclipse Puppeteer: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is crescent faceplate, jointed limbs, suspended control halo, and four thread fingers."
+        },
+        {
+          "introduction" : "Eclipse Puppeteer appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving marionette eclipse spirit.",
+          "name" : "Eclipse Puppeteer Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Eclipse Puppeteer: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is crescent faceplate, jointed limbs, suspended control halo, and four thread fingers."
+        },
+        {
+          "introduction" : "Eclipse Puppeteer appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving marionette eclipse spirit.",
+          "name" : "Eclipse Puppeteer Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Eclipse Puppeteer: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is crescent faceplate, jointed limbs, suspended control halo, and four thread fingers."
+        }
+      ],
+      "id" : "eclipse-puppeteer",
+      "lineageIntroduction" : "Eclipse Puppeteer is an original nonhuman humanoid lineage built around marionette eclipse spirit, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "suspended-puppet-steps",
+      "materialAnchor" : "Eclipse Puppeteer: black lacquer and moon-silver joints",
+      "motionAnchor" : "Eclipse Puppeteer moves through suspended puppet steps while keeping crescent faceplate, jointed limbs, suspended control halo, and four thread fingers.",
+      "motionProfile" : "spectral",
+      "secondaryAccent" : {
+        "blue" : 0.6588235294117647,
+        "green" : 0.27450980392156865,
+        "red" : 0.35294117647058826
+      },
+      "silhouetteAnchor" : "crescent faceplate, jointed limbs, suspended control halo, and four thread fingers",
+      "silhouetteClass" : "eclipse-puppeteer-topology",
+      "subtitle" : "dark · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "dark",
+        "spectral"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.7254901960784313,
+        "red" : 0.2980392156862745
+      },
+      "artStyle" : "heroic; clear champion silhouette, athletic motion, confident focal pose",
+      "displayName" : "Nebula Smith",
+      "energyAnchor" : "Nebula Smith: miniature nebula flames",
+      "existenceAnchor" : "starforge golem artisan",
+      "forms" : [
+        {
+          "introduction" : "Nebula Smith appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving starforge golem artisan.",
+          "name" : "Nebula Smith Core",
+          "stage" : "egg",
+          "visualAnchor" : "Nebula Smith: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is anvil torso, furnace visor, asymmetric hammer arms, and comet apron."
+        },
+        {
+          "introduction" : "Nebula Smith appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving starforge golem artisan.",
+          "name" : "Nebula Smith First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Nebula Smith: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is anvil torso, furnace visor, asymmetric hammer arms, and comet apron."
+        },
+        {
+          "introduction" : "Nebula Smith appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving starforge golem artisan.",
+          "name" : "Nebula Smith Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Nebula Smith: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is anvil torso, furnace visor, asymmetric hammer arms, and comet apron."
+        },
+        {
+          "introduction" : "Nebula Smith appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving starforge golem artisan.",
+          "name" : "Nebula Smith Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Nebula Smith: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is anvil torso, furnace visor, asymmetric hammer arms, and comet apron."
+        },
+        {
+          "introduction" : "Nebula Smith appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving starforge golem artisan.",
+          "name" : "Nebula Smith Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Nebula Smith: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is anvil torso, furnace visor, asymmetric hammer arms, and comet apron."
+        }
+      ],
+      "id" : "nebula-smith",
+      "lineageIntroduction" : "Nebula Smith is an original nonhuman humanoid lineage built around starforge golem artisan, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "forge-stomps",
+      "materialAnchor" : "Nebula Smith: dark star-metal and cobalt crystal",
+      "motionAnchor" : "Nebula Smith moves through forge stomps while keeping anvil torso, furnace visor, asymmetric hammer arms, and comet apron.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 0.2627450980392157,
+        "green" : 0.5568627450980392,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "anvil torso, furnace visor, asymmetric hammer arms, and comet apron",
+      "silhouetteClass" : "nebula-smith-topology",
+      "subtitle" : "heroic · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "heroic",
+        "heavy"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9058823529411765,
+        "red" : 0.5098039215686274
+      },
+      "artStyle" : "regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials",
+      "displayName" : "Frosthorn Sentinel",
+      "energyAnchor" : "Frosthorn Sentinel: frost-blue sigils",
+      "existenceAnchor" : "blue horned guardian beast",
+      "forms" : [
+        {
+          "introduction" : "Frosthorn Sentinel appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving blue horned guardian beast.",
+          "name" : "Frosthorn Sentinel Core",
+          "stage" : "egg",
+          "visualAnchor" : "Frosthorn Sentinel: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is single swept ice horn, masked feline face, plated shoulders, and halberd tail."
+        },
+        {
+          "introduction" : "Frosthorn Sentinel appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving blue horned guardian beast.",
+          "name" : "Frosthorn Sentinel First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Frosthorn Sentinel: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is single swept ice horn, masked feline face, plated shoulders, and halberd tail."
+        },
+        {
+          "introduction" : "Frosthorn Sentinel appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving blue horned guardian beast.",
+          "name" : "Frosthorn Sentinel Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Frosthorn Sentinel: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is single swept ice horn, masked feline face, plated shoulders, and halberd tail."
+        },
+        {
+          "introduction" : "Frosthorn Sentinel appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving blue horned guardian beast.",
+          "name" : "Frosthorn Sentinel Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Frosthorn Sentinel: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is single swept ice horn, masked feline face, plated shoulders, and halberd tail."
+        },
+        {
+          "introduction" : "Frosthorn Sentinel appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving blue horned guardian beast.",
+          "name" : "Frosthorn Sentinel Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Frosthorn Sentinel: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is single swept ice horn, masked feline face, plated shoulders, and halberd tail."
+        }
+      ],
+      "id" : "frosthorn-sentinel",
+      "lineageIntroduction" : "Frosthorn Sentinel is an original nonhuman humanoid lineage built around blue horned guardian beast, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "guarding-pivots",
+      "materialAnchor" : "Frosthorn Sentinel: glacier crystal and navy armor",
+      "motionAnchor" : "Frosthorn Sentinel moves through guarding pivots while keeping single swept ice horn, masked feline face, plated shoulders, and halberd tail.",
+      "motionProfile" : "poised",
+      "secondaryAccent" : {
+        "blue" : 0.8666666666666667,
+        "green" : 0.4,
+        "red" : 0.28627450980392155
+      },
+      "silhouetteAnchor" : "single swept ice horn, masked feline face, plated shoulders, and halberd tail",
+      "silhouetteClass" : "frosthorn-sentinel-topology",
+      "subtitle" : "regal · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "regal",
+        "poised"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.22745098039215686,
+        "green" : 0.5490196078431373,
+        "red" : 1
+      },
+      "artStyle" : "ancient; ancient relic craftsmanship, weathered detail, solemn silhouette",
+      "displayName" : "Ember-Mask Shaman",
+      "energyAnchor" : "Ember-Mask Shaman: smokeless orange spirit fire",
+      "existenceAnchor" : "charcoal idol shaman",
+      "forms" : [
+        {
+          "introduction" : "Ember-Mask Shaman appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving charcoal idol shaman.",
+          "name" : "Ember-Mask Shaman Core",
+          "stage" : "egg",
+          "visualAnchor" : "Ember-Mask Shaman: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is carved ember mask, four short arms, featherless flame mantle, and forked staff tail."
+        },
+        {
+          "introduction" : "Ember-Mask Shaman appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving charcoal idol shaman.",
+          "name" : "Ember-Mask Shaman First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Ember-Mask Shaman: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is carved ember mask, four short arms, featherless flame mantle, and forked staff tail."
+        },
+        {
+          "introduction" : "Ember-Mask Shaman appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving charcoal idol shaman.",
+          "name" : "Ember-Mask Shaman Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Ember-Mask Shaman: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is carved ember mask, four short arms, featherless flame mantle, and forked staff tail."
+        },
+        {
+          "introduction" : "Ember-Mask Shaman appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving charcoal idol shaman.",
+          "name" : "Ember-Mask Shaman Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Ember-Mask Shaman: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is carved ember mask, four short arms, featherless flame mantle, and forked staff tail."
+        },
+        {
+          "introduction" : "Ember-Mask Shaman appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving charcoal idol shaman.",
+          "name" : "Ember-Mask Shaman Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Ember-Mask Shaman: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is carved ember mask, four short arms, featherless flame mantle, and forked staff tail."
+        }
+      ],
+      "id" : "ember-mask-shaman",
+      "lineageIntroduction" : "Ember-Mask Shaman is an original nonhuman humanoid lineage built around charcoal idol shaman, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "ritual-hops",
+      "materialAnchor" : "Ember-Mask Shaman: charcoal woodstone and copper",
+      "motionAnchor" : "Ember-Mask Shaman moves through ritual hops while keeping carved ember mask, four short arms, featherless flame mantle, and forked staff tail.",
+      "motionProfile" : "spectral",
+      "secondaryAccent" : {
+        "blue" : 0.2980392156862745,
+        "green" : 0.18823529411764706,
+        "red" : 0.3803921568627451
+      },
+      "silhouetteAnchor" : "carved ember mask, four short arms, featherless flame mantle, and forked staff tail",
+      "silhouetteClass" : "ember-mask-shaman-topology",
+      "subtitle" : "ancient · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "ancient",
+        "spectral"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9215686274509803,
+        "red" : 0.8666666666666667
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Lunar Kitsune Archon",
+      "energyAnchor" : "Lunar Kitsune Archon: silver-blue foxfire",
+      "existenceAnchor" : "nine-tail moon fox archon",
+      "forms" : [
+        {
+          "introduction" : "Lunar Kitsune Archon appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving nine-tail moon fox archon.",
+          "name" : "Lunar Kitsune Archon Core",
+          "stage" : "egg",
+          "visualAnchor" : "Lunar Kitsune Archon: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is fox mask, tall digitigrade stance, nine crescent tails, and ring-blade sleeves."
+        },
+        {
+          "introduction" : "Lunar Kitsune Archon appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving nine-tail moon fox archon.",
+          "name" : "Lunar Kitsune Archon First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Lunar Kitsune Archon: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is fox mask, tall digitigrade stance, nine crescent tails, and ring-blade sleeves."
+        },
+        {
+          "introduction" : "Lunar Kitsune Archon appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving nine-tail moon fox archon.",
+          "name" : "Lunar Kitsune Archon Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Lunar Kitsune Archon: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is fox mask, tall digitigrade stance, nine crescent tails, and ring-blade sleeves."
+        },
+        {
+          "introduction" : "Lunar Kitsune Archon appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving nine-tail moon fox archon.",
+          "name" : "Lunar Kitsune Archon Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Lunar Kitsune Archon: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is fox mask, tall digitigrade stance, nine crescent tails, and ring-blade sleeves."
+        },
+        {
+          "introduction" : "Lunar Kitsune Archon appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving nine-tail moon fox archon.",
+          "name" : "Lunar Kitsune Archon Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Lunar Kitsune Archon: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is fox mask, tall digitigrade stance, nine crescent tails, and ring-blade sleeves."
+        }
+      ],
+      "id" : "lunar-kitsune-archon",
+      "lineageIntroduction" : "Lunar Kitsune Archon is an original nonhuman humanoid lineage built around nine-tail moon fox archon, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "moonlit-dance-steps",
+      "materialAnchor" : "Lunar Kitsune Archon: pearl fur armor and moon glass",
+      "motionAnchor" : "Lunar Kitsune Archon moves through moonlit dance steps while keeping fox mask, tall digitigrade stance, nine crescent tails, and ring-blade sleeves.",
+      "motionProfile" : "poised",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.5333333333333333,
+        "red" : 0.4666666666666667
+      },
+      "silhouetteAnchor" : "fox mask, tall digitigrade stance, nine crescent tails, and ring-blade sleeves",
+      "silhouetteClass" : "lunar-kitsune-archon-topology",
+      "subtitle" : "sacred · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "sacred",
+        "poised"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.7803921568627451,
+        "green" : 0.8392156862745098,
+        "red" : 0.12549019607843137
+      },
+      "artStyle" : "mysterious; occult visual logic, restrained glow, uncanny but appealing identity",
+      "displayName" : "Deepsea Lantern Knight",
+      "energyAnchor" : "Deepsea Lantern Knight: teal bioluminescence",
+      "existenceAnchor" : "anglerfish-headed abyss knight",
+      "forms" : [
+        {
+          "introduction" : "Deepsea Lantern Knight appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving anglerfish-headed abyss knight.",
+          "name" : "Deepsea Lantern Knight Core",
+          "stage" : "egg",
+          "visualAnchor" : "Deepsea Lantern Knight: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is lure lantern, armored fish skull, anchor blade, and fin cloak."
+        },
+        {
+          "introduction" : "Deepsea Lantern Knight appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving anglerfish-headed abyss knight.",
+          "name" : "Deepsea Lantern Knight First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Deepsea Lantern Knight: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is lure lantern, armored fish skull, anchor blade, and fin cloak."
+        },
+        {
+          "introduction" : "Deepsea Lantern Knight appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving anglerfish-headed abyss knight.",
+          "name" : "Deepsea Lantern Knight Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Deepsea Lantern Knight: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is lure lantern, armored fish skull, anchor blade, and fin cloak."
+        },
+        {
+          "introduction" : "Deepsea Lantern Knight appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving anglerfish-headed abyss knight.",
+          "name" : "Deepsea Lantern Knight Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Deepsea Lantern Knight: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is lure lantern, armored fish skull, anchor blade, and fin cloak."
+        },
+        {
+          "introduction" : "Deepsea Lantern Knight appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving anglerfish-headed abyss knight.",
+          "name" : "Deepsea Lantern Knight Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Deepsea Lantern Knight: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is lure lantern, armored fish skull, anchor blade, and fin cloak."
+        }
+      ],
+      "id" : "deepsea-lantern-knight",
+      "lineageIntroduction" : "Deepsea Lantern Knight is an original nonhuman humanoid lineage built around anglerfish-headed abyss knight, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "pressure-lunges",
+      "materialAnchor" : "Deepsea Lantern Knight: black pressure shell and aged copper",
+      "motionAnchor" : "Deepsea Lantern Knight moves through pressure lunges while keeping lure lantern, armored fish skull, anchor blade, and fin cloak.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 0.41568627450980394,
+        "green" : 0.19607843137254902,
+        "red" : 0.14901960784313725
+      },
+      "silhouetteAnchor" : "lure lantern, armored fish skull, anchor blade, and fin cloak",
+      "silhouetteClass" : "deepsea-lantern-knight-topology",
+      "subtitle" : "mysterious · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "mysterious",
+        "heavy"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9098039215686274,
+        "green" : 0.8431372549019608,
+        "red" : 0.3215686274509804
+      },
+      "artStyle" : "clever; inventive gadget detail, alert proportions, agile readable shape",
+      "displayName" : "Copper Crow Artificer",
+      "energyAnchor" : "Copper Crow Artificer: cyan calibration sparks",
+      "existenceAnchor" : "crow-headed gadgeteer",
+      "forms" : [
+        {
+          "introduction" : "Copper Crow Artificer appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving crow-headed gadgeteer.",
+          "name" : "Copper Crow Artificer Core",
+          "stage" : "egg",
+          "visualAnchor" : "Copper Crow Artificer: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is long metal beak, folded tool wings, spring legs, and monocle lens."
+        },
+        {
+          "introduction" : "Copper Crow Artificer appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving crow-headed gadgeteer.",
+          "name" : "Copper Crow Artificer First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Copper Crow Artificer: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is long metal beak, folded tool wings, spring legs, and monocle lens."
+        },
+        {
+          "introduction" : "Copper Crow Artificer appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving crow-headed gadgeteer.",
+          "name" : "Copper Crow Artificer Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Copper Crow Artificer: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is long metal beak, folded tool wings, spring legs, and monocle lens."
+        },
+        {
+          "introduction" : "Copper Crow Artificer appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving crow-headed gadgeteer.",
+          "name" : "Copper Crow Artificer Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Copper Crow Artificer: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is long metal beak, folded tool wings, spring legs, and monocle lens."
+        },
+        {
+          "introduction" : "Copper Crow Artificer appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving crow-headed gadgeteer.",
+          "name" : "Copper Crow Artificer Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Copper Crow Artificer: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is long metal beak, folded tool wings, spring legs, and monocle lens."
+        }
+      ],
+      "id" : "copper-crow-artificer",
+      "lineageIntroduction" : "Copper Crow Artificer is an original nonhuman humanoid lineage built around crow-headed gadgeteer, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "hopping-workbench-steps",
+      "materialAnchor" : "Copper Crow Artificer: hammered copper and black feather steel",
+      "motionAnchor" : "Copper Crow Artificer moves through hopping workbench steps while keeping long metal beak, folded tool wings, spring legs, and monocle lens.",
+      "motionProfile" : "agile",
+      "secondaryAccent" : {
+        "blue" : 0.20784313725490197,
+        "green" : 0.43529411764705883,
+        "red" : 0.7215686274509804
+      },
+      "silhouetteAnchor" : "long metal beak, folded tool wings, spring legs, and monocle lens",
+      "silhouetteClass" : "copper-crow-artificer-topology",
+      "subtitle" : "clever · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "clever",
+        "agile"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.7843137254901961,
+        "green" : 0.4666666666666667,
+        "red" : 1
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Candy Star Idol",
+      "energyAnchor" : "Candy Star Idol: rainbow rhythm bursts",
+      "existenceAnchor" : "star-headed confection mascot",
+      "forms" : [
+        {
+          "introduction" : "Candy Star Idol appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving star-headed confection mascot.",
+          "name" : "Candy Star Idol Core",
+          "stage" : "egg",
+          "visualAnchor" : "Candy Star Idol: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is five-point candy head, tiny cape, spring boots, and microphone wand arm."
+        },
+        {
+          "introduction" : "Candy Star Idol appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving star-headed confection mascot.",
+          "name" : "Candy Star Idol First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Candy Star Idol: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is five-point candy head, tiny cape, spring boots, and microphone wand arm."
+        },
+        {
+          "introduction" : "Candy Star Idol appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving star-headed confection mascot.",
+          "name" : "Candy Star Idol Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Candy Star Idol: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is five-point candy head, tiny cape, spring boots, and microphone wand arm."
+        },
+        {
+          "introduction" : "Candy Star Idol appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving star-headed confection mascot.",
+          "name" : "Candy Star Idol Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Candy Star Idol: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is five-point candy head, tiny cape, spring boots, and microphone wand arm."
+        },
+        {
+          "introduction" : "Candy Star Idol appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving star-headed confection mascot.",
+          "name" : "Candy Star Idol Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Candy Star Idol: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is five-point candy head, tiny cape, spring boots, and microphone wand arm."
+        }
+      ],
+      "id" : "candy-star-idol",
+      "lineageIntroduction" : "Candy Star Idol is an original nonhuman humanoid lineage built around star-headed confection mascot, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "stage-hops",
+      "materialAnchor" : "Candy Star Idol: translucent candy glass and soft vinyl",
+      "motionAnchor" : "Candy Star Idol moves through stage hops while keeping five-point candy head, tiny cape, spring boots, and microphone wand arm.",
+      "motionProfile" : "bouncing",
+      "secondaryAccent" : {
+        "blue" : 0.9490196078431372,
+        "green" : 0.9176470588235294,
+        "red" : 0.40784313725490196
+      },
+      "silhouetteAnchor" : "five-point candy head, tiny cape, spring boots, and microphone wand arm",
+      "silhouetteClass" : "candy-star-idol-topology",
+      "subtitle" : "cute · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "cute",
+        "bouncing"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.4470588235294118,
+        "red" : 0.6078431372549019
+      },
+      "artStyle" : "dark; mysterious high-contrast silhouette, controlled void colors, elegant menace",
+      "displayName" : "Phantom Blade Wraith",
+      "energyAnchor" : "Phantom Blade Wraith: cold purple soul flame",
+      "existenceAnchor" : "masked spectral swordsman",
+      "forms" : [
+        {
+          "introduction" : "Phantom Blade Wraith appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving masked spectral swordsman.",
+          "name" : "Phantom Blade Wraith Core",
+          "stage" : "egg",
+          "visualAnchor" : "Phantom Blade Wraith: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is empty horned mask, tapering ghost body, two forearm blades, and smoke tails."
+        },
+        {
+          "introduction" : "Phantom Blade Wraith appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving masked spectral swordsman.",
+          "name" : "Phantom Blade Wraith First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Phantom Blade Wraith: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is empty horned mask, tapering ghost body, two forearm blades, and smoke tails."
+        },
+        {
+          "introduction" : "Phantom Blade Wraith appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving masked spectral swordsman.",
+          "name" : "Phantom Blade Wraith Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Phantom Blade Wraith: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is empty horned mask, tapering ghost body, two forearm blades, and smoke tails."
+        },
+        {
+          "introduction" : "Phantom Blade Wraith appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving masked spectral swordsman.",
+          "name" : "Phantom Blade Wraith Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Phantom Blade Wraith: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is empty horned mask, tapering ghost body, two forearm blades, and smoke tails."
+        },
+        {
+          "introduction" : "Phantom Blade Wraith appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving masked spectral swordsman.",
+          "name" : "Phantom Blade Wraith Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Phantom Blade Wraith: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is empty horned mask, tapering ghost body, two forearm blades, and smoke tails."
+        }
+      ],
+      "id" : "phantom-blade-wraith",
+      "lineageIntroduction" : "Phantom Blade Wraith is an original nonhuman humanoid lineage built around masked spectral swordsman, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "phase-dashes",
+      "materialAnchor" : "Phantom Blade Wraith: black mist and violet edge metal",
+      "motionAnchor" : "Phantom Blade Wraith moves through phase dashes while keeping empty horned mask, tapering ghost body, two forearm blades, and smoke tails.",
+      "motionProfile" : "spectral",
+      "secondaryAccent" : {
+        "blue" : 0.24705882352941178,
+        "green" : 0.12549019607843137,
+        "red" : 0.1411764705882353
+      },
+      "silhouetteAnchor" : "empty horned mask, tapering ghost body, two forearm blades, and smoke tails",
+      "silhouetteClass" : "phantom-blade-wraith-topology",
+      "subtitle" : "dark · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "dark",
+        "spectral"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.788235294117647,
+        "green" : 0.5058823529411764,
+        "red" : 1
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Roseglass Ranger",
+      "energyAnchor" : "Roseglass Ranger: heart-shaped light arrows",
+      "existenceAnchor" : "crystal rabbit ranger",
+      "forms" : [
+        {
+          "introduction" : "Roseglass Ranger appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving crystal rabbit ranger.",
+          "name" : "Roseglass Ranger Core",
+          "stage" : "egg",
+          "visualAnchor" : "Roseglass Ranger: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is long rose-crystal ears, compact rabbit mask, spring legs, and prism bow arms."
+        },
+        {
+          "introduction" : "Roseglass Ranger appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving crystal rabbit ranger.",
+          "name" : "Roseglass Ranger First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Roseglass Ranger: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is long rose-crystal ears, compact rabbit mask, spring legs, and prism bow arms."
+        },
+        {
+          "introduction" : "Roseglass Ranger appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving crystal rabbit ranger.",
+          "name" : "Roseglass Ranger Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Roseglass Ranger: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is long rose-crystal ears, compact rabbit mask, spring legs, and prism bow arms."
+        },
+        {
+          "introduction" : "Roseglass Ranger appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving crystal rabbit ranger.",
+          "name" : "Roseglass Ranger Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Roseglass Ranger: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is long rose-crystal ears, compact rabbit mask, spring legs, and prism bow arms."
+        },
+        {
+          "introduction" : "Roseglass Ranger appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving crystal rabbit ranger.",
+          "name" : "Roseglass Ranger Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Roseglass Ranger: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is long rose-crystal ears, compact rabbit mask, spring legs, and prism bow arms."
+        }
+      ],
+      "id" : "roseglass-ranger",
+      "lineageIntroduction" : "Roseglass Ranger is an original nonhuman humanoid lineage built around crystal rabbit ranger, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "springing-archer-leaps",
+      "materialAnchor" : "Roseglass Ranger: pink crystal and fine gold filigree",
+      "motionAnchor" : "Roseglass Ranger moves through springing archer leaps while keeping long rose-crystal ears, compact rabbit mask, spring legs, and prism bow arms.",
+      "motionProfile" : "agile",
+      "secondaryAccent" : {
+        "blue" : 0.43137254901960786,
+        "green" : 0.8392156862745098,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "long rose-crystal ears, compact rabbit mask, spring legs, and prism bow arms",
+      "silhouetteClass" : "roseglass-ranger-topology",
+      "subtitle" : "cute · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "cute",
+        "agile"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.5411764705882353,
+        "green" : 0.8352941176470589,
+        "red" : 0.9411764705882353
+      },
+      "artStyle" : "regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials",
+      "displayName" : "Zodiac Chimera Judge",
+      "energyAnchor" : "Zodiac Chimera Judge: twelve constellation seals",
+      "existenceAnchor" : "many-mask zodiac arbiter",
+      "forms" : [
+        {
+          "introduction" : "Zodiac Chimera Judge appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving many-mask zodiac arbiter.",
+          "name" : "Zodiac Chimera Judge Core",
+          "stage" : "egg",
+          "visualAnchor" : "Zodiac Chimera Judge: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is three rotating animal masks, four arms, scale mantle, and ring staff."
+        },
+        {
+          "introduction" : "Zodiac Chimera Judge appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving many-mask zodiac arbiter.",
+          "name" : "Zodiac Chimera Judge First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Zodiac Chimera Judge: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is three rotating animal masks, four arms, scale mantle, and ring staff."
+        },
+        {
+          "introduction" : "Zodiac Chimera Judge appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving many-mask zodiac arbiter.",
+          "name" : "Zodiac Chimera Judge Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Zodiac Chimera Judge: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is three rotating animal masks, four arms, scale mantle, and ring staff."
+        },
+        {
+          "introduction" : "Zodiac Chimera Judge appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving many-mask zodiac arbiter.",
+          "name" : "Zodiac Chimera Judge Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Zodiac Chimera Judge: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is three rotating animal masks, four arms, scale mantle, and ring staff."
+        },
+        {
+          "introduction" : "Zodiac Chimera Judge appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving many-mask zodiac arbiter.",
+          "name" : "Zodiac Chimera Judge Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Zodiac Chimera Judge: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is three rotating animal masks, four arms, scale mantle, and ring staff."
+        }
+      ],
+      "id" : "zodiac-chimera-judge",
+      "lineageIntroduction" : "Zodiac Chimera Judge is an original nonhuman humanoid lineage built around many-mask zodiac arbiter, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "measured-orbital-steps",
+      "materialAnchor" : "Zodiac Chimera Judge: ivory enamel and celestial bronze",
+      "motionAnchor" : "Zodiac Chimera Judge moves through measured orbital steps while keeping three rotating animal masks, four arms, scale mantle, and ring staff.",
+      "motionProfile" : "orbiting",
+      "secondaryAccent" : {
+        "blue" : 0.8117647058823529,
+        "green" : 0.34509803921568627,
+        "red" : 0.38823529411764707
+      },
+      "silhouetteAnchor" : "three rotating animal masks, four arms, scale mantle, and ring staff",
+      "silhouetteClass" : "zodiac-chimera-judge-topology",
+      "subtitle" : "regal · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "regal",
+        "orbiting"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9490196078431372,
+        "green" : 0.792156862745098,
+        "red" : 0.4235294117647059
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Porcelain Koi Courtier",
+      "energyAnchor" : "Porcelain Koi Courtier: watercolor wave ribbons",
+      "existenceAnchor" : "koi-masked porcelain courtier",
+      "forms" : [
+        {
+          "introduction" : "Porcelain Koi Courtier appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving koi-masked porcelain courtier.",
+          "name" : "Porcelain Koi Courtier Core",
+          "stage" : "egg",
+          "visualAnchor" : "Porcelain Koi Courtier: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is koi face, long fin sleeves, fan tail skirt, and pearl parasol fin."
+        },
+        {
+          "introduction" : "Porcelain Koi Courtier appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving koi-masked porcelain courtier.",
+          "name" : "Porcelain Koi Courtier First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Porcelain Koi Courtier: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is koi face, long fin sleeves, fan tail skirt, and pearl parasol fin."
+        },
+        {
+          "introduction" : "Porcelain Koi Courtier appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving koi-masked porcelain courtier.",
+          "name" : "Porcelain Koi Courtier Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Porcelain Koi Courtier: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is koi face, long fin sleeves, fan tail skirt, and pearl parasol fin."
+        },
+        {
+          "introduction" : "Porcelain Koi Courtier appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving koi-masked porcelain courtier.",
+          "name" : "Porcelain Koi Courtier Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Porcelain Koi Courtier: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is koi face, long fin sleeves, fan tail skirt, and pearl parasol fin."
+        },
+        {
+          "introduction" : "Porcelain Koi Courtier appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving koi-masked porcelain courtier.",
+          "name" : "Porcelain Koi Courtier Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Porcelain Koi Courtier: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is koi face, long fin sleeves, fan tail skirt, and pearl parasol fin."
+        }
+      ],
+      "id" : "porcelain-koi-courtier",
+      "lineageIntroduction" : "Porcelain Koi Courtier is an original nonhuman humanoid lineage built around koi-masked porcelain courtier, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "courtly-glides",
+      "materialAnchor" : "Porcelain Koi Courtier: blue-white porcelain and gold lacquer",
+      "motionAnchor" : "Porcelain Koi Courtier moves through courtly glides while keeping koi face, long fin sleeves, fan tail skirt, and pearl parasol fin.",
+      "motionProfile" : "flowing",
+      "secondaryAccent" : {
+        "blue" : 0.8156862745098039,
+        "green" : 0.9058823529411765,
+        "red" : 0.9568627450980393
+      },
+      "silhouetteAnchor" : "koi face, long fin sleeves, fan tail skirt, and pearl parasol fin",
+      "silhouetteClass" : "porcelain-koi-courtier-topology",
+      "subtitle" : "exquisite · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "exquisite",
+        "flowing"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.3607843137254902,
+        "green" : 0.8470588235294118,
+        "red" : 1
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Radiant Jackal Herald",
+      "energyAnchor" : "Radiant Jackal Herald: sunrise trumpet rays",
+      "existenceAnchor" : "golden jackal divine herald",
+      "forms" : [
+        {
+          "introduction" : "Radiant Jackal Herald appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving golden jackal divine herald.",
+          "name" : "Radiant Jackal Herald Core",
+          "stage" : "egg",
+          "visualAnchor" : "Radiant Jackal Herald: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails."
+        },
+        {
+          "introduction" : "Radiant Jackal Herald appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving golden jackal divine herald.",
+          "name" : "Radiant Jackal Herald First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Radiant Jackal Herald: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails."
+        },
+        {
+          "introduction" : "Radiant Jackal Herald appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving golden jackal divine herald.",
+          "name" : "Radiant Jackal Herald Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Radiant Jackal Herald: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails."
+        },
+        {
+          "introduction" : "Radiant Jackal Herald appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving golden jackal divine herald.",
+          "name" : "Radiant Jackal Herald Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Radiant Jackal Herald: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails."
+        },
+        {
+          "introduction" : "Radiant Jackal Herald appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving golden jackal divine herald.",
+          "name" : "Radiant Jackal Herald Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Radiant Jackal Herald: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is tall jackal head, sun staff, narrow armored torso, and twin banner tails."
+        }
+      ],
+      "id" : "radiant-jackal-herald",
+      "lineageIntroduction" : "Radiant Jackal Herald is an original nonhuman humanoid lineage built around golden jackal divine herald, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "heraldic-strides",
+      "materialAnchor" : "Radiant Jackal Herald: black stone and radiant gold",
+      "motionAnchor" : "Radiant Jackal Herald moves through heraldic strides while keeping tall jackal head, sun staff, narrow armored torso, and twin banner tails.",
+      "motionProfile" : "marching",
+      "secondaryAccent" : {
+        "blue" : 0.2823529411764706,
+        "green" : 0.1411764705882353,
+        "red" : 0.11764705882352941
+      },
+      "silhouetteAnchor" : "tall jackal head, sun staff, narrow armored torso, and twin banner tails",
+      "silhouetteClass" : "radiant-jackal-herald-topology",
+      "subtitle" : "sacred · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "sacred",
+        "marching"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.6588235294117647,
+        "green" : 0.9411764705882353,
+        "red" : 1
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Celestial Garuda",
+      "energyAnchor" : "Celestial Garuda: dawnfire feathers",
+      "existenceAnchor" : "avian sky deity",
+      "forms" : [
+        {
+          "introduction" : "Celestial Garuda appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving avian sky deity.",
+          "name" : "Celestial Garuda Core",
+          "stage" : "egg",
+          "visualAnchor" : "Celestial Garuda: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is eagle mask, four golden wings, taloned legs, and solar chakram arms."
+        },
+        {
+          "introduction" : "Celestial Garuda appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving avian sky deity.",
+          "name" : "Celestial Garuda First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Celestial Garuda: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is eagle mask, four golden wings, taloned legs, and solar chakram arms."
+        },
+        {
+          "introduction" : "Celestial Garuda appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving avian sky deity.",
+          "name" : "Celestial Garuda Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Celestial Garuda: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is eagle mask, four golden wings, taloned legs, and solar chakram arms."
+        },
+        {
+          "introduction" : "Celestial Garuda appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving avian sky deity.",
+          "name" : "Celestial Garuda Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Celestial Garuda: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is eagle mask, four golden wings, taloned legs, and solar chakram arms."
+        },
+        {
+          "introduction" : "Celestial Garuda appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving avian sky deity.",
+          "name" : "Celestial Garuda Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Celestial Garuda: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is eagle mask, four golden wings, taloned legs, and solar chakram arms."
+        }
+      ],
+      "id" : "celestial-garuda",
+      "lineageIntroduction" : "Celestial Garuda is an original nonhuman humanoid lineage built around avian sky deity, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "vertical-power-flight",
+      "materialAnchor" : "Celestial Garuda: white feather metal and celestial gold",
+      "motionAnchor" : "Celestial Garuda moves through vertical power flight while keeping eagle mask, four golden wings, taloned legs, and solar chakram arms.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.7215686274509804,
+        "red" : 0.396078431372549
+      },
+      "silhouetteAnchor" : "eagle mask, four golden wings, taloned legs, and solar chakram arms",
+      "silhouetteClass" : "celestial-garuda-topology",
+      "subtitle" : "sacred · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "sacred",
+        "winged"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.8588235294117647,
+        "red" : 0.796078431372549
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Moonstone Golem Adept",
+      "energyAnchor" : "Moonstone Golem Adept: soft blue chi rings",
+      "existenceAnchor" : "gentle moonstone martial golem",
+      "forms" : [
+        {
+          "introduction" : "Moonstone Golem Adept appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving gentle moonstone martial golem.",
+          "name" : "Moonstone Golem Adept Core",
+          "stage" : "egg",
+          "visualAnchor" : "Moonstone Golem Adept: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is rounded moon head, blocky limbs, crescent palms, and floating belt stones."
+        },
+        {
+          "introduction" : "Moonstone Golem Adept appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving gentle moonstone martial golem.",
+          "name" : "Moonstone Golem Adept First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Moonstone Golem Adept: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is rounded moon head, blocky limbs, crescent palms, and floating belt stones."
+        },
+        {
+          "introduction" : "Moonstone Golem Adept appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving gentle moonstone martial golem.",
+          "name" : "Moonstone Golem Adept Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Moonstone Golem Adept: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is rounded moon head, blocky limbs, crescent palms, and floating belt stones."
+        },
+        {
+          "introduction" : "Moonstone Golem Adept appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving gentle moonstone martial golem.",
+          "name" : "Moonstone Golem Adept Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Moonstone Golem Adept: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is rounded moon head, blocky limbs, crescent palms, and floating belt stones."
+        },
+        {
+          "introduction" : "Moonstone Golem Adept appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving gentle moonstone martial golem.",
+          "name" : "Moonstone Golem Adept Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Moonstone Golem Adept: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is rounded moon head, blocky limbs, crescent palms, and floating belt stones."
+        }
+      ],
+      "id" : "moonstone-golem-adept",
+      "lineageIntroduction" : "Moonstone Golem Adept is an original nonhuman humanoid lineage built around gentle moonstone martial golem, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "rounded-martial-steps",
+      "materialAnchor" : "Moonstone Golem Adept: milky moonstone and indigo cord",
+      "motionAnchor" : "Moonstone Golem Adept moves through rounded martial steps while keeping rounded moon head, blocky limbs, crescent palms, and floating belt stones.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 0.788235294117647,
+        "green" : 0.4392156862745098,
+        "red" : 0.43529411764705883
+      },
+      "silhouetteAnchor" : "rounded moon head, blocky limbs, crescent palms, and floating belt stones",
+      "silhouetteClass" : "moonstone-golem-adept-topology",
+      "subtitle" : "cute · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "cute",
+        "heavy"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9568627450980393,
+        "red" : 0.7254901960784313
+      },
+      "artStyle" : "playful; toyetic motion, surprising asymmetry, bright confident character",
+      "displayName" : "Mirror-Mask Trickster",
+      "energyAnchor" : "Mirror-Mask Trickster: duplicating prism flashes",
+      "existenceAnchor" : "reflective mask illusionist",
+      "forms" : [
+        {
+          "introduction" : "Mirror-Mask Trickster appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving reflective mask illusionist.",
+          "name" : "Mirror-Mask Trickster Core",
+          "stage" : "egg",
+          "visualAnchor" : "Mirror-Mask Trickster: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is faceted mirror face, ribbon torso, three asymmetric arms, and card-like heel fins."
+        },
+        {
+          "introduction" : "Mirror-Mask Trickster appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving reflective mask illusionist.",
+          "name" : "Mirror-Mask Trickster First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Mirror-Mask Trickster: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is faceted mirror face, ribbon torso, three asymmetric arms, and card-like heel fins."
+        },
+        {
+          "introduction" : "Mirror-Mask Trickster appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving reflective mask illusionist.",
+          "name" : "Mirror-Mask Trickster Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Mirror-Mask Trickster: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is faceted mirror face, ribbon torso, three asymmetric arms, and card-like heel fins."
+        },
+        {
+          "introduction" : "Mirror-Mask Trickster appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving reflective mask illusionist.",
+          "name" : "Mirror-Mask Trickster Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Mirror-Mask Trickster: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is faceted mirror face, ribbon torso, three asymmetric arms, and card-like heel fins."
+        },
+        {
+          "introduction" : "Mirror-Mask Trickster appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving reflective mask illusionist.",
+          "name" : "Mirror-Mask Trickster Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Mirror-Mask Trickster: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is faceted mirror face, ribbon torso, three asymmetric arms, and card-like heel fins."
+        }
+      ],
+      "id" : "mirror-mask-trickster",
+      "lineageIntroduction" : "Mirror-Mask Trickster is an original nonhuman humanoid lineage built around reflective mask illusionist, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "misdirection-dashes",
+      "materialAnchor" : "Mirror-Mask Trickster: mirror chrome and purple velvet",
+      "motionAnchor" : "Mirror-Mask Trickster moves through misdirection dashes while keeping faceted mirror face, ribbon torso, three asymmetric arms, and card-like heel fins.",
+      "motionProfile" : "agile",
+      "secondaryAccent" : {
+        "blue" : 0.9098039215686274,
+        "green" : 0.3215686274509804,
+        "red" : 0.7019607843137254
+      },
+      "silhouetteAnchor" : "faceted mirror face, ribbon torso, three asymmetric arms, and card-like heel fins",
+      "silhouetteClass" : "mirror-mask-trickster-topology",
+      "subtitle" : "playful · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "playful",
+        "agile"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.47843137254901963,
+        "green" : 0.8862745098039215,
+        "red" : 1
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Auric Seraph Construct",
+      "energyAnchor" : "Auric Seraph Construct: sacred geometric light",
+      "existenceAnchor" : "mechanical angel guardian",
+      "forms" : [
+        {
+          "introduction" : "Auric Seraph Construct appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving mechanical angel guardian.",
+          "name" : "Auric Seraph Construct Core",
+          "stage" : "egg",
+          "visualAnchor" : "Auric Seraph Construct: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist."
+        },
+        {
+          "introduction" : "Auric Seraph Construct appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving mechanical angel guardian.",
+          "name" : "Auric Seraph Construct First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Auric Seraph Construct: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist."
+        },
+        {
+          "introduction" : "Auric Seraph Construct appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving mechanical angel guardian.",
+          "name" : "Auric Seraph Construct Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Auric Seraph Construct: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist."
+        },
+        {
+          "introduction" : "Auric Seraph Construct appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving mechanical angel guardian.",
+          "name" : "Auric Seraph Construct Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Auric Seraph Construct: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist."
+        },
+        {
+          "introduction" : "Auric Seraph Construct appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving mechanical angel guardian.",
+          "name" : "Auric Seraph Construct Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Auric Seraph Construct: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is blank gold face, six segmented wings, long spear arm, and gyroscope waist."
+        }
+      ],
+      "id" : "auric-seraph-construct",
+      "lineageIntroduction" : "Auric Seraph Construct is an original nonhuman humanoid lineage built around mechanical angel guardian, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "ceremonial-flight",
+      "materialAnchor" : "Auric Seraph Construct: brushed gold and white ceramic",
+      "motionAnchor" : "Auric Seraph Construct moves through ceremonial flight while keeping blank gold face, six segmented wings, long spear arm, and gyroscope waist.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.9647058823529412,
+        "red" : 0.9137254901960784
+      },
+      "silhouetteAnchor" : "blank gold face, six segmented wings, long spear arm, and gyroscope waist",
+      "silhouetteClass" : "auric-seraph-construct-topology",
+      "subtitle" : "sacred · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "sacred",
+        "winged"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.5568627450980392,
+        "green" : 0.2980392156862745,
+        "red" : 0.7764705882352941
+      },
+      "artStyle" : "gothic; moonlit dark ornament, cathedral-like shape language without architecture, noble menace",
+      "displayName" : "Velvet Bat Duchess",
+      "energyAnchor" : "Velvet Bat Duchess: crimson moon mist",
+      "existenceAnchor" : "bat-faced night noble",
+      "forms" : [
+        {
+          "introduction" : "Velvet Bat Duchess appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving bat-faced night noble.",
+          "name" : "Velvet Bat Duchess Core",
+          "stage" : "egg",
+          "visualAnchor" : "Velvet Bat Duchess: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws."
+        },
+        {
+          "introduction" : "Velvet Bat Duchess appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving bat-faced night noble.",
+          "name" : "Velvet Bat Duchess First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Velvet Bat Duchess: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws."
+        },
+        {
+          "introduction" : "Velvet Bat Duchess appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving bat-faced night noble.",
+          "name" : "Velvet Bat Duchess Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Velvet Bat Duchess: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws."
+        },
+        {
+          "introduction" : "Velvet Bat Duchess appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving bat-faced night noble.",
+          "name" : "Velvet Bat Duchess Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Velvet Bat Duchess: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws."
+        },
+        {
+          "introduction" : "Velvet Bat Duchess appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving bat-faced night noble.",
+          "name" : "Velvet Bat Duchess Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Velvet Bat Duchess: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws."
+        }
+      ],
+      "id" : "velvet-bat-duchess",
+      "lineageIntroduction" : "Velvet Bat Duchess is an original nonhuman humanoid lineage built around bat-faced night noble, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "cape-wing-glides",
+      "materialAnchor" : "Velvet Bat Duchess: midnight velvet and ruby enamel",
+      "motionAnchor" : "Velvet Bat Duchess moves through cape wing glides while keeping large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws.",
+      "motionProfile" : "gliding",
+      "secondaryAccent" : {
+        "blue" : 0.30980392156862746,
+        "green" : 0.13725490196078433,
+        "red" : 0.19607843137254902
+      },
+      "silhouetteAnchor" : "large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws",
+      "silhouetteClass" : "velvet-bat-duchess-topology",
+      "subtitle" : "gothic · nonhuman humanoid",
+      "symbolName" : "sparkles",
+      "tags" : [
+        "nonhuman humanoid",
+        "gothic",
+        "gliding"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.2901960784313726,
+        "green" : 0.8352941176470589,
+        "red" : 1
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Solar Ring Wyrm",
+      "energyAnchor" : "Solar Ring Wyrm: white-hot solar arcs",
+      "existenceAnchor" : "ring-bodied solar dragon",
+      "forms" : [
+        {
+          "introduction" : "Solar Ring Wyrm appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving ring-bodied solar dragon.",
+          "name" : "Solar Ring Wyrm Core",
+          "stage" : "egg",
+          "visualAnchor" : "Solar Ring Wyrm: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is serpentine dragon threaded through a broken sun ring, four small claws, and crown horns."
+        },
+        {
+          "introduction" : "Solar Ring Wyrm appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving ring-bodied solar dragon.",
+          "name" : "Solar Ring Wyrm First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Solar Ring Wyrm: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is serpentine dragon threaded through a broken sun ring, four small claws, and crown horns."
+        },
+        {
+          "introduction" : "Solar Ring Wyrm appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving ring-bodied solar dragon.",
+          "name" : "Solar Ring Wyrm Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Solar Ring Wyrm: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is serpentine dragon threaded through a broken sun ring, four small claws, and crown horns."
+        },
+        {
+          "introduction" : "Solar Ring Wyrm appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving ring-bodied solar dragon.",
+          "name" : "Solar Ring Wyrm Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Solar Ring Wyrm: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is serpentine dragon threaded through a broken sun ring, four small claws, and crown horns."
+        },
+        {
+          "introduction" : "Solar Ring Wyrm appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving ring-bodied solar dragon.",
+          "name" : "Solar Ring Wyrm Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Solar Ring Wyrm: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is serpentine dragon threaded through a broken sun ring, four small claws, and crown horns."
+        }
+      ],
+      "id" : "solar-ring-wyrm",
+      "lineageIntroduction" : "Solar Ring Wyrm is an original mythic creature lineage built around ring-bodied solar dragon, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "ring-coiling-flight",
+      "materialAnchor" : "Solar Ring Wyrm: gold scale armor and black sunstone",
+      "motionAnchor" : "Solar Ring Wyrm moves through ring coiling flight while keeping serpentine dragon threaded through a broken sun ring, four small claws, and crown horns.",
+      "motionProfile" : "serpentine",
+      "secondaryAccent" : {
+        "blue" : 0.10196078431372549,
+        "green" : 0.24313725490196078,
+        "red" : 0.47843137254901963
+      },
+      "silhouetteAnchor" : "serpentine dragon threaded through a broken sun ring, four small claws, and crown horns",
+      "silhouetteClass" : "solar-ring-wyrm-topology",
+      "subtitle" : "sacred · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "sacred",
+        "serpentine",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9215686274509803,
+        "red" : 0.6431372549019608
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Glacier Sky Dragon",
+      "energyAnchor" : "Glacier Sky Dragon: snowstorm contrails",
+      "existenceAnchor" : "four-winged ice dragon",
+      "forms" : [
+        {
+          "introduction" : "Glacier Sky Dragon appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving four-winged ice dragon.",
+          "name" : "Glacier Sky Dragon Core",
+          "stage" : "egg",
+          "visualAnchor" : "Glacier Sky Dragon: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is long ice beak, four feather-crystal wings, two talons, and comet tail."
+        },
+        {
+          "introduction" : "Glacier Sky Dragon appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving four-winged ice dragon.",
+          "name" : "Glacier Sky Dragon First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Glacier Sky Dragon: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is long ice beak, four feather-crystal wings, two talons, and comet tail."
+        },
+        {
+          "introduction" : "Glacier Sky Dragon appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving four-winged ice dragon.",
+          "name" : "Glacier Sky Dragon Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Glacier Sky Dragon: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is long ice beak, four feather-crystal wings, two talons, and comet tail."
+        },
+        {
+          "introduction" : "Glacier Sky Dragon appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving four-winged ice dragon.",
+          "name" : "Glacier Sky Dragon Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Glacier Sky Dragon: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is long ice beak, four feather-crystal wings, two talons, and comet tail."
+        },
+        {
+          "introduction" : "Glacier Sky Dragon appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving four-winged ice dragon.",
+          "name" : "Glacier Sky Dragon Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Glacier Sky Dragon: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is long ice beak, four feather-crystal wings, two talons, and comet tail."
+        }
+      ],
+      "id" : "glacier-sky-dragon",
+      "lineageIntroduction" : "Glacier Sky Dragon is an original mythic creature lineage built around four-winged ice dragon, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "high-altitude-soaring",
+      "materialAnchor" : "Glacier Sky Dragon: blue glacier crystal and silver feather plates",
+      "motionAnchor" : "Glacier Sky Dragon moves through high altitude soaring while keeping long ice beak, four feather-crystal wings, two talons, and comet tail.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 0.9098039215686274,
+        "green" : 0.4549019607843137,
+        "red" : 0.32941176470588235
+      },
+      "silhouetteAnchor" : "long ice beak, four feather-crystal wings, two talons, and comet tail",
+      "silhouetteClass" : "glacier-sky-dragon-topology",
+      "subtitle" : "exquisite · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "exquisite",
+        "winged",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.1411764705882353,
+        "green" : 0.47843137254901963,
+        "red" : 1
+      },
+      "artStyle" : "fierce; arena-ready anatomy, forceful stance, sharp readable massing",
+      "displayName" : "Emberglass Hound",
+      "energyAnchor" : "Emberglass Hound: orange magma seams and broken-sun halo",
+      "existenceAnchor" : "obsidian jackal hound",
+      "forms" : [
+        {
+          "introduction" : "Emberglass Hound appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving obsidian jackal hound.",
+          "name" : "Emberglass Hound Core",
+          "stage" : "egg",
+          "visualAnchor" : "Emberglass Hound: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail."
+        },
+        {
+          "introduction" : "Emberglass Hound appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving obsidian jackal hound.",
+          "name" : "Emberglass Hound First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Emberglass Hound: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail."
+        },
+        {
+          "introduction" : "Emberglass Hound appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving obsidian jackal hound.",
+          "name" : "Emberglass Hound Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Emberglass Hound: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail."
+        },
+        {
+          "introduction" : "Emberglass Hound appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving obsidian jackal hound.",
+          "name" : "Emberglass Hound Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Emberglass Hound: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail."
+        },
+        {
+          "introduction" : "Emberglass Hound appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving obsidian jackal hound.",
+          "name" : "Emberglass Hound Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Emberglass Hound: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail."
+        }
+      ],
+      "id" : "emberglass-hound",
+      "lineageIntroduction" : "Emberglass Hound is an original mythic animal lineage built around obsidian jackal hound, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "pouncing-quadruped-runs",
+      "materialAnchor" : "Emberglass Hound: black volcanic glass and small gold bands",
+      "motionAnchor" : "Emberglass Hound moves through pouncing quadruped runs while keeping wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail.",
+      "motionProfile" : "prowling",
+      "secondaryAccent" : {
+        "blue" : 0.11764705882352941,
+        "green" : 0.08235294117647059,
+        "red" : 0.09019607843137255
+      },
+      "silhouetteAnchor" : "wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail",
+      "silhouetteClass" : "emberglass-hound-topology",
+      "subtitle" : "fierce · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "fierce",
+        "prowling",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.8470588235294118,
+        "green" : 0.5607843137254902,
+        "red" : 1
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Roseglass Fennec",
+      "energyAnchor" : "Roseglass Fennec: pink sparkle crescents",
+      "existenceAnchor" : "rose-crystal desert fox",
+      "forms" : [
+        {
+          "introduction" : "Roseglass Fennec appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving rose-crystal desert fox.",
+          "name" : "Roseglass Fennec Core",
+          "stage" : "egg",
+          "visualAnchor" : "Roseglass Fennec: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is enormous faceted ears, petite fox body, curled gem tail, and heart prism chest."
+        },
+        {
+          "introduction" : "Roseglass Fennec appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving rose-crystal desert fox.",
+          "name" : "Roseglass Fennec First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Roseglass Fennec: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is enormous faceted ears, petite fox body, curled gem tail, and heart prism chest."
+        },
+        {
+          "introduction" : "Roseglass Fennec appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving rose-crystal desert fox.",
+          "name" : "Roseglass Fennec Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Roseglass Fennec: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is enormous faceted ears, petite fox body, curled gem tail, and heart prism chest."
+        },
+        {
+          "introduction" : "Roseglass Fennec appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving rose-crystal desert fox.",
+          "name" : "Roseglass Fennec Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Roseglass Fennec: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is enormous faceted ears, petite fox body, curled gem tail, and heart prism chest."
+        },
+        {
+          "introduction" : "Roseglass Fennec appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving rose-crystal desert fox.",
+          "name" : "Roseglass Fennec Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Roseglass Fennec: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is enormous faceted ears, petite fox body, curled gem tail, and heart prism chest."
+        }
+      ],
+      "id" : "roseglass-fennec",
+      "lineageIntroduction" : "Roseglass Fennec is an original mythic animal lineage built around rose-crystal desert fox, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "light-desert-hops",
+      "materialAnchor" : "Roseglass Fennec: transparent rose crystal and fine gold wire",
+      "motionAnchor" : "Roseglass Fennec moves through light desert hops while keeping enormous faceted ears, petite fox body, curled gem tail, and heart prism chest.",
+      "motionProfile" : "bouncing",
+      "secondaryAccent" : {
+        "blue" : 0.41568627450980394,
+        "green" : 0.8352941176470589,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "enormous faceted ears, petite fox body, curled gem tail, and heart prism chest",
+      "silhouetteClass" : "roseglass-fennec-topology",
+      "subtitle" : "cute · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "cute",
+        "bouncing",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.8470588235294118,
+        "red" : 0.34901960784313724
+      },
+      "artStyle" : "heroic; clear champion silhouette, athletic motion, confident focal pose",
+      "displayName" : "Starrail Gryphon",
+      "energyAnchor" : "Starrail Gryphon: cyan rail trails",
+      "existenceAnchor" : "cosmic gryphon courier",
+      "forms" : [
+        {
+          "introduction" : "Starrail Gryphon appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving cosmic gryphon courier.",
+          "name" : "Starrail Gryphon Core",
+          "stage" : "egg",
+          "visualAnchor" : "Starrail Gryphon: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is eagle head, feline hindquarters, rail-shaped wings, and comet wheel tail."
+        },
+        {
+          "introduction" : "Starrail Gryphon appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving cosmic gryphon courier.",
+          "name" : "Starrail Gryphon First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Starrail Gryphon: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is eagle head, feline hindquarters, rail-shaped wings, and comet wheel tail."
+        },
+        {
+          "introduction" : "Starrail Gryphon appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving cosmic gryphon courier.",
+          "name" : "Starrail Gryphon Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Starrail Gryphon: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is eagle head, feline hindquarters, rail-shaped wings, and comet wheel tail."
+        },
+        {
+          "introduction" : "Starrail Gryphon appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving cosmic gryphon courier.",
+          "name" : "Starrail Gryphon Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Starrail Gryphon: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is eagle head, feline hindquarters, rail-shaped wings, and comet wheel tail."
+        },
+        {
+          "introduction" : "Starrail Gryphon appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving cosmic gryphon courier.",
+          "name" : "Starrail Gryphon Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Starrail Gryphon: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is eagle head, feline hindquarters, rail-shaped wings, and comet wheel tail."
+        }
+      ],
+      "id" : "starrail-gryphon",
+      "lineageIntroduction" : "Starrail Gryphon is an original mythic creature lineage built around cosmic gryphon courier, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "rail-fast-flight",
+      "materialAnchor" : "Starrail Gryphon: navy armor feathers and star chrome",
+      "motionAnchor" : "Starrail Gryphon moves through rail fast flight while keeping eagle head, feline hindquarters, rail-shaped wings, and comet wheel tail.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 0.9098039215686274,
+        "green" : 0.3333333333333333,
+        "red" : 0.42745098039215684
+      },
+      "silhouetteAnchor" : "eagle head, feline hindquarters, rail-shaped wings, and comet wheel tail",
+      "silhouetteClass" : "starrail-gryphon-topology",
+      "subtitle" : "heroic · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "heroic",
+        "winged",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9411764705882353,
+        "red" : 0.49411764705882355
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Prism Antler Cervid",
+      "energyAnchor" : "Prism Antler Cervid: refracted aurora rays",
+      "existenceAnchor" : "rainbow crystal deer",
+      "forms" : [
+        {
+          "introduction" : "Prism Antler Cervid appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving rainbow crystal deer.",
+          "name" : "Prism Antler Cervid Core",
+          "stage" : "egg",
+          "visualAnchor" : "Prism Antler Cervid: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is slender deer body, enormous prism antlers, split hooves, and jewel mane."
+        },
+        {
+          "introduction" : "Prism Antler Cervid appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving rainbow crystal deer.",
+          "name" : "Prism Antler Cervid First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Prism Antler Cervid: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is slender deer body, enormous prism antlers, split hooves, and jewel mane."
+        },
+        {
+          "introduction" : "Prism Antler Cervid appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving rainbow crystal deer.",
+          "name" : "Prism Antler Cervid Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Prism Antler Cervid: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is slender deer body, enormous prism antlers, split hooves, and jewel mane."
+        },
+        {
+          "introduction" : "Prism Antler Cervid appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving rainbow crystal deer.",
+          "name" : "Prism Antler Cervid Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Prism Antler Cervid: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is slender deer body, enormous prism antlers, split hooves, and jewel mane."
+        },
+        {
+          "introduction" : "Prism Antler Cervid appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving rainbow crystal deer.",
+          "name" : "Prism Antler Cervid Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Prism Antler Cervid: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is slender deer body, enormous prism antlers, split hooves, and jewel mane."
+        }
+      ],
+      "id" : "prism-antler-cervid",
+      "lineageIntroduction" : "Prism Antler Cervid is an original mythic animal lineage built around rainbow crystal deer, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "weightless-deer-bounds",
+      "materialAnchor" : "Prism Antler Cervid: clear crystal and opal enamel",
+      "motionAnchor" : "Prism Antler Cervid moves through weightless deer bounds while keeping slender deer body, enormous prism antlers, split hooves, and jewel mane.",
+      "motionProfile" : "poised",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.43137254901960786,
+        "red" : 0.8941176470588236
+      },
+      "silhouetteAnchor" : "slender deer body, enormous prism antlers, split hooves, and jewel mane",
+      "silhouetteClass" : "prism-antler-cervid-topology",
+      "subtitle" : "exquisite · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "exquisite",
+        "poised",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.8117647058823529,
+        "red" : 0.4392156862745098
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Thundercloud Kirin",
+      "energyAnchor" : "Thundercloud Kirin: white-blue thunder knots",
+      "existenceAnchor" : "storm kirin",
+      "forms" : [
+        {
+          "introduction" : "Thundercloud Kirin appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving storm kirin.",
+          "name" : "Thundercloud Kirin Core",
+          "stage" : "egg",
+          "visualAnchor" : "Thundercloud Kirin: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is dragon-deer head, cloud mane, four cloven legs, and lightning ribbon tail."
+        },
+        {
+          "introduction" : "Thundercloud Kirin appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving storm kirin.",
+          "name" : "Thundercloud Kirin First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Thundercloud Kirin: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is dragon-deer head, cloud mane, four cloven legs, and lightning ribbon tail."
+        },
+        {
+          "introduction" : "Thundercloud Kirin appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving storm kirin.",
+          "name" : "Thundercloud Kirin Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Thundercloud Kirin: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is dragon-deer head, cloud mane, four cloven legs, and lightning ribbon tail."
+        },
+        {
+          "introduction" : "Thundercloud Kirin appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving storm kirin.",
+          "name" : "Thundercloud Kirin Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Thundercloud Kirin: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is dragon-deer head, cloud mane, four cloven legs, and lightning ribbon tail."
+        },
+        {
+          "introduction" : "Thundercloud Kirin appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving storm kirin.",
+          "name" : "Thundercloud Kirin Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Thundercloud Kirin: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is dragon-deer head, cloud mane, four cloven legs, and lightning ribbon tail."
+        }
+      ],
+      "id" : "thundercloud-kirin",
+      "lineageIntroduction" : "Thundercloud Kirin is an original mythic creature lineage built around storm kirin, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "cloud-gallops",
+      "materialAnchor" : "Thundercloud Kirin: slate scales and vapor fleece",
+      "motionAnchor" : "Thundercloud Kirin moves through cloud gallops while keeping dragon-deer head, cloud mane, four cloven legs, and lightning ribbon tail.",
+      "motionProfile" : "buoyant",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.9725490196078431,
+        "red" : 0.9568627450980393
+      },
+      "silhouetteAnchor" : "dragon-deer head, cloud mane, four cloven legs, and lightning ribbon tail",
+      "silhouetteClass" : "thundercloud-kirin-topology",
+      "subtitle" : "sacred · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "sacred",
+        "buoyant",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.6549019607843137,
+        "red" : 0.41568627450980394
+      },
+      "artStyle" : "mysterious; occult visual logic, restrained glow, uncanny but appealing identity",
+      "displayName" : "Moon-Tide Leviathan",
+      "energyAnchor" : "Moon-Tide Leviathan: silver tidal rings",
+      "existenceAnchor" : "crescent sea leviathan",
+      "forms" : [
+        {
+          "introduction" : "Moon-Tide Leviathan appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving crescent sea leviathan.",
+          "name" : "Moon-Tide Leviathan Core",
+          "stage" : "egg",
+          "visualAnchor" : "Moon-Tide Leviathan: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is whale-dragon head, long finned body, crescent dorsal sail, and pearl tail fan."
+        },
+        {
+          "introduction" : "Moon-Tide Leviathan appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving crescent sea leviathan.",
+          "name" : "Moon-Tide Leviathan First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Moon-Tide Leviathan: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is whale-dragon head, long finned body, crescent dorsal sail, and pearl tail fan."
+        },
+        {
+          "introduction" : "Moon-Tide Leviathan appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving crescent sea leviathan.",
+          "name" : "Moon-Tide Leviathan Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Moon-Tide Leviathan: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is whale-dragon head, long finned body, crescent dorsal sail, and pearl tail fan."
+        },
+        {
+          "introduction" : "Moon-Tide Leviathan appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving crescent sea leviathan.",
+          "name" : "Moon-Tide Leviathan Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Moon-Tide Leviathan: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is whale-dragon head, long finned body, crescent dorsal sail, and pearl tail fan."
+        },
+        {
+          "introduction" : "Moon-Tide Leviathan appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving crescent sea leviathan.",
+          "name" : "Moon-Tide Leviathan Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Moon-Tide Leviathan: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is whale-dragon head, long finned body, crescent dorsal sail, and pearl tail fan."
+        }
+      ],
+      "id" : "moon-tide-leviathan",
+      "lineageIntroduction" : "Moon-Tide Leviathan is an original mythic creature lineage built around crescent sea leviathan, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "lunar-undulation",
+      "materialAnchor" : "Moon-Tide Leviathan: indigo scales and moon-pearl fins",
+      "motionAnchor" : "Moon-Tide Leviathan moves through lunar undulation while keeping whale-dragon head, long finned body, crescent dorsal sail, and pearl tail fan.",
+      "motionProfile" : "swimming",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.8627450980392157,
+        "red" : 0.8862745098039215
+      },
+      "silhouetteAnchor" : "whale-dragon head, long finned body, crescent dorsal sail, and pearl tail fan",
+      "silhouetteClass" : "moon-tide-leviathan-topology",
+      "subtitle" : "mysterious · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "mysterious",
+        "swimming",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.3058823529411765,
+        "green" : 0.4392156862745098,
+        "red" : 1
+      },
+      "artStyle" : "regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials",
+      "displayName" : "Duskfeather Phoenix",
+      "energyAnchor" : "Duskfeather Phoenix: sunset flame trails",
+      "existenceAnchor" : "twilight phoenix",
+      "forms" : [
+        {
+          "introduction" : "Duskfeather Phoenix appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving twilight phoenix.",
+          "name" : "Duskfeather Phoenix Core",
+          "stage" : "egg",
+          "visualAnchor" : "Duskfeather Phoenix: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is sharp bird head, broad dusk wings, long ribbon tail feathers, and ember crown."
+        },
+        {
+          "introduction" : "Duskfeather Phoenix appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving twilight phoenix.",
+          "name" : "Duskfeather Phoenix First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Duskfeather Phoenix: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is sharp bird head, broad dusk wings, long ribbon tail feathers, and ember crown."
+        },
+        {
+          "introduction" : "Duskfeather Phoenix appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving twilight phoenix.",
+          "name" : "Duskfeather Phoenix Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Duskfeather Phoenix: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is sharp bird head, broad dusk wings, long ribbon tail feathers, and ember crown."
+        },
+        {
+          "introduction" : "Duskfeather Phoenix appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving twilight phoenix.",
+          "name" : "Duskfeather Phoenix Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Duskfeather Phoenix: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is sharp bird head, broad dusk wings, long ribbon tail feathers, and ember crown."
+        },
+        {
+          "introduction" : "Duskfeather Phoenix appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving twilight phoenix.",
+          "name" : "Duskfeather Phoenix Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Duskfeather Phoenix: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is sharp bird head, broad dusk wings, long ribbon tail feathers, and ember crown."
+        }
+      ],
+      "id" : "duskfeather-phoenix",
+      "lineageIntroduction" : "Duskfeather Phoenix is an original mythic creature lineage built around twilight phoenix, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "spiral-rising-flight",
+      "materialAnchor" : "Duskfeather Phoenix: violet metal feathers and orange glass",
+      "motionAnchor" : "Duskfeather Phoenix moves through spiral rising flight while keeping sharp bird head, broad dusk wings, long ribbon tail feathers, and ember crown.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 0.8196078431372549,
+        "green" : 0.23529411764705882,
+        "red" : 0.4196078431372549
+      },
+      "silhouetteAnchor" : "sharp bird head, broad dusk wings, long ribbon tail feathers, and ember crown",
+      "silhouetteClass" : "duskfeather-phoenix-topology",
+      "subtitle" : "regal · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "regal",
+        "winged",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.3607843137254902,
+        "red" : 0.4666666666666667
+      },
+      "artStyle" : "dark; mysterious high-contrast silhouette, controlled void colors, elegant menace",
+      "displayName" : "Voidmane Panther",
+      "energyAnchor" : "Voidmane Panther: purple lensing arcs",
+      "existenceAnchor" : "black-hole panther",
+      "forms" : [
+        {
+          "introduction" : "Voidmane Panther appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving black-hole panther.",
+          "name" : "Voidmane Panther Core",
+          "stage" : "egg",
+          "visualAnchor" : "Voidmane Panther: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is low feline body, starfield mane, long blade tail, and gravity-ring shoulders."
+        },
+        {
+          "introduction" : "Voidmane Panther appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving black-hole panther.",
+          "name" : "Voidmane Panther First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Voidmane Panther: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is low feline body, starfield mane, long blade tail, and gravity-ring shoulders."
+        },
+        {
+          "introduction" : "Voidmane Panther appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving black-hole panther.",
+          "name" : "Voidmane Panther Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Voidmane Panther: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is low feline body, starfield mane, long blade tail, and gravity-ring shoulders."
+        },
+        {
+          "introduction" : "Voidmane Panther appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving black-hole panther.",
+          "name" : "Voidmane Panther Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Voidmane Panther: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is low feline body, starfield mane, long blade tail, and gravity-ring shoulders."
+        },
+        {
+          "introduction" : "Voidmane Panther appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving black-hole panther.",
+          "name" : "Voidmane Panther Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Voidmane Panther: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is low feline body, starfield mane, long blade tail, and gravity-ring shoulders."
+        }
+      ],
+      "id" : "voidmane-panther",
+      "lineageIntroduction" : "Voidmane Panther is an original mythic animal lineage built around black-hole panther, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "silent-gravity-pounces",
+      "materialAnchor" : "Voidmane Panther: matte void fur and blue crystal claws",
+      "motionAnchor" : "Voidmane Panther moves through silent gravity pounces while keeping low feline body, starfield mane, long blade tail, and gravity-ring shoulders.",
+      "motionProfile" : "prowling",
+      "secondaryAccent" : {
+        "blue" : 0.17647058823529413,
+        "green" : 0.08627450980392157,
+        "red" : 0.06666666666666667
+      },
+      "silhouetteAnchor" : "low feline body, starfield mane, long blade tail, and gravity-ring shoulders",
+      "silhouetteClass" : "voidmane-panther-topology",
+      "subtitle" : "dark · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "dark",
+        "prowling",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.6274509803921569,
+        "green" : 0.7803921568627451,
+        "red" : 0.25882352941176473
+      },
+      "artStyle" : "ancient; ancient relic craftsmanship, weathered detail, solemn silhouette",
+      "displayName" : "Rune-Shell Tortoise",
+      "energyAnchor" : "Rune-Shell Tortoise: turquoise memory glyphs",
+      "existenceAnchor" : "ancient rune tortoise",
+      "forms" : [
+        {
+          "introduction" : "Rune-Shell Tortoise appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving ancient rune tortoise.",
+          "name" : "Rune-Shell Tortoise Core",
+          "stage" : "egg",
+          "visualAnchor" : "Rune-Shell Tortoise: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail."
+        },
+        {
+          "introduction" : "Rune-Shell Tortoise appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving ancient rune tortoise.",
+          "name" : "Rune-Shell Tortoise First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Rune-Shell Tortoise: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail."
+        },
+        {
+          "introduction" : "Rune-Shell Tortoise appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving ancient rune tortoise.",
+          "name" : "Rune-Shell Tortoise Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Rune-Shell Tortoise: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail."
+        },
+        {
+          "introduction" : "Rune-Shell Tortoise appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving ancient rune tortoise.",
+          "name" : "Rune-Shell Tortoise Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Rune-Shell Tortoise: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail."
+        },
+        {
+          "introduction" : "Rune-Shell Tortoise appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving ancient rune tortoise.",
+          "name" : "Rune-Shell Tortoise Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Rune-Shell Tortoise: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail."
+        }
+      ],
+      "id" : "rune-shell-tortoise",
+      "lineageIntroduction" : "Rune-Shell Tortoise is an original mythic animal lineage built around ancient rune tortoise, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "deliberate-tortoise-steps",
+      "materialAnchor" : "Rune-Shell Tortoise: jade stone shell and bronze runes",
+      "motionAnchor" : "Rune-Shell Tortoise moves through deliberate tortoise steps while keeping broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 0.28627450980392155,
+        "green" : 0.6039215686274509,
+        "red" : 0.788235294117647
+      },
+      "silhouetteAnchor" : "broad tortoise body, domed glyph shell, stout pillar legs, and lantern tail",
+      "silhouetteClass" : "rune-shell-tortoise-topology",
+      "subtitle" : "ancient · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "ancient",
+        "heavy",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.8862745098039215,
+        "green" : 0.9607843137254902,
+        "red" : 0.5490196078431373
+      },
+      "artStyle" : "elegant; long disciplined curves, refined ornament, poised motion",
+      "displayName" : "Aurora Snow Leopard",
+      "energyAnchor" : "Aurora Snow Leopard: green-violet aurora spots",
+      "existenceAnchor" : "polar-light snow leopard",
+      "forms" : [
+        {
+          "introduction" : "Aurora Snow Leopard appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving polar-light snow leopard.",
+          "name" : "Aurora Snow Leopard Core",
+          "stage" : "egg",
+          "visualAnchor" : "Aurora Snow Leopard: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is long feline body, oversized snow paws, aurora ribbon tail, and ice ear crests."
+        },
+        {
+          "introduction" : "Aurora Snow Leopard appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving polar-light snow leopard.",
+          "name" : "Aurora Snow Leopard First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Aurora Snow Leopard: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is long feline body, oversized snow paws, aurora ribbon tail, and ice ear crests."
+        },
+        {
+          "introduction" : "Aurora Snow Leopard appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving polar-light snow leopard.",
+          "name" : "Aurora Snow Leopard Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Aurora Snow Leopard: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is long feline body, oversized snow paws, aurora ribbon tail, and ice ear crests."
+        },
+        {
+          "introduction" : "Aurora Snow Leopard appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving polar-light snow leopard.",
+          "name" : "Aurora Snow Leopard Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Aurora Snow Leopard: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is long feline body, oversized snow paws, aurora ribbon tail, and ice ear crests."
+        },
+        {
+          "introduction" : "Aurora Snow Leopard appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving polar-light snow leopard.",
+          "name" : "Aurora Snow Leopard Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Aurora Snow Leopard: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is long feline body, oversized snow paws, aurora ribbon tail, and ice ear crests."
+        }
+      ],
+      "id" : "aurora-snow-leopard",
+      "lineageIntroduction" : "Aurora Snow Leopard is an original mythic animal lineage built around polar-light snow leopard, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "snowfield-bounds",
+      "materialAnchor" : "Aurora Snow Leopard: white fur plates and translucent ice",
+      "motionAnchor" : "Aurora Snow Leopard moves through snowfield bounds while keeping long feline body, oversized snow paws, aurora ribbon tail, and ice ear crests.",
+      "motionProfile" : "prowling",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.45098039215686275,
+        "red" : 0.6235294117647059
+      },
+      "silhouetteAnchor" : "long feline body, oversized snow paws, aurora ribbon tail, and ice ear crests",
+      "silhouetteClass" : "aurora-snow-leopard-topology",
+      "subtitle" : "elegant · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "elegant",
+        "prowling",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.4235294117647059,
+        "green" : 0.8274509803921568,
+        "red" : 1
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Comet-Tail Tanuki",
+      "energyAnchor" : "Comet-Tail Tanuki: gold-blue comet sparks",
+      "existenceAnchor" : "comet raccoon dog",
+      "forms" : [
+        {
+          "introduction" : "Comet-Tail Tanuki appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving comet raccoon dog.",
+          "name" : "Comet-Tail Tanuki Core",
+          "stage" : "egg",
+          "visualAnchor" : "Comet-Tail Tanuki: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell."
+        },
+        {
+          "introduction" : "Comet-Tail Tanuki appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving comet raccoon dog.",
+          "name" : "Comet-Tail Tanuki First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Comet-Tail Tanuki: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell."
+        },
+        {
+          "introduction" : "Comet-Tail Tanuki appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving comet raccoon dog.",
+          "name" : "Comet-Tail Tanuki Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Comet-Tail Tanuki: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell."
+        },
+        {
+          "introduction" : "Comet-Tail Tanuki appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving comet raccoon dog.",
+          "name" : "Comet-Tail Tanuki Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Comet-Tail Tanuki: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell."
+        },
+        {
+          "introduction" : "Comet-Tail Tanuki appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving comet raccoon dog.",
+          "name" : "Comet-Tail Tanuki Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Comet-Tail Tanuki: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell."
+        }
+      ],
+      "id" : "comet-tail-tanuki",
+      "lineageIntroduction" : "Comet-Tail Tanuki is an original mythic animal lineage built around comet raccoon dog, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "rolling-hops",
+      "materialAnchor" : "Comet-Tail Tanuki: soft midnight fur and meteor brass",
+      "motionAnchor" : "Comet-Tail Tanuki moves through rolling hops while keeping round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell.",
+      "motionProfile" : "bouncing",
+      "secondaryAccent" : {
+        "blue" : 0.788235294117647,
+        "green" : 0.4,
+        "red" : 0.3137254901960784
+      },
+      "silhouetteAnchor" : "round masked face, squat body, huge ringed comet tail, and tiny meteor satchel shell",
+      "silhouetteClass" : "comet-tail-tanuki-topology",
+      "subtitle" : "cute · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "cute",
+        "bouncing",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.7725490196078432,
+        "green" : 0.8313725490196079,
+        "red" : 0.12156862745098039
+      },
+      "artStyle" : "mysterious; occult visual logic, restrained glow, uncanny but appealing identity",
+      "displayName" : "Abyssal Crown Whale",
+      "energyAnchor" : "Abyssal Crown Whale: teal bioluminescent constellations",
+      "existenceAnchor" : "deep-sea crown whale",
+      "forms" : [
+        {
+          "introduction" : "Abyssal Crown Whale appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving deep-sea crown whale.",
+          "name" : "Abyssal Crown Whale Core",
+          "stage" : "egg",
+          "visualAnchor" : "Abyssal Crown Whale: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is round whale head, six fin wings, crown lure, and long ribbon flukes."
+        },
+        {
+          "introduction" : "Abyssal Crown Whale appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving deep-sea crown whale.",
+          "name" : "Abyssal Crown Whale First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Abyssal Crown Whale: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is round whale head, six fin wings, crown lure, and long ribbon flukes."
+        },
+        {
+          "introduction" : "Abyssal Crown Whale appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving deep-sea crown whale.",
+          "name" : "Abyssal Crown Whale Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Abyssal Crown Whale: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is round whale head, six fin wings, crown lure, and long ribbon flukes."
+        },
+        {
+          "introduction" : "Abyssal Crown Whale appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving deep-sea crown whale.",
+          "name" : "Abyssal Crown Whale Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Abyssal Crown Whale: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is round whale head, six fin wings, crown lure, and long ribbon flukes."
+        },
+        {
+          "introduction" : "Abyssal Crown Whale appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving deep-sea crown whale.",
+          "name" : "Abyssal Crown Whale Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Abyssal Crown Whale: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is round whale head, six fin wings, crown lure, and long ribbon flukes."
+        }
+      ],
+      "id" : "abyssal-crown-whale",
+      "lineageIntroduction" : "Abyssal Crown Whale is an original mythic creature lineage built around deep-sea crown whale, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "slow-pressure-swims",
+      "materialAnchor" : "Abyssal Crown Whale: dark velvet skin and pearl armor",
+      "motionAnchor" : "Abyssal Crown Whale moves through slow pressure swims while keeping round whale head, six fin wings, crown lure, and long ribbon flukes.",
+      "motionProfile" : "swimming",
+      "secondaryAccent" : {
+        "blue" : 0.47843137254901963,
+        "green" : 0.24313725490196078,
+        "red" : 0.11764705882352941
+      },
+      "silhouetteAnchor" : "round whale head, six fin wings, crown lure, and long ribbon flukes",
+      "silhouetteClass" : "abyssal-crown-whale-topology",
+      "subtitle" : "mysterious · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "mysterious",
+        "swimming",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.8745098039215686,
+        "green" : 0.8823529411764706,
+        "red" : 0.30196078431372547
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Clockwork Hummingbird",
+      "energyAnchor" : "Clockwork Hummingbird: cyan timing sparks",
+      "existenceAnchor" : "tiny clockwork hummingbird",
+      "forms" : [
+        {
+          "introduction" : "Clockwork Hummingbird appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving tiny clockwork hummingbird.",
+          "name" : "Clockwork Hummingbird Core",
+          "stage" : "egg",
+          "visualAnchor" : "Clockwork Hummingbird: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is needle beak, rapid gear wings, teardrop body, and key-wound tail."
+        },
+        {
+          "introduction" : "Clockwork Hummingbird appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving tiny clockwork hummingbird.",
+          "name" : "Clockwork Hummingbird First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Clockwork Hummingbird: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is needle beak, rapid gear wings, teardrop body, and key-wound tail."
+        },
+        {
+          "introduction" : "Clockwork Hummingbird appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving tiny clockwork hummingbird.",
+          "name" : "Clockwork Hummingbird Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Clockwork Hummingbird: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is needle beak, rapid gear wings, teardrop body, and key-wound tail."
+        },
+        {
+          "introduction" : "Clockwork Hummingbird appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving tiny clockwork hummingbird.",
+          "name" : "Clockwork Hummingbird Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Clockwork Hummingbird: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is needle beak, rapid gear wings, teardrop body, and key-wound tail."
+        },
+        {
+          "introduction" : "Clockwork Hummingbird appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving tiny clockwork hummingbird.",
+          "name" : "Clockwork Hummingbird Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Clockwork Hummingbird: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is needle beak, rapid gear wings, teardrop body, and key-wound tail."
+        }
+      ],
+      "id" : "clockwork-hummingbird",
+      "lineageIntroduction" : "Clockwork Hummingbird is an original mechanical animal lineage built around tiny clockwork hummingbird, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "precision-hovering",
+      "materialAnchor" : "Clockwork Hummingbird: brass clockwork and teal enamel",
+      "motionAnchor" : "Clockwork Hummingbird moves through precision hovering while keeping needle beak, rapid gear wings, teardrop body, and key-wound tail.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 0.23921568627450981,
+        "green" : 0.6078431372549019,
+        "red" : 0.8509803921568627
+      },
+      "silhouetteAnchor" : "needle beak, rapid gear wings, teardrop body, and key-wound tail",
+      "silhouetteClass" : "clockwork-hummingbird-topology",
+      "subtitle" : "exquisite · mechanical animal",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mechanical animal",
+        "exquisite",
+        "winged",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9450980392156862,
+        "green" : 0.9176470588235294,
+        "red" : 0.3843137254901961
+      },
+      "artStyle" : "dreamlike; soft luminous materials, surreal flowing contours, gentle mystery",
+      "displayName" : "Lantern Jelly Drake",
+      "energyAnchor" : "Lantern Jelly Drake: aqua lantern glow",
+      "existenceAnchor" : "jellyfish dragon hybrid",
+      "forms" : [
+        {
+          "introduction" : "Lantern Jelly Drake appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving jellyfish dragon hybrid.",
+          "name" : "Lantern Jelly Drake Core",
+          "stage" : "egg",
+          "visualAnchor" : "Lantern Jelly Drake: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail."
+        },
+        {
+          "introduction" : "Lantern Jelly Drake appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving jellyfish dragon hybrid.",
+          "name" : "Lantern Jelly Drake First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Lantern Jelly Drake: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail."
+        },
+        {
+          "introduction" : "Lantern Jelly Drake appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving jellyfish dragon hybrid.",
+          "name" : "Lantern Jelly Drake Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Lantern Jelly Drake: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail."
+        },
+        {
+          "introduction" : "Lantern Jelly Drake appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving jellyfish dragon hybrid.",
+          "name" : "Lantern Jelly Drake Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Lantern Jelly Drake: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail."
+        },
+        {
+          "introduction" : "Lantern Jelly Drake appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving jellyfish dragon hybrid.",
+          "name" : "Lantern Jelly Drake Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Lantern Jelly Drake: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is small dragon head under a glowing dome, four veil fins, and luminous tentacle tail."
+        }
+      ],
+      "id" : "lantern-jelly-drake",
+      "lineageIntroduction" : "Lantern Jelly Drake is an original mythic creature lineage built around jellyfish dragon hybrid, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "pulsing-air-swims",
+      "materialAnchor" : "Lantern Jelly Drake: translucent gel and pearl scales",
+      "motionAnchor" : "Lantern Jelly Drake moves through pulsing air swims while keeping small dragon head under a glowing dome, four veil fins, and luminous tentacle tail.",
+      "motionProfile" : "swimming",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.4196078431372549,
+        "red" : 0.6980392156862745
+      },
+      "silhouetteAnchor" : "small dragon head under a glowing dome, four veil fins, and luminous tentacle tail",
+      "silhouetteClass" : "lantern-jelly-drake-topology",
+      "subtitle" : "dreamlike · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "dreamlike",
+        "swimming",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.7215686274509804,
+        "green" : 0.9411764705882353,
+        "red" : 0.3843137254901961
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Crystal Mantis",
+      "energyAnchor" : "Crystal Mantis: laser-thin rainbow cuts",
+      "existenceAnchor" : "prismatic mantis",
+      "forms" : [
+        {
+          "introduction" : "Crystal Mantis appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving prismatic mantis.",
+          "name" : "Crystal Mantis Core",
+          "stage" : "egg",
+          "visualAnchor" : "Crystal Mantis: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is triangular insect head, folded scythe arms, four stilt legs, and shard wings."
+        },
+        {
+          "introduction" : "Crystal Mantis appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving prismatic mantis.",
+          "name" : "Crystal Mantis First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Crystal Mantis: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is triangular insect head, folded scythe arms, four stilt legs, and shard wings."
+        },
+        {
+          "introduction" : "Crystal Mantis appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving prismatic mantis.",
+          "name" : "Crystal Mantis Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Crystal Mantis: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is triangular insect head, folded scythe arms, four stilt legs, and shard wings."
+        },
+        {
+          "introduction" : "Crystal Mantis appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving prismatic mantis.",
+          "name" : "Crystal Mantis Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Crystal Mantis: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is triangular insect head, folded scythe arms, four stilt legs, and shard wings."
+        },
+        {
+          "introduction" : "Crystal Mantis appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving prismatic mantis.",
+          "name" : "Crystal Mantis Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Crystal Mantis: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is triangular insect head, folded scythe arms, four stilt legs, and shard wings."
+        }
+      ],
+      "id" : "crystal-mantis",
+      "lineageIntroduction" : "Crystal Mantis is an original mythic animal lineage built around prismatic mantis, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "stilted-mantis-dashes",
+      "materialAnchor" : "Crystal Mantis: faceted emerald crystal and gold joints",
+      "motionAnchor" : "Crystal Mantis moves through stilted mantis dashes while keeping triangular insect head, folded scythe arms, four stilt legs, and shard wings.",
+      "motionProfile" : "skittering",
+      "secondaryAccent" : {
+        "blue" : 0.3607843137254902,
+        "green" : 0.788235294117647,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "triangular insect head, folded scythe arms, four stilt legs, and shard wings",
+      "silhouetteClass" : "crystal-mantis-topology",
+      "subtitle" : "exquisite · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "exquisite",
+        "skittering",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.16862745098039217,
+        "green" : 0.41568627450980394,
+        "red" : 1
+      },
+      "artStyle" : "fierce; arena-ready anatomy, forceful stance, sharp readable massing",
+      "displayName" : "Magma Armadillo",
+      "energyAnchor" : "Magma Armadillo: rolling fire rings",
+      "existenceAnchor" : "rolling lava armadillo",
+      "forms" : [
+        {
+          "introduction" : "Magma Armadillo appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving rolling lava armadillo.",
+          "name" : "Magma Armadillo Core",
+          "stage" : "egg",
+          "visualAnchor" : "Magma Armadillo: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is armored round back, pointed snout, four digging claws, and segmented ember tail."
+        },
+        {
+          "introduction" : "Magma Armadillo appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving rolling lava armadillo.",
+          "name" : "Magma Armadillo First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Magma Armadillo: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is armored round back, pointed snout, four digging claws, and segmented ember tail."
+        },
+        {
+          "introduction" : "Magma Armadillo appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving rolling lava armadillo.",
+          "name" : "Magma Armadillo Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Magma Armadillo: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is armored round back, pointed snout, four digging claws, and segmented ember tail."
+        },
+        {
+          "introduction" : "Magma Armadillo appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving rolling lava armadillo.",
+          "name" : "Magma Armadillo Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Magma Armadillo: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is armored round back, pointed snout, four digging claws, and segmented ember tail."
+        },
+        {
+          "introduction" : "Magma Armadillo appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving rolling lava armadillo.",
+          "name" : "Magma Armadillo Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Magma Armadillo: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is armored round back, pointed snout, four digging claws, and segmented ember tail."
+        }
+      ],
+      "id" : "magma-armadillo",
+      "lineageIntroduction" : "Magma Armadillo is an original mythic animal lineage built around rolling lava armadillo, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "armored-rolls",
+      "materialAnchor" : "Magma Armadillo: basalt shell and molten seams",
+      "motionAnchor" : "Magma Armadillo moves through armored rolls while keeping armored round back, pointed snout, four digging claws, and segmented ember tail.",
+      "motionProfile" : "rolling",
+      "secondaryAccent" : {
+        "blue" : 0.18823529411764706,
+        "green" : 0.14901960784313725,
+        "red" : 0.22745098039215686
+      },
+      "silhouetteAnchor" : "armored round back, pointed snout, four digging claws, and segmented ember tail",
+      "silhouetteClass" : "magma-armadillo-topology",
+      "subtitle" : "fierce · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "fierce",
+        "rolling",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9098039215686274,
+        "red" : 0.5607843137254902
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Spectral Axolotl",
+      "energyAnchor" : "Spectral Axolotl: blue-pink soul bubbles",
+      "existenceAnchor" : "ghostly axolotl",
+      "forms" : [
+        {
+          "introduction" : "Spectral Axolotl appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving ghostly axolotl.",
+          "name" : "Spectral Axolotl Core",
+          "stage" : "egg",
+          "visualAnchor" : "Spectral Axolotl: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is wide smiling head, six feather gills, tiny legs, and long translucent tail."
+        },
+        {
+          "introduction" : "Spectral Axolotl appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving ghostly axolotl.",
+          "name" : "Spectral Axolotl First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Spectral Axolotl: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is wide smiling head, six feather gills, tiny legs, and long translucent tail."
+        },
+        {
+          "introduction" : "Spectral Axolotl appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving ghostly axolotl.",
+          "name" : "Spectral Axolotl Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Spectral Axolotl: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is wide smiling head, six feather gills, tiny legs, and long translucent tail."
+        },
+        {
+          "introduction" : "Spectral Axolotl appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving ghostly axolotl.",
+          "name" : "Spectral Axolotl Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Spectral Axolotl: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is wide smiling head, six feather gills, tiny legs, and long translucent tail."
+        },
+        {
+          "introduction" : "Spectral Axolotl appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving ghostly axolotl.",
+          "name" : "Spectral Axolotl Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Spectral Axolotl: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is wide smiling head, six feather gills, tiny legs, and long translucent tail."
+        }
+      ],
+      "id" : "spectral-axolotl",
+      "lineageIntroduction" : "Spectral Axolotl is an original mythic animal lineage built around ghostly axolotl, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "gentle-water-hovers",
+      "materialAnchor" : "Spectral Axolotl: opal gel and spirit mist",
+      "motionAnchor" : "Spectral Axolotl moves through gentle water hovers while keeping wide smiling head, six feather gills, tiny legs, and long translucent tail.",
+      "motionProfile" : "swimming",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.5843137254901961,
+        "red" : 0.9450980392156862
+      },
+      "silhouetteAnchor" : "wide smiling head, six feather gills, tiny legs, and long translucent tail",
+      "silhouetteClass" : "spectral-axolotl-topology",
+      "subtitle" : "cute · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "cute",
+        "swimming",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.4823529411764706,
+        "red" : 0.3137254901960784
+      },
+      "artStyle" : "majestic; broad noble silhouette, calm scale, celestial polish",
+      "displayName" : "Cosmic Orca",
+      "energyAnchor" : "Cosmic Orca: constellation wake",
+      "existenceAnchor" : "starfield orca",
+      "forms" : [
+        {
+          "introduction" : "Cosmic Orca appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving starfield orca.",
+          "name" : "Cosmic Orca Core",
+          "stage" : "egg",
+          "visualAnchor" : "Cosmic Orca: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is bold orca body, crescent dorsal fin, wide flukes, and orbiting cheek rings."
+        },
+        {
+          "introduction" : "Cosmic Orca appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving starfield orca.",
+          "name" : "Cosmic Orca First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Cosmic Orca: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is bold orca body, crescent dorsal fin, wide flukes, and orbiting cheek rings."
+        },
+        {
+          "introduction" : "Cosmic Orca appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving starfield orca.",
+          "name" : "Cosmic Orca Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Cosmic Orca: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is bold orca body, crescent dorsal fin, wide flukes, and orbiting cheek rings."
+        },
+        {
+          "introduction" : "Cosmic Orca appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving starfield orca.",
+          "name" : "Cosmic Orca Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Cosmic Orca: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is bold orca body, crescent dorsal fin, wide flukes, and orbiting cheek rings."
+        },
+        {
+          "introduction" : "Cosmic Orca appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving starfield orca.",
+          "name" : "Cosmic Orca Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Cosmic Orca: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is bold orca body, crescent dorsal fin, wide flukes, and orbiting cheek rings."
+        }
+      ],
+      "id" : "cosmic-orca",
+      "lineageIntroduction" : "Cosmic Orca is an original mythic animal lineage built around starfield orca, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "breaching-star-swims",
+      "materialAnchor" : "Cosmic Orca: deep-space skin and white moonstone patches",
+      "motionAnchor" : "Cosmic Orca moves through breaching star swims while keeping bold orca body, crescent dorsal fin, wide flukes, and orbiting cheek rings.",
+      "motionProfile" : "swimming",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.9529411764705882,
+        "red" : 0.9490196078431372
+      },
+      "silhouetteAnchor" : "bold orca body, crescent dorsal fin, wide flukes, and orbiting cheek rings",
+      "silhouetteClass" : "cosmic-orca-topology",
+      "subtitle" : "majestic · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "majestic",
+        "swimming",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.7490196078431373,
+        "red" : 0.33725490196078434
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Storm Hare Courier",
+      "energyAnchor" : "Storm Hare Courier: yellow-white speed arcs",
+      "existenceAnchor" : "lightning hare",
+      "forms" : [
+        {
+          "introduction" : "Storm Hare Courier appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving lightning hare.",
+          "name" : "Storm Hare Courier Core",
+          "stage" : "egg",
+          "visualAnchor" : "Storm Hare Courier: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is long swept ears, compact runner body, oversized hind legs, and bolt tail."
+        },
+        {
+          "introduction" : "Storm Hare Courier appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving lightning hare.",
+          "name" : "Storm Hare Courier First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Storm Hare Courier: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is long swept ears, compact runner body, oversized hind legs, and bolt tail."
+        },
+        {
+          "introduction" : "Storm Hare Courier appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving lightning hare.",
+          "name" : "Storm Hare Courier Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Storm Hare Courier: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is long swept ears, compact runner body, oversized hind legs, and bolt tail."
+        },
+        {
+          "introduction" : "Storm Hare Courier appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving lightning hare.",
+          "name" : "Storm Hare Courier Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Storm Hare Courier: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is long swept ears, compact runner body, oversized hind legs, and bolt tail."
+        },
+        {
+          "introduction" : "Storm Hare Courier appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving lightning hare.",
+          "name" : "Storm Hare Courier Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Storm Hare Courier: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is long swept ears, compact runner body, oversized hind legs, and bolt tail."
+        }
+      ],
+      "id" : "storm-hare-courier",
+      "lineageIntroduction" : "Storm Hare Courier is an original mythic animal lineage built around lightning hare, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "thunder-hare-sprints",
+      "materialAnchor" : "Storm Hare Courier: blue storm fur and copper anklets",
+      "motionAnchor" : "Storm Hare Courier moves through thunder hare sprints while keeping long swept ears, compact runner body, oversized hind legs, and bolt tail.",
+      "motionProfile" : "agile",
+      "secondaryAccent" : {
+        "blue" : 0.35294117647058826,
+        "green" : 0.8901960784313725,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "long swept ears, compact runner body, oversized hind legs, and bolt tail",
+      "silhouetteClass" : "storm-hare-courier-topology",
+      "subtitle" : "cute · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "cute",
+        "agile",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.6196078431372549,
+        "green" : 0.8156862745098039,
+        "red" : 0.30980392156862746
+      },
+      "artStyle" : "elegant; long disciplined curves, refined ornament, poised motion",
+      "displayName" : "Jade Moon Serpent",
+      "energyAnchor" : "Jade Moon Serpent: pale lunar mist",
+      "existenceAnchor" : "wingless lunar serpent",
+      "forms" : [
+        {
+          "introduction" : "Jade Moon Serpent appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving wingless lunar serpent.",
+          "name" : "Jade Moon Serpent Core",
+          "stage" : "egg",
+          "visualAnchor" : "Jade Moon Serpent: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is long jade body, crescent head fins, pearl whiskers, and fan tail."
+        },
+        {
+          "introduction" : "Jade Moon Serpent appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving wingless lunar serpent.",
+          "name" : "Jade Moon Serpent First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Jade Moon Serpent: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is long jade body, crescent head fins, pearl whiskers, and fan tail."
+        },
+        {
+          "introduction" : "Jade Moon Serpent appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving wingless lunar serpent.",
+          "name" : "Jade Moon Serpent Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Jade Moon Serpent: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is long jade body, crescent head fins, pearl whiskers, and fan tail."
+        },
+        {
+          "introduction" : "Jade Moon Serpent appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving wingless lunar serpent.",
+          "name" : "Jade Moon Serpent Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Jade Moon Serpent: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is long jade body, crescent head fins, pearl whiskers, and fan tail."
+        },
+        {
+          "introduction" : "Jade Moon Serpent appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving wingless lunar serpent.",
+          "name" : "Jade Moon Serpent Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Jade Moon Serpent: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is long jade body, crescent head fins, pearl whiskers, and fan tail."
+        }
+      ],
+      "id" : "jade-moon-serpent",
+      "lineageIntroduction" : "Jade Moon Serpent is an original mythic creature lineage built around wingless lunar serpent, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "floating-serpent-coils",
+      "materialAnchor" : "Jade Moon Serpent: polished jade scales and moon pearl",
+      "motionAnchor" : "Jade Moon Serpent moves through floating serpent coils while keeping long jade body, crescent head fins, pearl whiskers, and fan tail.",
+      "motionProfile" : "serpentine",
+      "secondaryAccent" : {
+        "blue" : 0.8156862745098039,
+        "green" : 0.9450980392156862,
+        "red" : 0.9098039215686274
+      },
+      "silhouetteAnchor" : "long jade body, crescent head fins, pearl whiskers, and fan tail",
+      "silhouetteClass" : "jade-moon-serpent-topology",
+      "subtitle" : "elegant · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "elegant",
+        "serpentine",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9098039215686274,
+        "green" : 0.3843137254901961,
+        "red" : 0.5294117647058824
+      },
+      "artStyle" : "gothic; moonlit dark ornament, cathedral-like shape language without architecture, noble menace",
+      "displayName" : "Obsidian Raven",
+      "energyAnchor" : "Obsidian Raven: violet omen sparks",
+      "existenceAnchor" : "black-glass prophecy raven",
+      "forms" : [
+        {
+          "introduction" : "Obsidian Raven appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving black-glass prophecy raven.",
+          "name" : "Obsidian Raven Core",
+          "stage" : "egg",
+          "visualAnchor" : "Obsidian Raven: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is angular raven beak, broad shard wings, crown feathers, and key-shaped talons."
+        },
+        {
+          "introduction" : "Obsidian Raven appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving black-glass prophecy raven.",
+          "name" : "Obsidian Raven First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Obsidian Raven: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is angular raven beak, broad shard wings, crown feathers, and key-shaped talons."
+        },
+        {
+          "introduction" : "Obsidian Raven appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving black-glass prophecy raven.",
+          "name" : "Obsidian Raven Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Obsidian Raven: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is angular raven beak, broad shard wings, crown feathers, and key-shaped talons."
+        },
+        {
+          "introduction" : "Obsidian Raven appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving black-glass prophecy raven.",
+          "name" : "Obsidian Raven Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Obsidian Raven: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is angular raven beak, broad shard wings, crown feathers, and key-shaped talons."
+        },
+        {
+          "introduction" : "Obsidian Raven appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving black-glass prophecy raven.",
+          "name" : "Obsidian Raven Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Obsidian Raven: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is angular raven beak, broad shard wings, crown feathers, and key-shaped talons."
+        }
+      ],
+      "id" : "obsidian-raven",
+      "lineageIntroduction" : "Obsidian Raven is an original mythic animal lineage built around black-glass prophecy raven, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "sharp-raven-flight",
+      "materialAnchor" : "Obsidian Raven: smoked obsidian feathers and silver edges",
+      "motionAnchor" : "Obsidian Raven moves through sharp raven flight while keeping angular raven beak, broad shard wings, crown feathers, and key-shaped talons.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 0.15294117647058825,
+        "green" : 0.09411764705882353,
+        "red" : 0.09019607843137255
+      },
+      "silhouetteAnchor" : "angular raven beak, broad shard wings, crown feathers, and key-shaped talons",
+      "silhouetteClass" : "obsidian-raven-topology",
+      "subtitle" : "gothic · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "gothic",
+        "winged",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.6196078431372549,
+        "red" : 0.2784313725490196
+      },
+      "artStyle" : "regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials",
+      "displayName" : "Sapphire Cerberus",
+      "energyAnchor" : "Sapphire Cerberus: blue triune flame",
+      "existenceAnchor" : "three-headed crystal guardian hound",
+      "forms" : [
+        {
+          "introduction" : "Sapphire Cerberus appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving three-headed crystal guardian hound.",
+          "name" : "Sapphire Cerberus Core",
+          "stage" : "egg",
+          "visualAnchor" : "Sapphire Cerberus: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is three distinct canine heads, six ears, four legs, and braided crystal tail."
+        },
+        {
+          "introduction" : "Sapphire Cerberus appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving three-headed crystal guardian hound.",
+          "name" : "Sapphire Cerberus First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Sapphire Cerberus: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is three distinct canine heads, six ears, four legs, and braided crystal tail."
+        },
+        {
+          "introduction" : "Sapphire Cerberus appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving three-headed crystal guardian hound.",
+          "name" : "Sapphire Cerberus Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Sapphire Cerberus: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is three distinct canine heads, six ears, four legs, and braided crystal tail."
+        },
+        {
+          "introduction" : "Sapphire Cerberus appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving three-headed crystal guardian hound.",
+          "name" : "Sapphire Cerberus Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Sapphire Cerberus: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is three distinct canine heads, six ears, four legs, and braided crystal tail."
+        },
+        {
+          "introduction" : "Sapphire Cerberus appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving three-headed crystal guardian hound.",
+          "name" : "Sapphire Cerberus Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Sapphire Cerberus: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is three distinct canine heads, six ears, four legs, and braided crystal tail."
+        }
+      ],
+      "id" : "sapphire-cerberus",
+      "lineageIntroduction" : "Sapphire Cerberus is an original mythic creature lineage built around three-headed crystal guardian hound, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "guardian-hound-charges",
+      "materialAnchor" : "Sapphire Cerberus: sapphire crystal armor and silver collars",
+      "motionAnchor" : "Sapphire Cerberus moves through guardian hound charges while keeping three distinct canine heads, six ears, four legs, and braided crystal tail.",
+      "motionProfile" : "prowling",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.9098039215686274,
+        "red" : 0.788235294117647
+      },
+      "silhouetteAnchor" : "three distinct canine heads, six ears, four legs, and braided crystal tail",
+      "silhouetteClass" : "sapphire-cerberus-topology",
+      "subtitle" : "regal · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "regal",
+        "prowling",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.4196078431372549,
+        "green" : 0.8392156862745098,
+        "red" : 1
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Gilded Qilin",
+      "energyAnchor" : "Gilded Qilin: auspicious rainbow breath",
+      "existenceAnchor" : "golden cloud qilin",
+      "forms" : [
+        {
+          "introduction" : "Gilded Qilin appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving golden cloud qilin.",
+          "name" : "Gilded Qilin Core",
+          "stage" : "egg",
+          "visualAnchor" : "Gilded Qilin: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is deer-dragon face, single branch horn, four cloven legs, and cloud ribbon tail."
+        },
+        {
+          "introduction" : "Gilded Qilin appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving golden cloud qilin.",
+          "name" : "Gilded Qilin First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Gilded Qilin: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is deer-dragon face, single branch horn, four cloven legs, and cloud ribbon tail."
+        },
+        {
+          "introduction" : "Gilded Qilin appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving golden cloud qilin.",
+          "name" : "Gilded Qilin Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Gilded Qilin: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is deer-dragon face, single branch horn, four cloven legs, and cloud ribbon tail."
+        },
+        {
+          "introduction" : "Gilded Qilin appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving golden cloud qilin.",
+          "name" : "Gilded Qilin Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Gilded Qilin: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is deer-dragon face, single branch horn, four cloven legs, and cloud ribbon tail."
+        },
+        {
+          "introduction" : "Gilded Qilin appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving golden cloud qilin.",
+          "name" : "Gilded Qilin Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Gilded Qilin: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is deer-dragon face, single branch horn, four cloven legs, and cloud ribbon tail."
+        }
+      ],
+      "id" : "gilded-qilin-cub",
+      "lineageIntroduction" : "Gilded Qilin is an original mythic creature lineage built around golden cloud qilin, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "cloud-prancing",
+      "materialAnchor" : "Gilded Qilin: warm gold scales and white cloud fleece",
+      "motionAnchor" : "Gilded Qilin moves through cloud prancing while keeping deer-dragon face, single branch horn, four cloven legs, and cloud ribbon tail.",
+      "motionProfile" : "buoyant",
+      "secondaryAccent" : {
+        "blue" : 0.8588235294117647,
+        "green" : 0.9529411764705882,
+        "red" : 0.9686274509803922
+      },
+      "silhouetteAnchor" : "deer-dragon face, single branch horn, four cloven legs, and cloud ribbon tail",
+      "silhouetteClass" : "gilded-qilin-cub-topology",
+      "subtitle" : "sacred · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "sacred",
+        "buoyant",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.3333333333333333,
+        "green" : 0.5450980392156862,
+        "red" : 1
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Starlight Red Panda",
+      "energyAnchor" : "Starlight Red Panda: tiny gold constellations",
+      "existenceAnchor" : "stellar red panda",
+      "forms" : [
+        {
+          "introduction" : "Starlight Red Panda appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving stellar red panda.",
+          "name" : "Starlight Red Panda Core",
+          "stage" : "egg",
+          "visualAnchor" : "Starlight Red Panda: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is round masked face, short legs, enormous ringed star tail, and comet ear tufts."
+        },
+        {
+          "introduction" : "Starlight Red Panda appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving stellar red panda.",
+          "name" : "Starlight Red Panda First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Starlight Red Panda: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is round masked face, short legs, enormous ringed star tail, and comet ear tufts."
+        },
+        {
+          "introduction" : "Starlight Red Panda appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving stellar red panda.",
+          "name" : "Starlight Red Panda Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Starlight Red Panda: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is round masked face, short legs, enormous ringed star tail, and comet ear tufts."
+        },
+        {
+          "introduction" : "Starlight Red Panda appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving stellar red panda.",
+          "name" : "Starlight Red Panda Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Starlight Red Panda: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is round masked face, short legs, enormous ringed star tail, and comet ear tufts."
+        },
+        {
+          "introduction" : "Starlight Red Panda appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving stellar red panda.",
+          "name" : "Starlight Red Panda Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Starlight Red Panda: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is round masked face, short legs, enormous ringed star tail, and comet ear tufts."
+        }
+      ],
+      "id" : "starlight-red-panda",
+      "lineageIntroduction" : "Starlight Red Panda is an original mythic animal lineage built around stellar red panda, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "playful-tree-free-hops",
+      "materialAnchor" : "Starlight Red Panda: russet velvet fur and navy star plates",
+      "motionAnchor" : "Starlight Red Panda moves through playful tree free hops while keeping round masked face, short legs, enormous ringed star tail, and comet ear tufts.",
+      "motionProfile" : "bouncing",
+      "secondaryAccent" : {
+        "blue" : 0.7803921568627451,
+        "green" : 0.30196078431372547,
+        "red" : 0.2901960784313726
+      },
+      "silhouetteAnchor" : "round masked face, short legs, enormous ringed star tail, and comet ear tufts",
+      "silhouetteClass" : "starlight-red-panda-topology",
+      "subtitle" : "cute · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "cute",
+        "bouncing",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9058823529411765,
+        "red" : 0.8509803921568627
+      },
+      "artStyle" : "serene; balanced silhouette, gentle expression, quiet luminous movement",
+      "displayName" : "Moonbell Owl",
+      "energyAnchor" : "Moonbell Owl: soft lunar chimes",
+      "existenceAnchor" : "bell-bodied moon owl",
+      "forms" : [
+        {
+          "introduction" : "Moonbell Owl appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving bell-bodied moon owl.",
+          "name" : "Moonbell Owl Core",
+          "stage" : "egg",
+          "visualAnchor" : "Moonbell Owl: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is round owl face, bell torso, crescent wings, and clapper talons."
+        },
+        {
+          "introduction" : "Moonbell Owl appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving bell-bodied moon owl.",
+          "name" : "Moonbell Owl First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Moonbell Owl: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is round owl face, bell torso, crescent wings, and clapper talons."
+        },
+        {
+          "introduction" : "Moonbell Owl appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving bell-bodied moon owl.",
+          "name" : "Moonbell Owl Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Moonbell Owl: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is round owl face, bell torso, crescent wings, and clapper talons."
+        },
+        {
+          "introduction" : "Moonbell Owl appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving bell-bodied moon owl.",
+          "name" : "Moonbell Owl Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Moonbell Owl: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is round owl face, bell torso, crescent wings, and clapper talons."
+        },
+        {
+          "introduction" : "Moonbell Owl appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving bell-bodied moon owl.",
+          "name" : "Moonbell Owl Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Moonbell Owl: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is round owl face, bell torso, crescent wings, and clapper talons."
+        }
+      ],
+      "id" : "moonbell-owl",
+      "lineageIntroduction" : "Moonbell Owl is an original mythic animal lineage built around bell-bodied moon owl, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "silent-bell-hovering",
+      "materialAnchor" : "Moonbell Owl: silver feathers and pale ceramic",
+      "motionAnchor" : "Moonbell Owl moves through silent bell hovering while keeping round owl face, bell torso, crescent wings, and clapper talons.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 0.8470588235294118,
+        "green" : 0.5137254901960784,
+        "red" : 0.49019607843137253
+      },
+      "silhouetteAnchor" : "round owl face, bell torso, crescent wings, and clapper talons",
+      "silhouetteClass" : "moonbell-owl-topology",
+      "subtitle" : "serene · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "serene",
+        "winged",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.8509803921568627,
+        "green" : 0.9176470588235294,
+        "red" : 0.38823529411764707
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Rainbow-Shell Snail",
+      "energyAnchor" : "Rainbow-Shell Snail: rainbow slipstream",
+      "existenceAnchor" : "prismatic racing snail",
+      "forms" : [
+        {
+          "introduction" : "Rainbow-Shell Snail appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving prismatic racing snail.",
+          "name" : "Rainbow-Shell Snail Core",
+          "stage" : "egg",
+          "visualAnchor" : "Rainbow-Shell Snail: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae."
+        },
+        {
+          "introduction" : "Rainbow-Shell Snail appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving prismatic racing snail.",
+          "name" : "Rainbow-Shell Snail First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Rainbow-Shell Snail: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae."
+        },
+        {
+          "introduction" : "Rainbow-Shell Snail appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving prismatic racing snail.",
+          "name" : "Rainbow-Shell Snail Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Rainbow-Shell Snail: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae."
+        },
+        {
+          "introduction" : "Rainbow-Shell Snail appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving prismatic racing snail.",
+          "name" : "Rainbow-Shell Snail Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Rainbow-Shell Snail: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae."
+        },
+        {
+          "introduction" : "Rainbow-Shell Snail appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving prismatic racing snail.",
+          "name" : "Rainbow-Shell Snail Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Rainbow-Shell Snail: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae."
+        }
+      ],
+      "id" : "rainbow-shell-snail",
+      "lineageIntroduction" : "Rainbow-Shell Snail is an original mythic animal lineage built around prismatic racing snail, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "surprisingly-fast-glides",
+      "materialAnchor" : "Rainbow-Shell Snail: opal shell glass and glossy gel",
+      "motionAnchor" : "Rainbow-Shell Snail moves through surprisingly fast glides while keeping soft round face, low foot, immense spiral shell, and two ribbon antennae.",
+      "motionProfile" : "gliding",
+      "secondaryAccent" : {
+        "blue" : 0.7843137254901961,
+        "green" : 0.4745098039215686,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "soft round face, low foot, immense spiral shell, and two ribbon antennae",
+      "silhouetteClass" : "rainbow-shell-snail-topology",
+      "subtitle" : "cute · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "cute",
+        "gliding",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.611764705882353,
+        "red" : 0.7098039215686275
+      },
+      "artStyle" : "dreamlike; soft luminous materials, surreal flowing contours, gentle mystery",
+      "displayName" : "Velvet Cloud Baku",
+      "energyAnchor" : "Velvet Cloud Baku: lavender dream spirals",
+      "existenceAnchor" : "dream-eating tapir spirit",
+      "forms" : [
+        {
+          "introduction" : "Velvet Cloud Baku appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving dream-eating tapir spirit.",
+          "name" : "Velvet Cloud Baku Core",
+          "stage" : "egg",
+          "visualAnchor" : "Velvet Cloud Baku: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is short trunk, rounded body, cloud ears, and curled nightmare tail."
+        },
+        {
+          "introduction" : "Velvet Cloud Baku appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving dream-eating tapir spirit.",
+          "name" : "Velvet Cloud Baku First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Velvet Cloud Baku: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is short trunk, rounded body, cloud ears, and curled nightmare tail."
+        },
+        {
+          "introduction" : "Velvet Cloud Baku appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving dream-eating tapir spirit.",
+          "name" : "Velvet Cloud Baku Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Velvet Cloud Baku: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is short trunk, rounded body, cloud ears, and curled nightmare tail."
+        },
+        {
+          "introduction" : "Velvet Cloud Baku appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving dream-eating tapir spirit.",
+          "name" : "Velvet Cloud Baku Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Velvet Cloud Baku: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is short trunk, rounded body, cloud ears, and curled nightmare tail."
+        },
+        {
+          "introduction" : "Velvet Cloud Baku appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving dream-eating tapir spirit.",
+          "name" : "Velvet Cloud Baku Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Velvet Cloud Baku: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is short trunk, rounded body, cloud ears, and curled nightmare tail."
+        }
+      ],
+      "id" : "velvet-cloud-baku",
+      "lineageIntroduction" : "Velvet Cloud Baku is an original mythic creature lineage built around dream-eating tapir spirit, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "sleepy-cloud-bounds",
+      "materialAnchor" : "Velvet Cloud Baku: midnight velvet and cloud fleece",
+      "motionAnchor" : "Velvet Cloud Baku moves through sleepy cloud bounds while keeping short trunk, rounded body, cloud ears, and curled nightmare tail.",
+      "motionProfile" : "buoyant",
+      "secondaryAccent" : {
+        "blue" : 0.48627450980392156,
+        "green" : 0.2627450980392157,
+        "red" : 0.2
+      },
+      "silhouetteAnchor" : "short trunk, rounded body, cloud ears, and curled nightmare tail",
+      "silhouetteClass" : "velvet-cloud-baku-topology",
+      "subtitle" : "dreamlike · mythic creature",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic creature",
+        "dreamlike",
+        "buoyant",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9019607843137255,
+        "red" : 0.17647058823529413
+      },
+      "artStyle" : "neon; competitive night-arena energy, sharp neon accents, speed-focused silhouette",
+      "displayName" : "Neon Ribbon Lizard",
+      "energyAnchor" : "Neon Ribbon Lizard: cyan-magenta race trails",
+      "existenceAnchor" : "arena ribbon lizard",
+      "forms" : [
+        {
+          "introduction" : "Neon Ribbon Lizard appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving arena ribbon lizard.",
+          "name" : "Neon Ribbon Lizard Core",
+          "stage" : "egg",
+          "visualAnchor" : "Neon Ribbon Lizard: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is low sleek lizard body, fin crest, four gripping feet, and two light-ribbon tails."
+        },
+        {
+          "introduction" : "Neon Ribbon Lizard appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving arena ribbon lizard.",
+          "name" : "Neon Ribbon Lizard First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Neon Ribbon Lizard: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is low sleek lizard body, fin crest, four gripping feet, and two light-ribbon tails."
+        },
+        {
+          "introduction" : "Neon Ribbon Lizard appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving arena ribbon lizard.",
+          "name" : "Neon Ribbon Lizard Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Neon Ribbon Lizard: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is low sleek lizard body, fin crest, four gripping feet, and two light-ribbon tails."
+        },
+        {
+          "introduction" : "Neon Ribbon Lizard appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving arena ribbon lizard.",
+          "name" : "Neon Ribbon Lizard Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Neon Ribbon Lizard: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is low sleek lizard body, fin crest, four gripping feet, and two light-ribbon tails."
+        },
+        {
+          "introduction" : "Neon Ribbon Lizard appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving arena ribbon lizard.",
+          "name" : "Neon Ribbon Lizard Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Neon Ribbon Lizard: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is low sleek lizard body, fin crest, four gripping feet, and two light-ribbon tails."
+        }
+      ],
+      "id" : "neon-ribbon-lizard",
+      "lineageIntroduction" : "Neon Ribbon Lizard is an original mythic animal lineage built around arena ribbon lizard, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "wall-running-sprints",
+      "materialAnchor" : "Neon Ribbon Lizard: dark scales and neon glass fins",
+      "motionAnchor" : "Neon Ribbon Lizard moves through wall running sprints while keeping low sleek lizard body, fin crest, four gripping feet, and two light-ribbon tails.",
+      "motionProfile" : "agile",
+      "secondaryAccent" : {
+        "blue" : 0.7803921568627451,
+        "green" : 0.23529411764705882,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "low sleek lizard body, fin crest, four gripping feet, and two light-ribbon tails",
+      "silhouetteClass" : "neon-ribbon-lizard-topology",
+      "subtitle" : "neon · mythic animal",
+      "symbolName" : "pawprint.fill",
+      "tags" : [
+        "mythic animal",
+        "neon",
+        "agile",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.41568627450980394,
+        "green" : 0.8784313725490196,
+        "red" : 1
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Dawnwheel Seraph",
+      "energyAnchor" : "Dawnwheel Seraph: dawn rays and sacred geometry",
+      "existenceAnchor" : "faceless winged dawn deity",
+      "forms" : [
+        {
+          "introduction" : "Dawnwheel Seraph appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving faceless winged dawn deity.",
+          "name" : "Dawnwheel Seraph Core",
+          "stage" : "egg",
+          "visualAnchor" : "Dawnwheel Seraph: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is blank sun mask, six metal wings, wheel halo, and two long blessing arms."
+        },
+        {
+          "introduction" : "Dawnwheel Seraph appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving faceless winged dawn deity.",
+          "name" : "Dawnwheel Seraph First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Dawnwheel Seraph: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is blank sun mask, six metal wings, wheel halo, and two long blessing arms."
+        },
+        {
+          "introduction" : "Dawnwheel Seraph appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving faceless winged dawn deity.",
+          "name" : "Dawnwheel Seraph Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Dawnwheel Seraph: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is blank sun mask, six metal wings, wheel halo, and two long blessing arms."
+        },
+        {
+          "introduction" : "Dawnwheel Seraph appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving faceless winged dawn deity.",
+          "name" : "Dawnwheel Seraph Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Dawnwheel Seraph: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is blank sun mask, six metal wings, wheel halo, and two long blessing arms."
+        },
+        {
+          "introduction" : "Dawnwheel Seraph appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving faceless winged dawn deity.",
+          "name" : "Dawnwheel Seraph Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Dawnwheel Seraph: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is blank sun mask, six metal wings, wheel halo, and two long blessing arms."
+        }
+      ],
+      "id" : "dawnwheel-seraph",
+      "lineageIntroduction" : "Dawnwheel Seraph is an original divine entity lineage built around faceless winged dawn deity, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "majestic-hovering",
+      "materialAnchor" : "Dawnwheel Seraph: radiant gold and ivory crystal",
+      "motionAnchor" : "Dawnwheel Seraph moves through majestic hovering while keeping blank sun mask, six metal wings, wheel halo, and two long blessing arms.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 0.8705882352941177,
+        "green" : 0.9725490196078431,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "blank sun mask, six metal wings, wheel halo, and two long blessing arms",
+      "silhouetteClass" : "dawnwheel-seraph-topology",
+      "subtitle" : "sacred · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "sacred",
+        "winged",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9254901960784314,
+        "red" : 0.9019607843137255
+      },
+      "artStyle" : "mysterious; occult visual logic, restrained glow, uncanny but appealing identity",
+      "displayName" : "Moon-Eclipse Archon",
+      "energyAnchor" : "Moon-Eclipse Archon: white corona fire",
+      "existenceAnchor" : "crescent eclipse deity",
+      "forms" : [
+        {
+          "introduction" : "Moon-Eclipse Archon appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving crescent eclipse deity.",
+          "name" : "Moon-Eclipse Archon Core",
+          "stage" : "egg",
+          "visualAnchor" : "Moon-Eclipse Archon: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is black moon face, two crescent horns, four veil arms, and ring throne."
+        },
+        {
+          "introduction" : "Moon-Eclipse Archon appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving crescent eclipse deity.",
+          "name" : "Moon-Eclipse Archon First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Moon-Eclipse Archon: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is black moon face, two crescent horns, four veil arms, and ring throne."
+        },
+        {
+          "introduction" : "Moon-Eclipse Archon appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving crescent eclipse deity.",
+          "name" : "Moon-Eclipse Archon Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Moon-Eclipse Archon: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is black moon face, two crescent horns, four veil arms, and ring throne."
+        },
+        {
+          "introduction" : "Moon-Eclipse Archon appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving crescent eclipse deity.",
+          "name" : "Moon-Eclipse Archon Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Moon-Eclipse Archon: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is black moon face, two crescent horns, four veil arms, and ring throne."
+        },
+        {
+          "introduction" : "Moon-Eclipse Archon appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving crescent eclipse deity.",
+          "name" : "Moon-Eclipse Archon Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Moon-Eclipse Archon: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is black moon face, two crescent horns, four veil arms, and ring throne."
+        }
+      ],
+      "id" : "moon-eclipse-archon",
+      "lineageIntroduction" : "Moon-Eclipse Archon is an original divine entity lineage built around crescent eclipse deity, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "eclipse-orbits",
+      "materialAnchor" : "Moon-Eclipse Archon: black pearl and silver moon metal",
+      "motionAnchor" : "Moon-Eclipse Archon moves through eclipse orbits while keeping black moon face, two crescent horns, four veil arms, and ring throne.",
+      "motionProfile" : "orbiting",
+      "secondaryAccent" : {
+        "blue" : 0.43529411764705883,
+        "green" : 0.21568627450980393,
+        "red" : 0.24705882352941178
+      },
+      "silhouetteAnchor" : "black moon face, two crescent horns, four veil arms, and ring throne",
+      "silhouetteClass" : "moon-eclipse-archon-topology",
+      "subtitle" : "mysterious · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "mysterious",
+        "orbiting",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.796078431372549,
+        "red" : 0.4196078431372549
+      },
+      "artStyle" : "divine; monumental sacred geometry, supernatural scale, radiant focal core",
+      "displayName" : "Thousand-Eye Tempest",
+      "energyAnchor" : "Thousand-Eye Tempest: branching electric veins",
+      "existenceAnchor" : "many-eyed storm colossus",
+      "forms" : [
+        {
+          "introduction" : "Thousand-Eye Tempest appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving many-eyed storm colossus.",
+          "name" : "Thousand-Eye Tempest Core",
+          "stage" : "egg",
+          "visualAnchor" : "Thousand-Eye Tempest: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is cloud torso, six coil arms, many blue eyes, and tornado lower body."
+        },
+        {
+          "introduction" : "Thousand-Eye Tempest appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving many-eyed storm colossus.",
+          "name" : "Thousand-Eye Tempest First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Thousand-Eye Tempest: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is cloud torso, six coil arms, many blue eyes, and tornado lower body."
+        },
+        {
+          "introduction" : "Thousand-Eye Tempest appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving many-eyed storm colossus.",
+          "name" : "Thousand-Eye Tempest Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Thousand-Eye Tempest: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is cloud torso, six coil arms, many blue eyes, and tornado lower body."
+        },
+        {
+          "introduction" : "Thousand-Eye Tempest appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving many-eyed storm colossus.",
+          "name" : "Thousand-Eye Tempest Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Thousand-Eye Tempest: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is cloud torso, six coil arms, many blue eyes, and tornado lower body."
+        },
+        {
+          "introduction" : "Thousand-Eye Tempest appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving many-eyed storm colossus.",
+          "name" : "Thousand-Eye Tempest Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Thousand-Eye Tempest: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is cloud torso, six coil arms, many blue eyes, and tornado lower body."
+        }
+      ],
+      "id" : "thousand-eye-tempest",
+      "lineageIntroduction" : "Thousand-Eye Tempest is an original divine entity lineage built around many-eyed storm colossus, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "storm-vortex-rotation",
+      "materialAnchor" : "Thousand-Eye Tempest: charcoal cloudstone and lightning crystal",
+      "motionAnchor" : "Thousand-Eye Tempest moves through storm vortex rotation while keeping cloud torso, six coil arms, many blue eyes, and tornado lower body.",
+      "motionProfile" : "pulsing",
+      "secondaryAccent" : {
+        "blue" : 0.4980392156862745,
+        "green" : 0.26666666666666666,
+        "red" : 0.2784313725490196
+      },
+      "silhouetteAnchor" : "cloud torso, six coil arms, many blue eyes, and tornado lower body",
+      "silhouetteClass" : "thousand-eye-tempest-topology",
+      "subtitle" : "divine · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "divine",
+        "pulsing"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9529411764705882,
+        "green" : 0.9058823529411765,
+        "red" : 1
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Sacred Lotus Avatar",
+      "energyAnchor" : "Sacred Lotus Avatar: rose-gold compassion light",
+      "existenceAnchor" : "lotus-born divine spirit",
+      "forms" : [
+        {
+          "introduction" : "Sacred Lotus Avatar appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving lotus-born divine spirit.",
+          "name" : "Sacred Lotus Avatar Core",
+          "stage" : "egg",
+          "visualAnchor" : "Sacred Lotus Avatar: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is petal face, four floating hands, seated lotus body, and moon halo."
+        },
+        {
+          "introduction" : "Sacred Lotus Avatar appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving lotus-born divine spirit.",
+          "name" : "Sacred Lotus Avatar First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Sacred Lotus Avatar: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is petal face, four floating hands, seated lotus body, and moon halo."
+        },
+        {
+          "introduction" : "Sacred Lotus Avatar appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving lotus-born divine spirit.",
+          "name" : "Sacred Lotus Avatar Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Sacred Lotus Avatar: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is petal face, four floating hands, seated lotus body, and moon halo."
+        },
+        {
+          "introduction" : "Sacred Lotus Avatar appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving lotus-born divine spirit.",
+          "name" : "Sacred Lotus Avatar Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Sacred Lotus Avatar: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is petal face, four floating hands, seated lotus body, and moon halo."
+        },
+        {
+          "introduction" : "Sacred Lotus Avatar appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving lotus-born divine spirit.",
+          "name" : "Sacred Lotus Avatar Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Sacred Lotus Avatar: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is petal face, four floating hands, seated lotus body, and moon halo."
+        }
+      ],
+      "id" : "sacred-lotus-avatar",
+      "lineageIntroduction" : "Sacred Lotus Avatar is an original divine entity lineage built around lotus-born divine spirit, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "lotus-hovering",
+      "materialAnchor" : "Sacred Lotus Avatar: white jade petals and pale gold",
+      "motionAnchor" : "Sacred Lotus Avatar moves through lotus hovering while keeping petal face, four floating hands, seated lotus body, and moon halo.",
+      "motionProfile" : "buoyant",
+      "secondaryAccent" : {
+        "blue" : 0.3333333333333333,
+        "green" : 0.7215686274509804,
+        "red" : 0.9058823529411765
+      },
+      "silhouetteAnchor" : "petal face, four floating hands, seated lotus body, and moon halo",
+      "silhouetteClass" : "sacred-lotus-avatar-topology",
+      "subtitle" : "sacred · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "sacred",
+        "buoyant",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.2901960784313726,
+        "green" : 0.8196078431372549,
+        "red" : 1
+      },
+      "artStyle" : "regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials",
+      "displayName" : "Golden Sun Sphinx",
+      "energyAnchor" : "Golden Sun Sphinx: concentric solar glyphs",
+      "existenceAnchor" : "solar sphinx",
+      "forms" : [
+        {
+          "introduction" : "Golden Sun Sphinx appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving solar sphinx.",
+          "name" : "Golden Sun Sphinx Core",
+          "stage" : "egg",
+          "visualAnchor" : "Golden Sun Sphinx: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is lion body, smooth avian mask, broad gold wings, and sun-disc tail."
+        },
+        {
+          "introduction" : "Golden Sun Sphinx appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving solar sphinx.",
+          "name" : "Golden Sun Sphinx First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Golden Sun Sphinx: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is lion body, smooth avian mask, broad gold wings, and sun-disc tail."
+        },
+        {
+          "introduction" : "Golden Sun Sphinx appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving solar sphinx.",
+          "name" : "Golden Sun Sphinx Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Golden Sun Sphinx: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is lion body, smooth avian mask, broad gold wings, and sun-disc tail."
+        },
+        {
+          "introduction" : "Golden Sun Sphinx appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving solar sphinx.",
+          "name" : "Golden Sun Sphinx Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Golden Sun Sphinx: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is lion body, smooth avian mask, broad gold wings, and sun-disc tail."
+        },
+        {
+          "introduction" : "Golden Sun Sphinx appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving solar sphinx.",
+          "name" : "Golden Sun Sphinx Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Golden Sun Sphinx: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is lion body, smooth avian mask, broad gold wings, and sun-disc tail."
+        }
+      ],
+      "id" : "golden-sun-sphinx",
+      "lineageIntroduction" : "Golden Sun Sphinx is an original divine entity lineage built around solar sphinx, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "sphinx-leaps-and-flight",
+      "materialAnchor" : "Golden Sun Sphinx: hammered gold and lapis enamel",
+      "motionAnchor" : "Golden Sun Sphinx moves through sphinx leaps and flight while keeping lion body, smooth avian mask, broad gold wings, and sun-disc tail.",
+      "motionProfile" : "poised",
+      "secondaryAccent" : {
+        "blue" : 0.7215686274509804,
+        "green" : 0.34509803921568627,
+        "red" : 0.20392156862745098
+      },
+      "silhouetteAnchor" : "lion body, smooth avian mask, broad gold wings, and sun-disc tail",
+      "silhouetteClass" : "golden-sun-sphinx-topology",
+      "subtitle" : "regal · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "regal",
+        "poised",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9647058823529412,
+        "green" : 0.3607843137254902,
+        "red" : 0.5450980392156862
+      },
+      "artStyle" : "dark; mysterious high-contrast silhouette, controlled void colors, elegant menace",
+      "displayName" : "Void Gate Keeper",
+      "energyAnchor" : "Void Gate Keeper: gravity lens arcs",
+      "existenceAnchor" : "living portal guardian",
+      "forms" : [
+        {
+          "introduction" : "Void Gate Keeper appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving living portal guardian.",
+          "name" : "Void Gate Keeper Core",
+          "stage" : "egg",
+          "visualAnchor" : "Void Gate Keeper: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is ring-shaped torso, one central eye, four armored arms, and tapering smoke feet."
+        },
+        {
+          "introduction" : "Void Gate Keeper appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving living portal guardian.",
+          "name" : "Void Gate Keeper First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Void Gate Keeper: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is ring-shaped torso, one central eye, four armored arms, and tapering smoke feet."
+        },
+        {
+          "introduction" : "Void Gate Keeper appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving living portal guardian.",
+          "name" : "Void Gate Keeper Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Void Gate Keeper: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is ring-shaped torso, one central eye, four armored arms, and tapering smoke feet."
+        },
+        {
+          "introduction" : "Void Gate Keeper appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving living portal guardian.",
+          "name" : "Void Gate Keeper Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Void Gate Keeper: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is ring-shaped torso, one central eye, four armored arms, and tapering smoke feet."
+        },
+        {
+          "introduction" : "Void Gate Keeper appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving living portal guardian.",
+          "name" : "Void Gate Keeper Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Void Gate Keeper: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is ring-shaped torso, one central eye, four armored arms, and tapering smoke feet."
+        }
+      ],
+      "id" : "void-gate-keeper",
+      "lineageIntroduction" : "Void Gate Keeper is an original divine entity lineage built around living portal guardian, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "portal-folding-steps",
+      "materialAnchor" : "Void Gate Keeper: black stone and violet event-glass",
+      "motionAnchor" : "Void Gate Keeper moves through portal folding steps while keeping ring-shaped torso, one central eye, four armored arms, and tapering smoke feet.",
+      "motionProfile" : "orbiting",
+      "secondaryAccent" : {
+        "blue" : 0.1607843137254902,
+        "green" : 0.08627450980392157,
+        "red" : 0.07450980392156863
+      },
+      "silhouetteAnchor" : "ring-shaped torso, one central eye, four armored arms, and tapering smoke feet",
+      "silhouetteClass" : "void-gate-keeper-topology",
+      "subtitle" : "dark · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "dark",
+        "orbiting",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9098039215686274,
+        "green" : 0.4588235294117647,
+        "red" : 0.37254901960784315
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Starlight Naga Deity",
+      "energyAnchor" : "Starlight Naga Deity: white stellar mantras",
+      "existenceAnchor" : "serpentine star deity",
+      "forms" : [
+        {
+          "introduction" : "Starlight Naga Deity appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving serpentine star deity.",
+          "name" : "Starlight Naga Deity Core",
+          "stage" : "egg",
+          "visualAnchor" : "Starlight Naga Deity: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is masked cobra head, six jewel arms, long coiled tail, and constellation hood."
+        },
+        {
+          "introduction" : "Starlight Naga Deity appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving serpentine star deity.",
+          "name" : "Starlight Naga Deity First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Starlight Naga Deity: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is masked cobra head, six jewel arms, long coiled tail, and constellation hood."
+        },
+        {
+          "introduction" : "Starlight Naga Deity appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving serpentine star deity.",
+          "name" : "Starlight Naga Deity Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Starlight Naga Deity: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is masked cobra head, six jewel arms, long coiled tail, and constellation hood."
+        },
+        {
+          "introduction" : "Starlight Naga Deity appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving serpentine star deity.",
+          "name" : "Starlight Naga Deity Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Starlight Naga Deity: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is masked cobra head, six jewel arms, long coiled tail, and constellation hood."
+        },
+        {
+          "introduction" : "Starlight Naga Deity appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving serpentine star deity.",
+          "name" : "Starlight Naga Deity Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Starlight Naga Deity: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is masked cobra head, six jewel arms, long coiled tail, and constellation hood."
+        }
+      ],
+      "id" : "starlight-naga-deity",
+      "lineageIntroduction" : "Starlight Naga Deity is an original divine entity lineage built around serpentine star deity, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "ritual-coiling",
+      "materialAnchor" : "Starlight Naga Deity: indigo scales and star gold",
+      "motionAnchor" : "Starlight Naga Deity moves through ritual coiling while keeping masked cobra head, six jewel arms, long coiled tail, and constellation hood.",
+      "motionProfile" : "serpentine",
+      "secondaryAccent" : {
+        "blue" : 0.4196078431372549,
+        "green" : 0.8313725490196079,
+        "red" : 0.9529411764705882
+      },
+      "silhouetteAnchor" : "masked cobra head, six jewel arms, long coiled tail, and constellation hood",
+      "silhouetteClass" : "starlight-naga-deity-topology",
+      "subtitle" : "sacred · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "sacred",
+        "serpentine",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.8352941176470589,
+        "green" : 0.9411764705882353,
+        "red" : 0.3764705882352941
+      },
+      "artStyle" : "ethereal; translucent layered light, weightless topology, harmonic glow",
+      "displayName" : "Aurora Choir Spirit",
+      "energyAnchor" : "Aurora Choir Spirit: harmonic aurora waves",
+      "existenceAnchor" : "many-voiced aurora apparition",
+      "forms" : [
+        {
+          "introduction" : "Aurora Choir Spirit appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving many-voiced aurora apparition.",
+          "name" : "Aurora Choir Spirit Core",
+          "stage" : "egg",
+          "visualAnchor" : "Aurora Choir Spirit: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is central smooth mask, layered ribbon body, six small choir faces, and fan halo."
+        },
+        {
+          "introduction" : "Aurora Choir Spirit appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving many-voiced aurora apparition.",
+          "name" : "Aurora Choir Spirit First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Aurora Choir Spirit: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is central smooth mask, layered ribbon body, six small choir faces, and fan halo."
+        },
+        {
+          "introduction" : "Aurora Choir Spirit appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving many-voiced aurora apparition.",
+          "name" : "Aurora Choir Spirit Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Aurora Choir Spirit: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is central smooth mask, layered ribbon body, six small choir faces, and fan halo."
+        },
+        {
+          "introduction" : "Aurora Choir Spirit appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving many-voiced aurora apparition.",
+          "name" : "Aurora Choir Spirit Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Aurora Choir Spirit: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is central smooth mask, layered ribbon body, six small choir faces, and fan halo."
+        },
+        {
+          "introduction" : "Aurora Choir Spirit appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving many-voiced aurora apparition.",
+          "name" : "Aurora Choir Spirit Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Aurora Choir Spirit: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is central smooth mask, layered ribbon body, six small choir faces, and fan halo."
+        }
+      ],
+      "id" : "aurora-choir-spirit",
+      "lineageIntroduction" : "Aurora Choir Spirit is an original divine entity lineage built around many-voiced aurora apparition, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "choral-ribbon-flows",
+      "materialAnchor" : "Aurora Choir Spirit: translucent light silk and pearl",
+      "motionAnchor" : "Aurora Choir Spirit moves through choral ribbon flows while keeping central smooth mask, layered ribbon body, six small choir faces, and fan halo.",
+      "motionProfile" : "flowing",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.4666666666666667,
+        "red" : 0.6549019607843137
+      },
+      "silhouetteAnchor" : "central smooth mask, layered ribbon body, six small choir faces, and fan halo",
+      "silhouetteClass" : "aurora-choir-spirit-topology",
+      "subtitle" : "ethereal · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "ethereal",
+        "flowing",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.30196078431372547,
+        "green" : 0.7215686274509804,
+        "red" : 0.9019607843137255
+      },
+      "artStyle" : "ancient; ancient relic craftsmanship, weathered detail, solemn silhouette",
+      "displayName" : "Karmic Wheel Guardian",
+      "energyAnchor" : "Karmic Wheel Guardian: turning gold seals",
+      "existenceAnchor" : "wheel-bodied law guardian",
+      "forms" : [
+        {
+          "introduction" : "Karmic Wheel Guardian appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving wheel-bodied law guardian.",
+          "name" : "Karmic Wheel Guardian Core",
+          "stage" : "egg",
+          "visualAnchor" : "Karmic Wheel Guardian: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is armored mask, eight-spoke torso wheel, four hands, and banner fins."
+        },
+        {
+          "introduction" : "Karmic Wheel Guardian appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving wheel-bodied law guardian.",
+          "name" : "Karmic Wheel Guardian First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Karmic Wheel Guardian: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is armored mask, eight-spoke torso wheel, four hands, and banner fins."
+        },
+        {
+          "introduction" : "Karmic Wheel Guardian appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving wheel-bodied law guardian.",
+          "name" : "Karmic Wheel Guardian Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Karmic Wheel Guardian: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is armored mask, eight-spoke torso wheel, four hands, and banner fins."
+        },
+        {
+          "introduction" : "Karmic Wheel Guardian appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving wheel-bodied law guardian.",
+          "name" : "Karmic Wheel Guardian Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Karmic Wheel Guardian: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is armored mask, eight-spoke torso wheel, four hands, and banner fins."
+        },
+        {
+          "introduction" : "Karmic Wheel Guardian appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving wheel-bodied law guardian.",
+          "name" : "Karmic Wheel Guardian Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Karmic Wheel Guardian: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is armored mask, eight-spoke torso wheel, four hands, and banner fins."
+        }
+      ],
+      "id" : "karmic-wheel-guardian",
+      "lineageIntroduction" : "Karmic Wheel Guardian is an original divine entity lineage built around wheel-bodied law guardian, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "wheel-marches",
+      "materialAnchor" : "Karmic Wheel Guardian: bronze scripture metal and jade",
+      "motionAnchor" : "Karmic Wheel Guardian moves through wheel marches while keeping armored mask, eight-spoke torso wheel, four hands, and banner fins.",
+      "motionProfile" : "rolling",
+      "secondaryAccent" : {
+        "blue" : 0.5607843137254902,
+        "green" : 0.7254901960784313,
+        "red" : 0.28627450980392155
+      },
+      "silhouetteAnchor" : "armored mask, eight-spoke torso wheel, four hands, and banner fins",
+      "silhouetteClass" : "karmic-wheel-guardian-topology",
+      "subtitle" : "ancient · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "ancient",
+        "rolling",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.27058823529411763,
+        "green" : 0.3058823529411765,
+        "red" : 0.9411764705882353
+      },
+      "artStyle" : "fierce; arena-ready anatomy, forceful stance, sharp readable massing",
+      "displayName" : "Celestial Drum God",
+      "energyAnchor" : "Celestial Drum God: visible sound thunder",
+      "existenceAnchor" : "thunder-drum deity",
+      "forms" : [
+        {
+          "introduction" : "Celestial Drum God appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving thunder-drum deity.",
+          "name" : "Celestial Drum God Core",
+          "stage" : "egg",
+          "visualAnchor" : "Celestial Drum God: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is round drum torso, fierce mask, four mallet arms, and cloud-foot rings."
+        },
+        {
+          "introduction" : "Celestial Drum God appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving thunder-drum deity.",
+          "name" : "Celestial Drum God First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Celestial Drum God: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is round drum torso, fierce mask, four mallet arms, and cloud-foot rings."
+        },
+        {
+          "introduction" : "Celestial Drum God appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving thunder-drum deity.",
+          "name" : "Celestial Drum God Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Celestial Drum God: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is round drum torso, fierce mask, four mallet arms, and cloud-foot rings."
+        },
+        {
+          "introduction" : "Celestial Drum God appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving thunder-drum deity.",
+          "name" : "Celestial Drum God Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Celestial Drum God: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is round drum torso, fierce mask, four mallet arms, and cloud-foot rings."
+        },
+        {
+          "introduction" : "Celestial Drum God appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving thunder-drum deity.",
+          "name" : "Celestial Drum God Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Celestial Drum God: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is round drum torso, fierce mask, four mallet arms, and cloud-foot rings."
+        }
+      ],
+      "id" : "celestial-drum-god",
+      "lineageIntroduction" : "Celestial Drum God is an original divine entity lineage built around thunder-drum deity, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "rhythmic-sky-stomps",
+      "materialAnchor" : "Celestial Drum God: red lacquer and storm gold",
+      "motionAnchor" : "Celestial Drum God moves through rhythmic sky stomps while keeping round drum torso, fierce mask, four mallet arms, and cloud-foot rings.",
+      "motionProfile" : "bouncing",
+      "secondaryAccent" : {
+        "blue" : 0.3058823529411765,
+        "green" : 0.7843137254901961,
+        "red" : 0.9529411764705882
+      },
+      "silhouetteAnchor" : "round drum torso, fierce mask, four mallet arms, and cloud-foot rings",
+      "silhouetteClass" : "celestial-drum-god-topology",
+      "subtitle" : "fierce · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "fierce",
+        "bouncing",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9215686274509803,
+        "red" : 0.7372549019607844
+      },
+      "artStyle" : "elegant; long disciplined curves, refined ornament, poised motion",
+      "displayName" : "Mercury Messenger Idol",
+      "energyAnchor" : "Mercury Messenger Idol: silver speed script",
+      "existenceAnchor" : "liquid-metal courier god",
+      "forms" : [
+        {
+          "introduction" : "Mercury Messenger Idol appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving liquid-metal courier god.",
+          "name" : "Mercury Messenger Idol Core",
+          "stage" : "egg",
+          "visualAnchor" : "Mercury Messenger Idol: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is winged smooth mask, droplet torso, blade feet, and twin orbit tablets."
+        },
+        {
+          "introduction" : "Mercury Messenger Idol appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving liquid-metal courier god.",
+          "name" : "Mercury Messenger Idol First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Mercury Messenger Idol: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is winged smooth mask, droplet torso, blade feet, and twin orbit tablets."
+        },
+        {
+          "introduction" : "Mercury Messenger Idol appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving liquid-metal courier god.",
+          "name" : "Mercury Messenger Idol Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Mercury Messenger Idol: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is winged smooth mask, droplet torso, blade feet, and twin orbit tablets."
+        },
+        {
+          "introduction" : "Mercury Messenger Idol appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving liquid-metal courier god.",
+          "name" : "Mercury Messenger Idol Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Mercury Messenger Idol: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is winged smooth mask, droplet torso, blade feet, and twin orbit tablets."
+        },
+        {
+          "introduction" : "Mercury Messenger Idol appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving liquid-metal courier god.",
+          "name" : "Mercury Messenger Idol Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Mercury Messenger Idol: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is winged smooth mask, droplet torso, blade feet, and twin orbit tablets."
+        }
+      ],
+      "id" : "mercury-messenger-idol",
+      "lineageIntroduction" : "Mercury Messenger Idol is an original divine entity lineage built around liquid-metal courier god, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "liquid-metal-dashes",
+      "materialAnchor" : "Mercury Messenger Idol: mirror mercury and cyan glass",
+      "motionAnchor" : "Mercury Messenger Idol moves through liquid metal dashes while keeping winged smooth mask, droplet torso, blade feet, and twin orbit tablets.",
+      "motionProfile" : "gliding",
+      "secondaryAccent" : {
+        "blue" : 0.8509803921568627,
+        "green" : 0.6627450980392157,
+        "red" : 0.3333333333333333
+      },
+      "silhouetteAnchor" : "winged smooth mask, droplet torso, blade feet, and twin orbit tablets",
+      "silhouetteClass" : "mercury-messenger-idol-topology",
+      "subtitle" : "elegant · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "elegant",
+        "gliding",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9490196078431372,
+        "red" : 0.7215686274509804
+      },
+      "artStyle" : "divine; monumental sacred geometry, supernatural scale, radiant focal core",
+      "displayName" : "Diamond Thunder Deity",
+      "energyAnchor" : "Diamond Thunder Deity: violet-white lightning",
+      "existenceAnchor" : "crystalline thunder god",
+      "forms" : [
+        {
+          "introduction" : "Diamond Thunder Deity appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving crystalline thunder god.",
+          "name" : "Diamond Thunder Deity Core",
+          "stage" : "egg",
+          "visualAnchor" : "Diamond Thunder Deity: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is diamond head, four muscular crystal arms, bolt sash, and split prism legs."
+        },
+        {
+          "introduction" : "Diamond Thunder Deity appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving crystalline thunder god.",
+          "name" : "Diamond Thunder Deity First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Diamond Thunder Deity: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is diamond head, four muscular crystal arms, bolt sash, and split prism legs."
+        },
+        {
+          "introduction" : "Diamond Thunder Deity appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving crystalline thunder god.",
+          "name" : "Diamond Thunder Deity Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Diamond Thunder Deity: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is diamond head, four muscular crystal arms, bolt sash, and split prism legs."
+        },
+        {
+          "introduction" : "Diamond Thunder Deity appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving crystalline thunder god.",
+          "name" : "Diamond Thunder Deity Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Diamond Thunder Deity: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is diamond head, four muscular crystal arms, bolt sash, and split prism legs."
+        },
+        {
+          "introduction" : "Diamond Thunder Deity appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving crystalline thunder god.",
+          "name" : "Diamond Thunder Deity Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Diamond Thunder Deity: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is diamond head, four muscular crystal arms, bolt sash, and split prism legs."
+        }
+      ],
+      "id" : "diamond-thunder-deity",
+      "lineageIntroduction" : "Diamond Thunder Deity is an original divine entity lineage built around crystalline thunder god, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "thunder-crystal-stomps",
+      "materialAnchor" : "Diamond Thunder Deity: clear diamond crystal and cobalt metal",
+      "motionAnchor" : "Diamond Thunder Deity moves through thunder crystal stomps while keeping diamond head, four muscular crystal arms, bolt sash, and split prism legs.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.30196078431372547,
+        "red" : 0.42745098039215684
+      },
+      "silhouetteAnchor" : "diamond head, four muscular crystal arms, bolt sash, and split prism legs",
+      "silhouetteClass" : "diamond-thunder-deity-topology",
+      "subtitle" : "divine · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "divine",
+        "heavy"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.7843137254901961,
+        "red" : 0.8392156862745098
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Dream Moon Protector",
+      "energyAnchor" : "Dream Moon Protector: lavender sleep stars",
+      "existenceAnchor" : "sleep guardian deity",
+      "forms" : [
+        {
+          "introduction" : "Dream Moon Protector appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving sleep guardian deity.",
+          "name" : "Dream Moon Protector Core",
+          "stage" : "egg",
+          "visualAnchor" : "Dream Moon Protector: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is closed-eye crescent mask, blanket wings, four gentle hands, and pillow-cloud tail."
+        },
+        {
+          "introduction" : "Dream Moon Protector appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving sleep guardian deity.",
+          "name" : "Dream Moon Protector First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Dream Moon Protector: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is closed-eye crescent mask, blanket wings, four gentle hands, and pillow-cloud tail."
+        },
+        {
+          "introduction" : "Dream Moon Protector appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving sleep guardian deity.",
+          "name" : "Dream Moon Protector Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Dream Moon Protector: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is closed-eye crescent mask, blanket wings, four gentle hands, and pillow-cloud tail."
+        },
+        {
+          "introduction" : "Dream Moon Protector appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving sleep guardian deity.",
+          "name" : "Dream Moon Protector Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Dream Moon Protector: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is closed-eye crescent mask, blanket wings, four gentle hands, and pillow-cloud tail."
+        },
+        {
+          "introduction" : "Dream Moon Protector appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving sleep guardian deity.",
+          "name" : "Dream Moon Protector Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Dream Moon Protector: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is closed-eye crescent mask, blanket wings, four gentle hands, and pillow-cloud tail."
+        }
+      ],
+      "id" : "dream-moon-protector",
+      "lineageIntroduction" : "Dream Moon Protector is an original divine entity lineage built around sleep guardian deity, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "cradling-hover",
+      "materialAnchor" : "Dream Moon Protector: soft moon felt and pearl plates",
+      "motionAnchor" : "Dream Moon Protector moves through cradling hover while keeping closed-eye crescent mask, blanket wings, four gentle hands, and pillow-cloud tail.",
+      "motionProfile" : "buoyant",
+      "secondaryAccent" : {
+        "blue" : 0.788235294117647,
+        "green" : 0.45098039215686275,
+        "red" : 0.49411764705882355
+      },
+      "silhouetteAnchor" : "closed-eye crescent mask, blanket wings, four gentle hands, and pillow-cloud tail",
+      "silhouetteClass" : "dream-moon-protector-topology",
+      "subtitle" : "cute · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "cute",
+        "buoyant",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.28627450980392155,
+        "green" : 0.23921568627450981,
+        "red" : 0.9098039215686274
+      },
+      "artStyle" : "fierce; arena-ready anatomy, forceful stance, sharp readable massing",
+      "displayName" : "Scarlet War Kami",
+      "energyAnchor" : "Scarlet War Kami: gold battle seals",
+      "existenceAnchor" : "nonhuman armored battle spirit",
+      "forms" : [
+        {
+          "introduction" : "Scarlet War Kami appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving nonhuman armored battle spirit.",
+          "name" : "Scarlet War Kami Core",
+          "stage" : "egg",
+          "visualAnchor" : "Scarlet War Kami: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is oni-like lacquer mask, six banner arms, crescent armor skirt, and spear halo."
+        },
+        {
+          "introduction" : "Scarlet War Kami appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving nonhuman armored battle spirit.",
+          "name" : "Scarlet War Kami First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Scarlet War Kami: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is oni-like lacquer mask, six banner arms, crescent armor skirt, and spear halo."
+        },
+        {
+          "introduction" : "Scarlet War Kami appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving nonhuman armored battle spirit.",
+          "name" : "Scarlet War Kami Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Scarlet War Kami: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is oni-like lacquer mask, six banner arms, crescent armor skirt, and spear halo."
+        },
+        {
+          "introduction" : "Scarlet War Kami appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving nonhuman armored battle spirit.",
+          "name" : "Scarlet War Kami Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Scarlet War Kami: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is oni-like lacquer mask, six banner arms, crescent armor skirt, and spear halo."
+        },
+        {
+          "introduction" : "Scarlet War Kami appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving nonhuman armored battle spirit.",
+          "name" : "Scarlet War Kami Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Scarlet War Kami: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is oni-like lacquer mask, six banner arms, crescent armor skirt, and spear halo."
+        }
+      ],
+      "id" : "scarlet-war-kami",
+      "lineageIntroduction" : "Scarlet War Kami is an original divine entity lineage built around nonhuman armored battle spirit, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "banner-led-charges",
+      "materialAnchor" : "Scarlet War Kami: scarlet lacquer and black iron",
+      "motionAnchor" : "Scarlet War Kami moves through banner led charges while keeping oni-like lacquer mask, six banner arms, crescent armor skirt, and spear halo.",
+      "motionProfile" : "marching",
+      "secondaryAccent" : {
+        "blue" : 0.29411764705882354,
+        "green" : 0.7137254901960784,
+        "red" : 0.9058823529411765
+      },
+      "silhouetteAnchor" : "oni-like lacquer mask, six banner arms, crescent armor skirt, and spear halo",
+      "silhouetteClass" : "scarlet-war-kami-topology",
+      "subtitle" : "fierce · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "fierce",
+        "marching",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9098039215686274,
+        "green" : 0.9019607843137255,
+        "red" : 0.49019607843137253
+      },
+      "artStyle" : "sacred; luminous holy iconography, serene power, ivory-gold polish",
+      "displayName" : "Ocean Pearl Sovereign",
+      "energyAnchor" : "Ocean Pearl Sovereign: tidal crown light",
+      "existenceAnchor" : "pearl-headed sea divinity",
+      "forms" : [
+        {
+          "introduction" : "Ocean Pearl Sovereign appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving pearl-headed sea divinity.",
+          "name" : "Ocean Pearl Sovereign Core",
+          "stage" : "egg",
+          "visualAnchor" : "Ocean Pearl Sovereign: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is giant pearl face, four wave arms, shell mantle, and finned lower vortex."
+        },
+        {
+          "introduction" : "Ocean Pearl Sovereign appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving pearl-headed sea divinity.",
+          "name" : "Ocean Pearl Sovereign First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Ocean Pearl Sovereign: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is giant pearl face, four wave arms, shell mantle, and finned lower vortex."
+        },
+        {
+          "introduction" : "Ocean Pearl Sovereign appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving pearl-headed sea divinity.",
+          "name" : "Ocean Pearl Sovereign Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Ocean Pearl Sovereign: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is giant pearl face, four wave arms, shell mantle, and finned lower vortex."
+        },
+        {
+          "introduction" : "Ocean Pearl Sovereign appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving pearl-headed sea divinity.",
+          "name" : "Ocean Pearl Sovereign Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Ocean Pearl Sovereign: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is giant pearl face, four wave arms, shell mantle, and finned lower vortex."
+        },
+        {
+          "introduction" : "Ocean Pearl Sovereign appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving pearl-headed sea divinity.",
+          "name" : "Ocean Pearl Sovereign Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Ocean Pearl Sovereign: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is giant pearl face, four wave arms, shell mantle, and finned lower vortex."
+        }
+      ],
+      "id" : "ocean-pearl-sovereign",
+      "lineageIntroduction" : "Ocean Pearl Sovereign is an original divine entity lineage built around pearl-headed sea divinity, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "sovereign-tide-glides",
+      "materialAnchor" : "Ocean Pearl Sovereign: mother-of-pearl and aqua glass",
+      "motionAnchor" : "Ocean Pearl Sovereign moves through sovereign tide glides while keeping giant pearl face, four wave arms, shell mantle, and finned lower vortex.",
+      "motionProfile" : "flowing",
+      "secondaryAccent" : {
+        "blue" : 0.803921568627451,
+        "green" : 0.8901960784313725,
+        "red" : 0.9490196078431372
+      },
+      "silhouetteAnchor" : "giant pearl face, four wave arms, shell mantle, and finned lower vortex",
+      "silhouetteClass" : "ocean-pearl-sovereign-topology",
+      "subtitle" : "sacred · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "sacred",
+        "flowing",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9215686274509803,
+        "green" : 0.7372549019607844,
+        "red" : 0.34509803921568627
+      },
+      "artStyle" : "mysterious; occult visual logic, restrained glow, uncanny but appealing identity",
+      "displayName" : "Cosmic Hour Keeper",
+      "energyAnchor" : "Cosmic Hour Keeper: time-slice rings",
+      "existenceAnchor" : "timekeeping celestial idol",
+      "forms" : [
+        {
+          "introduction" : "Cosmic Hour Keeper appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving timekeeping celestial idol.",
+          "name" : "Cosmic Hour Keeper Core",
+          "stage" : "egg",
+          "visualAnchor" : "Cosmic Hour Keeper: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is clockless star face, four orbit arms, hourglass waist, and comet pendulum."
+        },
+        {
+          "introduction" : "Cosmic Hour Keeper appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving timekeeping celestial idol.",
+          "name" : "Cosmic Hour Keeper First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Cosmic Hour Keeper: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is clockless star face, four orbit arms, hourglass waist, and comet pendulum."
+        },
+        {
+          "introduction" : "Cosmic Hour Keeper appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving timekeeping celestial idol.",
+          "name" : "Cosmic Hour Keeper Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Cosmic Hour Keeper: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is clockless star face, four orbit arms, hourglass waist, and comet pendulum."
+        },
+        {
+          "introduction" : "Cosmic Hour Keeper appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving timekeeping celestial idol.",
+          "name" : "Cosmic Hour Keeper Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Cosmic Hour Keeper: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is clockless star face, four orbit arms, hourglass waist, and comet pendulum."
+        },
+        {
+          "introduction" : "Cosmic Hour Keeper appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving timekeeping celestial idol.",
+          "name" : "Cosmic Hour Keeper Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Cosmic Hour Keeper: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is clockless star face, four orbit arms, hourglass waist, and comet pendulum."
+        }
+      ],
+      "id" : "cosmic-hour-keeper",
+      "lineageIntroduction" : "Cosmic Hour Keeper is an original divine entity lineage built around timekeeping celestial idol, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "measured-time-orbits",
+      "materialAnchor" : "Cosmic Hour Keeper: dark celestial bronze and blue crystal",
+      "motionAnchor" : "Cosmic Hour Keeper moves through measured time orbits while keeping clockless star face, four orbit arms, hourglass waist, and comet pendulum.",
+      "motionProfile" : "orbiting",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.5411764705882353,
+        "red" : 0.7215686274509804
+      },
+      "silhouetteAnchor" : "clockless star face, four orbit arms, hourglass waist, and comet pendulum",
+      "silhouetteClass" : "cosmic-hour-keeper-topology",
+      "subtitle" : "mysterious · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "mysterious",
+        "orbiting",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.6392156862745098,
+        "green" : 0.8549019607843137,
+        "red" : 0.3607843137254902
+      },
+      "artStyle" : "regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials",
+      "displayName" : "Jade Comet Empress",
+      "energyAnchor" : "Jade Comet Empress: green-white comet fire",
+      "existenceAnchor" : "faceless jade comet sovereign",
+      "forms" : [
+        {
+          "introduction" : "Jade Comet Empress appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving faceless jade comet sovereign.",
+          "name" : "Jade Comet Empress Core",
+          "stage" : "egg",
+          "visualAnchor" : "Jade Comet Empress: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is jade crown mask, six ribbon sleeves, long comet train, and twin fan moons."
+        },
+        {
+          "introduction" : "Jade Comet Empress appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving faceless jade comet sovereign.",
+          "name" : "Jade Comet Empress First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Jade Comet Empress: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is jade crown mask, six ribbon sleeves, long comet train, and twin fan moons."
+        },
+        {
+          "introduction" : "Jade Comet Empress appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving faceless jade comet sovereign.",
+          "name" : "Jade Comet Empress Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Jade Comet Empress: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is jade crown mask, six ribbon sleeves, long comet train, and twin fan moons."
+        },
+        {
+          "introduction" : "Jade Comet Empress appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving faceless jade comet sovereign.",
+          "name" : "Jade Comet Empress Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Jade Comet Empress: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is jade crown mask, six ribbon sleeves, long comet train, and twin fan moons."
+        },
+        {
+          "introduction" : "Jade Comet Empress appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving faceless jade comet sovereign.",
+          "name" : "Jade Comet Empress Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Jade Comet Empress: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is jade crown mask, six ribbon sleeves, long comet train, and twin fan moons."
+        }
+      ],
+      "id" : "jade-comet-empress",
+      "lineageIntroduction" : "Jade Comet Empress is an original divine entity lineage built around faceless jade comet sovereign, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "imperial-comet-glides",
+      "materialAnchor" : "Jade Comet Empress: translucent jade and celestial gold",
+      "motionAnchor" : "Jade Comet Empress moves through imperial comet glides while keeping jade crown mask, six ribbon sleeves, long comet train, and twin fan moons.",
+      "motionProfile" : "flowing",
+      "secondaryAccent" : {
+        "blue" : 0.3568627450980392,
+        "green" : 0.7725490196078432,
+        "red" : 0.9137254901960784
+      },
+      "silhouetteAnchor" : "jade crown mask, six ribbon sleeves, long comet train, and twin fan moons",
+      "silhouetteClass" : "jade-comet-empress-topology",
+      "subtitle" : "regal · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "regal",
+        "flowing",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9254901960784314,
+        "red" : 0.5333333333333333
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Prism Crown Judicator",
+      "energyAnchor" : "Prism Crown Judicator: balanced rainbow beams",
+      "existenceAnchor" : "rainbow law deity",
+      "forms" : [
+        {
+          "introduction" : "Prism Crown Judicator appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving rainbow law deity.",
+          "name" : "Prism Crown Judicator Core",
+          "stage" : "egg",
+          "visualAnchor" : "Prism Crown Judicator: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is faceted blank face, giant prism crown, scale arms, and triangular robe legs."
+        },
+        {
+          "introduction" : "Prism Crown Judicator appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving rainbow law deity.",
+          "name" : "Prism Crown Judicator First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Prism Crown Judicator: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is faceted blank face, giant prism crown, scale arms, and triangular robe legs."
+        },
+        {
+          "introduction" : "Prism Crown Judicator appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving rainbow law deity.",
+          "name" : "Prism Crown Judicator Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Prism Crown Judicator: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is faceted blank face, giant prism crown, scale arms, and triangular robe legs."
+        },
+        {
+          "introduction" : "Prism Crown Judicator appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving rainbow law deity.",
+          "name" : "Prism Crown Judicator Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Prism Crown Judicator: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is faceted blank face, giant prism crown, scale arms, and triangular robe legs."
+        },
+        {
+          "introduction" : "Prism Crown Judicator appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving rainbow law deity.",
+          "name" : "Prism Crown Judicator Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Prism Crown Judicator: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is faceted blank face, giant prism crown, scale arms, and triangular robe legs."
+        }
+      ],
+      "id" : "prism-crown-judicator",
+      "lineageIntroduction" : "Prism Crown Judicator is an original divine entity lineage built around rainbow law deity, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "geometric-steps",
+      "materialAnchor" : "Prism Crown Judicator: white crystal and spectrum glass",
+      "motionAnchor" : "Prism Crown Judicator moves through geometric steps while keeping faceted blank face, giant prism crown, scale arms, and triangular robe legs.",
+      "motionProfile" : "poised",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.43529411764705883,
+        "red" : 0.8980392156862745
+      },
+      "silhouetteAnchor" : "faceted blank face, giant prism crown, scale arms, and triangular robe legs",
+      "silhouetteClass" : "prism-crown-judicator-topology",
+      "subtitle" : "exquisite · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "exquisite",
+        "poised",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9490196078431372,
+        "green" : 0.4470588235294118,
+        "red" : 0.615686274509804
+      },
+      "artStyle" : "gothic; moonlit dark ornament, cathedral-like shape language without architecture, noble menace",
+      "displayName" : "Eclipse Wing Oracle",
+      "energyAnchor" : "Eclipse Wing Oracle: violet corona omens",
+      "existenceAnchor" : "winged eclipse prophet",
+      "forms" : [
+        {
+          "introduction" : "Eclipse Wing Oracle appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving winged eclipse prophet.",
+          "name" : "Eclipse Wing Oracle Core",
+          "stage" : "egg",
+          "visualAnchor" : "Eclipse Wing Oracle: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is dark bird mask, two vast crescent wings, eye halo, and ribbon talons."
+        },
+        {
+          "introduction" : "Eclipse Wing Oracle appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving winged eclipse prophet.",
+          "name" : "Eclipse Wing Oracle First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Eclipse Wing Oracle: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is dark bird mask, two vast crescent wings, eye halo, and ribbon talons."
+        },
+        {
+          "introduction" : "Eclipse Wing Oracle appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving winged eclipse prophet.",
+          "name" : "Eclipse Wing Oracle Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Eclipse Wing Oracle: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is dark bird mask, two vast crescent wings, eye halo, and ribbon talons."
+        },
+        {
+          "introduction" : "Eclipse Wing Oracle appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving winged eclipse prophet.",
+          "name" : "Eclipse Wing Oracle Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Eclipse Wing Oracle: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is dark bird mask, two vast crescent wings, eye halo, and ribbon talons."
+        },
+        {
+          "introduction" : "Eclipse Wing Oracle appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving winged eclipse prophet.",
+          "name" : "Eclipse Wing Oracle Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Eclipse Wing Oracle: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is dark bird mask, two vast crescent wings, eye halo, and ribbon talons."
+        }
+      ],
+      "id" : "eclipse-wing-oracle",
+      "lineageIntroduction" : "Eclipse Wing Oracle is an original divine entity lineage built around winged eclipse prophet, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "silent-oracle-flight",
+      "materialAnchor" : "Eclipse Wing Oracle: black feathers and moon-silver edges",
+      "motionAnchor" : "Eclipse Wing Oracle moves through silent oracle flight while keeping dark bird mask, two vast crescent wings, eye halo, and ribbon talons.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 0.23921568627450981,
+        "green" : 0.12941176470588237,
+        "red" : 0.1450980392156863
+      },
+      "silhouetteAnchor" : "dark bird mask, two vast crescent wings, eye halo, and ribbon talons",
+      "silhouetteClass" : "eclipse-wing-oracle-topology",
+      "subtitle" : "gothic · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "gothic",
+        "winged",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.4196078431372549,
+        "green" : 0.8431372549019608,
+        "red" : 1
+      },
+      "artStyle" : "regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials",
+      "displayName" : "Constellation King",
+      "energyAnchor" : "Constellation King: moving constellation lines",
+      "existenceAnchor" : "star-map monarch construct",
+      "forms" : [
+        {
+          "introduction" : "Constellation King appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving star-map monarch construct.",
+          "name" : "Constellation King Core",
+          "stage" : "egg",
+          "visualAnchor" : "Constellation King: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is crown of star points, hollow night face, four scepter arms, and orbit cloak."
+        },
+        {
+          "introduction" : "Constellation King appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving star-map monarch construct.",
+          "name" : "Constellation King First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Constellation King: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is crown of star points, hollow night face, four scepter arms, and orbit cloak."
+        },
+        {
+          "introduction" : "Constellation King appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving star-map monarch construct.",
+          "name" : "Constellation King Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Constellation King: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is crown of star points, hollow night face, four scepter arms, and orbit cloak."
+        },
+        {
+          "introduction" : "Constellation King appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving star-map monarch construct.",
+          "name" : "Constellation King Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Constellation King: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is crown of star points, hollow night face, four scepter arms, and orbit cloak."
+        },
+        {
+          "introduction" : "Constellation King appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving star-map monarch construct.",
+          "name" : "Constellation King Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Constellation King: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is crown of star points, hollow night face, four scepter arms, and orbit cloak."
+        }
+      ],
+      "id" : "constellation-king",
+      "lineageIntroduction" : "Constellation King is an original divine entity lineage built around star-map monarch construct, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "constellation-processions",
+      "materialAnchor" : "Constellation King: midnight enamel and gold star wire",
+      "motionAnchor" : "Constellation King moves through constellation processions while keeping crown of star points, hollow night face, four scepter arms, and orbit cloak.",
+      "motionProfile" : "orbiting",
+      "secondaryAccent" : {
+        "blue" : 0.788235294117647,
+        "green" : 0.3686274509803922,
+        "red" : 0.27450980392156865
+      },
+      "silhouetteAnchor" : "crown of star points, hollow night face, four scepter arms, and orbit cloak",
+      "silhouetteClass" : "constellation-king-topology",
+      "subtitle" : "regal · divine entity",
+      "symbolName" : "sun.max.fill",
+      "tags" : [
+        "divine entity",
+        "regal",
+        "orbiting",
+        "divine"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.8549019607843137,
+        "red" : 0.3254901960784314
+      },
+      "artStyle" : "heroic; clear champion silhouette, athletic motion, confident focal pose",
+      "displayName" : "Aegis Pounce Unit",
+      "energyAnchor" : "Aegis Pounce Unit: cyan boost trails",
+      "existenceAnchor" : "white feline arena mecha",
+      "forms" : [
+        {
+          "introduction" : "Aegis Pounce Unit appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving white feline arena mecha.",
+          "name" : "Aegis Pounce Unit Core",
+          "stage" : "egg",
+          "visualAnchor" : "Aegis Pounce Unit: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail."
+        },
+        {
+          "introduction" : "Aegis Pounce Unit appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving white feline arena mecha.",
+          "name" : "Aegis Pounce Unit First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Aegis Pounce Unit: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail."
+        },
+        {
+          "introduction" : "Aegis Pounce Unit appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving white feline arena mecha.",
+          "name" : "Aegis Pounce Unit Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Aegis Pounce Unit: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail."
+        },
+        {
+          "introduction" : "Aegis Pounce Unit appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving white feline arena mecha.",
+          "name" : "Aegis Pounce Unit Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Aegis Pounce Unit: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail."
+        },
+        {
+          "introduction" : "Aegis Pounce Unit appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving white feline arena mecha.",
+          "name" : "Aegis Pounce Unit Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Aegis Pounce Unit: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is low armored cat chassis, massive forepaws, turbine hips, and blade tail."
+        }
+      ],
+      "id" : "aegis-pounce-unit",
+      "lineageIntroduction" : "Aegis Pounce Unit is an original mecha creature lineage built around white feline arena mecha, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "powered-feline-sprints",
+      "materialAnchor" : "Aegis Pounce Unit: white ceramic armor and dark alloy",
+      "motionAnchor" : "Aegis Pounce Unit moves through powered feline sprints while keeping low armored cat chassis, massive forepaws, turbine hips, and blade tail.",
+      "motionProfile" : "mechanical",
+      "secondaryAccent" : {
+        "blue" : 0.9803921568627451,
+        "green" : 0.9647058823529412,
+        "red" : 0.9568627450980393
+      },
+      "silhouetteAnchor" : "low armored cat chassis, massive forepaws, turbine hips, and blade tail",
+      "silhouetteClass" : "aegis-pounce-unit-topology",
+      "subtitle" : "heroic · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "heroic",
+        "mechanical",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.2627450980392157,
+        "green" : 0.5411764705882353,
+        "red" : 1
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Rescue Drone Hound",
+      "energyAnchor" : "Rescue Drone Hound: cyan diagnostic light",
+      "existenceAnchor" : "orange medical rescue hound",
+      "forms" : [
+        {
+          "introduction" : "Rescue Drone Hound appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving orange medical rescue hound.",
+          "name" : "Rescue Drone Hound Core",
+          "stage" : "egg",
+          "visualAnchor" : "Rescue Drone Hound: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is rounded canine cabin, four wheel-paws, rotor ears, and medic beacon tail."
+        },
+        {
+          "introduction" : "Rescue Drone Hound appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving orange medical rescue hound.",
+          "name" : "Rescue Drone Hound First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Rescue Drone Hound: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is rounded canine cabin, four wheel-paws, rotor ears, and medic beacon tail."
+        },
+        {
+          "introduction" : "Rescue Drone Hound appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving orange medical rescue hound.",
+          "name" : "Rescue Drone Hound Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Rescue Drone Hound: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is rounded canine cabin, four wheel-paws, rotor ears, and medic beacon tail."
+        },
+        {
+          "introduction" : "Rescue Drone Hound appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving orange medical rescue hound.",
+          "name" : "Rescue Drone Hound Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Rescue Drone Hound: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is rounded canine cabin, four wheel-paws, rotor ears, and medic beacon tail."
+        },
+        {
+          "introduction" : "Rescue Drone Hound appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving orange medical rescue hound.",
+          "name" : "Rescue Drone Hound Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Rescue Drone Hound: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is rounded canine cabin, four wheel-paws, rotor ears, and medic beacon tail."
+        }
+      ],
+      "id" : "rescue-drone-hound",
+      "lineageIntroduction" : "Rescue Drone Hound is an original mecha creature lineage built around orange medical rescue hound, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "wheel-paw-patrols",
+      "materialAnchor" : "Rescue Drone Hound: orange polymer armor and white ceramic",
+      "motionAnchor" : "Rescue Drone Hound moves through wheel paw patrols while keeping rounded canine cabin, four wheel-paws, rotor ears, and medic beacon tail.",
+      "motionProfile" : "rolling",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.9725490196078431,
+        "red" : 0.9176470588235294
+      },
+      "silhouetteAnchor" : "rounded canine cabin, four wheel-paws, rotor ears, and medic beacon tail",
+      "silhouetteClass" : "rescue-drone-hound-topology",
+      "subtitle" : "cute · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "cute",
+        "rolling",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.8941176470588236,
+        "red" : 0.1450980392156863
+      },
+      "artStyle" : "neon; competitive night-arena energy, sharp neon accents, speed-focused silhouette",
+      "displayName" : "Neon Raptor Racer",
+      "energyAnchor" : "Neon Raptor Racer: magenta-cyan speed ribbons",
+      "existenceAnchor" : "digitigrade racing raptor machine",
+      "forms" : [
+        {
+          "introduction" : "Neon Raptor Racer appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving digitigrade racing raptor machine.",
+          "name" : "Neon Raptor Racer Core",
+          "stage" : "egg",
+          "visualAnchor" : "Neon Raptor Racer: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is narrow visor head, long spring legs, fin tail, and shoulder stabilizers."
+        },
+        {
+          "introduction" : "Neon Raptor Racer appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving digitigrade racing raptor machine.",
+          "name" : "Neon Raptor Racer First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Neon Raptor Racer: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is narrow visor head, long spring legs, fin tail, and shoulder stabilizers."
+        },
+        {
+          "introduction" : "Neon Raptor Racer appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving digitigrade racing raptor machine.",
+          "name" : "Neon Raptor Racer Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Neon Raptor Racer: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is narrow visor head, long spring legs, fin tail, and shoulder stabilizers."
+        },
+        {
+          "introduction" : "Neon Raptor Racer appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving digitigrade racing raptor machine.",
+          "name" : "Neon Raptor Racer Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Neon Raptor Racer: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is narrow visor head, long spring legs, fin tail, and shoulder stabilizers."
+        },
+        {
+          "introduction" : "Neon Raptor Racer appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving digitigrade racing raptor machine.",
+          "name" : "Neon Raptor Racer Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Neon Raptor Racer: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is narrow visor head, long spring legs, fin tail, and shoulder stabilizers."
+        }
+      ],
+      "id" : "neon-raptor-racer",
+      "lineageIntroduction" : "Neon Raptor Racer is an original mecha creature lineage built around digitigrade racing raptor machine, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "digitigrade-boost-sprints",
+      "materialAnchor" : "Neon Raptor Racer: black alloy and neon glass",
+      "motionAnchor" : "Neon Raptor Racer moves through digitigrade boost sprints while keeping narrow visor head, long spring legs, fin tail, and shoulder stabilizers.",
+      "motionProfile" : "mechanical",
+      "secondaryAccent" : {
+        "blue" : 0.7803921568627451,
+        "green" : 0.25882352941176473,
+        "red" : 1
+      },
+      "silhouetteAnchor" : "narrow visor head, long spring legs, fin tail, and shoulder stabilizers",
+      "silhouetteClass" : "neon-raptor-racer-topology",
+      "subtitle" : "neon · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "neon",
+        "mechanical",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.6823529411764706,
+        "red" : 0.2980392156862745
+      },
+      "artStyle" : "tactical; functional mecha anatomy, believable joints, compact battlefield clarity",
+      "displayName" : "Orbit Crab Tank",
+      "energyAnchor" : "Orbit Crab Tank: blue targeting orbits",
+      "existenceAnchor" : "spherical crab defense unit",
+      "forms" : [
+        {
+          "introduction" : "Orbit Crab Tank appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving spherical crab defense unit.",
+          "name" : "Orbit Crab Tank Core",
+          "stage" : "egg",
+          "visualAnchor" : "Orbit Crab Tank: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is round core, six jointed legs, two shield claws, and orbital antenna ring."
+        },
+        {
+          "introduction" : "Orbit Crab Tank appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving spherical crab defense unit.",
+          "name" : "Orbit Crab Tank First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Orbit Crab Tank: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is round core, six jointed legs, two shield claws, and orbital antenna ring."
+        },
+        {
+          "introduction" : "Orbit Crab Tank appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving spherical crab defense unit.",
+          "name" : "Orbit Crab Tank Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Orbit Crab Tank: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is round core, six jointed legs, two shield claws, and orbital antenna ring."
+        },
+        {
+          "introduction" : "Orbit Crab Tank appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving spherical crab defense unit.",
+          "name" : "Orbit Crab Tank Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Orbit Crab Tank: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is round core, six jointed legs, two shield claws, and orbital antenna ring."
+        },
+        {
+          "introduction" : "Orbit Crab Tank appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving spherical crab defense unit.",
+          "name" : "Orbit Crab Tank Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Orbit Crab Tank: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is round core, six jointed legs, two shield claws, and orbital antenna ring."
+        }
+      ],
+      "id" : "orbit-crab-tank",
+      "lineageIntroduction" : "Orbit Crab Tank is an original mecha creature lineage built around spherical crab defense unit, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "six-leg-side-steps",
+      "materialAnchor" : "Orbit Crab Tank: gunmetal armor and brass joints",
+      "motionAnchor" : "Orbit Crab Tank moves through six leg side steps while keeping round core, six jointed legs, two shield claws, and orbital antenna ring.",
+      "motionProfile" : "skittering",
+      "secondaryAccent" : {
+        "blue" : 0.25882352941176473,
+        "green" : 0.5294117647058824,
+        "red" : 0.7294117647058823
+      },
+      "silhouetteAnchor" : "round core, six jointed legs, two shield claws, and orbital antenna ring",
+      "silhouetteClass" : "orbit-crab-tank-topology",
+      "subtitle" : "tactical · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "tactical",
+        "skittering",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.8745098039215686,
+        "red" : 0.396078431372549
+      },
+      "artStyle" : "heroic; clear champion silhouette, athletic motion, confident focal pose",
+      "displayName" : "Railgun Stag",
+      "energyAnchor" : "Railgun Stag: electric rail charge",
+      "existenceAnchor" : "antlered artillery cervid",
+      "forms" : [
+        {
+          "introduction" : "Railgun Stag appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving antlered artillery cervid.",
+          "name" : "Railgun Stag Core",
+          "stage" : "egg",
+          "visualAnchor" : "Railgun Stag: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is sleek deer chassis, rail-shaped antlers, four piston legs, and capacitor tail."
+        },
+        {
+          "introduction" : "Railgun Stag appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving antlered artillery cervid.",
+          "name" : "Railgun Stag First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Railgun Stag: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is sleek deer chassis, rail-shaped antlers, four piston legs, and capacitor tail."
+        },
+        {
+          "introduction" : "Railgun Stag appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving antlered artillery cervid.",
+          "name" : "Railgun Stag Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Railgun Stag: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is sleek deer chassis, rail-shaped antlers, four piston legs, and capacitor tail."
+        },
+        {
+          "introduction" : "Railgun Stag appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving antlered artillery cervid.",
+          "name" : "Railgun Stag Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Railgun Stag: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is sleek deer chassis, rail-shaped antlers, four piston legs, and capacitor tail."
+        },
+        {
+          "introduction" : "Railgun Stag appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving antlered artillery cervid.",
+          "name" : "Railgun Stag Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Railgun Stag: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is sleek deer chassis, rail-shaped antlers, four piston legs, and capacitor tail."
+        }
+      ],
+      "id" : "railgun-stag",
+      "lineageIntroduction" : "Railgun Stag is an original mecha creature lineage built around antlered artillery cervid, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "precision-mecha-bounds",
+      "materialAnchor" : "Railgun Stag: navy alloy and silver ceramic",
+      "motionAnchor" : "Railgun Stag moves through precision mecha bounds while keeping sleek deer chassis, rail-shaped antlers, four piston legs, and capacitor tail.",
+      "motionProfile" : "mechanical",
+      "secondaryAccent" : {
+        "blue" : 0.7803921568627451,
+        "green" : 0.3764705882352941,
+        "red" : 0.3137254901960784
+      },
+      "silhouetteAnchor" : "sleek deer chassis, rail-shaped antlers, four piston legs, and capacitor tail",
+      "silhouetteClass" : "railgun-stag-topology",
+      "subtitle" : "heroic · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "heroic",
+        "mechanical",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.8941176470588236,
+        "green" : 0.8901960784313725,
+        "red" : 0.30980392156862746
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Pulse-Wing Hummingbird",
+      "energyAnchor" : "Pulse-Wing Hummingbird: rapid pulse rings",
+      "existenceAnchor" : "micro turbine hummingbird",
+      "forms" : [
+        {
+          "introduction" : "Pulse-Wing Hummingbird appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving micro turbine hummingbird.",
+          "name" : "Pulse-Wing Hummingbird Core",
+          "stage" : "egg",
+          "visualAnchor" : "Pulse-Wing Hummingbird: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is needle sensor beak, four pulse wings, tiny reactor body, and gyroscope tail."
+        },
+        {
+          "introduction" : "Pulse-Wing Hummingbird appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving micro turbine hummingbird.",
+          "name" : "Pulse-Wing Hummingbird First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Pulse-Wing Hummingbird: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is needle sensor beak, four pulse wings, tiny reactor body, and gyroscope tail."
+        },
+        {
+          "introduction" : "Pulse-Wing Hummingbird appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving micro turbine hummingbird.",
+          "name" : "Pulse-Wing Hummingbird Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Pulse-Wing Hummingbird: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is needle sensor beak, four pulse wings, tiny reactor body, and gyroscope tail."
+        },
+        {
+          "introduction" : "Pulse-Wing Hummingbird appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving micro turbine hummingbird.",
+          "name" : "Pulse-Wing Hummingbird Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Pulse-Wing Hummingbird: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is needle sensor beak, four pulse wings, tiny reactor body, and gyroscope tail."
+        },
+        {
+          "introduction" : "Pulse-Wing Hummingbird appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving micro turbine hummingbird.",
+          "name" : "Pulse-Wing Hummingbird Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Pulse-Wing Hummingbird: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is needle sensor beak, four pulse wings, tiny reactor body, and gyroscope tail."
+        }
+      ],
+      "id" : "pulse-wing-hummingbird",
+      "lineageIntroduction" : "Pulse-Wing Hummingbird is an original mecha creature lineage built around micro turbine hummingbird, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "microsecond-hovering",
+      "materialAnchor" : "Pulse-Wing Hummingbird: rose-gold alloy and cyan glass",
+      "motionAnchor" : "Pulse-Wing Hummingbird moves through microsecond hovering while keeping needle sensor beak, four pulse wings, tiny reactor body, and gyroscope tail.",
+      "motionProfile" : "winged",
+      "secondaryAccent" : {
+        "blue" : 0.43529411764705883,
+        "green" : 0.6039215686274509,
+        "red" : 0.8980392156862745
+      },
+      "silhouetteAnchor" : "needle sensor beak, four pulse wings, tiny reactor body, and gyroscope tail",
+      "silhouetteClass" : "pulse-wing-hummingbird-topology",
+      "subtitle" : "exquisite · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "exquisite",
+        "winged",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.1843137254901961,
+        "green" : 0.47058823529411764,
+        "red" : 1
+      },
+      "artStyle" : "fierce; arena-ready anatomy, forceful stance, sharp readable massing",
+      "displayName" : "Magma Drill Mole",
+      "energyAnchor" : "Magma Drill Mole: orange thermal vents",
+      "existenceAnchor" : "underground drill mole machine",
+      "forms" : [
+        {
+          "introduction" : "Magma Drill Mole appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving underground drill mole machine.",
+          "name" : "Magma Drill Mole Core",
+          "stage" : "egg",
+          "visualAnchor" : "Magma Drill Mole: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is wedge drill nose, broad digging claws, low tracks, and exhaust tail."
+        },
+        {
+          "introduction" : "Magma Drill Mole appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving underground drill mole machine.",
+          "name" : "Magma Drill Mole First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Magma Drill Mole: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is wedge drill nose, broad digging claws, low tracks, and exhaust tail."
+        },
+        {
+          "introduction" : "Magma Drill Mole appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving underground drill mole machine.",
+          "name" : "Magma Drill Mole Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Magma Drill Mole: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is wedge drill nose, broad digging claws, low tracks, and exhaust tail."
+        },
+        {
+          "introduction" : "Magma Drill Mole appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving underground drill mole machine.",
+          "name" : "Magma Drill Mole Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Magma Drill Mole: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is wedge drill nose, broad digging claws, low tracks, and exhaust tail."
+        },
+        {
+          "introduction" : "Magma Drill Mole appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving underground drill mole machine.",
+          "name" : "Magma Drill Mole Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Magma Drill Mole: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is wedge drill nose, broad digging claws, low tracks, and exhaust tail."
+        }
+      ],
+      "id" : "magma-drill-mole",
+      "lineageIntroduction" : "Magma Drill Mole is an original mecha creature lineage built around underground drill mole machine, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "burrowing-track-runs",
+      "materialAnchor" : "Magma Drill Mole: black heat armor and copper drill plates",
+      "motionAnchor" : "Magma Drill Mole moves through burrowing track runs while keeping wedge drill nose, broad digging claws, low tracks, and exhaust tail.",
+      "motionProfile" : "mechanical",
+      "secondaryAccent" : {
+        "blue" : 0.17647058823529413,
+        "green" : 0.1411764705882353,
+        "red" : 0.1607843137254902
+      },
+      "silhouetteAnchor" : "wedge drill nose, broad digging claws, low tracks, and exhaust tail",
+      "silhouetteClass" : "magma-drill-mole-topology",
+      "subtitle" : "fierce · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "fierce",
+        "mechanical",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.8509803921568627,
+        "red" : 0.47058823529411764
+      },
+      "artStyle" : "tactical; functional mecha anatomy, believable joints, compact battlefield clarity",
+      "displayName" : "Glacier Bastion Bear",
+      "energyAnchor" : "Glacier Bastion Bear: frost barrier grids",
+      "existenceAnchor" : "heavy ice-defense bear mecha",
+      "forms" : [
+        {
+          "introduction" : "Glacier Bastion Bear appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving heavy ice-defense bear mecha.",
+          "name" : "Glacier Bastion Bear Core",
+          "stage" : "egg",
+          "visualAnchor" : "Glacier Bastion Bear: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is broad bear chassis, shield shoulders, four piston paws, and glacier reactor hump."
+        },
+        {
+          "introduction" : "Glacier Bastion Bear appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving heavy ice-defense bear mecha.",
+          "name" : "Glacier Bastion Bear First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Glacier Bastion Bear: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is broad bear chassis, shield shoulders, four piston paws, and glacier reactor hump."
+        },
+        {
+          "introduction" : "Glacier Bastion Bear appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving heavy ice-defense bear mecha.",
+          "name" : "Glacier Bastion Bear Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Glacier Bastion Bear: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is broad bear chassis, shield shoulders, four piston paws, and glacier reactor hump."
+        },
+        {
+          "introduction" : "Glacier Bastion Bear appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving heavy ice-defense bear mecha.",
+          "name" : "Glacier Bastion Bear Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Glacier Bastion Bear: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is broad bear chassis, shield shoulders, four piston paws, and glacier reactor hump."
+        },
+        {
+          "introduction" : "Glacier Bastion Bear appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving heavy ice-defense bear mecha.",
+          "name" : "Glacier Bastion Bear Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Glacier Bastion Bear: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is broad bear chassis, shield shoulders, four piston paws, and glacier reactor hump."
+        }
+      ],
+      "id" : "glacier-bastion-bear",
+      "lineageIntroduction" : "Glacier Bastion Bear is an original mecha creature lineage built around heavy ice-defense bear mecha, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "armored-bear-marches",
+      "materialAnchor" : "Glacier Bastion Bear: white armor and blue coolant crystal",
+      "motionAnchor" : "Glacier Bastion Bear moves through armored bear marches while keeping broad bear chassis, shield shoulders, four piston paws, and glacier reactor hump.",
+      "motionProfile" : "heavy",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.9490196078431372,
+        "red" : 0.9137254901960784
+      },
+      "silhouetteAnchor" : "broad bear chassis, shield shoulders, four piston paws, and glacier reactor hump",
+      "silhouetteClass" : "glacier-bastion-bear-topology",
+      "subtitle" : "tactical · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "tactical",
+        "heavy",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9294117647058824,
+        "green" : 0.40784313725490196,
+        "red" : 0.4745098039215686
+      },
+      "artStyle" : "dark; mysterious high-contrast silhouette, controlled void colors, elegant menace",
+      "displayName" : "Stealth Manta Jet",
+      "energyAnchor" : "Stealth Manta Jet: silent purple ion wake",
+      "existenceAnchor" : "manta-shaped aerial stealth unit",
+      "forms" : [
+        {
+          "introduction" : "Stealth Manta Jet appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving manta-shaped aerial stealth unit.",
+          "name" : "Stealth Manta Jet Core",
+          "stage" : "egg",
+          "visualAnchor" : "Stealth Manta Jet: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes."
+        },
+        {
+          "introduction" : "Stealth Manta Jet appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving manta-shaped aerial stealth unit.",
+          "name" : "Stealth Manta Jet First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Stealth Manta Jet: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes."
+        },
+        {
+          "introduction" : "Stealth Manta Jet appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving manta-shaped aerial stealth unit.",
+          "name" : "Stealth Manta Jet Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Stealth Manta Jet: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes."
+        },
+        {
+          "introduction" : "Stealth Manta Jet appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving manta-shaped aerial stealth unit.",
+          "name" : "Stealth Manta Jet Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Stealth Manta Jet: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes."
+        },
+        {
+          "introduction" : "Stealth Manta Jet appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving manta-shaped aerial stealth unit.",
+          "name" : "Stealth Manta Jet Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Stealth Manta Jet: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes."
+        }
+      ],
+      "id" : "stealth-manta-jet",
+      "lineageIntroduction" : "Stealth Manta Jet is an original mecha creature lineage built around manta-shaped aerial stealth unit, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "stealth-wing-glides",
+      "materialAnchor" : "Stealth Manta Jet: matte black composite and violet glass",
+      "motionAnchor" : "Stealth Manta Jet moves through stealth wing glides while keeping wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes.",
+      "motionProfile" : "gliding",
+      "secondaryAccent" : {
+        "blue" : 0.2235294117647059,
+        "green" : 0.13725490196078433,
+        "red" : 0.12549019607843137
+      },
+      "silhouetteAnchor" : "wide manta wings, pointed sensor head, two vector tails, and recessed engine eyes",
+      "silhouetteClass" : "stealth-manta-jet-topology",
+      "subtitle" : "dark · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "dark",
+        "gliding",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.788235294117647,
+        "red" : 0.32941176470588235
+      },
+      "artStyle" : "heroic; clear champion silhouette, athletic motion, confident focal pose",
+      "displayName" : "Arc Lion Vanguard",
+      "energyAnchor" : "Arc Lion Vanguard: blue arc mane",
+      "existenceAnchor" : "electric lion assault frame",
+      "forms" : [
+        {
+          "introduction" : "Arc Lion Vanguard appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving electric lion assault frame.",
+          "name" : "Arc Lion Vanguard Core",
+          "stage" : "egg",
+          "visualAnchor" : "Arc Lion Vanguard: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail."
+        },
+        {
+          "introduction" : "Arc Lion Vanguard appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving electric lion assault frame.",
+          "name" : "Arc Lion Vanguard First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Arc Lion Vanguard: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail."
+        },
+        {
+          "introduction" : "Arc Lion Vanguard appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving electric lion assault frame.",
+          "name" : "Arc Lion Vanguard Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Arc Lion Vanguard: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail."
+        },
+        {
+          "introduction" : "Arc Lion Vanguard appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving electric lion assault frame.",
+          "name" : "Arc Lion Vanguard Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Arc Lion Vanguard: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail."
+        },
+        {
+          "introduction" : "Arc Lion Vanguard appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving electric lion assault frame.",
+          "name" : "Arc Lion Vanguard Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Arc Lion Vanguard: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is angular lion head, circular cable mane, four armored legs, and coil tail."
+        }
+      ],
+      "id" : "arc-lion-vanguard",
+      "lineageIntroduction" : "Arc Lion Vanguard is an original mecha creature lineage built around electric lion assault frame, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "assault-lion-charges",
+      "materialAnchor" : "Arc Lion Vanguard: silver armor and cobalt alloy",
+      "motionAnchor" : "Arc Lion Vanguard moves through assault lion charges while keeping angular lion head, circular cable mane, four armored legs, and coil tail.",
+      "motionProfile" : "mechanical",
+      "secondaryAccent" : {
+        "blue" : 0.9490196078431372,
+        "green" : 0.8941176470588236,
+        "red" : 0.8470588235294118
+      },
+      "silhouetteAnchor" : "angular lion head, circular cable mane, four armored legs, and coil tail",
+      "silhouetteClass" : "arc-lion-vanguard-topology",
+      "subtitle" : "heroic · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "heroic",
+        "mechanical",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.9098039215686274,
+        "red" : 0.4470588235294118
+      },
+      "artStyle" : "exquisite; jewel-like precision, ornate but readable details, luxury collectible finish",
+      "displayName" : "Prism Samurai Frame",
+      "energyAnchor" : "Prism Samurai Frame: spectrum draw-cut arcs",
+      "existenceAnchor" : "nonhuman samurai automaton",
+      "forms" : [
+        {
+          "introduction" : "Prism Samurai Frame appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving nonhuman samurai automaton.",
+          "name" : "Prism Samurai Frame Core",
+          "stage" : "egg",
+          "visualAnchor" : "Prism Samurai Frame: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is faceless visor helm, two blade arms, digitigrade legs, and folding prism banner."
+        },
+        {
+          "introduction" : "Prism Samurai Frame appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving nonhuman samurai automaton.",
+          "name" : "Prism Samurai Frame First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Prism Samurai Frame: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is faceless visor helm, two blade arms, digitigrade legs, and folding prism banner."
+        },
+        {
+          "introduction" : "Prism Samurai Frame appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving nonhuman samurai automaton.",
+          "name" : "Prism Samurai Frame Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Prism Samurai Frame: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is faceless visor helm, two blade arms, digitigrade legs, and folding prism banner."
+        },
+        {
+          "introduction" : "Prism Samurai Frame appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving nonhuman samurai automaton.",
+          "name" : "Prism Samurai Frame Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Prism Samurai Frame: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is faceless visor helm, two blade arms, digitigrade legs, and folding prism banner."
+        },
+        {
+          "introduction" : "Prism Samurai Frame appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving nonhuman samurai automaton.",
+          "name" : "Prism Samurai Frame Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Prism Samurai Frame: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is faceless visor helm, two blade arms, digitigrade legs, and folding prism banner."
+        }
+      ],
+      "id" : "prism-samurai-frame",
+      "lineageIntroduction" : "Prism Samurai Frame is an original mecha creature lineage built around nonhuman samurai automaton, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "precision-draw-steps",
+      "materialAnchor" : "Prism Samurai Frame: black titanium and rainbow crystal",
+      "motionAnchor" : "Prism Samurai Frame moves through precision draw steps while keeping faceless visor helm, two blade arms, digitigrade legs, and folding prism banner.",
+      "motionProfile" : "poised",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.3607843137254902,
+        "red" : 0.8431372549019608
+      },
+      "silhouetteAnchor" : "faceless visor helm, two blade arms, digitigrade legs, and folding prism banner",
+      "silhouetteClass" : "prism-samurai-frame-topology",
+      "subtitle" : "exquisite · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "exquisite",
+        "poised",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.9098039215686274,
+        "green" : 0.7490196078431373,
+        "red" : 0.34901960784313724
+      },
+      "artStyle" : "mysterious; occult visual logic, restrained glow, uncanny but appealing identity",
+      "displayName" : "Chrono Scarab Drone",
+      "energyAnchor" : "Chrono Scarab Drone: time echo rings",
+      "existenceAnchor" : "time-shifting scarab robot",
+      "forms" : [
+        {
+          "introduction" : "Chrono Scarab Drone appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving time-shifting scarab robot.",
+          "name" : "Chrono Scarab Drone Core",
+          "stage" : "egg",
+          "visualAnchor" : "Chrono Scarab Drone: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is scarab shell, six mechanical legs, clock-ring wings, and needle head."
+        },
+        {
+          "introduction" : "Chrono Scarab Drone appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving time-shifting scarab robot.",
+          "name" : "Chrono Scarab Drone First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Chrono Scarab Drone: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is scarab shell, six mechanical legs, clock-ring wings, and needle head."
+        },
+        {
+          "introduction" : "Chrono Scarab Drone appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving time-shifting scarab robot.",
+          "name" : "Chrono Scarab Drone Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Chrono Scarab Drone: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is scarab shell, six mechanical legs, clock-ring wings, and needle head."
+        },
+        {
+          "introduction" : "Chrono Scarab Drone appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving time-shifting scarab robot.",
+          "name" : "Chrono Scarab Drone Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Chrono Scarab Drone: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is scarab shell, six mechanical legs, clock-ring wings, and needle head."
+        },
+        {
+          "introduction" : "Chrono Scarab Drone appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving time-shifting scarab robot.",
+          "name" : "Chrono Scarab Drone Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Chrono Scarab Drone: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is scarab shell, six mechanical legs, clock-ring wings, and needle head."
+        }
+      ],
+      "id" : "chrono-scarab-drone",
+      "lineageIntroduction" : "Chrono Scarab Drone is an original mecha creature lineage built around time-shifting scarab robot, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "six-leg-time-skips",
+      "materialAnchor" : "Chrono Scarab Drone: brass clockwork and blue crystal",
+      "motionAnchor" : "Chrono Scarab Drone moves through six leg time skips while keeping scarab shell, six mechanical legs, clock-ring wings, and needle head.",
+      "motionProfile" : "skittering",
+      "secondaryAccent" : {
+        "blue" : 0.30980392156862746,
+        "green" : 0.6588235294117647,
+        "red" : 0.8235294117647058
+      },
+      "silhouetteAnchor" : "scarab shell, six mechanical legs, clock-ring wings, and needle head",
+      "silhouetteClass" : "chrono-scarab-drone-topology",
+      "subtitle" : "mysterious · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "mysterious",
+        "skittering",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.8745098039215686,
+        "red" : 0.47058823529411764
+      },
+      "artStyle" : "cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms",
+      "displayName" : "Lunar Rabbit Rover",
+      "energyAnchor" : "Lunar Rabbit Rover: soft blue navigation beams",
+      "existenceAnchor" : "rabbit-shaped moon rover",
+      "forms" : [
+        {
+          "introduction" : "Lunar Rabbit Rover appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving rabbit-shaped moon rover.",
+          "name" : "Lunar Rabbit Rover Core",
+          "stage" : "egg",
+          "visualAnchor" : "Lunar Rabbit Rover: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is two antenna ears, rounded cockpit face, four wheel legs, and dish tail."
+        },
+        {
+          "introduction" : "Lunar Rabbit Rover appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving rabbit-shaped moon rover.",
+          "name" : "Lunar Rabbit Rover First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Lunar Rabbit Rover: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is two antenna ears, rounded cockpit face, four wheel legs, and dish tail."
+        },
+        {
+          "introduction" : "Lunar Rabbit Rover appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving rabbit-shaped moon rover.",
+          "name" : "Lunar Rabbit Rover Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Lunar Rabbit Rover: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is two antenna ears, rounded cockpit face, four wheel legs, and dish tail."
+        },
+        {
+          "introduction" : "Lunar Rabbit Rover appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving rabbit-shaped moon rover.",
+          "name" : "Lunar Rabbit Rover Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Lunar Rabbit Rover: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is two antenna ears, rounded cockpit face, four wheel legs, and dish tail."
+        },
+        {
+          "introduction" : "Lunar Rabbit Rover appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving rabbit-shaped moon rover.",
+          "name" : "Lunar Rabbit Rover Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Lunar Rabbit Rover: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is two antenna ears, rounded cockpit face, four wheel legs, and dish tail."
+        }
+      ],
+      "id" : "lunar-rabbit-rover",
+      "lineageIntroduction" : "Lunar Rabbit Rover is an original mecha creature lineage built around rabbit-shaped moon rover, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "low-gravity-wheel-hops",
+      "materialAnchor" : "Lunar Rabbit Rover: white lunar ceramic and navy panels",
+      "motionAnchor" : "Lunar Rabbit Rover moves through low gravity wheel hops while keeping two antenna ears, rounded cockpit face, four wheel legs, and dish tail.",
+      "motionProfile" : "rolling",
+      "secondaryAccent" : {
+        "blue" : 1,
+        "green" : 0.9490196078431372,
+        "red" : 0.9333333333333333
+      },
+      "silhouetteAnchor" : "two antenna ears, rounded cockpit face, four wheel legs, and dish tail",
+      "silhouetteClass" : "lunar-rabbit-rover-topology",
+      "subtitle" : "cute · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "cute",
+        "rolling",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 1,
+        "green" : 0.3764705882352941,
+        "red" : 0.5411764705882353
+      },
+      "artStyle" : "dark; mysterious high-contrast silhouette, controlled void colors, elegant menace",
+      "displayName" : "Void Gravity Spider",
+      "energyAnchor" : "Void Gravity Spider: purple gravity distortions",
+      "existenceAnchor" : "eight-legged gravity machine",
+      "forms" : [
+        {
+          "introduction" : "Void Gravity Spider appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving eight-legged gravity machine.",
+          "name" : "Void Gravity Spider Core",
+          "stage" : "egg",
+          "visualAnchor" : "Void Gravity Spider: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is central black-lens body, eight long legs, four stabilizer rings, and sensor crown."
+        },
+        {
+          "introduction" : "Void Gravity Spider appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving eight-legged gravity machine.",
+          "name" : "Void Gravity Spider First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Void Gravity Spider: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is central black-lens body, eight long legs, four stabilizer rings, and sensor crown."
+        },
+        {
+          "introduction" : "Void Gravity Spider appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving eight-legged gravity machine.",
+          "name" : "Void Gravity Spider Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Void Gravity Spider: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is central black-lens body, eight long legs, four stabilizer rings, and sensor crown."
+        },
+        {
+          "introduction" : "Void Gravity Spider appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving eight-legged gravity machine.",
+          "name" : "Void Gravity Spider Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Void Gravity Spider: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is central black-lens body, eight long legs, four stabilizer rings, and sensor crown."
+        },
+        {
+          "introduction" : "Void Gravity Spider appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving eight-legged gravity machine.",
+          "name" : "Void Gravity Spider Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Void Gravity Spider: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is central black-lens body, eight long legs, four stabilizer rings, and sensor crown."
+        }
+      ],
+      "id" : "void-gravity-spider",
+      "lineageIntroduction" : "Void Gravity Spider is an original mecha creature lineage built around eight-legged gravity machine, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "wall-folding-spider-steps",
+      "materialAnchor" : "Void Gravity Spider: black alloy and violet lens glass",
+      "motionAnchor" : "Void Gravity Spider moves through wall folding spider steps while keeping central black-lens body, eight long legs, four stabilizer rings, and sensor crown.",
+      "motionProfile" : "skittering",
+      "secondaryAccent" : {
+        "blue" : 0.1803921568627451,
+        "green" : 0.10588235294117647,
+        "red" : 0.09803921568627451
+      },
+      "silhouetteAnchor" : "central black-lens body, eight long legs, four stabilizer rings, and sensor crown",
+      "silhouetteClass" : "void-gravity-spider-topology",
+      "subtitle" : "dark · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "dark",
+        "skittering",
+        "mecha",
+        "creature"
+      ]
+    },
+    {
+      "accent" : {
+        "blue" : 0.3058823529411765,
+        "green" : 0.8235294117647058,
+        "red" : 1
+      },
+      "artStyle" : "regal; ceremonial proportions, crown-like anatomy, disciplined luxury materials",
+      "displayName" : "Solar Wyrm Mech",
+      "energyAnchor" : "Solar Wyrm Mech: white-orange solar plasma",
+      "existenceAnchor" : "segmented solar dragon machine",
+      "forms" : [
+        {
+          "introduction" : "Solar Wyrm Mech appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving segmented solar dragon machine.",
+          "name" : "Solar Wyrm Mech Core",
+          "stage" : "egg",
+          "visualAnchor" : "Solar Wyrm Mech: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is long mechanical dragon spine, horned sensor head, four claw modules, and ring reactor tail."
+        },
+        {
+          "introduction" : "Solar Wyrm Mech appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving segmented solar dragon machine.",
+          "name" : "Solar Wyrm Mech First Spark",
+          "stage" : "hatchling",
+          "visualAnchor" : "Solar Wyrm Mech: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is long mechanical dragon spine, horned sensor head, four claw modules, and ring reactor tail."
+        },
+        {
+          "introduction" : "Solar Wyrm Mech appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving segmented solar dragon machine.",
+          "name" : "Solar Wyrm Mech Pathfinder",
+          "stage" : "juvenile",
+          "visualAnchor" : "Solar Wyrm Mech: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is long mechanical dragon spine, horned sensor head, four claw modules, and ring reactor tail."
+        },
+        {
+          "introduction" : "Solar Wyrm Mech appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving segmented solar dragon machine.",
+          "name" : "Solar Wyrm Mech Ascendant",
+          "stage" : "ascended",
+          "visualAnchor" : "Solar Wyrm Mech: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is long mechanical dragon spine, horned sensor head, four claw modules, and ring reactor tail."
+        },
+        {
+          "introduction" : "Solar Wyrm Mech appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving segmented solar dragon machine.",
+          "name" : "Solar Wyrm Mech Crown",
+          "stage" : "legendary",
+          "visualAnchor" : "Solar Wyrm Mech: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is long mechanical dragon spine, horned sensor head, four claw modules, and ring reactor tail."
+        }
+      ],
+      "id" : "solar-wyrm-mech",
+      "lineageIntroduction" : "Solar Wyrm Mech is an original mecha creature lineage built around segmented solar dragon machine, evolving through five structural forms without changing species or identity.",
+      "locomotionClass" : "segmented-flight-coils",
+      "materialAnchor" : "Solar Wyrm Mech: gold armor and black heat ceramic",
+      "motionAnchor" : "Solar Wyrm Mech moves through segmented flight coils while keeping long mechanical dragon spine, horned sensor head, four claw modules, and ring reactor tail.",
+      "motionProfile" : "serpentine",
+      "secondaryAccent" : {
+        "blue" : 0.16470588235294117,
+        "green" : 0.16470588235294117,
+        "red" : 0.23529411764705882
+      },
+      "silhouetteAnchor" : "long mechanical dragon spine, horned sensor head, four claw modules, and ring reactor tail",
+      "silhouetteClass" : "solar-wyrm-mech-topology",
+      "subtitle" : "regal · mecha creature",
+      "symbolName" : "gearshape.2.fill",
+      "tags" : [
+        "mecha creature",
+        "regal",
+        "serpentine",
+        "mecha",
+        "creature"
+      ]
     }
   ]
 }

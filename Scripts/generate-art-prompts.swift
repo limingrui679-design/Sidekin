@@ -21,7 +21,9 @@ struct Form: Decodable {
 struct Theme: Decodable {
     let id: String
     let displayName: String
-    let category: String
+    let category: String?
+    let tags: [String]?
+    let artStyle: String?
     let subtitle: String
     let lineageIntroduction: String
     let existenceAnchor: String
@@ -86,6 +88,11 @@ func categoryName(_ rawValue: String) -> String {
     ][rawValue] ?? rawValue
 }
 
+func taxonomyName(for theme: Theme) -> String {
+    if let category = theme.category { return categoryName(category) }
+    return (theme.tags ?? []).joined(separator: " · ")
+}
+
 let stageRules = [
     "Stage I is a compact origin container, seed, core, field, diagram, module, or incomplete organism. Do not expose the complete mature limb set. Make the origin readable and specific rather than a generic egg.",
     "Stage II reveals the defining existence type, persistent identity feature, and basic locomotion. Use juvenile proportions and a clearly smaller, simpler construction than the mature forms.",
@@ -120,7 +127,8 @@ for theme in catalog.themes {
         let prompt = """
         Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
 
-        Theme: \(theme.displayName) [\(categoryName(theme.category))]
+        Theme: \(theme.displayName) [\(taxonomyName(for: theme))]
+        Art-style direction: \(theme.artStyle ?? "catalog-defined premium competitive-game companion")
         Form: \(form.name), canonical \(form.stage) stage
         Lineage concept: \(theme.lineageIntroduction)
         Existence anchor: \(theme.existenceAnchor)

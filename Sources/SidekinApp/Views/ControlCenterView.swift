@@ -578,7 +578,7 @@ private struct PetWorkshopDashboard: View {
                 VStack(alignment: .leading, spacing: 3) {
                     Text("TEMPLATE LIBRARY")
                         .font(.headline.bold())
-                    Text("100 offline themes across ten existence types. Generated templates appear here.")
+                    Text("200 offline lineages: a balanced ten-category core plus a searchable tag-based expansion. Generated templates appear here.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -620,7 +620,7 @@ private struct PetWorkshopDashboard: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 7) {
                     ThemeCategoryFilterButton(
-                        title: "All 100",
+                        title: "All 200",
                         symbol: "square.grid.3x3.fill",
                         isSelected: selectedThemeCategory == nil
                     ) {
@@ -717,7 +717,8 @@ private struct PetWorkshopDashboard: View {
             guard !query.isEmpty else { return true }
             let searchable = [
                 theme.displayName,
-                theme.category.displayName,
+                theme.taxonomyLabel,
+                theme.tags.joined(separator: " "),
                 theme.subtitle,
                 theme.lineageIntroduction,
                 theme.existenceAnchor,
@@ -1894,7 +1895,7 @@ private struct LineageAnchorPanel: View {
                 Text("\(theme.displayName) · DESIGN ANCHORS")
                     .font(.headline.bold())
                 Spacer()
-                Text(theme.category.displayName.uppercased())
+                Text(theme.taxonomyLabel.uppercased())
                     .font(.caption2.bold())
                     .foregroundStyle(theme.secondaryAccentColor)
             }
@@ -1905,7 +1906,7 @@ private struct LineageAnchorPanel: View {
                 .fixedSize(horizontal: false, vertical: true)
 
             LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
-                AnchorFact(symbol: theme.category.symbolName, label: "Existence", value: theme.existenceAnchor)
+                AnchorFact(symbol: theme.taxonomySymbol, label: "Existence", value: theme.existenceAnchor)
                 AnchorFact(symbol: "figure.run", label: "Movement", value: theme.motionAnchor)
                 AnchorFact(symbol: "square.3.layers.3d", label: "Silhouette", value: theme.silhouetteAnchor)
                 AnchorFact(symbol: "sparkles", label: "Material / Energy", value: "\(theme.materialAnchor) · \(theme.energyAnchor)")

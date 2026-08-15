@@ -13,8 +13,8 @@
   <img src="https://img.shields.io/badge/Electron-43-47848f?style=flat-square&logo=electron&logoColor=white" alt="Electron 43">
   <a href="https://github.com/limingrui679-design/Sidekin/actions/workflows/desktop.yml"><img src="https://github.com/limingrui679-design/Sidekin/actions/workflows/desktop.yml/badge.svg" alt="macOS and Windows desktop verification"></a>
   <a href="https://github.com/limingrui679-design/Sidekin/actions/workflows/codeql.yml"><img src="https://github.com/limingrui679-design/Sidekin/actions/workflows/codeql.yml/badge.svg" alt="CodeQL analysis"></a>
-  <img src="https://img.shields.io/badge/lineages-100-26c6c3?style=flat-square" alt="100 lineages">
-  <img src="https://img.shields.io/badge/forms-500-8b5cf6?style=flat-square" alt="500 forms">
+  <img src="https://img.shields.io/badge/lineages-200-26c6c3?style=flat-square" alt="200 lineages">
+  <img src="https://img.shields.io/badge/forms-1%2C000-8b5cf6?style=flat-square" alt="1,000 forms">
   <br><br>
   <strong>A live floating companion that turns Codex task activity into care, growth, and evolution.</strong>
   <br>
@@ -34,7 +34,7 @@ Most desktop pets are decorative overlays. Sidekin has a persistent life of its 
 
 | Live companion | Real care loop | Deep lineage system | Resumable workshop |
 |---|---|---|---|
-| Running, completed, and failed Codex tasks become timed local cards and animated pet reactions. | Hunger, mood, energy, feeding, play, sleep, wake, and local saves. | 100 built-in lineages, five audited stages each, across ten radically different categories. | Generate 1–8 stages, save every paid result immediately, retry one stage, or continue after failure. |
+| Running, completed, and failed Codex tasks become timed local cards and animated pet reactions. | Hunger, mood, energy, feeding, play, sleep, wake, and local saves. | 200 built-in lineages and 1,000 audited forms: a ten-category foundation plus a tag-based expansion. | Generate 1–8 stages, save every paid result immediately, retry one stage, or continue after failure. |
 
 Sidekin is intentionally broader than an animal pet collection. Its catalog includes mythic beings, unmistakably nonhuman humanoids, deities, mecha, vehicles, plants, fungi, minerals, artifacts, food beings, weather systems, abstract entities, architecture, and distributed colonies.
 
@@ -106,10 +106,10 @@ Arena Convergence leads the page. The eight remaining compositions each use one 
 
 | | Current local Beta |
 |---|---|
-| Version | `2.0.0-beta.2` cross-platform source Beta |
+| Version | `2.1.0-beta.1` cross-platform source Beta |
 | Platform | macOS 13+ · Windows 10/11 · 64-bit |
 | Stack | Electron 43 · TypeScript · secure isolated renderers |
-| Built-in content | 100 lineages · 500 transparent `1254×1254` PNG forms |
+| Built-in content | 200 lineages · 1,000 transparent `1254×1254` PNG forms |
 | Growth | Core Egg → First Spark → Shifting Form → Ascension → Crown Form |
 | Codex response | Live task cards · running · completed · failed · elapsed time |
 | Storage | Local JSON, template packages, stage images, and resumable jobs |
@@ -120,7 +120,7 @@ Arena Convergence leads the page. The eight remaining compositions each use one 
 
 Sidekin is currently built from source. Git LFS is required because the audited visual corpus is intentionally large.
 
-The [`v2.0.0-beta.2` prerelease](https://github.com/limingrui679-design/Sidekin/releases/tag/v2.0.0-beta.2) also retains native macOS and Windows CI archives, portable checksum files, package reports, and a tracked-source snapshot. The macOS archive is ad-hoc signed and the Windows archive is unsigned; neither is a consumer-trust or store-distribution claim.
+The [`v2.1.0-beta.1` prerelease](https://github.com/limingrui679-design/Sidekin/releases/tag/v2.1.0-beta.1) retains native macOS and Windows CI archives, portable checksum files, package reports, and a tracked-source snapshot. The macOS archive is ad-hoc signed and the Windows archive is unsigned; neither is a consumer-trust or store-distribution claim.
 
 ```bash
 git lfs install
@@ -149,15 +149,15 @@ The showcase deliberately exposes the full progression instead of selecting isol
 
 The final audit checks common-sense anatomy or construction, identity continuity, species or existence-type drift, insufficient change between stages, nonhuman-humanoid compliance, cutout quality, and readability at the 205–235 px desktop size.
 
-## 100 lineages · 500 forms
+## 200 lineages · 1,000 forms
 
 ### Twenty-lineage sampler
 
 ![Twenty Sidekin lineages represented by final legendary forms](docs/readme/showcase-20-readme.jpg)
 
-This sampler pairs two contrasting lineages from every category so the gallery shows variation within a category—not only one mascot per label.
+This sampler pairs two contrasting lineages from every original category so the gallery shows variation within a category—not only one mascot per label.
 
-The catalog contains ten lineages in each category:
+The first 100 lineages form a balanced foundation with ten lineages in each category:
 
 1. Fauna & Mythic
 2. Machines & Vehicles
@@ -170,18 +170,22 @@ The catalog contains ten lineages in each category:
 9. Living Architecture
 10. Collective Systems
 
+The second 100 lineages use searchable free-form tags rather than forcing every idea back into those ten buckets. This expansion adds nonhuman champions, spirits, legendary creatures, deities, racing forms, guardians, and mecha while preserving the same five-stage data contract and visual continuity rules.
+
 ### Every built-in lineage
 
-[![All 100 Sidekin lineages represented by their final legendary forms](docs/readme/all-100-readme.jpg)](docs/readme/all-100.jpg)
+[![All 200 Sidekin lineages represented by their final legendary forms](docs/readme/all-200-readme.jpg)](docs/readme/all-200.jpg)
 
-The complete contact sheet is generated directly from the same 100-theme catalog and final assets consumed by the app. It is an inventory view, not a separate hand-picked marketing set. Click it to inspect the full-resolution sheet.
+The complete contact sheet is generated directly from the same 200-theme catalog and final assets consumed by the app. It is an inventory view, not a separate hand-picked marketing set. Click it to inspect the full-resolution sheet.
 
 Humanoid silhouettes remain unmistakably nonhuman: the art standard forbids real people, children, realistic human skin, realistic human hair, and ordinary human faces.
 
-All 500 initial images existed before the 100-lineage audit began. The audit plus a later README showcase review produced 83 raw candidates for 80 stage targets across 63 lineages before acceptance. The evidence is reviewable in:
+The original 500 images existed before the first 100-lineage audit began. That audit plus a later README showcase review produced 83 raw candidates for 80 stage targets across 63 lineages before acceptance. A second, separately tracked expansion added another 100 lineages and 500 forms; all 100 expansion sequences were reviewed, six lineages were regenerated and reprocessed after visible findings, and one additional hatchling received a hash-pinned final normalization after the automated readability gate. The evidence is reviewable in:
 
-- [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) — one result for every lineage
+- [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) — one result for each of the original 100 lineages
+- [`docs/EXPANSION_AUDIT.md`](docs/EXPANSION_AUDIT.md) — one result for each of the 100 expansion lineages
 - [`ArtSources/AuditSheets`](ArtSources/AuditSheets) — 20 five-lineage audit sheets
+- [`ArtSources/Expansion200/ReviewSheets`](ArtSources/Expansion200/ReviewSheets) — 20 final expansion asset sheets
 - [`ArtSources/PET_THEME_CATALOG.json`](ArtSources/PET_THEME_CATALOG.json) — machine-readable source of truth
 - [`ArtSources/ART_PRODUCTION_500.md`](ArtSources/ART_PRODUCTION_500.md) — production and continuity constraints
 
@@ -220,7 +224,7 @@ Pet Workshop supports:
 
 Sidekin never includes the developer's API key. Image generation is optional and uses the individual user's own OpenAI API key and OpenAI API account. The key is protected by macOS Keychain or Windows DPAPI through the operating system's secure storage.
 
-Without a key, the floating companion, all 100 built-in lineages, care and growth, local saves, Codex reactions, and existing custom templates remain fully usable.
+Without a key, the floating companion, all 200 built-in lineages, care and growth, local saves, Codex reactions, and existing custom templates remain fully usable.
 
 Because model capabilities and prices can change, consult the current [GPT Image model documentation](https://developers.openai.com/api/docs/models), [image generation guide](https://developers.openai.com/api/docs/guides/image-generation), and [API pricing page](https://developers.openai.com/api/docs/pricing). The app shows its estimate before a request is sent.
 
@@ -265,7 +269,7 @@ npm run verify
 npm run package
 ```
 
-The shared runtime has deterministic lifecycle, concurrent-task, Codex metadata, workshop recovery, template safety, and pink/purple-safe cutout tests. The verifier also enforces isolated renderers, denied remote navigation and permissions, all 13 named motions, 100 lineages, 500 forms, and both packaging targets. Legacy art-authoring checks remain available under `Scripts/`; none of these checks reads a real API key or incurs an API charge.
+The shared runtime has deterministic lifecycle, concurrent-task, Codex metadata, workshop recovery, template safety, and pink/purple-safe cutout tests. The verifier also enforces isolated renderers, denied remote navigation and permissions, all 13 named motions, 200 lineages, 1,000 forms, the completed 100-lineage expansion ledger, and both packaging targets. Legacy art-authoring checks remain available under `Scripts/`; none of these checks reads a real API key or incurs an API charge.
 
 The GitHub Actions matrix runs natively on `macos-latest` and `windows-latest`, creates platform ZIP artifacts, and reruns the same verification before packaging. These CI artifacts are source-Beta evidence, not signed public installers.
 
@@ -275,19 +279,20 @@ The GitHub Actions matrix runs natively on `macos-latest` and `windows-latest`, 
 |---|---|
 | [`src`](src) | Shared Electron runtime, lifecycle, secure preload, renderers, Codex monitor, and workshop |
 | [`tests`](tests) | Cross-platform lifecycle, live-status, security-boundary, cutout, and recovery tests |
-| [`Sources/SidekinApp/Resources/Characters`](Sources/SidekinApp/Resources/Characters) | The 500 built-in transparent character forms consumed by both platforms |
+| [`Sources/SidekinApp/Resources/Characters`](Sources/SidekinApp/Resources/Characters) | The 1,000 built-in transparent character forms consumed by both platforms |
 | [`Sources`](Sources) | Historical Swift implementation and macOS-only art/provenance checks; not the shipped runtime |
 | [`ArtSources`](ArtSources) | Catalog, prompts, curated sources, repair candidates, and audit sheets |
 | [`Scripts`](Scripts) | Shared build/verification/media tools plus historical macOS art tooling |
 | [`.github/workflows/desktop.yml`](.github/workflows/desktop.yml) | Native macOS and Windows verification and packaging matrix |
 | [`.github/workflows/release.yml`](.github/workflows/release.yml) | Tagged prerelease build, checksum, and GitHub Release publication |
-| [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) | Final 100-lineage visual QA results |
+| [`docs/LINEAGE_AUDIT.md`](docs/LINEAGE_AUDIT.md) | Final visual QA results for the original 100 lineages |
+| [`docs/EXPANSION_AUDIT.md`](docs/EXPANSION_AUDIT.md) | Final visual QA results for the 100-lineage expansion |
 | [`docs/COMPLETION_AUDIT.md`](docs/COMPLETION_AUDIT.md) | Feature and evidence-bound completion audit |
 | [`docs/RELEASING.md`](docs/RELEASING.md) | Current source-build and native CI packaging guide |
 
 ## Project status
 
-Sidekin 2.0.0-beta.2 is an openly reviewable macOS and Windows source Beta. The same runtime is tested on both platforms, locally packaged and launched on macOS, and packaged by the repository's native Windows CI job. It is not represented as a signed public product, a production deployment, external adoption, or a real-API end-to-end validation performed with the author's key.
+Sidekin 2.1.0-beta.1 is an openly reviewable macOS and Windows source Beta. The same runtime is tested on both platforms, locally packaged and launched on macOS, and packaged by the repository's native Windows CI job. It is not represented as a signed public product, a production deployment, external adoption, or a real-API end-to-end validation performed with the author's key.
 
 The repository is proprietary and all rights are reserved. Source and art are visible for review, but no permission to copy, redistribute, or create derivatives is granted by the repository's [`LICENSE`](LICENSE).
 

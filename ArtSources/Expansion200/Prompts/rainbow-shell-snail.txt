@@ -1,0 +1,30 @@
+Create one production asset: a clean horizontal five-stage evolution lineup for the original Sidekin desktop companion Rainbow-Shell Snail.
+
+Identity bible:
+- Existence type: prismatic racing snail.
+- Persistent silhouette anatomy: soft round face, low foot, immense spiral shell, and two ribbon antennae.
+- Materials: Rainbow-Shell Snail: opal shell glass and glossy gel.
+- Energy motif: Rainbow-Shell Snail: rainbow slipstream.
+- Movement logic: Rainbow-Shell Snail moves through surprisingly fast glides while keeping soft round face, low foot, immense spiral shell, and two ribbon antennae..
+- Art mood: cute; premium stylized collectible proportions, expressive nonhuman face, rounded early forms.
+
+Canvas and mandatory slot layout:
+- Very wide 2:1 landscape canvas with a perfectly flat, uniform pure green #00FF00 background edge to edge.
+- Exactly five separate full-body subjects in one straight horizontal row, one stage centered in each invisible equal-width cell.
+- Scale every subject to stay completely inside its own cell. Leave an uninterrupted vertical gutter of pure green between every neighboring pair from top edge to bottom edge. No limb, tail, wing, halo, particle, ribbon, or effect may cross a gutter.
+- No overlap, touching, cropping, floor, cast shadow, scenery, text, numbers, labels, dividers, frame, UI, logo, or watermark. Keep pure green out of every subject.
+
+Stages, left to right:
+1. Rainbow-Shell Snail Core: Rainbow-Shell Snail appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving prismatic racing snail. Visual requirement: Rainbow-Shell Snail: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae.
+2. Rainbow-Shell Snail First Spark: Rainbow-Shell Snail appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving prismatic racing snail. Visual requirement: Rainbow-Shell Snail: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae.
+3. Rainbow-Shell Snail Pathfinder: Rainbow-Shell Snail appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving prismatic racing snail. Visual requirement: Rainbow-Shell Snail: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae.
+4. Rainbow-Shell Snail Ascendant: Rainbow-Shell Snail appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving prismatic racing snail. Visual requirement: Rainbow-Shell Snail: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae.
+5. Rainbow-Shell Snail Crown: Rainbow-Shell Snail appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving prismatic racing snail. Visual requirement: Rainbow-Shell Snail: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is soft round face, low foot, immense spiral shell, and two ribbon antennae.
+
+Continuity and quality rules:
+- These are five ages of exactly the same individual and species. Preserve the same face or primary core, signature palette, defining material, and at least three identity anchors in all five.
+- Make each stage structurally and proportionally different with a distinct pose. Never produce five recolors or the same body with more accessories.
+- The legendary form must be the largest, most complete, and most visually impressive form, clearly surpassing the ascended form while staying the same species.
+- Polished high-end original competitive-game character render, premium collectible companion, crisp small-size readability, controlled specular detail, production-quality anatomy or construction.
+- Any humanoid form must remain unmistakably nonhuman: no real person, human child, realistic human skin, realistic human hair, or ordinary human face.
+- Exactly these five subjects and nothing else.

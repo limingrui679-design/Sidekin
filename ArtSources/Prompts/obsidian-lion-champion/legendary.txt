@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Obsidian Lion Champion [nonhuman humanoid · fierce · heavy]
+Art-style direction: fierce; arena-ready anatomy, forceful stance, sharp readable massing
+Form: Obsidian Lion Champion Crown, canonical legendary stage
+Lineage concept: Obsidian Lion Champion is an original nonhuman humanoid lineage built around volcanic lion arena champion, evolving through five structural forms without changing species or identity.
+Existence anchor: volcanic lion arena champion
+Persistent silhouette logic: lion mask, massive gauntlets, digitigrade feet, and circular ember mane
+Silhouette topology class: obsidian-lion-champion-topology
+Movement and locomotion: Obsidian Lion Champion moves through arena charges while keeping lion mask, massive gauntlets, digitigrade feet, and circular ember mane.; arena-charges
+Material system: Obsidian Lion Champion: obsidian armor and molten brass
+Energy motif: Obsidian Lion Champion: solar flame arcs
+Current-stage introduction: Obsidian Lion Champion appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving volcanic lion arena champion.
+Current-stage visual anchor: Obsidian Lion Champion: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is lion mask, massive gauntlets, digitigrade feet, and circular ember mane.
+
+The provided reference image is the immediately preceding form, Obsidian Lion Champion Ascendant. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Obsidian Lion Champion: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is lion mask, massive gauntlets, digitigrade feet, and circular ember mane.
+
+Progression rule: Stage V is the unmistakable crown form. Make a major outline, scale, formation, or system change while preserving the same lineage, identity marker, and existence type.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FF00FF, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FF00FF must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

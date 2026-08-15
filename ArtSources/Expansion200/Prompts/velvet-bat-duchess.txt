@@ -1,0 +1,30 @@
+Create one production asset: a clean horizontal five-stage evolution lineup for the original Sidekin desktop companion Velvet Bat Duchess.
+
+Identity bible:
+- Existence type: bat-faced night noble.
+- Persistent silhouette anatomy: large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws.
+- Materials: Velvet Bat Duchess: midnight velvet and ruby enamel.
+- Energy motif: Velvet Bat Duchess: crimson moon mist.
+- Movement logic: Velvet Bat Duchess moves through cape wing glides while keeping large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws..
+- Art mood: gothic; moonlit dark ornament, cathedral-like shape language without architecture, noble menace.
+
+Canvas and mandatory slot layout:
+- Very wide 2:1 landscape canvas with a perfectly flat, uniform pure green #00FF00 background edge to edge.
+- Exactly five separate full-body subjects in one straight horizontal row, one stage centered in each invisible equal-width cell.
+- Scale every subject to stay completely inside its own cell. Leave an uninterrupted vertical gutter of pure green between every neighboring pair from top edge to bottom edge. No limb, tail, wing, halo, particle, ribbon, or effect may cross a gutter.
+- No overlap, touching, cropping, floor, cast shadow, scenery, text, numbers, labels, dividers, frame, UI, logo, or watermark. Keep pure green out of every subject.
+
+Stages, left to right:
+1. Velvet Bat Duchess Core: Velvet Bat Duchess appears as a compact sealed origin with only the persistent face or core marker and two folded anatomy hints, preserving bat-faced night noble. Visual requirement: Velvet Bat Duchess: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws.
+2. Velvet Bat Duchess First Spark: Velvet Bat Duchess appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving bat-faced night noble. Visual requirement: Velvet Bat Duchess: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws.
+3. Velvet Bat Duchess Pathfinder: Velvet Bat Duchess appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving bat-faced night noble. Visual requirement: Velvet Bat Duchess: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws.
+4. Velvet Bat Duchess Ascendant: Velvet Bat Duchess appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving bat-faced night noble. Visual requirement: Velvet Bat Duchess: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws.
+5. Velvet Bat Duchess Crown: Velvet Bat Duchess appears as the unmistakable apex form with crown anatomy, expanded scale, and a fully realized halo or energy system, preserving bat-faced night noble. Visual requirement: Velvet Bat Duchess: largest and most complete crown silhouette; visibly more magnificent than the ascended form; persistent anatomy is large bat ears, gem mask, cape wings, digitigrade feet, and crescent fan claws.
+
+Continuity and quality rules:
+- These are five ages of exactly the same individual and species. Preserve the same face or primary core, signature palette, defining material, and at least three identity anchors in all five.
+- Make each stage structurally and proportionally different with a distinct pose. Never produce five recolors or the same body with more accessories.
+- The legendary form must be the largest, most complete, and most visually impressive form, clearly surpassing the ascended form while staying the same species.
+- Polished high-end original competitive-game character render, premium collectible companion, crisp small-size readability, controlled specular detail, production-quality anatomy or construction.
+- Any humanoid form must remain unmistakably nonhuman: no real person, human child, realistic human skin, realistic human hair, or ordinary human face.
+- Exactly these five subjects and nothing else.

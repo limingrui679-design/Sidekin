@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Eclipse Wing Oracle [divine entity · gothic · winged · divine]
+Art-style direction: gothic; moonlit dark ornament, cathedral-like shape language without architecture, noble menace
+Form: Eclipse Wing Oracle Ascendant, canonical ascended stage
+Lineage concept: Eclipse Wing Oracle is an original divine entity lineage built around winged eclipse prophet, evolving through five structural forms without changing species or identity.
+Existence anchor: winged eclipse prophet
+Persistent silhouette logic: dark bird mask, two vast crescent wings, eye halo, and ribbon talons
+Silhouette topology class: eclipse-wing-oracle-topology
+Movement and locomotion: Eclipse Wing Oracle moves through silent oracle flight while keeping dark bird mask, two vast crescent wings, eye halo, and ribbon talons.; silent-oracle-flight
+Material system: Eclipse Wing Oracle: black feathers and moon-silver edges
+Energy motif: Eclipse Wing Oracle: violet corona omens
+Current-stage introduction: Eclipse Wing Oracle appears as a major structural ascension with changed stance, enlarged anatomy, and a mature combat or ritual function, preserving winged eclipse prophet.
+Current-stage visual anchor: Eclipse Wing Oracle: broad mature silhouette and a new pose; not merely extra armor; persistent anatomy is dark bird mask, two vast crescent wings, eye halo, and ribbon talons.
+
+The provided reference image is the immediately preceding form, Eclipse Wing Oracle Pathfinder. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Eclipse Wing Oracle: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is dark bird mask, two vast crescent wings, eye halo, and ribbon talons.
+
+Progression rule: Stage IV is a structural ascension: change stance, functional anatomy, formation, or architecture. Preserve the same face, core, facade, or identity marker; do not merely add armor.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FFFF00, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FFFF00 must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

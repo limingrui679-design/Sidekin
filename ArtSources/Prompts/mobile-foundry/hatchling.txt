@@ -1,6 +1,7 @@
 Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
 
 Theme: Mobile Foundry [Machines & Vehicles]
+Art-style direction: catalog-defined premium competitive-game companion
 Form: Tongsleg Smelter, canonical hatchling stage
 Lineage concept: A walking industrial furnace that forges replacement limbs and tools from its own heat.
 Existence anchor: Self-Repairing Walking Foundry

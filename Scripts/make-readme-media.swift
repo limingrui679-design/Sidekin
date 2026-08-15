@@ -356,7 +356,7 @@ for (index, entry) in showcaseEntries.enumerated() {
 showcaseImage.unlockFocus()
 try saveJPEG(showcaseImage, named: "showcase-20.jpg", quality: 0.88)
 
-// MARK: All 100 lineage thumbnails
+// MARK: All 200 lineage thumbnails
 
 struct CatalogEnvelope: Decodable {
     struct Theme: Decodable {
@@ -373,29 +373,29 @@ let projectRoot = URL(fileURLWithPath: #filePath)
 let catalogURL = projectRoot.appendingPathComponent("ArtSources/PET_THEME_CATALOG.json")
 guard let catalogData = try? Data(contentsOf: catalogURL),
       let catalog = try? JSONDecoder().decode(CatalogEnvelope.self, from: catalogData),
-      catalog.themes.count == 100
+      catalog.themes.count == 200
 else {
-    fputs("Could not read 100-theme catalog for README overview.\n", stderr)
+    fputs("Could not read 200-theme catalog for README overview.\n", stderr)
     exit(1)
 }
 
-let allSize = NSSize(width: 2_000, height: 2_260)
+let allSize = NSSize(width: 2_000, height: 4_210)
 let allImage = NSImage(size: allSize)
 allImage.lockFocus()
 NSGraphicsContext.current?.imageInterpolation = .high
 fillBackground(NSRect(origin: .zero, size: allSize))
-("ALL 100 LINEAGES." as NSString).draw(at: NSPoint(x: 64, y: 2_180), withAttributes: eyebrow)
+("ALL 200 LINEAGES." as NSString).draw(at: NSPoint(x: 64, y: 4_130), withAttributes: eyebrow)
 ("One final form from every built-in evolution path." as NSString).draw(
-    at: NSPoint(x: 64, y: 2_132),
+    at: NSPoint(x: 64, y: 4_082),
     withAttributes: subtitle
 )
 
 let allColumns = 10
-let allRows = 10
+let allRows = 20
 let allCellWidth: CGFloat = 190
 let allCellHeight: CGFloat = 195
 let allStartX: CGFloat = 50
-let allStartY: CGFloat = 1_900
+let allStartY: CGFloat = 3_850
 let tinyName: [NSAttributedString.Key: Any] = [
     .font: NSFont.systemFont(ofSize: 15, weight: .semibold),
     .foregroundColor: NSColor.white
@@ -429,6 +429,6 @@ for (index, theme) in catalog.themes.enumerated() {
     )
 }
 allImage.unlockFocus()
-try saveJPEG(allImage, named: "all-100.jpg", quality: 0.9)
+try saveJPEG(allImage, named: "all-200.jpg", quality: 0.9)
 
 print("Built README media in \(outputDirectory.path)")

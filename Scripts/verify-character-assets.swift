@@ -27,8 +27,8 @@ else {
     exit(1)
 }
 let themes = catalog.themes.map(\.id)
-guard themes.count == 100, Set(themes).count == 100 else {
-    fputs("Verification failed: catalog must contain 100 unique theme IDs\n", stderr)
+guard themes.count == 200, Set(themes).count == 200 else {
+    fputs("Verification failed: catalog must contain 200 unique theme IDs\n", stderr)
     exit(1)
 }
 let stages = ["egg", "hatchling", "juvenile", "ascended", "legendary"]
@@ -107,7 +107,7 @@ do {
 guard actualNames == expectedNames else {
     let missing = expectedNames.subtracting(actualNames).sorted().joined(separator: ", ")
     let unexpected = actualNames.subtracting(expectedNames).sorted().joined(separator: ", ")
-    fail("expected exactly 500 assets; missing=[\(missing)] unexpected=[\(unexpected)]")
+    fail("expected exactly 1,000 assets; missing=[\(missing)] unexpected=[\(unexpected)]")
 }
 
 let maskSide = 72
@@ -116,6 +116,7 @@ let colorSpace = CGColorSpaceCreateDeviceRGB()
 let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue
 var masks: [String: AssetMask] = [:]
 var uniqueFileData = Set<Data>()
+var assetGateViolations: [String] = []
 
 for name in expectedNames.sorted() {
     let url = directory.appendingPathComponent(name)
@@ -158,15 +159,21 @@ for name in expectedNames.sorted() {
     }
 
     let occupancy = Double(occupied) / Double(maskSide * maskSide)
-    guard occupancy > 0.045, occupancy < 0.72 else {
-        fail("\(name) has suspicious alpha occupancy \(String(format: "%.3f", occupancy))")
+    if occupancy <= 0.045 || occupancy >= 0.72 {
+        assetGateViolations.append(
+            "\(name) has suspicious alpha occupancy \(String(format: "%.3f", occupancy))"
+        )
     }
     for corner in [0, maskSide - 1, maskSide * (maskSide - 1), maskSide * maskSide - 1] {
-        guard !alphaMask[corner] else {
-            fail("\(name) has a non-transparent corner")
+        if alphaMask[corner] {
+            assetGateViolations.append("\(name) has a non-transparent corner")
         }
     }
     masks[name] = AssetMask(name: name, pixels: alphaMask, rgba: pixels, occupied: occupied)
+}
+
+if !assetGateViolations.isEmpty {
+    fail(assetGateViolations.joined(separator: "; "))
 }
 
 let withinLineageSilhouetteThreshold = 0.82
@@ -231,7 +238,7 @@ for stage in stages {
     }
 }
 
-print("Verified 500 unique 1254x1254 transparent assets across 100 complete themes.")
+print("Verified 1,000 unique 1254x1254 transparent assets across 200 complete themes.")
 print(
     "Highest within-lineage silhouette IoU: "
         + String(format: "%.3f", maximumWithinLineage.score)

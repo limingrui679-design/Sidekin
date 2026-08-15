@@ -21,7 +21,9 @@ struct ThemeForm: Codable {
 struct Theme: Codable {
     let id: String
     let displayName: String
-    let category: String
+    let category: String?
+    let tags: [String]?
+    let artStyle: String?
     let subtitle: String
     let symbolName: String
     let lineageIntroduction: String
@@ -101,17 +103,21 @@ do {
     )
     .filter { $0.pathExtension.lowercased() == "json" }
     .sorted { $0.lastPathComponent < $1.lastPathComponent }
-    try require(files.count == 10, "Expected 10 category fragments, found \(files.count)")
+    try require(files.count == 11, "Expected 10 category fragments and one expansion fragment, found \(files.count)")
 
     var themes: [Theme] = []
     let decoder = JSONDecoder()
     for file in files {
         let fragment = try decoder.decode(Fragment.self, from: Data(contentsOf: file))
-        try require(fragment.themes.count == 10, "\(file.lastPathComponent) must contain 10 themes")
+        let expectedCount = file.lastPathComponent == "11-expansion.json" ? 100 : 10
+        try require(
+            fragment.themes.count == expectedCount,
+            "\(file.lastPathComponent) must contain \(expectedCount) themes"
+        )
         themes.append(contentsOf: fragment.themes)
     }
 
-    try require(themes.count == 100, "Expected 100 complete themes, found \(themes.count)")
+    try require(themes.count == 200, "Expected 200 complete themes, found \(themes.count)")
     try unique(themes.map(\.id), label: "theme ID")
     try unique(themes.map(\.displayName), label: "theme name")
     try unique(themes.map(\.lineageIntroduction), label: "lineage introduction")
@@ -121,7 +127,11 @@ do {
     try unique(themes.map(\.materialAnchor), label: "material anchor")
     try unique(themes.map(\.energyAnchor), label: "energy anchor")
 
-    let categoryCounts = Dictionary(grouping: themes, by: \.category).mapValues(\.count)
+    let categorizedThemes = themes.filter { $0.category != nil }
+    let tagBasedThemes = themes.filter { $0.category == nil }
+    try require(categorizedThemes.count == 100, "Expected 100 category-based legacy themes")
+    try require(tagBasedThemes.count == 100, "Expected 100 tag-based expansion themes")
+    let categoryCounts = Dictionary(grouping: categorizedThemes, by: { $0.category! }).mapValues(\.count)
     try require(Set(categoryCounts.keys) == Set(categoryOrder), "Catalog categories do not match the ten-category plan")
     for category in categoryOrder {
         try require(categoryCounts[category] == 10, "Category \(category) must contain exactly 10 themes")
@@ -138,6 +148,12 @@ do {
         try require(theme.materialAnchor.count >= 20, "\(theme.id) has a weak material anchor")
         try require(theme.energyAnchor.count >= 18, "\(theme.id) has a weak energy anchor")
         try require(motionProfiles.contains(theme.motionProfile), "\(theme.id) has unknown motion profile \(theme.motionProfile)")
+        if theme.category == nil {
+            let tags = theme.tags ?? []
+            try require(tags.count >= 3, "\(theme.id) must provide at least three searchable tags")
+            try require(Set(tags).count == tags.count, "\(theme.id) contains duplicate tags")
+            try require(!(theme.artStyle ?? "").isEmpty, "\(theme.id) must provide an art-style direction")
+        }
         try validateColor(theme.accent, label: theme.id)
         try validateColor(theme.secondaryAccent, label: theme.id)
         try require(theme.forms.map(\.stage) == stages, "\(theme.id) must define the five canonical stages in order")
@@ -152,7 +168,7 @@ do {
     try require(Set(themes.map(\.locomotionClass)).count >= 18, "Catalog needs at least 18 locomotion classes")
 
     let forms = themes.flatMap(\.forms)
-    try require(forms.count == 500, "Expected 500 described forms, found \(forms.count)")
+    try require(forms.count == 1_000, "Expected 1,000 described forms, found \(forms.count)")
     try unique(forms.map(\.name), label: "form name")
     try unique(forms.map(\.introduction), label: "form introduction")
     try unique(forms.map(\.visualAnchor), label: "stage visual anchor")
@@ -180,7 +196,7 @@ do {
     try fileManager.createDirectory(at: jsonOutput.deletingLastPathComponent(), withIntermediateDirectories: true)
     try swiftSource.write(to: swiftOutput, atomically: true, encoding: .utf8)
     try data.write(to: jsonOutput, options: .atomic)
-    print("Generated 100 themes and 500 described forms.")
+    print("Generated 200 themes and 1,000 described forms.")
 } catch {
     fputs("Theme catalog generation failed: \(error)\n", stderr)
     exit(1)

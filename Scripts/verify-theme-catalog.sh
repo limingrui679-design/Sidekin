@@ -31,8 +31,8 @@ fi
 if ! /usr/bin/diff -qr \
   "$TEMP_DIR/Prompts" \
   "$PROJECT_ROOT/ArtSources/Prompts" >/dev/null; then
-  print -u2 "The 500 stored art prompts are stale. Run Scripts/generate-art-prompts.swift."
+  print -u2 "The 1,000 stored art prompts are stale. Run Scripts/generate-art-prompts.swift."
   exit 1
 fi
 
-print "Verified 100-theme catalog source, generated data, and all 500 art prompts."
+print "Verified 200-theme catalog source, generated data, and all 1,000 art prompts."

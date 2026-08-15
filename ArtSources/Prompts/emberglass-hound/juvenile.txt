@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Emberglass Hound [mythic animal · fierce · prowling · creature]
+Art-style direction: fierce; arena-ready anatomy, forceful stance, sharp readable massing
+Form: Emberglass Hound Pathfinder, canonical juvenile stage
+Lineage concept: Emberglass Hound is an original mythic animal lineage built around obsidian jackal hound, evolving through five structural forms without changing species or identity.
+Existence anchor: obsidian jackal hound
+Persistent silhouette logic: wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail
+Silhouette topology class: emberglass-hound-topology
+Movement and locomotion: Emberglass Hound moves through pouncing quadruped runs while keeping wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail.; pouncing-quadruped-runs
+Material system: Emberglass Hound: black volcanic glass and small gold bands
+Energy motif: Emberglass Hound: orange magma seams and broken-sun halo
+Current-stage introduction: Emberglass Hound appears as an athletic developing form that reveals the full locomotion system and first functional energy organ, preserving obsidian jackal hound.
+Current-stage visual anchor: Emberglass Hound: leaner mid-stage silhouette in active motion; visibly different from the hatchling; persistent anatomy is wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail.
+
+The provided reference image is the immediately preceding form, Emberglass Hound First Spark. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Emberglass Hound: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is wedge jackal face, tall ears, four powerful legs, ember chest fissure, and split flame tail.
+
+Progression rule: Stage III establishes the signature topology, locomotion, functional tool or organ, and material system. Change the outer contour and pose from Stage II without losing identity.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FF00FF, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FF00FF must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

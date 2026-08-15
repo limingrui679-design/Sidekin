@@ -1,0 +1,26 @@
+Create exactly one complete full-body subject for a premium competitive-game macOS floating pet.
+
+Theme: Karmic Wheel Guardian [divine entity · ancient · rolling · divine]
+Art-style direction: ancient; ancient relic craftsmanship, weathered detail, solemn silhouette
+Form: Karmic Wheel Guardian First Spark, canonical hatchling stage
+Lineage concept: Karmic Wheel Guardian is an original divine entity lineage built around wheel-bodied law guardian, evolving through five structural forms without changing species or identity.
+Existence anchor: wheel-bodied law guardian
+Persistent silhouette logic: armored mask, eight-spoke torso wheel, four hands, and banner fins
+Silhouette topology class: karmic-wheel-guardian-topology
+Movement and locomotion: Karmic Wheel Guardian moves through wheel marches while keeping armored mask, eight-spoke torso wheel, four hands, and banner fins.; wheel-marches
+Material system: Karmic Wheel Guardian: bronze scripture metal and jade
+Energy motif: Karmic Wheel Guardian: turning gold seals
+Current-stage introduction: Karmic Wheel Guardian appears as a small appealing juvenile with simplified limbs and an oversized identity marker, preserving wheel-bodied law guardian.
+Current-stage visual anchor: Karmic Wheel Guardian: small juvenile proportions and a clearly readable first locomotion stance; persistent anatomy is armored mask, eight-spoke torso wheel, four hands, and banner fins.
+
+The provided reference image is the immediately preceding form, Karmic Wheel Guardian Core. Evolve exactly that same individual and lineage. Preserve its recognizable face or primary core/facade, signature palette, defining material, and persistent focal marker. The new silhouette must be structurally different, but it must never switch species, existence type, number/topology logic, or unrelated design language. Previous-stage anchor: Karmic Wheel Guardian: compact origin silhouette; mature anatomy remains hidden; persistent anatomy is armored mask, eight-spoke torso wheel, four hands, and banner fins.
+
+Progression rule: Stage II reveals the defining existence type, persistent identity feature, and basic locomotion. Use juvenile proportions and a clearly smaller, simpler construction than the mature forms.
+
+Art direction: polished high-end 3D competitive-game character render, original collectible arena companion, deliberately readable silhouette, clear focal feature, production-quality anatomy or construction, crisp material separation, controlled specular highlights, rich but disciplined color, and strong small-size readability. Do not imitate any existing franchise. Non-animal themes must stay genuinely non-animal; never add a generic face, fox ears, horns, dragon anatomy, four animal legs, or humanoid armor unless this theme explicitly requires them. Any explicitly humanoid subject must still read as a clearly nonhuman creature, deity, spirit, construct, food being, machine, or abstract lifeform—never depict a real human, human child, realistic human skin, realistic human hair, or an ordinary human face.
+
+Composition: exactly one subject, centered on a square canvas, complete and uncropped, every limb/module/ribbon/ring/architectural component fully visible, generous padding, no floor and no detached unrelated props. Use a three-quarter presentation unless the visual anchor explicitly calls for profile, radial, top-down, diagrammatic, or architectural framing.
+
+Background: perfectly flat solid #FF00FF, edge to edge. No floor, cast shadow, contact shadow, gradient, fog, texture, vignette, reflection, or lighting variation on the background. The exact key color #FF00FF must not appear anywhere on the subject.
+
+Hard exclusions: no scenery, frame, border, typography, letters, numbers, logo, watermark, duplicate subject, cropped component, generic upright humanoid substitution, recolor-only evolution, species drift, existence-type drift, or unrelated costume redesign.

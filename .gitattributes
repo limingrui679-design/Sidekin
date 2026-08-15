@@ -5,9 +5,9 @@ ArtSources/FiveStage/**/*.png filter=lfs diff=lfs merge=lfs -text
 ArtSources/AuditReplacements/**/*.png filter=lfs diff=lfs merge=lfs -text
 ArtSources/AuditSheets/*.png filter=lfs diff=lfs merge=lfs -text
 ArtSources/READMEHero/*.png filter=lfs diff=lfs merge=lfs -text
-# Keep the unfinished 200-lineage expansion out of ordinary Git object history
-# when it is reviewed and added in a later release.
+# Keep expansion authoring and review media out of ordinary Git object history.
 ArtSources/Expansion200/**/*.png filter=lfs diff=lfs merge=lfs -text
+ArtSources/Expansion200/ReviewSheets/*.jpg filter=lfs diff=lfs merge=lfs -text
 docs/*.jpg filter=lfs diff=lfs merge=lfs -text
 docs/readme/*.jpg filter=lfs diff=lfs merge=lfs -text
 docs/readme/*.png filter=lfs diff=lfs merge=lfs -text
