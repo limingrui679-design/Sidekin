@@ -1,0 +1,44 @@
+name: Feature request
+description: Propose a focused improvement to the Sidekin experience
+title: "[Feature]: "
+labels: [enhancement, needs-triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Describe the unmet need before describing a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What should become possible, and how would we know it works?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: Optional. Include privacy, accessibility, migration, and platform implications.
+  - type: dropdown
+    id: platforms
+    attributes:
+      label: Platform scope
+      options:
+        - macOS and Windows
+        - macOS only
+        - Windows only
+        - Data format or documentation only
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Project boundaries
+      options:
+        - label: This request does not require collecting prompts, replies, code, or tool output.
+          required: true
+        - label: I searched existing issues and reviewed the current README boundary.
+          required: true

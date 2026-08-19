@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security report
+    url: https://github.com/limingrui679-design/Sidekin/security/advisories/new
+    about: Report vulnerabilities without disclosing them publicly.
+  - name: Support boundary
+    url: https://github.com/limingrui679-design/Sidekin/blob/main/SUPPORT.md
+    about: Check what evidence to include and what data must stay private.

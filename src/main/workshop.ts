@@ -1,14 +1,13 @@
 import { existsSync } from "node:fs";
-import { mkdir, readFile, readdir, rm } from "node:fs/promises";
+import { mkdir, readFile, readdir, rm, stat } from "node:fs/promises";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
 import { randomUUID } from "node:crypto";
 import type {
   CustomPetStageDefinition,
   CustomPetTemplate,
   GenerationJob,
   GenerationJobView,
-  GenerationRequest,
+  StoredGenerationRequest,
   WorkshopProgress
 } from "../shared/types.js";
 import type { SidekinPaths } from "./paths.js";
@@ -16,8 +15,24 @@ import { readJSON, safeIdentifier, writeJSON, atomicWrite } from "./file-store.j
 import { OpenAIImageClient, type ImageClient } from "./openai-client.js";
 import { normalizeReference, prepareGeneratedAsset } from "./image-processor.js";
 import { TemplateStore } from "./template-store.js";
+import { mediaURL } from "../shared/media.js";
 
 const CANONICAL_THRESHOLDS = [0, 20, 75, 180, 360];
+const MAX_REFERENCE_BYTES = 24 * 1024 * 1024;
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function boundedText(value: unknown, label: string, maximum: number): string {
+  if (typeof value !== "string" || !value.trim() || value.length > maximum || value.includes("\0")) throw new Error(`${label} is invalid.`);
+  return value.trim();
+}
+
+function validDate(value: unknown, label: string): string {
+  if (typeof value !== "string" || !Number.isFinite(new Date(value).getTime())) throw new Error(`${label} is invalid.`);
+  return new Date(value).toISOString();
+}
 
 function thresholds(count: number): number[] {
   if (count === 1) return [0];
@@ -46,32 +61,103 @@ export class WorkshopService {
   private raw(id: string, index: number): string { return path.join(this.directory(id), `raw-stage-${String(index + 1).padStart(2, "0")}.png`); }
   private processed(id: string, index: number): string { return path.join(this.directory(id), `processed-stage-${String(index + 1).padStart(2, "0")}.png`); }
 
+  private async loadJob(id: string): Promise<GenerationJob | undefined> {
+    safeIdentifier(id);
+    const raw = await readJSON<unknown>(this.manifest(id));
+    if (!raw) return undefined;
+    if (!isRecord(raw) || raw.schemaVersion !== 1 || raw.id !== id) throw new Error("Generation job manifest is invalid.");
+    const requestRaw = raw.request;
+    if (!isRecord(requestRaw) || !Array.isArray(requestRaw.stageNames)) throw new Error("Generation job request is invalid.");
+    const request: StoredGenerationRequest = {
+      templateName: boundedText(requestRaw.templateName, "Template name", 60),
+      description: boundedText(requestRaw.description, "Description", 2_000),
+      artDirection: boundedText(requestRaw.artDirection, "Art direction", 1_000),
+      mode: requestRaw.mode as StoredGenerationRequest["mode"],
+      quality: requestRaw.quality as StoredGenerationRequest["quality"],
+      stageNames: requestRaw.stageNames.map((name, index) => boundedText(name, `Stage ${index + 1}`, 64)),
+      fallbackTheme: boundedText(requestRaw.fallbackTheme, "Fallback theme", 96),
+      motionProfile: typeof requestRaw.motionProfile === "string" ? requestRaw.motionProfile : undefined,
+      referencePath: existsSync(path.join(this.directory(id), "reference.png")) ? "reference.png" : undefined
+    };
+    this.validateRequest(request);
+    const templateID = boundedText(raw.templateID, "Template ID", 96);
+    safeIdentifier(templateID);
+    if (!(["ready", "running", "failed", "cancelled"] as unknown[]).includes(raw.state)) throw new Error("Generation job state is invalid.");
+    const completed = new Map<number, CustomPetStageDefinition>();
+    for (const value of Array.isArray(raw.completedStages) ? raw.completedStages : []) {
+      if (!isRecord(value) || !Number.isInteger(value.index)) throw new Error("Generation job stage is invalid.");
+      const index = value.index as number;
+      if (index < 0 || index >= request.stageNames.length) throw new Error("Generation job stage is out of range.");
+      const stageID = boundedText(value.id, "Generation stage ID", 96);
+      safeIdentifier(stageID);
+      const expectedAsset = `stage-${String(index + 1).padStart(2, "0")}.png`;
+      if (value.assetFileName !== expectedAsset || !Number.isFinite(value.experienceThreshold)) throw new Error("Generation job stage metadata is invalid.");
+      if (!existsSync(this.processed(id, index))) continue;
+      completed.set(index, {
+        id: stageID,
+        index,
+        name: boundedText(value.name, "Generation stage name", 64),
+        prompt: boundedText(value.prompt, "Generation stage prompt", 4_000),
+        experienceThreshold: Math.max(0, value.experienceThreshold as number),
+        assetFileName: expectedAsset
+      });
+    }
+    return {
+      schemaVersion: 1,
+      id,
+      templateID,
+      state: raw.state as GenerationJob["state"],
+      createdAt: validDate(raw.createdAt, "Generation job creation time"),
+      updatedAt: validDate(raw.updatedAt, "Generation job update time"),
+      request,
+      completedStages: [...completed.values()].sort((a, b) => a.index - b.index),
+      errorMessage: typeof raw.errorMessage === "string" ? raw.errorMessage.slice(0, 1_000) : null
+    };
+  }
+
   async loadAll(): Promise<GenerationJob[]> {
     await mkdir(this.paths.jobs, { recursive: true });
     const entries = await readdir(this.paths.jobs, { withFileTypes: true });
-    const jobs = await Promise.all(entries.filter((entry) => entry.isDirectory()).map((entry) => readJSON<GenerationJob>(this.manifest(entry.name))));
+    const jobs = await Promise.all(entries.filter((entry) => entry.isDirectory()).map(async (entry) => {
+      try { return await this.loadJob(entry.name); }
+      catch { return undefined; }
+    }));
     return jobs.filter((job): job is GenerationJob => Boolean(job)).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   }
 
   async loadViews(): Promise<GenerationJobView[]> {
     return Promise.all((await this.loadAll()).map(async (job) => ({
-      ...job,
+      id: job.id,
+      state: job.state,
+      request: {
+        templateName: job.request.templateName,
+        quality: job.request.quality,
+        stageNames: [...job.request.stageNames]
+      },
+      completedStageCount: job.completedStages.length,
+      errorMessage: job.errorMessage,
       stageViews: job.request.stageNames.map((name, index) => {
         const raw = this.raw(job.id, index);
         const processed = this.processed(job.id, index);
         return {
           index,
           name,
-          rawURL: existsSync(raw) ? pathToFileURL(raw).href : undefined,
-          processedURL: existsSync(processed) ? pathToFileURL(processed).href : undefined,
+          rawURL: existsSync(raw) ? mediaURL("jobs", job.id, path.basename(raw)) : undefined,
+          processedURL: existsSync(processed) ? mediaURL("jobs", job.id, path.basename(processed)) : undefined,
           complete: job.completedStages.some((stage) => stage.index === index)
         };
       })
     })));
   }
 
-  async create(request: GenerationRequest): Promise<GenerationJob> {
+  async create(request: StoredGenerationRequest): Promise<GenerationJob> {
     this.validateRequest(request);
+    let reference: Buffer | undefined;
+    if (request.referencePath) {
+      const referenceInfo = await stat(request.referencePath);
+      if (!referenceInfo.isFile() || referenceInfo.size < 32 || referenceInfo.size > MAX_REFERENCE_BYTES) throw new Error("Reference image size is invalid.");
+      reference = await normalizeReference(await readFile(request.referencePath));
+    }
     const id = randomUUID();
     const now = new Date().toISOString();
     const job: GenerationJob = {
@@ -81,17 +167,23 @@ export class WorkshopService {
       state: "ready",
       createdAt: now,
       updatedAt: now,
-      request: { ...request, stageNames: request.stageNames.map((name, index) => name.trim().slice(0, 32) || `Stage ${index + 1}`) },
+      request: {
+        ...request,
+        referencePath: reference ? "reference.png" : undefined,
+        stageNames: request.stageNames.map((name, index) => name.trim().slice(0, 32) || `Stage ${index + 1}`)
+      },
       completedStages: [],
       errorMessage: null
     };
-    await mkdir(this.directory(id), { recursive: true });
-    if (request.referencePath) {
-      const reference = await normalizeReference(await readFile(request.referencePath));
-      await atomicWrite(path.join(this.directory(id), "reference.png"), reference);
+    try {
+      await mkdir(this.directory(id), { recursive: true });
+      if (reference) await atomicWrite(path.join(this.directory(id), "reference.png"), reference);
+      await writeJSON(this.manifest(id), job);
+      return job;
+    } catch (error) {
+      await rm(this.directory(id), { recursive: true, force: true });
+      throw error;
     }
-    await writeJSON(this.manifest(id), job);
-    return job;
   }
 
   async run(
@@ -99,9 +191,12 @@ export class WorkshopService {
     apiKey: string,
     progress: (value: WorkshopProgress) => void
   ): Promise<CustomPetTemplate> {
-    let job = await readJSON<GenerationJob>(this.manifest(jobID));
+    let job = await this.loadJob(jobID);
     if (!job) throw new Error("Generation job was not found.");
     if (this.activeJobID) throw new Error("Another generation job is already running.");
+    if (!apiKey.trim() && job.request.stageNames.some((_, index) => !existsSync(this.raw(jobID, index)))) {
+      throw new Error("The remaining stages require a new image request using your own OpenAI API key.");
+    }
     this.activeJobID = jobID;
     this.cancelled = false;
     job.state = "running";
@@ -143,9 +238,15 @@ export class WorkshopService {
       }
 
       const template: CustomPetTemplate = {
-        schemaVersion: 1,
+        schemaVersion: 2,
+        packFormat: "sidekin.pet-pack",
+        minSidekinVersion: "2.2.0",
         id: job.templateID,
         name: job.request.templateName.trim(),
+        author: "Local Sidekin user",
+        license: "All rights reserved by the pack author",
+        motionProfile: job.request.motionProfile ?? "poised",
+        contentHashes: {},
         basePrompt: job.request.description.trim(),
         artDirection: job.request.artDirection.trim(),
         generationMode: job.request.mode,
@@ -161,7 +262,7 @@ export class WorkshopService {
       progress({ jobID, completed: images.length, total: images.length, stageName: "Installed", state: "complete" });
       return installed;
     } catch (error) {
-      job = (await readJSON<GenerationJob>(this.manifest(jobID))) ?? job;
+      job = (await this.loadJob(jobID)) ?? job;
       job.state = this.cancelled ? "cancelled" : "failed";
       job.errorMessage = error instanceof Error ? error.message : String(error);
       job.updatedAt = new Date().toISOString();
@@ -175,8 +276,14 @@ export class WorkshopService {
 
   cancel(): void { if (this.activeJobID) this.cancelled = true; }
 
+  async requiresAPIKey(jobID: string): Promise<boolean> {
+    const job = await this.loadJob(jobID);
+    if (!job) throw new Error("Generation job was not found.");
+    return job.request.stageNames.some((_, index) => !existsSync(this.raw(jobID, index)));
+  }
+
   async reprocessJobStage(jobID: string, stageIndex: number): Promise<void> {
-    const job = await readJSON<GenerationJob>(this.manifest(jobID));
+    const job = await this.loadJob(jobID);
     if (!job) throw new Error("Generation job was not found.");
     const name = job.request.stageNames[stageIndex];
     if (name === undefined) throw new Error("Generation stage is out of range.");
@@ -195,7 +302,7 @@ export class WorkshopService {
   }
 
   async restartFromStage(jobID: string, stageIndex: number): Promise<void> {
-    const job = await readJSON<GenerationJob>(this.manifest(jobID));
+    const job = await this.loadJob(jobID);
     if (!job) throw new Error("Generation job was not found.");
     if (!Number.isInteger(stageIndex) || stageIndex < 0 || stageIndex >= job.request.stageNames.length) throw new Error("Generation stage is out of range.");
     for (let index = stageIndex; index < job.request.stageNames.length; index += 1) {
@@ -265,10 +372,16 @@ export class WorkshopService {
     return updated;
   }
 
-  private validateRequest(request: GenerationRequest): void {
-    if (!request.templateName.trim()) throw new Error("Name the pet template before generating it.");
-    if (!request.description.trim()) throw new Error("Describe the pet before generating it.");
-    if (request.stageNames.length < 1 || request.stageNames.length > 8) throw new Error("Use one to eight growth stages.");
+  private validateRequest(request: StoredGenerationRequest): void {
+    boundedText(request.templateName, "Template name", 60);
+    boundedText(request.description, "Description", 2_000);
+    boundedText(request.artDirection, "Art direction", 1_000);
+    if (!Array.isArray(request.stageNames) || request.stageNames.length < 1 || request.stageNames.length > 8) throw new Error("Use one to eight growth stages.");
+    request.stageNames.forEach((name, index) => boundedText(name, `Stage ${index + 1}`, 64));
+    if (!(["text", "restyle", "faithful"] as unknown[]).includes(request.mode)) throw new Error("The generation mode is invalid.");
+    if (!(["low", "medium", "high"] as unknown[]).includes(request.quality)) throw new Error("The generation quality is invalid.");
+    safeIdentifier(request.fallbackTheme);
+    if (request.motionProfile && !/^[a-z-]{3,24}$/.test(request.motionProfile)) throw new Error("The motion profile is invalid.");
     if (request.mode !== "text" && !request.referencePath) throw new Error("This generation mode requires a reference image.");
   }
 
@@ -288,7 +401,7 @@ export class WorkshopService {
     };
   }
 
-  private prompt(request: GenerationRequest, index: number, stageName: string): string {
+  private prompt(request: StoredGenerationRequest, index: number, stageName: string): string {
     const total = request.stageNames.length;
     const position = total === 1 ? 1 : index / (total - 1);
     const maturity = position < 0.2 ? "compact origin form" : position < 0.45 ? "young readable form" : position < 0.7 ? "adolescent structural change" : position < 0.95 ? "advanced ability form" : "final apex silhouette";

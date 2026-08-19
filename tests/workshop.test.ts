@@ -1,5 +1,6 @@
 import { existsSync } from "node:fs";
-import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import AdmZip from "adm-zip";
+import { mkdir, mkdtemp, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import sharp from "sharp";
@@ -26,8 +27,11 @@ async function testPaths(): Promise<SidekinPaths> {
     secret: path.join(root, "api-key.bin"),
     catalog: path.join(root, "catalog.json"),
     characters: path.join(root, "Characters"),
+    thumbnails: path.join(root, "Thumbnails"),
+    assetManifest: path.join(root, "manifest.json"),
     codexHooks: path.join(root, "hooks.json"),
-    codexSessions: path.join(root, "sessions")
+    codexSessions: path.join(root, "sessions"),
+    claudeSettings: path.join(root, "claude-settings.json")
   };
 }
 
@@ -114,8 +118,9 @@ describe("cross-platform Pet Workshop", () => {
     expect(paused.completedStages).toHaveLength(1);
     const views = await workshop.loadViews();
     expect(views[0]?.stageViews[0]).toMatchObject({ complete: true });
-    expect(views[0]?.stageViews[0]?.rawURL).toMatch(/^file:/);
-    expect(views[0]?.stageViews[0]?.processedURL).toMatch(/^file:/);
+    expect(views[0]?.stageViews[0]?.rawURL).toMatch(/^sidekin-media:\/\/jobs\//);
+    expect(views[0]?.stageViews[0]?.processedURL).toMatch(/^sidekin-media:\/\/jobs\//);
+    expect(views[0]?.stageViews[0]?.rawURL).not.toContain(paths.userData);
 
     const installed = await workshop.run(job.id, "user-owned-test-key", () => undefined);
     expect(client.generateCalls).toBe(1);
@@ -145,6 +150,33 @@ describe("cross-platform Pet Workshop", () => {
     const installed = await workshop.run(job.id, "", () => undefined);
     expect(installed.stages).toHaveLength(2);
     expect(client.generateCalls + client.editCalls).toBe(0);
+  });
+
+  it("rejects a missing API key before mutating a job that still needs paid requests", async () => {
+    const paths = await testPaths();
+    const templates = new TemplateStore(paths);
+    const workshop = new WorkshopService(paths, templates, new StaticClient(await syntheticPet()));
+    const job = await workshop.create({ templateName: "No Key", description: "A local pet", artDirection: "game mascot", mode: "text", quality: "low", stageNames: ["Origin"], fallbackTheme: "nova" });
+    await expect(workshop.run(job.id, "", () => undefined)).rejects.toThrow(/API key/i);
+    const persisted = JSON.parse(await readFile(path.join(paths.jobs, job.id, "job.json"), "utf8"));
+    expect(persisted).toMatchObject({ state: "ready", errorMessage: null });
+    expect(await workshop.requiresAPIKey(job.id)).toBe(true);
+    await mkdir(path.join(paths.jobs, "corrupt-job"), { recursive: true });
+    await writeFile(path.join(paths.jobs, "corrupt-job", "job.json"), "{broken");
+    expect((await workshop.loadAll()).map((value) => value.id)).toEqual([job.id]);
+  });
+
+  it("copies a selected reference without persisting its original machine path", async () => {
+    const paths = await testPaths();
+    const referencePath = path.join(paths.userData, "private-reference-name.png");
+    await writeFile(referencePath, await syntheticPet());
+    const templates = new TemplateStore(paths);
+    const workshop = new WorkshopService(paths, templates, new StaticClient(await syntheticPet()));
+    const job = await workshop.create({ templateName: "Private Path", description: "A local pet", artDirection: "game mascot", mode: "faithful", quality: "low", stageNames: ["Origin"], fallbackTheme: "nova", referencePath });
+    const source = await readFile(path.join(paths.jobs, job.id, "job.json"), "utf8");
+    expect(source).not.toContain(referencePath);
+    expect(source).not.toContain("private-reference-name.png");
+    expect(JSON.parse(source).request.referencePath).toBe("reference.png");
   });
 
   it("can clear recovery from a selected stage without touching earlier paid files", async () => {
@@ -188,10 +220,11 @@ describe("cross-platform Pet Workshop", () => {
     await templates.install(manifest, [processed, processed]);
     const badClient = new StaticClient(Buffer.from("paid but corrupt image"));
     const workshop = new WorkshopService(paths, templates, badClient);
-    await expect(workshop.regenerateTemplateStage(manifest.id, 1, "user-owned-test-key", () => undefined)).rejects.toThrow();
+    await expect(workshop.regenerateTemplateStage(manifest.id, 1, "user-owned-test-key", () => undefined)).rejects.toThrow(/image|input|format/i);
     const recovery = templates.recoveryPath(manifest.id, 1);
     expect(existsSync(recovery)).toBe(true);
-    expect((await templates.loadViews())[0]?.stageViews[1]?.recoveryRawURL).toMatch(/^file:/);
+    expect((await templates.loadViews())[0]?.stageViews[1]?.recoveryRawURL).toMatch(/^sidekin-media:\/\/templates\//);
+    expect((await templates.loadViews())[0]?.stageViews[1]?.recoveryRawURL).not.toContain(paths.userData);
     await writeFile(recovery, raw);
     await workshop.reprocessTemplateRecovery(manifest.id, 1);
     expect(existsSync(recovery)).toBe(false);
@@ -215,5 +248,83 @@ describe("cross-platform Pet Workshop", () => {
       fallbackTheme: "nova",
       stages: [{ id: "stage-1", index: 0, name: "Stage", prompt: "test", experienceThreshold: 0, assetFileName: "stage-01.png" }]
     }, [Buffer.from("not a png")])).rejects.toThrow(/image/i);
+  });
+
+  it("requires transparent stage assets while allowing an opaque reference image", async () => {
+    const paths = await testPaths();
+    const templates = new TemplateStore(paths);
+    const opaque = await sharp({ create: { width: 96, height: 96, channels: 3, background: "#334455" } }).png().toBuffer();
+    const transparent = await sharp({ create: { width: 96, height: 96, channels: 4, background: "#334455ff" } }).png().toBuffer();
+    const manifest = {
+      schemaVersion: 1 as const,
+      id: "alpha-boundary",
+      name: "Alpha Boundary",
+      basePrompt: "A local test familiar",
+      artDirection: "game mascot",
+      generationMode: "faithful" as const,
+      generationQuality: "low" as const,
+      referenceFileName: "reference.png",
+      createdAt: new Date(0).toISOString(),
+      fallbackTheme: "nova",
+      stages: [{ id: "origin", index: 0, name: "Origin", prompt: "origin", experienceThreshold: 0, assetFileName: "stage-01.png" }]
+    };
+    await expect(templates.install(manifest, [opaque], opaque)).rejects.toThrow(/alpha channel/i);
+    await expect(templates.install(manifest, [transparent], opaque)).resolves.toMatchObject({ id: "alpha-boundary" });
+  });
+
+  it("recovers an interrupted atomic template replacement and skips corrupt siblings", async () => {
+    const paths = await testPaths();
+    const templates = new TemplateStore(paths);
+    const image = await prepareGeneratedAsset(await syntheticPet());
+    const manifest = {
+      schemaVersion: 1 as const,
+      id: "atomic-recovery",
+      name: "Atomic Recovery",
+      basePrompt: "A local test familiar",
+      artDirection: "game mascot",
+      generationMode: "text" as const,
+      generationQuality: "low" as const,
+      createdAt: new Date(0).toISOString(),
+      fallbackTheme: "nova",
+      stages: [{ id: "origin", index: 0, name: "Origin", prompt: "origin", experienceThreshold: 0, assetFileName: "stage-01.png" }]
+    };
+    await templates.install(manifest, [image]);
+    await rename(path.join(paths.templates, manifest.id), path.join(paths.templates, `.sidekin-backup-${manifest.id}`));
+    await mkdir(path.join(paths.templates, `.sidekin-install-${manifest.id}`), { recursive: true });
+    await mkdir(path.join(paths.templates, "corrupt-sibling"), { recursive: true });
+    await writeFile(path.join(paths.templates, "corrupt-sibling", "template.json"), "{broken");
+
+    const loaded = await templates.loadAll();
+    expect(loaded.map((template) => template.id)).toEqual([manifest.id]);
+    expect(existsSync(path.join(paths.templates, manifest.id, "stage-01.png"))).toBe(true);
+    expect(existsSync(path.join(paths.templates, `.sidekin-install-${manifest.id}`))).toBe(false);
+  });
+
+  it("rejects undeclared files and packs that require a newer Sidekin version", async () => {
+    const paths = await testPaths();
+    const templates = new TemplateStore(paths);
+    const image = await prepareGeneratedAsset(await syntheticPet());
+    await templates.install({
+      schemaVersion: 1,
+      id: "import-boundary",
+      name: "Import Boundary",
+      basePrompt: "A local test familiar",
+      artDirection: "game mascot",
+      generationMode: "text",
+      generationQuality: "low",
+      createdAt: new Date(0).toISOString(),
+      fallbackTheme: "nova",
+      stages: [{ id: "origin", index: 0, name: "Origin", prompt: "origin", experienceThreshold: 0, assetFileName: "stage-01.png" }]
+    }, [image]);
+    const packed = await templates.exportPackage("import-boundary");
+    const withExtra = new AdmZip(packed);
+    withExtra.addFile("payload.js", Buffer.from("not executable, but still undeclared"));
+    await expect(templates.importPackage(withExtra.toBuffer())).rejects.toThrow(/undeclared/i);
+
+    const future = new AdmZip(packed);
+    const manifest = JSON.parse(future.getEntry("template.json")!.getData().toString("utf8"));
+    manifest.minSidekinVersion = "99.0.0";
+    future.updateFile("template.json", Buffer.from(`${JSON.stringify(manifest)}\n`));
+    await expect(templates.importPackage(future.toBuffer())).rejects.toThrow(/requires Sidekin 99\.0\.0/i);
   });
 });

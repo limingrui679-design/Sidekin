@@ -3,6 +3,7 @@ import type {
   CareAction,
   CodexActivity,
   CustomPetTemplate,
+  AgentProvider,
   GenerationRequest,
   PublicPetState,
   WorkshopProgress
@@ -18,8 +19,10 @@ contextBridge.exposeInMainWorld("sidekin", {
   selectTemplate: (templateID: string | null) => ipcRenderer.invoke("sidekin:select-template", templateID),
   setPetVisible: (visible: boolean) => ipcRenderer.invoke("sidekin:set-visible", visible),
   simulateActivity: (activity: CodexActivity) => ipcRenderer.invoke("sidekin:simulate", activity),
-  installHooks: () => ipcRenderer.invoke("sidekin:install-hooks"),
-  uninstallHooks: () => ipcRenderer.invoke("sidekin:uninstall-hooks"),
+  installIntegration: (provider: AgentProvider) => ipcRenderer.invoke("sidekin:install-integration", provider),
+  uninstallIntegration: (provider: AgentProvider) => ipcRenderer.invoke("sidekin:uninstall-integration", provider),
+  setRuntimeSetting: (key: "launchAtLogin" | "monitorSessionLogs" | "clickThroughTransparency", value: boolean) => ipcRenderer.invoke("sidekin:set-runtime-setting", key, value),
+  clearInterruptedTasks: () => ipcRenderer.invoke("sidekin:clear-interrupted"),
   saveAPIKey: (key: string) => ipcRenderer.invoke("sidekin:save-key", key),
   removeAPIKey: () => ipcRenderer.invoke("sidekin:remove-key"),
   chooseReference: () => ipcRenderer.invoke("sidekin:choose-reference"),
@@ -37,6 +40,7 @@ contextBridge.exposeInMainWorld("sidekin", {
   reprocessTemplateStage: (templateID: string, stageIndex: number) => ipcRenderer.invoke("sidekin:reprocess-template-stage", templateID, stageIndex),
   openUserData: () => ipcRenderer.invoke("sidekin:open-user-data"),
   openControlCenter: () => ipcRenderer.invoke("sidekin:open-control-center"),
+  setPointerInteractive: (interactive: boolean) => ipcRenderer.invoke("sidekin:set-pointer-interactive", interactive),
   quit: () => ipcRenderer.invoke("sidekin:quit"),
   onState: (listener: (state: PublicPetState) => void) => {
     const wrapped = (_event: Electron.IpcRendererEvent, state: PublicPetState) => listener(state);

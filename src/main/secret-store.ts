@@ -12,14 +12,22 @@ export class SecretStore {
   }
 
   async read(): Promise<string | undefined> {
-    if (!existsSync(this.paths.secret) || !(await safeStorage.isAsyncEncryptionAvailable())) return undefined;
-    const encrypted = await readFile(this.paths.secret);
-    const decrypted = await safeStorage.decryptStringAsync(encrypted);
-    const value = decrypted.result.trim();
-    if (decrypted.shouldReEncrypt) {
-      await atomicWrite(this.paths.secret, await safeStorage.encryptStringAsync(value));
+    if (!existsSync(this.paths.secret)) return undefined;
+    try {
+      if (!(await safeStorage.isAsyncEncryptionAvailable())) return undefined;
+      const encrypted = await readFile(this.paths.secret);
+      const decrypted = await safeStorage.decryptStringAsync(encrypted);
+      const value = decrypted.result.trim();
+      if (!value || value.length > 512 || /[\r\n\0]/.test(value)) return undefined;
+      if (decrypted.shouldReEncrypt) {
+        try { await atomicWrite(this.paths.secret, await safeStorage.encryptStringAsync(value)); }
+        catch { /* keep the successfully decrypted credential for this session */ }
+      }
+      return value;
+    } catch {
+      // A corrupt or machine-moved credential must not prevent the local pet from starting.
+      return undefined;
     }
-    return value || undefined;
   }
 
   async save(raw: string): Promise<void> {

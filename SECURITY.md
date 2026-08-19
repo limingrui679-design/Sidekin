@@ -2,7 +2,7 @@
 
 ## Supported release
 
-Security fixes target the latest `2.0.0-beta.x` source Beta. Older beta tags are
+Security fixes target the latest `2.2.0-beta.x` source Beta. Older beta tags are
 retained for provenance and should not be treated as supported builds.
 
 ## Report a vulnerability
@@ -22,3 +22,10 @@ notarized; its Windows CI archive is not Authenticode signed. These expected
 properties are not security vulnerabilities. Reports about renderer isolation,
 local file handling, credential storage, archive integrity, dependency risk, or
 unexpected network access are in scope.
+
+## Response expectations
+
+The maintainer will acknowledge a complete private report within seven days,
+provide an initial severity assessment when reproduction is possible, and keep
+the reporter informed before any coordinated disclosure. Timelines can vary for
+reports that depend on an upstream agent, Electron, operating-system, or API fix.
