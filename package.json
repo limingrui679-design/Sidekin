@@ -1,18 +1,34 @@
 {
   "name": "sidekin",
   "productName": "Sidekin",
-  "version": "2.1.0-beta.1",
-  "description": "A local-first live desktop companion for Codex on macOS and Windows.",
+  "version": "2.2.0-beta.1",
+  "description": "A local-first live desktop companion for Codex and Claude Code on macOS and Windows.",
   "main": "dist/main/index.cjs",
   "license": "UNLICENSED",
   "private": true,
+  "engines": {
+    "node": ">=22.12 <23"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limingrui679-design/Sidekin.git"
+  },
+  "homepage": "https://github.com/limingrui679-design/Sidekin#readme",
+  "bugs": {
+    "url": "https://github.com/limingrui679-design/Sidekin/issues"
+  },
   "scripts": {
     "build": "node Scripts/build.mjs",
+    "e2e": "npm run build && node Scripts/run-e2e.mjs",
+    "assets:build": "node Scripts/build-runtime-assets.mjs",
+    "assets:verify": "node Scripts/verify-runtime-assets.mjs",
+    "pet-pack": "node Scripts/pet-pack.mjs",
+    "lint": "oxlint --deny-warnings --max-warnings=0 --import-plugin --vitest-plugin --promise-plugin --node-plugin src tests Scripts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "verify": "npm run typecheck && npm run test && npm run build && node Scripts/verify-expansion-assets.mjs && node Scripts/verify-desktop.mjs",
+    "verify": "npm run lint && npm run typecheck && npm run test && npm run build && npm run assets:verify && node Scripts/verify-desktop.mjs && node Scripts/run-e2e.mjs",
     "start": "npm run build && electron .",
-    "capture": "npm run build && SIDEKIN_CAPTURE_DIR=artifacts/previews electron .",
+    "capture": "npm run build && node Scripts/run-e2e.mjs --keep",
     "media:runtime": "node Scripts/make-runtime-media.mjs",
     "package": "npm run verify && node Scripts/package-desktop.mjs",
     "make": "npm run verify && node Scripts/package-desktop.mjs --zip",
@@ -29,6 +45,7 @@
     "@types/node": "22.19.15",
     "electron": "43.4.0",
     "esbuild": "0.25.12",
+    "oxlint": "1.79.0",
     "png-to-ico": "3.0.1",
     "typescript": "7.0.2",
     "vitest": "4.1.10"

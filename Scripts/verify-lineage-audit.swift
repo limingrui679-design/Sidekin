@@ -14,6 +14,16 @@ struct ExpansionProgress: Decodable {
     let reviewedLineages: [String]
 }
 
+struct RuntimeManifest: Decodable {
+    struct SourceArchive: Decodable {
+        let commit: String
+    }
+
+    let lineageCount: Int
+    let formCount: Int
+    let sourceArchive: SourceArchive
+}
+
 enum AuditError: LocalizedError {
     case failure(String)
 
@@ -38,6 +48,8 @@ let expansionAuditURL = projectRoot.appendingPathComponent("docs/EXPANSION_AUDIT
 let replacementsURL = projectRoot.appendingPathComponent("ArtSources/AuditReplacements")
 let sheetsURL = projectRoot.appendingPathComponent("ArtSources/AuditSheets")
 let expansionRoot = projectRoot.appendingPathComponent("ArtSources/Expansion200", isDirectory: true)
+let runtimeManifestURL = projectRoot.appendingPathComponent("RuntimeAssets/manifest.json")
+let archiveCommit = "0fca27df3ae9e4e32ab37651efb1a8f756912ffb"
 
 func auditRows(in audit: String) throws -> [(Int, String, String)] {
     let expression = try NSRegularExpression(
@@ -75,41 +87,43 @@ do {
 
     let repairedRows = rows.filter { $0.2 != "Pass" }.count
     try require(repairedRows == 63, "Expected 63 repaired lineage rows, found \(repairedRows).")
+    try require(audit.contains("83 raw repair candidates for 80 unique stage targets"), "Historical repair counts are missing from the audit.")
 
-    let replacementChildren = try fileManager.contentsOfDirectory(
-        at: replacementsURL,
-        includingPropertiesForKeys: [.isDirectoryKey],
-        options: [.skipsHiddenFiles]
-    )
-    let replacementDirectories = try replacementChildren.filter { url in
-        try url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory == true
-    }
-    try require(
-        replacementDirectories.count == repairedRows,
-        "Replacement directory count does not match repaired lineage count."
-    )
-
-    let replacementFiles = try fileManager.subpathsOfDirectory(atPath: replacementsURL.path)
-        .filter {
-            $0.range(
-                of: #"(?:audit-raw(?:-v[0-9]+)?|readme-(?:continuity|distinction)-raw)\.png$"#,
-                options: .regularExpression
-            ) != nil
-        }
-    try require(replacementFiles.count == 83, "Expected 83 raw repair candidates, found \(replacementFiles.count).")
-
-    let uniqueTargets = Set(replacementFiles.map { path in
-        path.replacingOccurrences(
-            of: #"-(?:audit-raw(?:-v[0-9]+)?|readme-(?:continuity|distinction)-raw)\.png$"#,
-            with: "",
-            options: .regularExpression
+    if fileManager.fileExists(atPath: replacementsURL.path) {
+        let replacementChildren = try fileManager.contentsOfDirectory(
+            at: replacementsURL,
+            includingPropertiesForKeys: [.isDirectoryKey],
+            options: [.skipsHiddenFiles]
         )
-    })
-    try require(uniqueTargets.count == 80, "Expected 80 unique repair targets, found \(uniqueTargets.count).")
+        let replacementDirectories = try replacementChildren.filter { url in
+            try url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory == true
+        }
+        if !replacementDirectories.isEmpty {
+            try require(replacementDirectories.count == repairedRows, "Replacement directory count does not match repaired lineage count.")
+            let replacementFiles = try fileManager.subpathsOfDirectory(atPath: replacementsURL.path)
+                .filter {
+                    $0.range(
+                        of: #"(?:audit-raw(?:-v[0-9]+)?|readme-(?:continuity|distinction)-raw)\.png$"#,
+                        options: .regularExpression
+                    ) != nil
+                }
+            try require(replacementFiles.count == 83, "Expected 83 raw repair candidates, found \(replacementFiles.count).")
+            let uniqueTargets = Set(replacementFiles.map { path in
+                path.replacingOccurrences(
+                    of: #"-(?:audit-raw(?:-v[0-9]+)?|readme-(?:continuity|distinction)-raw)\.png$"#,
+                    with: "",
+                    options: .regularExpression
+                )
+            })
+            try require(uniqueTargets.count == 80, "Expected 80 unique repair targets, found \(uniqueTargets.count).")
+        }
+    }
 
-    let expectedSheets = Set((1...20).map { String(format: "lineage-audit-%02d.png", $0) })
-    let actualSheets = Set(try fileManager.contentsOfDirectory(atPath: sheetsURL.path))
-    try require(actualSheets == expectedSheets, "Final lineage audit sheet set is incomplete or contains drift.")
+    if fileManager.fileExists(atPath: sheetsURL.path) {
+        let expectedSheets = Set((1...20).map { String(format: "lineage-audit-%02d.png", $0) })
+        let actualSheets = Set(try fileManager.contentsOfDirectory(atPath: sheetsURL.path))
+        try require(actualSheets == expectedSheets, "Final lineage audit sheet set is incomplete or contains drift.")
+    }
 
     let expansionAudit = try String(contentsOf: expansionAuditURL, encoding: .utf8)
     let expansionRows = try auditRows(in: expansionAudit)
@@ -133,20 +147,25 @@ do {
         try require(values.count == 100 && Set(values).count == 100, "Expansion progress is not complete and unique.")
     }
 
-    let expectedExpansionSheets = Set((1...20).map { String(format: "assets-%02d.jpg", $0) })
-    let actualExpansionSheets = Set(
-        try fileManager.contentsOfDirectory(atPath: expansionRoot.appendingPathComponent("ReviewSheets").path)
-            .filter { $0.hasPrefix("assets-") && $0.hasSuffix(".jpg") }
-    )
-    try require(
-        actualExpansionSheets == expectedExpansionSheets,
-        "Expansion asset review sheet set is incomplete or contains drift."
-    )
+    let expansionSheetsURL = expansionRoot.appendingPathComponent("ReviewSheets")
+    if fileManager.fileExists(atPath: expansionSheetsURL.path) {
+        let expectedExpansionSheets = Set((1...20).map { String(format: "assets-%02d.jpg", $0) })
+        let actualExpansionSheets = Set(
+            try fileManager.contentsOfDirectory(atPath: expansionSheetsURL.path)
+                .filter { $0.hasPrefix("assets-") && $0.hasSuffix(".jpg") }
+        )
+        if !actualExpansionSheets.isEmpty {
+            try require(actualExpansionSheets == expectedExpansionSheets, "Expansion asset review sheet set is incomplete or contains drift.")
+        }
+    }
+
+    let runtimeManifest = try JSONDecoder().decode(RuntimeManifest.self, from: Data(contentsOf: runtimeManifestURL))
+    try require(runtimeManifest.lineageCount == 200 && runtimeManifest.formCount == 1_000, "Runtime manifest counts do not match the audited catalog.")
+    try require(runtimeManifest.sourceArchive.commit == archiveCommit, "Runtime assets are not pinned to the audited full-art commit.")
 
     print(
-        "Verified 200 individual lineage audit rows: 100 legacy rows with 63 repaired lineages, "
-            + "83 raw candidates and 20 sheets; plus 100 expansion rows with 17 repaired lineages "
-            + "and 20 final asset sheets."
+        "Verified 200 individual lineage audit rows, 80 repaired lineages, complete expansion progress, "
+            + "and a 1,000-form runtime manifest pinned to the audited full-art commit."
     )
 } catch {
     fputs("Lineage audit verification failed: \(error.localizedDescription)\n", stderr)

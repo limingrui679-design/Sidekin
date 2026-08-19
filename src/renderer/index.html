@@ -14,11 +14,11 @@
           <div><strong>Sidekin</strong><span>Live companion</span></div>
         </div>
         <nav aria-label="Command Center sections">
-          <button class="nav-item active" data-tab="home"><span>⌂</span>Home</button>
-          <button class="nav-item" data-tab="lineages"><span>✦</span>Lineages</button>
-          <button class="nav-item" data-tab="workshop"><span>◇</span>Pet Workshop</button>
-          <button class="nav-item" data-tab="codex"><span>⌁</span>Codex Live</button>
-          <button class="nav-item" data-tab="settings"><span>⚙</span>Settings</button>
+          <button class="nav-item active" data-tab="home" data-title="Home"><span>⌂</span>Home</button>
+          <button class="nav-item" data-tab="lineages" data-title="Lineages"><span>✦</span>Lineages</button>
+          <button class="nav-item" data-tab="workshop" data-title="Pet Workshop"><span>◇</span>Pet Workshop</button>
+          <button class="nav-item" data-tab="agents" data-title="Agent Live"><span>⌁</span>Agent Live</button>
+          <button class="nav-item" data-tab="settings" data-title="Settings"><span>⚙</span>Settings</button>
         </nav>
         <div class="privacy-chip"><span class="live-dot"></span><div><strong>Local-first</strong><small>Task content stays private</small></div></div>
       </aside>
@@ -35,16 +35,16 @@
               <div class="pet-status-row"><span class="status-dot" id="hero-status-dot"></span><span id="hero-status">Resting</span><span class="stage-tag" id="hero-stage">CORE EGG</span></div>
               <div class="pet-orbit"><div class="orbit-ring one"></div><div class="orbit-ring two"></div><img id="hero-pet" alt="Active Sidekin"></div>
               <div class="pet-identity"><div><p id="hero-lineage">Nova Arena</p><h2 id="hero-form">Starshuttle Crystal Egg</h2></div><strong id="hero-level">0 XP</strong></div>
-              <div class="progress-track"><span id="stage-progress"></span></div>
+              <progress class="progress-track" id="stage-progress" aria-label="Evolution progress" max="100" value="0"></progress>
             </article>
 
             <div class="dashboard-stack">
               <article class="panel care-panel">
                 <div class="panel-heading"><div><p class="eyebrow">CARE LOOP</p><h2>Keep your Sidekin thriving</h2></div><span id="wellbeing">79%</span></div>
                 <div class="stat-list">
-                  <div><span>Hunger</span><div class="meter hunger"><i id="hunger-meter"></i></div><strong id="hunger-value">76</strong></div>
-                  <div><span>Mood</span><div class="meter mood"><i id="mood-meter"></i></div><strong id="mood-value">82</strong></div>
-                  <div><span>Energy</span><div class="meter energy"><i id="energy-meter"></i></div><strong id="energy-value">78</strong></div>
+                  <div><span>Hunger</span><progress class="meter hunger" id="hunger-meter" aria-label="Hunger" max="100" value="76"></progress><strong id="hunger-value">76</strong></div>
+                  <div><span>Mood</span><progress class="meter mood" id="mood-meter" aria-label="Mood" max="100" value="82"></progress><strong id="mood-value">82</strong></div>
+                  <div><span>Energy</span><progress class="meter energy" id="energy-meter" aria-label="Energy" max="100" value="78"></progress><strong id="energy-value">78</strong></div>
                 </div>
                 <div class="action-row">
                   <button class="primary-action" data-care="feed"><span>●</span>Feed</button>
@@ -53,7 +53,7 @@
                 </div>
               </article>
               <article class="panel live-panel">
-                <div class="panel-heading"><div><p class="eyebrow">CODEX LIVE</p><h2>Recent task signals</h2></div><button class="text-button" data-open-tab="codex">Manage link →</button></div>
+                <div class="panel-heading"><div><p class="eyebrow">AGENT LIVE</p><h2>Recent task signals</h2></div><button class="text-button" data-open-tab="agents">Manage links →</button></div>
                 <div id="activity-feed" class="activity-feed"></div>
               </article>
             </div>
@@ -61,6 +61,10 @@
           <article class="panel evolution-panel">
             <div class="panel-heading"><div><p class="eyebrow">FIVE-STAGE LINEAGE</p><h2>One identity, structural evolution</h2></div><button class="text-button" data-open-tab="lineages">Browse all 200 →</button></div>
             <div id="evolution-strip" class="evolution-strip"></div>
+          </article>
+          <article class="panel growth-panel">
+            <div class="panel-heading"><div><p class="eyebrow">GROWTH JOURNAL</p><h2>Care and work shape one persistent companion</h2></div><span id="growth-summary">STEADY · 0 DAY STREAK</span></div>
+            <div id="growth-journal" class="growth-journal"></div>
           </article>
         </section>
 
@@ -84,7 +88,7 @@
               <div class="reference-row"><button class="secondary-button" id="choose-reference">Choose reference image</button><span id="reference-label">No reference selected</span></div>
               <div class="cost-notice"><strong id="cost-estimate">Estimated output: $0.265</strong><span>Reference/input charges are additional. Nothing is sent until you press Generate.</span></div>
               <button class="generate-button" id="generate-button">Generate and save every stage</button>
-              <div class="generation-progress hidden" id="generation-progress"><div><span id="progress-label">Preparing…</span><strong id="progress-count">0 / 5</strong></div><div class="progress-track"><span id="generation-meter"></span></div><button class="text-button" id="cancel-generation">Cancel safely</button></div>
+              <div class="generation-progress hidden" id="generation-progress"><div><span id="progress-label">Preparing…</span><strong id="progress-count">0 / 5</strong></div><progress class="progress-track" id="generation-meter" aria-label="Generation progress" max="100" value="0"></progress><button class="text-button" id="cancel-generation" title="The current paid request finishes and is saved before Sidekin stops.">Stop after current request</button></div>
             </article>
             <div class="workshop-stack">
               <article class="panel key-panel"><div class="panel-heading"><div><p class="eyebrow">YOUR ACCOUNT</p><h2>OpenAI API key</h2></div><span id="key-status" class="status-badge">Not saved</span></div><p>The individual user supplies their own key. Sidekin encrypts it with macOS Keychain or Windows DPAPI.</p><div class="key-row"><input id="api-key" type="password" autocomplete="off" placeholder="sk-…"><button class="secondary-button" id="save-key">Save securely</button></div><button class="text-button danger" id="remove-key">Remove saved key</button></article>
@@ -94,18 +98,18 @@
           </div>
         </section>
 
-        <section class="tab-panel" id="tab-codex">
+        <section class="tab-panel" id="tab-agents">
           <div class="codex-layout">
-            <article class="panel codex-hero"><div class="signal-visual"><span></span><span></span><span></span><i></i></div><p class="eyebrow">REAL-TIME LOCAL SIGNALS</p><h2>Codex work becomes visible companionship.</h2><p>Sidekin watches lifecycle events only: running, completed, and failed. It does not collect prompts, replies, code, or tool output.</p><div class="hook-actions"><button class="generate-button" id="install-hooks">Install local integration</button><button class="secondary-button" id="remove-hooks">Remove Sidekin hooks</button></div><div id="hook-status" class="path-card"></div></article>
-            <article class="panel"><div class="panel-heading"><div><p class="eyebrow">LIVE PREVIEW</p><h2>Test every response</h2></div></div><div class="simulation-grid"><button data-simulate="running"><span class="cyan-orb"></span>Working</button><button data-simulate="completed"><span class="green-orb"></span>Complete</button><button data-simulate="failed"><span class="orange-orb"></span>Failed</button><button data-simulate="idle"><span class="mint-orb"></span>Resting</button></div><p class="helper">Preview events are local and tagged so they do not collide with real Codex turns.</p></article>
-            <article class="panel full-feed"><div class="panel-heading"><div><p class="eyebrow">TASK CARDS</p><h2>What the floating pet can show</h2></div></div><div id="codex-activity-feed" class="activity-feed large"></div></article>
+            <article class="panel codex-hero"><div class="signal-visual"><span></span><span></span><span></span><i></i></div><p class="eyebrow">REAL-TIME LOCAL SIGNALS</p><h2>Codex and Claude Code become visible companionship.</h2><p>Sidekin consumes lifecycle metadata only: provider, state, time, session identifier, and workspace name. It does not store prompts, replies, code, or tool output.</p><div id="integration-list" class="integration-list"></div><div id="hook-status" class="path-card"></div></article>
+            <article class="panel"><div class="panel-heading"><div><p class="eyebrow">LIVE PREVIEW</p><h2>Test every response</h2></div></div><div class="simulation-grid"><button data-simulate="running"><span class="cyan-orb"></span>Working</button><button data-simulate="completed"><span class="green-orb"></span>Complete</button><button data-simulate="failed"><span class="orange-orb"></span>Failed</button><button data-simulate="idle"><span class="mint-orb"></span>Resting</button></div><p class="helper">Preview events are local and tagged so they do not collide with real agent turns. Codex may ask you to review a newly added local hook through <code>/hooks</code>.</p></article>
+            <article class="panel full-feed"><div class="panel-heading"><div><p class="eyebrow">TASK CARDS</p><h2>What the floating pet can show</h2></div><button class="text-button" id="clear-interrupted">Clear interrupted</button></div><div id="codex-activity-feed" class="activity-feed large"></div></article>
           </div>
         </section>
 
         <section class="tab-panel" id="tab-settings">
           <div class="settings-grid">
-            <article class="panel"><p class="eyebrow">DESKTOP</p><h2>Floating companion</h2><label class="toggle-row"><span><strong>Show desktop pet</strong><small>Keep the transparent pet above other windows.</small></span><input id="pet-visible" type="checkbox"></label><button class="secondary-button" id="open-data">Open local data folder</button></article>
-            <article class="panel privacy-panel"><p class="eyebrow">PRIVACY BOUNDARY</p><h2>Local unless the user confirms generation</h2><ul><li>Care, growth, lineages, templates, and task-status cards stay on this computer.</li><li>Codex prompts, responses, code, and tool output are not collected.</li><li>Only a confirmed image request sends its description and required visual references.</li><li>The API key is protected by the operating system, not embedded in the project.</li></ul></article>
+            <article class="panel"><p class="eyebrow">DESKTOP</p><h2>Floating companion</h2><label class="toggle-row"><span><strong>Show desktop pet</strong><small>Keep the transparent pet above other windows.</small></span><input id="pet-visible" type="checkbox"></label><label class="toggle-row"><span><strong>Click through transparent pixels</strong><small>Keep the pet interactive while empty space passes clicks to the app below.</small></span><input id="click-through-transparency" type="checkbox"></label><label class="toggle-row"><span><strong>Launch at login</strong><small>Start Sidekin with the current operating-system account.</small></span><input id="launch-at-login" type="checkbox"></label><label class="toggle-row"><span><strong>Codex session fallback</strong><small>Optional best-effort lifecycle parsing when hooks are unavailable; official Codex docs do not promise a stable transcript format.</small></span><input id="monitor-session-logs" type="checkbox"></label><button class="secondary-button" id="open-data">Open local data folder</button></article>
+            <article class="panel privacy-panel"><p class="eyebrow">PRIVACY BOUNDARY</p><h2>Local unless the user confirms generation</h2><ul><li>Care, growth, lineages, templates, and task-status cards stay on this computer.</li><li>Codex and Claude Code prompts, responses, code, and tool output are not stored.</li><li>Reference selection paths stay in the trusted main process and are discarded after a bounded local copy.</li><li>Only a confirmed image request sends its description and required visual references.</li><li>The API key is protected by the operating system, not embedded in the project.</li></ul></article>
           </div>
         </section>
       </main>
