@@ -38,7 +38,7 @@ for (const gate of [
   "transparent: true", "alwaysOnTop: true", "contextIsolation: true", "sandbox: true", "nodeIntegration: false",
   "setPermissionRequestHandler", "Content-Security-Policy", "assertTrustedSender", "assertGenerationRequest",
   "requestSingleInstanceLock", "clampFloatingBounds", "referenceSelections", "setIgnoreMouseEvents",
-  "protocol.handle(\"sidekin-media\"", "realpath(path.join(root, ...relative))", "isAllowedMediaFile",
+  "protocol.handle(\"sidekin-media\"", "const candidate = path.join(root, ...relative)", "realpath(candidate)", "isAllowedMediaFile",
   'stage.assetFileName === fileName', '/^(raw|processed)-stage-0[1-8]\\.png$/'
 ]) requireCondition(main.includes(gate), `Missing desktop/security gate: ${gate}`);
 requireCondition(main.includes('bridgeInvocation || app.requestSingleInstanceLock()'), "Hook bridge processes must bypass the UI single-instance lock.");
