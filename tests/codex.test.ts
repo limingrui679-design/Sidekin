@@ -44,6 +44,9 @@ describe("Codex lifecycle integration", () => {
   it("quotes the Windows executable in hook commands", () => {
     const installed = installSidekinHooks({}, "C:\\Program Files\\Sidekin\\Sidekin.exe", "win32");
     expect(JSON.stringify(installed)).toContain("C:\\\\Program Files\\\\Sidekin\\\\Sidekin.exe");
+    const hooks = installed.hooks as Record<string, Array<{ hooks: Array<{ command: string }> }>>;
+    expect(hooks.UserPromptSubmit?.[0]?.hooks[0]?.command).toContain("sidekin-hook codex running >NUL");
+    expect(hooks.Stop?.[0]?.hooks[0]?.command).toContain("sidekin-hook codex completed >NUL & echo {}");
   });
 
   it("includes the source app path when hooks are installed from Electron development mode", () => {

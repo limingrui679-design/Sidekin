@@ -68,7 +68,8 @@ try {
   });
   await new Promise((resolve) => setTimeout(resolve, 900));
   const hook = await runConcurrentHook();
-  if (hook.stdout.trim() !== "{}") {
+  const acknowledgement = hook.stdout.trim();
+  if (acknowledgement !== "{}" && !(process.platform === "win32" && acknowledgement === "")) {
     throw new Error(`Codex Stop hook did not return the required empty JSON object (stdout=${JSON.stringify(hook.stdout)}, stderr=${JSON.stringify(hook.stderr.slice(-1_000))}).`);
   }
   const inbox = await readFile(path.join(temporary, ".capture-user-data", "codex-events.jsonl"), "utf8");

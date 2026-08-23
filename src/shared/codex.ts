@@ -144,7 +144,11 @@ export function installSidekinHooks(
   const command = `${shellQuote(bridgeExecutable, platform)}${developmentAppPath ? ` ${shellQuote(developmentAppPath, platform)}` : ""} sidekin-hook codex`;
   for (const [event, status] of [["UserPromptSubmit", "running"], ["Stop", "completed"]] as const) {
     const groups = Array.isArray(hooks[event]) ? hooks[event] as unknown[] : [];
-    hooks[event] = [...groups, { hooks: [{ type: "command", command: `${command} ${status}`, timeout: HOOK_TIMEOUT_SECONDS }] }];
+    const invocation = `${command} ${status}`;
+    const hookCommand = platform === "win32"
+      ? `${invocation} >NUL${event === "Stop" ? " & echo {}" : ""}`
+      : invocation;
+    hooks[event] = [...groups, { hooks: [{ type: "command", command: hookCommand, timeout: HOOK_TIMEOUT_SECONDS }] }];
   }
   if (!next.description) {
     next.description = "Local Codex lifecycle hooks. Sidekin entries are added only after user confirmation.";

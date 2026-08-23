@@ -72,6 +72,7 @@ for (const feature of ["installSidekinHooks", "installClaudeHooks", "cleanSideki
   requireCondition(codex.includes(feature), `Missing agent integration feature: ${feature}`);
 }
 requireCondition(codex.includes('["UserPromptSubmit", "running"], ["Stop", "completed"]'), "Codex hooks must use the supported lifecycle pair.");
+requireCondition(codex.includes('>NUL') && codex.includes(' & echo {}'), "Windows Codex hooks must acknowledge Stop outside the GUI executable.");
 const monitor = await text("src/main/codex-monitor.ts");
 requireCondition(monitor.includes("2 * 1024 * 1024") && monitor.includes("15_000") && monitor.includes("lastError"), "Agent monitor must be bounded and diagnostic.");
 

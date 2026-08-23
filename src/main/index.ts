@@ -604,7 +604,10 @@ async function handleBridgeMode(): Promise<boolean> {
       process.stderr.write(`Sidekin hook persistence failed (${code}).\n`);
     }
   }
-  if (codexStop) {
+  // Packaged Windows apps use the hook command's cmd.exe wrapper because GUI
+  // executables do not have a reliable stdout pipe. The wrapper emits the
+  // acknowledgement after this bridge process exits.
+  if (codexStop && process.platform !== "win32") {
     await new Promise<void>((resolve, reject) => {
       process.stdout.write("{}\n", (error) => error ? reject(error) : resolve());
     });
