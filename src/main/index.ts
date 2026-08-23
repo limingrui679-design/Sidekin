@@ -597,15 +597,28 @@ async function handleBridgeMode(): Promise<boolean> {
   if (!provider || !["codex", "claude"].includes(provider)) return true;
   if (!activity || !["running", "completed", "failed"].includes(activity)) return true;
   paths = await resolvePaths();
-  const input: Buffer[] = [];
-  let inputBytes = 0;
-  for await (const chunk of process.stdin) {
-    const buffer = Buffer.from(chunk);
-    inputBytes += buffer.length;
-    if (inputBytes > 4 * 1024 * 1024) return true;
-    input.push(buffer);
+  let payload: Buffer;
+  const inputFileMarker = process.argv.indexOf("--hook-input-file");
+  if (inputFileMarker >= 0) {
+    const rawFile = process.argv[inputFileMarker + 1];
+    if (!rawFile || rawFile.length > 4_096) throw new Error("Hook input file is invalid.");
+    const [temporaryRoot, inputFile] = await Promise.all([
+      realpath(app.getPath("temp")),
+      realpath(path.resolve(rawFile))
+    ]);
+    if (!isMediaPathWithin(temporaryRoot, inputFile, process.platform)) throw new Error("Hook input file is outside the system temp directory.");
+    payload = await readBoundedFile(inputFile, 4 * 1024 * 1024, "Hook input");
+  } else {
+    const input: Buffer[] = [];
+    let inputBytes = 0;
+    for await (const chunk of process.stdin) {
+      const buffer = Buffer.from(chunk);
+      inputBytes += buffer.length;
+      if (inputBytes > 4 * 1024 * 1024) throw new Error("Hook input is too large.");
+      input.push(buffer);
+    }
+    payload = Buffer.concat(input);
   }
-  const payload = Buffer.concat(input);
   monitor = new CodexMonitor(paths, () => undefined);
   let codexStop = false;
   if (provider === "codex") {

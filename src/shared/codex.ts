@@ -105,6 +105,60 @@ export function shellQuote(value: string, platform: NodeJS.Platform): string {
   return `'${value.replaceAll("'", "'\\''")}'`;
 }
 
+function powershellQuote(value: string): string {
+  return `'${value.replaceAll("'", "''")}'`;
+}
+
+function windowsHookCommand(
+  bridgeExecutable: string,
+  developmentAppPath: string | undefined,
+  provider: AgentProvider,
+  activity: CodexActivity,
+  acknowledge: boolean
+): string {
+  const argumentsList = [
+    ...(developmentAppPath ? [developmentAppPath] : []),
+    "sidekin-hook",
+    provider,
+    activity
+  ].map(powershellQuote).join(", ");
+  const script = [
+    "$ErrorActionPreference = 'Stop'",
+    "$hookFile = Join-Path ([IO.Path]::GetTempPath()) ('sidekin-hook-' + [Guid]::NewGuid().ToString('N') + '.json')",
+    "$sidekinExit = 1",
+    "try {",
+    "[IO.File]::WriteAllText($hookFile, [Console]::In.ReadToEnd())",
+    `$sidekinArguments = @(${argumentsList}, '--hook-input-file', $hookFile)`,
+    `& ${powershellQuote(bridgeExecutable)} @sidekinArguments | Out-Null`,
+    "$sidekinExit = $LASTEXITCODE",
+    "} finally {",
+    "Remove-Item -LiteralPath $hookFile -Force -ErrorAction SilentlyContinue",
+    "}",
+    "if ($sidekinExit -ne 0) { exit $sidekinExit }",
+    ...(acknowledge ? ["[Console]::Out.WriteLine('{}')"] : [])
+  ].join("\n");
+  return `powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand ${Buffer.from(script, "utf16le").toString("base64")}`;
+}
+
+function decodedWindowsHook(command: string): string {
+  if (command.length > 65_536) return "";
+  const encoded = /(?:^|\s)-EncodedCommand\s+([A-Za-z0-9+/=]{16,65536})(?:\s|$)/i.exec(command)?.[1];
+  if (!encoded) return "";
+  try { return Buffer.from(encoded, "base64").toString("utf16le"); }
+  catch { return ""; }
+}
+
+function targetsProvider(command: string, provider: AgentProvider): boolean {
+  const expanded = `${command}\n${decodedWindowsHook(command)}`;
+  return expanded.includes(`sidekin-hook ${provider}`)
+    || (expanded.includes("sidekin-hook") && expanded.includes(`'${provider}'`));
+}
+
+function targetsSidekin(command: string): boolean {
+  const expanded = `${command}\n${decodedWindowsHook(command)}`;
+  return expanded.includes("sidekin-hook") || expanded.includes("SidekinBridge") || expanded.includes("CainiaoPetBridge");
+}
+
 function cleanHooks(root: Record<string, unknown>, provider?: AgentProvider): Record<string, unknown> {
   const next = structuredClone(root);
   const hooks = typeof next.hooks === "object" && next.hooks !== null
@@ -117,8 +171,8 @@ function cleanHooks(root: Record<string, unknown>, provider?: AgentProvider): Re
       const handlers = (group.hooks as Array<Record<string, unknown>>).filter((handler) => {
         const command = typeof handler.command === "string" ? handler.command : "";
         const legacyCodex = (!provider || provider === "codex") && (command.includes("SidekinBridge") || command.includes("CainiaoPetBridge"));
-        const legacy = legacyCodex || (provider === "codex" && command.includes("sidekin-hook") && !command.includes("sidekin-hook claude"));
-        const current = provider ? command.includes(`sidekin-hook ${provider}`) : command.includes("sidekin-hook");
+        const legacy = legacyCodex || (provider === "codex" && targetsSidekin(command) && !targetsProvider(command, "claude"));
+        const current = provider ? targetsProvider(command, provider) : targetsSidekin(command);
         return !(legacy || current);
       });
       return handlers.length ? [{ ...group, hooks: handlers }] : [];
@@ -146,7 +200,7 @@ export function installSidekinHooks(
     const groups = Array.isArray(hooks[event]) ? hooks[event] as unknown[] : [];
     const invocation = `${command} ${status}`;
     const hookCommand = platform === "win32"
-      ? `${invocation} >NUL${event === "Stop" ? " & echo {}" : ""}`
+      ? windowsHookCommand(bridgeExecutable, developmentAppPath, "codex", status, event === "Stop")
       : invocation;
     hooks[event] = [...groups, { hooks: [{ type: "command", command: hookCommand, timeout: HOOK_TIMEOUT_SECONDS }] }];
   }
@@ -167,21 +221,24 @@ export function installClaudeHooks(
   const command = `${shellQuote(bridgeExecutable, platform)}${developmentAppPath ? ` ${shellQuote(developmentAppPath, platform)}` : ""} sidekin-hook claude`;
   for (const [event, status] of [["UserPromptSubmit", "running"], ["Stop", "completed"], ["StopFailure", "failed"], ["SessionEnd", "completed"]] as const) {
     const groups = Array.isArray(hooks[event]) ? hooks[event] as unknown[] : [];
-    hooks[event] = [...groups, { hooks: [{ type: "command", command: `${command} ${status}`, timeout: HOOK_TIMEOUT_SECONDS }] }];
+    const hookCommand = platform === "win32"
+      ? windowsHookCommand(bridgeExecutable, developmentAppPath, "claude", status, false)
+      : `${command} ${status}`;
+    hooks[event] = [...groups, { hooks: [{ type: "command", command: hookCommand, timeout: HOOK_TIMEOUT_SECONDS }] }];
   }
   if (!next.description) next.description = "Local agent lifecycle hooks. Sidekin stores status metadata only.";
   return next;
 }
 
 export function containsSidekinHook(root: unknown): boolean {
-  if (typeof root === "string") return root.includes("sidekin-hook") || root.includes("SidekinBridge");
+  if (typeof root === "string") return targetsSidekin(root);
   if (Array.isArray(root)) return root.some(containsSidekinHook);
   if (typeof root === "object" && root !== null) return Object.values(root).some(containsSidekinHook);
   return false;
 }
 
 export function containsSidekinProviderHook(root: unknown, provider: AgentProvider): boolean {
-  if (typeof root === "string") return root.includes(`sidekin-hook ${provider}`) || (provider === "codex" && root.includes("SidekinBridge"));
+  if (typeof root === "string") return targetsProvider(root, provider) || (provider === "codex" && root.includes("SidekinBridge"));
   if (Array.isArray(root)) return root.some((value) => containsSidekinProviderHook(value, provider));
   if (typeof root === "object" && root !== null) return Object.values(root).some((value) => containsSidekinProviderHook(value, provider));
   return false;

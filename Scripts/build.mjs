@@ -10,6 +10,7 @@ await rm(dist, { recursive: true, force: true });
 await mkdir(path.join(dist, "main"), { recursive: true });
 await mkdir(path.join(dist, "preload"), { recursive: true });
 await mkdir(path.join(dist, "renderer"), { recursive: true });
+await mkdir(path.join(dist, "shared"), { recursive: true });
 
 const common = {
   bundle: true,
@@ -34,6 +35,16 @@ await build({
   platform: "node",
   format: "cjs",
   external: ["electron"]
+});
+
+// Native E2E loads the same hook-command generator that production uses, so
+// Windows validates the real PowerShell stdin bridge rather than a test copy.
+await build({
+  ...common,
+  entryPoints: [path.join(root, "src/shared/codex.ts")],
+  outfile: path.join(dist, "shared/codex.cjs"),
+  platform: "node",
+  format: "cjs"
 });
 
 for (const entry of ["app", "floating"]) {

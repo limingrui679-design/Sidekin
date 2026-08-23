@@ -9,7 +9,7 @@ const text = async (file) => readFile(path.join(root, file), "utf8");
 
 for (const file of [
   "dist/main/index.cjs", "dist/preload/index.cjs", "dist/renderer/index.html",
-  "dist/renderer/floating.html", "assets/app-icon.png", "assets/app-icon.ico",
+  "dist/renderer/floating.html", "dist/shared/codex.cjs", "assets/app-icon.png", "assets/app-icon.ico",
   "RuntimeAssets/manifest.json", "docs/ART_ARCHIVE.md", "docs/PET_PACK_SDK.md",
   "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SUPPORT.md", "CHANGELOG.md",
   "SECURITY.md", "THIRD_PARTY_NOTICES.md", "docs/PRIVACY.md", "docs/THREAT_MODEL.md",
@@ -72,7 +72,10 @@ for (const feature of ["installSidekinHooks", "installClaudeHooks", "cleanSideki
   requireCondition(codex.includes(feature), `Missing agent integration feature: ${feature}`);
 }
 requireCondition(codex.includes('["UserPromptSubmit", "running"], ["Stop", "completed"]'), "Codex hooks must use the supported lifecycle pair.");
-requireCondition(codex.includes('>NUL') && codex.includes(' & echo {}'), "Windows Codex hooks must acknowledge Stop outside the GUI executable.");
+for (const feature of ["windowsHookCommand", "-EncodedCommand", "[Console]::In.ReadToEnd()", "--hook-input-file", "[Console]::Out.WriteLine('{}')"]) {
+  requireCondition(codex.includes(feature), `Windows agent hooks are missing their console bridge feature: ${feature}`);
+}
+requireCondition(main.includes("Hook input file is outside the system temp directory."), "Windows hook input files must remain inside the bounded system temp directory.");
 const monitor = await text("src/main/codex-monitor.ts");
 requireCondition(monitor.includes("2 * 1024 * 1024") && monitor.includes("15_000") && monitor.includes("lastError"), "Agent monitor must be bounded and diagnostic.");
 

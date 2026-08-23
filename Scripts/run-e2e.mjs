@@ -11,7 +11,9 @@ import sharp from "sharp";
 const run = promisify(execFile);
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const temporary = await mkdtemp(path.join(tmpdir(), "sidekin-e2e-"));
-const electron = createRequire(import.meta.url)("electron");
+const require = createRequire(import.meta.url);
+const electron = require("electron");
+const { installSidekinHooks } = require(path.join(root, "dist", "shared", "codex.cjs"));
 const transientRemovalErrors = new Set(["EBUSY", "ENOTEMPTY", "EPERM"]);
 const transientReadErrors = new Set(["EBUSY", "ENOENT", "EPERM"]);
 
@@ -32,9 +34,21 @@ async function removeTree(target, { allowTransientFailure = false } = {}) {
   }
 }
 
-function runConcurrentHook() {
+async function runConcurrentHook() {
+  const payload = `${JSON.stringify({ hook_event_name: "Stop", turn_id: "e2e-concurrent-hook", session_id: "e2e-session", cwd: path.join(temporary, "Synthetic workspace"), prompt: "must never be stored" })}\n`;
+  const windows = process.platform === "win32";
+  let executable = electron;
+  let argumentsList = [root, "sidekin-hook", "codex", "completed"];
+  if (windows) {
+    const installed = installSidekinHooks({}, electron, "win32", root);
+    const hooks = installed.hooks;
+    const command = hooks?.Stop?.[0]?.hooks?.[0]?.command;
+    if (typeof command !== "string") throw new Error("Windows Codex Stop hook command was not generated.");
+    executable = process.env.ComSpec || "cmd.exe";
+    argumentsList = ["/d", "/s", "/c", command];
+  }
   return new Promise((resolve, reject) => {
-    const child = spawn(electron, [root, "sidekin-hook", "codex", "completed"], {
+    const child = spawn(executable, argumentsList, {
       cwd: root,
       env: { ...process.env, SIDEKIN_CAPTURE_DIR: temporary, ELECTRON_ENABLE_LOGGING: "0" },
       stdio: ["pipe", "pipe", "pipe"],
@@ -46,7 +60,7 @@ function runConcurrentHook() {
     child.stderr.on("data", (chunk) => { stderr += chunk; });
     child.on("error", reject);
     child.on("close", (code) => code === 0 ? resolve({ stdout, stderr }) : reject(new Error(`Concurrent hook exited ${code}: ${stderr}`)));
-    child.stdin.end(`${JSON.stringify({ hook_event_name: "Stop", turn_id: "e2e-concurrent-hook", session_id: "e2e-session", cwd: path.join(temporary, "Synthetic workspace"), prompt: "must never be stored" })}\n`);
+    child.stdin.end(payload);
   });
 }
 
@@ -90,7 +104,7 @@ try {
   try {
     const hook = await runConcurrentHook();
     const acknowledgement = hook.stdout.trim();
-    if (acknowledgement !== "{}" && !(process.platform === "win32" && acknowledgement === "")) {
+    if (acknowledgement !== "{}") {
       throw new Error(`Codex Stop hook did not return the required empty JSON object (stdout=${JSON.stringify(hook.stdout)}, stderr=${JSON.stringify(hook.stderr.slice(-1_000))}).`);
     }
     const inbox = await readEventually(path.join(temporary, ".capture-user-data", "codex-events.jsonl"));

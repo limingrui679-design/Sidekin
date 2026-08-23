@@ -1,6 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { classifyCodexLine, cleanSidekinHooks, cleanSidekinProviderHooks, containsSidekinHook, containsSidekinProviderHook, inspectCodexLine, installClaudeHooks, installSidekinHooks } from "../src/shared/codex.js";
 
+function decodeWindowsHook(command: string): string {
+  const encoded = /-EncodedCommand\s+([A-Za-z0-9+/=]+)/i.exec(command)?.[1];
+  if (!encoded) throw new Error("Windows hook does not contain an encoded PowerShell command.");
+  return Buffer.from(encoded, "base64").toString("utf16le");
+}
+
 describe("Codex lifecycle integration", () => {
   it("classifies direct bridge events with only minimal metadata", () => {
     const record = classifyCodexLine(JSON.stringify({ status: "running", timestamp: "2026-08-13T00:00:00Z", event_id: "turn-1", task_title: "Secret task title", project: "Sidekin", prompt: "must remain unread" }));
@@ -41,12 +47,37 @@ describe("Codex lifecycle integration", () => {
     expect(JSON.stringify(cleaned)).toContain("backup-tool");
   });
 
-  it("quotes the Windows executable in hook commands", () => {
+  it("captures Windows Codex stdin through a bounded temporary-file bridge", () => {
     const installed = installSidekinHooks({}, "C:\\Program Files\\Sidekin\\Sidekin.exe", "win32");
-    expect(JSON.stringify(installed)).toContain("C:\\\\Program Files\\\\Sidekin\\\\Sidekin.exe");
     const hooks = installed.hooks as Record<string, Array<{ hooks: Array<{ command: string }> }>>;
-    expect(hooks.UserPromptSubmit?.[0]?.hooks[0]?.command).toContain("sidekin-hook codex running >NUL");
-    expect(hooks.Stop?.[0]?.hooks[0]?.command).toContain("sidekin-hook codex completed >NUL & echo {}");
+    const runningCommand = hooks.UserPromptSubmit?.[0]?.hooks[0]?.command ?? "";
+    const stopCommand = hooks.Stop?.[0]?.hooks[0]?.command ?? "";
+    expect(runningCommand).toContain("powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand");
+    const running = decodeWindowsHook(runningCommand);
+    const stop = decodeWindowsHook(stopCommand);
+    for (const script of [running, stop]) {
+      expect(script).toContain("[Console]::In.ReadToEnd()");
+      expect(script).toContain("[IO.File]::WriteAllText($hookFile");
+      expect(script).toContain("'--hook-input-file', $hookFile");
+      expect(script).toContain("& 'C:\\Program Files\\Sidekin\\Sidekin.exe' @sidekinArguments");
+      expect(script).toContain("Remove-Item -LiteralPath $hookFile");
+    }
+    expect(running).toContain("@('sidekin-hook', 'codex', 'running'");
+    expect(running).not.toContain("[Console]::Out.WriteLine('{}')");
+    expect(stop).toContain("@('sidekin-hook', 'codex', 'completed'");
+    expect(stop).toContain("[Console]::Out.WriteLine('{}')");
+    expect(containsSidekinProviderHook(installed, "codex")).toBe(true);
+    expect(containsSidekinProviderHook(cleanSidekinProviderHooks(installed, "codex"), "codex")).toBe(false);
+  });
+
+  it("uses the same Windows input bridge for Claude without Codex acknowledgement output", () => {
+    const installed = installClaudeHooks({}, "C:\\Program Files\\Sidekin\\Sidekin.exe", "win32");
+    const hooks = installed.hooks as Record<string, Array<{ hooks: Array<{ command: string }> }>>;
+    const failed = decodeWindowsHook(hooks.StopFailure?.[0]?.hooks[0]?.command ?? "");
+    expect(failed).toContain("@('sidekin-hook', 'claude', 'failed'");
+    expect(failed).toContain("[Console]::In.ReadToEnd()");
+    expect(failed).not.toContain("[Console]::Out.WriteLine('{}')");
+    expect(containsSidekinProviderHook(installed, "claude")).toBe(true);
   });
 
   it("includes the source app path when hooks are installed from Electron development mode", () => {
