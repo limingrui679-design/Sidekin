@@ -234,8 +234,14 @@ async function isAllowedMediaFile(scope: MediaScope, components: string[]): Prom
   if (/^recovery-stage-0[1-8]\.png$/.test(fileName)) return true;
   try {
     const manifest = JSON.parse((await readBoundedFile(path.join(paths.templates, templateID, "template.json"), 1024 * 1024, "Template manifest")).toString("utf8")) as { stages?: Array<{ assetFileName?: unknown }> };
-    return Array.isArray(manifest.stages) && manifest.stages.some((stage) => stage.assetFileName === fileName);
-  } catch {
+    const allowed = Array.isArray(manifest.stages) && manifest.stages.some((stage) => stage.assetFileName === fileName);
+    if (!allowed) noteCaptureMedia(`templates:${fileName}:not-listed`);
+    return allowed;
+  } catch (error) {
+    const code = error && typeof error === "object" && "code" in error && typeof error.code === "string"
+      ? error.code
+      : error instanceof Error ? error.name : "unknown";
+    noteCaptureMedia(`templates:${fileName}:manifest-error:${code}`);
     return false;
   }
 }
@@ -271,7 +277,9 @@ async function handleMediaRequest(request: GlobalRequest): Promise<Response> {
     } else {
       return notFoundMediaResponse();
     }
-    const [trustedRoot, target] = await Promise.all([realpath(root), realpath(path.join(root, ...relative))]);
+    const candidate = path.join(root, ...relative);
+    noteCaptureMedia(`${scope}:${diagnosticFile}:parent-${existsSync(path.dirname(candidate)) ? "present" : "missing"}:file-${existsSync(candidate) ? "present" : "missing"}`);
+    const [trustedRoot, target] = await Promise.all([realpath(root), realpath(candidate)]);
     if (!isMediaPathWithin(trustedRoot, target)) {
       noteCaptureMedia(`${scope}:${diagnosticFile}:outside-root`);
       return notFoundMediaResponse();
