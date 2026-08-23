@@ -574,7 +574,11 @@ async function handleBridgeMode(): Promise<boolean> {
   if (provider === "codex") {
     try {
       const hook = JSON.parse(payload.toString("utf8")) as Record<string, unknown>;
-      if (hook.hook_event_name === "Stop") process.stdout.write("{}\n");
+      if (hook.hook_event_name === "Stop") {
+        await new Promise<void>((resolve, reject) => {
+          process.stdout.write("{}\n", (error) => error ? reject(error) : resolve());
+        });
+      }
     } catch { /* no hook output is required for malformed optional metadata */ }
   }
   return true;

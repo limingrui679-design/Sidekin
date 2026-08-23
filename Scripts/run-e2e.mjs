@@ -35,7 +35,7 @@ function runConcurrentHook() {
   return new Promise((resolve, reject) => {
     const child = spawn(electron, [root, "sidekin-hook", "codex", "completed"], {
       cwd: root,
-      env: { ...process.env, SIDEKIN_CAPTURE_DIR: temporary },
+      env: { ...process.env, SIDEKIN_CAPTURE_DIR: temporary, ELECTRON_ENABLE_LOGGING: "0" },
       stdio: ["pipe", "pipe", "pipe"],
       windowsHide: true
     });
@@ -68,7 +68,9 @@ try {
   });
   await new Promise((resolve) => setTimeout(resolve, 900));
   const hook = await runConcurrentHook();
-  if (hook.stdout.trim() !== "{}") throw new Error("Codex Stop hook did not return the required empty JSON object.");
+  if (hook.stdout.trim() !== "{}") {
+    throw new Error(`Codex Stop hook did not return the required empty JSON object (stdout=${JSON.stringify(hook.stdout)}, stderr=${JSON.stringify(hook.stderr.slice(-1_000))}).`);
+  }
   const inbox = await readFile(path.join(temporary, ".capture-user-data", "codex-events.jsonl"), "utf8");
   if (!inbox.includes("e2e-concurrent-hook") || inbox.includes("must never be stored")) throw new Error("Concurrent hook did not persist minimized lifecycle metadata.");
   const completedApp = await appRun;
