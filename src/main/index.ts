@@ -540,7 +540,8 @@ async function capturePreviewsIfRequested(): Promise<void> {
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     const renderer = await controlWindow.webContents.executeJavaScript(`(() => { const root = document.documentElement.dataset; return { ready: root.sidekinReady, error: root.sidekinError, jobs: root.sidekinJobs, templates: root.sidekinTemplates }; })()`);
-    throw new Error(`${message} Renderer: ready=${renderer.ready ?? "false"}, jobs=${renderer.jobs ?? "unknown"}, templates=${renderer.templates ?? "unknown"}, error=${renderer.error ?? "none"}. Media outcomes: ${[...captureMediaDiagnostics].join(", ") || "none"}.`);
+    const [storedJobs, storedTemplates] = await Promise.all([workshop.loadViews(), templates.loadViews()]);
+    throw new Error(`${message} Renderer: ready=${renderer.ready ?? "false"}, jobs=${renderer.jobs ?? "unknown"}, templates=${renderer.templates ?? "unknown"}, error=${renderer.error ?? "none"}. Storage: jobs=${storedJobs.length}, templates=${storedTemplates.length}. Media outcomes: ${[...captureMediaDiagnostics].join(", ") || "none"}.`);
   }
   controlWindow.webContents.invalidate();
   await new Promise((resolve) => setTimeout(resolve, 350));
@@ -675,6 +676,8 @@ app.whenReady().then(async () => {
       rawOne,
       await normalizeReference(await readFile(path.join(paths.characters, "nova-legendary.webp")))
     ]);
+    const [seededJobs, seededTemplates] = await Promise.all([workshop.loadViews(), templates.loadViews()]);
+    if (seededJobs.length < 1 || seededTemplates.length < 1) throw new Error("Capture storage seed could not be read back.");
   }
   monitor = new CodexMonitor(paths, (record) => void state.receive(record));
   if (!captureDirectory) await monitor.start(state.settings.monitorSessionLogs);

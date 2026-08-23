@@ -56,6 +56,7 @@ function setTab(name: string): void {
   $$(".tab-panel").forEach((panel) => panel.classList.toggle("active", panel.id === `tab-${name}`));
   const label = $<HTMLButtonElement>(`.nav-item[data-tab="${name}"]`).dataset.title || name;
   $("#page-title").textContent = label;
+  if (name === "workshop") void run(refreshManagement);
 }
 
 function duration(item: ActivityFeedItem): string {
@@ -210,6 +211,8 @@ function renderManagement(): void {
         return `<section class="template-stage"><img src="${escapeHTML(view.assetURL)}" alt="${escapeHTML(stage.name)}"><strong>${escapeHTML(stage.name)}</strong><div class="management-actions"><button data-replace-template="${template.id}" data-stage="${view.index}">Replace</button><button data-regenerate-template="${template.id}" data-stage="${view.index}">Regenerate</button>${view.recoveryRawURL ? `<button data-reprocess-template="${template.id}" data-stage="${view.index}">Retry saved raw free</button>` : ""}</div>${view.recoveryRawURL ? `<figure class="recovery-raw"><img src="${escapeHTML(view.recoveryRawURL)}" alt="Saved paid recovery"><figcaption>PAID RAW RECOVERY</figcaption></figure>` : ""}</section>`;
       }).join("")}</div>
     </article>`).join("") : '<div class="empty-state">No custom templates installed.</div>';
+  document.documentElement.dataset.sidekinJobs = String(data.jobs.length);
+  document.documentElement.dataset.sidekinTemplates = String(data.templates.length);
   $$<HTMLButtonElement>("[data-resume]").forEach((button) => button.addEventListener("click", () => void run(async () => {
     const job = data.jobs.find((candidate) => candidate.id === button.dataset.resume);
     if (!job) return false;
@@ -259,6 +262,13 @@ function renderManagement(): void {
   $$<HTMLButtonElement>("[data-reprocess-template]").forEach((button) => button.addEventListener("click", () => void run(async () => { await window.sidekin.reprocessTemplateStage(button.dataset.reprocessTemplate!, Number(button.dataset.stage)); data = await window.sidekin.bootstrap(); renderAll(); }, "Saved paid image reprocessed locally with no API call.")));
 }
 
+async function refreshManagement(): Promise<void> {
+  const current = await window.sidekin.bootstrap();
+  data.jobs = current.jobs;
+  data.templates = current.templates;
+  renderManagement();
+}
+
 function renderAll(): void {
   $("#platform-pill").textContent = data.platform === "win32" ? "Windows desktop" : "macOS desktop";
   $("#key-status").textContent = data.hasAPIKey ? "Saved securely" : "Not saved";
@@ -267,8 +277,6 @@ function renderAll(): void {
   renderState(data);
   renderLineages($<HTMLInputElement>("#lineage-search").value);
   renderManagement();
-  document.documentElement.dataset.sidekinJobs = String(data.jobs.length);
-  document.documentElement.dataset.sidekinTemplates = String(data.templates.length);
   document.documentElement.dataset.sidekinReady = "true";
 }
 
