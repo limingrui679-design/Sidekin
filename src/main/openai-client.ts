@@ -11,6 +11,8 @@ export interface ImageClient {
 }
 
 interface ImageResponse { data?: Array<{ b64_json?: string }> }
+const MAX_RESPONSE_BYTES = 36 * 1024 * 1024;
+const MAX_IMAGE_BYTES = 24 * 1024 * 1024;
 
 export class OpenAIImageClient implements ImageClient {
   constructor(private readonly baseURL = "https://api.openai.com/v1") {}
@@ -20,6 +22,7 @@ export class OpenAIImageClient implements ImageClient {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({ model: "gpt-image-2", prompt, size: "1024x1024", quality, n: 1 }),
+      redirect: "error",
       signal: AbortSignal.timeout(240_000)
     });
     return this.decode(response);
@@ -39,6 +42,7 @@ export class OpenAIImageClient implements ImageClient {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}` },
       body: form,
+      redirect: "error",
       signal: AbortSignal.timeout(240_000)
     });
     return this.decode(response);
@@ -46,12 +50,31 @@ export class OpenAIImageClient implements ImageClient {
 
   private async decode(response: Response): Promise<Buffer> {
     const requestID = response.headers.get("x-request-id");
-    const body = await response.text();
+    const declaredLength = Number(response.headers.get("content-length"));
+    if (Number.isFinite(declaredLength) && declaredLength > MAX_RESPONSE_BYTES) throw new Error("The image service response is too large.");
+    if (!response.body) throw new Error("The image service returned an empty response.");
+    const reader = response.body.getReader();
+    const chunks: Uint8Array[] = [];
+    let total = 0;
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      total += value.byteLength;
+      if (total > MAX_RESPONSE_BYTES) {
+        await reader.cancel();
+        throw new Error("The image service response is too large.");
+      }
+      chunks.push(value);
+    }
+    const body = Buffer.concat(chunks.map((chunk) => Buffer.from(chunk))).toString("utf8");
     let object: ImageResponse & { error?: { message?: string } };
     try { object = JSON.parse(body) as typeof object; } catch { throw new Error("The image service returned an unrecognized response."); }
-    if (!response.ok) throw new Error(`${object.error?.message || `HTTP ${response.status}`}${requestID ? ` (Request ${requestID})` : ""}`);
+    const errorMessage = typeof object.error?.message === "string" ? object.error.message.replaceAll(/\p{Cc}/gu, " ").slice(0, 600) : undefined;
+    if (!response.ok) throw new Error(`${errorMessage || `HTTP ${response.status}`}${requestID ? ` (Request ${requestID.slice(0, 160)})` : ""}`);
     const encoded = object.data?.[0]?.b64_json;
-    if (!encoded) throw new Error("The image service did not return an image.");
-    return Buffer.from(encoded, "base64");
+    if (!encoded || encoded.length > Math.ceil(MAX_IMAGE_BYTES / 3) * 4 || !/^[A-Za-z0-9+/]+={0,2}$/.test(encoded)) throw new Error("The image service did not return a valid image.");
+    const image = Buffer.from(encoded, "base64");
+    if (image.length < 32 || image.length > MAX_IMAGE_BYTES) throw new Error("The image service returned an invalid image size.");
+    return image;
   }
 }

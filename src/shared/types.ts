@@ -3,6 +3,9 @@ export type PetStage = (typeof PET_STAGES)[number];
 
 export const CODEX_ACTIVITIES = ["idle", "running", "completed", "failed"] as const;
 export type CodexActivity = (typeof CODEX_ACTIVITIES)[number];
+export const AGENT_PROVIDERS = ["codex", "claude"] as const;
+export type AgentProvider = (typeof AGENT_PROVIDERS)[number];
+export type AgentActivity = CodexActivity;
 export type CareAction = "feed" | "play" | "sleepOrWake";
 export type PetMotion =
   | "idle-float"
@@ -29,10 +32,28 @@ export interface ActivityFeedItem {
   id: string;
   title: string;
   project: string;
-  status: Exclude<CodexActivity, "idle">;
+  status: Exclude<AgentActivity, "idle"> | "interrupted";
+  provider?: AgentProvider;
+  sessionID?: string;
   startedAt: string;
   updatedAt: string;
   durationMs?: number;
+}
+
+export type PetTemperament = "steady" | "playful" | "focused";
+
+export interface GrowthJournalEntry {
+  id: string;
+  type: "care" | "task" | "evolution" | "milestone";
+  title: string;
+  detail: string;
+  timestamp: string;
+}
+
+export interface CareAvailability {
+  available: boolean;
+  reason?: string;
+  nextAvailableAt?: string;
 }
 
 export interface PetSnapshot {
@@ -57,9 +78,13 @@ export interface PetSnapshot {
   restCount: number;
   completedTasks: number;
   failedTasks: number;
-  processedCodexSignals: string[];
-  lastCodexSignalAt?: string | null;
-  lastCodexSignalActivity?: CodexActivity | null;
+  processedAgentSignals: string[];
+  lastAgentSignalAt?: string | null;
+  lastAgentSignalActivity?: AgentActivity | null;
+  lastCareAt: Partial<Record<CareAction, string>>;
+  activeTaskDays: string[];
+  currentStreak: number;
+  growthJournal: GrowthJournalEntry[];
   activityFeed: ActivityFeedItem[];
 }
 
@@ -113,8 +138,14 @@ export interface CustomPetStageDefinition {
 
 export interface CustomPetTemplate {
   schemaVersion: number;
+  packFormat?: "sidekin.pet-pack";
+  minSidekinVersion?: string;
   id: string;
   name: string;
+  author?: string;
+  license?: string;
+  motionProfile?: string;
+  contentHashes?: Record<string, string>;
   basePrompt: string;
   artDirection: string;
   generationMode: GenerationMode;
@@ -125,7 +156,25 @@ export interface CustomPetTemplate {
   stages: CustomPetStageDefinition[];
 }
 
-export interface CustomPetTemplateView extends CustomPetTemplate {
+export interface PublicCustomPetStage {
+  index: number;
+  name: string;
+  experienceThreshold: number;
+  assetFileName: string;
+}
+
+export interface PublicCustomPetTemplate {
+  id: string;
+  name: string;
+  author?: string;
+  license?: string;
+  motionProfile?: string;
+  generationQuality?: GenerationQuality;
+  createdAt: string;
+  stages: PublicCustomPetStage[];
+}
+
+export interface CustomPetTemplateView extends PublicCustomPetTemplate {
   stageViews: Array<{
     index: number;
     assetURL: string;
@@ -141,6 +190,11 @@ export interface GenerationRequest {
   quality: GenerationQuality;
   stageNames: string[];
   fallbackTheme: string;
+  motionProfile?: string;
+  referenceToken?: string | null;
+}
+
+export interface StoredGenerationRequest extends Omit<GenerationRequest, "referenceToken"> {
   referencePath?: string | null;
 }
 
@@ -151,12 +205,17 @@ export interface GenerationJob {
   state: "ready" | "running" | "failed" | "cancelled";
   createdAt: string;
   updatedAt: string;
-  request: GenerationRequest;
+  request: StoredGenerationRequest;
   completedStages: CustomPetStageDefinition[];
   errorMessage?: string | null;
 }
 
-export interface GenerationJobView extends GenerationJob {
+export interface GenerationJobView {
+  id: string;
+  state: GenerationJob["state"];
+  request: Pick<StoredGenerationRequest, "templateName" | "quality" | "stageNames">;
+  completedStageCount: number;
+  errorMessage?: string | null;
   stageViews: Array<{
     index: number;
     name: string;
@@ -166,34 +225,60 @@ export interface GenerationJobView extends GenerationJob {
   }>;
 }
 
+export interface PublicPetSnapshot {
+  name: string;
+  stats: PetStats;
+  experience: number;
+  stage: PetStage;
+  isSleeping: boolean;
+  codexActivity: CodexActivity;
+  wardrobe: PetSnapshot["wardrobe"];
+  currentStreak: number;
+  growthJournal: GrowthJournalEntry[];
+  activityFeed: Array<Omit<ActivityFeedItem, "sessionID">>;
+}
+
 export interface RuntimeSettings {
   petVisible: boolean;
   launchAtLogin: boolean;
   monitorSessionLogs: boolean;
+  clickThroughTransparency: boolean;
   floatingBounds?: { x: number; y: number; width: number; height: number };
 }
 
 export interface PublicPetState {
-  pet: PetSnapshot;
+  pet: PublicPetSnapshot;
   activeTheme: ThemeProfile;
   assetURL: string;
-  customTemplate?: CustomPetTemplate | null;
+  thumbnailBaseURL: string;
+  customTemplate?: PublicCustomPetTemplate | null;
   motion: PetMotion;
+  temperament: PetTemperament;
+  careAvailability: Record<CareAction, CareAvailability>;
   settings: RuntimeSettings;
+}
+
+export interface IntegrationStatus {
+  provider: AgentProvider;
+  displayName: string;
+  installed: boolean;
+  mode: "hooks" | "session-fallback" | "disconnected";
+  lastEventAt?: string | null;
+  lastError?: string | null;
+}
+
+export interface ReferenceSelection {
+  token: string;
+  displayName: string;
 }
 
 export interface BootstrapPayload extends PublicPetState {
   catalog: ThemeProfile[];
   templates: CustomPetTemplateView[];
   jobs: GenerationJobView[];
-  hooksInstalled: boolean;
+  integrations: IntegrationStatus[];
   hasAPIKey: boolean;
   platform: "darwin" | "win32" | "linux";
-  paths: {
-    userData: string;
-    codexSessions: string;
-    codexHooks: string;
-  };
 }
 
 export interface WorkshopProgress {
@@ -212,11 +297,13 @@ export interface SidekinAPI {
   selectTemplate(templateID: string | null): Promise<PublicPetState>;
   setPetVisible(visible: boolean): Promise<PublicPetState>;
   simulateActivity(activity: CodexActivity): Promise<PublicPetState>;
-  installHooks(): Promise<boolean>;
-  uninstallHooks(): Promise<boolean>;
+  installIntegration(provider: AgentProvider): Promise<IntegrationStatus[]>;
+  uninstallIntegration(provider: AgentProvider): Promise<IntegrationStatus[]>;
+  setRuntimeSetting(key: "launchAtLogin" | "monitorSessionLogs" | "clickThroughTransparency", value: boolean): Promise<PublicPetState>;
+  clearInterruptedTasks(): Promise<PublicPetState>;
   saveAPIKey(key: string): Promise<boolean>;
   removeAPIKey(): Promise<boolean>;
-  chooseReference(): Promise<string | null>;
+  chooseReference(): Promise<ReferenceSelection | null>;
   startGeneration(request: GenerationRequest): Promise<CustomPetTemplate>;
   resumeGeneration(jobID: string): Promise<CustomPetTemplate>;
   reprocessJobStage(jobID: string, stageIndex: number): Promise<boolean>;
@@ -231,6 +318,7 @@ export interface SidekinAPI {
   reprocessTemplateStage(templateID: string, stageIndex: number): Promise<CustomPetTemplate>;
   openUserData(): Promise<void>;
   openControlCenter(): Promise<void>;
+  setPointerInteractive(interactive: boolean): Promise<void>;
   quit(): Promise<void>;
   onState(listener: (state: PublicPetState) => void): () => void;
   onProgress(listener: (progress: WorkshopProgress) => void): () => void;

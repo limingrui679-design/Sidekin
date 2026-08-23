@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="260" viewBox="0 0 1440 260" role="img" aria-labelledby="title description">
   <title id="title">Sidekin local companion workflow</title>
-  <description id="description">Four compact steps connect bounded Codex lifecycle metadata to local classification, deterministic care and growth, and the floating companion.</description>
+  <description id="description">Four compact steps connect bounded Codex and Claude Code lifecycle metadata to local classification, deterministic care and growth, and the floating companion.</description>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#090f26"/>
@@ -23,8 +23,8 @@
       <rect width="280" height="180" rx="22" fill="#111a39" stroke="#2b4b71" stroke-width="2"/>
       <circle cx="42" cy="42" r="22" fill="#163958"/><path d="M31 43h7l5-12 8 24 6-12h9" fill="none" stroke="#66e7e1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       <text x="76" y="49" fill="#8fece7" font-size="18" font-weight="700">01 · LISTEN</text>
-      <text x="28" y="100" fill="#ffffff" font-size="24" font-weight="700">Codex lifecycle</text>
-      <text x="28" y="134" fill="#aebbd5" font-size="17">state · turn ID · workspace</text>
+      <text x="28" y="100" fill="#ffffff" font-size="24" font-weight="700">Agent lifecycle</text>
+      <text x="28" y="134" fill="#aebbd5" font-size="17">provider · state · session</text>
       <text x="28" y="160" fill="#7f91b5" font-size="15">No prompt, response, or code</text>
     </g>
     <g transform="translate(410 40)">
@@ -40,7 +40,7 @@
       <circle cx="42" cy="42" r="22" fill="#392250"/><path d="M42 55C28 46 29 34 36 31c4-2 7 0 9 4 2-4 6-6 10-4 7 4 7 16-13 24Z" fill="#f58ac8"/>
       <text x="76" y="49" fill="#f4a9d4" font-size="18" font-weight="700">03 · EVOLVE</text>
       <text x="28" y="100" fill="#ffffff" font-size="24" font-weight="700">Care + growth engine</text>
-      <text x="28" y="134" fill="#aebbd5" font-size="17">mood · energy · five stages</text>
+      <text x="28" y="134" fill="#aebbd5" font-size="17">needs · streak · journal · stages</text>
       <text x="28" y="160" fill="#7f91b5" font-size="15">Deterministic and locally persisted</text>
     </g>
     <g transform="translate(1130 40)">

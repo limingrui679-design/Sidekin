@@ -183,4 +183,4 @@ The final corpus passed the following checks after the manual review and repairs
 - 30 local self-tests, 6 mocked API tests, Debug build, and Release build;
 - no CJK text in the English product surface, catalog, prompts, scripts, or project documentation.
 
-No real API key was read and no paid API call was made by the application test suite. The application was not launched during this audit.
+No real API key was read and no paid API call was made by the application test suite. The application was not launched during this dated art-only audit; current runtime launch evidence is recorded separately in `docs/COMPLETION_AUDIT.md`.

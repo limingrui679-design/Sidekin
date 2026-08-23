@@ -13,8 +13,11 @@ export interface SidekinPaths {
   secret: string;
   catalog: string;
   characters: string;
+  thumbnails: string;
+  assetManifest: string;
   codexHooks: string;
   codexSessions: string;
+  claudeSettings: string;
 }
 
 export async function resolvePaths(): Promise<SidekinPaths> {
@@ -25,7 +28,7 @@ export async function resolvePaths(): Promise<SidekinPaths> {
   }
   await mkdir(userData, { recursive: true });
   const root = app.isPackaged ? process.resourcesPath : app.getAppPath();
-  const resources = app.isPackaged ? root : path.join(root, "Sources/SidekinApp/Resources");
+  const resources = app.isPackaged ? root : path.join(root, "RuntimeAssets");
   return {
     userData,
     state: path.join(userData, "pet-state.json"),
@@ -40,7 +43,10 @@ export async function resolvePaths(): Promise<SidekinPaths> {
     characters: app.isPackaged
       ? path.join(resources, "Characters")
       : path.join(resources, "Characters"),
+    thumbnails: path.join(resources, "Thumbnails"),
+    assetManifest: path.join(resources, "manifest.json"),
     codexHooks: path.join(app.getPath("home"), ".codex", "hooks.json"),
-    codexSessions: path.join(app.getPath("home"), ".codex", "sessions")
+    codexSessions: path.join(app.getPath("home"), ".codex", "sessions"),
+    claudeSettings: path.join(app.getPath("home"), ".claude", "settings.json")
   };
 }

@@ -36,7 +36,7 @@ const backdrop = Buffer.from(`
     </defs>
     <rect width="2400" height="1350" fill="url(#bg)"/>
     <circle cx="1810" cy="670" r="600" fill="url(#glow)"/>
-    <text x="78" y="105" fill="#59eee5" font-family="SFMono-Regular,Consolas,monospace" font-size="34" font-weight="700" letter-spacing="8">LIVE CODEX COMPANION</text>
+    <text x="78" y="105" fill="#59eee5" font-family="SFMono-Regular,Consolas,monospace" font-size="34" font-weight="700" letter-spacing="8">LIVE AGENT COMPANION</text>
     <text x="78" y="172" fill="white" font-family="Arial,sans-serif" font-size="52" font-weight="800">Tasks become motion, mood, and growth.</text>
     <rect x="48" y="198" width="1560" height="1040" rx="46" fill="#000" opacity=".52" filter="url(#shadow)"/>
     <rect x="1645" y="198" width="705" height="1085" rx="80" fill="#0b0e25" opacity=".72" stroke="#6df4e9" stroke-opacity=".24" stroke-width="3"/>
@@ -49,12 +49,12 @@ await sharp(backdrop)
     { input: floating, left: 1_675 + Math.max(0, Math.floor((650 - (floatingMetadata.width ?? 650)) / 2)), top: 215 }
   ])
   .jpeg({ quality: 90, chromaSubsampling: "4:4:4" })
-  .toFile(path.join(output, "live-desktop.jpg"));
+  .toFile(path.join(output, "live-desktop-readme.jpg"));
 
 await sharp(workshopPath)
   .resize({ width: 2_000 })
   .jpeg({ quality: 88, chromaSubsampling: "4:4:4" })
-  .toFile(path.join(output, "workshop.jpg"));
+  .toFile(path.join(output, "workshop-readme.jpg"));
 
 if (!controlMetadata.width || !floatingMetadata.width) throw new Error("Runtime preview images are invalid.");
 console.log("Generated README runtime previews from the isolated local capture.");

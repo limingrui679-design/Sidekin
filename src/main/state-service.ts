@@ -1,24 +1,52 @@
-import { pathToFileURL } from "node:url";
 import { readFile } from "node:fs/promises";
 import type {
   PetMotion,
   PetSnapshot,
+  PublicCustomPetTemplate,
   PublicPetState,
+  PublicPetSnapshot,
   RuntimeSettings,
   ThemeCatalog,
   ThemeProfile
 } from "../shared/types.js";
-import { advance, applyActivity, makeDefaultSnapshot, migrateSnapshot, motionFor, performCare } from "../shared/lifecycle.js";
+import { advance, applyActivity, careAvailability, clearInterruptedTasks, makeDefaultSnapshot, migrateSnapshot, motionFor, performCare, temperamentFor } from "../shared/lifecycle.js";
 import type { CodexActivityRecord } from "../shared/codex.js";
 import type { SidekinPaths } from "./paths.js";
 import { readJSON, writeJSON } from "./file-store.js";
 import { TemplateStore } from "./template-store.js";
+import { mediaURL } from "../shared/media.js";
 
 const DEFAULT_SETTINGS: RuntimeSettings = {
   petVisible: true,
   launchAtLogin: false,
-  monitorSessionLogs: true
+  monitorSessionLogs: false,
+  clickThroughTransparency: true
 };
+
+function sanitizeSettings(raw: unknown): RuntimeSettings {
+  const source = typeof raw === "object" && raw !== null && !Array.isArray(raw)
+    ? raw as Record<string, unknown>
+    : {};
+  const bounds = typeof source.floatingBounds === "object" && source.floatingBounds !== null && !Array.isArray(source.floatingBounds)
+    ? source.floatingBounds as Record<string, unknown>
+    : undefined;
+  const finite = (value: unknown): value is number => typeof value === "number" && Number.isFinite(value);
+  const floatingBounds = bounds && finite(bounds.x) && finite(bounds.y) && finite(bounds.width) && finite(bounds.height)
+    ? {
+        x: Math.round(Math.min(100_000, Math.max(-100_000, bounds.x))),
+        y: Math.round(Math.min(100_000, Math.max(-100_000, bounds.y))),
+        width: Math.round(Math.min(1_200, Math.max(240, bounds.width))),
+        height: Math.round(Math.min(1_200, Math.max(240, bounds.height)))
+      }
+    : undefined;
+  return {
+    petVisible: typeof source.petVisible === "boolean" ? source.petVisible : DEFAULT_SETTINGS.petVisible,
+    launchAtLogin: typeof source.launchAtLogin === "boolean" ? source.launchAtLogin : DEFAULT_SETTINGS.launchAtLogin,
+    monitorSessionLogs: typeof source.monitorSessionLogs === "boolean" ? source.monitorSessionLogs : DEFAULT_SETTINGS.monitorSessionLogs,
+    clickThroughTransparency: typeof source.clickThroughTransparency === "boolean" ? source.clickThroughTransparency : DEFAULT_SETTINGS.clickThroughTransparency,
+    floatingBounds
+  };
+}
 
 export class StateService {
   pet!: PetSnapshot;
@@ -34,10 +62,12 @@ export class StateService {
   ) {}
 
   async initialize(): Promise<void> {
-    const raw = await readJSON<Partial<PetSnapshot> & { cosmetics?: unknown }>(this.paths.state);
+    const raw = await readJSON<unknown>(this.paths.state);
     this.pet = advance(raw ? migrateSnapshot(raw) : makeDefaultSnapshot());
-    this.settings = { ...DEFAULT_SETTINGS, ...(await readJSON<RuntimeSettings>(this.paths.settings) ?? {}) };
-    this.catalog = (JSON.parse(await readFile(this.paths.catalog, "utf8")) as ThemeCatalog).themes;
+    this.settings = sanitizeSettings(await readJSON<unknown>(this.paths.settings));
+    const catalog = JSON.parse(await readFile(this.paths.catalog, "utf8")) as ThemeCatalog;
+    if (!Array.isArray(catalog.themes) || catalog.themes.length === 0) throw new Error("The built-in lineage catalog is missing or invalid.");
+    this.catalog = catalog.themes;
     if (!this.catalog.some((theme) => theme.id === this.pet.wardrobe.theme)) this.pet.wardrobe.theme = "nova";
     await this.persist();
     setInterval(() => void this.tick(), 60_000);
@@ -47,20 +77,62 @@ export class StateService {
     return this.catalog.find((theme) => theme.id === this.pet.wardrobe.theme) ?? this.catalog[0]!;
   }
 
+  private publicPet(): PublicPetSnapshot {
+    return {
+      name: this.pet.name,
+      stats: { ...this.pet.stats },
+      experience: this.pet.experience,
+      stage: this.pet.stage,
+      isSleeping: this.pet.isSleeping,
+      codexActivity: this.pet.codexActivity,
+      wardrobe: { ...this.pet.wardrobe },
+      currentStreak: this.pet.currentStreak,
+      growthJournal: this.pet.growthJournal.map((entry) => ({ ...entry })),
+      activityFeed: this.pet.activityFeed.map((item, index) => {
+        const { sessionID: _sessionID, id: _internalID, ...view } = item;
+        return { ...view, id: `activity-${index}` };
+      })
+    };
+  }
+
+  private publicTemplate(template: Awaited<ReturnType<TemplateStore["load"]>>): PublicCustomPetTemplate | null {
+    if (!template) return null;
+    return {
+      id: template.id,
+      name: template.name,
+      author: template.author,
+      license: template.license,
+      motionProfile: template.motionProfile,
+      generationQuality: template.generationQuality,
+      createdAt: template.createdAt,
+      stages: template.stages.map((stage) => ({
+        index: stage.index,
+        name: stage.name,
+        experienceThreshold: stage.experienceThreshold,
+        assetFileName: stage.assetFileName
+      }))
+    };
+  }
+
   async publicState(): Promise<PublicPetState> {
     const template = this.pet.wardrobe.customTemplateID
       ? await this.templates.load(this.pet.wardrobe.customTemplateID)
       : undefined;
-    const asset = template
-      ? this.templates.assetPath(template, Math.min(template.stages.length - 1, this.customStageIndex(template.stages.map((stage) => stage.experienceThreshold))))
-      : `${this.activeTheme().id}-${this.pet.stage}.png`;
-    const assetPath = template ? asset : `${this.paths.characters}/${asset}`;
+    const stageIndex = template
+      ? Math.min(template.stages.length - 1, this.customStageIndex(template.stages.map((stage) => stage.experienceThreshold)))
+      : 0;
+    const assetURL = template
+      ? mediaURL("templates", template.id, template.stages[stageIndex]!.assetFileName)
+      : mediaURL("runtime", "characters", `${this.activeTheme().id}-${this.pet.stage}.webp`);
     return {
-      pet: this.pet,
+      pet: this.publicPet(),
       activeTheme: this.activeTheme(),
-      assetURL: pathToFileURL(assetPath).href,
-      customTemplate: template ?? null,
+      assetURL,
+      thumbnailBaseURL: "sidekin-media://runtime/thumbnails/",
+      customTemplate: this.publicTemplate(template),
       motion: this.motion,
+      temperament: temperamentFor(this.pet),
+      careAvailability: careAvailability(this.pet),
       settings: this.settings
     };
   }
@@ -69,7 +141,7 @@ export class StateService {
     const previousStage = this.pet.stage;
     const result = performCare(this.pet, action);
     this.pet = result.snapshot;
-    this.setTransientMotion(previousStage !== this.pet.stage ? "evolve" : result.motion, previousStage !== this.pet.stage ? 3_800 : 2_800);
+    if (result.rewarded) this.setTransientMotion(previousStage !== this.pet.stage ? "evolve" : result.motion, previousStage !== this.pet.stage ? 3_800 : 2_800);
     await this.persistAndBroadcast();
     return this.publicState();
   }
@@ -77,7 +149,7 @@ export class StateService {
   async receive(record: CodexActivityRecord): Promise<void> {
     const previousStage = this.pet.stage;
     const result = applyActivity(this.pet, record.activity, {
-      now: record.timestamp ?? new Date(), eventID: record.eventID, title: record.title, project: record.project
+      now: record.timestamp ?? new Date(), provider: record.provider, sessionID: record.sessionID, eventID: record.eventID, title: record.title, project: record.project
     });
     if (!result.applied) return;
     this.pet = result.snapshot;
@@ -109,8 +181,21 @@ export class StateService {
     return this.publicState();
   }
 
+  async setRuntimeSetting(key: "launchAtLogin" | "monitorSessionLogs" | "clickThroughTransparency", value: boolean): Promise<PublicPetState> {
+    this.settings[key] = value;
+    await writeJSON(this.paths.settings, this.settings);
+    await this.broadcast();
+    return this.publicState();
+  }
+
+  async clearInterrupted(): Promise<PublicPetState> {
+    this.pet = clearInterruptedTasks(this.pet);
+    await this.persistAndBroadcast();
+    return this.publicState();
+  }
+
   async saveFloatingBounds(bounds: RuntimeSettings["floatingBounds"]): Promise<void> {
-    this.settings.floatingBounds = bounds;
+    this.settings = sanitizeSettings({ ...this.settings, floatingBounds: bounds });
     await writeJSON(this.paths.settings, this.settings);
   }
 
