@@ -78,7 +78,7 @@ try {
   const report = JSON.parse(await readFile(path.join(temporary, "preview-report.json"), "utf8"));
   if (!String(report.control?.status).toLowerCase().includes("working") || report.control?.cards < 3) throw new Error("Command Center did not render live multi-task state.");
   if (!String(report.floating?.motion).includes("profile-") || report.floating?.cards < 3) throw new Error("Floating companion did not render a motion profile and task cards.");
-  if (report.workshop?.jobs < 1 || report.workshop?.jobStages < 2 || report.workshop?.templates < 1 || report.workshop?.loadedPreviews < 5) throw new Error("Workshop recovery previews failed to render.");
+  if (report.workshop?.jobs < 1 || report.workshop?.jobStages < 2 || report.workshop?.templates < 1 || report.workshop?.loadedPreviews < 6) throw new Error("Workshop recovery previews failed to render.");
   if (report.settings?.panels < 2 || report.settings?.retiredControls !== 0) throw new Error("Settings capture failed its retired-control contract.");
   await Promise.all([
     verifyCapture("command-center.png", 960, 680),
