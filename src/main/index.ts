@@ -11,7 +11,7 @@ import {
   shell,
   Tray
 } from "electron";
-import { existsSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, rmSync } from "node:fs";
 import { mkdir, readFile, realpath, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -36,9 +36,22 @@ const captureDirectory = process.env.SIDEKIN_CAPTURE_DIR
   ? path.resolve(process.env.SIDEKIN_CAPTURE_DIR)
   : undefined;
 if (captureDirectory) {
-  app.setPath("userData", path.join(captureDirectory, ".capture-user-data"));
+  const captureUserData = path.join(captureDirectory, ".capture-user-data");
+  const captureSessionData = path.join(captureDirectory, ".capture-session-data");
+  mkdirSync(captureUserData, { recursive: true });
+  mkdirSync(captureSessionData, { recursive: true });
+  app.setPath("userData", captureUserData);
+  app.setPath("sessionData", captureSessionData);
 }
 const bridgeInvocation = process.argv.includes("sidekin-hook");
+// Hook bridges are short-lived Electron processes that may run while the main
+// desktop process is open. Keep Chromium's profile locks and caches isolated,
+// while resolvePaths() continues to use the shared Sidekin userData directory
+// for the durable event inbox.
+const bridgeSessionDirectory = bridgeInvocation
+  ? mkdtempSync(path.join(app.getPath("temp"), "sidekin-hook-"))
+  : undefined;
+if (bridgeSessionDirectory) app.setPath("sessionData", bridgeSessionDirectory);
 const ownsSingleInstance = bridgeInvocation || app.requestSingleInstanceLock();
 if (!ownsSingleInstance) app.quit();
 
@@ -715,6 +728,16 @@ app.whenReady().then(async () => {
 });
 
 app.on("second-instance", () => { if (app.isReady() && state) createControlWindow(); });
+
+app.on("will-quit", () => {
+  if (!bridgeSessionDirectory) return;
+  try {
+    rmSync(bridgeSessionDirectory, { recursive: true, force: true, maxRetries: 3, retryDelay: 20 });
+  } catch {
+    // A crashing OS process may briefly retain a cache handle; the directory is
+    // already scoped to the system temp location and contains no Sidekin data.
+  }
+});
 
 app.on("window-all-closed", () => {
   // Sidekin remains available from the tray until the user explicitly quits.
