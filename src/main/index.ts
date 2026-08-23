@@ -245,12 +245,16 @@ async function handleMediaRequest(request: GlobalRequest): Promise<Response> {
     noteCaptureMedia(`method:${request.method}`);
     return notFoundMediaResponse(405);
   }
+  let diagnosticScope = "unknown";
+  let diagnosticFile = "unknown";
   try {
     const url = new URL(request.url);
     const scope = url.hostname as MediaScope;
     const components = url.pathname.split("/").filter(Boolean).map((value) => safeMediaComponent(decodeURIComponent(value)));
+    diagnosticScope = scope;
+    diagnosticFile = components.at(-1) ?? "none";
     if (!(await isAllowedMediaFile(scope, components))) {
-      noteCaptureMedia(`${scope}:rejected`);
+      noteCaptureMedia(`${scope}:${diagnosticFile}:rejected`);
       return notFoundMediaResponse();
     }
     let root: string;
@@ -269,12 +273,12 @@ async function handleMediaRequest(request: GlobalRequest): Promise<Response> {
     }
     const [trustedRoot, target] = await Promise.all([realpath(root), realpath(path.join(root, ...relative))]);
     if (!isMediaPathWithin(trustedRoot, target)) {
-      noteCaptureMedia(`${scope}:outside-root`);
+      noteCaptureMedia(`${scope}:${diagnosticFile}:outside-root`);
       return notFoundMediaResponse();
     }
     const contentType = target.toLowerCase().endsWith(".webp") ? "image/webp" : "image/png";
     const body = await readBoundedFile(target, 24 * 1024 * 1024, "Media asset");
-    noteCaptureMedia(`${scope}:200:${contentType}`);
+    noteCaptureMedia(`${scope}:${diagnosticFile}:200:${contentType}`);
     return new Response(Uint8Array.from(body), {
       status: 200,
       headers: {
@@ -283,7 +287,10 @@ async function handleMediaRequest(request: GlobalRequest): Promise<Response> {
       }
     });
   } catch (error) {
-    noteCaptureMedia(`error:${error instanceof Error ? error.name : "unknown"}`);
+    const code = error && typeof error === "object" && "code" in error && typeof error.code === "string"
+      ? error.code
+      : error instanceof Error ? error.name : "unknown";
+    noteCaptureMedia(`${diagnosticScope}:${diagnosticFile}:error:${code}`);
     return notFoundMediaResponse();
   }
 }
