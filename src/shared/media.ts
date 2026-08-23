@@ -1,3 +1,5 @@
+import path from "node:path";
+
 export type MediaScope = "runtime" | "templates" | "jobs";
 
 export function safeMediaComponent(value: string): string {
@@ -8,4 +10,13 @@ export function safeMediaComponent(value: string): string {
 export function mediaURL(scope: MediaScope, ...components: string[]): string {
   if (!components.length) throw new Error("Media URL requires a resource path.");
   return `sidekin-media://${scope}/${components.map((component) => encodeURIComponent(safeMediaComponent(component))).join("/")}`;
+}
+
+export function isMediaPathWithin(root: string, target: string, platform = process.platform): boolean {
+  const implementation = platform === "win32" ? path.win32 : path.posix;
+  const relative = implementation.relative(root, target);
+  return Boolean(relative)
+    && relative !== ".."
+    && !relative.startsWith(`..${implementation.sep}`)
+    && !implementation.isAbsolute(relative);
 }

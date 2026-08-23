@@ -24,7 +24,7 @@ import { SecretStore } from "./secret-store.js";
 import { WorkshopService } from "./workshop.js";
 import { CodexMonitor } from "./codex-monitor.js";
 import { normalizeReference } from "./image-processor.js";
-import { safeMediaComponent, type MediaScope } from "../shared/media.js";
+import { isMediaPathWithin, safeMediaComponent, type MediaScope } from "../shared/media.js";
 
 protocol.registerSchemesAsPrivileged([{
   scheme: "sidekin-media",
@@ -258,7 +258,7 @@ async function handleMediaRequest(request: GlobalRequest): Promise<Response> {
       return notFoundMediaResponse();
     }
     const [trustedRoot, target] = await Promise.all([realpath(root), realpath(path.join(root, ...relative))]);
-    if (!target.startsWith(`${trustedRoot}${path.sep}`)) return notFoundMediaResponse();
+    if (!isMediaPathWithin(trustedRoot, target)) return notFoundMediaResponse();
     return net.fetch(pathToFileURL(target).href);
   } catch {
     return notFoundMediaResponse();
@@ -497,7 +497,7 @@ async function capturePreviewsIfRequested(): Promise<void> {
   await new Promise((resolve) => setTimeout(resolve, 700));
   const floating = await floatingWindow.webContents.capturePage();
   await controlWindow.webContents.executeJavaScript(`document.querySelector('[data-tab="workshop"]')?.click()`);
-  await controlWindow.webContents.executeJavaScript(`new Promise((resolve, reject) => { const deadline = Date.now() + 30000; const timer = setInterval(() => { const images = [...document.querySelectorAll('.recovery-stage img,.template-stage img')]; const loaded = images.filter((image) => image.complete && image.naturalWidth > 0); if (document.querySelector('#tab-workshop')?.classList.contains('active') && images.length >= 6 && loaded.length >= 6) { clearInterval(timer); resolve(true); } else if (Date.now() > deadline) { clearInterval(timer); reject(new Error('Workshop did not finish rendering.')); } }, 100); })`);
+  await controlWindow.webContents.executeJavaScript(`new Promise((resolve, reject) => { const deadline = Date.now() + 30000; const timer = setInterval(() => { const images = [...document.querySelectorAll('.recovery-stage img,.template-stage img')]; const loaded = images.filter((image) => image.complete && image.naturalWidth > 0); const active = document.querySelector('#tab-workshop')?.classList.contains('active') === true; if (active && images.length >= 6 && loaded.length >= 6) { clearInterval(timer); resolve(true); } else if (Date.now() > deadline) { clearInterval(timer); reject(new Error('Workshop did not finish rendering: active=' + active + ', loaded=' + loaded.length + '/' + images.length + '.')); } }, 100); })`);
   controlWindow.webContents.invalidate();
   await new Promise((resolve) => setTimeout(resolve, 350));
   const workshopReport = await controlWindow.webContents.executeJavaScript(`(() => ({ jobs: document.querySelectorAll('.recovery-item').length, jobStages: document.querySelectorAll('.recovery-stage').length, templates: document.querySelectorAll('.template-item').length, templateStages: document.querySelectorAll('.template-stage').length, loadedPreviews: [...document.querySelectorAll('.recovery-stage img,.template-stage img')].filter((image) => image.complete && image.naturalWidth > 0).length }))()`);
