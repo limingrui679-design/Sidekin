@@ -267,6 +267,9 @@ function renderAll(): void {
   renderState(data);
   renderLineages($<HTMLInputElement>("#lineage-search").value);
   renderManagement();
+  document.documentElement.dataset.sidekinJobs = String(data.jobs.length);
+  document.documentElement.dataset.sidekinTemplates = String(data.templates.length);
+  document.documentElement.dataset.sidekinReady = "true";
 }
 
 function renderIntegrations(): void {
@@ -367,6 +370,7 @@ async function start(): Promise<void> {
 
 void start().catch((error) => {
   const message = error instanceof Error ? error.message : String(error);
+  document.documentElement.dataset.sidekinError = message;
   const title = document.querySelector<HTMLElement>("#page-title");
   if (title) title.textContent = "Sidekin could not start";
   toast(`Local data could not be loaded: ${message}`, true);

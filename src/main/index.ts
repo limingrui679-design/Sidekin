@@ -5,7 +5,6 @@ import {
   ipcMain,
   Menu,
   nativeImage,
-  net,
   protocol,
   screen,
   session,
@@ -273,9 +272,16 @@ async function handleMediaRequest(request: GlobalRequest): Promise<Response> {
       noteCaptureMedia(`${scope}:outside-root`);
       return notFoundMediaResponse();
     }
-    const response = await net.fetch(pathToFileURL(target).href);
-    noteCaptureMedia(`${scope}:${response.status}:${response.headers.get("content-type") ?? "no-content-type"}`);
-    return response;
+    const contentType = target.toLowerCase().endsWith(".webp") ? "image/webp" : "image/png";
+    const body = await readBoundedFile(target, 24 * 1024 * 1024, "Media asset");
+    noteCaptureMedia(`${scope}:200:${contentType}`);
+    return new Response(Uint8Array.from(body), {
+      status: 200,
+      headers: {
+        "content-type": contentType,
+        "cache-control": scope === "runtime" ? "public, max-age=31536000, immutable" : "no-store"
+      }
+    });
   } catch (error) {
     noteCaptureMedia(`error:${error instanceof Error ? error.name : "unknown"}`);
     return notFoundMediaResponse();
@@ -507,7 +513,7 @@ async function capturePreviewsIfRequested(): Promise<void> {
   controlWindow.focus();
   floatingWindow.showInactive();
   await Promise.all([
-    controlWindow.webContents.executeJavaScript(`new Promise((resolve, reject) => { const deadline = Date.now() + 15000; const timer = setInterval(() => { const image = document.querySelector('#hero-pet'); if (image?.complete && image.naturalWidth > 0 && document.querySelectorAll('.activity-card').length >= 3 && document.querySelector('#hero-status')?.textContent?.includes('working')) { clearInterval(timer); resolve(true); } else if (Date.now() > deadline) { clearInterval(timer); reject(new Error('Command Center did not finish rendering.')); } }, 100); })`),
+    controlWindow.webContents.executeJavaScript(`new Promise((resolve, reject) => { const deadline = Date.now() + 15000; const timer = setInterval(() => { const image = document.querySelector('#hero-pet'); const root = document.documentElement.dataset; if (root.sidekinError) { clearInterval(timer); reject(new Error('Renderer startup failed: ' + root.sidekinError)); } else if (root.sidekinReady === 'true' && image?.complete && image.naturalWidth > 0 && document.querySelectorAll('.activity-card').length >= 3 && document.querySelector('#hero-status')?.textContent?.includes('working')) { clearInterval(timer); resolve(true); } else if (Date.now() > deadline) { clearInterval(timer); reject(new Error('Command Center did not finish rendering.')); } }, 100); })`),
     floatingWindow.webContents.executeJavaScript(`new Promise((resolve, reject) => { const deadline = Date.now() + 15000; const timer = setInterval(() => { const image = document.querySelector('#float-pet'); if (image?.complete && image.naturalWidth > 0 && document.querySelectorAll('.float-task').length >= 3) { clearInterval(timer); resolve(true); } else if (Date.now() > deadline) { clearInterval(timer); reject(new Error('Floating companion did not finish rendering.')); } }, 100); })`)
   ]);
   floatingWindow.webContents.invalidate();
@@ -518,7 +524,8 @@ async function capturePreviewsIfRequested(): Promise<void> {
     await controlWindow.webContents.executeJavaScript(`new Promise((resolve, reject) => { const deadline = Date.now() + 30000; const timer = setInterval(() => { const images = [...document.querySelectorAll('.recovery-stage img,.template-stage img')]; const loaded = images.filter((image) => image.complete && image.naturalWidth > 0); const active = document.querySelector('#tab-workshop')?.classList.contains('active') === true; if (active && images.length >= 6 && loaded.length >= 6) { clearInterval(timer); resolve(true); } else if (Date.now() > deadline) { clearInterval(timer); reject(new Error('Workshop did not finish rendering: active=' + active + ', loaded=' + loaded.length + '/' + images.length + '.')); } }, 100); })`);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    throw new Error(`${message} Media outcomes: ${[...captureMediaDiagnostics].join(", ") || "none"}.`);
+    const renderer = await controlWindow.webContents.executeJavaScript(`(() => { const root = document.documentElement.dataset; return { ready: root.sidekinReady, error: root.sidekinError, jobs: root.sidekinJobs, templates: root.sidekinTemplates }; })()`);
+    throw new Error(`${message} Renderer: ready=${renderer.ready ?? "false"}, jobs=${renderer.jobs ?? "unknown"}, templates=${renderer.templates ?? "unknown"}, error=${renderer.error ?? "none"}. Media outcomes: ${[...captureMediaDiagnostics].join(", ") || "none"}.`);
   }
   controlWindow.webContents.invalidate();
   await new Promise((resolve) => setTimeout(resolve, 350));

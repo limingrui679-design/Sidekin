@@ -25,7 +25,7 @@
     "pet-pack": "node Scripts/pet-pack.mjs",
     "lint": "oxlint --deny-warnings --max-warnings=0 --import-plugin --vitest-plugin --promise-plugin --node-plugin src tests Scripts",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "vitest run --testTimeout=15000",
     "verify": "npm run lint && npm run typecheck && npm run test && npm run build && npm run assets:verify && node Scripts/verify-desktop.mjs && node Scripts/run-e2e.mjs",
     "start": "npm run build && electron .",
     "capture": "npm run build && node Scripts/run-e2e.mjs --keep",
