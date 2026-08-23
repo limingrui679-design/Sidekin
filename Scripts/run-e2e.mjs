@@ -12,6 +12,24 @@ const run = promisify(execFile);
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const temporary = await mkdtemp(path.join(tmpdir(), "sidekin-e2e-"));
 const electron = createRequire(import.meta.url)("electron");
+const transientRemovalErrors = new Set(["EBUSY", "ENOTEMPTY", "EPERM"]);
+
+async function removeTree(target, { allowTransientFailure = false } = {}) {
+  try {
+    await rm(target, {
+      recursive: true,
+      force: true,
+      maxRetries: 10,
+      retryDelay: 250
+    });
+  } catch (error) {
+    if (allowTransientFailure && error && typeof error === "object" && transientRemovalErrors.has(error.code)) {
+      console.warn(`Skipped cleanup for a temporarily locked E2E directory: ${target}`);
+      return;
+    }
+    throw error;
+  }
+}
 
 function runConcurrentHook() {
   return new Promise((resolve, reject) => {
@@ -70,12 +88,15 @@ try {
   ]);
   if (process.argv.includes("--keep")) {
     const destination = path.join(root, "artifacts", "previews");
-    await rm(destination, { recursive: true, force: true });
+    await removeTree(destination);
     await mkdir(destination, { recursive: true });
     await Promise.all(["command-center.png", "floating-pet.png", "workshop.png", "settings.png", "preview-report.json"]
       .map((file) => cp(path.join(temporary, file), path.join(destination, file))));
   }
   console.log("Verified the real Electron Command Center, floating companion, Agent Live state, Workshop recovery, Settings, and nonblank screenshots.");
 } finally {
-  await rm(temporary, { recursive: true, force: true });
+  // Chromium helpers can briefly retain DIPS and cache handles after Electron
+  // exits on Windows. Retry first; a synthetic CI directory must not turn an
+  // otherwise successful product verification into a false failure.
+  await removeTree(temporary, { allowTransientFailure: process.platform === "win32" });
 }
