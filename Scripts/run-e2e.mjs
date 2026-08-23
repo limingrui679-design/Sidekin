@@ -72,7 +72,9 @@ try {
     throw new Error(`Codex Stop hook did not return the required empty JSON object (stdout=${JSON.stringify(hook.stdout)}, stderr=${JSON.stringify(hook.stderr.slice(-1_000))}).`);
   }
   const inbox = await readFile(path.join(temporary, ".capture-user-data", "codex-events.jsonl"), "utf8");
-  if (!inbox.includes("e2e-concurrent-hook") || inbox.includes("must never be stored")) throw new Error("Concurrent hook did not persist minimized lifecycle metadata.");
+  if (!inbox.includes("e2e-concurrent-hook") || inbox.includes("must never be stored")) {
+    throw new Error(`Concurrent hook did not persist minimized lifecycle metadata (stderr=${JSON.stringify(hook.stderr.slice(-1_000))}).`);
+  }
   const completedApp = await appRun;
   if (/Applying inline style violates the following Content Security Policy/i.test(completedApp.stderr)) {
     throw new Error("The renderer attempted a CSP-blocked inline style update.");

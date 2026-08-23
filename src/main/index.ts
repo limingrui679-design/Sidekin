@@ -569,17 +569,23 @@ async function handleBridgeMode(): Promise<boolean> {
   }
   const payload = Buffer.concat(input);
   monitor = new CodexMonitor(paths, () => undefined);
-  try { await monitor.writeHookEvent(provider, activity, payload); }
-  catch { return true; }
+  let codexStop = false;
   if (provider === "codex") {
-    try {
-      const hook = JSON.parse(payload.toString("utf8")) as Record<string, unknown>;
-      if (hook.hook_event_name === "Stop") {
-        await new Promise<void>((resolve, reject) => {
-          process.stdout.write("{}\n", (error) => error ? reject(error) : resolve());
-        });
-      }
-    } catch { /* no hook output is required for malformed optional metadata */ }
+    try { codexStop = (JSON.parse(payload.toString("utf8")) as Record<string, unknown>).hook_event_name === "Stop"; }
+    catch { /* no hook output is required for malformed optional metadata */ }
+  }
+  try {
+    await monitor.writeHookEvent(provider, activity, payload);
+  } catch (error) {
+    if (captureDirectory) {
+      const code = error instanceof Error ? error.name : "unknown";
+      process.stderr.write(`Sidekin hook persistence failed (${code}).\n`);
+    }
+  }
+  if (codexStop) {
+    await new Promise<void>((resolve, reject) => {
+      process.stdout.write("{}\n", (error) => error ? reject(error) : resolve());
+    });
   }
   return true;
 }
