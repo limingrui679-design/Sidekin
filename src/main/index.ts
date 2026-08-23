@@ -31,6 +31,7 @@ protocol.registerSchemesAsPrivileged([{
 }]);
 
 app.setName("Sidekin");
+app.commandLine.appendSwitch("lang", "en-US");
 if (process.platform === "win32") app.setAppUserModelId("app.sidekin.desktop");
 const captureDirectory = process.env.SIDEKIN_CAPTURE_DIR
   ? path.resolve(process.env.SIDEKIN_CAPTURE_DIR)

@@ -107,6 +107,7 @@ try {
     cwd: root,
     env: { ...process.env, SIDEKIN_CAPTURE_DIR: temporary, ELECTRON_ENABLE_LOGGING: "0" },
     timeout: 90_000,
+    killSignal: "SIGKILL",
     maxBuffer: 8 * 1024 * 1024,
     windowsHide: true
   }).then((value) => ({ value }), (error) => ({ error }));

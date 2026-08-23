@@ -39,7 +39,7 @@ for (const gate of [
   "setPermissionRequestHandler", "Content-Security-Policy", "assertTrustedSender", "assertGenerationRequest",
   "requestSingleInstanceLock", "clampFloatingBounds", "referenceSelections", "setIgnoreMouseEvents",
   "protocol.handle(\"sidekin-media\"", "const candidate = path.join(root, ...relative)", "realpath(candidate)", "isAllowedMediaFile",
-  'stage.assetFileName === fileName', '/^(raw|processed)-stage-0[1-8]\\.png$/'
+  'stage.assetFileName === fileName', '/^(raw|processed)-stage-0[1-8]\\.png$/', 'appendSwitch("lang", "en-US")'
 ]) requireCondition(main.includes(gate), `Missing desktop/security gate: ${gate}`);
 requireCondition(main.includes('bridgeInvocation || app.requestSingleInstanceLock()'), "Hook bridge processes must bypass the UI single-instance lock.");
 requireCondition(main.includes('process.argv.includes("--hidden")') && main.includes('args: ["--hidden"]'), "Launch-at-login must not force the Command Center open.");
@@ -122,7 +122,7 @@ for (const contract of ["contentHashes", "Unexpected entries", "Duplicate archiv
 }
 
 const packaging = await text("Scripts/package-desktop.mjs");
-for (const contract of ["@electron/packager", "'darwin', 'win32'", "appVersion: \"2.2.0\"", "buildVersion: \"9\"", "NSAllowsArbitraryLoads: false", "Packaged macOS application does not contain the Sidekin icon", "THIRD_PARTY_NOTICES.md", "450 * 1024 * 1024", "350 * 1024 * 1024", "/^\\/RuntimeAssets/", "verifyPackagedAssetWorker", "archiveSHA256"]) {
+for (const contract of ["@electron/packager", "'darwin', 'win32'", "appVersion: \"2.2.0\"", "buildVersion: \"9\"", "NSAllowsArbitraryLoads: false", "Packaged macOS application does not contain the Sidekin icon", "THIRD_PARTY_NOTICES.md", "en-US.pak", "450 * 1024 * 1024", "350 * 1024 * 1024", "/^\\/RuntimeAssets/", "verifyPackagedAssetWorker", "archiveSHA256"]) {
   requireCondition(packaging.includes(contract), `Packaging contract is missing: ${contract}`);
 }
 

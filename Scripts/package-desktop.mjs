@@ -82,6 +82,7 @@ const applicationPaths = await packager({
     /^\/Scripts/,
     /^\/Support/,
     /^\/RuntimeAssets/,
+    /^\/dist\/.*\.map$/,
     /^\/out/,
     /^\/\.git/,
     /^\/\.github/,
@@ -97,6 +98,19 @@ const application = platform === "darwin"
   ? path.join(packageDirectory, "Sidekin.app")
   : path.join(packageDirectory, "Sidekin.exe");
 if (!existsSync(application)) throw new Error("Packager did not create the application executable.");
+
+if (platform === "win32") {
+  // Sidekin's product surface is English-only. Keeping every Chromium locale
+  // would add tens of MiB of unreachable resources to the source-Beta package.
+  const locales = path.join(packageDirectory, "locales");
+  const entries = await readdir(locales, { withFileTypes: true });
+  if (!entries.some((entry) => entry.isFile() && entry.name === "en-US.pak")) throw new Error("Packaged Windows runtime is missing en-US locale data.");
+  await Promise.all(entries
+    .filter((entry) => entry.name !== "en-US.pak")
+    .map((entry) => rm(path.join(locales, entry.name), { recursive: true, force: true })));
+  const retainedLocales = await readdir(locales);
+  if (retainedLocales.length !== 1 || retainedLocales[0] !== "en-US.pak") throw new Error("Windows locale pruning did not retain exactly en-US.pak.");
+}
 
 if (platform === "darwin") {
   const packagedIcon = path.join(application, "Contents", "Resources", "electron.icns");
