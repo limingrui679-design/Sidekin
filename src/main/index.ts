@@ -558,13 +558,13 @@ async function capturePreviewsIfRequested(): Promise<void> {
   }
   controlWindow.webContents.invalidate();
   await new Promise((resolve) => setTimeout(resolve, 350));
-  const workshopReport = await controlWindow.webContents.executeJavaScript(`(() => ({ jobs: document.querySelectorAll('.recovery-item').length, jobStages: document.querySelectorAll('.recovery-stage').length, templates: document.querySelectorAll('.template-item').length, templateStages: document.querySelectorAll('.template-stage').length, loadedPreviews: [...document.querySelectorAll('.recovery-stage img,.template-stage img')].filter((image) => image.complete && image.naturalWidth > 0).length }))()`);
+  const workshopReport = await controlWindow.webContents.executeJavaScript(`(() => ({ jobs: document.querySelectorAll('.recovery-item').length, jobStages: document.querySelectorAll('.recovery-stage').length, templates: document.querySelectorAll('.template-item').length, templateStages: document.querySelectorAll('.template-stage').length, loadedPreviews: [...document.querySelectorAll('.recovery-stage img,.template-stage img')].filter((image) => image.complete && image.naturalWidth > 0).length, viewport: { width: window.innerWidth, height: window.innerHeight } }))()`);
   const workshopCapture = await controlWindow.webContents.capturePage();
   await controlWindow.webContents.executeJavaScript(`document.querySelector('[data-tab="settings"]')?.click()`);
   await controlWindow.webContents.executeJavaScript(`new Promise((resolve, reject) => { const deadline = Date.now() + 15000; const timer = setInterval(() => { if (document.querySelector('#tab-settings')?.classList.contains('active')) { clearInterval(timer); requestAnimationFrame(() => requestAnimationFrame(resolve)); } else if (Date.now() > deadline) { clearInterval(timer); reject(new Error('Settings did not finish rendering.')); } }, 100); })`);
   controlWindow.webContents.invalidate();
   await new Promise((resolve) => setTimeout(resolve, 350));
-  const settingsReport = await controlWindow.webContents.executeJavaScript(`(() => ({ panels: document.querySelectorAll('#tab-settings .panel').length, retiredControls: document.querySelectorAll('#tab-settings select').length }))()`);
+  const settingsReport = await controlWindow.webContents.executeJavaScript(`(() => ({ panels: document.querySelectorAll('#tab-settings .panel').length, retiredControls: document.querySelectorAll('#tab-settings select').length, viewport: { width: window.innerWidth, height: window.innerHeight } }))()`);
   if (settingsReport.retiredControls !== 0) throw new Error("Retired cosmetic controls remain in Settings.");
   const settingsCapture = await controlWindow.webContents.capturePage();
   await controlWindow.webContents.executeJavaScript(`document.querySelector('[data-tab="home"]')?.click()`);
@@ -573,8 +573,8 @@ async function capturePreviewsIfRequested(): Promise<void> {
   await new Promise((resolve) => setTimeout(resolve, 700));
   const control = await controlWindow.webContents.capturePage();
   const report = await Promise.all([
-    controlWindow.webContents.executeJavaScript(`(() => { const image = document.querySelector('#hero-pet'); return { title: document.title, status: document.querySelector('#hero-status')?.textContent, cards: document.querySelectorAll('.activity-card').length, image: { src: image?.src, complete: image?.complete, width: image?.naturalWidth, height: image?.naturalHeight }, bodyBackground: getComputedStyle(document.body).backgroundColor }; })()`),
-    floatingWindow.webContents.executeJavaScript(`(() => { const image = document.querySelector('#float-pet'); return { status: document.querySelector('#float-status')?.textContent, cards: document.querySelectorAll('.float-task').length, motion: document.querySelector('#pet-motion')?.className, image: { src: image?.src, complete: image?.complete, width: image?.naturalWidth, height: image?.naturalHeight } }; })()`)
+    controlWindow.webContents.executeJavaScript(`(() => { const image = document.querySelector('#hero-pet'); return { title: document.title, status: document.querySelector('#hero-status')?.textContent, cards: document.querySelectorAll('.activity-card').length, image: { src: image?.src, complete: image?.complete, width: image?.naturalWidth, height: image?.naturalHeight }, viewport: { width: window.innerWidth, height: window.innerHeight }, bodyBackground: getComputedStyle(document.body).backgroundColor }; })()`),
+    floatingWindow.webContents.executeJavaScript(`(() => { const image = document.querySelector('#float-pet'); return { status: document.querySelector('#float-status')?.textContent, cards: document.querySelectorAll('.float-task').length, motion: document.querySelector('#pet-motion')?.className, image: { src: image?.src, complete: image?.complete, width: image?.naturalWidth, height: image?.naturalHeight }, viewport: { width: window.innerWidth, height: window.innerHeight } }; })()`)
   ]);
   await Promise.all([
     writeFile(path.join(captureDirectory, "command-center.png"), control.toPNG()),

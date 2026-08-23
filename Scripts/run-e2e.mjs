@@ -79,12 +79,23 @@ async function readEventually(file, timeout = 5_000) {
   throw latestError;
 }
 
-async function verifyCapture(file, minimumWidth, minimumHeight) {
+async function verifyCapture(file, viewport, minimumViewportWidth, minimumViewportHeight) {
   const fullPath = path.join(temporary, file);
   if (!existsSync(fullPath)) throw new Error(`E2E capture is missing ${file}.`);
   const image = sharp(fullPath, { failOn: "error" });
   const [metadata, stats] = await Promise.all([image.metadata(), image.stats()]);
-  if ((metadata.width ?? 0) < minimumWidth || (metadata.height ?? 0) < minimumHeight) throw new Error(`${file} has an invalid capture size.`);
+  const width = metadata.width ?? 0;
+  const height = metadata.height ?? 0;
+  const viewportWidth = Number(viewport?.width ?? 0);
+  const viewportHeight = Number(viewport?.height ?? 0);
+  if (viewportWidth < minimumViewportWidth || viewportHeight < minimumViewportHeight) {
+    throw new Error(`${file} rendered into an undersized ${viewportWidth}×${viewportHeight} content viewport.`);
+  }
+  const scaleX = width / viewportWidth;
+  const scaleY = height / viewportHeight;
+  if (width < 1 || height < 1 || scaleX < 0.65 || scaleX > 3.1 || scaleY < 0.65 || scaleY > 3.1 || Math.abs(scaleX - scaleY) > 0.08 * Math.max(scaleX, scaleY)) {
+    throw new Error(`${file} capture ${width}×${height} does not match its ${viewportWidth}×${viewportHeight} content viewport.`);
+  }
   const alpha = stats.channels[3];
   const transparentCapture = alpha && alpha.min < 255;
   if (transparentCapture ? alpha.max === 0 || alpha.mean < 1 : stats.entropy < 0.5) throw new Error(`${file} appears blank.`);
@@ -129,10 +140,10 @@ try {
   if (report.workshop?.jobs < 1 || report.workshop?.jobStages < 2 || report.workshop?.templates < 1 || report.workshop?.loadedPreviews < 6) throw new Error("Workshop recovery previews failed to render.");
   if (report.settings?.panels < 2 || report.settings?.retiredControls !== 0) throw new Error("Settings capture failed its retired-control contract.");
   await Promise.all([
-    verifyCapture("command-center.png", 960, 680),
-    verifyCapture("floating-pet.png", 400, 480),
-    verifyCapture("workshop.png", 960, 680),
-    verifyCapture("settings.png", 960, 680)
+    verifyCapture("command-center.png", report.control?.viewport, 900, 600),
+    verifyCapture("floating-pet.png", report.floating?.viewport, 400, 480),
+    verifyCapture("workshop.png", report.workshop?.viewport, 900, 600),
+    verifyCapture("settings.png", report.settings?.viewport, 900, 600)
   ]);
   if (process.argv.includes("--keep")) {
     const destination = path.join(root, "artifacts", "previews");
