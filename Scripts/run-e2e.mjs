@@ -13,6 +13,7 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const temporary = await mkdtemp(path.join(tmpdir(), "sidekin-e2e-"));
 const electron = createRequire(import.meta.url)("electron");
 const transientRemovalErrors = new Set(["EBUSY", "ENOTEMPTY", "EPERM"]);
+const transientReadErrors = new Set(["EBUSY", "ENOENT", "EPERM"]);
 
 async function removeTree(target, { allowTransientFailure = false } = {}) {
   try {
@@ -49,6 +50,21 @@ function runConcurrentHook() {
   });
 }
 
+async function readEventually(file, timeout = 5_000) {
+  const deadline = Date.now() + timeout;
+  let latestError;
+  do {
+    try {
+      return await readFile(file, "utf8");
+    } catch (error) {
+      latestError = error;
+      if (!error || typeof error !== "object" || !transientReadErrors.has(error.code)) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+  } while (Date.now() < deadline);
+  throw latestError;
+}
+
 async function verifyCapture(file, minimumWidth, minimumHeight) {
   const fullPath = path.join(temporary, file);
   if (!existsSync(fullPath)) throw new Error(`E2E capture is missing ${file}.`);
@@ -60,25 +76,36 @@ async function verifyCapture(file, minimumWidth, minimumHeight) {
   if (transparentCapture ? alpha.max === 0 || alpha.mean < 1 : stats.entropy < 0.5) throw new Error(`${file} appears blank.`);
 }
 
+let appOutcome;
 try {
-  const appRun = run(electron, [root], {
+  appOutcome = run(electron, [root], {
     cwd: root,
     env: { ...process.env, SIDEKIN_CAPTURE_DIR: temporary, ELECTRON_ENABLE_LOGGING: "0" },
     timeout: 90_000,
     maxBuffer: 8 * 1024 * 1024,
     windowsHide: true
-  });
+  }).then((value) => ({ value }), (error) => ({ error }));
   await new Promise((resolve) => setTimeout(resolve, 900));
-  const hook = await runConcurrentHook();
-  const acknowledgement = hook.stdout.trim();
-  if (acknowledgement !== "{}" && !(process.platform === "win32" && acknowledgement === "")) {
-    throw new Error(`Codex Stop hook did not return the required empty JSON object (stdout=${JSON.stringify(hook.stdout)}, stderr=${JSON.stringify(hook.stderr.slice(-1_000))}).`);
+  let hookVerificationError;
+  try {
+    const hook = await runConcurrentHook();
+    const acknowledgement = hook.stdout.trim();
+    if (acknowledgement !== "{}" && !(process.platform === "win32" && acknowledgement === "")) {
+      throw new Error(`Codex Stop hook did not return the required empty JSON object (stdout=${JSON.stringify(hook.stdout)}, stderr=${JSON.stringify(hook.stderr.slice(-1_000))}).`);
+    }
+    const inbox = await readEventually(path.join(temporary, ".capture-user-data", "codex-events.jsonl"));
+    if (!inbox.includes("e2e-concurrent-hook") || inbox.includes("must never be stored")) {
+      throw new Error(`Concurrent hook did not persist minimized lifecycle metadata (stderr=${JSON.stringify(hook.stderr.slice(-1_000))}).`);
+    }
+  } catch (error) {
+    // The main capture must finish before its shared synthetic userData can be
+    // removed. Preserve the original hook error and report it after app exit.
+    hookVerificationError = error;
   }
-  const inbox = await readFile(path.join(temporary, ".capture-user-data", "codex-events.jsonl"), "utf8");
-  if (!inbox.includes("e2e-concurrent-hook") || inbox.includes("must never be stored")) {
-    throw new Error(`Concurrent hook did not persist minimized lifecycle metadata (stderr=${JSON.stringify(hook.stderr.slice(-1_000))}).`);
-  }
-  const completedApp = await appRun;
+  const outcome = await appOutcome;
+  if (outcome.error) throw outcome.error;
+  if (hookVerificationError) throw hookVerificationError;
+  const completedApp = outcome.value;
   if (/Applying inline style violates the following Content Security Policy/i.test(completedApp.stderr)) {
     throw new Error("The renderer attempted a CSP-blocked inline style update.");
   }
@@ -102,6 +129,9 @@ try {
   }
   console.log("Verified the real Electron Command Center, floating companion, Agent Live state, Workshop recovery, Settings, and nonblank screenshots.");
 } finally {
+  // Settle the Electron child before cleanup even when a concurrent hook
+  // assertion fails, otherwise cleanup can erase storage from under the app.
+  if (appOutcome) await appOutcome;
   // Chromium helpers can briefly retain DIPS and cache handles after Electron
   // exits on Windows. Retry first; a synthetic CI directory must not turn an
   // otherwise successful product verification into a false failure.
