@@ -55,7 +55,9 @@ async function verifyCapture(file, minimumWidth, minimumHeight) {
   const image = sharp(fullPath, { failOn: "error" });
   const [metadata, stats] = await Promise.all([image.metadata(), image.stats()]);
   if ((metadata.width ?? 0) < minimumWidth || (metadata.height ?? 0) < minimumHeight) throw new Error(`${file} has an invalid capture size.`);
-  if (stats.entropy < 0.5) throw new Error(`${file} appears blank.`);
+  const alpha = stats.channels[3];
+  const transparentCapture = alpha && alpha.min < 255;
+  if (transparentCapture ? alpha.max === 0 || alpha.mean < 1 : stats.entropy < 0.5) throw new Error(`${file} appears blank.`);
 }
 
 try {

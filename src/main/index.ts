@@ -570,7 +570,9 @@ async function capturePreviewsIfRequested(): Promise<void> {
     writeFile(path.join(captureDirectory, "preview-report.json"), `${JSON.stringify({ control: report[0], floating: report[1], workshop: workshopReport, settings: settingsReport }, null, 2)}\n`)
   ]);
   quitting = true;
-  app.quit();
+  // Capture mode has already flushed every artifact and must not be held open
+  // by platform-specific tray or Chromium shutdown work in CI.
+  app.exit(0);
 }
 
 async function handleBridgeMode(): Promise<boolean> {
