@@ -20,17 +20,17 @@
     "icons": "node Scripts/generate-icons.mjs"
   },
   "dependencies": {
-    "adm-zip": "0.6.0",
-    "sharp": "0.35.3"
+    "adm-zip": "0.6.1",
+    "sharp": "0.35.5"
   },
   "devDependencies": {
     "@electron/packager": "20.3.0",
-    "@types/adm-zip": "0.5.7",
-    "@types/node": "22.19.15",
-    "electron": "43.4.0",
-    "esbuild": "0.25.12",
-    "png-to-ico": "3.0.1",
+    "@types/adm-zip": "0.5.8",
+    "@types/node": "26.6.3",
+    "electron": "44.4.5",
+    "esbuild": "0.28.2",
+    "png-to-ico": "3.0.2",
     "typescript": "7.0.2",
-    "vitest": "4.1.10"
+    "vitest": "5.0.2"
   }
 }
