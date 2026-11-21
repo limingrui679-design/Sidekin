@@ -285,7 +285,3 @@ The repository is proprietary and all rights are reserved. Source and art are vi
 ## Acknowledgements
 
 The README structure takes cues from strong macOS and desktop-companion repositories—visual identity first, a concise value proposition, quick start near the top, explicit privacy and platform limits, and deeper verification details below—while all Sidekin copy, code, and visual assets remain project-specific.
-
-### Offline care simulation
-
-On both desktop engines, an offline interval can include sleeping and waking. The simulation computes when energy reaches the wake threshold and applies waking rates for the remaining time, with the existing twelve-hour catch-up cap. Within that cap a single update and a sequence of shorter updates give the same care statistics.
