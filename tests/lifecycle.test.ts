@@ -17,9 +17,11 @@ describe("shared pet lifecycle", () => {
     pet.isSleeping = true;
     pet.stats.energy = 5;
     const result = advance(pet, new Date("2026-08-15T00:00:00Z"));
-    expect(result.stats.energy).toBe(100);
+    const sleeping = (99 - 5) / 18;
+    const awake = 12 - sleeping;
+    expect(result.stats.energy).toBeCloseTo(99 - awake * 2.2);
     expect(result.isSleeping).toBe(false);
-    expect(result.stats.hunger).toBe(52);
+    expect(result.stats.hunger).toBeCloseTo(pet.stats.hunger - sleeping * 2 - awake * 4);
   });
 
   it("deduplicates one completed Codex turn and maintains a bounded feed", () => {
@@ -77,4 +79,22 @@ describe("shared pet lifecycle", () => {
     expect(motions.size).toBe(4);
     vi.useRealTimers();
   });
+});
+
+it("integrates sleep and waking identically across one offline gap or many ticks", () => {
+  const start = Date.UTC(2026, 0, 1);
+  const pet = makeDefaultSnapshot(new Date(start));
+  pet.isSleeping = true;
+  pet.stats = { hunger: 80, mood: 99.8, energy: 81 };
+  const at = (hours: number) => new Date(start + hours * 3_600_000);
+  const offline = advance(pet, at(4));
+  let ticking = pet;
+  for (let tick = 1; tick <= 16; tick++) ticking = advance(ticking, at(tick / 4));
+  expect(offline.isSleeping).toBe(false);
+  expect(offline.stats.energy).toBeCloseTo(92.4);
+  expect(offline.stats.mood).toBeCloseTo(96.1);
+  expect(offline.stats.hunger).toBeCloseTo(66);
+  for (const key of ["energy", "hunger", "mood"] as const) {
+    expect(ticking.stats[key]).toBeCloseTo(offline.stats[key]);
+  }
 });

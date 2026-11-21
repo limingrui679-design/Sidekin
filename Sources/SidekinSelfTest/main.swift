@@ -144,6 +144,24 @@ test("Sleep restores energy and preserves stat bounds") {
     try expect(pet.stats.hunger >= 0, "Hunger fell below its minimum")
 }
 
+test("Offline sleep and waking produce the same stats as successive short ticks") {
+    let start = Date(timeIntervalSince1970: 6_000)
+    var offline = PetSnapshot(now: start)
+    offline.stats.hunger = 80
+    offline.stats.mood = 99.8
+    offline.stats.energy = 81
+    offline.isSleeping = true
+    var ticking = offline
+    PetLifecycleEngine.advance(&offline, to: start.addingTimeInterval(4 * 3_600))
+    for tick in 1...16 {
+        PetLifecycleEngine.advance(&ticking, to: start.addingTimeInterval(Double(tick) * 900))
+    }
+    try expect(!offline.isSleeping && abs(offline.stats.energy - 92.4) < 1e-8, "Incorrect wake threshold")
+    try expect(abs(ticking.stats.energy - offline.stats.energy) < 1e-8
+        && abs(ticking.stats.hunger - offline.stats.hunger) < 1e-8
+        && abs(ticking.stats.mood - offline.stats.mood) < 1e-8, "Tick rate changed care stats")
+}
+
 test("The completion animation returns to idle after its display window") {
     let start = Date(timeIntervalSince1970: 5_000)
     var pet = PetSnapshot(now: start)

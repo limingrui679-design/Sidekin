@@ -109,16 +109,21 @@ export function advance(snapshot: PetSnapshot, now = new Date()): PetSnapshot {
   if (!Number.isFinite(rawInterval) || rawInterval <= 0) return result;
 
   const hours = Math.min(rawInterval, MAXIMUM_OFFLINE_INTERVAL_MS) / 3_600_000;
+  // Split the interval at the wake event, even if the app was offline.
+  // Clamp at the boundary because mood can fill during sleep and fall later.
+  const hoursToWake = Math.max(0, (99 - result.stats.energy) / 18);
+  const asleep = result.isSleeping ? Math.min(hours, hoursToWake) : 0;
+  const awake = hours - asleep;
   if (result.isSleeping) {
-    result.stats.hunger -= hours * 2;
-    result.stats.mood += hours;
-    result.stats.energy += hours * 18;
-    if (result.stats.energy >= 99) result.isSleeping = false;
-  } else {
-    result.stats.hunger -= hours * 4;
-    result.stats.mood -= hours * 1.3;
-    result.stats.energy -= hours * 2.2;
+    result.stats.hunger -= asleep * 2;
+    result.stats.mood += asleep;
+    result.stats.energy += asleep * 18;
+    clampStats(result);
+    if (hours >= hoursToWake) result.isSleeping = false;
   }
+  result.stats.hunger -= awake * 4;
+  result.stats.mood -= awake * 1.3;
+  result.stats.energy -= awake * 2.2;
   clampStats(result);
   result.lastUpdatedAt = iso(now);
   if (["completed", "failed"].includes(result.codexActivity)) {

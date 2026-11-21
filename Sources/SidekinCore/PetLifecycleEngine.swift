@@ -12,19 +12,20 @@ public enum PetLifecycleEngine {
         let interval = min(rawInterval, maximumOfflineInterval)
         let hours = interval / 3_600
 
+        // Integrate to the wake event, then apply waking rates to the remainder.
+        let hoursToWake = max(0, (99 - snapshot.stats.energy) / 18)
+        let asleep = snapshot.isSleeping ? min(hours, hoursToWake) : 0
+        let awake = hours - asleep
         if snapshot.isSleeping {
-            snapshot.stats.hunger -= hours * 2.0
-            snapshot.stats.mood += hours * 1.0
-            snapshot.stats.energy += hours * 18.0
-            if snapshot.stats.energy >= 99 {
-                snapshot.isSleeping = false
-            }
-        } else {
-            snapshot.stats.hunger -= hours * 4.0
-            snapshot.stats.mood -= hours * 1.3
-            snapshot.stats.energy -= hours * 2.2
+            snapshot.stats.hunger -= asleep * 2
+            snapshot.stats.mood += asleep
+            snapshot.stats.energy += asleep * 18
+            snapshot.stats.clamp()
+            if hours >= hoursToWake { snapshot.isSleeping = false }
         }
-
+        snapshot.stats.hunger -= awake * 4
+        snapshot.stats.mood -= awake * 1.3
+        snapshot.stats.energy -= awake * 2.2
         snapshot.stats.clamp()
         snapshot.lastUpdatedAt = date
 
