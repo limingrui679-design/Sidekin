@@ -98,3 +98,25 @@ it("integrates sleep and waking identically across one offline gap or many ticks
     expect(ticking.stats[key]).toBeCloseTo(offline.stats[key]);
   }
 });
+
+it("replays real public workflow intervals across restarts and duplicate delivery", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const rows: {id:number;run_attempt:number;run_started_at:string;updated_at:string;conclusion:string}[] =
+    JSON.parse(await readFile("tests/fixtures/public-workflow-runs.json","utf8"));
+  const events = rows.flatMap(row => [
+    {id:`${row.id}/${row.run_attempt}`, at:row.run_started_at, status:"running" as const},
+    {id:`${row.id}/${row.run_attempt}`, at:row.updated_at, status:row.conclusion==="success" ? "completed" as const : "failed" as const}
+  ]).sort((a,b)=>a.at.localeCompare(b.at) || (a.status==="running"?0:1)-(b.status==="running"?0:1) || a.id.localeCompare(b.id));
+  let pet=makeDefaultSnapshot(new Date(events[0]!.at));
+  const active=new Set<string>();
+  for (const e of events) {
+    if(e.status==="running") active.add(e.id); else active.delete(e.id);
+    const options={now:new Date(e.at),eventID:e.id};
+    pet=applyActivity(pet,e.status,options).snapshot;
+    expect(applyActivity(pet,e.status,options).applied).toBe(false);
+    if(e.status!=="running") expect(applyActivity(pet,"running",options).applied).toBe(false);
+    expect(pet.codexActivity).toBe(active.size?"running":e.status);
+    pet=migrateSnapshot(JSON.parse(JSON.stringify(pet)), options.now);
+  }
+  expect([pet.completedTasks,pet.failedTasks,pet.activeCodexTaskIDs?.length]).toEqual([47,13,0]);
+});

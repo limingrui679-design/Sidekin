@@ -354,6 +354,7 @@ public struct PetSnapshot: Codable, Equatable, Sendable {
     public var completedTasks: Int
     public var failedTasks: Int
     public var processedCodexSignals: [String]?
+    public var activeCodexTaskIDs: [String]?
     public var lastCodexSignalAt: Date?
     public var lastCodexSignalActivity: CodexActivity?
 

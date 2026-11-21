@@ -833,6 +833,19 @@ test("The same Codex turn is never rewarded twice") {
     try expect(pet.experience == 15, "Growth experience was counted twice")
 }
 
+test("Concurrent tasks survive checkpoints, delayed starts and a conflicting terminal signal") {
+    let date = Date(timeIntervalSince1970: 1_000)
+    var pet = PetSnapshot(now: date)
+    for i in 0..<8 { _ = PetLifecycleEngine.apply(.running, to: &pet, at: date, eventID: "id-\(i)") }
+    for i in 0..<7 { _ = PetLifecycleEngine.apply(.completed, to: &pet, at: date, eventID: "id-\(i)") }
+    try expect(pet.codexActivity == .running, "Last concurrent task must remain active")
+    pet = try JSONDecoder().decode(PetSnapshot.self, from: JSONEncoder().encode(pet))
+    _ = PetLifecycleEngine.apply(.failed, to: &pet, at: date, eventID: "id-7")
+    let delayed = PetLifecycleEngine.apply(.running, to: &pet, at: date, eventID: "id-7")
+    let contradictory = PetLifecycleEngine.apply(.completed, to: &pet, at: date, eventID: "id-7")
+    try expect(!delayed && !contradictory && pet.completedTasks == 7 && pet.failedTasks == 1, "Terminal outcome changed")
+}
+
 test("Installing Codex hooks preserves the user's existing configuration") {
     let directory = FileManager.default.temporaryDirectory
         .appendingPathComponent(UUID().uuidString, isDirectory: true)

@@ -95,6 +95,10 @@ public enum PetLifecycleEngine {
         let signalKey = eventID.map { "\(activity.rawValue):\($0)" }
 
         if deduplicate {
+            if activity == .running, let eventID, snapshot.activeCodexTaskIDs?.contains(eventID) == true { return false }
+            if let eventID, [.completed, .failed].contains(where: { (status: CodexActivity) in
+                (snapshot.processedCodexSignals ?? []).contains("\(status.rawValue):\(eventID)")
+            }) { return false }
             if let signalKey,
                (snapshot.processedCodexSignals ?? []).contains(signalKey) {
                 return false
@@ -111,6 +115,13 @@ public enum PetLifecycleEngine {
             }
         }
 
+        // Old saves have a bounded signal journal and no explicit active-task list.
+        let previousActive = snapshot.activeCodexTaskIDs ?? (snapshot.processedCodexSignals ?? []).compactMap { signal -> String? in
+            guard signal.hasPrefix("running:") else { return nil }
+            let id = String(signal.dropFirst("running:".count))
+            let journal = snapshot.processedCodexSignals ?? []
+            return journal.contains("completed:\(id)") || journal.contains("failed:\(id)") ? nil : id
+        }
         let effectiveDate = max(date, snapshot.lastUpdatedAt)
         advance(&snapshot, to: effectiveDate)
 
@@ -122,7 +133,13 @@ public enum PetLifecycleEngine {
             snapshot.processedCodexSignals = Array(signals.suffix(64))
         }
 
-        snapshot.codexActivity = activity
+        var active = Set(previousActive)
+        if let eventID {
+            if activity == .running { active.insert(eventID) }
+            if activity == .completed || activity == .failed { active.remove(eventID) }
+        }
+        snapshot.activeCodexTaskIDs = active.sorted()
+        snapshot.codexActivity = active.isEmpty ? activity : .running
         snapshot.activityChangedAt = effectiveDate
 
         switch activity {
