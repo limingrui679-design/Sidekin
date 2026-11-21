@@ -144,6 +144,24 @@ test("Sleep restores energy and preserves stat bounds") {
     try expect(pet.stats.hunger >= 0, "Hunger fell below its minimum")
 }
 
+test("Offline sleep and waking produce the same stats as successive short ticks") {
+    let start = Date(timeIntervalSince1970: 6_000)
+    var offline = PetSnapshot(now: start)
+    offline.stats.hunger = 80
+    offline.stats.mood = 99.8
+    offline.stats.energy = 81
+    offline.isSleeping = true
+    var ticking = offline
+    PetLifecycleEngine.advance(&offline, to: start.addingTimeInterval(4 * 3_600))
+    for tick in 1...16 {
+        PetLifecycleEngine.advance(&ticking, to: start.addingTimeInterval(Double(tick) * 900))
+    }
+    try expect(!offline.isSleeping && abs(offline.stats.energy - 92.4) < 1e-8, "Incorrect wake threshold")
+    try expect(abs(ticking.stats.energy - offline.stats.energy) < 1e-8
+        && abs(ticking.stats.hunger - offline.stats.hunger) < 1e-8
+        && abs(ticking.stats.mood - offline.stats.mood) < 1e-8, "Tick rate changed care stats")
+}
+
 test("The completion animation returns to idle after its display window") {
     let start = Date(timeIntervalSince1970: 5_000)
     var pet = PetSnapshot(now: start)
@@ -813,6 +831,19 @@ test("The same Codex turn is never rewarded twice") {
     try expect(!duplicateApplied, "The duplicate event was not blocked")
     try expect(pet.completedTasks == 1, "Completed tasks were counted twice")
     try expect(pet.experience == 15, "Growth experience was counted twice")
+}
+
+test("Concurrent tasks survive checkpoints, delayed starts and a conflicting terminal signal") {
+    let date = Date(timeIntervalSince1970: 1_000)
+    var pet = PetSnapshot(now: date)
+    for i in 0..<8 { _ = PetLifecycleEngine.apply(.running, to: &pet, at: date, eventID: "id-\(i)") }
+    for i in 0..<7 { _ = PetLifecycleEngine.apply(.completed, to: &pet, at: date, eventID: "id-\(i)") }
+    try expect(pet.codexActivity == .running, "Last concurrent task must remain active")
+    pet = try JSONDecoder().decode(PetSnapshot.self, from: JSONEncoder().encode(pet))
+    _ = PetLifecycleEngine.apply(.failed, to: &pet, at: date, eventID: "id-7")
+    let delayed = PetLifecycleEngine.apply(.running, to: &pet, at: date, eventID: "id-7")
+    let contradictory = PetLifecycleEngine.apply(.completed, to: &pet, at: date, eventID: "id-7")
+    try expect(!delayed && !contradictory && pet.completedTasks == 7 && pet.failedTasks == 1, "Terminal outcome changed")
 }
 
 test("Installing Codex hooks preserves the user's existing configuration") {

@@ -1,0 +1,7 @@
+# Offline care simulation
+
+Sidekin uses the same care model in Swift and TypeScript. A sleeping pet gains 18 energy per hour and wakes when its energy reaches 99. Given a catch-up interval, the engine computes the time to that event, integrates sleeping rates up to it, clamps each statistic, and applies waking rates to the remaining interval. The catch-up interval is capped at twelve hours.
+
+For a sleeping pet starting with energy 81, hunger 80, and mood 99.8, a four-hour absence contains one sleeping hour and three waking hours. Energy ends at 92.4, hunger at 66, and mood at 96.1. The mood calculation includes saturation at 100 before the pet wakes. Both engines compare this result with sixteen consecutive fifteen-minute updates in their lifecycle checks.
+
+Activity is tracked across overlapping tasks independently of the five-item display feed. A terminal outcome closes its task and suppresses contradictory deliveries while its deduplication record remains in the 64-signal journal. The verification fixture contains 60 completed public GitHub Actions runs for this repository (47 successes, 13 failures). The replay uses actual start and update timestamps, reaches five concurrent runs, and checks every transition against an independent active-ID set. It injects duplicate deliveries, delayed starts and JSON restarts separately. These workload timestamps are a proxy for task lifecycles; the fixture contains no conversation content or end-user usage measurements.

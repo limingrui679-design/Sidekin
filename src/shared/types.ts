@@ -58,6 +58,7 @@ export interface PetSnapshot {
   completedTasks: number;
   failedTasks: number;
   processedCodexSignals: string[];
+  activeCodexTaskIDs?: string[];
   lastCodexSignalAt?: string | null;
   lastCodexSignalActivity?: CodexActivity | null;
   activityFeed: ActivityFeedItem[];

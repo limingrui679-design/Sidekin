@@ -65,6 +65,7 @@ export function makeDefaultSnapshot(now = new Date()): PetSnapshot {
     completedTasks: 0,
     failedTasks: 0,
     processedCodexSignals: [],
+    activeCodexTaskIDs: [],
     lastCodexSignalAt: null,
     lastCodexSignalActivity: null,
     activityFeed: []
@@ -98,6 +99,8 @@ export function migrateSnapshot(
         : base.wardrobe.customTemplateID
     },
     processedCodexSignals: current.processedCodexSignals ?? [],
+    activeCodexTaskIDs: current.activeCodexTaskIDs ?? (current.activityFeed ?? [])
+      .filter(item => item.status === "running").map(item => item.id),
     activityFeed: current.activityFeed ?? []
   };
 }
@@ -109,16 +112,21 @@ export function advance(snapshot: PetSnapshot, now = new Date()): PetSnapshot {
   if (!Number.isFinite(rawInterval) || rawInterval <= 0) return result;
 
   const hours = Math.min(rawInterval, MAXIMUM_OFFLINE_INTERVAL_MS) / 3_600_000;
+  // Split the interval at the wake event, even if the app was offline.
+  // Clamp at the boundary because mood can fill during sleep and fall later.
+  const hoursToWake = Math.max(0, (99 - result.stats.energy) / 18);
+  const asleep = result.isSleeping ? Math.min(hours, hoursToWake) : 0;
+  const awake = hours - asleep;
   if (result.isSleeping) {
-    result.stats.hunger -= hours * 2;
-    result.stats.mood += hours;
-    result.stats.energy += hours * 18;
-    if (result.stats.energy >= 99) result.isSleeping = false;
-  } else {
-    result.stats.hunger -= hours * 4;
-    result.stats.mood -= hours * 1.3;
-    result.stats.energy -= hours * 2.2;
+    result.stats.hunger -= asleep * 2;
+    result.stats.mood += asleep;
+    result.stats.energy += asleep * 18;
+    clampStats(result);
+    if (hours >= hoursToWake) result.isSleeping = false;
   }
+  result.stats.hunger -= awake * 4;
+  result.stats.mood -= awake * 1.3;
+  result.stats.energy -= awake * 2.2;
   clampStats(result);
   result.lastUpdatedAt = iso(now);
   if (["completed", "failed"].includes(result.codexActivity)) {
@@ -221,7 +229,10 @@ export function applyActivity(
   const now = options.now ?? new Date();
   const signalKey = options.eventID ? `${activity}:${options.eventID}` : undefined;
   if (options.deduplicate !== false) {
-    if (signalKey && snapshot.processedCodexSignals.includes(signalKey)) {
+    const terminal = options.eventID && (["completed", "failed"] as const)
+      .some(status => snapshot.processedCodexSignals.includes(`${status}:${options.eventID}`));
+    const alreadyRunning = activity === "running" && options.eventID && snapshot.activeCodexTaskIDs?.includes(options.eventID);
+    if (terminal || alreadyRunning || (signalKey && snapshot.processedCodexSignals.includes(signalKey))) {
       return { snapshot, applied: false, motion: motionFor(snapshot) };
     }
     if (!signalKey && snapshot.lastCodexSignalAt) {
@@ -247,7 +258,13 @@ export function applyActivity(
     options.project,
     now
   );
-  result.codexActivity = aggregateActivity(result.activityFeed, activity);
+  const active = new Set(snapshot.activeCodexTaskIDs ?? snapshot.activityFeed.filter(item => item.status === "running").map(item => item.id));
+  if (options.eventID) {
+    if (activity === "running") active.add(options.eventID);
+    if (activity === "completed" || activity === "failed") active.delete(options.eventID);
+  }
+  result.activeCodexTaskIDs = [...active];
+  result.codexActivity = active.size ? "running" : aggregateActivity(result.activityFeed, activity);
 
   if (activity === "running") {
     result.isSleeping = false;

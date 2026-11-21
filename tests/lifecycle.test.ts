@@ -17,9 +17,11 @@ describe("shared pet lifecycle", () => {
     pet.isSleeping = true;
     pet.stats.energy = 5;
     const result = advance(pet, new Date("2026-08-15T00:00:00Z"));
-    expect(result.stats.energy).toBe(100);
+    const sleeping = (99 - 5) / 18;
+    const awake = 12 - sleeping;
+    expect(result.stats.energy).toBeCloseTo(99 - awake * 2.2);
     expect(result.isSleeping).toBe(false);
-    expect(result.stats.hunger).toBe(52);
+    expect(result.stats.hunger).toBeCloseTo(pet.stats.hunger - sleeping * 2 - awake * 4);
   });
 
   it("deduplicates one completed Codex turn and maintains a bounded feed", () => {
@@ -77,4 +79,44 @@ describe("shared pet lifecycle", () => {
     expect(motions.size).toBe(4);
     vi.useRealTimers();
   });
+});
+
+it("integrates sleep and waking identically across one offline gap or many ticks", () => {
+  const start = Date.UTC(2026, 0, 1);
+  const pet = makeDefaultSnapshot(new Date(start));
+  pet.isSleeping = true;
+  pet.stats = { hunger: 80, mood: 99.8, energy: 81 };
+  const at = (hours: number) => new Date(start + hours * 3_600_000);
+  const offline = advance(pet, at(4));
+  let ticking = pet;
+  for (let tick = 1; tick <= 16; tick++) ticking = advance(ticking, at(tick / 4));
+  expect(offline.isSleeping).toBe(false);
+  expect(offline.stats.energy).toBeCloseTo(92.4);
+  expect(offline.stats.mood).toBeCloseTo(96.1);
+  expect(offline.stats.hunger).toBeCloseTo(66);
+  for (const key of ["energy", "hunger", "mood"] as const) {
+    expect(ticking.stats[key]).toBeCloseTo(offline.stats[key]);
+  }
+});
+
+it("replays real public workflow intervals across restarts and duplicate delivery", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const rows: {id:number;run_attempt:number;run_started_at:string;updated_at:string;conclusion:string}[] =
+    JSON.parse(await readFile("tests/fixtures/public-workflow-runs.json","utf8"));
+  const events = rows.flatMap(row => [
+    {id:`${row.id}/${row.run_attempt}`, at:row.run_started_at, status:"running" as const},
+    {id:`${row.id}/${row.run_attempt}`, at:row.updated_at, status:row.conclusion==="success" ? "completed" as const : "failed" as const}
+  ]).sort((a,b)=>a.at.localeCompare(b.at) || (a.status==="running"?0:1)-(b.status==="running"?0:1) || a.id.localeCompare(b.id));
+  let pet=makeDefaultSnapshot(new Date(events[0]!.at));
+  const active=new Set<string>();
+  for (const e of events) {
+    if(e.status==="running") active.add(e.id); else active.delete(e.id);
+    const options={now:new Date(e.at),eventID:e.id};
+    pet=applyActivity(pet,e.status,options).snapshot;
+    expect(applyActivity(pet,e.status,options).applied).toBe(false);
+    if(e.status!=="running") expect(applyActivity(pet,"running",options).applied).toBe(false);
+    expect(pet.codexActivity).toBe(active.size?"running":e.status);
+    pet=migrateSnapshot(JSON.parse(JSON.stringify(pet)), options.now);
+  }
+  expect([pet.completedTasks,pet.failedTasks,pet.activeCodexTaskIDs?.length]).toEqual([47,13,0]);
 });
