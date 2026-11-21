@@ -185,7 +185,7 @@ function registerIPC(): void {
   handle("sidekin:select-theme", (_event, id: string) => state.selectTheme(id));
   handle("sidekin:select-template", (_event, id: string | null) => state.selectTemplate(id));
   handle("sidekin:set-visible", (_event, visible: boolean) => state.setVisible(Boolean(visible)));
-  handle("sidekin:simulate", (_event, activity: CodexActivity) => state.receive({ activity, timestamp: new Date(), eventID: `simulation-${Date.now()}`, title: "Status response preview", project: "Sidekin" }).then(() => state.publicState()));
+  handle("sidekin:simulate", (_event, activity: CodexActivity) => state.receive({ activity, timestamp: new Date(), eventID: `simulation-${Date.now()}`, title: "Status response preview", project: "Sidekin" }, "preview").then(() => state.publicState()));
   handle("sidekin:install-hooks", async () => { await monitor.install(); return monitor.isInstalled(); });
   handle("sidekin:uninstall-hooks", async () => { await monitor.uninstall(); return monitor.isInstalled(); });
   handle("sidekin:save-key", async (_event, key: string) => { await secrets.save(key); return true; });
@@ -336,9 +336,9 @@ app.whenReady().then(async () => {
   await state.initialize();
   if (captureDirectory) {
     const base = new Date();
-    await state.receive({ activity: "completed", timestamp: new Date(base.getTime() - 72_000), eventID: "capture-complete", title: "Cross-platform runtime", project: "Sidekin" });
-    await state.receive({ activity: "failed", timestamp: new Date(base.getTime() - 35_000), eventID: "capture-failed", title: "Asset continuity review", project: "Art audit" });
-    await state.receive({ activity: "running", timestamp: new Date(base.getTime() - 18_000), eventID: "capture-running", title: "Windows packaging verification", project: "Sidekin" });
+    await state.receive({ activity: "completed", timestamp: new Date(base.getTime() - 72_000), eventID: "capture-complete", title: "Cross-platform runtime", project: "Sidekin" }, "preview");
+    await state.receive({ activity: "failed", timestamp: new Date(base.getTime() - 35_000), eventID: "capture-failed", title: "Asset continuity review", project: "Art audit" }, "preview");
+    await state.receive({ activity: "running", timestamp: new Date(base.getTime() - 18_000), eventID: "capture-running", title: "Windows packaging verification", project: "Sidekin" }, "preview");
     const rawOne = await readFile(path.join(paths.characters, "nova-hatchling.png"));
     const rawTwo = await readFile(path.join(paths.characters, "nova-juvenile.png"));
     const captureJob = await workshop.create({

@@ -1,3 +1,4 @@
+import { remainingTime, type TaskTimingSample } from "../shared/task-timing.js";
 import { stageProgress } from "../shared/lifecycle.js";
 import type {
   ActivityFeedItem,
@@ -44,19 +45,29 @@ function setTab(name: string): void {
   $("#page-title").textContent = label;
 }
 
-function duration(item: ActivityFeedItem): string {
-  if (item.status === "running") return "live";
-  const ms = item.durationMs ?? 0;
+function shortDuration(ms: number): string {
   if (ms < 60_000) return `${Math.max(1, Math.round(ms / 1_000))}s`;
   return `${Math.round(ms / 60_000)}m`;
 }
 
-function activityHTML(items: ActivityFeedItem[], limit = 3): string {
+function duration(item: ActivityFeedItem): string {
+  return item.status === "running" ? "live" : shortDuration(item.durationMs ?? 0);
+}
+
+function activityHTML(items: ActivityFeedItem[], timings: TaskTimingSample[], limit: number): string {
   if (!items.length) return '<div class="empty-state">No recent task signals. Install the local Codex link or use Live Preview.</div>';
-  return items.slice(-limit).reverse().map((item) => `
+  return items.slice(-limit).reverse().map((item) => {
+    const estimate = item.status === "running" ? remainingTime(timings, item.id, Date.now()) : null;
+    let forecast = "";
+    if (estimate) {
+      const upper = estimate.p80Ms === null ? "" : ` · 80th percentile ${shortDuration(estimate.p80Ms)}`;
+      forecast = `<small>Estimated time left: median ${shortDuration(estimate.medianMs)}${upper} · ${estimate.atRisk} local comparisons</small>`;
+    }
+    return `
     <div class="activity-card ${item.status}">
-      <i></i><div><strong>${escapeHTML(item.title)}</strong><small>${escapeHTML(item.project)} · ${item.status}</small></div><time>${duration(item)}</time>
-    </div>`).join("");
+      <i></i><div><strong>${escapeHTML(item.title)}</strong><small>${escapeHTML(item.project)} · ${item.status}</small>${forecast}</div><time>${duration(item)}</time>
+    </div>`;
+  }).join("");
 }
 
 function asset(theme: ThemeProfile, stage: string): string {
@@ -92,8 +103,8 @@ function renderState(state: PublicPetState): void {
     $(`#${key}-meter`).setAttribute("style", `width:${pet.stats[key]}%`);
   }
   $("#sleep-label").textContent = pet.isSleeping ? "Wake" : "Sleep";
-  $("#activity-feed").innerHTML = activityHTML(pet.activityFeed, 3);
-  $("#codex-activity-feed").innerHTML = activityHTML(pet.activityFeed, 5);
+  $("#activity-feed").innerHTML = activityHTML(pet.activityFeed, pet.taskTimings ?? [], 3);
+  $("#codex-activity-feed").innerHTML = activityHTML(pet.activityFeed, pet.taskTimings ?? [], 5);
   $<HTMLInputElement>("#pet-visible").checked = state.settings.petVisible;
   renderEvolution();
   $$(".lineage-card").forEach((card) => card.classList.toggle("active", card.dataset.theme === state.activeTheme.id && !pet.wardrobe.customTemplateID));

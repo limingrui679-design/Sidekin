@@ -1,3 +1,5 @@
+import type { TaskTimingSample } from "./task-timing.js";
+
 export const PET_STAGES = ["egg", "hatchling", "juvenile", "ascended", "legendary"] as const;
 export type PetStage = (typeof PET_STAGES)[number];
 
@@ -59,6 +61,7 @@ export interface PetSnapshot {
   failedTasks: number;
   processedCodexSignals: string[];
   activeCodexTaskIDs?: string[];
+  taskTimings?: TaskTimingSample[];
   lastCodexSignalAt?: string | null;
   lastCodexSignalActivity?: CodexActivity | null;
   activityFeed: ActivityFeedItem[];
