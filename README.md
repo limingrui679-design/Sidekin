@@ -16,9 +16,9 @@
   <img src="https://img.shields.io/badge/lineages-200-26c6c3?style=flat-square" alt="200 lineages">
   <img src="https://img.shields.io/badge/forms-1%2C000-8b5cf6?style=flat-square" alt="1,000 forms">
   <br><br>
-  <strong>A live floating companion that turns Codex task activity into care, growth, and evolution.</strong>
+  <strong>Follow background Codex tasks through a desktop companion that reacts as you work.</strong>
   <br>
-  Local-first. No Sidekin account. No bundled API key. No prompt or code collection.
+  Task activity and companion saves stay on your device.
   <br><br>
   <a href="#why-sidekin">Why Sidekin</a> ·
   <a href="#quick-start">Quick start</a> ·
@@ -30,7 +30,9 @@
 
 ## Why Sidekin
 
-Most desktop pets are decorative overlays. Sidekin has a persistent life of its own: it gets hungry and tired, reacts to your Codex workflow, earns growth from completed work, and evolves through a visually continuous lineage.
+When a coding task runs in the background, Sidekin shows its progress at the edge of your desktop. Starting a task, finishing it, or encountering a failure gives the companion a different reaction. A task card lets you see which event triggered it.
+
+The same local events drive a persistent care-and-growth model. Completed work contributes to growth, and each of the 200 creature lineages develops through five visually related forms. The result is a companion you can glance at during a task and return to across sessions. [See how the events drive the companion](#how-sidekin-works)
 
 | Live companion | Real care loop | Deep lineage system | Resumable workshop |
 |---|---|---|---|
