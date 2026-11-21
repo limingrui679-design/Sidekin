@@ -32,6 +32,8 @@
 
 When a coding task runs in the background, Sidekin shows its progress at the edge of your desktop. Starting a task, finishing it, or encountering a failure gives the companion a different reaction. A task card lets you see which event triggered it.
 
+The command center estimates how much longer a running task might take using comparable local task durations. It accounts for work that is still running and displays a forecast once enough comparisons are available. [Timing method and two public-workload replays](docs/TASK_TIMING.md)
+
 The same local events drive a persistent care-and-growth model. Completed work contributes to growth, and each of the 200 creature lineages develops through five visually related forms. The result is a companion you can glance at during a task and return to across sessions. [See how the events drive the companion](#how-sidekin-works)
 
 | Live companion | Real care loop | Deep lineage system | Resumable workshop |

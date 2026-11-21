@@ -74,10 +74,11 @@ export class StateService {
     return this.publicState();
   }
 
-  async receive(record: CodexActivityRecord): Promise<void> {
+  async receive(record: CodexActivityRecord, source: "monitor" | "preview" = "monitor"): Promise<void> {
     const previousStage = this.pet.stage;
     const result = applyActivity(this.pet, record.activity, {
-      now: record.timestamp ?? new Date(), eventID: record.eventID, title: record.title, project: record.project
+      now: record.timestamp ?? new Date(), eventID: record.eventID, title: record.title, project: record.project,
+      trackTiming: source === "monitor"
     });
     if (!result.applied) return;
     this.pet = result.snapshot;

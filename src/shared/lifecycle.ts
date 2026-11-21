@@ -1,3 +1,4 @@
+import { observedStart, observeTiming, restoreTiming } from "./task-timing.js";
 import type {
   ActivityFeedItem,
   CareAction,
@@ -66,6 +67,7 @@ export function makeDefaultSnapshot(now = new Date()): PetSnapshot {
     failedTasks: 0,
     processedCodexSignals: [],
     activeCodexTaskIDs: [],
+    taskTimings: [],
     lastCodexSignalAt: null,
     lastCodexSignalActivity: null,
     activityFeed: []
@@ -101,6 +103,7 @@ export function migrateSnapshot(
     processedCodexSignals: current.processedCodexSignals ?? [],
     activeCodexTaskIDs: current.activeCodexTaskIDs ?? (current.activityFeed ?? [])
       .filter(item => item.status === "running").map(item => item.id),
+    taskTimings: restoreTiming(current.taskTimings),
     activityFeed: current.activityFeed ?? []
   };
 }
@@ -189,13 +192,14 @@ function upsertFeed(
   eventID: string | undefined,
   title: string | undefined,
   project: string | undefined,
-  now: Date
+  now: Date,
+  earlierStart?: number
 ): ActivityFeedItem[] {
   if (activity === "idle") return items;
   const id = eventID || `sidekin-${now.getTime()}`;
   const index = items.findIndex((item) => item.id === id);
   const current = index >= 0 ? items[index]! : undefined;
-  const startedAt = current?.startedAt ?? iso(now);
+  const startedAt = earlierStart === undefined ? current?.startedAt ?? iso(now) : iso(new Date(earlierStart));
   const next: ActivityFeedItem = {
     id,
     title: title?.trim() || current?.title || "Codex task",
@@ -224,6 +228,7 @@ export function applyActivity(
     title?: string;
     project?: string;
     deduplicate?: boolean;
+    trackTiming?: boolean;
   } = {}
 ): { snapshot: PetSnapshot; applied: boolean; motion: PetMotion } {
   const now = options.now ?? new Date();
@@ -246,6 +251,9 @@ export function applyActivity(
 
   const effective = new Date(Math.max(now.getTime(), new Date(snapshot.lastUpdatedAt).getTime()));
   const result = advance(snapshot, effective);
+  if (options.eventID && activity !== "idle" && options.trackTiming !== false) {
+    result.taskTimings = observeTiming(result.taskTimings ?? [], options.eventID, activity, now.getTime());
+  }
   result.lastCodexSignalAt = iso(now);
   result.lastCodexSignalActivity = activity;
   if (signalKey) result.processedCodexSignals = [...result.processedCodexSignals, signalKey].slice(-64);
@@ -256,7 +264,8 @@ export function applyActivity(
     options.eventID,
     options.title,
     options.project,
-    now
+    now,
+    options.eventID ? observedStart(snapshot.taskTimings ?? [], options.eventID) : undefined
   );
   const active = new Set(snapshot.activeCodexTaskIDs ?? snapshot.activityFeed.filter(item => item.status === "running").map(item => item.id));
   if (options.eventID) {
